@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<window id="99">
+	<defaultcontrol>70</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>70</views>
+	<onload>Skin.SetString(SectionType,channels)</onload>
+	<!--<onunload>SetFocus(50)</onunload>-->
+	<onunload>Skin.Reset(SectionType)</onunload>
+	<controls>
+
+		<!-- Channel Logo Background -->
+		<control type="largeimage">
+			<include>background_default</include>
+			<!--<texture background="true">$INFO[ListItem.Art(thumb)]</texture>-->
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<include>Animation_CommonFade</include>
+		</control>
+
+		<!-- Channel Logo (Settings) -->
+		<control type="group">
+			<visible>Control.IsVisible(70)</visible>
+			<control type="group">
+
+				<!-- Fanart -->
+				<!--<control type="image">
+					<posy>-1100</posy>
+					<posx>-190</posx>
+					<width>640</width>
+					<height>360</height>
+					<aspectratio aligny="center">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>Skin.HasSetting(ChannelPageLogo)</visible>
+					<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+					<animation effect="zoom" start="1" end="120" time="0" condition="true">Conditional</animation>
+					<animation effect="rotate" end="-90" time="0" condition="true">Conditional</animation>
+				</control>-->
+				<control type="image">
+					<posy>200</posy>
+					<posx>920</posx>
+					<width>320</width>
+					<height>320</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>Skin.HasSetting(ChannelPageLogo)</visible>
+					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+					<animation effect="fade" start="0" end="60" time="300" condition="true">WindowOpen</animation>
+					<animation effect="fade" start="60" end="0" time="300" condition="true">WindowClose</animation>
+				</control>
+   
+				<control type="image">
+		                        <posx>0</posx>
+		                        <posy>0</posy>
+		                        <include>Dimensions_Fullscreen</include>
+		                        <texture>mainmenu/vignette.png</texture>
+		                        <colordiffuse>ff15efd9</colordiffuse>
+		                        <include>Animation_CommonFadeNoHide</include>
+		                        <visible>!Skin.HasSetting(horizontal_home)</visible>
+		                </control>
+				<control type="image">
+		                        <posy>690</posy>
+		                        <posx>10</posx>	
+		                        <width>16</width>
+		                        <height>22</height>
+		                        <aspectratio>scale</aspectratio>
+		                        <texture flipx="true">left-menu-indicator-arrow.png</texture>
+		                        <include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
+		                        <colordiffuse>50b8b7b7</colordiffuse>
+		                        <visible>!Skin.HasSetting(HomeArrow)</visible>
+		                </control>
+			</control>
+
+			<control type="group">
+				<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Channel_Wraplist</include>
+				<include condition="Skin.HasSetting(Home_Fixed)">Channel_Fixedlist</include>
+				<include condition="Skin.HasSetting(Home_Simple)">Channel_Simplelist</include>
+			</control>
+		</control>
+	<include>Music_Global_LowerRight</include>
+	<include>Global_Time_TopRight_Library</include>
+	</controls>
+</window>

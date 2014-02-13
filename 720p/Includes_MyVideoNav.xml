@@ -1,0 +1,727 @@
+<includes>
+
+	<!-- #################################### Viewtype Navigation ################################# -->
+	<include name="viewtype_navigation">
+	<control type="group">
+		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | Window.isActive(1120) ] + !Skin.HasSetting(LockViews)</visible>
+		<animation effect="slide" start="0,200" time="800" tween="back" easing="inout" condition="ControlGroup(7000).HasFocus | Window.isActive(1120) | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus">conditional</animation>
+		<animation effect="fade" end="0" time="800">Hidden</animation>
+		<animation effect="fade" end="100" time="800">Visible</animation>
+		<animation effect="fade" end="0" time="800">WindowClose</animation>
+
+			<!-- Background -->
+			<control type="image">
+				<posy>658</posy>
+				<width>1280</width>
+				<height>100</height>
+				<texture border="6">base-rounded.png</texture>
+				<colordiffuse>DD000000</colordiffuse>
+			</control>
+					
+			<!-- Separator -->
+			<control type="group">
+			<posy>680</posy>
+			<control type="image">
+				<posx>256</posx>
+				<posy>-18</posy>
+				<width>1</width>
+				<height>60</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>512</posx>
+				<posy>-18</posy>
+				<width>1</width>
+				<height>60</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>768</posx>
+				<posy>-18</posy>
+				<width>1</width>
+				<height>60</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1024</posx>
+				<posy>-18</posy>
+				<width>1</width>
+				<height>60</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-23</posy>
+				<width>1280</width>
+				<height>1</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+			</control>
+			</control>
+
+			<!-- Navigation -->
+			<control type="group" id="7000">
+				<posy>680</posy>
+				<!-- Arrow -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>-26</posy>
+					<include>navigation_arrow_down</include>
+					<animation effect="slide" end="123,0" time="200" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
+					<animation effect="slide" end="379,0" time="200" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
+					<animation effect="slide" end="635,0" time="200" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
+					<animation effect="slide" end="891,0" time="200" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
+					<animation effect="slide" end="1149,0" time="200" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
+					<visible>Skin.HasSetting(navigation_arrow) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
+				</control>
+				<!-- Circle -->
+				<control type="image">
+					<posy>-29</posy>
+					<posx>0</posx>
+					<include>navigation_circle</include>
+					<animation effect="slide" end="123,0" time="200" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
+					<animation effect="slide" end="379,0" time="200" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
+					<animation effect="slide" end="635,0" time="200" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
+					<animation effect="slide" end="891,0" time="200" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
+					<animation effect="slide" end="1149,0" time="200" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
+					<visible>Skin.HasSetting(navigation_circle) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
+				</control>
+				<!-- Button -->
+<!--				<control type="image">
+					<posy>-4</posy>
+					<posx>0</posx>
+					<width>206</width>
+					<height>32</height>
+					<include condition="!Skin.HasSetting(navigation_smoke)">navigation_solid_image</include>
+					<include condition="Skin.HasSetting(navigation_smoke)">navigation_smoke_image</include>
+					<animation effect="slide" end="35,0" time="200" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
+					<animation effect="slide" end="281,0" time="200" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
+					<animation effect="slide" end="537,0" time="200" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
+					<animation effect="slide" end="793,0" time="200" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
+					<animation effect="slide" end="1049,0" time="200" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
+					<visible>!Skin.HasSetting(navigation_accentonly) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
+				</control>-->
+
+
+				<!-- Viewtype -->
+				<control type="group">
+					<posx>80</posx>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>b-video.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+
+					<control type="button" id="401">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>b-video.png</texturefocus>
+						<texturenofocus>b-video.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onleft>405</onleft>
+						<onright>402</onright>
+						<ondown>50</ondown>
+	                                        <onup>50</onup>
+						<onclick>Skin.SetString(selector1,View)</onclick>
+						<onclick>Skin.SetString(selector2,Modes)</onclick>
+						<onclick>Control.SetFocus(1300)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(401)</visible>
+	                                </control>
+					<control type="label">
+						<posx>40</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>$INFO[Container.ViewMode]</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+
+				<!-- Filter -->
+				<control type="group">
+					<posx>345</posx>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>options_osd.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="402">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>options_osd.png</texturefocus>
+						<texturenofocus>options_osd.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+
+						<onclick>Skin.SetString(selector1,Filter)</onclick>
+						<onclick>Skin.SetString(selector2,Options)</onclick>
+	                                        <onclick>Control.SetFocus(19000)</onclick>
+
+						<onleft>401</onleft>
+						<onright>403</onright>
+						<ondown>50</ondown>
+						<onup>50</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(402)</visible>
+	                                </control>
+					<control type="label">
+						<posx>35</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Filter</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+
+				<!-- Sort -->
+				<control type="group">
+					<posx>610</posx>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>options_osd.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="403">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>options_osd.png</texturefocus>
+						<texturenofocus>options_osd.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+
+						<onclick>Skin.SetString(selector1,Sort)</onclick>
+						<onclick>Skin.SetString(selector2,Options)</onclick>
+	                                        <onclick>Control.SetFocus(19010)</onclick>
+
+						<onleft>402</onleft>
+						<onright>404</onright>
+						<ondown>50</ondown>
+						<onup>50</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(403)</visible>
+	                                </control>
+					<control type="label">
+						<posx>35</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Sort</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+
+				<!-- Options -->
+				<control type="group">
+					<posx>840</posx>
+					<control type="image">
+						<width>26</width>
+						<height>26</height>
+						<texture>b-pp-system.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="404">
+	                                        <width>26</width>
+	                                        <height>26</height>
+						<texturefocus>b-pp-system.png</texturefocus>
+						<texturenofocus>b-pp-system.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
+						<onclick>Skin.SetString(selector2,Options)</onclick>
+	                                        <onclick>Control.SetFocus(1303)</onclick>
+						<onleft>403</onleft>
+						<onright>405</onright>
+						<ondown>50</ondown>
+						<onup>50</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(404)</visible>
+	                                </control>
+					<control type="label">
+						<posx>30</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Options</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+
+				<!-- Search -->
+				<control type="group">
+					<posx>1100</posx>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>b-pp-search.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="405">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>b-pp-search.png</texturefocus>
+						<texturenofocus>b-pp-search.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+	                                        <onclick>ActivateWindow(51)</onclick>
+						<onleft>404</onleft>
+						<onright>401</onright>
+						<ondown>50</ondown>
+						<onup>50</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(405)</visible>
+	                                </control>
+					<control type="label">
+						<posx>35</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Search</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<!-- #################################### VIEWMODE MENU ################################# -->
+	<include name="viewtype_mode">
+	        <control type="group">
+		<visible>ControlGroup(1300).HasFocus</visible>
+
+			<!-- Animations -->
+			<include>viewtype_animations</include>
+
+			<!-- Dialog Header -->
+			<include>dialog_header_viewtype</include>				
+
+			<control type="group" id="1300">
+			<control type="grouplist">
+				<posx>490</posx>
+				<posy>335</posy>
+				<width>300</width>
+				<height>300</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>667</pagecontrol>
+				<onright>7000</onright>
+				<onleft>7000</onleft>
+
+				<control type="button" id="100">
+					<width>300</width>
+					<!--<label>$INFO[Container.Viewmode]</label>-->
+					<label>Next Viewmode</label>
+					<textoffsetx>0</textoffsetx>
+					<align>center</align>
+                                        <font>font16caps</font>
+					<onclick>Container.NextViewMode</onclick>
+					<include>skin_settings_dialog</include>
+				</control>
+
+				<!-- List -->
+				<control type="radiobutton" id="101">
+					<width>300</width>
+					<label>List</label>
+					<onclick>Container.SetViewMode(50)</onclick>
+					<selected>StringCompare(Container.Viewmode,List)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+
+				<!-- Episodes -->
+				<control type="radiobutton" id="102">
+					<width>300</width>
+					<label>Episode</label>
+					<onclick>Container.SetViewMode(51)</onclick>
+					<selected>StringCompare(Container.Viewmode,Episode)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+
+				<!-- Poster -->
+				<control type="radiobutton" id="103">
+					<width>300</width>
+					<label>Poster</label>
+					<onclick>Container.SetViewMode(55)</onclick>
+					<selected>StringCompare(Container.Viewmode,Poster)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(homemovies)</visible>
+				</control>
+
+				<!-- PosterHalf -->
+				<control type="radiobutton" id="104">
+					<width>300</width>
+					<label>PosterHalf</label>
+					<onclick>Container.SetViewMode(598)</onclick>
+					<selected>StringCompare(Container.Viewmode,PosterHalf)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				</control>
+
+				<!-- 56 (Music/Jukebox)-->
+				<control type="radiobutton" id="105">
+					<width>300</width>
+					<label>Jukebox</label>
+					<onclick>Container.SetViewMode(56)</onclick>
+					<selected>StringCompare(Container.Viewmode,Jukebox)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+				</control>
+
+				<!-- Showcase -->
+				<control type="radiobutton" id="106">
+					<width>300</width>
+					<label>Showcase</label>
+					<onclick>Container.SetViewMode(58)</onclick>
+					<selected>StringCompare(Container.Viewmode,Showcase)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(homemovies)</visible>
+				</control>
+
+				<!-- Slide -->
+				<control type="radiobutton" id="107">
+					<width>300</width>
+					<label>Slide</label>
+					<onclick>Container.SetViewMode(595)</onclick>
+					<selected>StringCompare(Container.Viewmode,Slide)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				</control>
+
+				<!-- Landscape -->
+				<control type="radiobutton" id="108">
+					<width>300</width>
+					<label>Landscape</label>
+					<onclick>Container.SetViewMode(52)</onclick>
+					<selected>StringCompare(Container.Viewmode,Landscape)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				</control>
+
+				<!-- Landscape Fanart -->
+				<control type="radiobutton" id="109">
+					<width>300</width>
+					<label>Fanart</label>
+					<onclick>Container.SetViewMode(633)</onclick>
+					<selected>StringCompare(Container.Viewmode,Fanart)</selected>
+					<include>radiobutton_ticked</include>
+					<visible></visible>
+					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				</control>
+
+				<!-- 3D Landscape -->
+				<control type="radiobutton" id="110">
+					<width>300</width>
+					<label>3dLandscape</label>
+					<onclick>Container.SetViewMode(53)</onclick>
+					<selected>StringCompare(Container.Viewmode,3dLandscape)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
+				</control>
+
+				<!-- Land Panel -->
+				<control type="radiobutton" id="111">
+					<width>300</width>
+					<label>LandPanel</label>
+					<onclick>Container.SetViewMode(57)</onclick>
+					<selected>StringCompare(Container.Viewmode,LandPanel)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+
+				<!-- Wall -->
+				<control type="radiobutton" id="112">
+					<width>300</width>
+					<label>Wall</label>
+					<onclick>Container.SetViewMode(54)</onclick>
+					<selected>StringCompare(Container.Viewmode,Wall)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(homemovies)</visible>
+				</control>
+
+				<!-- Wall Panel -->
+				<control type="radiobutton" id="113">
+					<width>300</width>
+					<label>WallPanel</label>
+					<onclick>Container.SetViewMode(597)</onclick>
+					<selected>StringCompare(Container.Viewmode,WallPanel)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(homemovies)</visible>
+				</control>
+
+				<!-- Panel -->
+				<control type="radiobutton" id="114">
+					<width>300</width>
+					<label>Panel</label>
+					<onclick>Container.SetViewMode(56)</onclick>
+					<selected>StringCompare(Container.Viewmode,Panel)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(homemovies)</visible>
+				</control>
+				<!-- Panel (Music/3dSquare)-->
+				<control type="radiobutton" id="115">
+					<width>300</width>
+					<label>3dSquare</label>
+					<onclick>Container.SetViewMode(56)</onclick>
+					<selected>StringCompare(Container.Viewmode,3dSquare)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+				</control>
+
+				<!-- 16x9 -->
+				<control type="radiobutton" id="116">
+					<width>300</width>
+					<label>16x9</label>
+					<onclick>Container.SetViewMode(59)</onclick>
+					<selected>StringCompare(Container.Viewmode,16x9)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(homemovies)</visible>
+				</control>
+				
+				<!-- Banner Panel -->
+				<control type="radiobutton" id="117">
+					<width>300</width>
+					<label>BannerPanel</label>
+					<onclick>Container.SetViewMode(592)</onclick>
+					<selected>StringCompare(Container.Viewmode,BannerPanel)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+
+				<!-- 3d Banner -->
+				<control type="radiobutton" id="118">
+					<width>300</width>
+					<label>3dBanner</label>
+					<onclick>Container.SetViewMode(593)</onclick>
+					<selected>StringCompare(Container.Viewmode,3dBanner)</selected>
+					<include>radiobutton_ticked</include>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+
+			</control>
+		</control>
+        </control>
+	</include>
+
+	<!-- #################################### FILTER MENU ################################# -->
+	<include name="viewtype_filter">
+		<control type="group">
+			<visible>ControlGroup(1301).HasFocus</visible>
+				
+			<!-- Dialog Header -->
+			<include>dialog_header_viewtype</include>
+
+			<!-- Animations -->
+			<include>viewtype_animations</include>
+
+			<control type="group" id="1301">
+				<posx>340</posx>
+		                <posy>340</posy>
+		                <width>600</width>
+		                <height>265</height>
+		                <scrolltime>300</scrolltime>
+		                <focusposition>0</focusposition>
+                                <orientation>vertical</orientation>
+				<!-- 1st Filter -->
+				<control type="grouplist" id="19000">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>265</height>
+					<itemgap>-1</itemgap>
+					<onleft>7000</onleft>
+					<onright>19001</onright>
+				</control>
+				<!-- 2nd Filter -->
+				<control type="grouplist" id="19001">
+                                        <posx>320</posx>
+                                        <posy>0</posy>
+					<width>280</width>
+					<height>265</height>
+                                        <itemgap>-1</itemgap>
+					<onleft>19000</onleft>
+					<onright>7000</onright>
+                                </control>
+				<!-- Buttons -->
+				<control type="button" id="19005">
+					<width>280</width>
+					<height>34</height>
+					<font>font16caps</font>
+					<textoffsetx>10</textoffsetx>
+					<textcolor>mainblue</textcolor>
+                			<focusedcolor>mainblue</focusedcolor>
+			                <texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+					<label>-</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<include>navigation_options</include>
+                                </control>
+				<control type="radiobutton" id="19006">
+					<width>280</width>
+					<height>34</height>
+					<include>radiobutton_ticked</include>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<!-- #################################### SORT MENU ################################# -->
+	<include name="viewtype_sort">
+		<control type="group">
+			<visible>ControlGroup(1302).HasFocus</visible>
+				
+			<!-- Animations -->
+			<include>viewtype_animations</include>
+
+			<!-- Dialog Header -->
+			<include>dialog_header_viewtype</include>
+
+			<control type="group" id="1302">
+				<posx>0</posx>
+		                <posy>0</posy>
+		                <width>600</width>
+		                <height>320</height>
+		                <scrolltime>300</scrolltime>
+		                <focusposition>0</focusposition>
+                                <ondown>1302</ondown>
+                                <orientation>vertical</orientation>
+                                <scrolltime>150</scrolltime>
+				<!-- Sorting List -->
+				<control type="grouplist" id="19010">
+					<posx>540</posx>
+					<posy>340</posy>
+					<width>200</width>
+					<height>320</height>
+					<onright>7000</onright>
+					<onleft>7000</onleft>
+					<itemgap>-1</itemgap>
+				</control>
+				<!-- Sorting Button -->
+				<control type="filterorderbutton" id="19011">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>34</height>
+					<include>radiobutton_ticked</include>
+					<onright>7000</onright>
+					<onleft>7000</onleft>
+					<textureorderascending>arrowsort.png</textureorderascending>
+					<textureorderdescending flipy="true">arrowsort.png</textureorderdescending>
+					<radioheight>14</radioheight>
+					<radiowidth>16</radiowidth>
+					<radioposy>12</radioposy>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<!-- #################################### OPTIONS MENU ################################# -->
+	<include name="viewtype_options">
+	<control type="group">
+		<visible>ControlGroup(1303).HasFocus + ![ Window.IsActive(1120) | Window.IsActive(126) ]</visible>
+
+		<!-- Animations -->
+		<include>viewtype_animations</include>
+
+		<!-- Dialog Header -->
+		<include>dialog_header_viewtype</include>
+
+		<control type="group" id="1303">
+			<control type="grouplist">
+				<posx>340</posx>
+				<posy>330</posy>
+				<width>600</width>
+				<height>302</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>667</pagecontrol>
+				<onright>7000</onright>
+				<onleft>7000</onleft>
+				<control type="label" id="140">
+	                		<width>600</width>
+			                <height>35</height>
+			                <font>font13caps</font>
+			                <label>Options</label>
+			                <textcolor>white</textcolor>
+			                <shadowcolor>black</shadowcolor>
+			                <align>left</align>
+			                <aligny>center</aligny>
+				</control>
+				<control type="radiobutton" id="141">
+					<width>600</width>
+					<description>Transparency</description>
+					<label>Transparent Watched</label>
+					<onclick>Skin.ToggleSetting(viewtype_watched)</onclick>
+					<selected>Skin.HasSetting(viewtype_watched)</selected>
+					<include>radiobutton_circle</include>
+				</control>
+
+				<!-- Background Options -->
+				<include>Background_Settings_Viewmodes</include>
+
+			</control>
+		</control>
+	</control>
+	</include>
+
+	<!-- #################################### ANIMATIONS ################################# -->
+	<include name="viewtype_animations">	
+			<animation type="WindowOpen">
+				<effect type="slide" tween="cubic" easing="out" start="0,700" end="0,0" time="500" />
+				<effect type="fade" end="100" delay="0" time="500" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" tween="cubic" easing="in" start="0,0" end="0,700" time="500" />
+				<effect type="fade" end="0" time="500" />
+			</animation>
+			<animation type="Visible">
+				<effect type="slide" tween="cubic" easing="out" start="0,700" end="0,0" time="500" />
+				<effect type="fade" end="100" delay="0" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" tween="cubic" easing="in" start="0,0" end="0,700" time="500" />
+				<effect type="fade" end="0" time="500" />
+			</animation>
+	</include>
+
+	<include name="viewtype_scrolling">
+		<control type="group">
+		<visible>!Skin.HasSetting(no_scroll_letter) + Container.Scrolling</visible>
+		<animation effect="fade" end="100" time="200" delay="300">Visible</animation>
+		<animation effect="fade" end="0" time="200">Hidden</animation>
+			<control type="image">
+				<posx>575</posx>
+				<posy>205</posy>
+				<width>130</width>
+				<height>110</height>
+				<texture border="16">base-rounded.png</texture>
+				<colordiffuse>DD000000</colordiffuse>
+			</control>
+                        <control type="label">
+				<posx>600</posx>
+				<posy>220</posy>
+				<width>80</width>
+				<align>center</align>
+				<label>[B]$INFO[ListItem.SortLetter][/B]</label>
+				<font>Font_Bartowski_MainMenu</font>
+				<textcolor>FFCCCCCC</textcolor>
+                        </control>
+		</control>
+	</include>
+
+	<!-- Poster 3D -->
+	<include name="Poster_3D">
+		<camera x="1340" y="380" />
+		<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
+	</include>
+
+	<!-- PosterHalf 3D -->
+	<include name="PosterHalf_3D">                        
+		<camera x="1340" y="380" />
+		<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
+	</include>
+
+</includes>
+

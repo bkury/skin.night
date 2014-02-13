@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<window id="10202" type="dialog">
+	<defaultcontrol always="true">19020</defaultcontrol>
+	<controls>
+		<control type="group" id="1400">
+			<animation effect="slide" start="-300,0" time="800" tween="back" easing="inout">WindowOpen</animation>
+			<animation effect="slide" end="-300,0" time="800" tween="back" easing="inout">WindowClose</animation>
+			<posx>20</posx>
+			<posy>20</posy>
+			<!-- Background -->
+                        <control type="image">
+				<posy>-20</posy>
+				<posx>-70</posx>
+                                <width>320</width>
+                                <height>657</height>
+                                <texture border="6">base-rounded.png</texture>
+                                <colordiffuse>DD000000</colordiffuse>
+                        </control>
+			<!-- Filter List -->
+			<control type="grouplist" id="19020">
+				<posy>10</posy>
+				<width>240</width>
+				<height>605</height>
+				<onright>Dialog.Close(10202)</onright>
+				<onleft>Dialog.Close(10202)</onleft>
+				<itemgap>-1</itemgap>
+				<!--<pagecontrol>61</pagecontrol>-->
+				<scrolltime>200</scrolltime>
+			</control>
+			<!-- sub-list buttons -->
+			<control type="radiobutton" id="19021">
+				<width>230</width>
+				<height>34</height>
+				<font>font16caps</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+				<label>-</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textureradiofocus>ticked.png</textureradiofocus>
+				<textureradionofocus>-</textureradionofocus>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<include>navigation_options</include>
+			</control>
+			<!-- Used for Clear Filters -->
+			<control type="button" id="19022">
+				<width>230</width>
+				<font>font16caps</font>
+				<textcolor>mainblue</textcolor>
+				<focusedcolor>mainblue</focusedcolor>
+				<label>-</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<include>navigation_options</include>
+			</control>
+				
+			<control type="scrollbar" id="61">
+				<description>Scroll Bar</description>
+				<posx>227</posx>
+				<posy>33</posy>
+				<width>20</width>
+				<height>568</height>
+				<showonepage>true</showonepage>
+			</control>
+		</control>
+	</controls>
+</window>

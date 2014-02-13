@@ -1,0 +1,370 @@
+<window type="dialog" id="1120">
+	<defaultcontrol always="true">666</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+
+	<controls>
+
+	<!-- Dialog Header -->
+	<include>dialog_header</include>
+
+	<!-- Dialog List-->
+	<control type="group" id="666">
+
+		<!-- FADETIME -->
+		<control type="group">
+		<visible>Skin.String(selector2,Fadetime)</visible>
+			<control type="list" id="460">
+				<include>dialog_list</include>
+				<content>
+			<item id="0">
+				<onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>Default</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],200)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.2 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],400)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.4 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],600)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.6 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],800)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.8 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.0 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1200)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.2 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1400)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.4 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1600)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.6 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1800)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.8 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],2000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>2.0 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],2500)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>2.5 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],3000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>3.0 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],3500)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>3.5 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],4000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>4.0 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],4500)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>4.5 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],5000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<label>5.0 sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],0)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>Off</label>
+			</item>
+			</content>
+	        	</control>
+		</control>
+
+		<!-- TIME PER IMAGE -->
+		<control type="group">
+		<visible>Skin.String(selector2,TimePerImage)</visible>
+			<control type="list" id="460">
+				<include>dialog_list</include>
+				<content>
+			<item id="0">
+				<onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>Default</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,1)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,2)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>2 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,3)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>3 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,4)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>4 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,5)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>5 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,6)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>6 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,7)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>7 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,8)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>8 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,9)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>9 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,10)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>10 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,15)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>15 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,20)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>20 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,25)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>25 Sec</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,30)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>30 Sec</label>
+			</item>
+		</content>
+		</control>
+	</control>
+
+		<!-- OPACITY -->
+		<control type="group">
+		<visible>Skin.String(selector2,Opacity)</visible>
+			<control type="list" id="460">
+				<include>dialog_list</include>
+				<content>
+			<item id="0">
+				<onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>Default</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,0)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,10)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>10%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,20)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>20%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,30)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>30%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,40)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>40%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,50)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>50%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,60)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>60%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,70)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>70%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,80)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>80%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,90)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>90%</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,100)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>100%</label>
+			</item>
+			</content>
+		</control>
+	</control>
+
+	<!-- OSD Mode -->
+		<control type="group">
+		<visible>Skin.String(selector1,OSD)</visible>
+		<visible>Skin.String(selector2,Options)</visible>
+			<control type="list" id="460">
+				<include>dialog_list</include>
+		<content>
+			<item>
+				<description>OSD FULL</description>
+				<onclick>Skin.SetString(osd_mode,full)</onclick>
+				<label>Default</label>
+			</item>
+			<item>
+				<description>OSD FULL</description>
+				<onclick>Skin.SetString(osd_mode,auto)</onclick>
+				<label>Auto</label>
+			</item>
+			<item>
+				<description>OSD FULL</description>
+				<onclick>Skin.SetString(osd_mode,compact1)</onclick>
+				<label>Compact (Top)</label>
+			</item>
+			<item>
+				<description>OSD FULL</description>
+				<onclick>Skin.SetString(osd_mode,compact2)</onclick>
+				<label>Compact (Bottom)</label>
+			</item>
+			<item>
+				<description>OSD FULL</description>
+				<onclick>Skin.SetString(osd_mode,minimal)</onclick>
+				<label>Minimal</label>
+			</item>
+			<item>
+				<description>OSD OFF</description>
+				<onclick>Skin.SetString(osd_mode,off)</onclick>
+				<label>Off</label>
+			</item>
+			<item>
+				<posy>20</posy>
+				<description>OSD FULL</description>
+				<label>Opacity ($INFO[Skin.String(OSD_Opacity)]%)</label>      
+				<onclick>Skin.SetString(selector1,OSD)</onclick>
+				<onclick>Skin.SetString(selector2,Opacity)</onclick>
+				<onclick>Control.SetFocus(1120,0)</onclick>
+			</item>
+			<item>
+				<description>Disable Flash</description>
+				<onclick>Skin.SetBool(osd_flash)</onclick>
+				<label>Disable OSD Animation</label>
+				<visible>!Skin.HasSetting(osd_flash)</visible>
+			</item>
+			<item>
+				<description>Disable Flash</description>
+				<onclick>Skin.Reset(osd_flash)</onclick>
+				<label>Enable OSD Animation</label>
+				<visible>Skin.HasSetting(osd_flash)</visible>
+			</item>
+
+
+		</content>
+		</control>
+	</control>
+
+	<!-- Viewtype List -->
+	<control type="group">
+		<visible>Skin.String(selector1,View)</visible>
+		<visible>Skin.String(selector2,Modes)</visible>
+
+		<control type="list" id="460">
+		<onleft>Dialog.Close(1120)</onleft>
+		<onright>Dialog.Close(1120)</onright>
+		<include>dialog_list</include>
+		<content>
+			<item>
+				<onclick>Container.SetViewMode(50)</onclick>
+				<label>List</label>
+			</item>
+			<item>
+				<onclick>Container.SetViewMode(55)</onclick>
+				<label>Poster</label>
+			</item>
+			<item>
+				<onclick>Container.SetViewMode(58)</onclick>
+				<label>Showcase</label>
+			</item>
+			<item>
+				<onclick>Container.SetViewMode(599)</onclick>
+				<label>Night</label>
+			</item>
+		</content>
+		</control>
+
+	</control>
+
+
+	</control>
+	<include>dialog_scrollbar</include>
+	</controls>
+</window>

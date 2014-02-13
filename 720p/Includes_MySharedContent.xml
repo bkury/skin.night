@@ -1,0 +1,165 @@
+<includes>
+
+<include name="mysharedcontent_deck">
+	<!-- Placeholder -->
+	<control type="group">
+		<animation effect="slide" start="1200,0" time="800" tween="back" easing="inout">WindowOpen</animation>
+		<animation effect="slide" end="1200,0" time="800" tween="back" easing="inout">WindowClose</animation>
+		<posx>116</posx>
+		<posy>275</posy>
+		<include>deck_placeholder</include>
+	</control>
+
+	<!-- Content -->
+	<control type="group">
+	<animation effect="slide" start="1200,0" time="800" tween="back" easing="inout">WindowOpen</animation>
+	<animation effect="slide" end="1200,0" time="800" tween="back" easing="inout">WindowClose</animation>
+	<posx>102</posx>
+	<posy>240</posy>
+
+		<!-- Stuff -->
+		<control type="group">
+			<!-- Selector -->
+			<control type="image">
+				<posy>30</posy>
+				<posx>10</posx>
+				<texture background="true">newlistselector.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+			</control>
+			<!-- Big Title -->
+			<control type="label">
+				<posx>30</posx>
+				<posy>220</posy>
+				<align>left</align>
+				<label>$INFO[Container(56).ListItem(0).Label]</label>
+				<font>Font_Bartowski_MainMenu</font>
+				<scroll>false</scroll>
+				<textcolor>mainblue</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+				<width min="1" max="780">auto</width>
+			</control>
+			<!-- Big Title -->
+			<control type="label">
+				<posx>30</posx>
+				<posy>300</posy>
+				<align>left</align>
+				<label>$INFO[ListItem.Property(sourceTitle)]</label>
+				<font>Font_Bartowski_Main_SubMenu</font>
+				<scroll>false</scroll>
+				<textcolor>FFCCCCCC</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+				<width min="1" max="780">auto</width>
+			</control>
+		</control>
+
+	<control type="fixedlist" id="56">
+		<visible allowhiddenfocus="false">true</visible>
+		<orientation>horizontal</orientation>
+		<onright>-</onright>
+		<onleft>ReplaceWindow(home)</onleft>
+		<ondown>ReplaceWindow(home)</ondown>
+		<onup>ReplaceWindow(home)</onup>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1030</width>
+		<height>400</height>
+		<itemlayout width="140" height="230">
+			<!-- Placeholder -->
+			<!--<control type="image">
+				<posx>28</posx>
+				<posy>30</posy>
+				<width>134</width>
+				<height>128</height>
+				<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+				<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+			</control>-->
+			<!--<control type="image">
+				<posx>35</posx>
+				<posy>151</posy>
+				<width>120</width>
+				<height>1</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>-->
+			<!-- Thumb -->
+			<control type="image">
+				<posx>37</posx>
+				<posy>39</posy>
+				<width>116</width>
+				<height>110</height>
+				<aspectratio scalediffuse="false" align="top">keep</aspectratio>
+				<texture background="true">share-icon2.png</texture>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<!-- Label -->
+			<control type="label">
+				<posx>95</posx>
+				<posy>155</posy>
+				<width>100</width>
+				<height>30</height>
+				<align>center</align>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.Label]</label>
+				<font>SearchResultSmaller</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+		</itemlayout>
+		<focusedlayout width="160" height="250">
+			<!--  Placeholder -->
+			<!--<control type="image">
+				<posx>28</posx>
+				<posy>30</posy>
+				<width>134</width>
+				<height>128</height>
+				<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+				<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+			</control>-->
+			<!-- Thumb -->
+			<control type="image">
+				<posx>37</posx>
+				<posy>39</posy>
+				<width>116</width>
+				<height>110</height>
+				<aspectratio scalediffuse="false" align="top">keep</aspectratio>
+				<texture diffuse="episodeMaskSmall.png" background="true">share-icon2.png</texture>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<!-- Frame -->
+			<control type="image">
+				<posx>34</posx>
+				<posy>36</posy>
+				<width>122</width>
+				<height>176</height>
+				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+				<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+			</control>
+			<!-- Label -->
+			<control type="label">
+				<posx>95</posx>
+				<posy>155</posy>
+				<width>100</width>
+				<height>30</height>
+				<align>center</align>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.Label]</label>
+				<font>SearchResultSmaller</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+		</focusedlayout>
+		</control>
+	</control>
+</include>
+
+<include name="mysharedcontent_screen">
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Shared_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed)">Shared_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple)">Shared_Simplelist</include>
+</include>
+
+</includes>
+

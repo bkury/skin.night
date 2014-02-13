@@ -1,0 +1,92 @@
+<window id="104">
+	<controls>
+		<control type="group">
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<include>Animation_CommonFade</include>
+			<control type="image">
+				<posx>1040</posx>
+				<posy>85</posy>
+				<description>Background</description>
+				<width>250</width>
+				<height>80</height>
+				<texture border="5">base-rounded.png</texture>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<colordiffuse>FF000000</colordiffuse>
+			</control>
+			<control type="group">
+				<visible>!player.passthrough</visible>
+				<control type="group">
+					<posx>1070</posx>
+					<posy>107</posy>
+					<control type="image">
+						<width>40</width>
+                                                <height>40</height>
+                                                <aspectratio scalediffuse="false">keep</aspectratio>
+						<texture>volumefull.png</texture>
+						<posy>0</posy>
+						<posx>0</posx>
+                                                <visible>!Window.IsVisible(113)</visible>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+					<control type="image">
+						<width>40</width>
+                                                <height>40</height>
+                                                <aspectratio scalediffuse="false">keep</aspectratio>
+						<texture>volumeoff.png</texture>
+						<posy>0</posy>
+						<posx>0</posx>
+                                                <visible>Window.IsVisible(113)</visible>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+				</control>
+			</control>
+			<control type="progress" id="0">
+				<description>Progressbar</description>
+				<visible>!Player.Muted</visible>
+				<posx>1135</posx>
+				<posy>125</posy>
+				<width>135</width>
+				<height>18</height>
+				<info>Player.Volume</info>
+				<texturebg>osd_volume_indicator_background.png</texturebg>
+				<lefttexture>osd_volume_indicator_left.png</lefttexture>
+				<midtexture>osd_volume_indicator.png</midtexture>
+				<righttexture>osd_volume_indicator_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+				<reveal>true</reveal>
+			</control>
+			<control type="group">
+				<visible>!Player.Muted</visible>
+				<control type="label">
+					<posx>1135</posx>
+					<posy>95</posy>
+					<width>810</width>
+					<height>38</height>
+					<font>Font_Bartowski_Digital_Clock</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[player.volume]</label>
+				</control>
+			</control>
+
+			<!--<control type="group">
+				<visible>Player.Muted</visible>
+				<control type="label">
+					<posx>1145</posx>
+					<posy>95</posy>
+					<width>810</width>
+					<height>38</height>
+					<font>Font_Bartowski_Digital_Clock</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>31073</label>
+				</control>
+			</control>-->
+		</control>
+		<include condition="Skin.HasSetting(debugmode)">Debug</include>
+	</controls>
+</window>

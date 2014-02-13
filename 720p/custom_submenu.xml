@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<window type="dialog" id="4998">
+        <allowoverlay>yes</allowoverlay>
+        <defaultcontrol always="true">1300</defaultcontrol>
+        <controls>
+		<!-- SUBMENU -->
+		<control type="group" id="1400">
+			<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Sub_Wraplist</include>
+			<include condition="Skin.HasSetting(Home_Fixed)">Sub_Fixedlist</include>
+			<include condition="Skin.HasSetting(Home_Simple)">Sub_Simplelist</include>
+		</control>
+        </controls>
+</window>
+

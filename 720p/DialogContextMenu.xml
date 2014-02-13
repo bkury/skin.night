@@ -1,0 +1,42 @@
+<!--Alaska-->
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+        <include>Animation_Bartowski_Context_Zoom</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+                <origin x="0" y="160"/>
+	</coordinates>
+	<controls>
+
+		<!-- Context Hack -->
+		<control type="group">
+			<posy>-160</posy>	
+			<include>dialog_header</include>
+		</control>
+			
+		<!-- Context List -->
+		<control type="button" id="1000">
+			<!--<animation effect="fade" end="100" time="500">WindowOpen</animation>
+			<animation effect="fade" end="0" time="500">WindowClose</animation>-->
+			<description>Context Menu</description>
+			<!--<posx>330</posx>-->
+			<posy>0</posy>
+			<!--<width>600</width>-->
+			<width>1280</width>
+			<height>40</height>
+			<label>-</label>
+			<font>Font_MenuValue</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>mainblue</focusedcolor>
+			<align>center</align>
+			<pulseonselect>no</pulseonselect>
+			<onfocus>-</onfocus>
+			<onup>1000</onup>
+			<ondown>1000</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,75 @@
+<includes>
+	<include name="home_horizontal">
+		<!-- Background -->
+                <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <include>Dimensions_Fullscreen</include>
+                        <texture>mainmenu/horizontal_back.png</texture>
+                        <colordiffuse>ff15efd9</colordiffuse>
+                        <include>Animation_CommonFadeNoHide</include>
+                </control>
+
+		<control type="wraplist" id="300">
+			<!-- Deck Animation -->
+			<animation effect="slide" end="-600,0" time="500" tween="cubic" easing="out" condition="ControlGroup(5000).HasFocus">conditional</animation>
+
+			<!-- Submenu Animation -->
+                        <animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998)">conditional</animation>
+			<posx>0</posx>
+			<posy>300</posy>
+			<height>100</height>
+                        <width>1280</width>
+			<viewtype>list</viewtype>
+			<orientation>horizontal</orientation>
+			<scrolltime>300</scrolltime>
+                        <focusposition>2</focusposition>
+			<include>Animation_Bartowski_ZoomOutZoomIn</include>
+			<itemlayout width="360" height="100">
+				<control type="label">
+					<font>Font_Bartowski_Main_SubMenu</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<info>ListItem.Label</info>
+					<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+ 				</control>			
+				<control type="label">
+					<font>AeonFont_MainMenu</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<info>ListItem.Label</info>
+					<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+				</control>			
+			</itemlayout>
+			<focusedlayout width="360" height="100">
+				<control type="label">
+					<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+					<textcolor>ffffffff</textcolor>
+					<font>Font_Bartowski_Main_SubMenu</font>
+					<shadowcolor>black</shadowcolor>
+					<info>ListItem.Label</info>
+					<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+				</control>
+				<control type="label">
+					<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+					<textcolor>ffffffff</textcolor>
+					<font>AeonFont_MainMenu_Focus</font>
+					<shadowcolor>black</shadowcolor>
+					<info>ListItem.Label</info>
+					<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="11">
+					<description>Search</description>
+					<label>$LOCALIZE[137]</label>
+					<icon>backgrounds/search.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomSearchFolder)]</thumb>			
+					<onclick>Plex.ActivateWindow(10051)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoSearchButton)</visible>
+				</item>
+			</content>
+		</control>
+
+	</include>
+
+
+</includes>

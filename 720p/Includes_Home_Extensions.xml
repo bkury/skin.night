@@ -1,0 +1,1785 @@
+<!-- Generated XML File -->
+<!-- Sun Jan 26 21:53:52 CET 2014 -->
+<includes>
+
+<!-- Home Menu Extension -->
+<include name="Home_Extension_Menu">
+	<item id="20">
+		<description>Youtube</description>
+		<label>Youtube</label>
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_20_Enabled) + isEmpty(Skin.String(Home_20_Name))</visible>
+	</item>
+	<item id="20">
+		<description>Youtube</description>
+		<label>$INFO[Skin.String(Home_20_Name)]</label>
+                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Home_20_Name))</visible>
+	</item>
+
+	<item id="21">
+		<description>Vimeo</description>
+		<label>Vimeo</label>
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_21_Enabled) + isEmpty(Skin.String(Home_21_Name))</visible>
+	</item>
+	<item id="21">
+		<description>Vimeo</description>
+		<label>$INFO[Skin.String(Home_21_Name)]</label>
+                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Home_21_Name))</visible>
+	</item>
+
+	<item id="22">
+		<description>AppleTrailers</description>
+		<label>AppleTrailers</label>
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_22_Enabled) + isEmpty(Skin.String(Home_22_Name))</visible>
+	</item>
+	<item id="22">
+		<description>AppleTrailers</description>
+		<label>$INFO[Skin.String(Home_22_Name)]</label>
+                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Home_22_Name))</visible>
+	</item>
+
+	<item id="23">
+		<description>Shoutcast</description>
+		<label>Shoutcast</label>
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_23_Enabled) + isEmpty(Skin.String(Home_23_Name))</visible>
+	</item>
+	<item id="23">
+		<description>Shoutcast</description>
+		<label>$INFO[Skin.String(Home_23_Name)]</label>
+                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Home_23_Name))</visible>
+	</item>
+
+	<item id="24">
+		<description>Revision3</description>
+		<label>Revision3</label>
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_24_Enabled) + isEmpty(Skin.String(Home_24_Name))</visible>
+	</item>
+	<item id="24">
+		<description>Revision3</description>
+		<label>$INFO[Skin.String(Home_24_Name)]</label>
+                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Home_24_Name))</visible>
+	</item>
+
+	<item id="25">
+		<description>LetMeWatchThis</description>
+		<label>LetMeWatchThis</label>
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_25_Enabled) + isEmpty(Skin.String(Home_25_Name))</visible>
+	</item>
+	<item id="25">
+		<description>LetMeWatchThis</description>
+		<label>$INFO[Skin.String(Home_25_Name)]</label>
+                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Home_25_Name))</visible>
+	</item>
+
+</include>
+
+<!-- Deck Extensions -->
+<include name="Home_Extension_Deck">
+	<control type="group">
+		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		<visible>Container(300).HasFocus(20)</visible>
+
+		<!-- Youtube -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1050</width>
+			<height>720</height>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+			<visible>Container(300).HasFocus(20)</visible>
+
+			<!-- Placeholder Background -->
+                        <control type="group">
+                                <posy>280</posy>
+                                <include>deck_placeholder</include>
+				<visible>!isEmpty(Container(8850).ListItem(0).Label)</visible>
+                        </control>
+
+			<control type="label">
+				<posx>580</posx>
+				<posy>250</posy>
+				<font>MediumSmallTitleFont2</font>
+				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>FF222222</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Label]</label>
+				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+			</control>
+
+			<!-- Content -->
+			<control type="fixedlist" id="8850">
+				<visible allowhiddenfocus="false">true</visible>
+				<orientation>horizontal</orientation>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onright>-</onright>
+				<onleft>300</onleft>
+				<posx>-14</posx>
+				<posy>240</posy>
+				<width>1030</width>
+				<height>400</height>
+				<itemlayout width="140" height="230">
+					<!-- Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/20_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="250">
+					<!--  Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/20_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Frame -->
+					<control type="image">
+						<posx>34</posx>
+						<posy>36</posy>
+						<width>122</width>
+						<height>176</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="1">
+					<description>My Account</description>
+					<label>My Account</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/MyAccount?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTAKTXkgQWNjb3VudHM1CnRpdGxlcjAK,return)</onclick>
+					<visible>Skin.HasSetting(Home_20_myaccount)</visible>
+				</item>
+
+				<item id="2">
+					<description>Videos</description>
+					<label>Videos</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/VideosMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNgpWaWRlb3NzNQp0aXRsZXIwCg__,return)</onclick>
+					<visible>Skin.HasSetting(Home_20_videos)</visible>
+				</item>
+
+				<item id="3">
+					<description>Channels</description>
+					<label>Channels</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/ChannelsMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzOApDaGFubmVsc3M1CnRpdGxlcjAK,return)</onclick>
+					<visible>Skin.HasSetting(Home_20_channels)</visible>
+				</item>
+
+				<item id="4">
+					<description>Live</description>
+					<label>Live</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/LiveMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNApMaXZlczUKdGl0bGVyMAo_,return)</onclick>
+					<visible>Skin.HasSetting(Home_20_live)</visible>
+				</item>
+
+				</content>
+				</control>
+				<!-- Stuff -->
+				<control type="group">
+					<visible>ControlGroup(5000).HasFocus</visible>
+					<!-- Selector -->
+					<control type="image">
+						<posy>269</posy>
+						<posx>-2</posx>
+						<texture background="true">newlistselector.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					</control>
+					<!-- Big Title -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>470</posy>
+						<align>left</align>
+						<label>$INFO[Container(8850).ListItem(0).Label]</label>
+						<font>Font_Bartowski_MainMenu</font>
+						<scroll>false</scroll>
+						<textcolor>mainblue</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width min="1" max="780">auto</width>
+					</control>
+				</control>
+			</control>
+		</control>
+
+	<control type="group">
+		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		<visible>Container(300).HasFocus(21)</visible>
+
+		<!-- Vimeo -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1050</width>
+			<height>720</height>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+			<visible>Container(300).HasFocus(21)</visible>
+
+			<!-- Placeholder Background -->
+                        <control type="group">
+                                <posy>280</posy>
+                                <include>deck_placeholder</include>
+				<visible>!isEmpty(Container(8851).ListItem(0).Label)</visible>
+                        </control>
+
+			<control type="label">
+				<posx>580</posx>
+				<posy>250</posy>
+				<font>MediumSmallTitleFont2</font>
+				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>FF222222</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Label]</label>
+				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+			</control>
+
+			<!-- Content -->
+			<control type="fixedlist" id="8851">
+				<visible allowhiddenfocus="false">true</visible>
+				<orientation>horizontal</orientation>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onright>-</onright>
+				<onleft>300</onleft>
+				<posx>-14</posx>
+				<posy>240</posy>
+				<width>1030</width>
+				<height>400</height>
+				<itemlayout width="140" height="230">
+					<!-- Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/21_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="250">
+					<!--  Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/21_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Frame -->
+					<control type="image">
+						<posx>34</posx>
+						<posy>36</posy>
+						<width>122</width>
+						<height>176</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="1">
+					<description>My Stuff</description>
+					<label>My Stuff</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/my_stuff?title=My+Stuff,return)</onclick>
+					<visible>Skin.HasSetting(Home_21_mystuff)</visible>
+				</item>
+
+				<item id="2">
+					<description>Staff Picks</description>
+					<label>Staff Picks</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fstaffpicks%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=Staff+Picks,return)</onclick>
+					<visible>Skin.HasSetting(Home_21_staff)</visible>
+				</item>
+
+				<item id="3">
+					<description>HD</description>
+					<label>HD</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fhd%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=HD,return)</onclick>
+					<visible>Skin.HasSetting(Home_21_hd)</visible>
+				</item>
+
+				<item id="4">
+					<description>Featured Channels</description>
+					<label>Featured Channels</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/directory?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fpage%3A%25d%2Fsort%3Asubscribers&amp;title=Featured+Channels,return)</onclick>
+					<visible>Skin.HasSetting(Home_21_featured)</visible>
+				</item>
+
+				<item id="5">
+					<description>Channels</description>
+					<label>Channels</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/channels/categories?title=Channels,return)</onclick>
+					<visible>Skin.HasSetting(Home_21_channels)</visible>
+				</item>
+
+				<item id="6">
+					<description>Groups</description>
+					<label>Groups</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/groups/categories?title=Groups,return)</onclick>
+					<visible>Skin.HasSetting(Home_21_groups)</visible>
+				</item>
+
+				</content>
+				</control>
+				<!-- Stuff -->
+				<control type="group">
+					<visible>ControlGroup(5000).HasFocus</visible>
+					<!-- Selector -->
+					<control type="image">
+						<posy>269</posy>
+						<posx>-2</posx>
+						<texture background="true">newlistselector.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					</control>
+					<!-- Big Title -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>470</posy>
+						<align>left</align>
+						<label>$INFO[Container(8851).ListItem(0).Label]</label>
+						<font>Font_Bartowski_MainMenu</font>
+						<scroll>false</scroll>
+						<textcolor>mainblue</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width min="1" max="780">auto</width>
+					</control>
+				</control>
+			</control>
+		</control>
+
+	<control type="group">
+		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		<visible>Container(300).HasFocus(22)</visible>
+
+		<!-- AppleTrailers -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1050</width>
+			<height>720</height>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+			<visible>Container(300).HasFocus(22)</visible>
+
+			<!-- Placeholder Background -->
+                        <control type="group">
+                                <posy>280</posy>
+                                <include>deck_placeholder</include>
+				<visible>!isEmpty(Container(8852).ListItem(0).Label)</visible>
+                        </control>
+
+			<control type="label">
+				<posx>580</posx>
+				<posy>250</posy>
+				<font>MediumSmallTitleFont2</font>
+				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>FF222222</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Label]</label>
+				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+			</control>
+
+			<!-- Content -->
+			<control type="fixedlist" id="8852">
+				<visible allowhiddenfocus="false">true</visible>
+				<orientation>horizontal</orientation>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onright>-</onright>
+				<onleft>300</onleft>
+				<posx>-14</posx>
+				<posy>240</posy>
+				<width>1030</width>
+				<height>400</height>
+				<itemlayout width="140" height="230">
+					<!-- Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/22_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="250">
+					<!--  Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/22_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Frame -->
+					<control type="image">
+						<posx>34</posx>
+						<posy>36</posy>
+						<width>122</width>
+						<height>176</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="1">
+					<description>Just Added</description>
+					<label>Just Added</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/just_added,return)</onclick>
+					<visible>Skin.HasSetting(Home_22_added)</visible>
+				</item>
+
+				<item id="2">
+					<description>Most Popular</description>
+					<label>Most Popular</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/most_pop,return)</onclick>
+					<visible>Skin.HasSetting(Home_22_popular)</visible>
+				</item>
+
+				<item id="3">
+					<description>Exclusive</description>
+					<label>Exclusive</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/exclusive,return)</onclick>
+					<visible>Skin.HasSetting(Home_22_exclusive)</visible>
+				</item>
+
+				<item id="4">
+					<description>Genres</description>
+					<label>Genres</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/genres,return)</onclick>
+					<visible>Skin.HasSetting(Home_22_genres)</visible>
+				</item>
+
+				<item id="5">
+					<description>Movie Studios</description>
+					<label>Movie Studios</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/studios,return)</onclick>
+					<visible>Skin.HasSetting(Home_22_studios)</visible>
+				</item>
+
+				</content>
+				</control>
+				<!-- Stuff -->
+				<control type="group">
+					<visible>ControlGroup(5000).HasFocus</visible>
+					<!-- Selector -->
+					<control type="image">
+						<posy>269</posy>
+						<posx>-2</posx>
+						<texture background="true">newlistselector.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					</control>
+					<!-- Big Title -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>470</posy>
+						<align>left</align>
+						<label>$INFO[Container(8852).ListItem(0).Label]</label>
+						<font>Font_Bartowski_MainMenu</font>
+						<scroll>false</scroll>
+						<textcolor>mainblue</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width min="1" max="780">auto</width>
+					</control>
+				</control>
+			</control>
+		</control>
+
+	<control type="group">
+		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		<visible>Container(300).HasFocus(23)</visible>
+
+		<!-- Shoutcast -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1050</width>
+			<height>720</height>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+			<visible>Container(300).HasFocus(23)</visible>
+
+			<!-- Placeholder Background -->
+                        <control type="group">
+                                <posy>280</posy>
+                                <include>deck_placeholder</include>
+				<visible>!isEmpty(Container(8853).ListItem(0).Label)</visible>
+                        </control>
+
+			<control type="label">
+				<posx>580</posx>
+				<posy>250</posy>
+				<font>MediumSmallTitleFont2</font>
+				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>FF222222</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Label]</label>
+				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+			</control>
+
+			<!-- Content -->
+			<control type="fixedlist" id="8853">
+				<visible allowhiddenfocus="false">true</visible>
+				<orientation>horizontal</orientation>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onright>-</onright>
+				<onleft>300</onleft>
+				<posx>-14</posx>
+				<posy>240</posy>
+				<width>1030</width>
+				<height>400</height>
+				<itemlayout width="140" height="230">
+					<!-- Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/23_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="250">
+					<!--  Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/23_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Frame -->
+					<control type="image">
+						<posx>34</posx>
+						<posy>36</posy>
+						<width>122</width>
+						<height>176</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="1">
+					<description>Genres</description>
+					<label>Genres</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genres,return)</onclick>
+					<visible>Skin.HasSetting(Home_23_genres)</visible>
+				</item>
+
+				<item id="2">
+					<description>TOP 500</description>
+					<label>TOP 500</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genre?query=%2A%2Aignore%2A%2A&amp;queryParamName=http%3A%2F%2Fapi.shoutcast.com%2Flegacy%2FTop500%3F%25sk%3Dsh1t7hyn3Kh0jhlV&amp;title=Top+500+Stations,return)</onclick>
+					<visible>Skin.HasSetting(Home_23_top)</visible>
+				</item>
+
+				</content>
+				</control>
+				<!-- Stuff -->
+				<control type="group">
+					<visible>ControlGroup(5000).HasFocus</visible>
+					<!-- Selector -->
+					<control type="image">
+						<posy>269</posy>
+						<posx>-2</posx>
+						<texture background="true">newlistselector.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					</control>
+					<!-- Big Title -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>470</posy>
+						<align>left</align>
+						<label>$INFO[Container(8853).ListItem(0).Label]</label>
+						<font>Font_Bartowski_MainMenu</font>
+						<scroll>false</scroll>
+						<textcolor>mainblue</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width min="1" max="780">auto</width>
+					</control>
+				</control>
+			</control>
+		</control>
+
+	<control type="group">
+		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		<visible>Container(300).HasFocus(24)</visible>
+
+		<!-- Revision3 -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1050</width>
+			<height>720</height>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+			<visible>Container(300).HasFocus(24)</visible>
+
+			<!-- Placeholder Background -->
+                        <control type="group">
+                                <posy>280</posy>
+                                <include>deck_placeholder</include>
+				<visible>!isEmpty(Container(8854).ListItem(0).Label)</visible>
+                        </control>
+
+			<control type="label">
+				<posx>580</posx>
+				<posy>250</posy>
+				<font>MediumSmallTitleFont2</font>
+				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>FF222222</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Label]</label>
+				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+			</control>
+
+			<!-- Content -->
+			<control type="fixedlist" id="8854">
+				<visible allowhiddenfocus="false">true</visible>
+				<orientation>horizontal</orientation>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onright>-</onright>
+				<onleft>300</onleft>
+				<posx>-14</posx>
+				<posy>240</posy>
+				<width>1030</width>
+				<height>400</height>
+				<itemlayout width="140" height="230">
+					<!-- Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/24_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="250">
+					<!--  Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/24_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Frame -->
+					<control type="image">
+						<posx>34</posx>
+						<posy>36</posy>
+						<width>122</width>
+						<height>176</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="1">
+					<description>Recently Released</description>
+					<label>Recently Released</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=latest&amp;title=Recently+Released,return)</onclick>
+					<visible>Skin.HasSetting(Home_24_recently)</visible>
+				</item>
+
+				<item id="2">
+					<description>Featured</description>
+					<label>Featured</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=featured&amp;title=Featured,return)</onclick>
+					<visible>Skin.HasSetting(Home_24_featured)</visible>
+				</item>
+
+				<item id="3">
+					<description>Featured Shows</description>
+					<label>Featured Shows</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=current&amp;title=Featured+Shows,return)</onclick>
+					<visible>Skin.HasSetting(Home_24_featuredshows)</visible>
+				</item>
+
+				<item id="4">
+					<description>Archived Shows</description>
+					<label>Archived Shows</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=archived&amp;title=Archived+Shows,return)</onclick>
+					<visible>Skin.HasSetting(Home_24_archivedshows)</visible>
+				</item>
+
+				</content>
+				</control>
+				<!-- Stuff -->
+				<control type="group">
+					<visible>ControlGroup(5000).HasFocus</visible>
+					<!-- Selector -->
+					<control type="image">
+						<posy>269</posy>
+						<posx>-2</posx>
+						<texture background="true">newlistselector.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					</control>
+					<!-- Big Title -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>470</posy>
+						<align>left</align>
+						<label>$INFO[Container(8854).ListItem(0).Label]</label>
+						<font>Font_Bartowski_MainMenu</font>
+						<scroll>false</scroll>
+						<textcolor>mainblue</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width min="1" max="780">auto</width>
+					</control>
+				</control>
+			</control>
+		</control>
+
+	<control type="group">
+		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		<visible>Container(300).HasFocus(25)</visible>
+
+		<!-- LetMeWatchThis -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1050</width>
+			<height>720</height>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+			<visible>Container(300).HasFocus(25)</visible>
+
+			<!-- Placeholder Background -->
+                        <control type="group">
+                                <posy>280</posy>
+                                <include>deck_placeholder</include>
+				<visible>!isEmpty(Container(8855).ListItem(0).Label)</visible>
+                        </control>
+
+			<control type="label">
+				<posx>580</posx>
+				<posy>250</posy>
+				<font>MediumSmallTitleFont2</font>
+				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
+				<textcolor>ffffffff</textcolor>
+				<shadowcolor>FF222222</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Label]</label>
+				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+			</control>
+
+			<!-- Content -->
+			<control type="fixedlist" id="8855">
+				<visible allowhiddenfocus="false">true</visible>
+				<orientation>horizontal</orientation>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onright>-</onright>
+				<onleft>300</onleft>
+				<posx>-14</posx>
+				<posy>240</posy>
+				<width>1030</width>
+				<height>400</height>
+				<itemlayout width="140" height="230">
+					<!-- Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/25_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</itemlayout>
+				<focusedlayout width="160" height="250">
+					<!--  Placeholder -->
+					<control type="image">
+						<posx>28</posx>
+						<posy>30</posy>
+						<width>134</width>
+						<height>128</height>
+						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
+					</control>
+					<!-- Thumb -->
+					<control type="image">
+						<posx>37</posx>
+						<posy>39</posy>
+						<width>116</width>
+						<height>110</height>
+						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+						<texture diffuse="episodeMaskSmall.png" background="true">extensions/25_icon.jpg</texture>
+						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- Frame -->
+					<control type="image">
+						<posx>34</posx>
+						<posy>36</posy>
+						<width>122</width>
+						<height>176</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+					</control>
+					<!-- Label -->
+					<control type="label">
+						<posx>95</posx>
+						<posy>155</posy>
+						<width>100</width>
+						<height>30</height>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<font>SearchResultSmaller</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="1">
+					<description>Favourites</description>
+					<label>Favourites</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/FavouritesMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_favourites)</visible>
+				</item>
+
+				<item id="2">
+					<description>Movies</description>
+					<label>Movies</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzNgptb3ZpZXNzNAp0eXBlcjAK,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_movies)</visible>
+				</item>
+
+				<item id="3">
+					<description>Movies (Recently)</description>
+					<label>Movies (Recently)</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTQKUmVjZW50bHkgQWRkZWRzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHM2Cm1vdmllc3M0CnR5cGUxCnIyCjMKbnM1CmdlbnJlczYKbW92aWVzczQKdHlwZXM2Ck1vdmllc3M0CmVsZW1yMAo_,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_moviesrecently)</visible>
+				</item>
+
+				<item id="4">
+					<description>Movies (Latest)</description>
+					<label>Movies (Latest)</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTUKTGF0ZXN0IFJlbGVhc2VzczEyCnNlY3Rpb25fbmFtZW5zNQpnZW5yZXIxCnM0CnBhdGhzNgptb3ZpZXNzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXM2Cm1vdmllc3M0CnR5cGVzNgpNb3ZpZXNzNAplbGVtcjAK,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_movieslatest)</visible>
+				</item>
+
+				<item id="5">
+					<description>TV Shows</description>
+					<label>TV Shows</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzMgp0dnM0CnR5cGVyMAo_,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_tvshows)</visible>
+				</item>
+
+				<item id="6">
+					<description>TV Shows (Recently)</description>
+					<label>TV Shows (Recently)</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNApSZWNlbnRseSBBZGRlZHMxMgpzZWN0aW9uX25hbWVuczUKZ2VucmVyMQpzNApwYXRoczIKdHZzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXMyCnR2czQKdHlwZXM4ClRWIFNob3dzczQKZWxlbXIwCg__,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_tvshowsrecently)</visible>
+				</item>
+
+				<item id="7">
+					<description>TV Shows (Latest)</description>
+					<label>TV Shows (Latest)</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNQpMYXRlc3QgUmVsZWFzZXNzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHMyCnR2czQKdHlwZTEKcjIKMwpuczUKZ2VucmVzMgp0dnM0CnR5cGVzOApUViBTaG93c3M0CmVsZW1yMAo_,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_tvshowslatest)</visible>
+				</item>
+
+				<item id="8">
+					<description>Recently Watched</description>
+					<label>Recently Watched</label>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/HistoryMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
+					<visible>Skin.HasSetting(Home_25_recently)</visible>
+				</item>
+
+				</content>
+				</control>
+				<!-- Stuff -->
+				<control type="group">
+					<visible>ControlGroup(5000).HasFocus</visible>
+					<!-- Selector -->
+					<control type="image">
+						<posy>269</posy>
+						<posx>-2</posx>
+						<texture background="true">newlistselector.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+					</control>
+					<!-- Big Title -->
+					<control type="label">
+						<posx>10</posx>
+						<posy>470</posy>
+						<align>left</align>
+						<label>$INFO[Container(8855).ListItem(0).Label]</label>
+						<font>Font_Bartowski_MainMenu</font>
+						<scroll>false</scroll>
+						<textcolor>mainblue</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width min="1" max="780">auto</width>
+					</control>
+				</control>
+			</control>
+		</control>
+
+</include>
+<!-- Background -->
+<include name="Home_Extension_Background">
+	<!-- Background (20/Youtube) -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">extensions/20_bg.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+		<visible>Container(300).HasFocus(20)</visible>
+	</control>
+	<!-- Background (21/Vimeo) -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">extensions/21_bg.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+		<visible>Container(300).HasFocus(21)</visible>
+	</control>
+	<!-- Background (22/AppleTrailers) -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">extensions/22_bg.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+		<visible>Container(300).HasFocus(22)</visible>
+	</control>
+	<!-- Background (23/Shoutcast) -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">extensions/23_bg.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+		<visible>Container(300).HasFocus(23)</visible>
+	</control>
+	<!-- Background (24/Revision3) -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">extensions/24_bg.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+		<visible>Container(300).HasFocus(24)</visible>
+	</control>
+	<!-- Background (25/LetMeWatchThis) -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">extensions/25_bg.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+		<visible>Container(300).HasFocus(25)</visible>
+	</control>
+</include>
+<!-- Extension Settings -->
+<include name="Home_Extension_Settings">
+		<!-- Youtube -->
+		<control type="label" id="10">
+			<width>860</width>
+			<height>35</height>
+			<font>font13caps</font>
+			<label>Youtube</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="image" id="11">
+			<include>settings_separator</include>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="12">
+			<include>skin_settings_labels</include>
+			<label>Enable</label>
+			<onclick>Skin.ToggleSetting(Home_20_Enabled)</onclick>
+			<selected>Skin.HasSetting(Home_20_Enabled)</selected>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="13">
+			<include>skin_settings_labels</include>
+			<label>Rename</label>
+			<onclick>Skin.SetString(Home_20_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
+                        <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_20_Name))</visible>
+		</control>
+		<control type="radiobutton" id="14">
+			<include>skin_settings_labels</include>
+			<label>Rename [$INFO[Skin.String(Home_20_Name)]]</label>
+			<onclick>Skin.Reset(Home_20_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
+                        <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_20_Name))</visible>
+		</control>
+		<control type="radiobutton" id="15">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>My Account</label>
+			<onclick>Skin.ToggleSetting(Home_20_myaccount)</onclick>
+			<selected>Skin.HasSetting(Home_20_myaccount)</selected>
+			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="16">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Videos</label>
+			<onclick>Skin.ToggleSetting(Home_20_videos)</onclick>
+			<selected>Skin.HasSetting(Home_20_videos)</selected>
+			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="17">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Channels</label>
+			<onclick>Skin.ToggleSetting(Home_20_channels)</onclick>
+			<selected>Skin.HasSetting(Home_20_channels)</selected>
+			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="18">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Live</label>
+			<onclick>Skin.ToggleSetting(Home_20_live)</onclick>
+			<selected>Skin.HasSetting(Home_20_live)</selected>
+			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<!-- Vimeo -->
+		<control type="label" id="19">
+			<width>860</width>
+			<height>35</height>
+			<font>font13caps</font>
+			<label>Vimeo</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="image" id="20">
+			<include>settings_separator</include>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="21">
+			<include>skin_settings_labels</include>
+			<label>Enable</label>
+			<onclick>Skin.ToggleSetting(Home_21_Enabled)</onclick>
+			<selected>Skin.HasSetting(Home_21_Enabled)</selected>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="22">
+			<include>skin_settings_labels</include>
+			<label>Rename</label>
+			<onclick>Skin.SetString(Home_21_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
+                        <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_21_Name))</visible>
+		</control>
+		<control type="radiobutton" id="23">
+			<include>skin_settings_labels</include>
+			<label>Rename [$INFO[Skin.String(Home_21_Name)]]</label>
+			<onclick>Skin.Reset(Home_21_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
+                        <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_21_Name))</visible>
+		</control>
+		<control type="radiobutton" id="24">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>My Stuff</label>
+			<onclick>Skin.ToggleSetting(Home_21_mystuff)</onclick>
+			<selected>Skin.HasSetting(Home_21_mystuff)</selected>
+			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="25">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Staff Picks</label>
+			<onclick>Skin.ToggleSetting(Home_21_staff)</onclick>
+			<selected>Skin.HasSetting(Home_21_staff)</selected>
+			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="26">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>HD</label>
+			<onclick>Skin.ToggleSetting(Home_21_hd)</onclick>
+			<selected>Skin.HasSetting(Home_21_hd)</selected>
+			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="27">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Featured Channels</label>
+			<onclick>Skin.ToggleSetting(Home_21_featured)</onclick>
+			<selected>Skin.HasSetting(Home_21_featured)</selected>
+			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="28">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Channels</label>
+			<onclick>Skin.ToggleSetting(Home_21_channels)</onclick>
+			<selected>Skin.HasSetting(Home_21_channels)</selected>
+			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="29">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Groups</label>
+			<onclick>Skin.ToggleSetting(Home_21_groups)</onclick>
+			<selected>Skin.HasSetting(Home_21_groups)</selected>
+			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<!-- AppleTrailers -->
+		<control type="label" id="30">
+			<width>860</width>
+			<height>35</height>
+			<font>font13caps</font>
+			<label>AppleTrailers</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="image" id="31">
+			<include>settings_separator</include>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="32">
+			<include>skin_settings_labels</include>
+			<label>Enable</label>
+			<onclick>Skin.ToggleSetting(Home_22_Enabled)</onclick>
+			<selected>Skin.HasSetting(Home_22_Enabled)</selected>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="33">
+			<include>skin_settings_labels</include>
+			<label>Rename</label>
+			<onclick>Skin.SetString(Home_22_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
+                        <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_22_Name))</visible>
+		</control>
+		<control type="radiobutton" id="34">
+			<include>skin_settings_labels</include>
+			<label>Rename [$INFO[Skin.String(Home_22_Name)]]</label>
+			<onclick>Skin.Reset(Home_22_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
+                        <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_22_Name))</visible>
+		</control>
+		<control type="radiobutton" id="35">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Just Added</label>
+			<onclick>Skin.ToggleSetting(Home_22_added)</onclick>
+			<selected>Skin.HasSetting(Home_22_added)</selected>
+			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="36">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Most Popular</label>
+			<onclick>Skin.ToggleSetting(Home_22_popular)</onclick>
+			<selected>Skin.HasSetting(Home_22_popular)</selected>
+			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="37">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Exclusive</label>
+			<onclick>Skin.ToggleSetting(Home_22_exclusive)</onclick>
+			<selected>Skin.HasSetting(Home_22_exclusive)</selected>
+			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="38">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Genres</label>
+			<onclick>Skin.ToggleSetting(Home_22_genres)</onclick>
+			<selected>Skin.HasSetting(Home_22_genres)</selected>
+			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="39">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Movie Studios</label>
+			<onclick>Skin.ToggleSetting(Home_22_studios)</onclick>
+			<selected>Skin.HasSetting(Home_22_studios)</selected>
+			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<!-- Shoutcast -->
+		<control type="label" id="40">
+			<width>860</width>
+			<height>35</height>
+			<font>font13caps</font>
+			<label>Shoutcast</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="image" id="41">
+			<include>settings_separator</include>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="42">
+			<include>skin_settings_labels</include>
+			<label>Enable</label>
+			<onclick>Skin.ToggleSetting(Home_23_Enabled)</onclick>
+			<selected>Skin.HasSetting(Home_23_Enabled)</selected>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="43">
+			<include>skin_settings_labels</include>
+			<label>Rename</label>
+			<onclick>Skin.SetString(Home_23_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
+                        <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_23_Name))</visible>
+		</control>
+		<control type="radiobutton" id="44">
+			<include>skin_settings_labels</include>
+			<label>Rename [$INFO[Skin.String(Home_23_Name)]]</label>
+			<onclick>Skin.Reset(Home_23_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
+                        <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_23_Name))</visible>
+		</control>
+		<control type="radiobutton" id="45">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Genres</label>
+			<onclick>Skin.ToggleSetting(Home_23_genres)</onclick>
+			<selected>Skin.HasSetting(Home_23_genres)</selected>
+			<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="46">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>TOP 500</label>
+			<onclick>Skin.ToggleSetting(Home_23_top)</onclick>
+			<selected>Skin.HasSetting(Home_23_top)</selected>
+			<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<!-- Revision3 -->
+		<control type="label" id="47">
+			<width>860</width>
+			<height>35</height>
+			<font>font13caps</font>
+			<label>Revision3</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="image" id="48">
+			<include>settings_separator</include>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="49">
+			<include>skin_settings_labels</include>
+			<label>Enable</label>
+			<onclick>Skin.ToggleSetting(Home_24_Enabled)</onclick>
+			<selected>Skin.HasSetting(Home_24_Enabled)</selected>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="50">
+			<include>skin_settings_labels</include>
+			<label>Rename</label>
+			<onclick>Skin.SetString(Home_24_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
+                        <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_24_Name))</visible>
+		</control>
+		<control type="radiobutton" id="51">
+			<include>skin_settings_labels</include>
+			<label>Rename [$INFO[Skin.String(Home_24_Name)]]</label>
+			<onclick>Skin.Reset(Home_24_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
+                        <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_24_Name))</visible>
+		</control>
+		<control type="radiobutton" id="52">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Recently Released</label>
+			<onclick>Skin.ToggleSetting(Home_24_recently)</onclick>
+			<selected>Skin.HasSetting(Home_24_recently)</selected>
+			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="53">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Featured</label>
+			<onclick>Skin.ToggleSetting(Home_24_featured)</onclick>
+			<selected>Skin.HasSetting(Home_24_featured)</selected>
+			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="54">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Featured Shows</label>
+			<onclick>Skin.ToggleSetting(Home_24_featuredshows)</onclick>
+			<selected>Skin.HasSetting(Home_24_featuredshows)</selected>
+			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="55">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Archived Shows</label>
+			<onclick>Skin.ToggleSetting(Home_24_archivedshows)</onclick>
+			<selected>Skin.HasSetting(Home_24_archivedshows)</selected>
+			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<!-- LetMeWatchThis -->
+		<control type="label" id="56">
+			<width>860</width>
+			<height>35</height>
+			<font>font13caps</font>
+			<label>LetMeWatchThis</label>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="image" id="57">
+			<include>settings_separator</include>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="58">
+			<include>skin_settings_labels</include>
+			<label>Enable</label>
+			<onclick>Skin.ToggleSetting(Home_25_Enabled)</onclick>
+			<selected>Skin.HasSetting(Home_25_Enabled)</selected>
+                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="59">
+			<include>skin_settings_labels</include>
+			<label>Rename</label>
+			<onclick>Skin.SetString(Home_25_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
+                        <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_25_Name))</visible>
+		</control>
+		<control type="radiobutton" id="60">
+			<include>skin_settings_labels</include>
+			<label>Rename [$INFO[Skin.String(Home_25_Name)]]</label>
+			<onclick>Skin.Reset(Home_25_Name)</onclick>
+			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
+                        <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_25_Name))</visible>
+		</control>
+		<control type="radiobutton" id="61">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Favourites</label>
+			<onclick>Skin.ToggleSetting(Home_25_favourites)</onclick>
+			<selected>Skin.HasSetting(Home_25_favourites)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="62">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Movies</label>
+			<onclick>Skin.ToggleSetting(Home_25_movies)</onclick>
+			<selected>Skin.HasSetting(Home_25_movies)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="63">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Movies (Recently)</label>
+			<onclick>Skin.ToggleSetting(Home_25_moviesrecently)</onclick>
+			<selected>Skin.HasSetting(Home_25_moviesrecently)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="64">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Movies (Latest)</label>
+			<onclick>Skin.ToggleSetting(Home_25_movieslatest)</onclick>
+			<selected>Skin.HasSetting(Home_25_movieslatest)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="65">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>TV Shows</label>
+			<onclick>Skin.ToggleSetting(Home_25_tvshows)</onclick>
+			<selected>Skin.HasSetting(Home_25_tvshows)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="66">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>TV Shows (Recently)</label>
+			<onclick>Skin.ToggleSetting(Home_25_tvshowsrecently)</onclick>
+			<selected>Skin.HasSetting(Home_25_tvshowsrecently)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="67">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>TV Shows (Latest)</label>
+			<onclick>Skin.ToggleSetting(Home_25_tvshowslatest)</onclick>
+			<selected>Skin.HasSetting(Home_25_tvshowslatest)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+		<control type="radiobutton" id="68">
+			<textoffsetx>40</textoffsetx>
+			<include>skin_settings_labels</include>
+			<label>Recently Watched</label>
+			<onclick>Skin.ToggleSetting(Home_25_recently)</onclick>
+			<selected>Skin.HasSetting(Home_25_recently)</selected>
+			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+		</control>
+</include>
+</includes>

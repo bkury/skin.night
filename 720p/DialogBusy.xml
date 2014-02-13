@@ -1,0 +1,50 @@
+<!--Empty-->
+<window id="136">
+	<coordinates>
+                <system>1</system>
+                <posx>0</posx>
+                <posy>0</posy>
+        </coordinates>
+        <controls>
+		<!-- DIM BACKGROUND -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+                        <description>Background Overlay</description>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>BlackTransparent.png</texture>
+                        <colordiffuse>99cccccc</colordiffuse>
+			<animation effect="fade" delay="400" end="100" time="600">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+                </control>
+		<!-- SHOW BUSY LABEL -->
+		<control type="group">
+			<animation effect="fade" delay="600" end="100" time="600">WindowOpen</animation>
+			<animation effect="fade" end="0" time="100">WindowClose</animation>
+			<!-- Please Wait -->
+	                <control type="label">
+	                        <posx>0</posx>
+	                        <posy>200</posy>
+	                        <textcolor>white</textcolor>
+	                        <height>39</height>
+	                        <width>1280</width>
+	                        <font>Font_MenuValue</font>
+	                        <focusedcolor>mainblue</focusedcolor>
+	                        <align>center</align>
+	                        <aligny>middle</aligny>
+	                        <label>$LOCALIZE[31528]</label>
+	                </control>
+			<!-- Ajax Loading -->
+	                <control type="image">
+				<posx>570</posx>
+				<posy>250</posy>
+	                        <texture>activityindicator.gif</texture>
+	                </control>
+		</control>
+
+        </controls>
+</window>
+
