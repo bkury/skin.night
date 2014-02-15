@@ -14,64 +14,46 @@
 		<include>dialog_header</include>
 
 		<!-- Dialog List -->
-		<control type="label" id="1">
-			<description>Line 1</description>
+		<control type="label" id="4">
+			<description>Line 4</description>
 			<posx>340</posx>
-			<posy>250</posy>
-			<font>Font_Bartowski_Title_TVShow</font>
+			<posy>160</posy>
+			<font>Font_RSS_Big</font>
 			<textcolor>white</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<label>-</label>
 			<width>600</width>
 			<align>center</align>
-			<aligny>middle</aligny>
 			<wrapmultiline>true</wrapmultiline>
 		</control>
 		<control type="label" id="2">
-			<description>Line 1</description>
+			<description>Line 2</description>
 			<posx>340</posx>
-			<posy>250</posy>
-			<font>Font_Bartowski_Title_TVShow</font>
+			<posy>225</posy>
+			<font>Font_RSS_Big</font>
 			<textcolor>white</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<label>-</label>
 			<width>600</width>
 			<align>center</align>
-			<aligny>middle</aligny>
 			<wrapmultiline>true</wrapmultiline>
 		</control>
 		<control type="label" id="3">
-			<description>Line 1</description>
+			<description>Line 3</description>
 			<posx>340</posx>
-			<posy>250</posy>
-			<font>Font_Bartowski_Title_TVShow</font>
+			<posy>290</posy>
+			<font>Font_RSS_Big</font>
 			<textcolor>white</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<label>-</label>
 			<width>600</width>
 			<align>center</align>
-			<aligny>middle</aligny>
-			<wrapmultiline>true</wrapmultiline>
-		</control>
-		<control type="label" id="4">
-			<description>Line 1</description>
-			<posx>340</posx>
-			<posy>250</posy>
-			<font>Font_Bartowski_Title_TVShow</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>MenuValueFO</focusedcolor>
-			<label>-</label>
-			<width>600</width>
-			<align>center</align>
-			<aligny>middle</aligny>
 			<wrapmultiline>true</wrapmultiline>
 		</control>
 
 		<!-- Dialog Footer -->
 		<include>dialog_footer</include>
 
-		</control>
-
+	</control>
 	</controls>
-
 </window>
