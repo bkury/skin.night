@@ -3,7 +3,7 @@
 	<!-- #################################### Viewtype Navigation ################################# -->
 	<include name="viewtype_navigation">
 	<control type="group">
-		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | Window.isActive(1120) ] + !Skin.HasSetting(LockViews)</visible>
+		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | Window.isActive(1120) ]</visible>
 		<animation effect="slide" start="0,200" time="800" tween="back" easing="inout" condition="ControlGroup(7000).HasFocus | Window.isActive(1120) | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus">conditional</animation>
 		<animation effect="fade" end="0" time="800">Hidden</animation>
 		<animation effect="fade" end="100" time="800">Visible</animation>
@@ -106,40 +106,61 @@
 					<visible>!Skin.HasSetting(navigation_accentonly) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
 				</control>-->
 
-
 				<!-- Viewtype -->
 				<control type="group">
 					<posx>80</posx>
-					<control type="image">
-						<width>29</width>
-						<height>24</height>
-						<texture>b-video.png</texture>
-						<colordiffuse>FFDDDDDD</colordiffuse>
+					<!-- DEFAULT MODE -->
+					<control type="group">
+					<visible>!Skin.HasSetting(LockViews)</visible>
+						<control type="image">
+							<width>29</width>
+							<height>24</height>
+							<texture>b-video.png</texture>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="401">
+		                                        <width>29</width>
+		                                        <height>24</height>
+							<texturefocus>b-video.png</texturefocus>
+							<texturenofocus>b-video.png</texturenofocus>
+							<colordiffuse>mainblue</colordiffuse>
+							<onleft>405</onleft>
+							<onright>402</onright>
+							<ondown>50</ondown>
+		                                        <onup>50</onup>
+							<onclick>Skin.SetString(selector1,View)</onclick>
+							<onclick>Skin.SetString(selector2,Modes)</onclick>
+							<onclick>Control.SetFocus(1300)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(401)</visible>
+		                                </control>
+						<control type="label">
+							<posx>40</posx>
+							<width>100</width>
+							<height>24</height>
+							<label>$INFO[Container.ViewMode]</label>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<textcolor>FFDDDDDD</textcolor>
+							<shadowcolor>FF000000</shadowcolor>
+						</control>
 					</control>
-
-					<control type="button" id="401">
-	                                        <width>29</width>
-	                                        <height>24</height>
-						<texturefocus>b-video.png</texturefocus>
-						<texturenofocus>b-video.png</texturenofocus>
-						<colordiffuse>mainblue</colordiffuse>
-						<onleft>405</onleft>
-						<onright>402</onright>
-						<ondown>50</ondown>
-	                                        <onup>50</onup>
-						<onclick>Skin.SetString(selector1,View)</onclick>
-						<onclick>Skin.SetString(selector2,Modes)</onclick>
-						<onclick>Control.SetFocus(1300)</onclick>
-						<visible allowhiddenfocus="true">Control.HasFocus(401)</visible>
-	                                </control>
-					<control type="label">
-						<posx>40</posx>
-						<width>100</width>
-						<height>24</height>
-						<label>$INFO[Container.ViewMode]</label>
-						<font>Font_Bartowski_Movies_Plot</font>
-						<textcolor>FFDDDDDD</textcolor>
-						<shadowcolor>FF000000</shadowcolor>
+					<!-- KIOSK MODE -->
+					<control type="group">
+					<visible>Skin.HasSetting(LockViews)</visible>
+						<control type="image">
+							<width>29</width>
+							<height>24</height>
+							<texture>b-video.png</texture>
+							<colordiffuse>TextDisabled</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>40</posx>
+							<width>100</width>
+							<height>24</height>
+							<label>$INFO[Container.ViewMode]</label>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<textcolor>FFDDDDDD</textcolor>
+							<shadowcolor>FF000000</shadowcolor>
+						</control>
 					</control>
 				</control>
 
