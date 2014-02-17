@@ -161,7 +161,7 @@
 				<height>25</height>
 				<font>Font_ListDetail</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B]$INFO[VideoPlayer.Duration(h:mm:ss][/B]</label>
+				<label>[B]$INFO[VideoPlayer.Duration(h:mm:ss)][/B]</label>
 				<animation effect="slide" start="0,0" end="-304,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]">Conditional</animation>
 			</control>
 		</control>
