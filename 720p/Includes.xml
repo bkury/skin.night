@@ -38,6 +38,7 @@
 	<include file="Includes_Home_Extensions.xml" />
 	<include file="Includes_Background.xml" />
 	<include file="Includes_MyVideoNav.xml" />
+	<include file="Includes_VideoOSD.xml" />
 	<include file="Includes_MySharedContent.xml" />
 
 	<include name="FullScreenBGImage">
@@ -2725,6 +2726,19 @@
                                 <textcolor>white</textcolor>
                                 <visible>Window.IsVisible(126)</visible>
                         </control>
+  			<!-- BOOKMARKS -->
+                        <control type="label">
+                                <description>header label</description>
+                                <posx>360</posx>
+                                <posy>0</posy>
+                                <width>560</width>
+                                <height>30</height>
+                                <font>Font_Bartowski_Main_SubMenu</font>
+                                <label>$INFO[Container(11).NumItems] Bookmark(s)</label>
+                                <align>center</align>
+                                <textcolor>white</textcolor>
+                                <visible>Window.IsVisible(125)</visible>
+                        </control>
 			<!-- 1st SEPERATOR LINE -->
                         <control type="image">
 				<posx>320</posx>
@@ -2744,7 +2758,7 @@
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
-				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(126) | Window.IsVisible(100) | Window.IsVisible(2002)</visible>
+				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(125) |  Window.IsVisible(126) | Window.IsVisible(100) | Window.IsVisible(2002)</visible>
                         </control>
 		</control>
 	</include>
@@ -3087,6 +3101,44 @@
 				<visible>Control.hasFocus(11)</visible>
 			</control>
 		</control>
+
+		<!-- Dialog OSD Bookmarks -->
+		<control type="group">
+			<posx>340</posx>
+			<posy>515</posy>
+			<width>600</width>
+			<height>40</height>
+			<visible>Window.IsVisible(125)</visible>
+			<control type="button" id="2">
+				<posx>0</posx>
+                                <description>Create</description>
+                                <label>Create</label>
+                                <font>Font_MenuValue</font>
+                                <textcolor>white</textcolor>
+                                <focusedcolor>mainblue</focusedcolor>
+                                <width>300</width>
+                                <align>center</align>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+                        </control>
+                        <control type="button" id="3">
+				<posx>300</posx>
+                                <description>Cancel</description>
+                                <label>Clear</label>
+                                <font>Font_MenuValue</font>
+                                <textcolor>white</textcolor>
+                                <focusedcolor>mainblue</focusedcolor>
+                                <width>300</width>
+                                <align>center</align>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+                        </control>
+		</control>
+
 	</include>
 	<!-- END Dialog Footer END -->
 

@@ -1,22 +1,12 @@
 <window id="125">
+        <include>Animation_Bartowski_Context_Zoom</include>
 	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>440</posx>
-		<posy>75</posy>
-		<origin x="240" y="75">!Window.IsVisible(FullscreenInfo)</origin>
 	</coordinates>
 	<controls>
-		<control type="image">
-			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>800</width>
-			<height>490</height>
-			<colordiffuse>DDFFFFFF</colordiffuse>
-			<texture border="40">DialogBack.png</texture>
-		</control>
-		<control type="label">
+		<include>dialog_header</include>
+		<!--<control type="label">
 			<description>header label</description>
 			<posx>20</posx>
 			<posy>18</posy>
@@ -28,27 +18,29 @@
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
-		</control>
+		</control>-->
 		<control type="panel" id="11">
-			<posx>40</posx>
-			<posy>65</posy>
-			<width>720</width>
+			<posx>380</posx>
+			<posy>150</posy>
+			<width>600</width>
 			<height>350</height>
 			<onleft>2</onleft>
 			<onright>3</onright>
 			<ondown>2</ondown>
 			<onup>2</onup>
 			<scrolltime>200</scrolltime>
-			<viewtype label="536">icon</viewtype>
+			<viewtype>icon</viewtype>
 			<pagecontrol>-</pagecontrol>
-			<orientation>horizontal</orientation>
-			<itemlayout height="175" width="240">
+			<orientation>vertical</orientation>
+			<itemlayout height="165" width="256">
 				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>235</width>
-					<height>170</height>
-					<texture border="3">button-nofocus.png</texture>
+					<posx>6</posx>
+					<posy>13</posy>
+					<width>222</width>
+					<height>128</height>
+					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+					<texture background="true">frameOrange.png</texture>
+					<colordiffuse>33FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>7</posx>
@@ -69,13 +61,15 @@
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="175" width="240">
+			<focusedlayout height="165" width="256">
 				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>235</width>
-					<height>170</height>
-					<texture border="3">folder-focus.png</texture>
+					<posx>6</posx>
+					<posy>13</posy>
+					<width>222</width>
+					<height>128</height>
+					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+					<texture background="true">frameOrange.png</texture>
+					<colordiffuse>mainblue</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>7</posx>
@@ -86,48 +80,21 @@
 				</control>
 				<control type="label">
 					<posx>112</posx>
-					<posy>1507</posy>
+					<posy>150</posy>
 					<width>225</width>
 					<height>15</height>
 					<font>font12</font>
-					<selectedcolor>green</selectedcolor>
+					<selectedcolor>FFFFFFFF</selectedcolor>
+					<textcolor>FFFFFFFF</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
 				</control>
 			</focusedlayout>
 		</control>
-		<control type="grouplist" id="9000">
-			<posx>20</posx>
-			<posy>425</posy>
-			<width>760</width>
-			<height>40</height>
-			<itemgap>2</itemgap>
-			<align>center</align>
-			<orientation>horizontal</orientation>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<onup>11</onup>
-			<ondown>11</ondown>
-			<control type="button" id="2">
-				<description>Create Bookmark button</description>
-				<label>294</label>
-				<width>250</width>
-				<include>ButtonInfoDialogsCommonValues</include>
-			</control>
-			<control type="button" id="3">
-				<description>Clear Bookmark button</description>
-				<label>296</label>
-				<width>250</width>
-				<include>ButtonInfoDialogsCommonValues</include>
-			</control>
-			<control type="button" id="4">
-				<description>Clear Bookmark button</description>
-				<label>20406</label>
-				<width>250</width>
-				<include>ButtonInfoDialogsCommonValues</include>
-				<visible>videoplayer.content(episodes)</visible>
-			</control>
-		</control>
+
+
+		<include>dialog_footer</include>
+
 	</controls>
 </window>

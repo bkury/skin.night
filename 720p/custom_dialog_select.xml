@@ -271,64 +271,113 @@
 
 	<!-- OSD Mode -->
 		<control type="group">
+		<include>Animation_Bartowski_Context_Zoom</include>
 		<visible>Skin.String(selector1,OSD)</visible>
 		<visible>Skin.String(selector2,Options)</visible>
-			<control type="list" id="460">
-				<include>dialog_list</include>
-		<content>
-			<item>
-				<description>OSD FULL</description>
-				<onclick>Skin.SetString(osd_mode,full)</onclick>
+
+		<!-- OSD Modes -->
+		<control type="grouplist" id="400">
+			<posx>350</posx>
+			<posy>160</posy>
+			<width>280</width>
+			<height>360</height>
+			<itemgap>0</itemgap>
+			<onright>410</onright>
+			<onleft>410</onleft>
+			<control type="radiobutton" id="401">
+				<width>280</width>
 				<label>Default</label>
-			</item>
-			<item>
-				<description>OSD FULL</description>
-				<onclick>Skin.SetString(osd_mode,auto)</onclick>
-				<label>Auto</label>
-			</item>
-			<item>
-				<description>OSD FULL</description>
-				<onclick>Skin.SetString(osd_mode,compact1)</onclick>
-				<label>Compact (Top)</label>
-			</item>
-			<item>
-				<description>OSD FULL</description>
-				<onclick>Skin.SetString(osd_mode,compact2)</onclick>
-				<label>Compact (Bottom)</label>
-			</item>
-			<item>
-				<description>OSD FULL</description>
-				<onclick>Skin.SetString(osd_mode,minimal)</onclick>
+                                <onclick>Skin.SetString(osd_mode,Default)</onclick>
+				<selected>Skin.String(osd_mode,Default)</selected>
+				<include>radiobutton_ticked</include>
+			</control>
+			<control type="radiobutton" id="402">
+				<width>280</width>
+				<label>Top</label>
+                                <onclick>Skin.SetString(osd_mode,Top)</onclick>
+				<selected>Skin.String(osd_mode,Top)</selected>
+				<include>radiobutton_ticked</include>
+			</control>
+			<control type="radiobutton" id="403">
+				<width>280</width>
+				<label>Bottom</label>
+                                <onclick>Skin.SetString(osd_mode,Bottom)</onclick>
+				<selected>Skin.String(osd_mode,Bottom)</selected>
+				<include>radiobutton_ticked</include>
+			</control>
+			<control type="radiobutton" id="404">
+				<width>280</width>
 				<label>Minimal</label>
-			</item>
-			<item>
-				<description>OSD OFF</description>
-				<onclick>Skin.SetString(osd_mode,off)</onclick>
+                                <onclick>Skin.SetString(osd_mode,Minimal)</onclick>
+				<selected>Skin.String(osd_mode,Minimal)</selected>
+				<include>radiobutton_ticked</include>
+			</control>
+			<control type="radiobutton" id="405">
+				<width>280</width>
+				<label>Auto</label>
+                                <onclick>Skin.SetString(osd_mode,Auto)</onclick>
+				<selected>Skin.String(osd_mode,Auto)</selected>
+				<include>radiobutton_ticked</include>
+			</control>
+			<control type="radiobutton" id="406">
+				<width>280</width>
 				<label>Off</label>
-			</item>
-			<item>
-				<posy>20</posy>
-				<description>OSD FULL</description>
-				<label>Opacity ($INFO[Skin.String(OSD_Opacity)]%)</label>      
-				<onclick>Skin.SetString(selector1,OSD)</onclick>
-				<onclick>Skin.SetString(selector2,Opacity)</onclick>
-				<onclick>Control.SetFocus(1120,0)</onclick>
-			</item>
-			<item>
-				<description>Disable Flash</description>
-				<onclick>Skin.SetBool(osd_flash)</onclick>
-				<label>Disable OSD Animation</label>
-				<visible>!Skin.HasSetting(osd_flash)</visible>
-			</item>
-			<item>
-				<description>Disable Flash</description>
-				<onclick>Skin.Reset(osd_flash)</onclick>
-				<label>Enable OSD Animation</label>
-				<visible>Skin.HasSetting(osd_flash)</visible>
-			</item>
+                                <onclick>Skin.SetString(osd_mode,Off)</onclick>
+				<selected>Skin.String(osd_mode,Off)</selected>
+				<include>radiobutton_ticked</include>
+			</control>
 
+		</control>
 
-		</content>
+		<!-- OSD Options -->
+		<control type="grouplist" id="410">
+			<posx>650</posx>
+			<posy>160</posy>
+			<width>280</width>
+			<height>360</height>
+			<itemgap>0</itemgap>
+			<onright>400</onright>
+			<onleft>400</onleft>
+			<control type="radiobutton" id="411">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>Global Clock</label>
+				<onclick>Skin.ToggleSetting(OSD_Clock)</onclick>
+				<selected>Skin.HasSetting(OSD_Clock)</selected>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="412">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>Show Plot</label>
+				<onclick>Skin.ToggleSetting(OSD_Plot)</onclick>
+				<selected>!Skin.HasSetting(OSD_Plot)</selected>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="413">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>Cover / Thumb Image</label>
+				<onclick>Skin.ToggleSetting(OSD_Cover)</onclick>
+				<selected>!Skin.HasSetting(OSD_Cover)</selected>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="414">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>VideoPlayer OSD</label>
+				<onclick>Skin.ToggleSetting(OSD_Label)</onclick>
+				<selected>!Skin.HasSetting(OSD_Label)</selected>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="415">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>VideoPlayer Animation</label>
+				<onclick>Skin.ToggleSetting(osd_flash)</onclick>
+				<selected>!Skin.HasSetting(osd_flash)</selected>
+				<include>radiobutton_circle</include>
+			</control>
 		</control>
 	</control>
 

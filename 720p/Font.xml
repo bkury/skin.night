@@ -140,7 +140,6 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Movies_Plot</name>
-			<!--<filename>alaska_light_nocaps.ttf</filename>-->
 			<filename>HelveticaNeueLight.ttf</filename>
 			<size>20</size>
 			<linespacing>1.3</linespacing>
@@ -149,6 +148,12 @@
 			<name>Font_Bartowski_Preplay</name>
 			<filename>HelveticaNeueLight.ttf</filename>
 			<size>15</size>
+			<linespacing>1</linespacing>
+		</font>
+		<font>
+			<name>Font_Bartowski_OSD_Time</name>
+			<filename>HelveticaNeueLight.ttf</filename>
+			<size>18</size>
 			<linespacing>1</linespacing>
 		</font>
 		<font>
