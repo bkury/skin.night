@@ -202,10 +202,10 @@
 		<!-- OPACITY -->
 		<control type="group">
 		<visible>Skin.String(selector2,Opacity)</visible>
-			<control type="list" id="460">
+			<control type="list" id="470">
 				<include>dialog_list</include>
 				<content>
-			<item id="0">
+			<item>
 				<onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
 				<onclick>Dialog.Close(1120)</onclick>
 				<label>Default</label>
@@ -377,6 +377,28 @@
 				<onclick>Skin.ToggleSetting(osd_flash)</onclick>
 				<selected>!Skin.HasSetting(osd_flash)</selected>
 				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="416">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>Opacity</label>
+				<include>radiobutton_circle</include>
+				<onclick>Skin.SetString(selector1,OSD)</onclick>
+				<onclick>Skin.SetString(selector2,Opacity)</onclick>
+				<onclick>Control.SetFocus(470)</onclick>
+				<selected>!IsEmpty(Skin.String(OSD_Opacity))</selected>
+				<visible>IsEmpty(Skin.String(OSD_Opacity))</visible>
+			</control>
+			<control type="radiobutton" id="417">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>Opacity ($INFO[Skin.String(OSD_Opacity)]%)</label>
+				<include>radiobutton_circle</include>
+				<onclick>Skin.SetString(selector1,OSD)</onclick>
+				<onclick>Skin.SetString(selector2,Opacity)</onclick>
+				<onclick>Control.SetFocus(470)</onclick>
+				<selected>!IsEmpty(Skin.String(OSD_Opacity))</selected>
+				<visible>!IsEmpty(Skin.String(OSD_Opacity))</visible>
 			</control>
 		</control>
 	</control>
