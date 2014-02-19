@@ -514,7 +514,6 @@
 					<control type="image" id="201">
 						<include>settings_separator</include>
 					</control>
-
 					<!--<control type="radiobutton" id="203">
 						<description>Horizontal Home</description>
 						<include>skin_settings_labels</include>
@@ -536,21 +535,6 @@
 						<onclick>Skin.ToggleSetting(Home_Servername)</onclick>
 						<selected>Skin.HasSetting(Home_Servername)</selected>
 					</control>
-
-					<control type="radiobutton" id="210">
-						<description>Disable On Deck / Recently Added</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31537]</label>
-						<onclick>Skin.ToggleSetting(NoOnDeck)</onclick>
-						<selected>Skin.HasSetting(NoOnDeck)</selected>
-					</control>
-					<control type="radiobutton" id="212">
-						<description>Disable OnDeck / Recently Added More Info</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31559]</label>
-						<onclick>Skin.ToggleSetting(deck_moreinfo)</onclick>
-						<selected>Skin.HasSetting(deck_moreinfo)</selected>
-					</control>
 					<control type="radiobutton" id="214">
 						<description>Disable Submenu Navigation Arrow</description>
 						<include>skin_settings_labels</include>
@@ -566,7 +550,7 @@
 						<selected>Skin.HasSetting(Home_Update)</selected>
 					</control>
 
-					<!-- Accent Color Settings -->
+					<!-- Home Menu Settings -->
 					<control type="label" id="220">
 						<width>860</width>
 						<height>35</height>
@@ -607,8 +591,6 @@
 						<onclick>Skin.ToggleSetting(HomeExtendedMore)</onclick>
 						<selected>Skin.HasSetting(HomeExtendedMore)</selected>
 					</control>
-
-
 					<control type="radiobutton" id="225">
 						<description>Wrap List</description>
 						<include>skin_settings_labels</include>
@@ -642,6 +624,69 @@
 						<onclick>Skin.ToggleSetting(AeonHomeMenu)</onclick>
 						<selected>Skin.HasSetting(AeonHomeMenu)</selected>
 					</control>
+
+					<!-- Deck Options -->
+					<control type="label" id="250">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Deck Options</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="image" id="251">
+						<include>settings_separator</include>
+					</control>
+					<control type="radiobutton" id="252">
+						<description>Disable Deck</description>
+						<include>skin_settings_labels</include>
+						<label>Disable Deck</label>
+						<onclick>Skin.ToggleSetting(NoOnDeck)</onclick>
+						<selected>Skin.HasSetting(NoOnDeck)</selected>
+					</control>
+					<control type="radiobutton" id="253">
+						<description>Short Deck</description>
+						<include>skin_settings_labels</include>
+						<label>Enable Minimal Deck</label>
+						<onclick>Skin.ToggleSetting(Deck_Short)</onclick>
+						<selected>Skin.HasSetting(Deck_Short)</selected>
+						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+					</control>
+					<control type="radiobutton" id="254">
+						<description>Disable On Deck</description>
+						<include>skin_settings_labels</include>
+						<label>Disable OnDeck</label>
+						<onclick>Skin.ToggleSetting(Deck_NoOnDeck)</onclick>
+						<selected>Skin.HasSetting(Deck_NoOnDeck)</selected>
+						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+					</control>
+					<control type="radiobutton" id="255">
+						<description>Disable Recently Added</description>
+						<include>skin_settings_labels</include>
+						<label>Disable Recently Added</label>
+						<onclick>Skin.ToggleSetting(Deck_NoRecently)</onclick>
+						<selected>Skin.HasSetting(Deck_NoRecently)</selected>
+						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+					</control>
+					<control type="radiobutton" id="256">
+						<description>Disable Recently Used</description>
+						<include>skin_settings_labels</include>
+						<label>Disable Recently Used</label>
+						<onclick>Skin.ToggleSetting(Deck_NoUsed)</onclick>
+						<selected>Skin.HasSetting(Deck_NoUsed)</selected>
+						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+					</control>
+					<control type="radiobutton" id="259">
+						<description>Disable Deck Info</description>
+						<include>skin_settings_labels</include>
+						<label>Disable Plot &amp; Mediaflags</label>
+						<onclick>Skin.ToggleSetting(deck_moreinfo)</onclick>
+						<selected>Skin.HasSetting(deck_moreinfo)</selected>
+						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+					</control>
+
 					<!-- Accent Color Settings -->
 					<control type="label" id="230">
 						<width>860</width>

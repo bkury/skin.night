@@ -276,9 +276,17 @@
                         <posy>-5</posy>
                         <width>1050</width>
                         <height>720</height>
-			<animation effect="slide" end="-550,0" time="800" tween="back" easing="inout" condition="ControlGroup(5000).HasFocus">conditional</animation>
+	
+			<!-- Default -->
+			<animation effect="slide" end="-550,0" time="800" tween="back" easing="inout" condition="ControlGroup(5000).HasFocus + !Skin.HasSetting(Deck_Short)">conditional</animation>
+
+			<!-- Fanart Deck (Short) -->
+			<animation effect="slide" end="440,0" time="0" condition="Skin.HasSetting(Deck_Short)">conditional</animation>
+			<animation effect="slide" end="-990,0" time="800" tween="back" easing="inout" condition="ControlGroup(5000).HasFocus + Skin.HasSetting(Deck_Short)">conditional</animation>
+
                         <animation effect="slide" end="600,0" time="800" tween="back" easing="inout" condition="Window.IsActive(4998)">conditional</animation>
                         <animation effect="slide" end="-550,-350" time="0" condition="Skin.HasSetting(home_horizontal)">conditional</animation>
+
                         <visible>!Skin.HasSetting(NoOnDeck) | Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(11004) | Control.IsVisible(12000) | Container(300).HasFocus(20) | Container(300).HasFocus(21)</visible>
 
 			<!-- DECK EXTENSIONS -->
@@ -360,7 +368,7 @@
 
 				<!-- On Deck (11001) -->
 				<control type="group" id="7002">
-					<animation effect="fade" start="0" end="100" time="800" condition="Control.IsVisible(11001)">Conditional</animation>-->
+					<animation effect="fade" start="0" end="100" time="800" condition="Control.IsVisible(11001)">Conditional</animation>
 					<height>230</height>
 					<!-- list title when both lists are visible -->
 					<control type="label" id="8002">
@@ -425,7 +433,7 @@
 						<include>deck_placeholder</include>
 					</control>
 					<control type="fixedlist" id="11001">
-						<visible allowhiddenfocus="false">false</visible>
+						<visible allowhiddenfocus="false">!Skin.HasSetting(Deck_NoOnDeck)</visible>
 						<orientation>horizontal</orientation>
 						<ondown>7001</ondown>
 						<onup>-</onup>
@@ -1308,7 +1316,7 @@
 						<include>deck_placeholder</include>
 					</control>
 					<control type="fixedlist" id="11000">
-						<visible allowhiddenfocus="false">false</visible>
+						<visible allowhiddenfocus="false">!Skin.HasSetting(Deck_NoRecently)</visible>
 						<orientation>horizontal</orientation>
 						<ondown>-</ondown>
 						<onup>7002</onup>
@@ -3535,7 +3543,7 @@
                                                 <include>deck_placeholder</include>
                                         </control>
 					<control type="fixedlist" id="11002">
-						<visible allowhiddenfocus="false">false</visible>
+						<visible allowhiddenfocus="false">!Skin.HasSetting(Deck_NoUsed)</visible>
 						<orientation>horizontal</orientation>
 						<ondown>300</ondown>
 						<onup>300</onup>
