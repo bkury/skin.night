@@ -11,7 +11,7 @@
 
 		<control type="group">
 			<include>Animation_CommonFade_600</include>
-			<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]</visible>
+			<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Buffering | Player.Paused]</visible>
 			<include>OSD_Labels</include>
 			<include>OSD_Bottom</include>
 		</control>
