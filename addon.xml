@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.night.git"
-	version="1.4"
+	version="1.5"
 	name="Night (Git)"
 	provider-name="mcborzu">
 	<requires>
