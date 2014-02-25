@@ -1,10 +1,59 @@
 <!--Alaska-->
 <window id="2901">
+	<onload>Skin.Reset(OSD_Hide)</onload>
+	<onunload>Skin.Reset(OSD_Hide)</onunload>
 	<include>Animation_CommonFade_600</include>
 	<defaultcontrol always="true">200</defaultcontrol>
 	<controls>
 
-	<!-- TOP BAR -->
+	<!-- OSD Hide -->
+	<control type="group">
+		<visible>Skin.HasSetting(OSD_Hide)</visible>
+		<include>Animation_CommonFade_600</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<include>Animation_CommonFade_600</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<include>Animation_CommonFade_600</include>
+			<include>Animation_OSD</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>719</posy>
+			<width>1280</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<include>Animation_CommonFade_600</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>719</posy>
+			<width>1280</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<include>Animation_CommonFade_600</include>
+			<include>Animation_OSD</include>
+		</control>
+	</control>
+
+	<control type="group">
+		<animation effect="fade" start="100" end="0" time="600" condition="Skin.HasSetting(OSD_Hide)">Conditional</animation>
+
+		<!-- TOP BAR -->
 		<control type="group">
 			<animation effect="slide" start="0,0" end="0,610" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Bottom)">Conditional</animation>
 			<posx>0</posx>
@@ -94,8 +143,8 @@
 					<texturenofocus>b-pp-rate.png</texturenofocus>
 					<onleft>719</onleft>
 					<onright>720</onright>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 					<onclick>ActivateWindow(125)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(722)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -132,8 +181,8 @@
 					<texturenofocus>b-audio2.png</texturenofocus>
 					<onleft>722</onleft>
 					<onright>721</onright>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 					<onclick>ActivateWindow(10205)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(720)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -172,8 +221,8 @@
 					<texturenofocus>b-subtitles.png</texturenofocus>
 					<onleft>720</onleft>
 					<onright>710</onright>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 					<onclick>ActivateWindow(10204)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(721)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -216,8 +265,8 @@
 					<texturenofocus>b-rewind.png</texturenofocus>
 					<onleft>721</onleft>
 					<onright>711</onright>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 					<onclick>PlayerControl(SmallSkipBackward)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(710)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -242,8 +291,8 @@
 					<texturenofocus>-</texturenofocus>
 					<onleft>710</onleft>
 					<onright>712</onright>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 					<onclick>PlayerControl(Stop)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(711)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -278,8 +327,10 @@
 					<alttexturefocus>b-play2.png</alttexturefocus>
 					<onleft>711</onleft>
 					<onright>713</onright>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<!--<onup>200</onup>
+					<ondown>200</ondown>-->
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 					<onclick>PlayerControl(Play)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(712)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -304,8 +355,8 @@
 					<texturenofocus>b-forward.png</texturenofocus>
 					<onleft>712</onleft>
 					<onright>717</onright>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 					<onclick>PlayerControl(SmallSkipForward)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(713)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -385,8 +436,8 @@
 						<texturenofocus>b-audio.png</texturenofocus>
 						<onleft>713</onleft>
 						<onright>718</onright>
-						<onup>200</onup>
-						<ondown>200</ondown>
+						<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+						<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 						<onclick>ActivateWindow(124)</onclick>
 						<visible allowhiddenfocus="true">Control.HasFocus(717)</visible>
 						<colordiffuse>mainblue</colordiffuse>
@@ -424,8 +475,8 @@
 							<texturenofocus>b-video.png</texturenofocus>
 							<onleft>717</onleft>
 							<onright>719</onright>
-							<onup>200</onup>
-							<ondown>200</ondown>
+							<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+							<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 							<onclick>ActivateWindow(123)</onclick>
 							<visible allowhiddenfocus="true">Control.HasFocus(718)</visible>
 							<colordiffuse>mainblue</colordiffuse>
@@ -469,22 +520,18 @@
 						<control type="button" id="719">
 							<posx>-26</posx>
 							<posy>-2</posy>
-							<!--<width>29</width>
-							<height>24</height>
-							<texturefocus>options_osd.png</texturefocus>
-							<texturenofocus>options_osd.png</texturenofocus>-->
 							<width>76</width>
 							<height>28</height>
 							<texturefocus>b-s-system.png</texturefocus>
 							<texturenofocus>b-s-system.png</texturenofocus>
 							<onleft>718</onleft>
 							<onright>722</onright>
-							<onup>200</onup>
+							<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+							<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
 							<onclick>Skin.SetString(selector1,OSD)</onclick>
 							<onclick>Skin.SetString(selector2,Options)</onclick>
 							<onclick>Skin.SetString(selector3,Default)</onclick>
 							<onclick>ActivateWindow(1120)</onclick>
-							<ondown>200</ondown>
 							<visible allowhiddenfocus="true">Control.HasFocus(719)</visible>
 							<colordiffuse>mainblue</colordiffuse>
 						</control>
@@ -548,6 +595,6 @@
 
 	<include>OSD_Labels</include>
 	<include>OSD_Bottom</include>
-	
-	</controls>
+</control>
+</controls>
 </window>
