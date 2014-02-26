@@ -3,9 +3,9 @@
 	<defaultcontrol>70</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>70</views>
-	<onload>Skin.SetString(SectionType,channels)</onload>
+	<!--<onload>Skin.SetString(SectionType,channels)</onload>-->
 	<!--<onunload>SetFocus(50)</onunload>-->
-	<onunload>Skin.Reset(SectionType)</onunload>
+	<!--<onunload>Skin.Reset(SectionType)</onunload>-->
 	<controls>
 
 		<!-- Channel Logo Background -->
@@ -69,11 +69,8 @@
 		                </control>
 			</control>
 
-			<control type="group">
-				<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Channel_Wraplist</include>
-				<include condition="Skin.HasSetting(Home_Fixed)">Channel_Fixedlist</include>
-				<include condition="Skin.HasSetting(Home_Simple)">Channel_Simplelist</include>
-			</control>
+			<include>Channel_Navigation</include>
+
 		</control>
 	<include>Music_Global_LowerRight</include>
 	<include>Global_Time_TopRight_Library</include>

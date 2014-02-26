@@ -187,12 +187,8 @@
                 </control>
 
 		<!-- MySharedContent Screen/Deck -->
-		<control type="group">
-			<control type="group">
-				<include condition="Skin.HasSetting(mysharedcontent_helper)">mysharedcontent_deck</include>
-				<include condition="!Skin.HasSetting(mysharedcontent_helper)">mysharedcontent_screen</include>
-			</control>
-		</control>
+		<include condition="Skin.HasSetting(mysharedcontent_helper)">mysharedcontent_deck</include>
+		<include condition="!Skin.HasSetting(mysharedcontent_helper)">Shared_Navigation</include>
 
 		<include>Music_Global_LowerRight</include>
 		<include>Global_Time_TopRight_Library</include>

@@ -1,0 +1,787 @@
+<?xml version="1.0"?>
+<includes>
+
+<include name="Home_Deck">
+	<control type="group" id="5000">
+		<visible>![ Skin.HasSetting(Home_Panel) | Skin.HasSetting(Deck_Disable)]</visible>
+
+		<!-- Vertical Home -->
+		<animation effect="slide" end="730,275" condition="!Skin.HasSetting(Home_Horizontal) + ![Skin.HasSetting(Deck_Short) | Skin.HasSetting(Deck_Hide)]">Conditional</animation>
+		<animation effect="slide" end="1150,275" condition="!Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Short)">Conditional</animation>
+		<animation effect="slide" end="1350,275" condition="!Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Hide)">Conditional</animation>
+
+		<animation effect="slide" end="-590,0" time="800" tween="back" easing="inout" condition="!Skin.HasSetting(Home_Horizontal) + ![Skin.HasSetting(Deck_Short) | Skin.HasSetting(Deck_Hide)] + ControlGroup(5000).HasFocus">conditional</animation>
+		<animation effect="slide" end="-990,0" time="900" tween="back" easing="inout" condition="!Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Short) + ControlGroup(5000).HasFocus">conditional</animation>
+		<animation effect="slide" end="-1190,0" time="1000" tween="back" easing="inout" condition="!Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Hide) + ControlGroup(5000).HasFocus">conditional</animation>
+
+		<animation effect="slide" end="730,0" time="800" tween="back" easing="inout" condition="!Skin.HasSetting(Home_Horizontal) + Window.IsActive(4998)">Conditional</animation>
+
+		<!-- Horizontal Home -->
+		<animation effect="slide" end="165,90" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Deck_Hide)">Conditional</animation>
+		<animation effect="slide" end="165,-200" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Hide)">Conditional</animation>
+
+		<!-- Recently Added -->
+		<control type="group" id="7000">
+			<visible>Control.isVisible(11000) + !Skin.HasSetting(Deck_NoRecently)</visible>
+			<include>Animation_CommonFade_600</include>
+				
+			<control type="group">
+				<!-- Vertical Home -->
+				<animation effect="slide" end="0,100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11001)">conditional</animation>
+				<!-- Horizontal Home -->
+				<animation effect="slide" end="0,-300" condition="Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001)">Conditional</animation>
+				<animation effect="slide" end="0,300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11000) + Control.IsVisible(11001)">Conditional</animation>
+
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<animation effect="slide" end="0,200" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001)">Conditional</animation>
+					<include>Deck_Name</include>
+					<label>Recently Added</label>
+				</control>
+				<control type="fixedlist" id="11000">
+					<onup>11001</onup>
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<include>Animation_CommonFade_600</include>
+					<visible>Control.hasFocus(11000)</visible>
+					<include>Deck_Focus</include>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11000)</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<animation effect="slide" end="0,275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
+				<animation effect="slide" end="0,175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
+
+				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11000) + ![Container(11000).ListItem.Type(album) | Container(11000).ListItem.Type(photo)]</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<animation effect="slide" end="0,-275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
+				<animation effect="slide" end="0,-175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
+
+				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_More_Position</include>
+				<include>Deck_Information_More</include>
+			</control>
+
+		</control>
+
+		<!-- On Deck -->
+		<control type="group" id="7001">
+			<visible>Control.isVisible(11001) + !Skin.HasSetting(Deck_NoOnDeck)</visible>
+			<include>Animation_CommonFade_600</include>
+
+			<control type="group">
+				<!-- Vertical Home -->
+				<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11000)">conditional</animation>
+				<!-- Horizontal Home -->
+				<animation effect="slide" end="0,-300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11000)">Conditional</animation>
+
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>On Deck</label>
+				</control>
+				<control type="fixedlist" id="11001">
+					<ondown condition="!Skin.HasSetting(Home_Horizontal)">11000</ondown>
+					<onup condition="Skin.HasSetting(Home_Horizontal)">11000</onup>
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(11001)</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11001)</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<animation effect="slide" end="0,-275" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,175" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+
+				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11001)</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<animation effect="slide" end="0,275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,-175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11001) + Control.HasFocus(11001)">Conditional</animation>
+				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_More_Position</include>
+				<include>Deck_Information_More</include>
+			</control>
+		</control>
+
+		<!-- Recently Used -->
+		<control type="group" id="7002">
+			<visible>Control.isVisible(11002) + !Skin.HasSetting(Deck_NoRecently)</visible>
+			<include>Animation_CommonFade_600</include>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Recently Used</label>
+				</control>
+				<control type="fixedlist" id="11002">
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(11002)</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11002)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+		</control>
+
+		<!-- Queue -->
+		<control type="group" id="7003">
+			<visible>Control.isVisible(11003)</visible>
+			<include>Animation_CommonFade_600</include>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Queue</label>
+				</control>
+				<control type="fixedlist" id="11003">
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(11003)</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11003)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+		</control>
+
+		<!-- Shared Content -->
+		<control type="group">
+			<include>Animation_CommonFade_600</include>
+			<visible>SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)</visible>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Shared Content</label>
+				</control>
+				<control type="fixedlist">
+					<include>Deck_Content</include>
+					<content>
+					<item>
+						<label fallback="Not Available">$INFO[Skin.String(mysharedcontent_servername)]</label>
+						<icon>share-icon.png</icon>
+						<property name="Type">Channel</property>
+						<onclick>test</onclick>
+					</item>
+					</content>
+				</control>
+			</control>
+		</control>
+
+		<!-- DECK EXTENSIONS -->
+		<include>Home_Extension_Deck</include>
+
+	</control>
+</include>
+
+<!-- DECK FOCUS -->
+<include name="Deck_Focus">
+	<!-- Arrow -->
+	<control type="image">
+		<posy>0</posy>
+		<posx>-20</posx>
+		<height>170</height>
+		<texture background="true">newlistselector.png</texture>
+		<colordiffuse>mainblue</colordiffuse>
+	</control>
+	<!-- Focus Frame -->
+	<control type="image">
+		<posx>-2</posx>
+		<posy>-2</posy>
+		<width>114</width>
+		<height>174</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>mainblue</colordiffuse>
+	</control>
+</include>
+
+<!-- DECK INFORMATION POSITION -->
+<include name="Deck_Information_Position">
+	<include>Animation_CommonFade_600</include>
+
+	<!-- Vertical Animation -->
+	<animation effect="slide" end="0,175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + ControlGroup(5000).HasFocus">Conditional</animation>
+
+	<!-- Horizontal Animation -->
+	<animation effect="slide" end="0,330" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom) + ControlGroup(5000).HasFocus">Conditional</animation>
+	<animation effect="slide" end="0,200" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom) + ControlGroup(5000).HasFocus">Conditional</animation>
+</include>
+<include name="Deck_Information_More_Position">
+	<include>Animation_CommonFade_600</include>
+
+	<!-- Vertical Animation -->
+	<animation effect="slide" end="0,-175" time="500" delay="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + ControlGroup(5000).HasFocus">Conditional</animation>
+
+	<!-- Horizontal Animation -->
+	<animation effect="slide" end="0,450" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom) + ControlGroup(5000).HasFocus">Conditional</animation>
+	<animation effect="slide" end="0,320" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom) + ControlGroup(5000).HasFocus">Conditional</animation>
+</include>
+
+<!-- DECK INFORMATION -->
+<include name="Deck_Information">
+	<control type="group">
+		<posy>5</posy>
+		<control type="label">
+			<posy>0</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Deck_Label_Title_1]</label>
+			<font>Font_Bartowski_MainMenu</font>
+			<scroll>false</scroll>
+			<textcolor>mainblue</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="870">auto</width>
+		</control>
+		<control type="label">
+			<posy>80</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Deck_Label_Title_2]</label>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<scroll>true</scroll>
+			<textcolor>white</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="850">auto</width>
+		</control>
+	</control>
+</include>
+<variable name="Deck_Label_Title_1">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(episode)">$INFO[Container(11000).ListItem.TVShowTitle]</value>
+	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(album)">$INFO[Container(11000).ListItem.Artist]</value>
+	<value condition="Control.HasFocus(11000) + ![Container(11000).ListItem.Type(episode) | Container(11000).ListItem.Type(album)]">$INFO[Container(11000).ListItem.Title]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001) + Container(11001).ListItem.Type(episode)">$INFO[Container(11001).ListItem.TVShowTitle]</value>
+	<value condition="Control.HasFocus(11001) + ![Container(11001).ListItem.Type(episode)]">$INFO[Container(11001).ListItem.Title]</value>
+
+	<!-- Recently Used -->
+	<value condition="Control.HasFocus(11002)">$INFO[Container(11002).ListItem.Title]</value>
+
+	<!-- Queue -->
+	<value condition="Control.HasFocus(11003)">$INFO[Container(11003).ListItem.Title]</value>
+
+	<!-- Home Extennsions -->
+	<value condition="Control.HasFocus(8850)">$INFO[Container(8850).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8851)">$INFO[Container(8851).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8852)">$INFO[Container(8852).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8853)">$INFO[Container(8853).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8854)">$INFO[Container(8854).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8855)">$INFO[Container(8855).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8856)">$INFO[Container(8856).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8857)">$INFO[Container(8857).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8858)">$INFO[Container(8858).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8859)">$INFO[Container(8859).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8860)">$INFO[Container(8860).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8861)">$INFO[Container(8861).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8862)">$INFO[Container(8862).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8863)">$INFO[Container(8863).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8864)">$INFO[Container(8864).ListItem.Label]</value>
+	<value condition="Control.HasFocus(8865)">$INFO[Container(8865).ListItem.Label]</value>
+
+	<!-- Shared Content -->
+	<value condition="Control.HasFocus(56)">$INFO[Container(56).ListItem.Label]</value>
+
+</variable>
+<variable name="Deck_Label_Title_2">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(episode)">$INFO[Container(11000).ListItem.Title][COLOR=mainblue] / [/COLOR]$INFO[Container(11000).ListItem(0).Duration]min</value>
+	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(movie)">$INFO[Container(11000).ListItem.Year][COLOR=mainblue] / [/COLOR]$INFO[Container(11000).ListItem(0).Duration]min</value>
+	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(album)">$INFO[Container(11000).ListItem.Album]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001) + Container(11001).ListItem.Type(episode)">$INFO[Container(11001).ListItem(0).Title][COLOR=mainblue] / [/COLOR]$INFO[Container(11001).ListItem(0).Duration]min</value>
+	<value condition="Control.HasFocus(11001) + Container(11001).ListItem.Type(movie)">$INFO[Container(11001).ListItem(0).Year][COLOR=mainblue] / [/COLOR]$INFO[Container(11001).ListItem(0).Duration]min</value>
+
+	<!-- Queue -->
+	<value condition="Control.HasFocus(11003)">$INFO[Container(11003).ListItem.Property(sourceTitle)]</value>
+
+	<!-- Shared Content -->
+	<value condition="Control.HasFocus(56)">$INFO[ListItem.Property(sourceTitle)]</value>
+</variable>
+
+<!-- DECK INFORMATION (MORE) -->
+<include name="Deck_Information_More">
+	<control type="group">
+		<visible>!Skin.HasSetting(deck_moreinfo)</visible>
+		<posy>30</posy>
+		<!-- Content Rating -->
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>70</width>
+			<height>70</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<texture>$VAR[Deck_Label_ContentRating]</texture>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- Star Rating -->
+		<control type="image">
+			<posy>97</posy>
+			<width>90</width>
+			<height>20</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>mainblue</colordiffuse>
+			<!--<colordiffuse>88FFFFFF</colordiffuse>-->
+			<texture>$VAR[Deck_Label_StarRating]</texture>
+			<align>center</align>
+		</control>
+		<!-- Plot -->
+		<control type="textbox">
+                        <posx>100</posx>
+                        <posy>0</posy>
+                        <width>600</width>
+                        <height>90</height>
+                        <align>justify</align>
+                        <label>$VAR[Deck_Label_Plot]</label>
+                        <font>Font_Bartowski_Movies_Plot</font>
+                        <textcolor>ffffffff</textcolor>
+                        <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+                </control>
+		<!-- Studio Logo -->
+		<control type="image">
+			<posy>10</posy>
+			<posx>720</posx>
+			<width>110</width>
+			<height>110</height>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<texture>$VAR[Deck_Label_Studio]</texture>
+			<aspectratio>keep</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- Mediaflags -->
+		<control type="grouplist">
+			<posx>100</posx>
+			<posy>100</posy>
+			<width>600</width>
+			<height>20</height>
+			<orientation>horizontal</orientation>
+			<itemgap>30</itemgap>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_VideoResolution]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_AudioCodec]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_AudioChannels]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_AspectRatio]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_VideoCodec]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+		</control>
+
+	</control>
+</include>
+<variable name="Deck_Label_Plot">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).ListItem.Plot]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).ListItem.Plot]</value>
+</variable>
+<variable name="Deck_Label_ContentRating">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).ListItem.Art(mediaTag::contentRating)]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).ListItem.Art(mediaTag::contentRating)]</value>
+</variable>
+<variable name="Deck_Label_StarRating">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).ListItem.StarRating]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).ListItem.StarRating]</value>
+</variable>
+<variable name="Deck_Label_Studio">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).Listitem.Art(mediaTag::studio)]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::studio)]</value>
+</variable>
+
+<!-- Mediaflags -->
+<variable name="Deck_Label_VideoResolution">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).Listitem.Art(mediaTag::videoResolution)]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::videoResolution)]</value>
+</variable>
+<variable name="Deck_Label_AudioCodec">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).Listitem.Art(mediaTag::audioCodec)]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::audioCodec)]</value>
+</variable>
+<variable name="Deck_Label_AudioChannels">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).Listitem.Art(mediaTag::audioChannels)]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::audioChannels)]</value>
+</variable>
+<variable name="Deck_Label_AspectRatio">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).Listitem.Art(mediaTag::aspectRatio)]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::aspectRatio)]</value>
+</variable>
+<variable name="Deck_Label_VideoCodec">
+	<!-- Recently Added -->
+	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).Listitem.Art(mediaTag::videoCodec)]</value>
+
+	<!-- On Deck -->
+	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::videoCodec)]</value>
+</variable>
+
+
+<!-- Deck Layout -->
+<include name="Deck_Layout">
+		<!-- Cover/Thumb -->
+		<control type="image">
+			<width>110</width>
+			<height>170</height>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+			<visible>ListItem.Type(tvshow) | ListItem.Type(season) | ListItem.Type(episode)</visible>
+		</control>
+		<control type="group">
+			<visible>![ListItem.Type(tvshow) | ListItem.Type(season) | ListItem.Type(episode)]</visible>
+			<control type="image">
+				<width>110</width>
+				<height>110</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
+				<include>Deck_Visible_Half</include>
+			</control>
+			<control type="image">
+				<width>110</width>
+				<height>170</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
+				<include>Deck_Visible_Full</include>
+			</control>
+		</control>
+
+		<!-- Cover/Thumb Overlay -->
+		<control type="image">
+			<posy>145</posy>
+			<width>110</width>
+			<height>25</height>
+			<texture border="10">base-rounded.png</texture>
+			<colordiffuse>AA000000</colordiffuse>
+			<include>Deck_Visible_Full</include>
+		</control>
+		<control type="image">
+			<posy>110</posy>
+			<width>110</width>
+			<height>60</height>
+			<texture border="10">base-rounded.png</texture>
+			<colordiffuse>AA000000</colordiffuse>
+			<include>Deck_Visible_Half</include>
+		</control>
+
+		<!-- Labels -->
+		<control type="label">
+			<include>Deck_Label_Nowrap</include>
+			<label>S$INFO[ListItem.Season] [COLOR=mainblue]/[/COLOR] E$INFO[ListItem.Episode]</label>
+			<visible>ListItem.Type(episode)</visible>
+		</control>
+		<control type="label">
+			<include>Deck_Label_Nowrap</include>
+			<label>$INFO[ListItem.Year]</label>
+			<visible>ListItem.Type(movie)</visible>
+		</control>
+
+		<control type="group">
+			<visible>![ListItem.Type(episode) | ListItem.Type(movie)]</visible>
+			<control type="label">
+				<include>Deck_Label_Wrap</include>
+				<include>Deck_Visible_Half</include>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<include>Deck_Label_Nowrap</include>
+				<include>Deck_Visible_Full</include>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</control>
+
+</include>
+
+<!-- Deck Visibility -->
+<include name="Deck_Visible_Half">
+	<visible>ListItem.Type(photo) | ListItem.Type(album) | ListItem.Type(channel) | ListItem.Type(channels) | ListItem.Type(clip) | Skin.HasSetting(mysharedcontent_helper</visible>
+</include>
+
+<include name="Deck_Visible_Full">
+	<visible>ListItem.Type(movie) | ListItem.Type(tvshow) | ListItem.Type(episode) | ListItem.Type(season) | ListItem.Type(video)</visible>
+</include>
+
+<!-- Deck Name -->
+<include name="Deck_Name">
+	<posy>-25</posy>
+	<width>200</width>
+	<font>MediumSmallTitleFont2</font>
+	<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
+	<textcolor>ffffffff</textcolor>
+	<shadowcolor>FF222222</shadowcolor>
+	<align>right</align>
+
+	<!-- Vertical Home -->
+	<animation effect="slide" end="420,0" time="800" tween="back" easing="inout" condition="!Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Deck_Short) + ControlGroup(5000).HasFocus">conditional</animation>
+	<animation effect="slide" end="840,0" time="800" tween="back" easing="inout" condition="!Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Short) + ControlGroup(5000).HasFocus">conditional</animation>
+
+	<animation effect="slide" end="530,0" condition="!Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Deck_Short)">Conditional</animation>
+	<animation effect="slide" end="110,0" condition="!Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Short)">Conditional</animation>
+
+	<!-- Horizontal Home -->
+	<animation effect="slide" end="950,195" condition="Skin.HasSetting(Home_Horizontal)">Conditional</animation>
+</include>
+
+<!-- Deck Content -->
+<include name="Deck_Content">
+
+	<!-- Vertical Navigation -->
+	<onleft condition="!Skin.HasSetting(Home_Horizontal)">300</onleft>
+
+	<!-- Horizontal Navigation -->
+	<ondown condition="Skin.HasSetting(Home_Horizontal)">300</ondown>
+
+	<width>980</width>
+	<height>170</height>
+	<orientation>horizontal</orientation>
+	<itemlayout width="140" height="330">
+		<include>Deck_Layout</include>
+	</itemlayout>
+	<focusedlayout width="140" height="330">
+		<include>Deck_Layout</include>
+	</focusedlayout>
+</include>
+
+<!-- Deck Label NoWrap -->
+<include name="Deck_Label_Nowrap">
+	<posx>55</posx>
+	<posy>145</posy>
+	<width>110</width>
+	<height>25</height>
+	<align>center</align>
+	<aligny>center</aligny>
+	<scroll>false</scroll>
+	<font>SearchResultSmaller</font>
+	<textcolor>FFCCCCCC</textcolor>
+	<wrapmultiline>false</wrapmultiline>
+</include>
+
+<!-- Deck Label Wrap -->
+<include name="Deck_Label_Wrap">
+	<posx>55</posx>
+	<posy>120</posy>
+	<width>110</width>
+	<height>40</height>
+	<align>center</align>
+	<aligny>center</aligny>
+	<scroll>false</scroll>
+	<font>SearchResultSmaller</font>
+	<textcolor>FFCCCCCC</textcolor>
+	<wrapmultiline>true</wrapmultiline>
+</include>
+
+<include name="Deck_Placeholder">
+	<control type="image">
+		<posx>-1</posx>
+		<posy>-1</posy>
+		<width>112</width>
+		<height>172</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>77AAAAAA</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<width>110</width>
+		<height>170</height>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<texture border="5">base-rounded.png</texture>
+		<colordiffuse>77000000</colordiffuse>
+	</control>
+ 	
+	<control type="image">
+		<posx>139</posx>
+		<posy>-1</posy>
+		<width>112</width>
+		<height>172</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>77AAAAAA</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>140</posx>
+		<width>110</width>
+		<height>170</height>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<texture border="5">base-rounded.png</texture>
+		<colordiffuse>77000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>279</posx>
+		<posy>-1</posy>
+		<width>112</width>
+		<height>172</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>77AAAAAA</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>280</posx>
+		<width>110</width>
+		<height>170</height>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<texture border="5">base-rounded.png</texture>
+		<colordiffuse>77000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>419</posx>
+		<posy>-1</posy>
+		<width>112</width>
+		<height>172</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>77AAAAAA</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>420</posx>
+		<width>110</width>
+		<height>170</height>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<texture border="5">base-rounded.png</texture>
+		<colordiffuse>77000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>559</posx>
+		<posy>-1</posy>
+		<width>112</width>
+		<height>172</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>77AAAAAA</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>560</posx>
+		<width>110</width>
+		<height>170</height>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<texture border="5">base-rounded.png</texture>
+		<colordiffuse>77000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>699</posx>
+		<posy>-1</posy>
+		<width>112</width>
+		<height>172</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>77AAAAAA</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>700</posx>
+		<width>110</width>
+		<height>170</height>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<texture border="5">base-rounded.png</texture>
+		<colordiffuse>77000000</colordiffuse>
+	</control>
+
+	<control type="image">
+		<posx>839</posx>
+		<posy>-1</posy>
+		<width>112</width>
+		<height>172</height>
+		<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+		<texture background="true">frameOrange.png</texture>
+		<colordiffuse>77AAAAAA</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>840</posx>
+		<width>110</width>
+		<height>170</height>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<texture border="5">base-rounded.png</texture>
+		<colordiffuse>77000000</colordiffuse>
+	</control>
+</include>
+</includes>
+

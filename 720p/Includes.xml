@@ -2,6 +2,7 @@
 	<!-- File includes -->
 	<include file="Defaults.xml" />
 	<include file="Includes_Home.xml" />
+	<include file="Includes_Deck.xml" />
 	<include file="Viewtype_Episode.xml" />
 	<include file="Viewtype_Poster.xml" />
 	<include file="Viewtype_PictureGrid.xml" />
@@ -26,7 +27,6 @@
 	<include file="Includes_Objects.xml" />
 	<include file="Includes_Music_Global.xml" />
 	<include file="IncludesCodecFlagging.xml" />
-	<include file="Includes_Home_Horizontal.xml" />
 	<include file="Viewtype_3dbanner.xml" />
 	<include file="Viewtype_Logo.xml" />
 	<include file="Viewtype_3dsquare.xml" />
@@ -742,6 +742,7 @@
 			<animation effect="fade" start="0" end="0" time="600">Hidden</animation>
 		</control>
 	</include>
+
 	<include name="Global_Time_Home_Big">
 		<control type="group">
                         <visible>[Control.IsVisible(300) + Skin.HasSetting(home_bigclock)]</visible>
@@ -755,36 +756,54 @@
 					<height>208</height> 
 					<texture>common/time_gradient_back.png</texture>
 				</control>
-				<control type="label">
-                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
-					<textcolor>white</textcolor>
-					<posy>10</posy>
-					<width>300</width>
-					<font>Font_Bartowski_MainMenu</font>
-					<info>System.Time(hh:mm xx)</info>
-					<align>right</align>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
+				<!-- Normal Clock -->
+				<control type="group">
+				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+					<control type="label">
+	                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
+						<textcolor>white</textcolor>
+						<posy>10</posy>
+						<width>300</width>
+						<font>Font_Bartowski_MainMenu</font>
+						<label>$INFO[System.Time(hh:mm xx)]</label>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posy>95</posy>
+						<width>300</width>
+						<font>Font_Landscape_TitleTVShow</font>
+						<textcolor>white</textcolor>
+						<info>System.Date</info>
+						<align>right</align>
+					</control>
 				</control>
-				<control type="label">
-					<posy>95</posy>
-					<width>300</width>
-					<font>Font_Landscape_TitleTVShow</font>
-					<textcolor>white</textcolor>
-					<info>System.Date</info>
-					<align>right</align>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
+				<!-- Aeon Clock -->
+				<control type="group">
+				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+					<control type="label">
+	                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
+						<textcolor>white</textcolor>
+						<posy>10</posy>
+						<width>300</width>
+						<!--<font>Font_Bartowski_MainMenu</font>-->
+						<font>AeonFont_MainMenu_Focus</font>
+						<info>System.Time(hh:mm xx)</info>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posy>100</posy>
+						<width>300</width>
+						<font>Font_Landscape_TitleTVShow</font>
+						<textcolor>white</textcolor>
+						<info>System.Date</info>
+						<align>right</align>
+					</control>
 				</control>
-				<!--<control type="label">
-					<posy>54</posy>
-					<width>300</width>
-					<font>Font_Date</font>
-					<textcolor>mainblue</textcolor>
-					<label>[B]$INFO[Weather.Temperature][/B]</label>
-					<align>right</align>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
-				</control>-->
 		</control>
 	</include>
+
+
+
 	<include name="Global_Time_Home">
 		<control type="group">
                         <visible>[Control.IsVisible(300) + !Skin.HasSetting(home_bigclock)]</visible>
@@ -1948,29 +1967,28 @@
 
 	<!-- Home Menu (5 Items) -->
 	<include name="Home_5Items">
-		<posx>-131</posx>
-		<posy>63</posy>
-		<height>468</height>
-		<width>1541</width>
+		<posx>20</posx>
+		<posy>175</posy>
+		<height>350</height>
+		<width>1000</width>
 		<focusposition>2</focusposition>
 		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
-
 	<!-- Home Menu (7 Items) -->
 	<include name="Home_7Items">
-		<posx>-131</posx>
-		<posy>20</posy>
-		<height>590</height>
-		<width>1541</width>
+		<posx>20</posx>
+		<posy>110</posy>
+		<height>480</height>
+		<width>1000</width>
 		<focusposition>3</focusposition>
 		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
 	<!-- Home Menu (9 Items) -->
 	<include name="Home_9Items">
-		<posx>-131</posx>
-		<posy>-50</posy>
-		<height>712</height>
-		<width>1541</width>
+		<posx>20</posx>
+		<posy>45</posy>
+		<height>610</height>
+		<width>1000</width>
 		<focusposition>4</focusposition>
 		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
@@ -2115,371 +2133,6 @@
 				<font>Font_Bartowski_Unwatched</font>
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
-			</control>
-		</control>
-	</include>
-
-	<!-- Deck / OnDeck Information / 11001 -->
-	<include name="deck_more_ondeck">
-		<control type="group">
-		<visible>[ Container(11001).ListItem(0).Type(episode) | Container(11001).ListItem(0).Type(movie) ]</visible>
-
-		<!-- Content Rating -->
-		<control type="image">
-                        <!--<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::contentRating)</visible>-->
-			<description>Content Rating</description>
-			<posy>5</posy>
-			<posx>5</posx>
-			<width>80</width>
-			<height>80</height>
-			<aspectratio>stretch</aspectratio>
-			<info>Container(11001).ListItem(0).Art(mediaTag::contentRating)</info>
-			<aspectratio>keep</aspectratio>
-			<colordiffuse>DDAAAAAA</colordiffuse>
-		</control>
-		<!-- Star Rating -->
-		<control type="image">
-                        <!--<visible>!IsEmpty(Container(11001).ListItem(0).StarRating</visible>-->
-			<description>Star Rating</description>
-			<posy>102</posy>
-			<posx>0</posx>
-			<info>Container(11001).ListItem(0).StarRating</info>
-			<aspectratio>scale</aspectratio>
-			<width>90</width>
-			<height>20</height>
-			<colordiffuse>mainblue</colordiffuse>
-		</control>
-		<!-- Plot -->
-		<control type="textbox">
-                        <visible>!IsEmpty(Container(11001).ListItem(0).Plot)</visible>
-                        <posx>105</posx>
-                        <posy>0</posy>
-                        <width>600</width>
-                        <height>90</height>
-                        <align>justify</align>
-                        <info>Container(11001).ListItem(0).Plot</info>
-                        <font>Font_Bartowski_Movies_Plot</font>
-                        <textcolor>ffffffff</textcolor>
-                        <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-                </control>
-		<!-- Media Flags -->
-		<control type="grouplist">
-                                <posy>105</posy>
-                                <posx>105</posx>
-                                <width>300</width>
-				<height>50</height>
-                                <orientation>horizontal</orientation>
-                                <itemgap>20</itemgap>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11001).ListItem(0).Art(mediaTag::videoResolution)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11001).ListItem(0).Art(mediaTag::audioCodec)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11001).ListItem(0).Art(mediaTag::audioChannels)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11001).ListItem(0).Art(mediaTag::aspectRatio)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11001).ListItem(0).Art(mediaTag::videoCodec)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<!--<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11001).ListItem(0).Art(mediaTag::videoFrameRate)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>-->
-		</control>
-		</control>
-	</include>
-
-	<!-- Deck / RecentlyAdded Information / 11000 -->
-	<include name="deck_more_added">
-		<control type="group">
-		<visible>[ Container(11000).ListItem(0).Type(episode) | Container(11000).ListItem(0).Type(movie) ]</visible>
-		<!-- Content Rating -->
-		<control type="image">
-                        <!--<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::contentRating)</visible>-->
-			<description>Content Rating</description>
-			<posy>5</posy>
-			<posx>5</posx>
-			<!--<width>90</width>
-			<height>90</height>-->
-			<width>80</width>
-			<height>80</height>
-			<aspectratio>stretch</aspectratio>
-			<info>Container(11000).ListItem(0).Art(mediaTag::contentRating)</info>
-			<aspectratio>keep</aspectratio>
-			<colordiffuse>DDAAAAAA</colordiffuse>
-		</control>
-		<!-- Star Rating -->
-		<control type="image">
-                        <!--<visible>!IsEmpty(Container(11000).ListItem(0).StarRating</visible>-->
-			<description>Star Rating</description>
-			<posy>102</posy>
-			<posx>0</posx>
-			<info>Container(11000).ListItem(0).StarRating</info>
-			<aspectratio>scale</aspectratio>
-			<width>90</width>
-			<height>20</height>
-			<colordiffuse>mainblue</colordiffuse>
-		</control>
-		<!-- Plot -->
-		<control type="textbox">
-                        <visible>!IsEmpty(Container(11000).ListItem(0).Plot)</visible>
-                        <posx>105</posx>
-                        <posy>0</posy>
-                        <width>600</width>
-                        <height>90</height>
-                        <align>justify</align>
-                        <info>Container(11000).ListItem(0).Plot</info>
-                        <font>Font_Bartowski_Movies_Plot</font>
-                        <textcolor>ffffffff</textcolor>
-                        <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-                </control>
-		<!-- Media Flags -->
-		<control type="grouplist">
-                                <posy>105</posy>
-                                <posx>105</posx>
-                                <width>300</width>
-				<height>50</height>
-                                <orientation>horizontal</orientation>
-                                <itemgap>20</itemgap>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11000).ListItem(0).Art(mediaTag::videoResolution)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11000).ListItem(0).Art(mediaTag::audioCodec)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11000).ListItem(0).Art(mediaTag::audioChannels)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11000).ListItem(0).Art(mediaTag::aspectRatio)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11000).ListItem(0).Art(mediaTag::videoCodec)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>
-				<!--<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="29" max="100">auto</width>
-					<height>16</height>
-					<texture>$INFO[Container(11000).ListItem(0).Art(mediaTag::videoFrameRate)]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>FFAAAAAA</colordiffuse>
-				</control>-->
-		</control>
-		</control>
-	</include>
-
-	<!-- DECK PLACEHOLDER BACKGROUND -->
-	<include name="deck_placeholder">
-		<control type="group">
-			<!--<visible>[ Container(11001).ListItem(0).Type(episode) | Container(11000).ListItem(0).Type(episode) ]</visible>-->
-			<!--<visible>ControlGroup(7002).HasFocus + [ Container(11001).ListItem(0).Type(movie) | Container(11000).ListItem(0).Type(movie) ]</visible>
-
-			<visible>[ Container(11001).ListItem(0).Type(movie) | Container(11000).ListItem(0).Type(movie) ]</visible>-->
-			<control type="image">
-				<posx>23</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<!--<colordiffuse>FFFFFFFF</colordiffuse>-->
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>183</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<!--<colordiffuse>FFFFFFFF</colordiffuse>-->
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>323</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>463</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>603</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>743</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>883</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-		</control>
-	</include>
-
-	<!-- DECK PLACEHOLDER CUSTOM BACKGROUND -->
-	<include name="deck_placeholder_custom">
-		<control type="group">
-			<control type="image">
-				<posx>23</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<!--<colordiffuse>FFFFFFFF</colordiffuse>-->
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>188</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<!--<colordiffuse>FFFFFFFF</colordiffuse>-->
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>328</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>468</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>608</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>748</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>888</posx>
-				<posy>0</posy>
-				<width>116</width>
-				<height>176</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture border="5">base-rounded.png</texture>
-				<colordiffuse>77000000</colordiffuse>
 			</control>
 		</control>
 	</include>
@@ -2854,7 +2507,7 @@
 
 			<control type="image">
 				<posx>0</posx>
-				<posy>5</posy>
+				<posy>6</posy>
 				<width>600</width>
 				<height>28</height>
 				<aspectratio>scale</aspectratio>

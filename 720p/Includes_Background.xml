@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Sun Jan 26 00:23:46 CET 2014 -->
+<!-- Wed Feb 26 13:43:49 CET 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -2859,7 +2859,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(56)</visible>
 	</control>-->
-	<!-- Custom Option (56 -->
+	<!-- Custom Option (56) -->
 	<control type="radiobutton" id="271">
 		<width>600</width>
 		<description>More Posters</description>

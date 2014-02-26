@@ -104,8 +104,8 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="4">
-						<label>31609</label>
-						<label2>Addons (Beta)</label2>
+						<label>Home Addons</label>
+						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="3">
@@ -494,18 +494,19 @@
 					<posx>250</posx>
 					<posy>60</posy>
 					<width>860</width>
-					<height>590</height>
+					<height>555</height>
 					<itemgap>0</itemgap>
-					<pagecontrol>60</pagecontrol>
 					<onleft>9000</onleft>
-					<onright>60</onright>
+					<onright>62</onright>
 					<onup>9002</onup>
 					<ondown>9002</ondown>
+					<pagecontrol>62</pagecontrol>
+					<!-- General Home Options -->
 					<control type="label" id="200">
 						<width>860</width>
 						<height>35</height>
 						<font>font13caps</font>
-						<label>$LOCALIZE[31259]</label> <!--31101-->
+						<label>General Options</label> <!--31101-->
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -514,13 +515,6 @@
 					<control type="image" id="201">
 						<include>settings_separator</include>
 					</control>
-					<!--<control type="radiobutton" id="203">
-						<description>Horizontal Home</description>
-						<include>skin_settings_labels</include>
-						<label>Enable Horizontal Home</label>
-						<onclick>Skin.ToggleSetting(home_horizontal)</onclick>
-						<selected>Skin.HasSetting(home_horizontal)</selected>
-					</control>-->
 					<control type="radiobutton" id="202">
 						<description>Home Big Clock</description>
 						<include>skin_settings_labels</include>
@@ -528,21 +522,21 @@
 						<onclick>Skin.ToggleSetting(home_bigclock)</onclick>
 						<selected>Skin.HasSetting(home_bigclock)</selected>
 					</control>
-					<control type="radiobutton" id="209">
+					<control type="radiobutton" id="203">
 						<description>Servername</description>
 						<include>skin_settings_labels</include>
 						<label>Enable Server Name</label>
 						<onclick>Skin.ToggleSetting(Home_Servername)</onclick>
 						<selected>Skin.HasSetting(Home_Servername)</selected>
 					</control>
-					<control type="radiobutton" id="214">
+					<control type="radiobutton" id="204">
 						<description>Disable Submenu Navigation Arrow</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31593]</label>
 						<onclick>Skin.ToggleSetting(HomeArrow)</onclick>
 						<selected>Skin.HasSetting(HomeArrow)</selected>
 					</control>
-					<control type="radiobutton" id="215">
+					<control type="radiobutton" id="205">
 						<description>Disable Update Available</description>
 						<include>skin_settings_labels</include>
 						<label>Disable UpdateAvailable Notification</label>
@@ -550,6 +544,53 @@
 						<selected>Skin.HasSetting(Home_Update)</selected>
 					</control>
 
+					<!-- Home Style -->
+					<control type="label" id="210">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Home Menu Style</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="image" id="211">
+						<include>settings_separator</include>
+					</control>
+					<control type="radiobutton" id="212">
+						<description>Vertical Home</description>
+						<include>skin_settings_labels</include>
+						<label>Vertical Home Menu</label>
+						<onclick>Skin.Reset(Home_Horizontal)</onclick>
+						<onclick>Skin.Reset(Home_Panel)</onclick>
+						<selected>!Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Panel)</selected>
+					</control>
+					<control type="radiobutton" id="213">
+						<description>Horizontal Home</description>
+						<include>skin_settings_labels</include>
+						<label>Horizontal Home Menu</label>
+						<onclick>Skin.ToggleSetting(Home_Horizontal)</onclick>
+						<onclick>Skin.Reset(Home_Panel)</onclick>
+						<selected>Skin.HasSetting(Home_Horizontal)</selected>
+					</control>
+					<control type="radiobutton" id="214">
+						<textoffsetx>40</textoffsetx>
+						<include>skin_settings_labels</include>
+						<description>Horizontal Home</description>
+						<label>Bottom Navigation Bar</label>
+						<onclick>Skin.ToggleSetting(Home_Horizontal_Bottom)</onclick>
+						<selected>Skin.HasSetting(Home_Horizontal_Bottom)</selected>
+						<visible>Skin.HasSetting(Home_Horizontal)</visible>
+					</control>
+					<control type="radiobutton" id="215">
+						<description>Panelo Home</description>
+						<include>skin_settings_labels</include>
+						<label>Panel Home Menu (Concept)</label>
+						<onclick>Skin.ToggleSetting(Home_Panel)</onclick>
+						<onclick>Skin.Reset(Home_Horizontal)</onclick>
+						<selected>Skin.HasSetting(Home_Panel)</selected>
+					</control>
 					<!-- Home Menu Settings -->
 					<control type="label" id="220">
 						<width>860</width>
@@ -643,40 +684,59 @@
 						<description>Disable Deck</description>
 						<include>skin_settings_labels</include>
 						<label>Disable Deck</label>
-						<onclick>Skin.ToggleSetting(NoOnDeck)</onclick>
-						<selected>Skin.HasSetting(NoOnDeck)</selected>
+						<onclick>Skin.ToggleSetting(Deck_Disable)</onclick>
+						<selected>Skin.HasSetting(Deck_Disable)</selected>
 					</control>
 					<control type="radiobutton" id="253">
-						<description>Short Deck</description>
+						<description>Hide Deck</description>
 						<include>skin_settings_labels</include>
-						<label>Enable Minimal Deck</label>
-						<onclick>Skin.ToggleSetting(Deck_Short)</onclick>
-						<selected>Skin.HasSetting(Deck_Short)</selected>
-						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+						<label>Hide Deck</label>
+						<onclick>Skin.ToggleSetting(Deck_Hide)</onclick>
+						<onclick>Skin.Reset(Deck_Short)</onclick>
+						<selected>Skin.HasSetting(Deck_Hide)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 					<control type="radiobutton" id="254">
+						<description>Short Deck</description>
+						<include>skin_settings_labels</include>
+						<label>Short Deck</label>
+						<onclick>Skin.ToggleSetting(Deck_Short)</onclick>
+						<onclick>Skin.Reset(Deck_Hide)</onclick>
+						<selected>Skin.HasSetting(Deck_Short)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<!-- WORK HERE -->
+					<!--<control type="radiobutton" id="255">
 						<description>Disable On Deck</description>
 						<include>skin_settings_labels</include>
 						<label>Disable OnDeck</label>
 						<onclick>Skin.ToggleSetting(Deck_NoOnDeck)</onclick>
 						<selected>Skin.HasSetting(Deck_NoOnDeck)</selected>
-						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
-					<control type="radiobutton" id="255">
+					<control type="radiobutton" id="256">
 						<description>Disable Recently Added</description>
 						<include>skin_settings_labels</include>
 						<label>Disable Recently Added</label>
 						<onclick>Skin.ToggleSetting(Deck_NoRecently)</onclick>
 						<selected>Skin.HasSetting(Deck_NoRecently)</selected>
-						<visible>!Skin.HasSetting(NoOnDeck)</visible>
-					</control>
-					<control type="radiobutton" id="256">
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>-->
+					<control type="radiobutton" id="257">
 						<description>Disable Recently Used</description>
 						<include>skin_settings_labels</include>
 						<label>Disable Recently Used</label>
 						<onclick>Skin.ToggleSetting(Deck_NoUsed)</onclick>
 						<selected>Skin.HasSetting(Deck_NoUsed)</selected>
-						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="258">
+						<description>Disable Shared Content</description>
+						<include>skin_settings_labels</include>
+						<label>Disable Shared Content</label>
+						<onclick>Skin.ToggleSetting(Deck_NoShared)</onclick>
+						<selected>Skin.HasSetting(Deck_NoShared)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 					<control type="radiobutton" id="259">
 						<description>Disable Deck Info</description>
@@ -684,7 +744,7 @@
 						<label>Disable Plot &amp; Mediaflags</label>
 						<onclick>Skin.ToggleSetting(deck_moreinfo)</onclick>
 						<selected>Skin.HasSetting(deck_moreinfo)</selected>
-						<visible>!Skin.HasSetting(NoOnDeck)</visible>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 
 					<!-- Accent Color Settings -->
@@ -1581,6 +1641,7 @@
 				</control>
 				</control>
 			</control>
+
 		<include>Global_Time_TopRight_Files</include>
 	</controls>
 </window>

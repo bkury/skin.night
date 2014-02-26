@@ -39,7 +39,7 @@
 		<font>
 			<name>AeonFont_MainMenu_Focus</name>
 			<filename>aeon_main.ttf</filename>
-			<size>100</size>
+			<size>92</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_MainMenu</name>
@@ -117,7 +117,8 @@
 		<font>
 			<name>Font_Bartowski_MainMenu_Focus</name>
 			<filename>alaska_thin.ttf</filename>
-			<size>148</size>
+			<!--<size>148</size>-->
+			<size>120</size>
 			<linespacing>1</linespacing>
 		</font>
 		<font>

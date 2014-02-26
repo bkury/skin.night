@@ -1,441 +1,532 @@
 <includes>
 
-<!-- Mainmenu -->
+<!-- Homemenu -->
+<include name="Home_Navigation">
+	<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal_Header</include>
+
+	<include condition="Skin.HasSetting(Home_Panel)">Navigation_Panel_Header</include>
+	<include condition="Skin.HasSetting(Home_Panel)">Home_Panel</include>
+
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Home_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Home_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Home_Simplelist</include>
+</include>
+
+<include name="Home_Navigation_Vertical">
+	<!-- Deck Animation -->
+	<animation effect="slide" end="-800,0" time="500" tween="cubic" easing="out" condition="ControlGroup(5000).HasFocus">conditional</animation>
+	<!-- Submenu Animation -->
+	<animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998)">conditional</animation>
+
+	<!-- My Shared Content -->
+	<onright condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onright>
+	<onright condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onright>
+
+	<onleft>Plex.ActivateWindow(4998)</onleft>
+	<onright>5000</onright>
+	<include>Navigation_Vertical</include>
+</include>
+<include name="Home_Navigation_Horizontal">
+	<!-- Submenu Animation -->
+	<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(4998)">conditional</animation>
+
+	<!-- My Shared Content -->
+	<onup condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onup>
+	<onup condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onup>
+
+	<onup>5000</onup>
+	<ondown>Plex.ActivateWindow(4998)</ondown>
+	<include>Navigation_Horizontal</include>
+</include>
+<include name="Home_Navigation_Panel">
+	<!-- Submenu Animation -->
+	<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(4998)">conditional</animation>
+	<ondown>Plex.ActivateWindow(4998)</ondown>
+	<include>Navigation_Panel</include>
+</include>
 <include name="Home_Wraplist">
 	<control type="wraplist" id="300">
-		<include>Home_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Home_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Home_Navigation_Vertical</include>
+		<include>Home_Navigation_Content</include>
 	</control>
 </include>
-
 <include name="Home_Fixedlist">
 	<control type="fixedlist" id="300">
-		<include>Home_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Home_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Home_Navigation_Vertical</include>
+		<include>Home_Navigation_Content</include>
 	</control>
 </include>
-
 <include name="Home_Simplelist">
 	<control type="list" id="300">
-		<include>Home_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Home_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Home_Navigation_Vertical</include>
+		<include>Home_Navigation_Content</include>
 	</control>
+</include>
+<include name="Home_Panel">
+	<control type="panel" id="300">
+		<include condition="Skin.HasSetting(Home_Panel)">Home_Navigation_Panel</include>
+		<include>Home_Navigation_Content</include>
+	</control>
+</include>
+<include name="Home_Navigation_Content">
+	<content>
+		<item id="11">
+			<description>Search</description>
+			<label>$LOCALIZE[137]</label>
+			<icon>backgrounds/search.jpg</icon>
+			<onclick>Plex.ActivateWindow(10051)</onclick>
+			<visible>!Skin.HasSetting(HomeMenuNoSearchButton)</visible>
+		</item>
+		<include>Home_Extension_Menu</include>
+	</content>
 </include>
 
 <!-- Submenu -->
-<include name="Sub_Wraplist">
+<include name="Submenu_Navigation">
+	<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal_Header</include>
+
+	<include condition="Skin.HasSetting(Home_Panel)">Navigation_Panel_Header</include>
+	<include condition="Skin.HasSetting(Home_Panel)">Submenu_Panel</include>
+
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Submenu_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Submenu_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Submenu_Simplelist</include>
+</include>
+<include name="Submenu_Navigation_Vertical">
+	<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+	<onleft>Dialog.Close(4998)</onleft>
+	<onright>Dialog.Close(4998)</onright>
+	<include>Navigation_Vertical</include>
+</include>
+<include name="Submenu_Navigation_Horizontal">
+	<onup>Dialog.Close(4998)</onup>
+	<ondown>Dialog.Close(4998)</ondown>
+	<include>Navigation_Horizontal</include>
+</include>
+<include name="Submenu_Navigation_Panel">
+	<include>Navigation_Panel</include>
+</include>
+<include name="Submenu_Wraplist">
 	<control type="wraplist" id="1300">
-		<include>Sub_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Vertical</include>
+		<include>Submenu_Navigation_Content</include>
 	</control>
 </include>
-
-<include name="Sub_Fixedlist">
+<include name="Submenu_Fixedlist">
 	<control type="fixedlist" id="1300">
-		<include>Sub_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Vertical</include>
+		<include>Submenu_Navigation_Content</include>
 	</control>
 </include>
-
-<include name="Sub_Simplelist">
+<include name="Submenu_Simplelist">
 	<control type="list" id="1300">
-		<include>Sub_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Vertical</include>
+		<include>Submenu_Navigation_Content</include>
 	</control>
 </include>
+<include name="Submenu_Panel">
+	<control type="panel" id="1300">
+		<include condition="Skin.HasSetting(Home_Panel)">Submenu_Navigation_Panel</include>
+		<include>Submenu_Navigation_Content</include>
+	</control>
+</include>
+<include name="Submenu_Navigation_Content">
+	<content>
+		<item id="20">
+			<description>Preferences</description>
+			<label>$LOCALIZE[31595]</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>XBMC.ActivateWindow(settings)</onclick>
+		</item>
+		<item id="21">
+			<description>Skin Settings</description>
+			<label>$LOCALIZE[31596]</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>XBMC.ActivateWindow(1111)</onclick>
+			<visible>!Skin.HasSetting(Hide_SkinSettings)</visible>
+		</item>
+		<item id="22">
+			<description>Update and Restart</description>
+			<label>[COLOR darkred]$LOCALIZE[31563][/COLOR]</label>
+			<onclick>Plex.UpdateAndRestart</onclick>
+			<visible>System.UpdateIsAvailable</visible>
+		</item>
+		<item id="23">
+			<description>Search</description>
+			<label>$LOCALIZE[137]</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>Plex.ActivateWindow(10051)</onclick>
+			<visible>Skin.HasSetting(HomeMenuNoSearchButton)</visible>
+		</item>
+		<item id="24">
+			<description>Channel Directory</description>
+			<label>$LOCALIZE[31539]</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
+			<visible>!Skin.HasSetting(Hide_ChannelDirectory)</visible>
+		</item>
+		<item id="25">
+			<description>Quit</description>
+			<label>$LOCALIZE[31560]</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>Plex.Quit</onclick>
+			<visible>!Skin.HasSetting(Hide_Quit)</visible>
+		</item>
+		<item id="26">
+			<description>Sleep</description>
+			<label>$LOCALIZE[31561]</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>Plex.Suspend</onclick>
+			<visible>!Skin.HasSetting(Hide_Sleep)</visible>
+		</item>
+		<item id="27">
+			<description>Reboot</description>
+			<label>Reboot</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>Plex.Reboot</onclick>
+			<visible>!Skin.HasSetting(Hide_Reboot)</visible>
+		</item>
+		<item id="28">
+			<description>Shut Down</description>
+			<label>$LOCALIZE[31562]</label>
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>Plex.Powerdown</onclick>
+			<visible>!Skin.HasSetting(Hide_Shutdown)</visible>
+		</item>
+	</content>
+</include>
 
-<!-- Sharedcontent Scren -->
+
+<!-- Shared Content -->
+<include name="Shared_Navigation">
+	<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal_Header</include>
+
+	<include condition="Skin.HasSetting(Home_Panel)">Navigation_Panel_Header</include>
+	<include condition="Skin.HasSetting(Home_Panel)">Shared_Panel</include>
+
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Shared_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Shared_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Shared_Simplelist</include>
+</include>
+<include name="Shared_Navigation_Vertical">
+	<onleft>ReplaceWindow(home)</onleft>
+	<onright>ReplaceWindow(home)</onright>
+	<include>Navigation_Vertical</include>
+</include>
+<include name="Shared_Navigation_Horizontal">
+	<onup>ReplaceWindow(home)</onup>
+	<ondown>ReplaceWindow(home)</ondown>
+	<include>Navigation_Horizontal</include>
+</include>
+<include name="Shared_Navigation_Panel">
+	<include>Navigation_Panel</include>
+</include>
 <include name="Shared_Wraplist">
 	<control type="wraplist" id="56">
-		<include>Shared_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Vertical</include>
 	</control>
 </include>
-
 <include name="Shared_Fixedlist">
 	<control type="fixedlist" id="56">
-		<include>Shared_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Vertical</include>
 	</control>
 </include>
-
 <include name="Shared_Simplelist">
 	<control type="list" id="56">
-		<include>Shared_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Vertical</include>
+	</control>
+</include>
+<include name="Shared_Panel">
+	<control type="panel" id="56">
+		<include condition="Skin.HasSetting(Home_Panel)">Shared_Navigation_Panel</include>
 	</control>
 </include>
 
 <!-- Channel Screen -->
+<include name="Channel_Navigation">
+	<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal_Header</include>
+	<include condition="Skin.HasSetting(Home_Panel)">Navigation_Panel_Header</include>
+
+	<include condition="Skin.HasSetting(Home_Panel)">Channel_Panel</include>
+
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Channel_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Channel_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Channel_Simplelist</include>
+</include>
+<include name="Channel_Navigation_Vertical">
+	<onleft>ReplaceWindow(home)</onleft>
+	<onright>ReplaceWindow(home)</onright>
+	<include>Navigation_Vertical</include>
+</include>
+<include name="Channel_Navigation_Horizontal">
+	<onup>ReplaceWindow(home)</onup>
+	<ondown>ReplaceWindow(home)</ondown>
+	<include>Navigation_Horizontal</include>
+</include>
+<include name="Channel_Navigation_Panel">
+	<include>Navigation_Panel</include>
+</include>
 <include name="Channel_Wraplist">
 	<control type="wraplist" id="70">
-		<include>Channel_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
-
 <include name="Channel_Fixedlist">
 	<control type="fixedlist" id="70">
-		<include>Channel_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
-
 <include name="Channel_Simplelist">
 	<control type="list" id="70">
-		<include>Channel_Menu</include>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
+	</control>
+</include>
+<include name="Channel_Panel">
+	<control type="panel" id="70">
+		<include condition="Skin.HasSetting(Home_Panel)">Channel_Navigation_Panel</include>
 	</control>
 </include>
 
-<include name="Home_Menu">
-			<!-- Deck Animation -->
-			<animation effect="slide" end="-800,0" time="500" tween="cubic" easing="out" condition="ControlGroup(5000).HasFocus">conditional</animation>
 
-			<!-- Submenu Animation -->
-                        <animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998)">conditional</animation>
-
-			<!-- MySharedContent Animation -->
-                        <!--<animation effect="slide" end="-600,0" time="200" condition="Window.Previous(sharedcontent)">conditional</animation>-->
-
-			<include>Animation_Bartowski_ZoomOutZoomIn</include>
-
-			<!-- Menu Items -->
-			<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_9Items</include>
-			<include condition="Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_7Items</include>
-			<include condition="Skin.HasSetting(HomeExtendedMore)">Home_5Items</include>
-			<onup>300</onup>
-			<ondown>300</ondown>
-			<onleft>Plex.ActivateWindow(4998)</onleft>
-			<onright>5000</onright>
-			<viewtype>list</viewtype>
-			<orientation>vertical</orientation>
-			<movement>0</movement>
-			<scrolltime>300</scrolltime>
-			<visible>!Skin.HasSetting(horizontal_home)</visible>			
-			<itemlayout width="600" height="61">
-				<control type="label">
-					<width>500</width>
-					<height>61</height>
-					<posx>150</posx>
-					<posy>91</posy>
-					<font>Font_Bartowski_MainMenu</font>
-					<textcolor>50b8b7b7</textcolor>
-					<info>ListItem.Label</info>
-					<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
- 				</control>
-				<control type="label">
-					<width>500</width>
-					<height>61</height>
-					<posx>150</posx>
-					<posy>91</posy>
-					<font>AeonFont_MainMenu</font>
-					<textcolor>48b8b7b7</textcolor>
-					<info>ListItem.Label</info>
-					<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-				</control>			
-			</itemlayout>
-			<focusedlayout width="741" height="121">
-				<control type="label">
-					<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-					<textcolor>ffffffff</textcolor>
-					<!--<width>741</width>-->
-					<width>800</width>
-					<height>341</height>
-					<posx>150</posx>
-					<posy>95</posy>
-					<font>Font_Bartowski_MainMenu_Focus</font>
-					<shadowcolor>black</shadowcolor>
-					<info>ListItem.Label</info>
-					<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-				</control>
-				<control type="label">
-					<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-					<textcolor>ffffffff</textcolor>
-					<width>741</width>
-					<height>341</height>
-					<posx>150</posx>
-					<posy>97</posy>
-					<font>AeonFont_MainMenu_Focus</font>
-					<shadowcolor>black</shadowcolor>
-					<info>ListItem.Label</info>
-					<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-				</control>
-			</focusedlayout>
-			<content>
-				<item id="11">
-					<description>Search</description>
-					<label>$LOCALIZE[137]</label>
-					<icon>backgrounds/search.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomSearchFolder)]</thumb>			
-					<onclick>Plex.ActivateWindow(10051)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoSearchButton)</visible>
-				</item>
-				<include>Home_Extension_Menu</include>
-			</content>
+<!-- ########## NAVIGATION (VERTICAL) ########## -->
+<include name="Navigation_Vertical">
+	<!-- Menu Items -->
+	<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_9Items</include>
+	<include condition="Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_7Items</include>
+	<include condition="Skin.HasSetting(HomeExtendedMore)">Home_5Items</include>
+	<viewtype>list</viewtype>
+	<orientation>vertical</orientation>
+	<movement>0</movement>
+	<include>Animation_Bartowski_ZoomOutZoomIn</include>
+	<itemlayout width="700" height="64">
+		<control type="label">
+			<posy>-10</posy>
+			<width>700</width>
+			<height>64</height>
+			<font>Font_Bartowski_MainMenu</font>
+			<textcolor>50b8b7b7</textcolor>
+			<info>ListItem.Label</info>
+			<!--<label>ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</label>-->
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+		<control type="label">
+			<posy>-6</posy>
+			<width>700</width>
+			<height>64</height>
+			<font>AeonFont_MainMenu</font>
+			<textcolor>50b8b7b7</textcolor>
+			<info>ListItem.Label</info>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+	</itemlayout>
+	<focusedlayout width="670" height="92">
+		<control type="label">
+			<posy>-10</posy>
+			<width>670</width>
+			<height>92</height>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>ffffffff</textcolor>
+			<font>Font_Bartowski_MainMenu_Focus</font>
+			<shadowcolor>black</shadowcolor>
+			<info>ListItem.Label</info>
+			<!--<label>A12345678901234567890</label>-->
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+		<control type="label">
+			<posy>-10</posy>
+			<width>670</width>
+			<height>92</height>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>ffffffff</textcolor>
+			<font>AeonFont_MainMenu_Focus</font>
+			<shadowcolor>black</shadowcolor>
+			<info>ListItem.Label</info>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+	</focusedlayout>
 </include>
 
+<!-- ########## NAVIGATION (HORIZONTAL) ########## -->
+<include name="Navigation_Horizontal_Header">
+	<control type="group">
+		<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Home_Horizontal_Bottom</include>
+		<posy>320</posy>
 
-<include name="Sub_Menu">
-			<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
-			<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_9Items</include>
-			<include condition="Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_7Items</include>
-			<include condition="Skin.HasSetting(HomeExtendedMore)">Home_5Items</include>
-				<description>Home Secondary Menu</description>
-				<onup>1300</onup>
-				<ondown>1300</ondown>
-				<onleft>Dialog.Close(4998)</onleft>
-				<onright>Dialog.Close(4998)</onright>
-				<viewtype>list</viewtype>
-	                        <orientation>vertical</orientation>
-	                        <movement>0</movement>
-	                        <scrolltime>300</scrolltime>
-	                        <include>Animation_Bartowski_ZoomOutZoomIn</include>
-	                        <visible>!Skin.HasSetting(horizontal_home)</visible>
-				<itemlayout width="600" height="61">
-					<control type="label">
-	                                        <width>500</width>
-						<height>61</height>
-		                                <posx>150</posx>
-	                                        <posy>91</posy>
-	                                        <font>Font_Bartowski_MainMenu</font>
-	                                        <textcolor>50b8b7b7</textcolor>
-	                                        <info>ListItem.Label</info>
-	                                        <visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-	                                </control>
-	                                <control type="label">
-	                                        <width>500</width>
-	                                        <height>61</height>
-	                                        <posx>150</posx>
-	                                        <posy>91</posy>
-	                                        <font>AeonFont_MainMenu</font>
-	                                        <textcolor>48b8b7b7</textcolor>
-	                                        <info>ListItem.Label</info>
-	                                        <visible>Skin.HasSetting(AeonHomeMenu)</visible>
-	                                </control>
-	                        </itemlayout>
-				<focusedlayout width="741" height="121">
-	                                <control type="label">
-	                                        <include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-	                                        <textcolor>ffffffff</textcolor>
-	                                        <width>741</width>
-	                                        <height>121</height>
-	                                        <posx>150</posx>
-	                                        <posy>95</posy>
-	                                        <font>Font_Bartowski_MainMenu_Focus</font>
-	                                        <shadowcolor>black</shadowcolor>
-	                                        <info>ListItem.Label</info>
-	                                        <visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-	                                </control>
-	                                <control type="label">
-	                                        <include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-	                                        <textcolor>ffffffff</textcolor>
-	                                        <width>741</width>
-	                                        <height>121</height>
-	                                        <posx>150</posx>
-	                                        <posy>97</posy>
-	                                        <font>AeonFont_MainMenu_Focus</font>
-	                                        <shadowcolor>black</shadowcolor>
-	                                        <info>ListItem.Label</info>
-	                                        <visible>Skin.HasSetting(AeonHomeMenu)</visible>
-	                                </control>
-	                        </focusedlayout>
-				<!-- additional menu items -->
-				<content>
-					<item id="20">
-						<description>Preferences</description>
-						<label>$LOCALIZE[31595]</label>
-						<onclick>Dialog.Close(4998)</onclick>
-						<onclick>XBMC.ActivateWindow(settings)</onclick>
-					</item>
-					<item id="21">
-						<description>Skin Settings</description>
-						<label>$LOCALIZE[31596]</label>
-						<onclick>Dialog.Close(4998)</onclick>
-						<onclick>XBMC.ActivateWindow(1111)</onclick>
-						<visible>!Skin.HasSetting(Hide_SkinSettings)</visible>
-					</item>
-					<item id="22">
-        	                              	<description>Update and Restart</description>
- 	                                      	<label>[COLOR darkred]$LOCALIZE[31563][/COLOR]</label>
-	                                     	<onclick>Plex.UpdateAndRestart</onclick>
-	                                     	<visible>System.UpdateIsAvailable</visible>
-                                	</item>
-					<item id="23">
-                                        	<description>Search</description>
-	                                        <label>$LOCALIZE[137]</label>
-						<onclick>Dialog.Close(4998)</onclick>
-	                                        <onclick>Plex.ActivateWindow(10051)</onclick>
-						<visible>Skin.HasSetting(HomeMenuNoSearchButton)</visible>
-					</item>
-					<item id="24">
-						<description>Channel Directory</description>
-						<label>$LOCALIZE[31539]</label>
-						<onclick>Dialog.Close(4998)</onclick>
-						<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
-						<visible>!Skin.HasSetting(Hide_ChannelDirectory)</visible>
-					</item>
-					<item id="25">
-						<description>Quit</description>
-						<label>$LOCALIZE[31560]</label>
-						<onclick>Dialog.Close(4998)</onclick>
-						<onclick>Plex.Quit</onclick>
-						<visible>!Skin.HasSetting(Hide_Quit)</visible>
-					</item>
-					<item id="26">
-						<description>Sleep</description>
-						<label>$LOCALIZE[31561]</label>
-						<onclick>Dialog.Close(4998)</onclick>
-						<onclick>Plex.Suspend</onclick>
-						<visible>!Skin.HasSetting(Hide_Sleep)</visible>
-					</item>
-					<item id="27">
-						<description>Reboot</description>
-						<label>Reboot</label>
-						<onclick>Dialog.Close(4998)</onclick>
-						<onclick>Plex.Reboot</onclick>
-						<visible>!Skin.HasSetting(Hide_Reboot)</visible>
-					</item>
-					<item id="28">
-						<description>Shut Down</description>
-						<label>$LOCALIZE[31562]</label>
-						<onclick>Dialog.Close(4998)</onclick>
-						<onclick>Plex.Powerdown</onclick>
-						<visible>!Skin.HasSetting(Hide_Shutdown)</visible>
-					</item>
-				</content>
+		<!-- Background -->
+		<control type="image">
+			<posx>-10</posx>
+			<width>1300</width>
+                        <height>65</height>
+                        <texture border="6">base-rounded.png</texture>
+                        <colordiffuse>DD000000</colordiffuse>
+			<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Animation_Preplay_Down</include>
+			<include condition="!Skin.HasSetting(Home_Horizontal_Bottom)">Animation_CommonFade_600</include>
+                </control>
+
+		<!-- Separator -->
+		<control type="image">
+			<posx>0</posx>
+			<width>1280</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<align>center</align>
+			<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Animation_Preplay_Down</include>
+			<include condition="!Skin.HasSetting(Home_Horizontal_Bottom)">Animation_Preplay_Up</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>65</posy>
+			<width>1280</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<align>center</align>
+			<include>Animation_Preplay_Down</include>
+		</control>
+	</control>
 </include>
 
-
-
-<include name="Shared_Menu">
-					<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_9Items</include>
-					<include condition="Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_7Items</include>
-					<include condition="Skin.HasSetting(HomeExtendedMore)">Home_5Items</include>
-					<scrolltime>300</scrolltime>
-					<pagecontrol>61</pagecontrol>
-					<viewtype>list</viewtype>
-					<onleft>ReplaceWindow(home)</onleft>
-					<onup>-</onup>
-					<ondown>-</ondown>
-					<wraparound>true</wraparound>
-					<orientation>vertical</orientation>
-					<movement>0</movement>
-                                        <scrolltime>300</scrolltime>
-		                        <include>Animation_Bartowski_ZoomOutZoomIn</include>
-					<itemlayout height="61" width="600">
-						<control type="label">
-							<posx>150</posx>
-                		                        <posy>91</posy>
-							<height>61</height>
-							<width>500</width>
-							<label>$INFO[ListItem.Label]</label>
-							<font>Font_Bartowski_MainMenu</font>
-							<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-		                                        <textcolor>50b8b7b7</textcolor>
-                                                        <visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-						</control>
-						<control type="label">
-							<posx>150</posx>
-                		                        <posy>91</posy>
-							<height>61</height>
-							<width>500</width>
-							<label>$INFO[ListItem.Label]</label>
-							<font>AeonFont_MainMenu</font>
-							<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-		                                        <textcolor>50b8b7b7</textcolor>
-                                                        <visible>Skin.HasSetting(AeonHomeMenu)</visible>
-						</control>
-					</itemlayout>
-					<focusedlayout width="741" height="121">
-						<control type="label">
-							<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-							<textcolor>ffffffff</textcolor>
-	                                	        <width>741</width>
-							<height>341</height>
-		                                        <posx>150</posx>
-		                                        <posy>95</posy>
-		                                        <font>Font_Bartowski_MainMenu_Focus</font>
-		                                        <shadowcolor>black</shadowcolor>
-		                                        <label>$INFO[ListItem.label]</label>
-		                                        <animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-                                                        <visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-                                		</control>
-						<control type="label">
-							<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-							<textcolor>ffffffff</textcolor>
-	                                	        <width>741</width>
-							<height>341</height>
-		                                        <posx>150</posx>
-		                                        <posy>95</posy>
-		                                        <font>AeonFont_MainMenu_Focus</font>
-		                                        <shadowcolor>black</shadowcolor>
-		                                        <label>$INFO[ListItem.label]</label>
-		                                        <animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-                                                        <visible>Skin.HasSetting(AeonHomeMenu)</visible>
-                                		</control>
-					</focusedlayout>
+<include name="Navigation_Horizontal">
+	<posx>-195</posx>
+	<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Home_Horizontal_Bottom</include>
+	<posy>320</posy>
+	<height>65</height>
+	<width>1700</width>
+	<viewtype>list</viewtype>
+	<orientation>horizontal</orientation>
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<focusposition>2</focusposition>
+	<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Animation_Preplay_Down</include>
+	<include condition="!Skin.HasSetting(Home_Horizontal_Bottom)">Animation_CommonFade_600</include>
+	<itemlayout width="420" height="70">
+		<control type="label">
+			<width>410</width>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<textcolor>FFAAAAAA</textcolor>
+			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
+			<info>ListItem.Label</info>
+			<align>center</align>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+		<control type="label">
+			<width>410</width>
+			<font>AeonFont_MainMenu</font>
+			<textcolor>FFAAAAAA</textcolor>
+			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
+			<info>ListItem.Label</info>
+			<align>center</align>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+	</itemlayout>
+	<focusedlayout width="420" height="70">
+		<control type="label">
+			<width>400</width>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>FFFFFFFF</textcolor>
+			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
+			<info>ListItem.Label</info>
+			<align>center</align>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+		<control type="label">
+			<width>410</width>
+			<font>AeonFont_MainMenu</font>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>FFFFFFFF</textcolor>
+			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
+			<info>ListItem.Label</info>
+			<align>center</align>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+	</focusedlayout>
 </include>
 
-
-<include name="Channel_Menu">
-					<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_9Items</include>
-					<include condition="Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_7Items</include>
-					<include condition="Skin.HasSetting(HomeExtendedMore)">Home_5Items</include>
-                                        <scrolltime>300</scrolltime>
-                                        <pagecontrol>61</pagecontrol>
-                                        <onright>9009</onright>
-                                        <viewtype>list</viewtype>
-					<onleft>ReplaceWindow(home)</onleft>
-                                        <onup>-</onup>
-                                        <ondown>-</ondown>
-                                        <wraparound>true</wraparound>
-                                        <orientation>vertical</orientation>
-					<movement>0</movement>
-					<scrolltime>300</scrolltime>
-                                        <include>Animation_Bartowski_ZoomOutZoomIn</include>
-					<itemlayout condition="Container.content(channels)" width="600" height="61">
-						<control type="label">
-                                                        <posx>150</posx>
-                                                        <posy>91</posy>
-                                                        <height>61</height>
-                                                        <width>500</width>
-                                                        <label>$INFO[ListItem.Label]</label>
-                                                        <font>Font_Bartowski_MainMenu</font>
-                                                        <animation effect="slide" end="-600,0" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-                                                        <textcolor>50b8b7b7</textcolor>
-							<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-						</control>
-						<control type="label">
-                                                        <posx>150</posx>
-                                                        <posy>91</posy>
-                                                        <height>61</height>
-                                                        <width>500</width>
-                                                        <label>$INFO[ListItem.Label]</label>
-                                                        <font>AeonFont_MainMenu</font>
-                                                        <animation effect="slide" end="-600,0" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-                                                        <textcolor>50b8b7b7</textcolor>
-							<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-						</control>
-					</itemlayout>
-					<focusedlayout condition="Container.content(channels)" width="741" height="121">
-                                                <control type="label">
-							<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-							<textcolor>ffffffff</textcolor>
-                                                        <width>741</width>
-                                                        <height>341</height>
-                                                        <posx>150</posx>
-                                                        <posy>95</posy>
-                                                        <font>Font_Bartowski_MainMenu_Focus</font>
-                                                        <shadowcolor>black</shadowcolor>
-                                                        <label>$INFO[ListItem.label]</label>
-                                                        <animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-							<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-                                                </control>
-                                                <control type="label">
-							<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-							<textcolor>ffffffff</textcolor>
-                                                        <width>741</width>
-                                                        <height>341</height>
-                                                        <posx>150</posx>
-                                                        <posy>95</posy>
-                                                        <font>AeonFont_MainMenu_Focus</font>
-                                                        <shadowcolor>black</shadowcolor>
-                                                        <label>$INFO[ListItem.label]</label>
-                                                        <animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
-							<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-                                                </control>
-                                        </focusedlayout>
+<!-- ########## NAVIGATION (PANEL) ########## -->
+<include name="Navigation_Panel_Header">
+	<!-- Background -->
+	<control type="largeimage">
+		<description>background image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture border="40">osd/videoOSD_settings_back1.png</texture>
+		<animation effect="fade" start="0" end="60" time="600">WindowOpen</animation>
+		<animation effect="fade" start="60" end="0" time="600">WindowClose</animation>
+	</control>
 </include>
 
+<include name="Navigation_Panel">
+	<posy>130</posy>
+	<posx>0</posx>
+	<height>460</height>
+	<width>1280</width>
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<focusposition>0</focusposition>
+	<include>Animation_CommonFade_600</include>
+	<itemlayout width="400" height="100">
+		<control type="label">
+			<posx>240</posx>
+			<width>400</width>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<textcolor>FFAAAAAA</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
+			<align>center</align>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+		<control type="label">
+			<posx>240</posx>
+			<width>400</width>
+			<font>AeonFont_MainMenu</font>
+			<textcolor>FFAAAAAA</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+	</itemlayout>
+	<focusedlayout width="400" height="100">
+		<control type="label">
+			<posx>240</posx>
+			<width>400</width>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>FFFFFFFF</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
+			<align>center</align>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+		<control type="label">
+			<posx>240</posx>
+			<width>400</width>
+			<font>AeonFont_MainMenu</font>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>FFFFFFFF</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>			
+	</focusedlayout>
+</include>
+
+<include name="Home_Horizontal_Bottom">
+	<posy>600</posy>
+</include>
 
 </includes>
 

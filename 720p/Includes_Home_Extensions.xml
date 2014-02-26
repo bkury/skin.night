@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Sun Jan 26 21:53:52 CET 2014 -->
+<!-- Wed Feb 26 07:33:39 CET 2014 -->
 <includes>
 
 <!-- Home Menu Extension -->
@@ -86,137 +86,33 @@
 
 <!-- Deck Extensions -->
 <include name="Home_Extension_Deck">
+	<!-- Youtube -->
 	<control type="group">
-		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
 		<visible>Container(300).HasFocus(20)</visible>
-
-		<!-- Youtube -->
+		<include>Animation_CommonFade_600</include>
+  
 		<control type="group">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1050</width>
-			<height>720</height>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-			<visible>Container(300).HasFocus(20)</visible>
-
-			<!-- Placeholder Background -->
-                        <control type="group">
-                                <posy>280</posy>
-                                <include>deck_placeholder</include>
+			<control type="group">
 				<visible>!isEmpty(Container(8850).ListItem(0).Label)</visible>
-                        </control>
-
-			<control type="label">
-				<posx>580</posx>
-				<posy>250</posy>
-				<font>MediumSmallTitleFont2</font>
-				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Label]</label>
-				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+				<include>Deck_Placeholder</include>
 			</control>
 
-			<!-- Content -->
+			<control type="label">
+				<include>Deck_Name</include>
+				<label>Youtube</label>
+			</control>
+
 			<control type="fixedlist" id="8850">
-				<visible allowhiddenfocus="false">true</visible>
-				<orientation>horizontal</orientation>
-				<onup>300</onup>
-				<ondown>300</ondown>
-				<onright>-</onright>
-				<onleft>300</onleft>
-				<posx>-14</posx>
-				<posy>240</posy>
-				<width>1030</width>
-				<height>400</height>
-				<itemlayout width="140" height="230">
-					<!-- Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/20_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFCCCCCC</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</itemlayout>
-				<focusedlayout width="160" height="250">
-					<!--  Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/20_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Frame -->
-					<control type="image">
-						<posx>34</posx>
-						<posy>36</posy>
-						<width>122</width>
-						<height>176</height>
-						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFFFFFFF</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</focusedlayout>
+				<onup condition="!Skin.HasSetting(Home_Horizontal)">300</onup>
+				<ondown condition="!Skin.HasSetting(Home_Horizontal)">300</ondown>
+				<include>Deck_Content</include>
 				<content>
+
 				<item id="1">
 					<description>My Account</description>
 					<label>My Account</label>
+					<icon>extensions/20_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/MyAccount?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTAKTXkgQWNjb3VudHM1CnRpdGxlcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_myaccount)</visible>
 				</item>
@@ -224,6 +120,8 @@
 				<item id="2">
 					<description>Videos</description>
 					<label>Videos</label>
+					<icon>extensions/20_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/VideosMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNgpWaWRlb3NzNQp0aXRsZXIwCg__,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_videos)</visible>
 				</item>
@@ -231,6 +129,8 @@
 				<item id="3">
 					<description>Channels</description>
 					<label>Channels</label>
+					<icon>extensions/20_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/ChannelsMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzOApDaGFubmVsc3M1CnRpdGxlcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_channels)</visible>
 				</item>
@@ -238,171 +138,56 @@
 				<item id="4">
 					<description>Live</description>
 					<label>Live</label>
+					<icon>extensions/20_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/LiveMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNApMaXZlczUKdGl0bGVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_live)</visible>
 				</item>
 
 				</content>
-				</control>
-				<!-- Stuff -->
-				<control type="group">
-					<visible>ControlGroup(5000).HasFocus</visible>
-					<!-- Selector -->
-					<control type="image">
-						<posy>269</posy>
-						<posx>-2</posx>
-						<texture background="true">newlistselector.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-					</control>
-					<!-- Big Title -->
-					<control type="label">
-						<posx>10</posx>
-						<posy>470</posy>
-						<align>left</align>
-						<label>$INFO[Container(8850).ListItem(0).Label]</label>
-						<font>Font_Bartowski_MainMenu</font>
-						<scroll>false</scroll>
-						<textcolor>mainblue</textcolor>
-						<wrapmultiline>false</wrapmultiline>
-						<width min="1" max="780">auto</width>
-					</control>
-				</control>
 			</control>
+  
+			<control type="group">
+				<visible>Control.hasFocus(8850)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Focus</include>
+			</control>
+
 		</control>
-
-	<control type="group">
-		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-		<visible>Container(300).HasFocus(21)</visible>
-
-		<!-- Vimeo -->
 		<control type="group">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1050</width>
-			<height>720</height>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-			<visible>Container(300).HasFocus(21)</visible>
-
-			<!-- Placeholder Background -->
-                        <control type="group">
-                                <posy>280</posy>
-                                <include>deck_placeholder</include>
+			<visible>Control.HasFocus(8850)</visible>
+			<include>Animation_CommonFade_600</include>
+			<include>Deck_Information_Position</include>
+			<include>Deck_Information</include>
+		</control>
+	</control>
+	<!-- Vimeo -->
+	<control type="group">
+		<visible>Container(300).HasFocus(21)</visible>
+		<include>Animation_CommonFade_600</include>
+  
+		<control type="group">
+			<control type="group">
 				<visible>!isEmpty(Container(8851).ListItem(0).Label)</visible>
-                        </control>
+				<include>Deck_Placeholder</include>
+			</control>
 
 			<control type="label">
-				<posx>580</posx>
-				<posy>250</posy>
-				<font>MediumSmallTitleFont2</font>
-				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Label]</label>
-				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+				<include>Deck_Name</include>
+				<label>Vimeo</label>
 			</control>
 
-			<!-- Content -->
 			<control type="fixedlist" id="8851">
-				<visible allowhiddenfocus="false">true</visible>
-				<orientation>horizontal</orientation>
-				<onup>300</onup>
-				<ondown>300</ondown>
-				<onright>-</onright>
-				<onleft>300</onleft>
-				<posx>-14</posx>
-				<posy>240</posy>
-				<width>1030</width>
-				<height>400</height>
-				<itemlayout width="140" height="230">
-					<!-- Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/21_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFCCCCCC</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</itemlayout>
-				<focusedlayout width="160" height="250">
-					<!--  Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/21_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Frame -->
-					<control type="image">
-						<posx>34</posx>
-						<posy>36</posy>
-						<width>122</width>
-						<height>176</height>
-						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFFFFFFF</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</focusedlayout>
+				<onup condition="!Skin.HasSetting(Home_Horizontal)">300</onup>
+				<ondown condition="!Skin.HasSetting(Home_Horizontal)">300</ondown>
+				<include>Deck_Content</include>
 				<content>
+
 				<item id="1">
 					<description>My Stuff</description>
 					<label>My Stuff</label>
+					<icon>extensions/21_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/my_stuff?title=My+Stuff,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_mystuff)</visible>
 				</item>
@@ -410,6 +195,8 @@
 				<item id="2">
 					<description>Staff Picks</description>
 					<label>Staff Picks</label>
+					<icon>extensions/21_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fstaffpicks%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=Staff+Picks,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_staff)</visible>
 				</item>
@@ -417,6 +204,8 @@
 				<item id="3">
 					<description>HD</description>
 					<label>HD</label>
+					<icon>extensions/21_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fhd%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=HD,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_hd)</visible>
 				</item>
@@ -424,6 +213,8 @@
 				<item id="4">
 					<description>Featured Channels</description>
 					<label>Featured Channels</label>
+					<icon>extensions/21_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/directory?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fpage%3A%25d%2Fsort%3Asubscribers&amp;title=Featured+Channels,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_featured)</visible>
 				</item>
@@ -431,6 +222,8 @@
 				<item id="5">
 					<description>Channels</description>
 					<label>Channels</label>
+					<icon>extensions/21_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/channels/categories?title=Channels,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_channels)</visible>
 				</item>
@@ -438,171 +231,56 @@
 				<item id="6">
 					<description>Groups</description>
 					<label>Groups</label>
+					<icon>extensions/21_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/groups/categories?title=Groups,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_groups)</visible>
 				</item>
 
 				</content>
-				</control>
-				<!-- Stuff -->
-				<control type="group">
-					<visible>ControlGroup(5000).HasFocus</visible>
-					<!-- Selector -->
-					<control type="image">
-						<posy>269</posy>
-						<posx>-2</posx>
-						<texture background="true">newlistselector.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-					</control>
-					<!-- Big Title -->
-					<control type="label">
-						<posx>10</posx>
-						<posy>470</posy>
-						<align>left</align>
-						<label>$INFO[Container(8851).ListItem(0).Label]</label>
-						<font>Font_Bartowski_MainMenu</font>
-						<scroll>false</scroll>
-						<textcolor>mainblue</textcolor>
-						<wrapmultiline>false</wrapmultiline>
-						<width min="1" max="780">auto</width>
-					</control>
-				</control>
 			</control>
+  
+			<control type="group">
+				<visible>Control.hasFocus(8851)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Focus</include>
+			</control>
+
 		</control>
-
-	<control type="group">
-		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-		<visible>Container(300).HasFocus(22)</visible>
-
-		<!-- AppleTrailers -->
 		<control type="group">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1050</width>
-			<height>720</height>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-			<visible>Container(300).HasFocus(22)</visible>
-
-			<!-- Placeholder Background -->
-                        <control type="group">
-                                <posy>280</posy>
-                                <include>deck_placeholder</include>
+			<visible>Control.HasFocus(8851)</visible>
+			<include>Animation_CommonFade_600</include>
+			<include>Deck_Information_Position</include>
+			<include>Deck_Information</include>
+		</control>
+	</control>
+	<!-- AppleTrailers -->
+	<control type="group">
+		<visible>Container(300).HasFocus(22)</visible>
+		<include>Animation_CommonFade_600</include>
+  
+		<control type="group">
+			<control type="group">
 				<visible>!isEmpty(Container(8852).ListItem(0).Label)</visible>
-                        </control>
+				<include>Deck_Placeholder</include>
+			</control>
 
 			<control type="label">
-				<posx>580</posx>
-				<posy>250</posy>
-				<font>MediumSmallTitleFont2</font>
-				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Label]</label>
-				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+				<include>Deck_Name</include>
+				<label>AppleTrailers</label>
 			</control>
 
-			<!-- Content -->
 			<control type="fixedlist" id="8852">
-				<visible allowhiddenfocus="false">true</visible>
-				<orientation>horizontal</orientation>
-				<onup>300</onup>
-				<ondown>300</ondown>
-				<onright>-</onright>
-				<onleft>300</onleft>
-				<posx>-14</posx>
-				<posy>240</posy>
-				<width>1030</width>
-				<height>400</height>
-				<itemlayout width="140" height="230">
-					<!-- Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/22_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFCCCCCC</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</itemlayout>
-				<focusedlayout width="160" height="250">
-					<!--  Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/22_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Frame -->
-					<control type="image">
-						<posx>34</posx>
-						<posy>36</posy>
-						<width>122</width>
-						<height>176</height>
-						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFFFFFFF</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</focusedlayout>
+				<onup condition="!Skin.HasSetting(Home_Horizontal)">300</onup>
+				<ondown condition="!Skin.HasSetting(Home_Horizontal)">300</ondown>
+				<include>Deck_Content</include>
 				<content>
+
 				<item id="1">
 					<description>Just Added</description>
 					<label>Just Added</label>
+					<icon>extensions/22_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/just_added,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_added)</visible>
 				</item>
@@ -610,6 +288,8 @@
 				<item id="2">
 					<description>Most Popular</description>
 					<label>Most Popular</label>
+					<icon>extensions/22_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/most_pop,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_popular)</visible>
 				</item>
@@ -617,6 +297,8 @@
 				<item id="3">
 					<description>Exclusive</description>
 					<label>Exclusive</label>
+					<icon>extensions/22_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/exclusive,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_exclusive)</visible>
 				</item>
@@ -624,6 +306,8 @@
 				<item id="4">
 					<description>Genres</description>
 					<label>Genres</label>
+					<icon>extensions/22_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/genres,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_genres)</visible>
 				</item>
@@ -631,171 +315,56 @@
 				<item id="5">
 					<description>Movie Studios</description>
 					<label>Movie Studios</label>
+					<icon>extensions/22_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/studios,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_studios)</visible>
 				</item>
 
 				</content>
-				</control>
-				<!-- Stuff -->
-				<control type="group">
-					<visible>ControlGroup(5000).HasFocus</visible>
-					<!-- Selector -->
-					<control type="image">
-						<posy>269</posy>
-						<posx>-2</posx>
-						<texture background="true">newlistselector.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-					</control>
-					<!-- Big Title -->
-					<control type="label">
-						<posx>10</posx>
-						<posy>470</posy>
-						<align>left</align>
-						<label>$INFO[Container(8852).ListItem(0).Label]</label>
-						<font>Font_Bartowski_MainMenu</font>
-						<scroll>false</scroll>
-						<textcolor>mainblue</textcolor>
-						<wrapmultiline>false</wrapmultiline>
-						<width min="1" max="780">auto</width>
-					</control>
-				</control>
 			</control>
+  
+			<control type="group">
+				<visible>Control.hasFocus(8852)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Focus</include>
+			</control>
+
 		</control>
-
-	<control type="group">
-		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-		<visible>Container(300).HasFocus(23)</visible>
-
-		<!-- Shoutcast -->
 		<control type="group">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1050</width>
-			<height>720</height>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-			<visible>Container(300).HasFocus(23)</visible>
-
-			<!-- Placeholder Background -->
-                        <control type="group">
-                                <posy>280</posy>
-                                <include>deck_placeholder</include>
+			<visible>Control.HasFocus(8852)</visible>
+			<include>Animation_CommonFade_600</include>
+			<include>Deck_Information_Position</include>
+			<include>Deck_Information</include>
+		</control>
+	</control>
+	<!-- Shoutcast -->
+	<control type="group">
+		<visible>Container(300).HasFocus(23)</visible>
+		<include>Animation_CommonFade_600</include>
+  
+		<control type="group">
+			<control type="group">
 				<visible>!isEmpty(Container(8853).ListItem(0).Label)</visible>
-                        </control>
+				<include>Deck_Placeholder</include>
+			</control>
 
 			<control type="label">
-				<posx>580</posx>
-				<posy>250</posy>
-				<font>MediumSmallTitleFont2</font>
-				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Label]</label>
-				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+				<include>Deck_Name</include>
+				<label>Shoutcast</label>
 			</control>
 
-			<!-- Content -->
 			<control type="fixedlist" id="8853">
-				<visible allowhiddenfocus="false">true</visible>
-				<orientation>horizontal</orientation>
-				<onup>300</onup>
-				<ondown>300</ondown>
-				<onright>-</onright>
-				<onleft>300</onleft>
-				<posx>-14</posx>
-				<posy>240</posy>
-				<width>1030</width>
-				<height>400</height>
-				<itemlayout width="140" height="230">
-					<!-- Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/23_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFCCCCCC</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</itemlayout>
-				<focusedlayout width="160" height="250">
-					<!--  Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/23_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Frame -->
-					<control type="image">
-						<posx>34</posx>
-						<posy>36</posy>
-						<width>122</width>
-						<height>176</height>
-						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFFFFFFF</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</focusedlayout>
+				<onup condition="!Skin.HasSetting(Home_Horizontal)">300</onup>
+				<ondown condition="!Skin.HasSetting(Home_Horizontal)">300</ondown>
+				<include>Deck_Content</include>
 				<content>
+
 				<item id="1">
 					<description>Genres</description>
 					<label>Genres</label>
+					<icon>extensions/23_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genres,return)</onclick>
 					<visible>Skin.HasSetting(Home_23_genres)</visible>
 				</item>
@@ -803,171 +372,56 @@
 				<item id="2">
 					<description>TOP 500</description>
 					<label>TOP 500</label>
+					<icon>extensions/23_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genre?query=%2A%2Aignore%2A%2A&amp;queryParamName=http%3A%2F%2Fapi.shoutcast.com%2Flegacy%2FTop500%3F%25sk%3Dsh1t7hyn3Kh0jhlV&amp;title=Top+500+Stations,return)</onclick>
 					<visible>Skin.HasSetting(Home_23_top)</visible>
 				</item>
 
 				</content>
-				</control>
-				<!-- Stuff -->
-				<control type="group">
-					<visible>ControlGroup(5000).HasFocus</visible>
-					<!-- Selector -->
-					<control type="image">
-						<posy>269</posy>
-						<posx>-2</posx>
-						<texture background="true">newlistselector.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-					</control>
-					<!-- Big Title -->
-					<control type="label">
-						<posx>10</posx>
-						<posy>470</posy>
-						<align>left</align>
-						<label>$INFO[Container(8853).ListItem(0).Label]</label>
-						<font>Font_Bartowski_MainMenu</font>
-						<scroll>false</scroll>
-						<textcolor>mainblue</textcolor>
-						<wrapmultiline>false</wrapmultiline>
-						<width min="1" max="780">auto</width>
-					</control>
-				</control>
 			</control>
+  
+			<control type="group">
+				<visible>Control.hasFocus(8853)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Focus</include>
+			</control>
+
 		</control>
-
-	<control type="group">
-		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-		<visible>Container(300).HasFocus(24)</visible>
-
-		<!-- Revision3 -->
 		<control type="group">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1050</width>
-			<height>720</height>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-			<visible>Container(300).HasFocus(24)</visible>
-
-			<!-- Placeholder Background -->
-                        <control type="group">
-                                <posy>280</posy>
-                                <include>deck_placeholder</include>
+			<visible>Control.HasFocus(8853)</visible>
+			<include>Animation_CommonFade_600</include>
+			<include>Deck_Information_Position</include>
+			<include>Deck_Information</include>
+		</control>
+	</control>
+	<!-- Revision3 -->
+	<control type="group">
+		<visible>Container(300).HasFocus(24)</visible>
+		<include>Animation_CommonFade_600</include>
+  
+		<control type="group">
+			<control type="group">
 				<visible>!isEmpty(Container(8854).ListItem(0).Label)</visible>
-                        </control>
+				<include>Deck_Placeholder</include>
+			</control>
 
 			<control type="label">
-				<posx>580</posx>
-				<posy>250</posy>
-				<font>MediumSmallTitleFont2</font>
-				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Label]</label>
-				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+				<include>Deck_Name</include>
+				<label>Revision3</label>
 			</control>
 
-			<!-- Content -->
 			<control type="fixedlist" id="8854">
-				<visible allowhiddenfocus="false">true</visible>
-				<orientation>horizontal</orientation>
-				<onup>300</onup>
-				<ondown>300</ondown>
-				<onright>-</onright>
-				<onleft>300</onleft>
-				<posx>-14</posx>
-				<posy>240</posy>
-				<width>1030</width>
-				<height>400</height>
-				<itemlayout width="140" height="230">
-					<!-- Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/24_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFCCCCCC</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</itemlayout>
-				<focusedlayout width="160" height="250">
-					<!--  Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/24_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Frame -->
-					<control type="image">
-						<posx>34</posx>
-						<posy>36</posy>
-						<width>122</width>
-						<height>176</height>
-						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFFFFFFF</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</focusedlayout>
+				<onup condition="!Skin.HasSetting(Home_Horizontal)">300</onup>
+				<ondown condition="!Skin.HasSetting(Home_Horizontal)">300</ondown>
+				<include>Deck_Content</include>
 				<content>
+
 				<item id="1">
 					<description>Recently Released</description>
 					<label>Recently Released</label>
+					<icon>extensions/24_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=latest&amp;title=Recently+Released,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_recently)</visible>
 				</item>
@@ -975,6 +429,8 @@
 				<item id="2">
 					<description>Featured</description>
 					<label>Featured</label>
+					<icon>extensions/24_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=featured&amp;title=Featured,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_featured)</visible>
 				</item>
@@ -982,6 +438,8 @@
 				<item id="3">
 					<description>Featured Shows</description>
 					<label>Featured Shows</label>
+					<icon>extensions/24_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=current&amp;title=Featured+Shows,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_featuredshows)</visible>
 				</item>
@@ -989,171 +447,56 @@
 				<item id="4">
 					<description>Archived Shows</description>
 					<label>Archived Shows</label>
+					<icon>extensions/24_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=archived&amp;title=Archived+Shows,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_archivedshows)</visible>
 				</item>
 
 				</content>
-				</control>
-				<!-- Stuff -->
-				<control type="group">
-					<visible>ControlGroup(5000).HasFocus</visible>
-					<!-- Selector -->
-					<control type="image">
-						<posy>269</posy>
-						<posx>-2</posx>
-						<texture background="true">newlistselector.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-					</control>
-					<!-- Big Title -->
-					<control type="label">
-						<posx>10</posx>
-						<posy>470</posy>
-						<align>left</align>
-						<label>$INFO[Container(8854).ListItem(0).Label]</label>
-						<font>Font_Bartowski_MainMenu</font>
-						<scroll>false</scroll>
-						<textcolor>mainblue</textcolor>
-						<wrapmultiline>false</wrapmultiline>
-						<width min="1" max="780">auto</width>
-					</control>
-				</control>
 			</control>
+  
+			<control type="group">
+				<visible>Control.hasFocus(8854)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Focus</include>
+			</control>
+
 		</control>
-
-	<control type="group">
-		<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-		<visible>Container(300).HasFocus(25)</visible>
-
-		<!-- LetMeWatchThis -->
 		<control type="group">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1050</width>
-			<height>720</height>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-			<visible>Container(300).HasFocus(25)</visible>
-
-			<!-- Placeholder Background -->
-                        <control type="group">
-                                <posy>280</posy>
-                                <include>deck_placeholder</include>
+			<visible>Control.HasFocus(8854)</visible>
+			<include>Animation_CommonFade_600</include>
+			<include>Deck_Information_Position</include>
+			<include>Deck_Information</include>
+		</control>
+	</control>
+	<!-- LetMeWatchThis -->
+	<control type="group">
+		<visible>Container(300).HasFocus(25)</visible>
+		<include>Animation_CommonFade_600</include>
+  
+		<control type="group">
+			<control type="group">
 				<visible>!isEmpty(Container(8855).ListItem(0).Label)</visible>
-                        </control>
+				<include>Deck_Placeholder</include>
+			</control>
 
 			<control type="label">
-				<posx>580</posx>
-				<posy>250</posy>
-				<font>MediumSmallTitleFont2</font>
-				<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
-				<textcolor>ffffffff</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Label]</label>
-				<animation effect="slide" end="420,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
+				<include>Deck_Name</include>
+				<label>LetMeWatchThis</label>
 			</control>
 
-			<!-- Content -->
 			<control type="fixedlist" id="8855">
-				<visible allowhiddenfocus="false">true</visible>
-				<orientation>horizontal</orientation>
-				<onup>300</onup>
-				<ondown>300</ondown>
-				<onright>-</onright>
-				<onleft>300</onleft>
-				<posx>-14</posx>
-				<posy>240</posy>
-				<width>1030</width>
-				<height>400</height>
-				<itemlayout width="140" height="230">
-					<!-- Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/25_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFCCCCCC</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</itemlayout>
-				<focusedlayout width="160" height="250">
-					<!--  Placeholder -->
-					<control type="image">
-						<posx>28</posx>
-						<posy>30</posy>
-						<width>134</width>
-						<height>128</height>
-						<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-						<texture background="true" border="13">posterFrameSmallShadow3.png</texture>
-					</control>
-					<!-- Thumb -->
-					<control type="image">
-						<posx>37</posx>
-						<posy>39</posy>
-						<width>116</width>
-						<height>110</height>
-						<aspectratio scalediffuse="false" align="top">scale</aspectratio>
-						<texture diffuse="episodeMaskSmall.png" background="true">extensions/25_icon.jpg</texture>
-						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-					</control>
-					<!-- Frame -->
-					<control type="image">
-						<posx>34</posx>
-						<posy>36</posy>
-						<width>122</width>
-						<height>176</height>
-						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-						<texture diffuse="posterMaskSmall.png" background="true">frameOrange.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-					</control>
-					<!-- Label -->
-					<control type="label">
-						<posx>95</posx>
-						<posy>155</posy>
-						<width>100</width>
-						<height>30</height>
-						<align>center</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<font>SearchResultSmaller</font>
-						<textcolor>FFFFFFFF</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					</control>
-				</focusedlayout>
+				<onup condition="!Skin.HasSetting(Home_Horizontal)">300</onup>
+				<ondown condition="!Skin.HasSetting(Home_Horizontal)">300</ondown>
+				<include>Deck_Content</include>
 				<content>
+
 				<item id="1">
 					<description>Favourites</description>
 					<label>Favourites</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/FavouritesMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_favourites)</visible>
 				</item>
@@ -1161,6 +504,8 @@
 				<item id="2">
 					<description>Movies</description>
 					<label>Movies</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzNgptb3ZpZXNzNAp0eXBlcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_movies)</visible>
 				</item>
@@ -1168,6 +513,8 @@
 				<item id="3">
 					<description>Movies (Recently)</description>
 					<label>Movies (Recently)</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTQKUmVjZW50bHkgQWRkZWRzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHM2Cm1vdmllc3M0CnR5cGUxCnIyCjMKbnM1CmdlbnJlczYKbW92aWVzczQKdHlwZXM2Ck1vdmllc3M0CmVsZW1yMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_moviesrecently)</visible>
 				</item>
@@ -1175,6 +522,8 @@
 				<item id="4">
 					<description>Movies (Latest)</description>
 					<label>Movies (Latest)</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTUKTGF0ZXN0IFJlbGVhc2VzczEyCnNlY3Rpb25fbmFtZW5zNQpnZW5yZXIxCnM0CnBhdGhzNgptb3ZpZXNzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXM2Cm1vdmllc3M0CnR5cGVzNgpNb3ZpZXNzNAplbGVtcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_movieslatest)</visible>
 				</item>
@@ -1182,6 +531,8 @@
 				<item id="5">
 					<description>TV Shows</description>
 					<label>TV Shows</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzMgp0dnM0CnR5cGVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_tvshows)</visible>
 				</item>
@@ -1189,6 +540,8 @@
 				<item id="6">
 					<description>TV Shows (Recently)</description>
 					<label>TV Shows (Recently)</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNApSZWNlbnRseSBBZGRlZHMxMgpzZWN0aW9uX25hbWVuczUKZ2VucmVyMQpzNApwYXRoczIKdHZzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXMyCnR2czQKdHlwZXM4ClRWIFNob3dzczQKZWxlbXIwCg__,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_tvshowsrecently)</visible>
 				</item>
@@ -1196,6 +549,8 @@
 				<item id="7">
 					<description>TV Shows (Latest)</description>
 					<label>TV Shows (Latest)</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNQpMYXRlc3QgUmVsZWFzZXNzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHMyCnR2czQKdHlwZTEKcjIKMwpuczUKZ2VucmVzMgp0dnM0CnR5cGVzOApUViBTaG93c3M0CmVsZW1yMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_tvshowslatest)</visible>
 				</item>
@@ -1203,40 +558,29 @@
 				<item id="8">
 					<description>Recently Watched</description>
 					<label>Recently Watched</label>
+					<icon>extensions/25_icon.jpg</icon>
+					<property name="Type">Channel</property>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/HistoryMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_recently)</visible>
 				</item>
 
 				</content>
-				</control>
-				<!-- Stuff -->
-				<control type="group">
-					<visible>ControlGroup(5000).HasFocus</visible>
-					<!-- Selector -->
-					<control type="image">
-						<posy>269</posy>
-						<posx>-2</posx>
-						<texture background="true">newlistselector.png</texture>
-						<colordiffuse>mainblue</colordiffuse>
-						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-					</control>
-					<!-- Big Title -->
-					<control type="label">
-						<posx>10</posx>
-						<posy>470</posy>
-						<align>left</align>
-						<label>$INFO[Container(8855).ListItem(0).Label]</label>
-						<font>Font_Bartowski_MainMenu</font>
-						<scroll>false</scroll>
-						<textcolor>mainblue</textcolor>
-						<wrapmultiline>false</wrapmultiline>
-						<width min="1" max="780">auto</width>
-					</control>
-				</control>
 			</control>
-		</control>
+  
+			<control type="group">
+				<visible>Control.hasFocus(8855)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Focus</include>
+			</control>
 
+		</control>
+		<control type="group">
+			<visible>Control.HasFocus(8855)</visible>
+			<include>Animation_CommonFade_600</include>
+			<include>Deck_Information_Position</include>
+			<include>Deck_Information</include>
+		</control>
+	</control>
 </include>
 <!-- Background -->
 <include name="Home_Extension_Background">
