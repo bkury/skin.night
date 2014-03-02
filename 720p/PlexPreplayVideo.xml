@@ -275,7 +275,7 @@
 				<aligny>center</aligny>
                                 <aspectratio>keep</aspectratio>
 				<colordiffuse>77FFFFFF</colordiffuse>
-				<info>Listitem.Art(mediaTag::contentRating)</info>
+				<texture fallback="DefaultVideoCover.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
 				<visible>Container.Content(episode)</visible>
 			</control>
 			<control type="image">
@@ -287,7 +287,7 @@
 				<aligny>center</aligny>
                                 <aspectratio>keep</aspectratio>
 				<colordiffuse>77FFFFFF</colordiffuse>
-				<info>Listitem.Art(mediaTag::contentRating)</info>
+				<texture fallback="DefaultVideoCover.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
 				<visible>Container.Content(movie)</visible>
 			</control>
 
