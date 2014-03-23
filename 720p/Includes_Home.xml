@@ -215,8 +215,10 @@
 	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Shared_Simplelist</include>
 </include>
 <include name="Shared_Navigation_Vertical">
-	<onleft>ReplaceWindow(home)</onleft>
-	<onright>ReplaceWindow(home)</onright>
+	<!--<onleft>ReplaceWindow(home)</onleft>
+	<onright>ReplaceWindow(home)</onright>-->
+	<onleft>7000</onleft>
+	<onright>7000</onright>
 	<include>Navigation_Vertical</include>
 </include>
 <include name="Shared_Navigation_Horizontal">
@@ -228,25 +230,25 @@
 	<include>Navigation_Panel</include>
 </include>
 <include name="Shared_Wraplist">
-	<control type="wraplist" id="56">
+	<control type="wraplist" id="100">
 		<include condition="Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Shared_Fixedlist">
-	<control type="fixedlist" id="56">
+	<control type="fixedlist" id="100">
 		<include condition="Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Shared_Simplelist">
-	<control type="list" id="56">
+	<control type="list" id="100">
 		<include condition="Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Shared_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Shared_Panel">
-	<control type="panel" id="56">
+	<control type="panel" id="100">
 		<include condition="Skin.HasSetting(Home_Panel)">Shared_Navigation_Panel</include>
 	</control>
 </include>
@@ -263,38 +265,39 @@
 	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Channel_Simplelist</include>
 </include>
 <include name="Channel_Navigation_Vertical">
-	<onleft>ReplaceWindow(home)</onleft>
-	<onright>ReplaceWindow(home)</onright>
+	<onright>7000</onright>
+	<onleft>7000</onleft>
 	<include>Navigation_Vertical</include>
 </include>
 <include name="Channel_Navigation_Horizontal">
-	<onup>ReplaceWindow(home)</onup>
-	<ondown>ReplaceWindow(home)</ondown>
+	<onup>7000</onup>
+	<ondown>7000</ondown>
 	<include>Navigation_Horizontal</include>
 </include>
 <include name="Channel_Navigation_Panel">
 	<include>Navigation_Panel</include>
 </include>
+<!-- BKURY HERE -->
 <include name="Channel_Wraplist">
-	<control type="wraplist" id="70">
+	<control type="wraplist" id="100">
 		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Channel_Fixedlist">
-	<control type="fixedlist" id="70">
+	<control type="fixedlist" id="100">
 		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Channel_Simplelist">
-	<control type="list" id="70">
+	<control type="list" id="100">
 		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Channel_Panel">
-	<control type="panel" id="70">
+	<control type="panel" id="100">
 		<include condition="Skin.HasSetting(Home_Panel)">Channel_Navigation_Panel</include>
 	</control>
 </include>
@@ -318,7 +321,6 @@
 			<font>Font_Bartowski_MainMenu</font>
 			<textcolor>50b8b7b7</textcolor>
 			<info>ListItem.Label</info>
-			<!--<label>ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</label>-->
 			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
 		</control>
 		<control type="label">

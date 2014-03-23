@@ -66,6 +66,7 @@
 			<!-- Navigation -->
 			<control type="group" id="7000">
 				<posy>680</posy>
+
 				<!-- Arrow -->
 				<control type="image">
 					<posx>0</posx>
@@ -90,73 +91,133 @@
 					<animation effect="slide" end="1149,0" time="200" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
 					<visible>Skin.HasSetting(navigation_circle) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
 				</control>
-				<!-- Button -->
-<!--				<control type="image">
-					<posy>-4</posy>
-					<posx>0</posx>
-					<width>206</width>
-					<height>32</height>
-					<include condition="!Skin.HasSetting(navigation_smoke)">navigation_solid_image</include>
-					<include condition="Skin.HasSetting(navigation_smoke)">navigation_smoke_image</include>
-					<animation effect="slide" end="35,0" time="200" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
-					<animation effect="slide" end="281,0" time="200" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
-					<animation effect="slide" end="537,0" time="200" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
-					<animation effect="slide" end="793,0" time="200" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
-					<animation effect="slide" end="1049,0" time="200" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
-					<visible>!Skin.HasSetting(navigation_accentonly) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
-				</control>-->
 
-				<!-- Viewtype -->
+				<!-- Long Navigation Menu -->
 				<control type="group">
-					<posx>80</posx>
-					<!-- DEFAULT MODE -->
+					<visible>![StringCompare(Window.Property(xmlfile),MyChannels.xml) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)]</visible>
+
+					<!-- Viewmodes -->
 					<control type="group">
-					<visible>!Skin.HasSetting(LockViews)</visible>
+						<posx>80</posx>
+						<control type="group">
+							<visible>!Skin.HasSetting(LockViews)</visible>
+							<control type="image">
+								<width>29</width>
+								<height>24</height>
+								<texture>b-video.png</texture>
+								<colordiffuse>FFDDDDDD</colordiffuse>
+							</control>
+							<control type="button" id="401">
+			                                        <width>29</width>
+			                                        <height>24</height>
+								<texturefocus>b-video.png</texturefocus>
+								<texturenofocus>b-video.png</texturenofocus>
+								<colordiffuse>mainblue</colordiffuse>
+								<onleft>405</onleft>
+								<onright>402</onright>
+								<ondown>100</ondown>
+			                                        <onup>100</onup>
+								<onclick>Skin.SetString(selector1,View)</onclick>
+								<onclick>Skin.SetString(selector2,Modes)</onclick>
+								<onclick>Control.SetFocus(1300)</onclick>
+								<visible allowhiddenfocus="true">Control.HasFocus(401)</visible>
+			                                </control>
+							<control type="label">
+								<posx>40</posx>
+								<width>100</width>
+								<height>24</height>
+								<label>$INFO[Container.ViewMode]</label>
+								<font>Font_Bartowski_Movies_Plot</font>
+								<textcolor>FFDDDDDD</textcolor>
+								<shadowcolor>FF000000</shadowcolor>
+							</control>
+						</control>
+						<!-- KIOSK MODE -->
+						<control type="group">
+							<visible>Skin.HasSetting(LockViews)</visible>
+							<control type="image">
+								<width>29</width>
+								<height>24</height>
+								<texture>b-video.png</texture>
+								<colordiffuse>TextDisabled</colordiffuse>
+							</control>
+							<control type="label">
+								<posx>40</posx>
+								<width>100</width>
+								<height>24</height>
+								<label>$INFO[Container.ViewMode]</label>
+								<font>Font_Bartowski_Movies_Plot</font>
+								<textcolor>FFDDDDDD</textcolor>
+								<shadowcolor>FF000000</shadowcolor>
+							</control>
+						</control>
+					</control>
+
+
+
+
+				<!-- Filter -->
+				<control type="group">
+					<posx>345</posx>
+					<control type="group">
+						<visible>![Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))]</visible>
 						<control type="image">
 							<width>29</width>
 							<height>24</height>
-							<texture>b-video.png</texture>
+							<texture>options_osd.png</texture>
 							<colordiffuse>FFDDDDDD</colordiffuse>
 						</control>
-						<control type="button" id="401">
+						<control type="button" id="402">
 		                                        <width>29</width>
 		                                        <height>24</height>
-							<texturefocus>b-video.png</texturefocus>
-							<texturenofocus>b-video.png</texturenofocus>
+							<texturefocus>options_osd.png</texturefocus>
+							<texturenofocus>options_osd.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
-							<onleft>405</onleft>
-							<onright>402</onright>
-							<ondown>50</ondown>
-		                                        <onup>50</onup>
-							<onclick>Skin.SetString(selector1,View)</onclick>
-							<onclick>Skin.SetString(selector2,Modes)</onclick>
-							<onclick>Control.SetFocus(1300)</onclick>
-							<visible allowhiddenfocus="true">Control.HasFocus(401)</visible>
+
+							<onclick>Skin.SetString(selector1,Filter)</onclick>
+							<onclick>Skin.SetString(selector2,Options)</onclick>
+		                                        <onclick>Control.SetFocus(19000)</onclick>
+	
+							<onleft>401</onleft>
+							<onright>403</onright>
+							<ondown>100</ondown>
+							<onup>100</onup>
+							<visible allowhiddenfocus="true">Control.HasFocus(402)</visible>
 		                                </control>
 						<control type="label">
-							<posx>40</posx>
+							<posx>35</posx>
 							<width>100</width>
 							<height>24</height>
-							<label>$INFO[Container.ViewMode]</label>
+							<label>Filter</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
 						</control>
+						<control type="image">
+							<posx>80</posx>
+							<width>28</width>
+							<height>28</height>
+							<texture>ticked.png</texture>
+							<colordiffuse>mainblue</colordiffuse>
+							<include>Animation_CommonFade_600</include>
+							<visible>!isEmpty(Container.Property(primaryFilterActivated)) | !isEmpty(Container.Property(secondaryFilterActivated))</visible>
+						</control>
 					</control>
-					<!-- KIOSK MODE -->
+
+					<!-- Disabled Filter -->
 					<control type="group">
-					<visible>Skin.HasSetting(LockViews)</visible>
+						<visible>[Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))]</visible>
 						<control type="image">
 							<width>29</width>
 							<height>24</height>
-							<texture>b-video.png</texture>
+							<texture>options_osd.png</texture>
 							<colordiffuse>TextDisabled</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>40</posx>
 							<width>100</width>
 							<height>24</height>
-							<label>$INFO[Container.ViewMode]</label>
+							<label>Filter</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -164,77 +225,64 @@
 					</control>
 				</control>
 
-				<!-- Filter -->
-				<control type="group">
-					<posx>345</posx>
-					<control type="image">
-						<width>29</width>
-						<height>24</height>
-						<texture>options_osd.png</texture>
-						<colordiffuse>FFDDDDDD</colordiffuse>
-					</control>
-					<control type="button" id="402">
-	                                        <width>29</width>
-	                                        <height>24</height>
-						<texturefocus>options_osd.png</texturefocus>
-						<texturenofocus>options_osd.png</texturenofocus>
-						<colordiffuse>mainblue</colordiffuse>
-
-						<onclick>Skin.SetString(selector1,Filter)</onclick>
-						<onclick>Skin.SetString(selector2,Options)</onclick>
-	                                        <onclick>Control.SetFocus(19000)</onclick>
-
-						<onleft>401</onleft>
-						<onright>403</onright>
-						<ondown>50</ondown>
-						<onup>50</onup>
-						<visible allowhiddenfocus="true">Control.HasFocus(402)</visible>
-	                                </control>
-					<control type="label">
-						<posx>35</posx>
-						<width>100</width>
-						<height>24</height>
-						<label>Filter</label>
-						<font>Font_Bartowski_Movies_Plot</font>
-						<textcolor>FFDDDDDD</textcolor>
-						<shadowcolor>FF000000</shadowcolor>
-					</control>
-				</control>
-
 				<!-- Sort -->
 				<control type="group">
 					<posx>610</posx>
-					<control type="image">
-						<width>29</width>
-						<height>24</height>
-						<texture>options_osd.png</texture>
-						<colordiffuse>FFDDDDDD</colordiffuse>
+			
+					<control type="group">
+						<visible>![Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes)]</visible>
+						<control type="image">
+							<width>29</width>
+							<height>24</height>
+							<texture>options_osd.png</texture>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="403">
+		                                        <width>29</width>
+		                                        <height>24</height>
+							<texturefocus>options_osd.png</texturefocus>
+							<texturenofocus>options_osd.png</texturenofocus>
+							<colordiffuse>mainblue</colordiffuse>
+	
+							<onclick>Skin.SetString(selector1,Sort)</onclick>
+							<onclick>Skin.SetString(selector2,Options)</onclick>
+		                                        <onclick>Control.SetFocus(19010)</onclick>
+
+							<onleft>402</onleft>
+							<onright>404</onright>
+							<ondown>100</ondown>
+							<onup>100</onup>
+							<visible allowhiddenfocus="true">Control.HasFocus(403)</visible>
+		                                </control>
+						<control type="label">
+							<posx>35</posx>
+							<width>100</width>
+							<height>24</height>
+							<label>Sort</label>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<textcolor>FFDDDDDD</textcolor>
+							<shadowcolor>FF000000</shadowcolor>
+						</control>
 					</control>
-					<control type="button" id="403">
-	                                        <width>29</width>
-	                                        <height>24</height>
-						<texturefocus>options_osd.png</texturefocus>
-						<texturenofocus>options_osd.png</texturenofocus>
-						<colordiffuse>mainblue</colordiffuse>
 
-						<onclick>Skin.SetString(selector1,Sort)</onclick>
-						<onclick>Skin.SetString(selector2,Options)</onclick>
-	                                        <onclick>Control.SetFocus(19010)</onclick>
-
-						<onleft>402</onleft>
-						<onright>404</onright>
-						<ondown>50</ondown>
-						<onup>50</onup>
-						<visible allowhiddenfocus="true">Control.HasFocus(403)</visible>
-	                                </control>
-					<control type="label">
-						<posx>35</posx>
-						<width>100</width>
-						<height>24</height>
-						<label>Sort</label>
-						<font>Font_Bartowski_Movies_Plot</font>
-						<textcolor>FFDDDDDD</textcolor>
-						<shadowcolor>FF000000</shadowcolor>
+					<!-- Disabled Sort -->
+					<control type="group">
+						<visible>[ Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) ]</visible>
+						<control type="image">
+							<width>29</width>
+							<height>24</height>
+							<texture>options_osd.png</texture>
+							<colordiffuse>TextDisabled</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>35</posx>
+							<width>100</width>
+							<height>24</height>
+							<label>Sort</label>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<textcolor>FFDDDDDD</textcolor>
+							<shadowcolor>FF000000</shadowcolor>
+						</control>
 					</control>
 				</control>
 
@@ -255,11 +303,11 @@
 						<colordiffuse>mainblue</colordiffuse>
 						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 						<onclick>Skin.SetString(selector2,Options)</onclick>
-	                                        <onclick>Control.SetFocus(1303)</onclick>
+	                                        <onclick>Control.SetFocus(9999)</onclick>
 						<onleft>403</onleft>
 						<onright>405</onright>
-						<ondown>50</ondown>
-						<onup>50</onup>
+						<ondown>100</ondown>
+						<onup>100</onup>
 						<visible allowhiddenfocus="true">Control.HasFocus(404)</visible>
 	                                </control>
 					<control type="label">
@@ -291,8 +339,8 @@
 	                                        <onclick>ActivateWindow(51)</onclick>
 						<onleft>404</onleft>
 						<onright>401</onright>
-						<ondown>50</ondown>
-						<onup>50</onup>
+						<ondown>100</ondown>
+						<onup>100</onup>
 						<visible allowhiddenfocus="true">Control.HasFocus(405)</visible>
 	                                </control>
 					<control type="label">
@@ -306,6 +354,148 @@
 					</control>
 				</control>
 			</control>
+
+			<!-- Short Navigation Menu (Channel/Shared Content) -->
+			<control type="group">
+				<visible>[StringCompare(Window.Property(xmlfile),MyChannels.xml) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)]</visible>
+
+				<!-- Viewmode Default -->
+				<control type="group">
+					<posx>80</posx>	
+					<visible>!Skin.HasSetting(LockViews)</visible>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>b-video.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="410">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>b-video.png</texturefocus>
+						<texturenofocus>b-video.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onleft>413</onleft>
+						<onright>411</onright>
+						<ondown>100</ondown>
+	                                        <onup>100</onup>
+						<onclick>Container.SetViewmode(100)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(410)</visible>
+	                                </control>
+					<control type="label">
+						<posx>40</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Default</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+
+				<!-- Viewmode Cover -->
+				<control type="group">
+					<posx>345</posx>	
+					<visible>!Skin.HasSetting(LockViews)</visible>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>b-video.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="411">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>b-video.png</texturefocus>
+						<texturenofocus>b-video.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onleft>410</onleft>
+						<onright>412</onright>
+						<ondown>100</ondown>
+	                                        <onup>100</onup>
+						<onclick>Container.SetViewmode(210)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(411)</visible>
+	                                </control>
+					<control type="label">
+						<posx>40</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Cover</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+
+				<!-- Viewmode Panel -->
+				<control type="group">
+					<posx>610</posx>	
+					<visible>!Skin.HasSetting(LockViews)</visible>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>b-video.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="412">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>b-video.png</texturefocus>
+						<texturenofocus>b-video.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onleft>411</onleft>
+						<onright>413</onright>
+						<ondown>100</ondown>
+	                                        <onup>100</onup>
+						<onclick>Container.SetViewmode(310)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(412)</visible>
+	                                </control>
+					<control type="label">
+						<posx>40</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Panel</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+
+
+				<!-- Search -->
+				<control type="group">
+					<posx>1100</posx>
+					<control type="image">
+						<width>29</width>
+						<height>24</height>
+						<texture>b-pp-search.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="413">
+	                                        <width>29</width>
+	                                        <height>24</height>
+						<texturefocus>b-pp-search.png</texturefocus>
+						<texturenofocus>b-pp-search.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+	                                        <onclick>ActivateWindow(51)</onclick>
+						<onleft>412</onleft>
+						<onright>410</onright>
+						<ondown>100</ondown>
+						<onup>100</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(413)</visible>
+	                                </control>
+					<control type="label">
+						<posx>35</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Search</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
+			</control>
+		</control>
 		</control>
 	</include>
 
@@ -321,207 +511,188 @@
 			<include>dialog_header_viewtype</include>				
 
 			<control type="group" id="1300">
-			<control type="grouplist">
-				<posx>490</posx>
-				<posy>335</posy>
-				<width>300</width>
-				<height>300</height>
-				<itemgap>-1</itemgap>
-				<pagecontrol>667</pagecontrol>
-				<onright>7000</onright>
-				<onleft>7000</onleft>
+				<posx>340</posx>
+				<posy>340</posy>
 
-				<control type="button" id="100">
-					<width>300</width>
-					<!--<label>$INFO[Container.Viewmode]</label>-->
+				<!-- Next Viewmode -->
+				<control type="button" id="3500">
+					<width>600</width>
 					<label>Next Viewmode</label>
 					<textoffsetx>0</textoffsetx>
 					<align>center</align>
                                         <font>font16caps</font>
 					<onclick>Container.NextViewMode</onclick>
+					<onup>7000</onup>
+					<onleft>3510</onleft>
+					<ondown>3510</ondown>
+					<onright>3540</onright>
 					<include>skin_settings_dialog</include>
 				</control>
 
-				<!-- List -->
-				<control type="radiobutton" id="101">
-					<width>300</width>
-					<label>List</label>
-					<onclick>Container.SetViewMode(50)</onclick>
-					<selected>StringCompare(Container.Viewmode,List)</selected>
-					<include>radiobutton_ticked</include>
+
+			<!-- List -->
+			<control type="grouplist" id="3510">
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>140</width>
+				<height>265</height>
+				<itemgap>-1</itemgap>
+				<onup>3500</onup>
+				<onleft>7000</onleft>
+				<onright>3520</onright>
+     
+				<control type="label" id="3511">
+					<width>130</width>
+					<height>35</height>
+					<font>font13caps</font>
+					<label>List</label><!-- LOC -->
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
 				</control>
 
-				<!-- Episodes -->
-				<control type="radiobutton" id="102">
-					<width>300</width>
-					<label>Episode</label>
-					<onclick>Container.SetViewMode(51)</onclick>
-					<selected>StringCompare(Container.Viewmode,Episode)</selected>
+				<control type="radiobutton" id="3512">
+					<width>130</width>
+					<label>Info</label>
+					<onclick>Container.SetViewMode(100)</onclick>
+					<selected>StringCompare(Container.Viewmode,List #1)</selected>
 					<include>radiobutton_ticked</include>
-					<visible>Container.Content(episodes)</visible>
 				</control>
-
-				<!-- Poster -->
-				<control type="radiobutton" id="103">
-					<width>300</width>
-					<label>Poster</label>
-					<onclick>Container.SetViewMode(55)</onclick>
-					<selected>StringCompare(Container.Viewmode,Poster)</selected>
+				<control type="radiobutton" id="3513">
+					<width>130</width>
+					<label>Full</label>
+					<onclick>Container.SetViewMode(110)</onclick>
+					<selected>StringCompare(Container.Viewmode,List #2)</selected>
 					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(homemovies)</visible>
 				</control>
-
-				<!-- PosterHalf -->
-				<control type="radiobutton" id="104">
-					<width>300</width>
-					<label>PosterHalf</label>
-					<onclick>Container.SetViewMode(598)</onclick>
-					<selected>StringCompare(Container.Viewmode,PosterHalf)</selected>
+				<control type="radiobutton" id="3514">
+					<width>130</width>
+					<label>Low</label>
+					<onclick>Container.SetViewMode(120)</onclick>
+					<selected>StringCompare(Container.Viewmode,List #3)</selected>
 					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-				</control>
-
-				<!-- 56 (Music/Jukebox)-->
-				<control type="radiobutton" id="105">
-					<width>300</width>
-					<label>Jukebox</label>
-					<onclick>Container.SetViewMode(56)</onclick>
-					<selected>StringCompare(Container.Viewmode,Jukebox)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(artists) | Container.Content(albums)</visible>
-				</control>
-
-				<!-- Showcase -->
-				<control type="radiobutton" id="106">
-					<width>300</width>
-					<label>Showcase</label>
-					<onclick>Container.SetViewMode(58)</onclick>
-					<selected>StringCompare(Container.Viewmode,Showcase)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(homemovies)</visible>
-				</control>
-
-				<!-- Slide -->
-				<control type="radiobutton" id="107">
-					<width>300</width>
-					<label>Slide</label>
-					<onclick>Container.SetViewMode(595)</onclick>
-					<selected>StringCompare(Container.Viewmode,Slide)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-				</control>
-
-				<!-- Landscape -->
-				<control type="radiobutton" id="108">
-					<width>300</width>
-					<label>Landscape</label>
-					<onclick>Container.SetViewMode(52)</onclick>
-					<selected>StringCompare(Container.Viewmode,Landscape)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-				</control>
-
-				<!-- Landscape Fanart -->
-				<control type="radiobutton" id="109">
-					<width>300</width>
-					<label>Fanart</label>
-					<onclick>Container.SetViewMode(633)</onclick>
-					<selected>StringCompare(Container.Viewmode,Fanart)</selected>
-					<include>radiobutton_ticked</include>
-					<visible></visible>
-					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-				</control>
-
-				<!-- 3D Landscape -->
-				<control type="radiobutton" id="110">
-					<width>300</width>
-					<label>3dLandscape</label>
-					<onclick>Container.SetViewMode(53)</onclick>
-					<selected>StringCompare(Container.Viewmode,3dLandscape)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
-				</control>
-
-				<!-- Land Panel -->
-				<control type="radiobutton" id="111">
-					<width>300</width>
-					<label>LandPanel</label>
-					<onclick>Container.SetViewMode(57)</onclick>
-					<selected>StringCompare(Container.Viewmode,LandPanel)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(episodes)</visible>
-				</control>
-
-				<!-- Wall -->
-				<control type="radiobutton" id="112">
-					<width>300</width>
-					<label>Wall</label>
-					<onclick>Container.SetViewMode(54)</onclick>
-					<selected>StringCompare(Container.Viewmode,Wall)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(homemovies)</visible>
-				</control>
-
-				<!-- Wall Panel -->
-				<control type="radiobutton" id="113">
-					<width>300</width>
-					<label>WallPanel</label>
-					<onclick>Container.SetViewMode(597)</onclick>
-					<selected>StringCompare(Container.Viewmode,WallPanel)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(homemovies)</visible>
-				</control>
-
-				<!-- Panel -->
-				<control type="radiobutton" id="114">
-					<width>300</width>
-					<label>Panel</label>
-					<onclick>Container.SetViewMode(56)</onclick>
-					<selected>StringCompare(Container.Viewmode,Panel)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(homemovies)</visible>
-				</control>
-				<!-- Panel (Music/3dSquare)-->
-				<control type="radiobutton" id="115">
-					<width>300</width>
-					<label>3dSquare</label>
-					<onclick>Container.SetViewMode(56)</onclick>
-					<selected>StringCompare(Container.Viewmode,3dSquare)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(artists) | Container.Content(albums)</visible>
-				</control>
-
-				<!-- 16x9 -->
-				<control type="radiobutton" id="116">
-					<width>300</width>
-					<label>16x9</label>
-					<onclick>Container.SetViewMode(59)</onclick>
-					<selected>StringCompare(Container.Viewmode,16x9)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(homemovies)</visible>
-				</control>
-				
-				<!-- Banner Panel -->
-				<control type="radiobutton" id="117">
-					<width>300</width>
-					<label>BannerPanel</label>
-					<onclick>Container.SetViewMode(592)</onclick>
-					<selected>StringCompare(Container.Viewmode,BannerPanel)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(tvshows)</visible>
-				</control>
-
-				<!-- 3d Banner -->
-				<control type="radiobutton" id="118">
-					<width>300</width>
-					<label>3dBanner</label>
-					<onclick>Container.SetViewMode(593)</onclick>
-					<selected>StringCompare(Container.Viewmode,3dBanner)</selected>
-					<include>radiobutton_ticked</include>
-					<visible>Container.Content(tvshows)</visible>
 				</control>
 
 			</control>
+
+			<!-- Cover -->
+			<control type="grouplist" id="3520">
+				<posx>160</posx>
+				<posy>50</posy>
+				<width>140</width>
+				<height>265</height>
+				<itemgap>-1</itemgap>
+				<onup>3500</onup>
+				<onleft>3510</onleft>
+				<onright>3530</onright>
+
+				<control type="label" id="3521">
+					<width>130</width>
+					<height>35</height>
+					<font>font13caps</font>
+					<label>Cover</label><!-- LOC -->
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+
+				<control type="radiobutton" id="3522">
+					<width>130</width>
+					<label>Info</label>
+					<onclick>Container.SetViewMode(200)</onclick>
+					<selected>StringCompare(Container.Viewmode,Poster #1)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+				<control type="radiobutton" id="3523">
+					<width>130</width>
+					<label>Full</label>
+					<onclick>Container.SetViewMode(210)</onclick>
+					<selected>StringCompare(Container.Viewmode,Poster #2)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+			</control>
+
+
+			<control type="grouplist" id="3530">
+				<posx>320</posx>
+				<posy>50</posy>
+				<width>140</width>
+				<height>265</height>
+				<itemgap>-1</itemgap>
+				<onup>3500</onup>
+				<onleft>3520</onleft>
+				<onright>3540</onright>
+
+				<control type="label" id="3531">
+					<width>130</width>
+					<height>35</height>
+					<font>font13caps</font>
+					<label>Panel</label><!-- LOC -->
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+
+				<!-- Panel -->
+				<control type="radiobutton" id="3532">
+					<width>130</width>
+					<label>Info</label>
+					<onclick>Container.SetViewMode(300)</onclick>
+					<selected>StringCompare(Container.Viewmode,Panel #1)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+				<control type="radiobutton" id="3533">
+					<width>130</width>
+					<label>Full</label>
+					<onclick>Container.SetViewMode(310)</onclick>
+					<selected>StringCompare(Container.Viewmode,Panel #2)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+
+			</control>
+
+			<control type="grouplist" id="3540">
+				<posx>480</posx>
+				<posy>50</posy>
+				<width>140</width>
+				<height>265</height>
+				<itemgap>-1</itemgap>
+				<onup>3500</onup>
+				<onleft>3530</onleft>
+				<onright>3500</onright>
+
+				<control type="label" id="3541">
+					<width>280</width>
+					<height>35</height>
+					<font>font13caps</font>
+					<label>Banner</label><!-- LOC -->
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+
+				<!-- Banner -->
+				<control type="radiobutton" id="3542">
+					<width>280</width>
+					<label>coming soon</label>
+					<onclick>Container.SetViewMode(100)</onclick>
+					<selected>StringCompare(Container.Viewmode,Panel #1)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+				<control type="radiobutton" id="3543">
+					<width>280</width>
+					<label>coming soon</label>
+					<onclick>Container.SetViewMode(100)</onclick>
+					<selected>StringCompare(Container.Viewmode,Panel #2)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+
+			</control>
+
 		</control>
         </control>
 	</include>
@@ -651,38 +822,54 @@
 		<include>dialog_header_viewtype</include>
 
 		<control type="group" id="1303">
-			<control type="grouplist">
-				<posx>340</posx>
+
+			<!-- Static Focus Item (Hack) -->
+			<control type="button" id="9999">
+				<width>0</width>
+				<height>0</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<onfocus>SetFocus(1350)</onfocus>
+			</control>
+
+			<control type="grouplist" id="1350">
+				<posx>320</posx>
 				<posy>330</posy>
-				<width>600</width>
+				<width>200</width>
+				<height>302</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>667</pagecontrol>
+				<onright>1351</onright>
+				<onleft>7000</onleft>
+
+				<include>Background_Settings_Viewmodes_General_1</include>
+			</control>
+			<control type="grouplist" id="1351">
+				<posx>530</posx>
+				<posy>330</posy>
+				<width>200</width>
+				<height>302</height>
+				<itemgap>-1</itemgap>
+				<pagecontrol>667</pagecontrol>
+				<onright>1352</onright>
+				<onleft>1350</onleft>
+
+				<include>Background_Settings_Viewmodes_General_2</include>
+			</control>
+			<control type="grouplist" id="1352">
+				<posx>740</posx>
+				<posy>330</posy>
+				<width>220</width>
 				<height>302</height>
 				<itemgap>-1</itemgap>
 				<pagecontrol>667</pagecontrol>
 				<onright>7000</onright>
-				<onleft>7000</onleft>
-				<control type="label" id="140">
-	                		<width>600</width>
-			                <height>35</height>
-			                <font>font13caps</font>
-			                <label>Options</label>
-			                <textcolor>white</textcolor>
-			                <shadowcolor>black</shadowcolor>
-			                <align>left</align>
-			                <aligny>center</aligny>
-				</control>
-				<control type="radiobutton" id="141">
-					<width>600</width>
-					<description>Transparency</description>
-					<label>Transparent Watched</label>
-					<onclick>Skin.ToggleSetting(viewtype_watched)</onclick>
-					<selected>Skin.HasSetting(viewtype_watched)</selected>
-					<include>radiobutton_circle</include>
-				</control>
+				<onleft>1351</onleft>
 
-				<!-- Background Options -->
 				<include>Background_Settings_Viewmodes</include>
 
 			</control>
+
 		</control>
 	</control>
 	</include>
@@ -713,6 +900,15 @@
 		<animation effect="fade" end="100" time="200" delay="300">Visible</animation>
 		<animation effect="fade" end="0" time="200">Hidden</animation>
 			<control type="image">
+				<posx>574</posx>
+				<posy>204</posy>
+				<width>132</width>
+				<height>112</height>
+				<texture>frameOrange.png</texture>
+				<colordiffuse>DD444444</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
 				<posx>575</posx>
 				<posy>205</posy>
 				<width>130</width>
@@ -732,17 +928,21 @@
 		</control>
 	</include>
 
-	<!-- Poster 3D -->
-	<include name="Poster_3D">
-		<camera x="1340" y="380" />
-		<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
-	</include>
-
-	<!-- PosterHalf 3D -->
-	<include name="PosterHalf_3D">                        
-		<camera x="1340" y="380" />
-		<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
-	</include>
+	<variable name="Viewmode_Container_Type">
+		<value condition="Container.Content(movies)">Movies</value>
+		<value condition="Container.Content(tvshows)">TV Shows</value>
+		<value condition="StringCompare(Container.NumItems,1) + Container.Content(seasons)">Season</value>
+		<value condition="!StringCompare(Container.NumItems,1) + Container.Content(seasons)">Seasons</value>
+		<value condition="Container.Content(episodes)">Episodes</value>
+		<value condition="Container.Content(albums)">Albums</value>
+		<value condition="Container.Content(artists)">Artists</value>
+		<value condition="Container.Content(songs)">Tracks</value>
+		<value condition="Container.Content(channels)">Channels</value>
+		<value condition="Container.Content(photos)">Photos</value>
+		<value condition="Container.Content(photoalbums)">Photo Albums</value>
+		<value condition="ListItem.Type(clip)">Clips</value>
+		<value>Items</value>
+	</variable>
 
 </includes>
 

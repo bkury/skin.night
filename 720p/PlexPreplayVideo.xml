@@ -234,6 +234,7 @@
 					<posx>355</posx>
 					<posy>187</posy>
 					<width>380</width>
+					<height>30</height>
 					<label fallback="Not Available">$INFO[ListItem.Cast]</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
@@ -396,8 +397,8 @@
 				<posx>235</posx>
 				<posy>235</posy>
 				<width>500</width>
-				<align>left</align>
-				<itemgap>48</itemgap>
+				<align>center</align>
+				<itemgap>45</itemgap>
 				<orientation>horizontal</orientation>
 				<include>color_flags</include>
 			</control>

@@ -1,0 +1,940 @@
+<includes>
+
+<!-- Sidebar -->
+<include name="Viewmode_Infocard">
+
+	<!-- Viewmode List #1 (100/Info) -->
+	<control type="group">
+		<visible>Control.isVisible(100)</visible>
+		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(List1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(List1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(List1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(List1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Background -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>720</height>
+			<texture border="5">base-rounded.png</texture>
+			<colordiffuse>99000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>420</posx>
+			<posy>0</posy>
+			<width>1</width>
+			<height>720</height>
+			<texture border="0">base-rounded.png</texture>
+			<colordiffuse>99444444</colordiffuse>
+			<animation effect="slide" end="-420,0" condition="Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
+		</control>
+
+		<!-- Sidebar -->
+		<control type="group">
+			<posy>15</posy>
+			<posx>20</posx>
+			<include>Viewmode_Sidebar_Header</include>
+			<include>Viewmode_Sidebar_Content</include>
+			<include>Viewmode_Sidebar_ImagePlot</include>
+		</control>
+		
+		<!-- Clock -->
+		<control type="group">
+			<visible>!Skin.HasSetting(List1_Sidebar_Right)</visible>
+			<include>Viewmode_Sidebar_Clock_Left</include>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(List1_Sidebar_Right)</visible>
+			<include>Viewmode_Sidebar_Clock_Right</include>
+		</control>
+
+	</control>
+
+	<!-- Viewmode List #3 (120/Low) -->
+	<control type="group">
+		<visible>Control.isVisible(120)</visible>
+
+		<!-- Sidebar -->
+		<control type="group">
+			<animation effect="slide" end="-880" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
+			<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(List3_Sidebar_Right)">WindowOpen</animation>
+			<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(List3_Sidebar_Right)">WindowClose</animation>
+			<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(List3_Sidebar_Right)">WindowOpen</animation>
+			<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(List3_Sidebar_Right)">WindowClose</animation>
+
+			<posy>442</posy>
+			<posx>890</posx>
+			<include>Viewmode_Sidebar_Content</include>
+			<include>Viewmode_Sidebar_Plot</include>
+		</control>
+
+		<!-- Horizontal Info -->
+		<control type="group">
+			<posy>10</posy>
+			<posx>20</posx>
+			<include>Animation_Preplay_Up</include>
+			<include>Viewmode_Horizontal_Info</include>
+		</control>
+		
+	</control>
+
+	<!-- Viewmode Poster #1 (200/Info)  -->
+	<control type="group">
+		<visible>Control.isVisible(200)</visible>
+		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Horizontal Info -->
+		<control type="group">
+			<posx>20</posx>
+			<posy>20</posy>
+			<include>Viewmode_Horizontal_Info</include>
+		</control>
+		<!--<control type="group">
+			<posx>20</posx>
+			<posy>170</posy>
+			<include>Viewmode_Horizontal_Info_More</include>
+		</control>-->
+
+		<!-- Sidebar -->
+		<control type="group">
+			<posy>420</posy>
+			<posx>20</posx>
+			<include>Viewmode_Sidebar_Content</include>
+			<include>Viewmode_Sidebar_Plot</include>
+		</control>
+		
+	</control>
+
+	<!-- Viewmode Poster #2 (Full) -->
+	<control type="group">
+		<visible>Control.isVisible(210)</visible>
+		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster2_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster2_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster2_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster2_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Horizontal Info -->
+		<control type="group">
+			<posx>20</posx>
+			<posy>20</posy>
+			<include>Viewmode_Horizontal_Info</include>
+		</control>
+		<control type="group">
+			<posx>20</posx>
+			<posy>170</posy>
+			<include>Viewmode_Horizontal_Info_More</include>
+		</control>
+		
+	</control>
+
+	<!-- Viewmode Panel #1 (300/Info) -->
+	<control type="group">
+		<visible>Control.isVisible(300)</visible>
+		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Panel1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Panel1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Panel1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Panel1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Background -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>720</height>
+			<texture border="5">base-rounded.png</texture>
+			<colordiffuse>99000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>420</posx>
+			<posy>0</posy>
+			<width>1</width>
+			<height>720</height>
+			<texture border="0">base-rounded.png</texture>
+			<colordiffuse>99444444</colordiffuse>
+			<animation effect="slide" end="-420,0" condition="Skin.HasSetting(Panel1_Sidebar_Right)">Conditional</animation>
+		</control>
+
+		<!-- Sidebar -->
+		<control type="group">
+			<posy>15</posy>
+			<posx>20</posx>
+			<include>Viewmode_Sidebar_Header</include>
+			<include>Viewmode_Sidebar_Content</include>
+			<include>Viewmode_Sidebar_ImagePlot</include>
+		</control>
+
+		<!-- Clock -->
+		<control type="group">
+			<visible>!Skin.HasSetting(Panel1_Sidebar_Right)</visible>
+			<include>Viewmode_Sidebar_Clock_Left</include>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(Panel1_Sidebar_Right)</visible>
+			<include>Viewmode_Sidebar_Clock_Right</include>
+		</control>
+	</control>
+</include>
+
+<!-- Sidebar Header -->
+<include name="Viewmode_Sidebar_Header">
+		<control type="group">
+			<include>Viewmode_Infocard_Background</include>
+
+			<!-- Header  -->
+			<control type="group">
+
+				<!-- TV Show Title -->
+				<control type="label">
+					<posy>50</posy>
+					<label>$INFO[Container.FirstTitle]</label>
+		                        <font>Font_Bartowski_Movies_Plot</font>
+		                        <textcolor>FFCCCCCC</textcolor>
+		                        <width>390</width>
+					<align>left</align>
+					<wrapmultiline>false</wrapmultiline>
+					<visible>Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))</visible>
+		                </control>
+				<control type="label">
+					<posy>50</posy>
+					<label>$INFO[ListItem.TvShowTitle]</label>
+		                        <font>Font_Bartowski_Movies_Plot</font>
+		                        <textcolor>FFCCCCCC</textcolor>
+		                        <width>390</width>
+					<align>left</align>
+					<wrapmultiline>false</wrapmultiline>
+					<visible>Container.Content(episodes) + !isEmpty(Container.Property(primaryFilterActivated))</visible>
+		                </control>
+
+				<!-- Second Title -->
+				<control type="label">
+					<posy>50</posy>
+					<width>390</width>
+					<align>left</align>
+					<label>$INFO[Container.SecondTitle]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(seasons) | Container.Content(albums)</visible>
+				</control>
+
+				<!-- Label -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>14</posy>
+					<label>$INFO[ListItem.Label]</label>
+		                        <font>Font_Bartowski_Main_Preplay</font>
+		                        <textcolor>mainblue</textcolor>
+		                        <width>390</width>
+					<height>46</height>
+					<align>left</align>
+					<wrapmultiline>false</wrapmultiline>
+					<scroll>true</scroll>
+		                </control>
+
+				<!-- Genre -->
+				<control type="label">
+					<posy>75</posy>
+					<width>390</width>
+					<align>left</align>
+					<label fallback="Not Available">$INFO[ListItem.Genre]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums)</visible>
+				</control>
+
+				<!-- Season/Episode -->
+				<control type="label">
+					<posy>75</posy>
+					<width>280</width>
+					<align>left</align>
+					<label>$INFO[Container.SecondTitle][COLOR=mainblue] &#xB7; [/COLOR]Episode $INFO[ListItem.Episode]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))</visible>
+				</control>
+				<control type="label">
+					<posy>75</posy>
+					<width>280</width>
+					<align>left</align>
+					<label>Season $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]Episode $INFO[ListItem.Episode]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(episodes) + !isEmpty(Container.Property(primaryFilterActivated))</visible>
+				</control>
+
+		</control>
+
+	</control>
+
+</include>
+
+<include name="Viewmode_Sidebar_Content">
+
+		<!-- Content -->
+		<control type="group">
+			<visible>![Container.Content(seasons)]</visible>
+
+			<!-- Background Grid -->
+			<control type="image">
+				<posy>105</posy>
+				<width>510</width>
+				<height>190</height>
+				<texture>preplay_info.png</texture>
+			</control>
+
+			<!-- Cast (Movie only) -->
+			<control type="group">
+			<visible>Container.Content(movies)</visible>
+				<control type="label">
+					<posy>230</posy>
+					<label>Cast</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>230</posy>
+					<width>280</width>
+					<height>30</height>
+					<label fallback="Not Available">$INFO[ListItem.Cast]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</control>
+
+			<!-- Airdate -->
+			<control type="group">
+				<visible>!Container.Content(movies)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<!--<posy>242</posy>-->
+					<posy>229</posy>
+					<label>Airdate</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>229</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.Date]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</control>
+
+			<control type="group">
+				<!-- Duration -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>118</posy>
+					<width>140</width>
+					<label fallback="N/A">$INFO[ListItem.Duration]min</label>
+					<font>Font_Bartowski_Main_Preplay</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<align>center</align>
+					<visible>!isEmpty(ListItem.Duration)</visible>
+				</control>
+
+				<!-- Year -->
+				<control type="label">
+					<posx>130</posx>
+					<posy>118</posy>
+					<width>120</width>
+					<align>center</align>
+					<label fallback="N/A">$INFO[ListItem.Year]</label>
+					<font>Font_Bartowski_Main_Preplay</font>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+
+				<!-- Star Rating -->
+				<control type="image">
+					<posx>250</posx>
+					<posy>134</posy>
+					<description>Rating</description>
+					<width>110</width>
+					<height>25</height>
+					<colordiffuse>mainblue</colordiffuse>
+					<info>ListItem.StarRating</info>
+				</control>
+				<control type="label">
+					<posx>250</posx>
+					<posy>116</posy>
+					<width>110</width>
+					<height>30</height>
+					<align>center</align>
+					<label>IMDB $INFO[ListItem.Rating]</label>
+					<font>Font_Bartowski_Preplay</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<wrapmultiline>false</wrapmultiline>
+					<visible>!isEmpty(ListItem.Rating) + !Container.Content(clip)</visible>
+				</control>
+				<control type="label">
+					<posx>355</posx>
+					<posy>14</posy>
+					<width>110</width>
+					<height>30</height>
+					<align>center</align>
+					<label>Rating $INFO[ListItem.Rating]</label>
+					<font>Font_Bartowski_Preplay</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<wrapmultiline>false</wrapmultiline>
+					<visible>!isEmpty(ListItem.Rating) + Container.Content(clip)</visible>
+				</control>
+	
+				<!-- 1st Line (Director, PictureMode)
+
+				<!-- Director -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>168</posy>
+					<label>Director</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>168</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.Director]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>!isEmpty(ListItem.Director)</visible>
+					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies)</visible>
+				</control>
+
+				<!-- Episodes -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>168</posy>
+					<label>Episodes</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>168</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.Property(LeafCount)]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+
+				<!-- Mode -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>168</posy>
+					<label>Mode</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>!isEmpty(ListItem.PictureExpMode)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>168</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.PictureExpMode]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>!isEmpty(ListItem.PictureExpMode)</visible>
+				</control>
+
+				<!-- 2nd Line (Writer, PictureResolution)
+
+				<!-- Writer -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>199</posy>
+					<label>Writer</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>!isEmpty(ListItem.Writer)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>199</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.Writer]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>!isEmpty(ListItem.Writer)</visible>
+				</control>
+
+				<!-- Cast (Tvshows) -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>199</posy>
+					<label>Cast</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>199</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.Cast]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+
+				<!-- Picture Resolution -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>199</posy>
+					<label>WxH</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>!isEmpty(ListItem.PictureResolution)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>199</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.PictureResolution]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>!isEmpty(ListItem.PictureResolution)</visible>
+				</control>
+
+			</control>
+		</control>
+
+</include>
+
+<include name="Viewmode_Sidebar_ImagePlot">
+
+				<!-- Mediaflags -->
+				<control type="grouplist">
+					<description>Plex Media Flags</description>
+					<posx>0</posx>
+					<posy>270</posy>
+					<width>380</width>
+					<align>center</align>
+					<itemgap>24</itemgap>
+					<orientation>horizontal</orientation>
+					<include>color_flags</include>
+				</control>
+
+				<control type="group">
+					<include>Viewmode_Visible_Cover</include>
+					<control type="image">
+						<posx>40</posx>
+						<posy>300</posy>
+						<width>140</width>
+						<height>200</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>0</posx>
+						<posy>510</posy>
+						<width>380</width>
+						<height>125</height>
+						<align>justify</align>
+						<info>ListItem.Plot</info>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					</control>
+					<control type="image">
+						<posx>235</posx>
+						<posy>300</posy>
+						<description>Logo</description>
+						<width>70</width>
+						<height>70</height>
+						<aligny>center</aligny>
+		                                <aspectratio>keep</aspectratio>
+						<colordiffuse>AAFFFFFF</colordiffuse>
+						<info>Listitem.Art(mediaTag::contentRating)</info>
+					</control>
+					<control type="image">
+						<posx>210</posx>
+						<posy>380</posy>
+						<description>Logo</description>
+						<width>120</width>
+						<height>120</height>
+						<aligny>center</aligny>
+		                                <aspectratio>keep</aspectratio>
+						<colordiffuse>AAFFFFFF</colordiffuse>
+						<info>Listitem.Art(mediaTag::studio)</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<include>Viewmode_Visible_Thumb</include>
+					<control type="image">
+						<posx>0</posx>
+						<posy>300</posy>
+						<width>380</width>
+						<height>190</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>0</posx>
+						<posy>500</posy>
+						<width>380</width>
+						<height>125</height>
+						<align>justify</align>
+						<info>ListItem.Plot</info>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					</control>
+				</control>
+
+				<control type="group">
+					<include>Viewmode_Visible_Square</include>
+					<control type="image">
+						<posx>0</posx>
+						<posy>280</posy>
+						<width>380</width>
+						<height>200</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>280</posy>
+						<width>380</width>
+						<height>200</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!Container.Content(artists)</visible>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>0</posx>
+						<posy>500</posy>
+						<width>380</width>
+						<height>125</height>
+						<align>justify</align>
+						<info>ListItem.PictureDesc</info>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<visible>Container.Content(photos)</visible>
+					</control>
+				</control>
+
+				<control type="textbox">
+					<description>Plot</description>
+					<posx>0</posx>
+					<posy>500</posy>
+					<width>390</width>
+					<height>125</height>
+					<align>justify</align>
+		                        <info>ListItem.Property(summary)</info>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<visible>Container.Content(artists)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot</description>
+					<posx>0</posx>
+					<posy>160</posy>
+					<width>390</width>
+					<height>125</height>
+					<align>justify</align>
+					<info>Container.ShowPlot</info>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<visible>Container.Content(seasons)</visible>
+				</control>
+</include>
+
+<include name="Viewmode_Sidebar_Plot">
+	<control type="textbox">
+		<description>Plot</description>
+		<posx>0</posx>
+		<posy>-25</posy>
+		<width>380</width>
+		<height>125</height>
+		<align>justify</align>
+		<info>ListItem.Plot</info>
+		<font>Font_Bartowski_Movies_Plot</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		<visible>!isEmpty(ListItem.Plot)</visible>
+	</control>
+	<control type="textbox">
+		<description>Plot</description>
+		<posx>0</posx>
+		<posy>-25</posy>
+		<width>390</width>
+		<height>125</height>
+		<align>justify</align>
+		<info>ListItem.Property(summary)</info>
+		<font>Font_Bartowski_Movies_Plot</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		<visible>Container.Content(artists)</visible>
+	</control>
+	<control type="textbox">
+		<description>Plot</description>
+		<posx>0</posx>
+		<posy>-25</posy>
+		<width>390</width>
+		<height>160</height>
+		<align>justify</align>
+		<info>Container.ShowPlot</info>
+		<font>Font_Bartowski_Movies_Plot</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		<visible>Container.Content(seasons)</visible>
+	</control>
+	<control type="textbox">
+		<description>Plot</description>
+		<posx>0</posx>
+		<posy>500</posy>
+		<width>380</width>
+		<height>125</height>
+		<align>justify</align>
+		<info>ListItem.PictureDesc</info>
+		<font>Font_Bartowski_Movies_Plot</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		<visible>Container.Content(photos)</visible>
+	</control>
+</include>
+
+
+<!-- Horizontal Information -->
+<include name="Viewmode_Horizontal_Info">
+	<control type="group">
+		<control type="label">
+			<posy>0</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Viewmode_Horizontal_Info_1]</label>
+			<font>Font_Bartowski_MainMenu</font>
+			<scroll>false</scroll>
+			<textcolor>mainblue</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="1000">auto</width>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+		<control type="label">
+			<posy>0</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Viewmode_Horizontal_Info_1]</label>
+			<font>AeonFont_MainMenu_Focus</font>
+			<scroll>false</scroll>
+			<textcolor>mainblue</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="1000">auto</width>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+
+		<control type="label">
+			<posy>80</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Viewmode_Horizontal_Info_2]</label>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<scroll>true</scroll>
+			<textcolor>white</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="1000">auto</width>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+		<control type="label">
+			<posy>85</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Viewmode_Horizontal_Info_2]</label>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<scroll>true</scroll>
+			<textcolor>white</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="10000">auto</width>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+	</control>
+</include>
+<variable name="Viewmode_Horizontal_Info_1">
+	<value condition="ListItem.Type(episode)">$INFO[ListItem.Title]</value>
+	<value condition="ListItem.Type(album)">$INFO[ListItem.Artist]</value>
+	<value condition="Container.Content(songs)">$INFO[Container.Property(parentTitle)]</value>
+	<value>$INFO[ListItem.Label]</value>
+</variable>
+<variable name="Viewmode_Horizontal_Info_2">
+	<value condition="ListItem.Type(episode)">$INFO[ListItem.Date][COLOR=mainblue] / [/COLOR]$INFO[ListItem.Duration]min</value>
+	<value condition="ListItem.Type(clip)">$INFO[ListItem.Date][COLOR=mainblue] / [/COLOR]$INFO[ListItem.Duration]min</value>
+	<value condition="ListItem.type(movie) | Container.Content(tvshows)">$INFO[ListItem.Year][COLOR=mainblue] / [/COLOR]$INFO[ListItem.Duration]min</value>
+	<value condition="ListItem.Type(photo)">$INFO[ListItem.Date]</value>
+	<value condition="Container.Content(albums)">$INFO[ListItem.Album]</value>
+	<value condition="Container.Content(artists)">$INFO[ListItem.Genre]</value>
+	<value condition="Container.Content(songs)">$INFO[ListItem.Label][COLOR=mainblue] / [/COLOR]$INFO[ListItem.Duration]</value>
+	<value>$INFO[ListItem.Label]</value>
+</variable>
+
+
+<!-- Viewmode Information MORE -->
+<include name="Viewmode_Horizontal_Info_More">
+	<control type="group">
+
+		<!-- Content Rating -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>11</posy>
+			<width>80</width>
+			<height>70</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<texture>$INFO[ListItem.Art(mediaTag::contentRating)]</texture>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>!isEmpty(ListItem.Art(mediaTag::contentRating))</visible>	
+			<include>Animation_CommonFade_600</include>
+		</control>
+
+		<!-- Star Rating -->
+		<control type="image">
+			<posy>95</posy>
+			<width>80</width>
+			<height>20</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>mainblue</colordiffuse>
+			<texture>$INFO[ListItem.StarRating]</texture>
+			<align>center</align>
+		</control>
+
+		<!-- Plot -->
+		<control type="textbox">
+                        <posx>90</posx>
+                        <posy>0</posy>
+                        <width>600</width>
+                        <height>90</height>
+                        <align>justify</align>
+                        <info>ListItem.Plot</info>
+                        <font>Font_Bartowski_Movies_Plot</font>
+                        <textcolor>ffffffff</textcolor>
+                        <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<animation effect="slide" end="-85" tween="quadratic" easing="out" time="400" condition="isEmpty(ListItem.Art(mediaTag::contentRating))">Conditional</animation>
+			<visible>!Container.Content(artists)</visible>
+                </control>
+		<control type="textbox">
+                        <posx>90</posx>
+                        <posy>0</posy>
+                        <width>600</width>
+                        <height>90</height>
+                        <align>justify</align>
+                        <info>ListItem.Property(summary)</info>
+                        <font>Font_Bartowski_Movies_Plot</font>
+                        <textcolor>ffffffff</textcolor>
+                        <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<animation effect="slide" end="-85" tween="quadratic" easing="out" time="400" condition="isEmpty(ListItem.Art(mediaTag::contentRating))">Conditional</animation>
+			<visible>Container.Content(artists)</visible>
+                </control>
+
+		<!-- Studio Logo -->
+		<!--<control type="image">
+			<posy>10</posy>
+			<posx>720</posx>
+			<width>110</width>
+			<height>110</height>
+			<colordiffuse>88FFFFFF</colordiffuse>
+			<texture>$VAR[Deck_Label_Studio]</texture>
+			<aspectratio>keep</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>-->
+		<!-- Mediaflags -->
+		<control type="grouplist">
+			<posx>100</posx>
+			<posy>100</posy>
+			<width>600</width>
+			<height>20</height>
+			<orientation>horizontal</orientation>
+			<itemgap>30</itemgap>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_VideoResolution]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_AudioCodec]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_AudioChannels]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_AspectRatio]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+			<control type="image">
+				<height>16</height>
+				<width min="29" max="100">auto</width>
+				<texture>$VAR[Deck_Label_VideoCodec]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+			</control>
+		</control>
+
+	</control>
+</include>
+
+<!-- Autohide -->
+<include name="Animation_Infocard_Autohide_Left">
+	<animation effect="slide" start="-500" end="0" time="600" delay="3000" tween="quadratic" easing="out" condition="![Container.OnNext | Container.OnPrevious]">Conditional</animation>
+	<!--<animation effect="slide" end="-500" time="600" tween="quadratic" easing="out" condition="![Container.OnNext | Container.OnPrevious]">Conditional</animation>-->
+	<!--<animation effect="slide" end="500" time="2000" delay="1000" tween="quadratic" easing="out" condition="Container.OnNext | Container.OnPrevious">Conditional</animation>
+	<animation effect="slide" start="-500" end="0" time="600" delay="500" tween="quadratic" easing="out" condition="![Container.OnNext | Container.OnPrevious]">Conditional</animation>-->
+</include>
+<include name="Animation_Infocard_Autohide_Right">
+	<animation effect="slide" start="500" end="0" time="600" delay="3000" tween="quadratic" easing="out" condition="![Container.OnNext | Container.OnPrevious]">Conditional</animation>
+</include>
+<include name="Animation_Infocard_Autohide_Center">
+	<animation effect="fade" start="0" end="100" time="600" condition="![Container.OnNext | Container.OnPrevious]">Conditional</animation>
+</include>
+
+
+<!-- Viewtype Option Normal/Transparent -->
+<include name="Viewmode_Layout_Image_Transparent">
+	<animation effect="fade" start="100" end="20" time="400" delay="0" condition="[ Container.Content(movies) | Container.Content(episodes) ] + StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+	<animation effect="fade" start="100" end="20" time="400" delay="0" condition="[ Container.Content(tvshows) | Container.Content(seasons) ] + !IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)">Conditional</animation>
+</include>
+<include name="Viewmode_Layout_Image_TransparentFocus">
+	<animation effect="fade" start="20" end="40" time="0" delay="0" condition="[ Container.Content(movies) | Container.Content(episodes) ] + StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+	<animation effect="fade" start="20" end="40" time="0" delay="0" condition="[ Container.Content(tvshows) | Container.Content(seasons) ] + !IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)">Conditional</animation>
+</include>
+
+
+<!-- Viewmode List Overlay -->                                
+<include name="Viewmode_List_Overlay">
+	<animation effect="slide" end="40" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(homemovies)">Conditional</animation>
+</include>
+
+</includes>

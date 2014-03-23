@@ -4,36 +4,25 @@
   <animation effect="fade" start="100" end="0" time="1000" reversible="true">WindowClose</animation>
   <controls>
 
-	<!-- Background -->
 	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<texture>music-background.jpg</texture>
-		<animation effect="fade" start="0"  end="20" time="500" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="20" end="0" time="500" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="20" time="500" delay="0">Visible</animation>
-		<animation effect="fade" start="0" end="20" time="500" delay="0">Hidden</animation>
-		<include>background_kenburns</include>
-		<visible>IsEmpty(Player.Art(fanart))</visible>
-	</control>
-	<!-- Artist Fanart -->
-	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<texture>$INFO[Player.Art(fanart)]</texture>
-		<animation effect="fade" start="0" end="20" time="500" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="20" end="0" time="500" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="20" time="500" delay="0">Visible</animation>
-		<animation effect="fade" start="0" end="20" time="500" delay="0">Hidden</animation>
-		<include>background_kenburns</include>
-		<visible>!IsEmpty(Player.Art(fanart))</visible>
-	</control>
+		<include>background_default</include>
+		<texture background="true">$INFO[Player.Art(fanart)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(NowPlaying_Fadetime))">NowPlaying_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(NowPlaying_Fadetime))">NowPlaying_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(NowPlaying_TimePerImage))">NowPlaying_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(NowPlaying_TimePerImage))">NowPlaying_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(NowPlaying_Opacity))">NowPlaying_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(NowPlaying_Opacity))">NowPlaying_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(NowPlaying_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(NowPlaying_Single)) | !isEmpty(Skin.String(NowPlaying_Multi))]</visible>
+        </control>
+        <include>NowPlaying_Custom</include>
 
-
+	<!-- Progress -->
 	<control type="group">
  	<visible>!Skin.HasSetting(CDArtNowPlayingYes)</visible>   
     <!-- Normal view -->

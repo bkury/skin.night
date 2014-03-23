@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <window id="100">
-	<defaultcontrol>56</defaultcontrol>
+	<defaultcontrol>100</defaultcontrol>
 	<onunload>Skin.SetString(mysharedcontent_servername,$INFO[ListItem.Property(sourceTitle)])</onunload>
+        <allowoverlay>yes</allowoverlay>
+        <views>100,210,310</views>
 	<controls>
 
 	<!-- Deck Background -->
@@ -187,11 +189,18 @@
                 </control>
 
 		<!-- MySharedContent Screen/Deck -->
-		<include condition="Skin.HasSetting(mysharedcontent_helper)">mysharedcontent_deck</include>
-		<include condition="!Skin.HasSetting(mysharedcontent_helper)">Shared_Navigation</include>
+		<control type="group">
+                        <visible>Control.isVisible(100)</visible>
+			<include condition="Skin.HasSetting(mysharedcontent_helper)">mysharedcontent_deck</include>
+			<include condition="!Skin.HasSetting(mysharedcontent_helper)">Shared_Navigation</include>
+		</control>
+                
+		<include>Viewmode_Poster</include>
+		<include>Viewmode_Panel</include>
+                
+		<include>viewtype_clock</include>
+		<include>viewtype_navigation</include>
 
-		<include>Music_Global_LowerRight</include>
-		<include>Global_Time_TopRight_Library</include>
 	</control>
 
 	</controls>

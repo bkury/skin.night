@@ -39,7 +39,7 @@
 		<font>
 			<name>AeonFont_MainMenu_Focus</name>
 			<filename>aeon_main.ttf</filename>
-			<size>92</size>
+			<size>90</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_MainMenu</name>
@@ -152,6 +152,12 @@
 			<linespacing>1</linespacing>
 		</font>
 		<font>
+			<name>Font_Bartowski_List_Label</name>
+			<filename>HelveticaNeueLight.ttf</filename>
+			<size>18</size>
+			<linespacing>1</linespacing>
+		</font>
+		<font>
 			<name>Font_Bartowski_OSD_Time</name>
 			<filename>HelveticaNeueLight.ttf</filename>
 			<size>18</size>
@@ -235,6 +241,12 @@
 			<size>20</size>
 			<linespacing>1.3</linespacing>
 			<!--<linespacing>0.8</linespacing>-->
+		</font>
+		<font>
+			<name>Viewmode_Image_Label</name>
+			<filename>HelveticaNeueLight.ttf</filename>
+			<size>12</size>
+			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Font_Bartowski_Unwatched</name>

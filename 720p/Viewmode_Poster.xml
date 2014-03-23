@@ -1,0 +1,71 @@
+<!-- Viewmode Poster (200/210/220) -->
+<includes>
+	<include name="Viewmode_Poster">
+
+		<!-- Poster #1 (Info/200) -->
+		<control type="fixedlist" id="200">
+			<focusposition>0</focusposition>
+                        <posx>430</posx>
+                        <posy>480</posy>
+                        <width>819</width>
+                        <height>300</height>
+			<onup>7000</onup>
+			<ondown>7000</ondown>
+                        <orientation>horizontal</orientation>
+                        <viewtype label="Poster #1">list</viewtype>
+                        <preloaditems>2</preloaditems>
+
+			<animation effect="slide" end="0,40" condition="Skin.HasSetting(Poster1_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="0,-80" condition="Skin.HasSetting(Poster1_Images_Large)">Conditional</animation>
+
+			<!-- Layout -->
+                        <include>Viewmode_Poster1_General</include>
+                        <include>Viewmode_Poster1_Itemlayout</include>
+		</control>
+
+		<!-- Poster #2 (Full/210) -->
+		<control type="fixedlist" id="210">
+			<focusposition>4</focusposition>
+                        <posx>-80</posx>
+                        <posy>460</posy>
+                        <width>1380</width>
+                        <height>300</height>
+			<onup>7000</onup>
+			<ondown>7000</ondown>
+                        <orientation>horizontal</orientation>
+                        <viewtype label="Poster #2">list</viewtype>
+                        <preloaditems>2</preloaditems>
+
+			<animation effect="slide" end="0,40" condition="Skin.HasSetting(Poster2_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="0,-80" condition="Skin.HasSetting(Poster2_Images_Large)">Conditional</animation>
+
+			<!-- Layout -->
+                        <include>Viewmode_Poster2_General_NoSidebar</include>
+                        <include>Viewmode_Poster2_Itemlayout</include>
+
+                </control>
+
+		<!-- Poster #3 (Deck/220) -->
+		<control type="fixedlist" id="220">
+			<visible>false</visible>
+			<focusposition>4</focusposition>
+                        <posx>-80</posx>
+                        <posy>460</posy>
+                        <width>1380</width>
+                        <height>300</height>
+			<onup>7000</onup>
+			<ondown>7000</ondown>
+                        <orientation>horizontal</orientation>
+                        <viewtype label="Poster #2">list</viewtype>
+                        <preloaditems>2</preloaditems>
+
+			<animation effect="slide" end="0,40" condition="Skin.HasSetting(Poster2_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="0,-80" condition="Skin.HasSetting(Poster2_Images_Large)">Conditional</animation>
+
+			<!-- Layout -->
+                        <include>Viewmode_Poster2_General_NoSidebar</include>
+                        <include>Viewmode_Poster2_Itemlayout</include>
+
+                </control>
+	</include>
+</includes>

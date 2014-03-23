@@ -1,0 +1,89 @@
+<!-- Viewmode Panel -->
+<includes>
+
+<include name="Viewmode_Visible_Cover">
+	<visible>Container.Content(movies) | Container.Content(homemovies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
+</include>
+
+<include name="Viewmode_Visible_Thumb">
+	<visible>Container.Content(episodes) | Container.Content(clips) | Container.Content(clip) | ListItem.Type(clip) | ListItem.Type(clips)</visible>
+</include>
+
+<include name="Viewmode_Visible_Square">
+	<visible>Container.Content(channel) + !ListItem.Type(clip) | Container.Content(channels) + !ListItem.Type(clip) | Container.Content(photoAlbums) | Container.Content(photos) | Container.Content(albums) | Container.Content(Songs) | Container.Content(Artists) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)</visible>
+</include>
+
+<!--<include name="Viewmode_Visible_Mirror">
+	<visible>Control.HasFocus(55)</visible>
+</include>-->
+
+<!-- VIEWTYPE PANEL -->
+<include name="Viewmode_Panel">
+
+		<!-- Panel #1 -->
+		<control type="panel" id="300">
+			<posx>445</posx>
+			<posy>40</posy>
+			<width>900</width>
+			<height>640</height>
+			<onleft>7000</onleft>
+			<orientation>vertical</orientation>
+			<preloaditems>2</preloaditems>
+			<viewtype label="Panel #1">panel</viewtype>
+
+			<!-- Position Size -->
+			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Large)">Conditional</animation>
+
+                        <include>Viewmode_Panel1_General</include>
+			<include>Viewmode_Panel1_Itemlayout</include>
+		</control>
+
+		<!-- Panel -->
+		<control type="panel" id="310">
+			<posx>80</posx>
+			<posy>40</posy>
+			<width>1120</width>
+			<height>640</height>
+			<onleft>7000</onleft>
+			<orientation>vertical</orientation>
+			<preloaditems>2</preloaditems>
+			<viewtype label="Panel #2">panel</viewtype>
+
+                        <include>Viewmode_Panel2_General_NoSidebar</include>
+			<include>Viewmode_Panel2_Itemlayout</include>
+		</control>
+
+</include>
+
+<include name="Viewmode_Focus">
+	<animation type="Focus" reversible="false">
+		<effect type="zoom" center="auto" end="120" time="300" tween="back" easing="out" loop="true" />
+	</animation>
+	<!--<animation type="Focus" reversible="false">
+		<effect type="rotatex" center="auto" end="360" time="2000" tween="cubic" easing="out" />
+		<effect type="rotatex" center="auto" end="360" time="2000" tween="cubic" easing="out" />
+		<effect type="rotatey" center="auto" end="360" time="2000" tween="cubic" easing="out" />
+	</animation>-->
+
+<!--	<animation type="Conditional" reversible="false" condition="true" loop="true">
+		<effect type="zoom" center="auto" start="110" end="100" time="1000" delay="2000" tween="back" easing="out" loop="true" />
+		<effect type="zoom" center="auto" start="100" end="110" time="1000" delay="3000" tween="back" easing="out" loop="true" />
+	</animation>-->
+
+</include>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</includes>

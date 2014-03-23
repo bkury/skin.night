@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
 <window id="99">
-	<defaultcontrol>70</defaultcontrol>
+	<defaultcontrol>100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>70</views>
-	<!--<onload>Skin.SetString(SectionType,channels)</onload>-->
-	<!--<onunload>SetFocus(50)</onunload>-->
-	<!--<onunload>Skin.Reset(SectionType)</onunload>-->
+	<views>100,210,310</views>
 	<controls>
 
 		<!-- Channel Logo Background -->
@@ -18,7 +15,7 @@
 
 		<!-- Channel Logo (Settings) -->
 		<control type="group">
-			<visible>Control.IsVisible(70)</visible>
+			<visible>Control.IsVisible(100)</visible>
 			<control type="group">
 
 				<!-- Fanart -->
@@ -68,11 +65,19 @@
 		                        <visible>!Skin.HasSetting(HomeArrow)</visible>
 		                </control>
 			</control>
-
-			<include>Channel_Navigation</include>
-
 		</control>
-	<include>Music_Global_LowerRight</include>
-	<include>Global_Time_TopRight_Library</include>
+
+		<control type="group">
+			<visible>Control.isVisible(100)</visible>
+			<include>Channel_Navigation</include>
+		</control>
+
+		<include>Viewmode_Poster</include>
+		<include>Viewmode_Panel</include>
+
+		<include>viewtype_clock</include>
+		<include>viewtype_navigation</include>
+		<include>viewtype_scrolling</include>
+
 	</controls>
 </window>

@@ -1,18 +1,4 @@
 <includes>
-	<!-- Common animations -->
-	<include name="Background_ImageFolder">
-		<animation effect="fade" start="20" end="100" time="800" delay="150">Visible</animation>
-		<animation effect="fade" end="0" time="600">Hidden</animation>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<imagepath>-</imagepath>
-		<timeperimage>20000</timeperimage>
-		<fadetime>2000</fadetime>
-		<randomize>true</randomize>
-        <visible>![Control.IsVisible(87) | [Skin.HasSetting(homevis) + Player.HasAudio + Window.IsActive(Home)]]</visible>
-	</include>
 
 	<include name="MediaInfoDelay">
 		<animation effect="fade" start="0" end="100" time="600" delay="4000" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>

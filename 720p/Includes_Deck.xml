@@ -269,7 +269,33 @@
 			<textcolor>mainblue</textcolor>
 			<wrapmultiline>false</wrapmultiline>
 			<width min="1" max="870">auto</width>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
 		</control>
+		<control type="label">
+			<posy>0</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Deck_Label_Title_1]</label>
+			<font>AeonFont_MainMenu_Focus</font>
+			<scroll>false</scroll>
+			<textcolor>mainblue</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="870">auto</width>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+		<!-- Animation Test -->
+		<!--<control type="label">
+			<posy>0</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;</label>
+
+			<font>Font_Bartowski_MainMenu</font>
+			<textcolor>mainblue</textcolor>
+			<width min="1" max="870">auto</width>
+			<visible>Control.hasFocus(300)</visible>
+		</control>-->
+
 		<control type="label">
 			<posy>80</posy>
 			<height>80</height>
@@ -280,7 +306,30 @@
 			<textcolor>white</textcolor>
 			<wrapmultiline>false</wrapmultiline>
 			<width min="1" max="850">auto</width>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
 		</control>
+		<control type="label">
+			<posy>85</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>$VAR[Deck_Label_Title_2]</label>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<scroll>true</scroll>
+			<textcolor>white</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<width min="1" max="850">auto</width>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+		<!--
+		<control type="label">
+			<posy>85</posy>
+			<height>80</height>
+			<align>left</align>
+			<label>&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;</label>
+			<font>Font_Bartowski_MainMenu</font>
+			<textcolor>white</textcolor>
+			<visible>Control.hasFocus(300)</visible>
+		</control>-->
 	</control>
 </include>
 <variable name="Deck_Label_Title_1">
@@ -319,13 +368,13 @@
 
 	<!-- Shared Content -->
 	<value condition="Control.HasFocus(56)">$INFO[Container(56).ListItem.Label]</value>
-
 </variable>
 <variable name="Deck_Label_Title_2">
 	<!-- Recently Added -->
 	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(episode)">$INFO[Container(11000).ListItem.Title][COLOR=mainblue] / [/COLOR]$INFO[Container(11000).ListItem(0).Duration]min</value>
 	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(movie)">$INFO[Container(11000).ListItem.Year][COLOR=mainblue] / [/COLOR]$INFO[Container(11000).ListItem(0).Duration]min</value>
 	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(album)">$INFO[Container(11000).ListItem.Album]</value>
+	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(photo)">$INFO[Container(11000).ListItem.Date]</value>
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001) + Container(11001).ListItem.Type(episode)">$INFO[Container(11001).ListItem(0).Title][COLOR=mainblue] / [/COLOR]$INFO[Container(11001).ListItem(0).Duration]min</value>
@@ -343,22 +392,25 @@
 	<control type="group">
 		<visible>!Skin.HasSetting(deck_moreinfo)</visible>
 		<posy>30</posy>
+
 		<!-- Content Rating -->
 		<control type="image">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>70</width>
+			<posx>0</posx>
+			<posy>11</posy>
+			<width>80</width>
 			<height>70</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>88FFFFFF</colordiffuse>
 			<texture>$VAR[Deck_Label_ContentRating]</texture>
+			<!--<texture>$VAR[Deck_Label_ContentRating]</texture>-->
 			<align>center</align>
 			<aligny>center</aligny>
 		</control>
+
 		<!-- Star Rating -->
 		<control type="image">
-			<posy>97</posy>
-			<width>90</width>
+			<posy>95</posy>
+			<width>80</width>
 			<height>20</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>mainblue</colordiffuse>
@@ -368,7 +420,7 @@
 		</control>
 		<!-- Plot -->
 		<control type="textbox">
-                        <posx>100</posx>
+                        <posx>90</posx>
                         <posy>0</posy>
                         <width>600</width>
                         <height>90</height>
@@ -378,8 +430,21 @@
                         <textcolor>ffffffff</textcolor>
                         <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
                 </control>
+
+		<!-- Animation Test -->
+		<!--<control type="textbox">
+                        <posx>90</posx>
+                        <posy>0</posy>
+                        <width>600</width>
+                        <height>90</height>
+                        <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+                        <font>Font_Bartowski_Movies_Plot</font>
+                        <textcolor>ffffffff</textcolor>
+			<visible>Control.hasFocus(300)</visible>
+                </control>-->
+
 		<!-- Studio Logo -->
-		<control type="image">
+		<!--<control type="image">
 			<posy>10</posy>
 			<posx>720</posx>
 			<width>110</width>
@@ -389,7 +454,7 @@
 			<aspectratio>keep</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
-		</control>
+		</control>-->
 		<!-- Mediaflags -->
 		<control type="grouplist">
 			<posx>100</posx>
@@ -446,10 +511,13 @@
 </variable>
 <variable name="Deck_Label_ContentRating">
 	<!-- Recently Added -->
-	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).ListItem.Art(mediaTag::contentRating)]</value>
+	<value condition="Control.HasFocus(11000) + !isEmpty(Container(11000).ListItem.Art(mediaTag::contentRating))">$INFO[Container(11000).ListItem.Art(mediaTag::contentRating)]</value>
 
 	<!-- On Deck -->
-	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).ListItem.Art(mediaTag::contentRating)]</value>
+	<value condition="Control.HasFocus(11001) + !isEmpty(Container(11001).ListItem.Art(mediaTag::contentRating))">$INFO[Container(11001).ListItem.Art(mediaTag::contentRating)]</value>
+
+	<!-- Fallback -->
+	<value condition="!Control.HasFocus(300)">DefaultVideoCover.png</value>
 </variable>
 <variable name="Deck_Label_StarRating">
 	<!-- Recently Added -->
@@ -580,7 +648,7 @@
 
 <!-- Deck Visibility -->
 <include name="Deck_Visible_Half">
-	<visible>ListItem.Type(photo) | ListItem.Type(album) | ListItem.Type(channel) | ListItem.Type(channels) | ListItem.Type(clip) | Skin.HasSetting(mysharedcontent_helper</visible>
+	<visible>ListItem.Type(photo) | ListItem.Type(album) | ListItem.Type(channel) | ListItem.Type(channels) | ListItem.Type(clip) | Skin.HasSetting(mysharedcontent_helper)</visible>
 </include>
 
 <include name="Deck_Visible_Full">

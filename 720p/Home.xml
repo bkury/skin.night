@@ -301,7 +301,7 @@
 			<texture>dialogs/trailer_diffuse_back.png</texture>
 		</control>
 		<control type="videowindow" id="8">
-			<posx>30</posx>
+			<posx>320</posx>
 			<posy>26</posy>
 			<width>500</width>
 			<height>256</height>
@@ -309,12 +309,8 @@
 	</control>
 
 	<!-- Clock -->
-	<include>Music_Global_LowerRight</include>
 	<include>Global_Time_Home</include>
 	<include>Global_Time_Home_Big</include>
-
-	<!-- RSS -->
-	<!--<include>Global_RSS</include>-->
 
 	</controls>
 </window>

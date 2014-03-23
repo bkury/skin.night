@@ -244,6 +244,12 @@
 						<onclick>Skin.Reset(preplay_before)</onclick>
 						<selected>Skin.HasSetting(preplay_after)</selected>
 					</control>
+					<control type="radiobutton" id="128">
+						<include>skin_settings_labels</include>
+						<label>Disable Separator Lines</label>
+						<onclick>Skin.ToggleSetting(Preplay_NoSeparator)</onclick>
+						<selected>Skin.HasSetting(Preplay_NoSeparator)</selected>
+					</control>
 
 					<!-- Navigation Style -->
 					<control type="label" id="130">
@@ -984,8 +990,24 @@
 						</control>
 						<include>Background_Settings_Settings</include>
 
-						<!-- Search -->		 
+						<!-- NowPlaying -->		 
 						<control type="label" id="380">
+                                                	<width>860</width>
+	                                                <height>35</height>
+	                                                <font>font13caps</font>
+	                                                <label>Now Playing</label><!-- LOC -->
+	                                                <textcolor>white</textcolor>
+	                                                <shadowcolor>black</shadowcolor>
+	                                                <align>left</align>
+	                                                <aligny>center</aligny>
+	                                        </control>
+						<control type="image" id="381">
+							<include>settings_separator</include>
+						</control>
+						<include>Background_Settings_NowPlaying</include>
+
+						<!-- Search -->		 
+						<control type="label" id="400">
                                                 	<width>860</width>
 	                                                <height>35</height>
 	                                                <font>font13caps</font>
@@ -995,7 +1017,7 @@
 	                                                <align>left</align>
 	                                                <aligny>center</aligny>
 	                                        </control>
-						<control type="image" id="381">
+						<control type="image" id="401">
 							<include>settings_separator</include>
 						</control>
 						<include>Background_Settings_Search</include>
@@ -1237,13 +1259,13 @@
 							<width>860</width>
 							<height>35</height>
 							<font>font13caps</font>
-							<label>$LOCALIZE[31047]</label>
+							<label>Seasons</label>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="image" id="102">
+						<control type="image" id="601">
 							<include>settings_separator</include>
 						</control>
 						<control type="radiobutton" id="655">
@@ -1252,121 +1274,7 @@
 							<onclick>Skin.ToggleSetting(no_16x9)</onclick>
 							<selected>Skin.HasSetting(no_16x9)</selected>
 						</control>
-						<control type="radiobutton" id="602">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31049]"</label>
-							<onclick>Skin.ToggleSetting(no_BannerPanel)</onclick>
-							<selected>Skin.HasSetting(no_BannerPanel)</selected>
-						</control>
-						<control type="radiobutton" id="603">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[20359]"</label>
-							<onclick>Skin.ToggleSetting(no_Episode)</onclick>
-							<selected>Skin.HasSetting(no_Episode)</selected>
-						</control>
-						<control type="radiobutton" id="604">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31051]"</label>
-							<onclick>Skin.ToggleSetting(no_Panel)</onclick>
-							<selected>Skin.HasSetting(no_Panel)</selected>
-						</control>
-						<control type="radiobutton" id="605">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31052]"</label>
-							<onclick>Skin.ToggleSetting(no_Landscape)</onclick>
-							<selected>Skin.HasSetting(no_Landscape)</selected>
-						</control>
-						<control type="radiobutton" id="606">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31053]"</label>
-							<onclick>Skin.ToggleSetting(no_3DLandscape)</onclick>
-							<selected>Skin.HasSetting(no_3DLandscape)</selected>
-						</control>
-						<control type="radiobutton" id="607">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31054]"</label>
-							<onclick>Skin.ToggleSetting(no_LandPanel)</onclick>
-							<selected>Skin.HasSetting(no_LandPanel)</selected>
-						</control>
-						<control type="radiobutton" id="608">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31062]"</label>
-							<onclick>Skin.ToggleSetting(no_Poster)</onclick>
-							<selected>Skin.HasSetting(no_Poster)</selected>
-						</control>
-						<control type="radiobutton" id="609">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31063]"</label>
-							<onclick>Skin.ToggleSetting(no_Showcase)</onclick>
-							<selected>Skin.HasSetting(no_Showcase)</selected>
-						</control>
-						<control type="radiobutton" id="610">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31064]"</label>
-							<onclick>Skin.ToggleSetting(no_Wall)</onclick>
-							<selected>Skin.HasSetting(no_Wall)</selected>
-						</control>
-						<control type="radiobutton" id="611">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31213]"</label>
-							<onclick>Skin.ToggleSetting(no_WallPanel)</onclick>
-							<selected>Skin.HasSetting(no_WallPanel)</selected>
-						</control>
-						<control type="radiobutton" id="612">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31245]"</label>
-							<onclick>Skin.ToggleSetting(no_Landscape_Fanart)</onclick>
-							<selected>Skin.HasSetting(no_Landscape_Fanart)</selected>
-						</control>
-						<control type="radiobutton" id="614">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31250]"</label>
-							<onclick>Skin.ToggleSetting(no_3dbanner)</onclick>
-							<selected>Skin.HasSetting(no_3dbanner)</selected>
-						</control>
-						<control type="radiobutton" id="615">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31279]"</label>
-							<onclick>Skin.ToggleSetting(no_Slide)</onclick>
-							<selected>Skin.HasSetting(no_Slide)</selected>
-						</control>
-						<control type="label" id="616">
-							<width>860</width>
-							<height>35</height>
-							<font>font13caps</font>
-							<label>$LOCALIZE[31065]</label>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-	                                        <control type="image" id="656">
-							<include>settings_separator</include>
-						</control>
-						<control type="radiobutton" id="617">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31066]"</label>
-							<onclick>Skin.ToggleSetting(no_Jukebox)</onclick>
-							<selected>Skin.HasSetting(no_Jukebox)</selected>
-						</control>
-						<control type="radiobutton" id="618">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31063]"</label>
-							<onclick>Skin.ToggleSetting(no_MusicShowcase)</onclick>
-							<selected>Skin.HasSetting(no_MusicShowcase)</selected>
-						</control>
-						<control type="radiobutton" id="619">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31064]"</label>
-							<onclick>Skin.ToggleSetting(no_MusicWall)</onclick>
-							<selected>Skin.HasSetting(no_MusicWall)</selected>
-						</control>
-						<control type="radiobutton" id="620">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31288]"</label>
-							<onclick>Skin.ToggleSetting(no_Shelf)</onclick>
-							<selected>Skin.HasSetting(no_Shelf)</selected>
-						</control>
+
 					</control>
 				</control>
 
