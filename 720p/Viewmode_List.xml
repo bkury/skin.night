@@ -98,8 +98,8 @@
 			<onright>60</onright>
 			<viewtype label="List #1">list</viewtype>
 			<orientation>vertical</orientation>
-			<focusposition>8</focusposition>
-			<movement>8</movement>
+			<focusposition>5</focusposition>
+			<movement>5</movement>
 
 			<include>Viewmode_List1_General</include>
 			<include>Viewmode_List1_Itemlayout</include>
@@ -127,14 +127,14 @@
 		<control type="fixedlist" id="120">
 			<posx>330</posx>
 			<posy>420</posy>
-			<height>286</height>
+			<height>280</height>
 			<width>540</width>
 			<onleft>7000</onleft>
 			<onright>60</onright>
 			<viewtype label="List #3">list</viewtype>
 			<orientation>vertical</orientation>
-			<focusposition>3</focusposition>
-			<movement>3</movement>
+			<focusposition>2</focusposition>
+			<movement>2</movement>
 			<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
 
 			<include>Viewmode_List2_General_NoSidebar</include>

@@ -47,24 +47,23 @@
 
 		<!-- Poster #3 (Deck/220) -->
 		<control type="fixedlist" id="220">
-			<visible>false</visible>
-			<focusposition>4</focusposition>
+			<focusposition>1</focusposition>
                         <posx>-80</posx>
-                        <posy>460</posy>
+                        <posy>240</posy>
                         <width>1380</width>
                         <height>300</height>
 			<onup>7000</onup>
 			<ondown>7000</ondown>
                         <orientation>horizontal</orientation>
-                        <viewtype label="Poster #2">list</viewtype>
+                        <viewtype label="Poster #3">list</viewtype>
                         <preloaditems>2</preloaditems>
 
-			<animation effect="slide" end="0,40" condition="Skin.HasSetting(Poster2_Images_Small)">Conditional</animation>
-			<animation effect="slide" end="0,-80" condition="Skin.HasSetting(Poster2_Images_Large)">Conditional</animation>
+			<animation effect="slide" end="0,20" condition="Skin.HasSetting(Poster3_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="0,-40" condition="Skin.HasSetting(Poster3_Images_Large)">Conditional</animation>
 
 			<!-- Layout -->
-                        <include>Viewmode_Poster2_General_NoSidebar</include>
-                        <include>Viewmode_Poster2_Itemlayout</include>
+                        <include>Viewmode_Poster3_General_NoSidebar</include>
+                        <include>Viewmode_Poster3_Itemlayout</include>
 
                 </control>
 	</include>

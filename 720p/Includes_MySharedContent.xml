@@ -15,22 +15,21 @@
 			<include>Deck_Name</include>
 			<label>Shared Content</label>
 		</control>
-		<control type="fixedlist" id="56">
-			<!--<visible allowhiddenfocus="true">true</visible>-->
+		<control type="fixedlist" id="100">
 			<onleft>ReplaceWindow(home)</onleft>
 			<ondown>ReplaceWindow(home)</ondown>
 			<onup>ReplaceWindow(home)</onup>
 			<include>Deck_Content</include>
 		</control>
 		<control type="group">
-			<visible>Control.hasFocus(56)</visible>
+			<visible>Control.hasFocus(100)</visible>
 			<include>Animation_CommonFade_600</include>
 			<include>Deck_Focus</include>
 		</control>
 	</control>
    
 	<control type="group">
-		<visible>Control.HasFocus(56)</visible>
+		<visible>Control.HasFocus(100)</visible>
 		<include>Animation_CommonFade_600</include>
 		<include>Deck_Information_Position</include>
 		<include>Deck_Information</include>

@@ -738,6 +738,21 @@
 			<filename>Title.ttf</filename>
 			<size>16</size>
 		</font>
+		<font>
+			<name>Viewmode_List_Font_Small</name>
+			<filename>scoutlightnc.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Viewmode_List_Font_Medium</name>
+			<filename>scoutlightnc.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>Viewmode_List_Font_Large</name>
+			<filename>scoutlightnc.ttf</filename>
+			<size>38</size>
+		</font>
 
 
 	</fontset>

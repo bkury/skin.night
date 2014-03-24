@@ -612,6 +612,13 @@
 					<selected>StringCompare(Container.Viewmode,Poster #2)</selected>
 					<include>radiobutton_ticked</include>
 				</control>
+				<control type="radiobutton" id="3524">
+					<width>130</width>
+					<label>Deck</label>
+					<onclick>Container.SetViewMode(220)</onclick>
+					<selected>StringCompare(Container.Viewmode,Poster #3)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
 			</control>
 
 

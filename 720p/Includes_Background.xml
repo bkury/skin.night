@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Sun Mar 23 21:41:54 CET 2014 -->
+<!-- Mon Mar 24 23:42:30 CET 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -340,6 +340,74 @@
 			<effect type="fade" start="100" end="0" time="600"/>
 		</animation>
 		<visible>Skin.HasSetting(Poster2_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Poster3 (220) -->
+<control type="group">
+        <visible>Control.HasFocus(220) | [ Control.IsVisible(220) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Poster3_Fadetime))">Poster3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_Fadetime))">Poster3_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Poster3_TimePerImage))">Poster3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_TimePerImage))">Poster3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Poster3_Opacity))">Poster3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_Opacity))">Poster3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Poster3_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Poster3_Single)) | !isEmpty(Skin.String(Poster3_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Poster3_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Poster3_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Poster3_Fadetime))">Poster3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_Fadetime))">Poster3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Poster3_TimePerImage))">Poster3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_TimePerImage))">Poster3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Poster3_Opacity))">Poster3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_Opacity))">Poster3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Poster3_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Poster3_Single)) + isEmpty(Skin.String(Poster3_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Poster3_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Poster3_Fadetime))">Poster3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_Fadetime))">Poster3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Poster3_TimePerImage))">Poster3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_TimePerImage))">Poster3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Poster3_Opacity))">Poster3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Poster3_Opacity))">Poster3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Poster3_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Poster3_Single)) + !isEmpty(Skin.String(Poster3_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Poster3_Grainy)</visible>
 	</control>
 </control>
 
@@ -1567,8 +1635,156 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
 	</control>
-	<!-- Viewmode Panel1 (300) -->
+	<!-- Viewmode Poster3 (220) -->
 	<!--<control type="label" id="2060">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(220)</visible>
+	</control>-->
+	<control type="label" id="2061">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Background</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2062">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>$LOCALIZE[31601]</label>
+		<onclick>Skin.ToggleSetting(Poster3_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Poster3_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2063">
+		<width>220</width>
+		<description>Haze Effect</description>
+		<label>$LOCALIZE[31602]</label>
+		<onclick>Skin.ToggleSetting(Poster3_Grainy)</onclick>
+		<selected>Skin.HasSetting(Poster3_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2064">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>$LOCALIZE[31608]</label>
+		<onclick>Skin.SetString(selector1,Poster3)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Poster3_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2065">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>$LOCALIZE[31603]</label>
+		<onclick>Skin.SetString(selector1,Poster3)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Poster3_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2066">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>$LOCALIZE[31604]</label>
+		<onclick>Skin.SetString(selector1,Poster3)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Poster3_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2067">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Poster3_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Poster3_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Poster3_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220) + isEmpty(Skin.String(Poster3_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2068">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Poster3_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Poster3_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220) + !isEmpty(Skin.String(Poster3_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2069">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Poster3_Single)</onclick>
+		<onclick>Skin.SetPath(Poster3_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Poster3_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220) + isEmpty(Skin.String(Poster3_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2070">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Poster3_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Poster3_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220) + !isEmpty(Skin.String(Poster3_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2071">
+		<width>220</width>
+		<label>$LOCALIZE[31607]</label>
+		<onclick>Skin.Reset(Poster3_Single)</onclick>
+		<onclick>Skin.Reset(Poster3_Multi)</onclick>
+		<onclick>Skin.Reset(Poster3_Fadetime)</onclick>
+		<onclick>Skin.Reset(Poster3_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Poster3_Opacity)</onclick>
+		<onclick>Skin.Reset(Poster3_Grainy)</onclick>
+		<onclick>Skin.Reset(Poster3_Kenburns)</onclick>
+		<onclick>Skin.Reset(Poster3_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Viewmode Panel1 (300) -->
+	<!--<control type="label" id="2072">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -1579,7 +1795,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(300)</visible>
 	</control>-->
-	<control type="label" id="2061">
+	<control type="label" id="2073">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -1595,7 +1811,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>-->
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="2062">
+	<control type="radiobutton" id="2074">
 		<width>220</width>
 		<description>Kenburns</description>
 		<label>$LOCALIZE[31601]</label>
@@ -1606,7 +1822,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="2063">
+	<control type="radiobutton" id="2075">
 		<width>220</width>
 		<description>Haze Effect</description>
 		<label>$LOCALIZE[31602]</label>
@@ -1616,7 +1832,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="2064">
+	<control type="radiobutton" id="2076">
 		<width>220</width>
 		<description>Fadetime</description>
 		<label>$LOCALIZE[31608]</label>
@@ -1629,7 +1845,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="2065">
+	<control type="radiobutton" id="2077">
 		<width>220</width>
 		<description>TimePerImage</description>
 		<label>$LOCALIZE[31603]</label>
@@ -1642,7 +1858,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="2066">
+	<control type="radiobutton" id="2078">
 		<width>220</width>
 		<description>Opacity</description>
 		<label>$LOCALIZE[31604]</label>
@@ -1655,7 +1871,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="2067">
+	<control type="radiobutton" id="2079">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>$LOCALIZE[31605]</label>
@@ -1666,7 +1882,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300) + isEmpty(Skin.String(Panel1_Single))</visible>
 	</control>
-	<control type="radiobutton" id="2068">
+	<control type="radiobutton" id="2080">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>$LOCALIZE[31605]</label>
@@ -1677,7 +1893,7 @@
 		<visible>Control.IsVisible(300) + !isEmpty(Skin.String(Panel1_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="2069">
+	<control type="radiobutton" id="2081">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>$LOCALIZE[31606]</label>
@@ -1688,7 +1904,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300) + isEmpty(Skin.String(Panel1_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="2070">
+	<control type="radiobutton" id="2082">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>$LOCALIZE[31606]</label>
@@ -1699,7 +1915,7 @@
 		<visible>Control.IsVisible(300) + !isEmpty(Skin.String(Panel1_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="2071">
+	<control type="radiobutton" id="2083">
 		<width>220</width>
 		<label>$LOCALIZE[31607]</label>
 		<onclick>Skin.Reset(Panel1_Single)</onclick>
@@ -1716,7 +1932,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Viewmode Panel2 (310) -->
-	<!--<control type="label" id="2072">
+	<!--<control type="label" id="2084">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -1727,7 +1943,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(310)</visible>
 	</control>-->
-	<control type="label" id="2073">
+	<control type="label" id="2085">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -1743,7 +1959,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>-->
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="2074">
+	<control type="radiobutton" id="2086">
 		<width>220</width>
 		<description>Kenburns</description>
 		<label>$LOCALIZE[31601]</label>
@@ -1754,7 +1970,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="2075">
+	<control type="radiobutton" id="2087">
 		<width>220</width>
 		<description>Haze Effect</description>
 		<label>$LOCALIZE[31602]</label>
@@ -1764,7 +1980,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="2076">
+	<control type="radiobutton" id="2088">
 		<width>220</width>
 		<description>Fadetime</description>
 		<label>$LOCALIZE[31608]</label>
@@ -1777,7 +1993,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="2077">
+	<control type="radiobutton" id="2089">
 		<width>220</width>
 		<description>TimePerImage</description>
 		<label>$LOCALIZE[31603]</label>
@@ -1790,7 +2006,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="2078">
+	<control type="radiobutton" id="2090">
 		<width>220</width>
 		<description>Opacity</description>
 		<label>$LOCALIZE[31604]</label>
@@ -1803,7 +2019,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="2079">
+	<control type="radiobutton" id="2091">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>$LOCALIZE[31605]</label>
@@ -1814,7 +2030,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310) + isEmpty(Skin.String(Panel2_Single))</visible>
 	</control>
-	<control type="radiobutton" id="2080">
+	<control type="radiobutton" id="2092">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>$LOCALIZE[31605]</label>
@@ -1825,7 +2041,7 @@
 		<visible>Control.IsVisible(310) + !isEmpty(Skin.String(Panel2_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="2081">
+	<control type="radiobutton" id="2093">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>$LOCALIZE[31606]</label>
@@ -1836,7 +2052,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310) + isEmpty(Skin.String(Panel2_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="2082">
+	<control type="radiobutton" id="2094">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>$LOCALIZE[31606]</label>
@@ -1847,7 +2063,7 @@
 		<visible>Control.IsVisible(310) + !isEmpty(Skin.String(Panel2_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="2083">
+	<control type="radiobutton" id="2095">
 		<width>220</width>
 		<label>$LOCALIZE[31607]</label>
 		<onclick>Skin.Reset(Panel2_Single)</onclick>
@@ -2565,7 +2781,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
 	</control>
-	<!-- Viewmode Panel1 (300) -->
+	<!-- Viewmode Poster3 (220) -->
 	<!--<control type="label" id="3110">
 		<width>600</width>
 		<height>35</height>
@@ -2575,7 +2791,7 @@
 		<shadowcolor>black</shadowcolor>
 		<align>left</align>
 		<aligny>center</aligny>
-		<visible>Control.IsVisible(300)</visible>
+		<visible>Control.IsVisible(220)</visible>
 	</control>-->
 	<!-- Images Label -->
 	<control type="label" id="3111">
@@ -2587,10 +2803,150 @@
 		<shadowcolor>black</shadowcolor>
 		<align>left</align>
 		<aligny>center</aligny>
-		<visible>Control.IsVisible(300) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+		<visible>Control.IsVisible(220) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
 	<control type="label" id="3111">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Text</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(220) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (220) -->
+	<control type="radiobutton" id="3112">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>Small</label>
+		<onclick>Skin.Reset(Poster3_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Poster3_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Poster3_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Medium Images (220) -->
+	<control type="radiobutton" id="3113">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>Medium</label>
+		<onclick>Skin.Reset(Poster3_Images_Small)</onclick>
+		<onclick>Skin.Reset(Poster3_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Poster3_Images_Small) + !Skin.HasSetting(Poster3_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Large Images (220) -->
+	<control type="radiobutton" id="3114">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>Large</label>
+		<onclick>Skin.Reset(Poster3_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Poster3_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Poster3_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Watched Transparency (220) -->
+	<control type="radiobutton" id="3115">
+		<width>190</width>
+		<description>Transparency</description>
+		<label>Fade Watched</label>
+		<onclick>Skin.ToggleSetting(Poster3_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Poster3_Images_Transparent)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<control type="label" id="3116">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Focus</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+
+	<!-- Focus Effect Default (220) -->
+	<control type="radiobutton" id="3117">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>Zoom</label>
+		<onclick>Skin.Reset(Poster3_Focus_1)</onclick>
+		<onclick>Skin.Reset(Poster3_Focus_2)</onclick>
+		<onclick>Skin.Reset(Poster3_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Poster3_Focus_1) + !Skin.HasSetting(Poster3_Focus_2) + !Skin.HasSetting(Poster3_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Focus Effect #1 (220) -->
+	<control type="radiobutton" id="3118">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>RotateX</label>
+                <onclick>Skin.Reset(Poster3_Focus_2)</onclick>
+                <onclick>Skin.Reset(Poster3_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Poster3_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Poster3_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Focus Effect #2 (220) -->
+	<control type="radiobutton" id="3119">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+		<label>RotateY</label>
+		<onclick>Skin.Reset(Poster3_Focus_1)</onclick>
+                <onclick>Skin.Reset(Poster3_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Poster3_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Poster3_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Focus Effect #3 (220) -->
+	<control type="radiobutton" id="3120">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+		<label>Rotate</label>
+		<onclick>Skin.Reset(Poster3_Focus_1)</onclick>
+                <onclick>Skin.Reset(Poster3_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Poster3_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Poster3_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Viewmode Panel1 (300) -->
+	<!--<control type="label" id="3132">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(300)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3133">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Images</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(300) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3133">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2603,7 +2959,7 @@
 	</control>
 
 	<!-- Small Images (300) -->
-	<control type="radiobutton" id="3112">
+	<control type="radiobutton" id="3134">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -2614,7 +2970,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Medium Images (300) -->
-	<control type="radiobutton" id="3113">
+	<control type="radiobutton" id="3135">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -2625,7 +2981,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Large Images (300) -->
-	<control type="radiobutton" id="3114">
+	<control type="radiobutton" id="3136">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -2636,7 +2992,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Watched Transparency (300) -->
-	<control type="radiobutton" id="3115">
+	<control type="radiobutton" id="3137">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -2645,7 +3001,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
 	</control>
-	<control type="label" id="3116">
+	<control type="label" id="3138">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2658,7 +3014,7 @@
 	</control>
 
 	<!-- Focus Effect Default (300) -->
-	<control type="radiobutton" id="3117">
+	<control type="radiobutton" id="3139">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -2670,7 +3026,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Focus Effect #1 (300) -->
-	<control type="radiobutton" id="3118">
+	<control type="radiobutton" id="3140">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -2682,7 +3038,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Focus Effect #2 (300) -->
-	<control type="radiobutton" id="3119">
+	<control type="radiobutton" id="3141">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -2694,7 +3050,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Focus Effect #3 (300) -->
-	<control type="radiobutton" id="3120">
+	<control type="radiobutton" id="3142">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -2706,7 +3062,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Viewmode Panel2 (310) -->
-	<!--<control type="label" id="3132">
+	<!--<control type="label" id="3154">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2718,7 +3074,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3133">
+	<control type="label" id="3155">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2730,7 +3086,7 @@
 		<visible>Control.IsVisible(310) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3133">
+	<control type="label" id="3155">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2743,7 +3099,7 @@
 	</control>
 
 	<!-- Small Images (310) -->
-	<control type="radiobutton" id="3134">
+	<control type="radiobutton" id="3156">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -2754,7 +3110,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Medium Images (310) -->
-	<control type="radiobutton" id="3135">
+	<control type="radiobutton" id="3157">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -2765,7 +3121,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Large Images (310) -->
-	<control type="radiobutton" id="3136">
+	<control type="radiobutton" id="3158">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -2776,7 +3132,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Watched Transparency (310) -->
-	<control type="radiobutton" id="3137">
+	<control type="radiobutton" id="3159">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -2785,7 +3141,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
 	</control>
-	<control type="label" id="3138">
+	<control type="label" id="3160">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2798,7 +3154,7 @@
 	</control>
 
 	<!-- Focus Effect Default (310) -->
-	<control type="radiobutton" id="3139">
+	<control type="radiobutton" id="3161">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -2810,7 +3166,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Focus Effect #1 (310) -->
-	<control type="radiobutton" id="3140">
+	<control type="radiobutton" id="3162">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -2822,7 +3178,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Focus Effect #2 (310) -->
-	<control type="radiobutton" id="3141">
+	<control type="radiobutton" id="3163">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -2834,7 +3190,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Focus Effect #3 (310) -->
-	<control type="radiobutton" id="3142">
+	<control type="radiobutton" id="3164">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -3352,8 +3708,109 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
 	</control>
-	<!-- Viewmode Panel1 (300) -->
+	<!-- Viewmode Poster3 (220) -->
 	<!--<control type="label" id="4100">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(220)</visible>
+	</control>-->
+	<control type="label" id="4101">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Style</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (220) -->
+	<control type="radiobutton" id="4102">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>3D #1</label>
+		<onclick>Skin.ToggleSetting(Poster3_3D_1)</onclick>
+		<onclick>Skin.Reset(Poster3_3D_2)</onclick>
+		<selected>Skin.HasSetting(Poster3_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- 3D Effect #2 (220) -->
+	<control type="radiobutton" id="4103">
+		<width>190</width>
+		<description>3D Effect #2</description>
+		<label>3D #2</label>
+		<onclick>Skin.ToggleSetting(Poster3_3D_2)</onclick>
+		<onclick>Skin.Reset(Poster3_3D_1)</onclick>
+		<selected>Skin.HasSetting(Poster3_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<control type="label" id="4104">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Info</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+
+	<!-- Sidebar (220) -->
+	<control type="radiobutton" id="4105">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Default</label>
+		<onclick>Skin.Reset(Poster3_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Poster3_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Poster3_Sidebar_Left) + !Skin.HasSetting(Poster3_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Sidebar (220) -->
+	<control type="radiobutton" id="4106">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Right</label>
+		<onclick>Skin.Reset(Poster3_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Poster3_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Poster3_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Sidebar (220) -->
+	<control type="radiobutton" id="4107">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>Left</label>
+		<onclick>Skin.Reset(Poster3_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Poster3_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Poster3_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Image Labels (220) -->
+	<control type="radiobutton" id="4108">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>Labels</label>
+		<onclick>Skin.ToggleSetting(Poster3_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Poster3_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
+	<!-- Viewmode Panel1 (300) -->
+	<!--<control type="label" id="4120">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3364,7 +3821,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(300)</visible>
 	</control>-->
-	<control type="label" id="4101">
+	<control type="label" id="4121">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3377,7 +3834,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (300) -->
-	<control type="radiobutton" id="4102">
+	<control type="radiobutton" id="4122">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -3388,7 +3845,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- 3D Effect #2 (300) -->
-	<control type="radiobutton" id="4103">
+	<control type="radiobutton" id="4123">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -3398,7 +3855,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
 	</control>
-	<control type="label" id="4104">
+	<control type="label" id="4124">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3411,7 +3868,7 @@
 	</control>
 
 	<!-- Sidebar (300) -->
-	<control type="radiobutton" id="4105">
+	<control type="radiobutton" id="4125">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -3422,7 +3879,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Sidebar (300) -->
-	<control type="radiobutton" id="4106">
+	<control type="radiobutton" id="4126">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -3433,7 +3890,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Sidebar (300) -->
-	<control type="radiobutton" id="4107">
+	<control type="radiobutton" id="4127">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -3444,7 +3901,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Image Labels (300) -->
-	<control type="radiobutton" id="4108">
+	<control type="radiobutton" id="4128">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -3454,7 +3911,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Viewmode Panel2 (310) -->
-	<!--<control type="label" id="4120">
+	<!--<control type="label" id="4140">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3465,7 +3922,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(310)</visible>
 	</control>-->
-	<control type="label" id="4121">
+	<control type="label" id="4141">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3478,7 +3935,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (310) -->
-	<control type="radiobutton" id="4122">
+	<control type="radiobutton" id="4142">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -3489,7 +3946,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- 3D Effect #2 (310) -->
-	<control type="radiobutton" id="4123">
+	<control type="radiobutton" id="4143">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -3499,7 +3956,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
 	</control>
-	<control type="label" id="4124">
+	<control type="label" id="4144">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3512,7 +3969,7 @@
 	</control>
 
 	<!-- Sidebar (310) -->
-	<control type="radiobutton" id="4125">
+	<control type="radiobutton" id="4145">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -3523,7 +3980,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Sidebar (310) -->
-	<control type="radiobutton" id="4126">
+	<control type="radiobutton" id="4146">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -3534,7 +3991,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Sidebar (310) -->
-	<control type="radiobutton" id="4127">
+	<control type="radiobutton" id="4147">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -3545,7 +4002,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Image Labels (310) -->
-	<control type="radiobutton" id="4128">
+	<control type="radiobutton" id="4148">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -4717,6 +5174,68 @@
 	<include condition="Skin.String(Poster2_Opacity,80)">background_opacity_80</include>		
 	<include condition="Skin.String(Poster2_Opacity,90)">background_opacity_90</include>		
 	<include condition="Skin.String(Poster2_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype Poster3 (220) -->
+<include name="Poster3_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Poster3_TimePerImage">
+	<include condition="Skin.String(Poster3_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Poster3_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Poster3_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Poster3_Fadetime">
+	<include condition="Skin.String(Poster3_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Poster3_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Poster3_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Poster3_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Poster3_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Poster3_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Poster3_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Poster3_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Poster3_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Poster3_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Poster3_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Poster3_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Poster3_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Poster3_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Poster3_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Poster3_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Poster3_Opacity_Default">
+	<animation effect="fade" start="0" end="40" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="40" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="40" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="40" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="Poster3_Opacity">
+	<include condition="Skin.String(Poster3_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Poster3_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Poster3_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Poster3_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Poster3_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Poster3_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Poster3_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Poster3_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Poster3_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Poster3_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Poster3_Opacity,100)">background_opacity_100</include>		
 </include>
 
 

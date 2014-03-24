@@ -608,6 +608,8 @@
 			<texture border="10">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 			<include>Deck_Visible_Full</include>
+			<!-- No Movie Overlay -->
+			<visible>!ListItem.Type(movie)</visible>
 		</control>
 		<control type="image">
 			<posy>110</posy>
@@ -624,11 +626,11 @@
 			<label>S$INFO[ListItem.Season] [COLOR=mainblue]/[/COLOR] E$INFO[ListItem.Episode]</label>
 			<visible>ListItem.Type(episode)</visible>
 		</control>
-		<control type="label">
+		<!--<control type="label">
 			<include>Deck_Label_Nowrap</include>
 			<label>$INFO[ListItem.Year]</label>
 			<visible>ListItem.Type(movie)</visible>
-		</control>
+		</control>-->
 
 		<control type="group">
 			<visible>![ListItem.Type(episode) | ListItem.Type(movie)]</visible>
