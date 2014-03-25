@@ -7,8 +7,7 @@
 	<onunload>Skin.Reset(selector1)</onunload>
 	<onunload>Skin.Reset(selector2)</onunload>
 
-	<!--<views>50,51,52,60,61,70,71</views>-->
-	<views>100,110,120,200,210,220,300,310</views>
+	<views>100,110,120,200,210,220,300,310,320</views>
 
 	<controls>
 

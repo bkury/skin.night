@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Mon Mar 24 23:44:55 CET 2014 -->
+<!-- Tue Mar 25 16:19:01 CET 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -15457,6 +15457,453 @@
 
 	</focusedlayout>
 </include>
+<!-- Panel3 -->
+<include name="Viewmode_Panel3_Itemlayout">
+	<itemlayout condition="Skin.HasSetting(Panel3_Images_Small)" width="120" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Panel3_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Panel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Panel3_Images_Small)" width="120" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Panel3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Panel3_Focus_1) + !Skin.HasSetting(Panel3_Focus_2) + !Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Panel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Panel3_Focus_1) + !Skin.HasSetting(Panel3_Focus_2) + !Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="!Skin.HasSetting(Panel3_Images_Small) + !Skin.HasSetting(Panel3_Images_Large)" width="160" height="220">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Panel3_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Panel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="!Skin.HasSetting(Panel3_Images_Small) + !Skin.HasSetting(Panel3_Images_Large)" width="160" height="220">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Panel3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Panel3_Focus_1) + !Skin.HasSetting(Panel3_Focus_2) + !Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Panel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Panel3_Focus_1) + !Skin.HasSetting(Panel3_Focus_2) + !Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="Skin.HasSetting(Panel3_Images_Large)" width="200" height="320">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Panel3_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Panel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Panel3_Images_Large)" width="200" height="320">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Panel3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Panel3_Focus_1) + !Skin.HasSetting(Panel3_Focus_2) + !Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Panel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Panel3_Focus_1) + !Skin.HasSetting(Panel3_Focus_2) + !Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Panel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Panel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+</include>
 <!-- Layout Image (Small) -->
 <include name="Viewmode_Layout_Image_Small">
 	<!-- Cover -->
@@ -15579,7 +16026,7 @@
 			<posx>60</posx>
 			<posy>105</posy>
 			<width>100</width>
-			<height>40</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
@@ -15595,7 +16042,7 @@
 			<posx>60</posx>
 			<posy>90</posy>
 			<width>100</width>
-			<height>50</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
@@ -15603,22 +16050,24 @@
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+			<visible>Container.Content(episodes)</visible>
 			<include>Viewmode_Visible_Thumb</include>
 		</control>
 		<control type="label">
  			<posx>60</posx>
 			<posy>90</posy>
 			<width>100</width>
-			<height>50</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
 		        <font>Default</font>
 		        <textcolor>FFDDDDDD</textcolor>
-		        <wrapmultiline>false</wrapmultiline>
+		        <!--<wrapmultiline>false</wrapmultiline>-->
+		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
-			<include>Viewmode_Visible_Thumb</include>
 			<visible>!Container.Content(episodes)</visible>
+			<include>Viewmode_Visible_Thumb</include>
 		</control>
 </include>
 <!-- Layout Image (Medium) -->
@@ -15743,7 +16192,7 @@
 			<posx>80</posx>
 			<posy>140</posy>
 			<width>120</width>
-			<height>40</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
@@ -15759,7 +16208,7 @@
 			<posx>80</posx>
 			<posy>122</posy>
 			<width>120</width>
-			<height>50</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
@@ -15767,22 +16216,24 @@
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+			<visible>Container.Content(episodes)</visible>
 			<include>Viewmode_Visible_Thumb</include>
 		</control>
 		<control type="label">
  			<posx>80</posx>
 			<posy>122</posy>
 			<width>120</width>
-			<height>50</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
 		        <font>Default</font>
 		        <textcolor>FFDDDDDD</textcolor>
-		        <wrapmultiline>false</wrapmultiline>
+		        <!--<wrapmultiline>false</wrapmultiline>-->
+		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
-			<include>Viewmode_Visible_Thumb</include>
 			<visible>!Container.Content(episodes)</visible>
+			<include>Viewmode_Visible_Thumb</include>
 		</control>
 </include>
 <!-- Layout Image (Large) -->
@@ -15907,7 +16358,7 @@
 			<posx>120</posx>
 			<posy>210</posy>
 			<width>160</width>
-			<height>40</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
@@ -15923,7 +16374,7 @@
 			<posx>120</posx>
 			<posy>187</posy>
 			<width>160</width>
-			<height>50</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
@@ -15931,22 +16382,24 @@
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+			<visible>Container.Content(episodes)</visible>
 			<include>Viewmode_Visible_Thumb</include>
 		</control>
 		<control type="label">
  			<posx>120</posx>
 			<posy>187</posy>
 			<width>160</width>
-			<height>50</height>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
 		        <font>Default</font>
 		        <textcolor>FFDDDDDD</textcolor>
-		        <wrapmultiline>false</wrapmultiline>
+		        <!--<wrapmultiline>false</wrapmultiline>-->
+		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
-			<include>Viewmode_Visible_Thumb</include>
 			<visible>!Container.Content(episodes)</visible>
+			<include>Viewmode_Visible_Thumb</include>
 		</control>
 </include>
 <!-- List1 (General) -->
@@ -16211,6 +16664,39 @@
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
 	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+
+</include>
+<!-- Panel3 (General) -->
+<include name="Viewmode_Panel3_General">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Sidebar_Right)">Conditional</animation>
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+
+</include>
+<!-- Panel3 (General) -->
+<include name="Viewmode_Panel3_General_NoSidebar">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
 
 </include>
 </includes>

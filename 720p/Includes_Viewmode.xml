@@ -83,16 +83,12 @@
 	<!-- Viewmode Poster #1 (200/Info)  -->
 	<control type="group">
 		<visible>Control.isVisible(200)</visible>
-		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_Sidebar_Right)">Conditional</animation>
-		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster1_Sidebar_Right)">WindowOpen</animation>
-		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster1_Sidebar_Right)">WindowClose</animation>
-		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster1_Sidebar_Right)">WindowOpen</animation>
-		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster1_Sidebar_Right)">WindowClose</animation>
 
 		<!-- Horizontal Info -->
 		<control type="group">
 			<posx>20</posx>
 			<posy>20</posy>
+			<include>Animation_Preplay_Up</include>
 			<include>Viewmode_Horizontal_Info</include>
 		</control>
 		<!--<control type="group">
@@ -105,6 +101,11 @@
 		<control type="group">
 			<posy>420</posy>
 			<posx>20</posx>
+			<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_Sidebar_Right)">Conditional</animation>
+			<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster1_Sidebar_Right)">WindowOpen</animation>
+			<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster1_Sidebar_Right)">WindowClose</animation>
+			<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster1_Sidebar_Right)">WindowOpen</animation>
+			<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster1_Sidebar_Right)">WindowClose</animation>
 			<include>Viewmode_Sidebar_Content</include>
 			<include>Viewmode_Sidebar_Plot</include>
 		</control>
@@ -114,21 +115,23 @@
 	<!-- Viewmode Poster #2 (Full) -->
 	<control type="group">
 		<visible>Control.isVisible(210)</visible>
-		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_Sidebar_Right)">Conditional</animation>
+		<!--<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_Sidebar_Right)">Conditional</animation>
 		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster2_Sidebar_Right)">WindowOpen</animation>
 		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster2_Sidebar_Right)">WindowClose</animation>
 		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster2_Sidebar_Right)">WindowOpen</animation>
-		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster2_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster2_Sidebar_Right)">WindowClose</animation>-->
 
 		<!-- Horizontal Info -->
 		<control type="group">
 			<posx>20</posx>
 			<posy>20</posy>
+			<include>Animation_Preplay_Up</include>
 			<include>Viewmode_Horizontal_Info</include>
 		</control>
 		<control type="group">
 			<posx>20</posx>
 			<posy>170</posy>
+			<include>Animation_Preplay_Up</include>
 			<include>Viewmode_Horizontal_Info_More</include>
 		</control>
 		
@@ -137,17 +140,12 @@
 	<!-- Viewmode Poster #3 (Deck) -->
 	<control type="group">
 		<visible>Control.isVisible(220)</visible>
-		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_Sidebar_Right)">Conditional</animation>
-		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster3_Sidebar_Right)">WindowOpen</animation>
-		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster3_Sidebar_Right)">WindowClose</animation>
-		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster3_Sidebar_Right)">WindowOpen</animation>
-		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster3_Sidebar_Right)">WindowClose</animation>
 
 		<!-- Horizontal Info -->
 		<control type="group">
 			<animation effect="slide" end="60,-20" condition="Skin.HasSetting(Poster3_Images_Large)">Conditional</animation>
 			<animation effect="slide" end="-45,10" condition="Skin.HasSetting(Poster3_Images_Small)">Conditional</animation>
-
+			<include>Animation_Preplay_Up</include>
 			<posx>85</posx>
 			<posy>80</posy>
 			<include>Viewmode_Horizontal_Info</include>
@@ -155,6 +153,7 @@
 		<control type="group">
 			<animation effect="slide" end="60,40" condition="Skin.HasSetting(Poster3_Images_Large)">Conditional</animation>
 			<animation effect="slide" end="-45,-20" condition="Skin.HasSetting(Poster3_Images_Small)">Conditional</animation>
+			<include>Animation_Preplay_Down</include>
 
 			<posx>85</posx>
 			<posy>470</posy>
@@ -209,6 +208,37 @@
 			<visible>Skin.HasSetting(Panel1_Sidebar_Right)</visible>
 			<include>Viewmode_Sidebar_Clock_Right</include>
 		</control>
+	</control>
+
+
+
+
+
+	<!-- Viewmode Panel#3 (320/Deck) -->
+	<control type="group">
+		<visible>Control.isVisible(320)</visible>
+		<!--<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster3_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster3_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster3_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster3_Sidebar_Right)">WindowClose</animation>-->
+
+		<!-- Horizontal Info -->
+		<control type="group">
+			<include>Animation_Preplay_Up</include>
+                        <animation effect="zoom" end="90" condition="true">Conditional</animation>
+
+			<posx>85</posx>
+			<posy>5</posy>
+			<include>Viewmode_Horizontal_Info</include>
+		</control>
+		<control type="group">
+			<include>Animation_Preplay_Down</include>
+			<posx>85</posx>
+			<posy>595</posy>
+			<include>Viewmode_Horizontal_Info_More</include>
+		</control>
+		
 	</control>
 </include>
 
@@ -812,6 +842,8 @@
 	<value condition="Container.Content(albums)">$INFO[ListItem.Album]</value>
 	<value condition="Container.Content(artists)">$INFO[ListItem.Genre]</value>
 	<value condition="Container.Content(songs)">$INFO[ListItem.Label][COLOR=mainblue] / [/COLOR]$INFO[ListItem.Duration]</value>
+	<value condition="Container.Content(seasons)">$INFO[Container.SecondTitle]</value>
+
 	<value>$INFO[ListItem.Label]</value>
 </variable>
 
@@ -858,7 +890,7 @@
                         <textcolor>ffffffff</textcolor>
                         <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<animation effect="slide" end="-85" tween="quadratic" easing="out" time="400" condition="isEmpty(ListItem.Art(mediaTag::contentRating))">Conditional</animation>
-			<visible>!Container.Content(artists)</visible>
+			<visible>!Container.Content(artists) | !Container.Content(seasons)</visible>
                 </control>
 		<control type="textbox">
                         <posx>90</posx>
@@ -872,6 +904,19 @@
                         <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<animation effect="slide" end="-85" tween="quadratic" easing="out" time="400" condition="isEmpty(ListItem.Art(mediaTag::contentRating))">Conditional</animation>
 			<visible>Container.Content(artists)</visible>
+                </control>
+		<control type="textbox">
+                        <posx>90</posx>
+                        <posy>0</posy>
+                        <width>600</width>
+                        <height>90</height>
+                        <align>justify</align>
+                        <info>Container.ShowPlot</info>
+                        <font>Font_Bartowski_Movies_Plot</font>
+                        <textcolor>ffffffff</textcolor>
+                        <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<animation effect="slide" end="-85" tween="quadratic" easing="out" time="400" condition="isEmpty(ListItem.Art(mediaTag::contentRating))">Conditional</animation>
+			<visible>Container.Content(seasons)</visible>
                 </control>
 
 		<!-- Studio Logo -->
@@ -897,35 +942,35 @@
 			<control type="image">
 				<height>16</height>
 				<width min="29" max="100">auto</width>
-				<texture>$VAR[Deck_Label_VideoResolution]</texture>
+				<texture>$VAR[Viewmode_Label_VideoResolution]</texture>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>FFCCCCCC</colordiffuse>
 			</control>
 			<control type="image">
 				<height>16</height>
 				<width min="29" max="100">auto</width>
-				<texture>$VAR[Deck_Label_AudioCodec]</texture>
+				<texture>$VAR[Viewmode_Label_AudioCodec]</texture>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>FFCCCCCC</colordiffuse>
 			</control>
 			<control type="image">
 				<height>16</height>
 				<width min="29" max="100">auto</width>
-				<texture>$VAR[Deck_Label_AudioChannels]</texture>
+				<texture>$VAR[Viewmode_Label_AudioChannels]</texture>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>FFCCCCCC</colordiffuse>
 			</control>
 			<control type="image">
 				<height>16</height>
 				<width min="29" max="100">auto</width>
-				<texture>$VAR[Deck_Label_AspectRatio]</texture>
+				<texture>$VAR[Viewmode_Label_AspectRatio]</texture>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>FFCCCCCC</colordiffuse>
 			</control>
 			<control type="image">
 				<height>16</height>
 				<width min="29" max="100">auto</width>
-				<texture>$VAR[Deck_Label_VideoCodec]</texture>
+				<texture>$VAR[Viewmode_Label_VideoCodec]</texture>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>FFCCCCCC</colordiffuse>
 			</control>
@@ -933,6 +978,23 @@
 
 	</control>
 </include>
+
+<!-- Mediaflags -->
+<variable name="Viewmode_Label_VideoResolution">
+        <value>$INFO[Listitem.Art(mediaTag::videoResolution)]</value>
+</variable>
+<variable name="Viewmode_Label_AudioCodec">
+        <value>$INFO[Listitem.Art(mediaTag::audioCodec)]</value>
+</variable>
+<variable name="Viewmode_Label_AudioChannels">
+        <value>$INFO[Listitem.Art(mediaTag::audioChannels)]</value>
+</variable>
+<variable name="Viewmode_Label_AspectRatio">
+        <value>$INFO[Listitem.Art(mediaTag::aspectRatio)]</value>
+</variable>
+<variable name="Viewmode_Label_VideoCodec">
+        <value>$INFO[Listitem.Art(mediaTag::videoCodec)]</value>
+</variable>
 
 <!-- Autohide -->
 <include name="Animation_Infocard_Autohide_Left">

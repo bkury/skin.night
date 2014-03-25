@@ -20,7 +20,7 @@
 <!-- VIEWTYPE PANEL -->
 <include name="Viewmode_Panel">
 
-		<!-- Panel #1 -->
+		<!-- Panel #1 (300/Info) -->
 		<control type="panel" id="300">
 			<posx>445</posx>
 			<posy>40</posy>
@@ -39,7 +39,7 @@
 			<include>Viewmode_Panel1_Itemlayout</include>
 		</control>
 
-		<!-- Panel -->
+		<!-- Panel #2 (310/Full) -->
 		<control type="panel" id="310">
 			<posx>80</posx>
 			<posy>40</posy>
@@ -52,6 +52,27 @@
 
                         <include>Viewmode_Panel2_General_NoSidebar</include>
 			<include>Viewmode_Panel2_Itemlayout</include>
+		</control>
+
+		<!-- Panel #3 (320/Deck) -->
+		<control type="panel" id="320">
+			<posx>75</posx>
+			<posy>140</posy>
+			<width>1620</width>
+			<height>640</height>
+			<onleft>7000</onleft>
+			<orientation>vertical</orientation>
+			<preloaditems>2</preloaditems>
+			<viewtype label="Panel #3">panel</viewtype>
+
+			<animation effect="zoom" end="70" condition="true">Conditional</animation>
+
+			<!-- Position Size -->
+			<animation effect="slide" end="15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Large)">Conditional</animation>
+
+                        <include>Viewmode_Panel3_General_NoSidebar</include>
+			<include>Viewmode_Panel3_Itemlayout</include>
 		</control>
 
 </include>

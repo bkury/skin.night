@@ -1,7 +1,7 @@
 <window id="2">
 	<defaultcontrol>100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>100,110,120,200,210,300,310</views>
+        <views>100,110,120,200,210,220,300,310,320</views>
 	<controls>
 
         <!-- Backgrounds -->
