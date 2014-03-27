@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Tue Mar 25 12:59:24 CET 2014 -->
+<!-- Wed Mar 26 21:11:04 CET 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -2367,8 +2367,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(100)</visible>
 	</control>
-	<!-- Watched Transparency (100) -->
+	<!-- Mirror Images (100) -->
 	<control type="radiobutton" id="3005">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(List1_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(List1_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(100) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (100) -->
+	<control type="radiobutton" id="3006">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -2377,7 +2387,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(100)</visible>
 	</control>
-	<control type="label" id="3006">
+	<control type="label" id="3007">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2390,7 +2400,7 @@
 	</control>
 
 	<!-- Focus Effect Default (100) -->
-	<control type="radiobutton" id="3007">
+	<control type="radiobutton" id="3008">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -2402,7 +2412,7 @@
 		<visible>Control.IsVisible(100)</visible>
 	</control>
 	<!-- Focus Effect #1 (100) -->
-	<control type="radiobutton" id="3008">
+	<control type="radiobutton" id="3009">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -2414,7 +2424,7 @@
 		<visible>Control.IsVisible(100)</visible>
 	</control>
 	<!-- Focus Effect #2 (100) -->
-	<control type="radiobutton" id="3009">
+	<control type="radiobutton" id="3010">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -2426,7 +2436,7 @@
 		<visible>Control.IsVisible(100)</visible>
 	</control>
 	<!-- Focus Effect #3 (100) -->
-	<control type="radiobutton" id="3010">
+	<control type="radiobutton" id="3011">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -2438,7 +2448,7 @@
 		<visible>Control.IsVisible(100)</visible>
 	</control>
 	<!-- Viewmode List2 (110) -->
-	<!--<control type="label" id="3022">
+	<!--<control type="label" id="3023">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2450,7 +2460,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3023">
+	<control type="label" id="3024">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2462,7 +2472,7 @@
 		<visible>Control.IsVisible(110) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3023">
+	<control type="label" id="3024">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2475,7 +2485,7 @@
 	</control>
 
 	<!-- Small Images (110) -->
-	<control type="radiobutton" id="3024">
+	<control type="radiobutton" id="3025">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -2486,7 +2496,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Medium Images (110) -->
-	<control type="radiobutton" id="3025">
+	<control type="radiobutton" id="3026">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -2497,7 +2507,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Large Images (110) -->
-	<control type="radiobutton" id="3026">
+	<control type="radiobutton" id="3027">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -2507,8 +2517,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(110)</visible>
 	</control>
+	<!-- Mirror Images (110) -->
+	<control type="radiobutton" id="3028">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(List2_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(List2_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(110) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (110) -->
-	<control type="radiobutton" id="3027">
+	<control type="radiobutton" id="3029">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -2517,7 +2537,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(110)</visible>
 	</control>
-	<control type="label" id="3028">
+	<control type="label" id="3030">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2530,7 +2550,7 @@
 	</control>
 
 	<!-- Focus Effect Default (110) -->
-	<control type="radiobutton" id="3029">
+	<control type="radiobutton" id="3031">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -2542,7 +2562,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Focus Effect #1 (110) -->
-	<control type="radiobutton" id="3030">
+	<control type="radiobutton" id="3032">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -2554,7 +2574,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Focus Effect #2 (110) -->
-	<control type="radiobutton" id="3031">
+	<control type="radiobutton" id="3033">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -2566,7 +2586,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Focus Effect #3 (110) -->
-	<control type="radiobutton" id="3032">
+	<control type="radiobutton" id="3034">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -2578,7 +2598,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Viewmode List3 (120) -->
-	<!--<control type="label" id="3044">
+	<!--<control type="label" id="3046">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2590,7 +2610,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3045">
+	<control type="label" id="3047">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2602,7 +2622,7 @@
 		<visible>Control.IsVisible(120) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3045">
+	<control type="label" id="3047">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2615,7 +2635,7 @@
 	</control>
 
 	<!-- Small Images (120) -->
-	<control type="radiobutton" id="3046">
+	<control type="radiobutton" id="3048">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -2626,7 +2646,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Medium Images (120) -->
-	<control type="radiobutton" id="3047">
+	<control type="radiobutton" id="3049">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -2637,7 +2657,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Large Images (120) -->
-	<control type="radiobutton" id="3048">
+	<control type="radiobutton" id="3050">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -2647,8 +2667,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(120)</visible>
 	</control>
+	<!-- Mirror Images (120) -->
+	<control type="radiobutton" id="3051">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(List3_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(List3_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(120) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (120) -->
-	<control type="radiobutton" id="3049">
+	<control type="radiobutton" id="3052">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -2657,7 +2687,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(120)</visible>
 	</control>
-	<control type="label" id="3050">
+	<control type="label" id="3053">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2670,7 +2700,7 @@
 	</control>
 
 	<!-- Focus Effect Default (120) -->
-	<control type="radiobutton" id="3051">
+	<control type="radiobutton" id="3054">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -2682,7 +2712,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Focus Effect #1 (120) -->
-	<control type="radiobutton" id="3052">
+	<control type="radiobutton" id="3055">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -2694,7 +2724,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Focus Effect #2 (120) -->
-	<control type="radiobutton" id="3053">
+	<control type="radiobutton" id="3056">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -2706,7 +2736,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Focus Effect #3 (120) -->
-	<control type="radiobutton" id="3054">
+	<control type="radiobutton" id="3057">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -2718,7 +2748,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Viewmode Poster1 (200) -->
-	<!--<control type="label" id="3066">
+	<!--<control type="label" id="3069">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2730,7 +2760,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3067">
+	<control type="label" id="3070">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2742,7 +2772,7 @@
 		<visible>Control.IsVisible(200) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3067">
+	<control type="label" id="3070">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2755,7 +2785,7 @@
 	</control>
 
 	<!-- Small Images (200) -->
-	<control type="radiobutton" id="3068">
+	<control type="radiobutton" id="3071">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -2766,7 +2796,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Medium Images (200) -->
-	<control type="radiobutton" id="3069">
+	<control type="radiobutton" id="3072">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -2777,7 +2807,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Large Images (200) -->
-	<control type="radiobutton" id="3070">
+	<control type="radiobutton" id="3073">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -2787,8 +2817,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(200)</visible>
 	</control>
+	<!-- Mirror Images (200) -->
+	<control type="radiobutton" id="3074">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Poster1_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Poster1_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(200) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (200) -->
-	<control type="radiobutton" id="3071">
+	<control type="radiobutton" id="3075">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -2797,7 +2837,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(200)</visible>
 	</control>
-	<control type="label" id="3072">
+	<control type="label" id="3076">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2810,7 +2850,7 @@
 	</control>
 
 	<!-- Focus Effect Default (200) -->
-	<control type="radiobutton" id="3073">
+	<control type="radiobutton" id="3077">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -2822,7 +2862,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Focus Effect #1 (200) -->
-	<control type="radiobutton" id="3074">
+	<control type="radiobutton" id="3078">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -2834,7 +2874,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Focus Effect #2 (200) -->
-	<control type="radiobutton" id="3075">
+	<control type="radiobutton" id="3079">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -2846,7 +2886,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Focus Effect #3 (200) -->
-	<control type="radiobutton" id="3076">
+	<control type="radiobutton" id="3080">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -2858,7 +2898,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Viewmode Poster2 (210) -->
-	<!--<control type="label" id="3088">
+	<!--<control type="label" id="3092">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2870,7 +2910,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3089">
+	<control type="label" id="3093">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2882,7 +2922,7 @@
 		<visible>Control.IsVisible(210) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3089">
+	<control type="label" id="3093">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2895,7 +2935,7 @@
 	</control>
 
 	<!-- Small Images (210) -->
-	<control type="radiobutton" id="3090">
+	<control type="radiobutton" id="3094">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -2906,7 +2946,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Medium Images (210) -->
-	<control type="radiobutton" id="3091">
+	<control type="radiobutton" id="3095">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -2917,7 +2957,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Large Images (210) -->
-	<control type="radiobutton" id="3092">
+	<control type="radiobutton" id="3096">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -2927,8 +2967,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
 	</control>
+	<!-- Mirror Images (210) -->
+	<control type="radiobutton" id="3097">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Poster2_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Poster2_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(210) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (210) -->
-	<control type="radiobutton" id="3093">
+	<control type="radiobutton" id="3098">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -2937,7 +2987,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
 	</control>
-	<control type="label" id="3094">
+	<control type="label" id="3099">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -2950,7 +3000,7 @@
 	</control>
 
 	<!-- Focus Effect Default (210) -->
-	<control type="radiobutton" id="3095">
+	<control type="radiobutton" id="3100">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -2962,7 +3012,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Focus Effect #1 (210) -->
-	<control type="radiobutton" id="3096">
+	<control type="radiobutton" id="3101">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -2974,7 +3024,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Focus Effect #2 (210) -->
-	<control type="radiobutton" id="3097">
+	<control type="radiobutton" id="3102">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -2986,7 +3036,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Focus Effect #3 (210) -->
-	<control type="radiobutton" id="3098">
+	<control type="radiobutton" id="3103">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -2998,7 +3048,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Viewmode Poster3 (220) -->
-	<!--<control type="label" id="3110">
+	<!--<control type="label" id="3115">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3010,7 +3060,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3111">
+	<control type="label" id="3116">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3022,7 +3072,7 @@
 		<visible>Control.IsVisible(220) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3111">
+	<control type="label" id="3116">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3035,7 +3085,7 @@
 	</control>
 
 	<!-- Small Images (220) -->
-	<control type="radiobutton" id="3112">
+	<control type="radiobutton" id="3117">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -3046,7 +3096,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Medium Images (220) -->
-	<control type="radiobutton" id="3113">
+	<control type="radiobutton" id="3118">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -3057,7 +3107,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Large Images (220) -->
-	<control type="radiobutton" id="3114">
+	<control type="radiobutton" id="3119">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -3067,8 +3117,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(220)</visible>
 	</control>
+	<!-- Mirror Images (220) -->
+	<control type="radiobutton" id="3120">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Poster3_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Poster3_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (220) -->
-	<control type="radiobutton" id="3115">
+	<control type="radiobutton" id="3121">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -3077,7 +3137,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(220)</visible>
 	</control>
-	<control type="label" id="3116">
+	<control type="label" id="3122">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3090,7 +3150,7 @@
 	</control>
 
 	<!-- Focus Effect Default (220) -->
-	<control type="radiobutton" id="3117">
+	<control type="radiobutton" id="3123">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -3102,7 +3162,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Focus Effect #1 (220) -->
-	<control type="radiobutton" id="3118">
+	<control type="radiobutton" id="3124">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -3114,7 +3174,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Focus Effect #2 (220) -->
-	<control type="radiobutton" id="3119">
+	<control type="radiobutton" id="3125">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -3126,7 +3186,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Focus Effect #3 (220) -->
-	<control type="radiobutton" id="3120">
+	<control type="radiobutton" id="3126">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -3138,7 +3198,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Viewmode Panel1 (300) -->
-	<!--<control type="label" id="3132">
+	<!--<control type="label" id="3138">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3150,7 +3210,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3133">
+	<control type="label" id="3139">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3162,7 +3222,7 @@
 		<visible>Control.IsVisible(300) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3133">
+	<control type="label" id="3139">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3175,7 +3235,7 @@
 	</control>
 
 	<!-- Small Images (300) -->
-	<control type="radiobutton" id="3134">
+	<control type="radiobutton" id="3140">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -3186,7 +3246,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Medium Images (300) -->
-	<control type="radiobutton" id="3135">
+	<control type="radiobutton" id="3141">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -3197,7 +3257,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Large Images (300) -->
-	<control type="radiobutton" id="3136">
+	<control type="radiobutton" id="3142">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -3207,8 +3267,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
 	</control>
+	<!-- Mirror Images (300) -->
+	<control type="radiobutton" id="3143">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Panel1_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Panel1_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(300) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (300) -->
-	<control type="radiobutton" id="3137">
+	<control type="radiobutton" id="3144">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -3217,7 +3287,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
 	</control>
-	<control type="label" id="3138">
+	<control type="label" id="3145">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3230,7 +3300,7 @@
 	</control>
 
 	<!-- Focus Effect Default (300) -->
-	<control type="radiobutton" id="3139">
+	<control type="radiobutton" id="3146">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -3242,7 +3312,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Focus Effect #1 (300) -->
-	<control type="radiobutton" id="3140">
+	<control type="radiobutton" id="3147">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -3254,7 +3324,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Focus Effect #2 (300) -->
-	<control type="radiobutton" id="3141">
+	<control type="radiobutton" id="3148">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -3266,7 +3336,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Focus Effect #3 (300) -->
-	<control type="radiobutton" id="3142">
+	<control type="radiobutton" id="3149">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -3278,7 +3348,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Viewmode Panel2 (310) -->
-	<!--<control type="label" id="3154">
+	<!--<control type="label" id="3161">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3290,7 +3360,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3155">
+	<control type="label" id="3162">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3302,7 +3372,7 @@
 		<visible>Control.IsVisible(310) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3155">
+	<control type="label" id="3162">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3315,7 +3385,7 @@
 	</control>
 
 	<!-- Small Images (310) -->
-	<control type="radiobutton" id="3156">
+	<control type="radiobutton" id="3163">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -3326,7 +3396,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Medium Images (310) -->
-	<control type="radiobutton" id="3157">
+	<control type="radiobutton" id="3164">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -3337,7 +3407,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Large Images (310) -->
-	<control type="radiobutton" id="3158">
+	<control type="radiobutton" id="3165">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -3347,8 +3417,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
 	</control>
+	<!-- Mirror Images (310) -->
+	<control type="radiobutton" id="3166">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Panel2_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Panel2_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(310) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (310) -->
-	<control type="radiobutton" id="3159">
+	<control type="radiobutton" id="3167">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -3357,7 +3437,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
 	</control>
-	<control type="label" id="3160">
+	<control type="label" id="3168">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3370,7 +3450,7 @@
 	</control>
 
 	<!-- Focus Effect Default (310) -->
-	<control type="radiobutton" id="3161">
+	<control type="radiobutton" id="3169">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -3382,7 +3462,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Focus Effect #1 (310) -->
-	<control type="radiobutton" id="3162">
+	<control type="radiobutton" id="3170">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -3394,7 +3474,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Focus Effect #2 (310) -->
-	<control type="radiobutton" id="3163">
+	<control type="radiobutton" id="3171">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -3406,7 +3486,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Focus Effect #3 (310) -->
-	<control type="radiobutton" id="3164">
+	<control type="radiobutton" id="3172">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -3418,7 +3498,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Viewmode Panel3 (320) -->
-	<!--<control type="label" id="3176">
+	<!--<control type="label" id="3184">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3430,7 +3510,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3177">
+	<control type="label" id="3185">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3442,7 +3522,7 @@
 		<visible>Control.IsVisible(320) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3177">
+	<control type="label" id="3185">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3455,7 +3535,7 @@
 	</control>
 
 	<!-- Small Images (320) -->
-	<control type="radiobutton" id="3178">
+	<control type="radiobutton" id="3186">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>Small</label>
@@ -3466,7 +3546,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Medium Images (320) -->
-	<control type="radiobutton" id="3179">
+	<control type="radiobutton" id="3187">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>Medium</label>
@@ -3477,7 +3557,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Large Images (320) -->
-	<control type="radiobutton" id="3180">
+	<control type="radiobutton" id="3188">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>Large</label>
@@ -3487,8 +3567,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
 	</control>
+	<!-- Mirror Images (320) -->
+	<control type="radiobutton" id="3189">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Panel3_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Panel3_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(320) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
 	<!-- Watched Transparency (320) -->
-	<control type="radiobutton" id="3181">
+	<control type="radiobutton" id="3190">
 		<width>190</width>
 		<description>Transparency</description>
 		<label>Fade Watched</label>
@@ -3497,7 +3587,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
 	</control>
-	<control type="label" id="3182">
+	<control type="label" id="3191">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3510,7 +3600,7 @@
 	</control>
 
 	<!-- Focus Effect Default (320) -->
-	<control type="radiobutton" id="3183">
+	<control type="radiobutton" id="3192">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>Zoom</label>
@@ -3522,7 +3612,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Focus Effect #1 (320) -->
-	<control type="radiobutton" id="3184">
+	<control type="radiobutton" id="3193">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>RotateX</label>
@@ -3534,7 +3624,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Focus Effect #2 (320) -->
-	<control type="radiobutton" id="3185">
+	<control type="radiobutton" id="3194">
 		<width>190</width>
 		<description>Focus Effect #2</description>
 		<label>RotateY</label>
@@ -3546,7 +3636,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Focus Effect #3 (320) -->
-	<control type="radiobutton" id="3186">
+	<control type="radiobutton" id="3195">
 		<width>190</width>
 		<description>Focus Effect #3</description>
 		<label>Rotate</label>
@@ -3660,8 +3750,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(100)</visible>
 	</control>
+	<!-- Plot (100) -->
+	<control type="radiobutton" id="4009">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(List1_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(List1_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(100)</visible>
+	</control>
 	<!-- Viewmode List2 (110) -->
-	<!--<control type="label" id="4020">
+	<!--<control type="label" id="4021">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3672,7 +3772,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(110)</visible>
 	</control>-->
-	<control type="label" id="4021">
+	<control type="label" id="4022">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3685,7 +3785,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (110) -->
-	<control type="radiobutton" id="4022">
+	<control type="radiobutton" id="4023">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -3696,7 +3796,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- 3D Effect #2 (110) -->
-	<control type="radiobutton" id="4023">
+	<control type="radiobutton" id="4024">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -3706,7 +3806,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(110)</visible>
 	</control>
-	<control type="label" id="4024">
+	<control type="label" id="4025">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3719,7 +3819,7 @@
 	</control>
 
 	<!-- Sidebar (110) -->
-	<control type="radiobutton" id="4025">
+	<control type="radiobutton" id="4026">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -3730,7 +3830,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Sidebar (110) -->
-	<control type="radiobutton" id="4026">
+	<control type="radiobutton" id="4027">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -3741,7 +3841,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Sidebar (110) -->
-	<control type="radiobutton" id="4027">
+	<control type="radiobutton" id="4028">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -3752,7 +3852,7 @@
 		<visible>Control.IsVisible(110)</visible>
 	</control>
 	<!-- Image Labels (110) -->
-	<control type="radiobutton" id="4028">
+	<control type="radiobutton" id="4029">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -3761,8 +3861,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(110)</visible>
 	</control>
+	<!-- Plot (110) -->
+	<control type="radiobutton" id="4030">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(List2_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(List2_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(110)</visible>
+	</control>
 	<!-- Viewmode List3 (120) -->
-	<!--<control type="label" id="4040">
+	<!--<control type="label" id="4042">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3773,7 +3883,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(120)</visible>
 	</control>-->
-	<control type="label" id="4041">
+	<control type="label" id="4043">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3786,7 +3896,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (120) -->
-	<control type="radiobutton" id="4042">
+	<control type="radiobutton" id="4044">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -3797,7 +3907,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- 3D Effect #2 (120) -->
-	<control type="radiobutton" id="4043">
+	<control type="radiobutton" id="4045">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -3807,7 +3917,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(120)</visible>
 	</control>
-	<control type="label" id="4044">
+	<control type="label" id="4046">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3820,7 +3930,7 @@
 	</control>
 
 	<!-- Sidebar (120) -->
-	<control type="radiobutton" id="4045">
+	<control type="radiobutton" id="4047">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -3831,7 +3941,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Sidebar (120) -->
-	<control type="radiobutton" id="4046">
+	<control type="radiobutton" id="4048">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -3842,7 +3952,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Sidebar (120) -->
-	<control type="radiobutton" id="4047">
+	<control type="radiobutton" id="4049">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -3853,7 +3963,7 @@
 		<visible>Control.IsVisible(120)</visible>
 	</control>
 	<!-- Image Labels (120) -->
-	<control type="radiobutton" id="4048">
+	<control type="radiobutton" id="4050">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -3862,8 +3972,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(120)</visible>
 	</control>
+	<!-- Plot (120) -->
+	<control type="radiobutton" id="4051">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(List3_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(List3_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(120)</visible>
+	</control>
 	<!-- Viewmode Poster1 (200) -->
-	<!--<control type="label" id="4060">
+	<!--<control type="label" id="4063">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3874,7 +3994,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(200)</visible>
 	</control>-->
-	<control type="label" id="4061">
+	<control type="label" id="4064">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3887,7 +4007,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (200) -->
-	<control type="radiobutton" id="4062">
+	<control type="radiobutton" id="4065">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -3898,7 +4018,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- 3D Effect #2 (200) -->
-	<control type="radiobutton" id="4063">
+	<control type="radiobutton" id="4066">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -3908,7 +4028,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(200)</visible>
 	</control>
-	<control type="label" id="4064">
+	<control type="label" id="4067">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3921,7 +4041,7 @@
 	</control>
 
 	<!-- Sidebar (200) -->
-	<control type="radiobutton" id="4065">
+	<control type="radiobutton" id="4068">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -3932,7 +4052,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Sidebar (200) -->
-	<control type="radiobutton" id="4066">
+	<control type="radiobutton" id="4069">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -3943,7 +4063,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Sidebar (200) -->
-	<control type="radiobutton" id="4067">
+	<control type="radiobutton" id="4070">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -3954,7 +4074,7 @@
 		<visible>Control.IsVisible(200)</visible>
 	</control>
 	<!-- Image Labels (200) -->
-	<control type="radiobutton" id="4068">
+	<control type="radiobutton" id="4071">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -3963,8 +4083,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(200)</visible>
 	</control>
+	<!-- Plot (200) -->
+	<control type="radiobutton" id="4072">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Poster1_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Poster1_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(200)</visible>
+	</control>
 	<!-- Viewmode Poster2 (210) -->
-	<!--<control type="label" id="4080">
+	<!--<control type="label" id="4084">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3975,7 +4105,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(210)</visible>
 	</control>-->
-	<control type="label" id="4081">
+	<control type="label" id="4085">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -3988,7 +4118,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (210) -->
-	<control type="radiobutton" id="4082">
+	<control type="radiobutton" id="4086">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -3999,7 +4129,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- 3D Effect #2 (210) -->
-	<control type="radiobutton" id="4083">
+	<control type="radiobutton" id="4087">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -4009,7 +4139,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
 	</control>
-	<control type="label" id="4084">
+	<control type="label" id="4088">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4022,7 +4152,7 @@
 	</control>
 
 	<!-- Sidebar (210) -->
-	<control type="radiobutton" id="4085">
+	<control type="radiobutton" id="4089">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -4033,7 +4163,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Sidebar (210) -->
-	<control type="radiobutton" id="4086">
+	<control type="radiobutton" id="4090">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -4044,7 +4174,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Sidebar (210) -->
-	<control type="radiobutton" id="4087">
+	<control type="radiobutton" id="4091">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -4055,7 +4185,7 @@
 		<visible>Control.IsVisible(210)</visible>
 	</control>
 	<!-- Image Labels (210) -->
-	<control type="radiobutton" id="4088">
+	<control type="radiobutton" id="4092">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -4064,8 +4194,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
 	</control>
+	<!-- Plot (210) -->
+	<control type="radiobutton" id="4093">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Poster2_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Poster2_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(210)</visible>
+	</control>
 	<!-- Viewmode Poster3 (220) -->
-	<!--<control type="label" id="4100">
+	<!--<control type="label" id="4105">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4076,7 +4216,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(220)</visible>
 	</control>-->
-	<control type="label" id="4101">
+	<control type="label" id="4106">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4089,7 +4229,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (220) -->
-	<control type="radiobutton" id="4102">
+	<control type="radiobutton" id="4107">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -4100,7 +4240,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- 3D Effect #2 (220) -->
-	<control type="radiobutton" id="4103">
+	<control type="radiobutton" id="4108">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -4110,7 +4250,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(220)</visible>
 	</control>
-	<control type="label" id="4104">
+	<control type="label" id="4109">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4123,7 +4263,7 @@
 	</control>
 
 	<!-- Sidebar (220) -->
-	<control type="radiobutton" id="4105">
+	<control type="radiobutton" id="4110">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -4134,7 +4274,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Sidebar (220) -->
-	<control type="radiobutton" id="4106">
+	<control type="radiobutton" id="4111">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -4145,7 +4285,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Sidebar (220) -->
-	<control type="radiobutton" id="4107">
+	<control type="radiobutton" id="4112">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -4156,7 +4296,7 @@
 		<visible>Control.IsVisible(220)</visible>
 	</control>
 	<!-- Image Labels (220) -->
-	<control type="radiobutton" id="4108">
+	<control type="radiobutton" id="4113">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -4165,8 +4305,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(220)</visible>
 	</control>
+	<!-- Plot (220) -->
+	<control type="radiobutton" id="4114">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Poster3_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Poster3_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(220)</visible>
+	</control>
 	<!-- Viewmode Panel1 (300) -->
-	<!--<control type="label" id="4120">
+	<!--<control type="label" id="4126">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4177,7 +4327,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(300)</visible>
 	</control>-->
-	<control type="label" id="4121">
+	<control type="label" id="4127">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4190,7 +4340,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (300) -->
-	<control type="radiobutton" id="4122">
+	<control type="radiobutton" id="4128">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -4201,7 +4351,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- 3D Effect #2 (300) -->
-	<control type="radiobutton" id="4123">
+	<control type="radiobutton" id="4129">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -4211,7 +4361,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
 	</control>
-	<control type="label" id="4124">
+	<control type="label" id="4130">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4224,7 +4374,7 @@
 	</control>
 
 	<!-- Sidebar (300) -->
-	<control type="radiobutton" id="4125">
+	<control type="radiobutton" id="4131">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -4235,7 +4385,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Sidebar (300) -->
-	<control type="radiobutton" id="4126">
+	<control type="radiobutton" id="4132">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -4246,7 +4396,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Sidebar (300) -->
-	<control type="radiobutton" id="4127">
+	<control type="radiobutton" id="4133">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -4257,7 +4407,7 @@
 		<visible>Control.IsVisible(300)</visible>
 	</control>
 	<!-- Image Labels (300) -->
-	<control type="radiobutton" id="4128">
+	<control type="radiobutton" id="4134">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -4266,8 +4416,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
 	</control>
+	<!-- Plot (300) -->
+	<control type="radiobutton" id="4135">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Panel1_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Panel1_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(300)</visible>
+	</control>
 	<!-- Viewmode Panel2 (310) -->
-	<!--<control type="label" id="4140">
+	<!--<control type="label" id="4147">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4278,7 +4438,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(310)</visible>
 	</control>-->
-	<control type="label" id="4141">
+	<control type="label" id="4148">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4291,7 +4451,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (310) -->
-	<control type="radiobutton" id="4142">
+	<control type="radiobutton" id="4149">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -4302,7 +4462,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- 3D Effect #2 (310) -->
-	<control type="radiobutton" id="4143">
+	<control type="radiobutton" id="4150">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -4312,7 +4472,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
 	</control>
-	<control type="label" id="4144">
+	<control type="label" id="4151">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4325,7 +4485,7 @@
 	</control>
 
 	<!-- Sidebar (310) -->
-	<control type="radiobutton" id="4145">
+	<control type="radiobutton" id="4152">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -4336,7 +4496,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Sidebar (310) -->
-	<control type="radiobutton" id="4146">
+	<control type="radiobutton" id="4153">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -4347,7 +4507,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Sidebar (310) -->
-	<control type="radiobutton" id="4147">
+	<control type="radiobutton" id="4154">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -4358,7 +4518,7 @@
 		<visible>Control.IsVisible(310)</visible>
 	</control>
 	<!-- Image Labels (310) -->
-	<control type="radiobutton" id="4148">
+	<control type="radiobutton" id="4155">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
@@ -4367,8 +4527,18 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
 	</control>
+	<!-- Plot (310) -->
+	<control type="radiobutton" id="4156">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Panel2_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Panel2_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(310)</visible>
+	</control>
 	<!-- Viewmode Panel3 (320) -->
-	<!--<control type="label" id="4160">
+	<!--<control type="label" id="4168">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4379,7 +4549,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(320)</visible>
 	</control>-->
-	<control type="label" id="4161">
+	<control type="label" id="4169">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4392,7 +4562,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (320) -->
-	<control type="radiobutton" id="4162">
+	<control type="radiobutton" id="4170">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>3D #1</label>
@@ -4403,7 +4573,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- 3D Effect #2 (320) -->
-	<control type="radiobutton" id="4163">
+	<control type="radiobutton" id="4171">
 		<width>190</width>
 		<description>3D Effect #2</description>
 		<label>3D #2</label>
@@ -4413,7 +4583,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
 	</control>
-	<control type="label" id="4164">
+	<control type="label" id="4172">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4426,7 +4596,7 @@
 	</control>
 
 	<!-- Sidebar (320) -->
-	<control type="radiobutton" id="4165">
+	<control type="radiobutton" id="4173">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Default</label>
@@ -4437,7 +4607,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Sidebar (320) -->
-	<control type="radiobutton" id="4166">
+	<control type="radiobutton" id="4174">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>Right</label>
@@ -4448,7 +4618,7 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Sidebar (320) -->
-	<control type="radiobutton" id="4167">
+	<control type="radiobutton" id="4175">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>Left</label>
@@ -4459,12 +4629,22 @@
 		<visible>Control.IsVisible(320)</visible>
 	</control>
 	<!-- Image Labels (320) -->
-	<control type="radiobutton" id="4168">
+	<control type="radiobutton" id="4176">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>Labels</label>
 		<onclick>Skin.ToggleSetting(Panel3_Images_Label)</onclick>
 		<selected>Skin.HasSetting(Panel3_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(320)</visible>
+	</control>
+	<!-- Plot (320) -->
+	<control type="radiobutton" id="4177">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Panel3_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Panel3_Sidebar_NoPlot)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
 	</control>
@@ -5322,6 +5502,19 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(OSD_Enabled)</visible>
 	</control>
+</include>
+<include name="Viewmode_Visible_Plot">
+<visible>
+[ Control.isVisible(100) + !Skin.HasSetting(List1_Sidebar_NoPlot) ] |
+[ Control.isVisible(110) + !Skin.HasSetting(List2_Sidebar_NoPlot) ] |
+[ Control.isVisible(120) + !Skin.HasSetting(List3_Sidebar_NoPlot) ] |
+[ Control.isVisible(200) + !Skin.HasSetting(Poster1_Sidebar_NoPlot) ] |
+[ Control.isVisible(210) + !Skin.HasSetting(Poster2_Sidebar_NoPlot) ] |
+[ Control.isVisible(220) + !Skin.HasSetting(Poster3_Sidebar_NoPlot) ] |
+[ Control.isVisible(300) + !Skin.HasSetting(Panel1_Sidebar_NoPlot) ] |
+[ Control.isVisible(310) + !Skin.HasSetting(Panel2_Sidebar_NoPlot) ] |
+[ Control.isVisible(320) + !Skin.HasSetting(Panel3_Sidebar_NoPlot) ] 
+</visible>
 </include>
 
 <!-- Viewtype List1 (100) -->

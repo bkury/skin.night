@@ -13,9 +13,12 @@
 	<visible>Container.Content(channel) + !ListItem.Type(clip) | Container.Content(channels) + !ListItem.Type(clip) | Container.Content(photoAlbums) | Container.Content(photos) | Container.Content(albums) | Container.Content(Songs) | Container.Content(Artists) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)</visible>
 </include>
 
-<!--<include name="Viewmode_Visible_Mirror">
-	<visible>Control.HasFocus(55)</visible>
-</include>-->
+<include name="Viewmode_Visible_Mirror">
+	<visible>[ StringCompare(Container.Viewmode,Poster #1) + Skin.HasSetting(Poster1_Images_Mirror) ] | 
+		 [ StringCompare(Container.Viewmode,Poster #2) + Skin.HasSetting(Poster2_Images_Mirror) ] |
+		 [ StringCompare(Container.Viewmode,Poster #3) + Skin.HasSetting(Poster3_Images_Mirror) ]
+	</visible>
+</include>
 
 <!-- VIEWTYPE PANEL -->
 <include name="Viewmode_Panel">

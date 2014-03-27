@@ -8,7 +8,7 @@
                         <posx>430</posx>
                         <posy>480</posy>
                         <width>819</width>
-                        <height>300</height>
+                        <height>500</height>
 			<onup>7000</onup>
 			<ondown>7000</ondown>
                         <orientation>horizontal</orientation>
@@ -29,7 +29,7 @@
                         <posx>-80</posx>
                         <posy>460</posy>
                         <width>1380</width>
-                        <height>300</height>
+                        <height>500</height>
 			<onup>7000</onup>
 			<ondown>7000</ondown>
                         <orientation>horizontal</orientation>
@@ -51,7 +51,7 @@
                         <posx>-80</posx>
                         <posy>240</posy>
                         <width>1380</width>
-                        <height>300</height>
+                        <height>500</height>
 			<onup>7000</onup>
 			<ondown>7000</ondown>
                         <orientation>horizontal</orientation>

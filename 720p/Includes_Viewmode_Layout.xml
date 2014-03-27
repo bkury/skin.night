@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Tue Mar 25 16:19:01 CET 2014 -->
+<!-- Thu Mar 27 01:35:48 CET 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -15928,6 +15928,20 @@
 			<align>center</align>
 			<aligny>center</aligny>
 		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>10</posx>
+			<posy>150</posy>
+			<width>100</width>
+			<height>140</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
 	</control>
 
 	<!-- Square -->
@@ -15959,6 +15973,20 @@
 			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>10</posx>
+			<posy>155</posy>
+			<width>100</width>
+			<height>100</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
         </control>
 
 	<!-- Thumb -->
@@ -15989,6 +16017,18 @@
 			<height>70</height>
 			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>10</posx>
+			<posy>140</posy>
+			<width>100</width>
+			<height>70</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<include>Viewmode_Visible_Mirror</include>
 		</control>
         </control>
 
@@ -16094,6 +16134,20 @@
 			<align>center</align>
 			<aligny>center</aligny>
 		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>20</posx>
+			<posy>190</posy>
+			<width>120</width>
+			<height>170</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
 	</control>
 
 	<!-- Square -->
@@ -16125,6 +16179,20 @@
 			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>20</posx>
+			<posy>190</posy>
+			<width>120</width>
+			<height>120</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
         </control>
 
 	<!-- Thumb -->
@@ -16155,6 +16223,18 @@
 			<height>85</height>
 			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>20</posx>
+			<posy>172</posy>
+			<width>120</width>
+			<height>85</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<include>Viewmode_Visible_Mirror</include>
 		</control>
         </control>
 
@@ -16260,6 +16340,20 @@
 			<align>center</align>
 			<aligny>center</aligny>
 		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>40</posx>
+			<posy>270</posy>
+			<width>160</width>
+			<height>230</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
 	</control>
 
 	<!-- Square -->
@@ -16291,6 +16385,20 @@
 			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>40</posx>
+			<posy>260</posy>
+			<width>160</width>
+			<height>160</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
         </control>
 
 	<!-- Thumb -->
@@ -16321,6 +16429,18 @@
 			<height>115</height>
 			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>40</posx>
+			<posy>237</posy>
+			<width>160</width>
+			<height>115</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<include>Viewmode_Visible_Mirror</include>
 		</control>
         </control>
 

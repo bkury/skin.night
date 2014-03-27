@@ -20,6 +20,55 @@
 		<animation effect="slide" end="165,90" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Deck_Hide)">Conditional</animation>
 		<animation effect="slide" end="165,-200" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Hide)">Conditional</animation>
 
+		<!-- On Deck -->
+		<control type="group" id="7001">
+			<visible>Control.isVisible(11001) + !Skin.HasSetting(Deck_NoOnDeck)</visible>
+			<include>Animation_CommonFade_600</include>
+
+			<control type="group">
+				<!-- Vertical Home -->
+				<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11000)">conditional</animation>
+				<!-- Horizontal Home -->
+				<animation effect="slide" end="0,-300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11000)">Conditional</animation>
+
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>On Deck</label>
+				</control>
+				<control type="fixedlist" id="11001">
+					<ondown condition="!Skin.HasSetting(Home_Horizontal)">11000</ondown>
+					<onup condition="Skin.HasSetting(Home_Horizontal)">11000</onup>
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(11001)</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11001)</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<animation effect="slide" end="0,-275" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,175" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+
+				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11001)</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<animation effect="slide" end="0,275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,-175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11001) + Control.HasFocus(11001)">Conditional</animation>
+				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_More_Position</include>
+				<include>Deck_Information_More</include>
+			</control>
+		</control>
+
 		<!-- Recently Added -->
 		<control type="group" id="7000">
 			<visible>Control.isVisible(11000) + !Skin.HasSetting(Deck_NoRecently)</visible>
@@ -71,55 +120,6 @@
 				<include>Deck_Information_More</include>
 			</control>
 
-		</control>
-
-		<!-- On Deck -->
-		<control type="group" id="7001">
-			<visible>Control.isVisible(11001) + !Skin.HasSetting(Deck_NoOnDeck)</visible>
-			<include>Animation_CommonFade_600</include>
-
-			<control type="group">
-				<!-- Vertical Home -->
-				<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000)">Conditional</animation>
-				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11000)">conditional</animation>
-				<!-- Horizontal Home -->
-				<animation effect="slide" end="0,-300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11000)">Conditional</animation>
-
-				<include>Deck_Placeholder</include>
-				<control type="label">
-					<include>Deck_Name</include>
-					<label>On Deck</label>
-				</control>
-				<control type="fixedlist" id="11001">
-					<ondown condition="!Skin.HasSetting(Home_Horizontal)">11000</ondown>
-					<onup condition="Skin.HasSetting(Home_Horizontal)">11000</onup>
-					<include>Deck_Content</include>
-				</control>
-				<control type="group">
-					<visible>Control.hasFocus(11001)</visible>
-					<include>Animation_CommonFade_600</include>
-					<include>Deck_Focus</include>
-				</control>
-			</control>
-
-			<control type="group">
-				<visible>Control.HasFocus(11001)</visible>
-				<include>Animation_CommonFade_Deck_400</include>
-				<animation effect="slide" end="0,-275" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
-				<animation effect="slide" end="0,175" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
-
-				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_Position</include>
-				<include>Deck_Information</include>
-			</control>
-
-			<control type="group">
-				<visible>Control.HasFocus(11001)</visible>
-				<include>Animation_CommonFade_Deck_400</include>
-				<animation effect="slide" end="0,275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
-				<animation effect="slide" end="0,-175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11001) + Control.HasFocus(11001)">Conditional</animation>
-				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_More_Position</include>
-				<include>Deck_Information_More</include>
-			</control>
 		</control>
 
 		<!-- Recently Used -->

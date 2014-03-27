@@ -457,7 +457,7 @@
 					<label>Director</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
-					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies)</visible>
+					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)</visible>
 				</control>
 				<control type="label">
 					<posx>100</posx>
@@ -466,14 +466,14 @@
 					<label fallback="Not Available">$INFO[ListItem.Director]</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
-					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies)</visible>
+					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)</visible>
 				</control>
 
 				<!-- Episodes -->
 				<control type="label">
 					<posx>0</posx>
 					<posy>168</posy>
-					<label>Episodes</label>
+					<label>Total</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 					<visible>Container.Content(tvshows)</visible>
@@ -482,7 +482,7 @@
 					<posx>100</posx>
 					<posy>168</posy>
 					<width>280</width>
-					<label fallback="Not Available">$INFO[ListItem.Property(LeafCount)]</label>
+					<label fallback="Not Available">$INFO[ListItem.Property(LeafCount)] Episodes</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
 					<visible>Container.Content(tvshows)</visible>
@@ -547,6 +547,25 @@
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 
+				<!-- Channel -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>199</posy>
+					<label>Channel</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>Container.Content(channel)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>199</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[Container.FirstTitle]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(channel)</visible>
+				</control>
+
 				<!-- Picture Resolution -->
 				<control type="label">
 					<posx>0</posx>
@@ -606,6 +625,7 @@
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FFCCCCCC</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<include>Viewmode_Visible_Plot</include>
 					</control>
 					<control type="image">
 						<posx>235</posx>
@@ -652,6 +672,7 @@
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FFCCCCCC</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<include>Viewmode_Visible_Plot</include>
 					</control>
 				</control>
 
@@ -687,6 +708,7 @@
 						<textcolor>FFCCCCCC</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<visible>Container.Content(photos)</visible>
+						<include>Viewmode_Visible_Plot</include>
 					</control>
 				</control>
 
@@ -702,6 +724,7 @@
 					<textcolor>FFCCCCCC</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>Container.Content(artists)</visible>
+					<include>Viewmode_Visible_Plot</include>
 				</control>
 				<control type="textbox">
 					<description>Plot</description>
@@ -715,6 +738,7 @@
 					<textcolor>FFCCCCCC</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>Container.Content(seasons)</visible>
+					<include>Viewmode_Visible_Plot</include>
 				</control>
 </include>
 
@@ -731,6 +755,7 @@
 		<textcolor>FFCCCCCC</textcolor>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		<visible>!isEmpty(ListItem.Plot)</visible>
+		<include>Viewmode_Visible_Plot</include>
 	</control>
 	<control type="textbox">
 		<description>Plot</description>
@@ -744,6 +769,7 @@
 		<textcolor>FFCCCCCC</textcolor>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		<visible>Container.Content(artists)</visible>
+		<include>Viewmode_Visible_Plot</include>
 	</control>
 	<control type="textbox">
 		<description>Plot</description>
@@ -757,6 +783,7 @@
 		<textcolor>FFCCCCCC</textcolor>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		<visible>Container.Content(seasons)</visible>
+		<include>Viewmode_Visible_Plot</include>
 	</control>
 	<control type="textbox">
 		<description>Plot</description>
@@ -770,6 +797,7 @@
 		<textcolor>FFCCCCCC</textcolor>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		<visible>Container.Content(photos)</visible>
+		<include>Viewmode_Visible_Plot</include>
 	</control>
 </include>
 
