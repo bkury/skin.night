@@ -635,6 +635,24 @@
 			<filename>alaska_regular.ttf</filename>
 			<size>44</size>
 		</font>	
+
+		<!-- Banner -->
+		<font>
+			<name>Viewmode_Banner_Large</name>
+			<filename>alaska_regular.ttf</filename>
+			<size>36</size>
+		</font>	
+		<font>
+			<name>Viewmode_Banner_Medium</name>
+			<filename>alaska_regular.ttf</filename>
+			<size>30</size>
+		</font>	
+		<font>
+			<name>Viewmode_Banner_Small</name>
+			<filename>alaska_regular.ttf</filename>
+			<size>24</size>
+		</font>	
+
 		<font>
 			<name>Font_FileBrowserHeading</name>
 			<filename>alaska_black.ttf</filename>

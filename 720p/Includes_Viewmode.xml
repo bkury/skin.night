@@ -241,6 +241,58 @@
 		</control>
 		
 	</control>
+
+
+
+
+	<!-- Viewmode Banner #1 (400/Info) -->
+	<control type="group">
+		<visible>Control.isVisible(400)</visible>
+		<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Banner1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Banner1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Banner1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Background -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>720</height>
+			<texture border="5">base-rounded.png</texture>
+			<colordiffuse>99000000</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>420</posx>
+			<posy>0</posy>
+			<width>1</width>
+			<height>720</height>
+			<texture border="0">base-rounded.png</texture>
+			<colordiffuse>99444444</colordiffuse>
+			<animation effect="slide" end="-420,0" condition="Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
+		</control>
+
+		<!-- Sidebar -->
+		<control type="group">
+			<posy>15</posy>
+			<posx>20</posx>
+			<include>Viewmode_Sidebar_Header</include>
+			<include>Viewmode_Sidebar_Content</include>
+			<include>Viewmode_Sidebar_ImagePlot</include>
+		</control>
+
+		<!-- Clock -->
+		<control type="group">
+			<visible>!Skin.HasSetting(Banner1_Sidebar_Right)</visible>
+			<include>Viewmode_Sidebar_Clock_Left</include>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(Banner1_Sidebar_Right)</visible>
+			<include>Viewmode_Sidebar_Clock_Right</include>
+		</control>
+	</control>
+
 </include>
 
 <!-- Sidebar Header -->
@@ -603,6 +655,7 @@
 					<itemgap>24</itemgap>
 					<orientation>horizontal</orientation>
 					<include>color_flags</include>
+					<visible>!Skin.HasSetting(NoMediaFlags)</visible>
 				</control>
 
 				<control type="group">
@@ -614,6 +667,7 @@
 						<height>200</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>scale</aspectratio>
+						<animation effect="slide" end="95" condition="Skin.HasSetting(NoContentRating) + Skin.HasSetting(NoStudioLogo)">Conditional</animation>
 					</control>
 					<control type="textbox">
 						<description>Plot</description>
@@ -629,7 +683,6 @@
 						<include>Viewmode_Visible_Plot</include>
 					</control>
 
-
 					<!-- Content Rating -->
 					<control type="label">
 						<posx>180</posx>
@@ -640,6 +693,7 @@
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FF888888</textcolor>
 						<align>left</align>
+						<visible>!Skin.HasSetting(NoContentRating)</visible>
 					</control>
 					<control type="label">
 						<posx>180</posx>
@@ -652,6 +706,7 @@
 						<wrapmultiline>false</wrapmultiline>
 						<scroll>true</scroll>
 						<textcolor>FFCCCCCC</textcolor>
+						<visible>!Skin.HasSetting(NoContentRating)</visible>
 					</control>
 
 					<!-- Studio -->
@@ -664,6 +719,7 @@
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FF888888</textcolor>
 						<align>left</align>
+						<visible>!Skin.HasSetting(NoStudioLogo)</visible>
 					</control>
 					<control type="label">
 						<posx>180</posx>
@@ -676,6 +732,7 @@
 						<wrapmultiline>true</wrapmultiline>
 						<scroll>false</scroll>
 						<textcolor>FFCCCCCC</textcolor>
+						<visible>!Skin.HasSetting(NoStudioLogo)</visible>
 					</control>
 
 					<!--<control type="image">

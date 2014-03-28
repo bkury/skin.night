@@ -375,7 +375,7 @@
 						<texturefocus>b-video.png</texturefocus>
 						<texturenofocus>b-video.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
-						<onleft>413</onleft>
+						<onleft>414</onleft>
 						<onright>411</onright>
 						<onup>900</onup>
 						<ondown>900</ondown>
@@ -726,16 +726,16 @@
 				<!-- Banner -->
 				<control type="radiobutton" id="3542">
 					<width>280</width>
-					<label>coming soon</label>
-					<onclick>Container.SetViewMode(100)</onclick>
-					<selected>StringCompare(Container.Viewmode,Panel #1)</selected>
+					<label>Info</label>
+					<onclick>Container.SetViewMode(400)</onclick>
+					<selected>StringCompare(Container.Viewmode,Banner #1)</selected>
 					<include>radiobutton_ticked</include>
 				</control>
 				<control type="radiobutton" id="3543">
 					<width>280</width>
-					<label>coming soon</label>
-					<onclick>Container.SetViewMode(100)</onclick>
-					<selected>StringCompare(Container.Viewmode,Panel #2)</selected>
+					<label>Full</label>
+					<onclick>Container.SetViewMode(410)</onclick>
+					<selected>StringCompare(Container.Viewmode,Banner #2)</selected>
 					<include>radiobutton_ticked</include>
 				</control>
 

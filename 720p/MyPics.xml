@@ -1,7 +1,7 @@
 <window id="2">
 	<defaultcontrol>100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-        <views>100,110,120,200,210,220,300,310,320</views>
+        <views>100,110,120,200,210,220,300,310,320,400,410,420</views>
 	<controls>
 
         <!-- Backgrounds -->
@@ -10,6 +10,7 @@
 	<include>Viewmode_List</include>
 	<include>Viewmode_Panel</include>
 	<include>Viewmode_Poster</include>
+	<include>Viewmode_Banner</include>
 	<include>Viewmode_Infocard</include>
 
 	<include>viewtype_mode</include>

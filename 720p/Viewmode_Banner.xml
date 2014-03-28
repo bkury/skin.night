@@ -1,0 +1,65 @@
+<!-- Viewmode Banner -->
+<includes>
+
+<include name="Viewmode_Banner">
+
+		<!-- Banner #1 (400/Info) -->
+		<control type="panel" id="400">
+			<posx>430</posx>
+			<posy>40</posy>
+			<width>900</width>
+			<height>640</height>
+			<onleft>7000</onleft>
+			<orientation>vertical</orientation>
+			<preloaditems>2</preloaditems>
+			<viewtype label="Banner #1">panel</viewtype>
+
+			<!-- Position Size -->
+			<!--<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>-->
+
+                        <include>Viewmode_Banner1_General</include>
+			<include>Viewmode_Banner1_Itemlayout</include>
+		</control>
+
+		<!-- Banner #2 (410/Full) -->
+		<control type="panel" id="410">
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>1280</width>
+			<height>640</height>
+			<onleft>7000</onleft>
+			<orientation>vertical</orientation>
+			<preloaditems>2</preloaditems>
+			<viewtype label="Banner #2">panel</viewtype>
+
+			<animation effect="slide" end="60,0" time="0" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+			<animation effect="slide" end="60,0" time="0" condition="!Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+                        <include>Viewmode_Banner2_General_NoSidebar</include>
+			<include>Viewmode_Banner2_Itemlayout</include>
+		</control>
+
+		<!-- Banner #3 (420/Deck) -->
+		<control type="panel" id="420">
+			<posx>75</posx>
+			<posy>140</posy>
+			<width>1620</width>
+			<height>640</height>
+			<onleft>7000</onleft>
+			<orientation>vertical</orientation>
+			<preloaditems>2</preloaditems>
+			<viewtype label="Banner #3">panel</viewtype>
+
+			<animation effect="zoom" end="70" condition="true">Conditional</animation>
+
+			<!-- Position Size -->
+			<animation effect="slide" end="15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Small)">Conditional</animation>
+			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Large)">Conditional</animation>
+
+                        <include>Viewmode_Banner3_General_NoSidebar</include>
+			<include>Viewmode_Banner3_Itemlayout</include>
+		</control>
+
+</include>
+</includes>

@@ -9,6 +9,7 @@
 	<include file="Viewmode_List.xml" />
 	<include file="Viewmode_Panel.xml" />
 	<include file="Viewmode_Poster.xml" />
+	<include file="Viewmode_Banner.xml" />
 	<include file="Viewmode_Search.xml" />
 
 	<include file="Includes_Animations.xml" />
@@ -235,7 +236,7 @@
 
 	<include name="Global_Time_Home_Big">
 		<control type="group">
-                        <visible>[Control.IsVisible(300) + Skin.HasSetting(home_bigclock)]</visible>
+                        <visible>[Control.IsVisible(300) + Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock)]</visible>
 			<posx>1256</posx>
 			<posy>0</posy>
 			<include>Animation_BackdropFade</include>
@@ -253,14 +254,14 @@
 	                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
 						<textcolor>white</textcolor>
 						<posy>10</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>Font_Bartowski_MainMenu</font>
 						<label>$INFO[System.Time(hh:mm xx)]</label>
 						<align>right</align>
 					</control>
 					<control type="label">
 						<posy>95</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>Font_Landscape_TitleTVShow</font>
 						<textcolor>white</textcolor>
 						<info>System.Date</info>
@@ -274,7 +275,7 @@
 	                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
 						<textcolor>white</textcolor>
 						<posy>10</posy>
-						<width>300</width>
+						<width>400</width>
 						<!--<font>Font_Bartowski_MainMenu</font>-->
 						<font>AeonFont_MainMenu_Focus</font>
 						<info>System.Time(hh:mm xx)</info>
@@ -282,7 +283,7 @@
 					</control>
 					<control type="label">
 						<posy>100</posy>
-						<width>300</width>
+						<width>400</width>
 						<font>Font_Landscape_TitleTVShow</font>
 						<textcolor>white</textcolor>
 						<info>System.Date</info>
@@ -296,7 +297,7 @@
 
 	<include name="Global_Time_Home">
 		<control type="group">
-                        <visible>[Control.IsVisible(300) + !Skin.HasSetting(home_bigclock)]</visible>
+                        <visible>[Control.IsVisible(300) + !Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock)]</visible>
 			<posx>1256</posx>
 			<posy>0</posy>
 			<include>Animation_BackdropFade</include>
@@ -446,10 +447,17 @@
 	<include name="viewtype_clock">
 
 		<control type="group">
-			<visible>![Control.isVisible(100) | Control.isVisible(300)]</visible>
 			<posx>1260</posx>
 			<posy>10</posy>
-			<visible>Skin.HasSetting(library_global_clock)</visible>
+			<visible>!Skin.HasSetting(NoGlobalClock) + [	Control.isVisible(110) | Control.isVisible(120) |
+									Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) |
+									Control.isVisible(310) | Control.isVisible(320) |
+									Control.isVisible(410) |
+									Control.isVisible(900) |  Control.isVisible(901) |  Control.isVisible(902) |
+									Window.isVisible(4) | Window.isVisible(12) | Window.isVisible(20) | Window.isVisible(1111)
+								   ]
+			</visible>
+
 			<include>Animation_CommonFade</include>
 
 			<control type="group">
@@ -516,30 +524,6 @@
 
 		</control>
 	</include>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

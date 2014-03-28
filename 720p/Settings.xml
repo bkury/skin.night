@@ -167,6 +167,6 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-		<include>Global_Time_TopRight_Files</include>
+                <include>viewtype_clock</include>
 	</controls>
 </window>

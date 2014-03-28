@@ -211,6 +211,7 @@
 			</control>
 		</control>
 		
+	<include>viewtype_clock</include>
 	
 	</controls>
 </window>

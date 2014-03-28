@@ -9,12 +9,13 @@
 <string id="31326">Created</string>
 <string id="31327">Resolution</string>
 <string id="31029">Disable Views</string><!-- GOOD -->
-<string id="31032">Disable Clock</string><!-- GOOD -->
-<string id="31033">Scroll Plot for Movies and TV</string>
+<string id="31032">Disable Global Clock</string><!-- GOOD -->
+<string id="31033">Scroll Plot</string>
 <string id="31034">Disable Media Flags</string>
 <string id="31035">Disable Movies Unwatched Overlays</string>
 <string id="31036">Disable TV Unwatched Overlays</string>
-<string id="31037">Lock Views in Place(Kiosk Mode)</string>
+<!--<string id="31037">Lock Views in Place(Kiosk Mode)</string>-->
+<string id="31037">Kiosk Mode</string>
 <string id="31038">Music Visualization Options</string>
 <string id="31039">Use Fanart Instead of Visualisation</string>
 <string id="31040">Use JukeBox for Fullscreen Playback</string>
@@ -72,7 +73,7 @@
 <string id="31240">Press "Left" for Trailer</string>
 <string id="31242">Set Timer</string><!-- GOOD -->
 <string id="31243">Cancel Timer</string><!-- GOOD -->
-<string id="31247">Enable Global Clock</string>
+<string id="31247">Disable Home Clock</string>
 <string id="31248">Use Smaller Global Now Playing for Music</string>
 <string id="31249">Get Logo</string>
 <string id="31251">Location</string>
@@ -173,7 +174,7 @@
 <string id="31546">you can change accent colors in settings / appearance</string>
 <string id="31547">Enable Channel Logo</string>
 <string id="31548">Enable Server Name</string>
-<string id="31549">Disable Studio Logos</string>
+<string id="31549">Disable Studio Logo</string>
 <string id="31550">Disable Content Ratings</string>
 <string id="31551">Include Viewtypes</string>
 <string id="31552">Enable Custom TV Logos (Viewtype Landscape/Fanart only)</string>

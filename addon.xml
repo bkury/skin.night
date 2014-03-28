@@ -3,7 +3,7 @@
 	id="skin.night.git"
 	version="1.6"
 	name="Night (Git)"
-	provider-name="mcborzu">
+	provider-name="bkury">
 	<requires>
 		<import addon="xbmc.gui" version="2.11"/>
 	</requires>

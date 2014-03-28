@@ -7,7 +7,7 @@
 	<onunload>Skin.Reset(selector1)</onunload>
 	<onunload>Skin.Reset(selector2)</onunload>
 
-	<views>100,110,120,200,210,220,300,310,320</views>
+	<views>100,110,120,200,210,220,300,310,320,400,410,420</views>
 
 	<controls>
 
@@ -16,9 +16,10 @@
 
 	<!-- Views -->
 	<control type="group">
-		<include>Viewmode_List</include>	<!-- 50/51 -->
-		<include>Viewmode_Poster</include>	<!-- 60/61 -->
-		<include>Viewmode_Panel</include>	<!-- 70/71 -->
+		<include>Viewmode_List</include>	<!-- 100/110/120 -->
+		<include>Viewmode_Poster</include>	<!-- 200/210/220 -->
+		<include>Viewmode_Panel</include>	<!-- 300/310/320 -->
+		<include>Viewmode_Banner</include>	<!-- 400/410/420 -->
 		<include>Viewmode_Infocard</include>
 	</control>
 

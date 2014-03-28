@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Fri Mar 28 02:21:43 CET 2014 -->
+<!-- Fri Mar 28 23:31:05 CET 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -13222,6 +13222,2472 @@
 
 	</focusedlayout>
 </include>
+<!-- Banner1 -->
+<include name="Viewmode_Banner1_Itemlayout">
+	<itemlayout condition="Skin.HasSetting(Banner1_Images_Small)" width="210" height="80">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner1_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner1_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Banner1_Images_Small)" width="210" height="80">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner1_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner1_Focus_1) + !Skin.HasSetting(Banner1_Focus_2) + !Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner1_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner1_Focus_1) + !Skin.HasSetting(Banner1_Focus_2) + !Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="!Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)" width="280" height="106">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner1_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner1_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="!Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)" width="280" height="106">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner1_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner1_Focus_1) + !Skin.HasSetting(Banner1_Focus_2) + !Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner1_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner1_Focus_1) + !Skin.HasSetting(Banner1_Focus_2) + !Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="Skin.HasSetting(Banner1_Images_Large)" width="420" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner1_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner1_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Banner1_Images_Large)" width="420" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner1_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner1_Focus_1) + !Skin.HasSetting(Banner1_Focus_2) + !Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner1_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner1_Focus_1) + !Skin.HasSetting(Banner1_Focus_2) + !Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner1_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner1_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner1_Images_Large) + !Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner1_Images_Clearart) + Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner1_Images_Clearart) + !Skin.HasSetting(Banner1_Images_Small) + !Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+</include>
+<!-- Banner2 -->
+<include name="Viewmode_Banner2_Itemlayout">
+	<itemlayout condition="Skin.HasSetting(Banner2_Images_Small)" width="210" height="80">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner2_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Banner2_Images_Small)" width="210" height="80">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner2_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner2_Focus_1) + !Skin.HasSetting(Banner2_Focus_2) + !Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner2_Focus_1) + !Skin.HasSetting(Banner2_Focus_2) + !Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="!Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)" width="280" height="106">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner2_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="!Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)" width="280" height="106">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner2_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner2_Focus_1) + !Skin.HasSetting(Banner2_Focus_2) + !Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner2_Focus_1) + !Skin.HasSetting(Banner2_Focus_2) + !Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="Skin.HasSetting(Banner2_Images_Large)" width="420" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner2_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Banner2_Images_Large)" width="420" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner2_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner2_Focus_1) + !Skin.HasSetting(Banner2_Focus_2) + !Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner2_Focus_1) + !Skin.HasSetting(Banner2_Focus_2) + !Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner2_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner2_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner2_Images_Large) + !Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner2_Images_Clearart) + Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+</include>
+<!-- Banner3 -->
+<include name="Viewmode_Banner3_Itemlayout">
+	<itemlayout condition="Skin.HasSetting(Banner3_Images_Small)" width="210" height="80">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner3_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Banner3_Images_Small)" width="210" height="80">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner3_Focus_1) + !Skin.HasSetting(Banner3_Focus_2) + !Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner3_Focus_1) + !Skin.HasSetting(Banner3_Focus_2) + !Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>210</width>
+	                        <height>80</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Small</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Small</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>90</posx>
+				<posy>40</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>105</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="!Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)" width="280" height="106">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner3_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="!Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)" width="280" height="106">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner3_Focus_1) + !Skin.HasSetting(Banner3_Focus_2) + !Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner3_Focus_1) + !Skin.HasSetting(Banner3_Focus_2) + !Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>280</width>
+	                        <height>106</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Medium</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Medium</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>120</posx>
+				<posy>55</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>140</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="Skin.HasSetting(Banner3_Images_Large)" width="420" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner3_Images_Transparent)</visible>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Banner3_Images_Large)" width="420" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Banner3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner3_Focus_1) + !Skin.HasSetting(Banner3_Focus_2) + !Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Banner3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Banner3_Focus_1) + !Skin.HasSetting(Banner3_Focus_2) + !Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Banner3_Focus_3)">Focus</animation>
+   
+			<!-- Debug Grid -->
+			<!--<control type="image">
+				<width>420</width>
+	                        <height>160</height>
+	                        <aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+       		                <texture background="true">frameOrange.png</texture>
+	                        <colordiffuse>77AAAAAA</colordiffuse>
+				<aligny>center</aligny>
+			</control>-->
+
+			<!-- Banner Layout -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Banner_Large</include>
+			</control>
+
+			<!-- Clearart Layout -->
+			<control type="group">
+				<visible>Skin.HasSetting(Banner3_Images_Clearart)</visible>
+				<include>Viewmode_Layout_Clearart_Large</include>
+			</control>
+
+			<!-- Overlays -->
+			<control type="group">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="zoom" end="100" condition="Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="zoom" end="70" condition="Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="zoom" end="90" condition="!Skin.HasSetting(Banner3_Images_Large) + !Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Small)">Conditional</animation>
+				<animation effect="slide" end="0,28" condition="Skin.HasSetting(Banner3_Images_Clearart) + Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+				<animation effect="slide" end="0,18" condition="Skin.HasSetting(Banner3_Images_Clearart) + !Skin.HasSetting(Banner3_Images_Small) + !Skin.HasSetting(Banner3_Images_Large)">Conditional</animation>
+
+				<posx>188</posx>
+				<posy>92</posy>
+				<include>viewtype_overlays</include>
+			</control>
+
+			<!-- Debug Line Overlay -->
+			<!--<control type="image">
+				<width>1</width>
+				<posx>210</posx>
+				<height>200</height>
+				<texture>base-rounded.png</texture>
+			</control>-->
+
+		</control>
+
+	</focusedlayout>
+</include>
+<!-- Layout Banner (Small) -->
+<include name="Viewmode_Layout_Banner_Small">
+	<!-- Banner -->
+	<control type="group">
+		<!-- Frame -->
+		<control type="image">
+			<posx>14</posx>
+			<posy>24</posy>
+			<width>182</width>
+			<height>32</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+		</control>
+		<!-- Banner -->
+		<control type="image">
+			<posx>15</posx>
+			<posy>25</posy>
+			<width>180</width>
+			<height>30</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Banner]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+		</control>
+		<!-- Label -->
+		<control type="label">
+			<!--<posx>15</posx>-->
+			<posx>105</posx>
+			<posy>25</posy>
+			<width>180</width>
+			<height>30</height>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Viewmode_Banner_Small</font>
+			<visible>!Container.Content(tvshows)</visible>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>15</posx>
+			<posy>55</posy>
+			<width>180</width>
+			<height>30</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
+	</control>
+</include>
+<!-- Layout Banner (Medium) -->
+<include name="Viewmode_Layout_Banner_Medium">
+	<!-- Banner -->
+	<control type="group">
+		<!-- Frame -->
+		<control type="image">
+			<posx>19</posx>
+			<posy>30</posy>
+			<width>242</width>
+			<height>46</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+		</control>
+		<!-- Banner -->
+		<control type="image">
+			<posx>20</posx>
+			<posy>31</posy>
+			<width>240</width>
+			<height>44</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Banner]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+		</control>
+		<!-- Label -->
+		<control type="label">
+			<!--<posx>20</posx>-->
+			<posx>140</posx>
+			<posy>31</posy>
+			<width>240</width>
+			<height>44</height>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Viewmode_Banner_Medium</font>
+			<visible>!Container.Content(tvshows)</visible>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>20</posx>
+			<posy>75</posy>
+			<width>240</width>
+			<height>44</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
+	</control>
+</include>
+<!-- Layout Banner (Large) -->
+<include name="Viewmode_Layout_Banner_Large">
+	<!-- Banner -->
+	<control type="group">
+		<!-- Frame -->
+		<control type="image">
+			<posx>24</posx>
+			<posy>44</posy>
+			<width>372</width>
+			<height>72</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+		</control>
+		<!-- Banner -->
+		<control type="image">
+			<posx>25</posx>
+			<posy>45</posy>
+			<width>370</width>
+			<height>70</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Banner]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+		</control>
+		<!-- Label -->
+		<control type="label">
+			<!--<posx>25</posx>-->
+			<posx>210</posx>
+			<posy>45</posy>
+			<width>370</width>
+			<height>70</height>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Viewmode_Banner_Large</font>
+			<visible>!Container.Content(tvshows)</visible>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>25</posx>
+			<posy>115</posy>
+			<width>370</width>
+			<height>70</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
+	</control>
+</include>
+<!-- Layout Clearart (Small) -->
+<include name="Viewmode_Layout_Clearart_Small">
+	<!-- Banner -->
+	<control type="group">
+		<!-- Frame -->
+		<!--<control type="image">
+			<posx>34</posx>
+			<posy>11</posy>
+			<width>142</width>
+			<height>57</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>-->
+
+		<!-- Clearart -->
+		<control type="image">
+			<posx>35</posx>
+			<posy>12</posy>
+			<width>140</width>
+			<height>55</height>
+			<texture background="true" fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+
+		<!-- Label -->
+		<control type="label">
+			<posx>105</posx>
+			<posy>12</posy>
+			<width>140</width>
+			<height>55</height>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Viewmode_Banner_Small</font>
+			<visible>!Container.Content(tvshows)</visible>
+			<wrapmultiline>true</wrapmultiline>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>35</posx>
+			<posy>67</posy>
+			<width>140</width>
+			<height>55</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
+	</control>
+</include>
+<!-- Layout Clearart (Medium) -->
+<include name="Viewmode_Layout_Clearart_Medium">
+	<!-- Banner -->
+	<control type="group">
+		<!-- Frame -->
+		<!--<control type="image">
+			<posx>44</posx>
+			<posy>14</posy>
+			<width>192</width>
+			<height>78</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>-->
+
+		<!-- Clearart -->
+		<control type="image">
+			<posx>45</posx>
+			<posy>15</posy>
+			<width>190</width>
+			<height>76</height>
+			<texture background="true" fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+
+		<!-- Label -->
+		<control type="label">
+			<posx>140</posx>
+			<posy>15</posy>
+			<width>190</width>
+			<height>76</height>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Viewmode_Banner_Medium</font>
+			<visible>!Container.Content(tvshows)</visible>
+			<wrapmultiline>true</wrapmultiline>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>45</posx>
+			<posy>91</posy>
+			<width>190</width>
+			<height>76</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
+	</control>
+</include>
+<!-- Layout Clearart (Large) -->
+<include name="Viewmode_Layout_Clearart_Large">
+	<!-- Banner -->
+	<control type="group">
+		<!-- Frame -->
+		<!--<control type="image">
+			<posx>54</posx>
+			<posy>16</posy>
+			<width>312</width>
+			<height>127</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>-->
+
+		<!-- Clearart -->
+		<control type="image">
+			<posx>55</posx>
+			<posy>17</posy>
+			<width>310</width>
+			<height>125</height>
+			<texture background="true" fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+
+		<!-- Label -->
+		<control type="label">
+			<posx>210</posx>
+			<posy>17</posy>
+			<width>310</width>
+			<height>125</height>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Viewmode_Banner_Large</font>
+			<visible>!Container.Content(tvshows)</visible>
+			<wrapmultiline>true</wrapmultiline>
+		</control>
+
+		<!-- Reflection -->
+		<control type="image">
+			<posx>55</posx>
+			<posy>142</posy>
+			<width>310</width>
+			<height>125</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>
+	</control>
+</include>
 <!-- Poster1 -->
 <include name="Viewmode_Poster1_Itemlayout">
 	<itemlayout condition="Skin.HasSetting(Poster1_Images_Small)" width="120" height="160">
@@ -17415,6 +19881,105 @@
 			<visible>!Container.Content(episodes)</visible>
 			<include>Viewmode_Visible_Thumb</include>
 		</control>
+</include>
+<!-- Banner1 (General) -->
+<include name="Viewmode_Banner1_General">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+
+</include>
+<!-- Banner1 (General) -->
+<include name="Viewmode_Banner1_General_NoSidebar">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+
+</include>
+<!-- Banner2 (General) -->
+<include name="Viewmode_Banner2_General">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_Sidebar_Right)">Conditional</animation>
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+
+</include>
+<!-- Banner2 (General) -->
+<include name="Viewmode_Banner2_General_NoSidebar">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+
+</include>
+<!-- Banner3 (General) -->
+<include name="Viewmode_Banner3_General">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_Sidebar_Right)">Conditional</animation>
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+
+</include>
+<!-- Banner3 (General) -->
+<include name="Viewmode_Banner3_General_NoSidebar">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+
 </include>
 <!-- List1 (General) -->
 <include name="Viewmode_List1_General">
