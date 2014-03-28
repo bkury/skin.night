@@ -58,14 +58,15 @@
 
 		<!-- Sidebar -->
 		<control type="group">
-			<animation effect="slide" end="-880" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
+			<animation effect="slide" end="-870" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
+
 			<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(List3_Sidebar_Right)">WindowOpen</animation>
 			<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(List3_Sidebar_Right)">WindowClose</animation>
 			<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(List3_Sidebar_Right)">WindowOpen</animation>
 			<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(List3_Sidebar_Right)">WindowClose</animation>
 
-			<posy>442</posy>
-			<posx>890</posx>
+			<posy>445</posy>
+			<posx>880</posx>
 			<include>Viewmode_Sidebar_Content</include>
 			<include>Viewmode_Sidebar_Plot</include>
 		</control>
@@ -607,7 +608,7 @@
 				<control type="group">
 					<include>Viewmode_Visible_Cover</include>
 					<control type="image">
-						<posx>40</posx>
+						<posx>20</posx>
 						<posy>300</posy>
 						<width>140</width>
 						<height>200</height>
@@ -627,7 +628,57 @@
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<include>Viewmode_Visible_Plot</include>
 					</control>
-					<control type="image">
+
+
+					<!-- Content Rating -->
+					<control type="label">
+						<posx>180</posx>
+						<posy>310</posy>
+						<width>200</width>
+						<height>40</height>
+						<label>Content Rating</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FF888888</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>180</posx>
+						<posy>330</posy>
+						<width>210</width>
+						<height>40</height>
+						<label fallback="N/A">$INFO[Listitem.Property(mediaTag-contentRating)]</label>
+						<font>Font_Bartowski_Sidebar_Info</font>
+						<align>left</align>
+						<wrapmultiline>false</wrapmultiline>
+						<scroll>true</scroll>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+
+					<!-- Studio -->
+					<control type="label">
+						<posx>180</posx>
+						<posy>385</posy>
+						<width>200</width>
+						<height>40</height>
+						<label>Studio</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FF888888</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>180</posx>
+						<posy>405</posy>
+						<label fallback="N/A">$INFO[Listitem.Property(mediaTag-Studio)]</label>
+						<font>Font_Bartowski_Sidebar_Info</font>
+						<width>210</width>
+						<height>70</height>
+						<align>left</align>
+						<wrapmultiline>true</wrapmultiline>
+						<scroll>false</scroll>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+
+					<!--<control type="image">
 						<posx>235</posx>
 						<posy>300</posy>
 						<description>Logo</description>
@@ -648,7 +699,7 @@
 		                                <aspectratio>keep</aspectratio>
 						<colordiffuse>AAFFFFFF</colordiffuse>
 						<info>Listitem.Art(mediaTag::studio)</info>
-					</control>
+					</control>-->
 				</control>
 
 				<control type="group">
@@ -776,7 +827,7 @@
 		<posx>0</posx>
 		<posy>-25</posy>
 		<width>390</width>
-		<height>160</height>
+		<height>155</height>
 		<align>justify</align>
 		<info>Container.ShowPlot</info>
 		<font>Font_Bartowski_Movies_Plot</font>

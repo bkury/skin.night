@@ -22,7 +22,7 @@
 	<include file="Includes_VideoOSD.xml" />
 	<include file="Includes_MySharedContent.xml" />
 
-	<!--<include file="Debug.xml" />-->
+	<include file="Debug.xml" />
 
 	<include name="FullScreenBGImage">
                 <posx>0</posx>

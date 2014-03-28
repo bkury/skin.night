@@ -279,25 +279,29 @@
 </include>
 <!-- BKURY HERE -->
 <include name="Channel_Wraplist">
-	<control type="wraplist" id="100">
+	<control type="wraplist" id="900">
+		<viewtype label="Channel #1">list</viewtype>
 		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Channel_Fixedlist">
-	<control type="fixedlist" id="100">
+	<control type="fixedlist" id="900">
+		<viewtype label="Channel #1">list</viewtype>
 		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Channel_Simplelist">
-	<control type="list" id="100">
+	<control type="list" id="900">
+		<viewtype label="Channel #1">list</viewtype>
 		<include condition="Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Horizontal</include>
 		<include condition="!Skin.HasSetting(Home_Horizontal)">Channel_Navigation_Vertical</include>
 	</control>
 </include>
 <include name="Channel_Panel">
-	<control type="panel" id="100">
+	<control type="panel" id="900">
+		<viewtype label="Channel #1">list</viewtype>
 		<include condition="Skin.HasSetting(Home_Panel)">Channel_Navigation_Panel</include>
 	</control>
 </include>

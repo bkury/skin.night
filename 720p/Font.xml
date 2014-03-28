@@ -66,6 +66,12 @@
 			<linespacing>1</linespacing>
 		</font>
 		<font>
+			<name>Font_Bartowski_Sidebar_Info</name>
+			<filename>alaska_thin.ttf</filename>
+			<size>36</size>
+			<linespacing>0.7</linespacing>
+		</font>
+		<font>
 			<name>Digital_Label</name>
 			<filename>digital_label.ttf</filename>
 			<size>20</size>

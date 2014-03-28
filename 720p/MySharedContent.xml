@@ -195,11 +195,10 @@
 			<include condition="!Skin.HasSetting(mysharedcontent_helper)">Shared_Navigation</include>
 		</control>
                 
-		<include>Viewmode_Poster</include>
-		<include>Viewmode_Panel</include>
-                
 		<include>viewtype_clock</include>
-		<include>viewtype_navigation</include>
+		<!--<include>Viewmode_Poster</include>
+		<include>Viewmode_Panel</include>
+               	<include>viewtype_navigation</include>-->
 
 	</control>
 

@@ -1,83 +1,80 @@
 <?xml version="1.0"?>
 <window id="99">
-	<defaultcontrol>100</defaultcontrol>
+	<defaultcontrol>900</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>100,210,310</views>
+	<views>900,901</views>
+	<onload>Skin.SetString(selector1,$INFO[Container.ViewMode])</onload>
+	<onunload>Skin.Reset(selector1)</onunload>
+	<onunload>Skin.Reset(selector2)</onunload>
 	<controls>
 
-		<!-- Channel Logo Background -->
-		<control type="largeimage">
-			<include>background_default</include>
-			<!--<texture background="true">$INFO[ListItem.Art(thumb)]</texture>-->
-			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<include>Animation_CommonFade</include>
+        <!-- Backgrounds -->
+        <include>Background_Viewtypes</include>
+
+	<!-- Channel Logo (Settings) -->
+	<control type="group">
+		<visible>Control.IsVisible(900)</visible>
+		<control type="image">
+			<posy>200</posy>
+			<posx>920</posx>
+			<width>320</width>
+			<height>320</height>
+			<aspectratio aligny="center">keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+			<visible>Skin.HasSetting(ChannelPageLogo)</visible>
+			<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="60" time="300" condition="true">WindowOpen</animation>
+			<animation effect="fade" start="60" end="0" time="300" condition="true">WindowClose</animation>
 		</control>
+		<control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <include>Dimensions_Fullscreen</include>
+                        <texture>mainmenu/vignette.png</texture>
+                        <colordiffuse>ff15efd9</colordiffuse>
+                        <include>Animation_CommonFadeNoHide</include>
+                        <visible>!Skin.HasSetting(horizontal_home)</visible>
+                </control>
+		<control type="image">
+                        <posy>690</posy>
+                        <posx>10</posx>	
+                        <width>16</width>
+                        <height>22</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture flipx="true">left-menu-indicator-arrow.png</texture>
+                        <include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
+                        <colordiffuse>50b8b7b7</colordiffuse>
+                        <visible>!Skin.HasSetting(HomeArrow)</visible>
+                </control>
+	</control>
+		
+	<!-- Viewmode Channel #1 (900) -->
+	<include>Channel_Navigation</include>
 
-		<!-- Channel Logo (Settings) -->
-		<control type="group">
-			<visible>Control.IsVisible(100)</visible>
-			<control type="group">
+	<!-- Viewmode Channel #2 (901) -->
+	<control type="fixedlist" id="901">
+		<focusposition>4</focusposition>
+		<posx>-80</posx>
+		<posy>460</posy>
+		<width>1380</width>
+		<height>500</height>
+		<onup>7000</onup>
+		<ondown>7000</ondown>
+		<orientation>horizontal</orientation>
+		<viewtype label="Channel #2">list</viewtype>
+		<preloaditems>2</preloaditems>
+		<animation effect="slide" end="0,40" condition="Skin.HasSetting(Channel2_Images_Small)">Conditional</animation>
+		<animation effect="slide" end="0,-80" condition="Skin.HasSetting(Channel2_Images_Large)">Conditional</animation>
+		<!-- Layout -->
+		<include>Viewmode_Channel2_General_NoSidebar</include>
+		<include>Viewmode_Channel2_Itemlayout</include>
+	</control>
 
-				<!-- Fanart -->
-				<!--<control type="image">
-					<posy>-1100</posy>
-					<posx>-190</posx>
-					<width>640</width>
-					<height>360</height>
-					<aspectratio aligny="center">scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>Skin.HasSetting(ChannelPageLogo)</visible>
-					<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
-					<animation effect="zoom" start="1" end="120" time="0" condition="true">Conditional</animation>
-					<animation effect="rotate" end="-90" time="0" condition="true">Conditional</animation>
-				</control>-->
-				<control type="image">
-					<posy>200</posy>
-					<posx>920</posx>
-					<width>320</width>
-					<height>320</height>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>Skin.HasSetting(ChannelPageLogo)</visible>
-					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
-					<animation effect="fade" start="0" end="60" time="300" condition="true">WindowOpen</animation>
-					<animation effect="fade" start="60" end="0" time="300" condition="true">WindowClose</animation>
-				</control>
-   
-				<control type="image">
-		                        <posx>0</posx>
-		                        <posy>0</posy>
-		                        <include>Dimensions_Fullscreen</include>
-		                        <texture>mainmenu/vignette.png</texture>
-		                        <colordiffuse>ff15efd9</colordiffuse>
-		                        <include>Animation_CommonFadeNoHide</include>
-		                        <visible>!Skin.HasSetting(horizontal_home)</visible>
-		                </control>
-				<control type="image">
-		                        <posy>690</posy>
-		                        <posx>10</posx>	
-		                        <width>16</width>
-		                        <height>22</height>
-		                        <aspectratio>scale</aspectratio>
-		                        <texture flipx="true">left-menu-indicator-arrow.png</texture>
-		                        <include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
-		                        <colordiffuse>50b8b7b7</colordiffuse>
-		                        <visible>!Skin.HasSetting(HomeArrow)</visible>
-		                </control>
-			</control>
-		</control>
-
-		<control type="group">
-			<visible>Control.isVisible(100)</visible>
-			<include>Channel_Navigation</include>
-		</control>
-
-		<include>Viewmode_Poster</include>
-		<include>Viewmode_Panel</include>
-
-		<include>viewtype_clock</include>
-		<include>viewtype_navigation</include>
-		<include>viewtype_scrolling</include>
+	<!-- Includes -->
+	<include>viewtype_clock</include>
+	<include>viewtype_options_short</include>
+	<include>viewtype_navigation</include>
+	<include>viewtype_scrolling</include>
 
 	</controls>
 </window>

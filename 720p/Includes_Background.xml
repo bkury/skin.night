@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Wed Mar 26 21:11:04 CET 2014 -->
+<!-- Fri Mar 28 00:55:03 CET 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -612,6 +612,210 @@
 			<effect type="fade" start="100" end="0" time="600"/>
 		</animation>
 		<visible>Skin.HasSetting(Panel3_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Channel1 (900) -->
+<control type="group">
+        <visible>Control.HasFocus(900) | [ Control.IsVisible(900) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel1_Fadetime))">Channel1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_Fadetime))">Channel1_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Channel1_TimePerImage))">Channel1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_TimePerImage))">Channel1_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel1_Opacity))">Channel1_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_Opacity))">Channel1_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel1_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Channel1_Single)) | !isEmpty(Skin.String(Channel1_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Channel1_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Channel1_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel1_Fadetime))">Channel1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_Fadetime))">Channel1_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Channel1_TimePerImage))">Channel1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_TimePerImage))">Channel1_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel1_Opacity))">Channel1_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_Opacity))">Channel1_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel1_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Channel1_Single)) + isEmpty(Skin.String(Channel1_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Channel1_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel1_Fadetime))">Channel1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_Fadetime))">Channel1_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Channel1_TimePerImage))">Channel1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_TimePerImage))">Channel1_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel1_Opacity))">Channel1_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel1_Opacity))">Channel1_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel1_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Channel1_Single)) + !isEmpty(Skin.String(Channel1_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Channel1_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Channel2 (901) -->
+<control type="group">
+        <visible>Control.HasFocus(901) | [ Control.IsVisible(901) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel2_Fadetime))">Channel2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_Fadetime))">Channel2_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Channel2_TimePerImage))">Channel2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_TimePerImage))">Channel2_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel2_Opacity))">Channel2_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_Opacity))">Channel2_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel2_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Channel2_Single)) | !isEmpty(Skin.String(Channel2_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Channel2_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Channel2_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel2_Fadetime))">Channel2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_Fadetime))">Channel2_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Channel2_TimePerImage))">Channel2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_TimePerImage))">Channel2_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel2_Opacity))">Channel2_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_Opacity))">Channel2_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel2_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Channel2_Single)) + isEmpty(Skin.String(Channel2_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Channel2_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel2_Fadetime))">Channel2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_Fadetime))">Channel2_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Channel2_TimePerImage))">Channel2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_TimePerImage))">Channel2_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel2_Opacity))">Channel2_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel2_Opacity))">Channel2_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel2_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Channel2_Single)) + !isEmpty(Skin.String(Channel2_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Channel2_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Channel3 (902) -->
+<control type="group">
+        <visible>Control.HasFocus(902) | [ Control.IsVisible(902) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel3_Fadetime))">Channel3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_Fadetime))">Channel3_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Channel3_TimePerImage))">Channel3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_TimePerImage))">Channel3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel3_Opacity))">Channel3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_Opacity))">Channel3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel3_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Channel3_Single)) | !isEmpty(Skin.String(Channel3_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Channel3_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Channel3_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel3_Fadetime))">Channel3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_Fadetime))">Channel3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Channel3_TimePerImage))">Channel3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_TimePerImage))">Channel3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel3_Opacity))">Channel3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_Opacity))">Channel3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel3_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Channel3_Single)) + isEmpty(Skin.String(Channel3_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Channel3_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Channel3_Fadetime))">Channel3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_Fadetime))">Channel3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Channel3_TimePerImage))">Channel3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_TimePerImage))">Channel3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Channel3_Opacity))">Channel3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Channel3_Opacity))">Channel3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Channel3_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Channel3_Single)) + !isEmpty(Skin.String(Channel3_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Channel3_Grainy)</visible>
 	</control>
 </control>
 
@@ -2295,6 +2499,450 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
 	</control>
+	<!-- Viewmode Channel1 (900) -->
+	<!--<control type="label" id="2108">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>-->
+	<control type="label" id="2109">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Background</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2110">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>$LOCALIZE[31601]</label>
+		<onclick>Skin.ToggleSetting(Channel1_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Channel1_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2111">
+		<width>220</width>
+		<description>Haze Effect</description>
+		<label>$LOCALIZE[31602]</label>
+		<onclick>Skin.ToggleSetting(Channel1_Grainy)</onclick>
+		<selected>Skin.HasSetting(Channel1_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2112">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>$LOCALIZE[31608]</label>
+		<onclick>Skin.SetString(selector1,Channel1)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel1_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2113">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>$LOCALIZE[31603]</label>
+		<onclick>Skin.SetString(selector1,Channel1)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel1_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2114">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>$LOCALIZE[31604]</label>
+		<onclick>Skin.SetString(selector1,Channel1)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel1_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2115">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Channel1_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Channel1_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel1_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900) + isEmpty(Skin.String(Channel1_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2116">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Channel1_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel1_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900) + !isEmpty(Skin.String(Channel1_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2117">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Channel1_Single)</onclick>
+		<onclick>Skin.SetPath(Channel1_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel1_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900) + isEmpty(Skin.String(Channel1_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2118">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Channel1_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel1_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900) + !isEmpty(Skin.String(Channel1_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2119">
+		<width>220</width>
+		<label>$LOCALIZE[31607]</label>
+		<onclick>Skin.Reset(Channel1_Single)</onclick>
+		<onclick>Skin.Reset(Channel1_Multi)</onclick>
+		<onclick>Skin.Reset(Channel1_Fadetime)</onclick>
+		<onclick>Skin.Reset(Channel1_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Channel1_Opacity)</onclick>
+		<onclick>Skin.Reset(Channel1_Grainy)</onclick>
+		<onclick>Skin.Reset(Channel1_Kenburns)</onclick>
+		<onclick>Skin.Reset(Channel1_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Viewmode Channel2 (901) -->
+	<!--<control type="label" id="2120">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901)</visible>
+	</control>-->
+	<control type="label" id="2121">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Background</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2122">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>$LOCALIZE[31601]</label>
+		<onclick>Skin.ToggleSetting(Channel2_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Channel2_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2123">
+		<width>220</width>
+		<description>Haze Effect</description>
+		<label>$LOCALIZE[31602]</label>
+		<onclick>Skin.ToggleSetting(Channel2_Grainy)</onclick>
+		<selected>Skin.HasSetting(Channel2_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2124">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>$LOCALIZE[31608]</label>
+		<onclick>Skin.SetString(selector1,Channel2)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel2_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2125">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>$LOCALIZE[31603]</label>
+		<onclick>Skin.SetString(selector1,Channel2)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel2_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2126">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>$LOCALIZE[31604]</label>
+		<onclick>Skin.SetString(selector1,Channel2)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel2_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2127">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Channel2_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Channel2_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel2_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901) + isEmpty(Skin.String(Channel2_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2128">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Channel2_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel2_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901) + !isEmpty(Skin.String(Channel2_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2129">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Channel2_Single)</onclick>
+		<onclick>Skin.SetPath(Channel2_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel2_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901) + isEmpty(Skin.String(Channel2_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2130">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Channel2_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel2_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901) + !isEmpty(Skin.String(Channel2_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2131">
+		<width>220</width>
+		<label>$LOCALIZE[31607]</label>
+		<onclick>Skin.Reset(Channel2_Single)</onclick>
+		<onclick>Skin.Reset(Channel2_Multi)</onclick>
+		<onclick>Skin.Reset(Channel2_Fadetime)</onclick>
+		<onclick>Skin.Reset(Channel2_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Channel2_Opacity)</onclick>
+		<onclick>Skin.Reset(Channel2_Grainy)</onclick>
+		<onclick>Skin.Reset(Channel2_Kenburns)</onclick>
+		<onclick>Skin.Reset(Channel2_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Viewmode Channel3 (902) -->
+	<!--<control type="label" id="2132">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902)</visible>
+	</control>-->
+	<control type="label" id="2133">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Background</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2134">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>$LOCALIZE[31601]</label>
+		<onclick>Skin.ToggleSetting(Channel3_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Channel3_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2135">
+		<width>220</width>
+		<description>Haze Effect</description>
+		<label>$LOCALIZE[31602]</label>
+		<onclick>Skin.ToggleSetting(Channel3_Grainy)</onclick>
+		<selected>Skin.HasSetting(Channel3_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2136">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>$LOCALIZE[31608]</label>
+		<onclick>Skin.SetString(selector1,Channel3)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel3_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2137">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>$LOCALIZE[31603]</label>
+		<onclick>Skin.SetString(selector1,Channel3)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel3_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2138">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>$LOCALIZE[31604]</label>
+		<onclick>Skin.SetString(selector1,Channel3)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel3_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2139">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Channel3_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Channel3_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel3_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902) + isEmpty(Skin.String(Channel3_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2140">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>$LOCALIZE[31605]</label>
+		<onclick>Skin.Reset(Channel3_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel3_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902) + !isEmpty(Skin.String(Channel3_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2141">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Channel3_Single)</onclick>
+		<onclick>Skin.SetPath(Channel3_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel3_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902) + isEmpty(Skin.String(Channel3_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2142">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>$LOCALIZE[31606]</label>
+		<onclick>Skin.Reset(Channel3_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Channel3_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902) + !isEmpty(Skin.String(Channel3_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2143">
+		<width>220</width>
+		<label>$LOCALIZE[31607]</label>
+		<onclick>Skin.Reset(Channel3_Single)</onclick>
+		<onclick>Skin.Reset(Channel3_Multi)</onclick>
+		<onclick>Skin.Reset(Channel3_Fadetime)</onclick>
+		<onclick>Skin.Reset(Channel3_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Channel3_Opacity)</onclick>
+		<onclick>Skin.Reset(Channel3_Grainy)</onclick>
+		<onclick>Skin.Reset(Channel3_Kenburns)</onclick>
+		<onclick>Skin.Reset(Channel3_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
 </include>
 <include name="Background_Settings_Viewmodes_General_1">
 	<!-- Viewmode List1 (100) -->
@@ -3647,6 +4295,456 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
 	</control>
+	<!-- Viewmode Channel1 (900) -->
+	<!--<control type="label" id="3207">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3208">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Images</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3208">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Text</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (900) -->
+	<control type="radiobutton" id="3209">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>Small</label>
+		<onclick>Skin.Reset(Channel1_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Channel1_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Channel1_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Medium Images (900) -->
+	<control type="radiobutton" id="3210">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>Medium</label>
+		<onclick>Skin.Reset(Channel1_Images_Small)</onclick>
+		<onclick>Skin.Reset(Channel1_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Channel1_Images_Small) + !Skin.HasSetting(Channel1_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Large Images (900) -->
+	<control type="radiobutton" id="3211">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>Large</label>
+		<onclick>Skin.Reset(Channel1_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Channel1_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Channel1_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Mirror Images (900) -->
+	<control type="radiobutton" id="3212">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Channel1_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Channel1_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (900) -->
+	<control type="radiobutton" id="3213">
+		<width>190</width>
+		<description>Transparency</description>
+		<label>Fade Watched</label>
+		<onclick>Skin.ToggleSetting(Channel1_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Channel1_Images_Transparent)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<control type="label" id="3214">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Focus</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+
+	<!-- Focus Effect Default (900) -->
+	<control type="radiobutton" id="3215">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>Zoom</label>
+		<onclick>Skin.Reset(Channel1_Focus_1)</onclick>
+		<onclick>Skin.Reset(Channel1_Focus_2)</onclick>
+		<onclick>Skin.Reset(Channel1_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Channel1_Focus_1) + !Skin.HasSetting(Channel1_Focus_2) + !Skin.HasSetting(Channel1_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Focus Effect #1 (900) -->
+	<control type="radiobutton" id="3216">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>RotateX</label>
+                <onclick>Skin.Reset(Channel1_Focus_2)</onclick>
+                <onclick>Skin.Reset(Channel1_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Channel1_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Channel1_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Focus Effect #2 (900) -->
+	<control type="radiobutton" id="3217">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+		<label>RotateY</label>
+		<onclick>Skin.Reset(Channel1_Focus_1)</onclick>
+                <onclick>Skin.Reset(Channel1_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Channel1_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Channel1_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Focus Effect #3 (900) -->
+	<control type="radiobutton" id="3218">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+		<label>Rotate</label>
+		<onclick>Skin.Reset(Channel1_Focus_1)</onclick>
+                <onclick>Skin.Reset(Channel1_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Channel1_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Channel1_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Viewmode Channel2 (901) -->
+	<!--<control type="label" id="3230">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3231">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Images</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3231">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Text</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (901) -->
+	<control type="radiobutton" id="3232">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>Small</label>
+		<onclick>Skin.Reset(Channel2_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Channel2_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Channel2_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Medium Images (901) -->
+	<control type="radiobutton" id="3233">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>Medium</label>
+		<onclick>Skin.Reset(Channel2_Images_Small)</onclick>
+		<onclick>Skin.Reset(Channel2_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Channel2_Images_Small) + !Skin.HasSetting(Channel2_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Large Images (901) -->
+	<control type="radiobutton" id="3234">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>Large</label>
+		<onclick>Skin.Reset(Channel2_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Channel2_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Channel2_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Mirror Images (901) -->
+	<control type="radiobutton" id="3235">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Channel2_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Channel2_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (901) -->
+	<control type="radiobutton" id="3236">
+		<width>190</width>
+		<description>Transparency</description>
+		<label>Fade Watched</label>
+		<onclick>Skin.ToggleSetting(Channel2_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Channel2_Images_Transparent)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<control type="label" id="3237">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Focus</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+
+	<!-- Focus Effect Default (901) -->
+	<control type="radiobutton" id="3238">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>Zoom</label>
+		<onclick>Skin.Reset(Channel2_Focus_1)</onclick>
+		<onclick>Skin.Reset(Channel2_Focus_2)</onclick>
+		<onclick>Skin.Reset(Channel2_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Channel2_Focus_1) + !Skin.HasSetting(Channel2_Focus_2) + !Skin.HasSetting(Channel2_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Focus Effect #1 (901) -->
+	<control type="radiobutton" id="3239">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>RotateX</label>
+                <onclick>Skin.Reset(Channel2_Focus_2)</onclick>
+                <onclick>Skin.Reset(Channel2_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Channel2_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Channel2_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Focus Effect #2 (901) -->
+	<control type="radiobutton" id="3240">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+		<label>RotateY</label>
+		<onclick>Skin.Reset(Channel2_Focus_1)</onclick>
+                <onclick>Skin.Reset(Channel2_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Channel2_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Channel2_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Focus Effect #3 (901) -->
+	<control type="radiobutton" id="3241">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+		<label>Rotate</label>
+		<onclick>Skin.Reset(Channel2_Focus_1)</onclick>
+                <onclick>Skin.Reset(Channel2_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Channel2_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Channel2_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Viewmode Channel3 (902) -->
+	<!--<control type="label" id="3253">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3254">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Images</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3254">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Text</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (902) -->
+	<control type="radiobutton" id="3255">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>Small</label>
+		<onclick>Skin.Reset(Channel3_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Channel3_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Channel3_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Medium Images (902) -->
+	<control type="radiobutton" id="3256">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>Medium</label>
+		<onclick>Skin.Reset(Channel3_Images_Small)</onclick>
+		<onclick>Skin.Reset(Channel3_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Channel3_Images_Small) + !Skin.HasSetting(Channel3_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Large Images (902) -->
+	<control type="radiobutton" id="3257">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>Large</label>
+		<onclick>Skin.Reset(Channel3_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Channel3_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Channel3_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Mirror Images (902) -->
+	<control type="radiobutton" id="3258">
+		<width>190</width>
+		<description>Mirrir Images</description>
+		<label>Reflection</label>
+		<onclick>Skin.ToggleSetting(Channel3_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Channel3_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (902) -->
+	<control type="radiobutton" id="3259">
+		<width>190</width>
+		<description>Transparency</description>
+		<label>Fade Watched</label>
+		<onclick>Skin.ToggleSetting(Channel3_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Channel3_Images_Transparent)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<control type="label" id="3260">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Focus</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+
+	<!-- Focus Effect Default (902) -->
+	<control type="radiobutton" id="3261">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>Zoom</label>
+		<onclick>Skin.Reset(Channel3_Focus_1)</onclick>
+		<onclick>Skin.Reset(Channel3_Focus_2)</onclick>
+		<onclick>Skin.Reset(Channel3_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Channel3_Focus_1) + !Skin.HasSetting(Channel3_Focus_2) + !Skin.HasSetting(Channel3_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Focus Effect #1 (902) -->
+	<control type="radiobutton" id="3262">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>RotateX</label>
+                <onclick>Skin.Reset(Channel3_Focus_2)</onclick>
+                <onclick>Skin.Reset(Channel3_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Channel3_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Channel3_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Focus Effect #2 (902) -->
+	<control type="radiobutton" id="3263">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+		<label>RotateY</label>
+		<onclick>Skin.Reset(Channel3_Focus_1)</onclick>
+                <onclick>Skin.Reset(Channel3_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Channel3_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Channel3_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Focus Effect #3 (902) -->
+	<control type="radiobutton" id="3264">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+		<label>Rotate</label>
+		<onclick>Skin.Reset(Channel3_Focus_1)</onclick>
+                <onclick>Skin.Reset(Channel3_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Channel3_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Channel3_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
 </include>
 <include name="Background_Settings_Viewmodes_General_2">
 	<!-- Viewmode List1 (100) -->
@@ -4648,6 +5746,339 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
 	</control>
+	<!-- Viewmode Channel1 (900) -->
+	<!--<control type="label" id="4189">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>-->
+	<control type="label" id="4190">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Style</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (900) -->
+	<control type="radiobutton" id="4191">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>3D #1</label>
+		<onclick>Skin.ToggleSetting(Channel1_3D_1)</onclick>
+		<onclick>Skin.Reset(Channel1_3D_2)</onclick>
+		<selected>Skin.HasSetting(Channel1_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- 3D Effect #2 (900) -->
+	<control type="radiobutton" id="4192">
+		<width>190</width>
+		<description>3D Effect #2</description>
+		<label>3D #2</label>
+		<onclick>Skin.ToggleSetting(Channel1_3D_2)</onclick>
+		<onclick>Skin.Reset(Channel1_3D_1)</onclick>
+		<selected>Skin.HasSetting(Channel1_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<control type="label" id="4193">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Info</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+
+	<!-- Sidebar (900) -->
+	<control type="radiobutton" id="4194">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Default</label>
+		<onclick>Skin.Reset(Channel1_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Channel1_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Channel1_Sidebar_Left) + !Skin.HasSetting(Channel1_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Sidebar (900) -->
+	<control type="radiobutton" id="4195">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Right</label>
+		<onclick>Skin.Reset(Channel1_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Channel1_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Channel1_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Sidebar (900) -->
+	<control type="radiobutton" id="4196">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>Left</label>
+		<onclick>Skin.Reset(Channel1_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Channel1_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Channel1_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Image Labels (900) -->
+	<control type="radiobutton" id="4197">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>Labels</label>
+		<onclick>Skin.ToggleSetting(Channel1_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Channel1_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Plot (900) -->
+	<control type="radiobutton" id="4198">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Channel1_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Channel1_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(900)</visible>
+	</control>
+	<!-- Viewmode Channel2 (901) -->
+	<!--<control type="label" id="4210">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901)</visible>
+	</control>-->
+	<control type="label" id="4211">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Style</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (901) -->
+	<control type="radiobutton" id="4212">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>3D #1</label>
+		<onclick>Skin.ToggleSetting(Channel2_3D_1)</onclick>
+		<onclick>Skin.Reset(Channel2_3D_2)</onclick>
+		<selected>Skin.HasSetting(Channel2_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- 3D Effect #2 (901) -->
+	<control type="radiobutton" id="4213">
+		<width>190</width>
+		<description>3D Effect #2</description>
+		<label>3D #2</label>
+		<onclick>Skin.ToggleSetting(Channel2_3D_2)</onclick>
+		<onclick>Skin.Reset(Channel2_3D_1)</onclick>
+		<selected>Skin.HasSetting(Channel2_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<control type="label" id="4214">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Info</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+
+	<!-- Sidebar (901) -->
+	<control type="radiobutton" id="4215">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Default</label>
+		<onclick>Skin.Reset(Channel2_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Channel2_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Channel2_Sidebar_Left) + !Skin.HasSetting(Channel2_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Sidebar (901) -->
+	<control type="radiobutton" id="4216">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Right</label>
+		<onclick>Skin.Reset(Channel2_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Channel2_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Channel2_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Sidebar (901) -->
+	<control type="radiobutton" id="4217">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>Left</label>
+		<onclick>Skin.Reset(Channel2_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Channel2_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Channel2_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Image Labels (901) -->
+	<control type="radiobutton" id="4218">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>Labels</label>
+		<onclick>Skin.ToggleSetting(Channel2_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Channel2_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Plot (901) -->
+	<control type="radiobutton" id="4219">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Channel2_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Channel2_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(901)</visible>
+	</control>
+	<!-- Viewmode Channel3 (902) -->
+	<!--<control type="label" id="4231">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902)</visible>
+	</control>-->
+	<control type="label" id="4232">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Style</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (902) -->
+	<control type="radiobutton" id="4233">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>3D #1</label>
+		<onclick>Skin.ToggleSetting(Channel3_3D_1)</onclick>
+		<onclick>Skin.Reset(Channel3_3D_2)</onclick>
+		<selected>Skin.HasSetting(Channel3_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- 3D Effect #2 (902) -->
+	<control type="radiobutton" id="4234">
+		<width>190</width>
+		<description>3D Effect #2</description>
+		<label>3D #2</label>
+		<onclick>Skin.ToggleSetting(Channel3_3D_2)</onclick>
+		<onclick>Skin.Reset(Channel3_3D_1)</onclick>
+		<selected>Skin.HasSetting(Channel3_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<control type="label" id="4235">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Info</label><!-- LOC -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+
+	<!-- Sidebar (902) -->
+	<control type="radiobutton" id="4236">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Default</label>
+		<onclick>Skin.Reset(Channel3_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Channel3_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Channel3_Sidebar_Left) + !Skin.HasSetting(Channel3_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Sidebar (902) -->
+	<control type="radiobutton" id="4237">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>Right</label>
+		<onclick>Skin.Reset(Channel3_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Channel3_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Channel3_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Sidebar (902) -->
+	<control type="radiobutton" id="4238">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>Left</label>
+		<onclick>Skin.Reset(Channel3_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Channel3_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Channel3_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Image Labels (902) -->
+	<control type="radiobutton" id="4239">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>Labels</label>
+		<onclick>Skin.ToggleSetting(Channel3_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Channel3_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
+	<!-- Plot (902) -->
+	<control type="radiobutton" id="4240">
+		<width>190</width>
+		<description>Plot</description>
+		<label>Plot</label>
+		<onclick>Skin.ToggleSetting(Channel3_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Channel3_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(902)</visible>
+	</control>
 </include>
 <include name="Background_Settings_Home">
 	<!-- Home Background Toggle -->
@@ -5513,7 +6944,10 @@
 [ Control.isVisible(220) + !Skin.HasSetting(Poster3_Sidebar_NoPlot) ] |
 [ Control.isVisible(300) + !Skin.HasSetting(Panel1_Sidebar_NoPlot) ] |
 [ Control.isVisible(310) + !Skin.HasSetting(Panel2_Sidebar_NoPlot) ] |
-[ Control.isVisible(320) + !Skin.HasSetting(Panel3_Sidebar_NoPlot) ] 
+[ Control.isVisible(320) + !Skin.HasSetting(Panel3_Sidebar_NoPlot) ] |
+[ Control.isVisible(900) + !Skin.HasSetting(Channel1_Sidebar_NoPlot) ] |
+[ Control.isVisible(901) + !Skin.HasSetting(Channel2_Sidebar_NoPlot) ] |
+[ Control.isVisible(902) + !Skin.HasSetting(Channel3_Sidebar_NoPlot) ] 
 </visible>
 </include>
 
@@ -6072,6 +7506,192 @@
 	<include condition="Skin.String(Panel3_Opacity,80)">background_opacity_80</include>		
 	<include condition="Skin.String(Panel3_Opacity,90)">background_opacity_90</include>		
 	<include condition="Skin.String(Panel3_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype Channel1 (900) -->
+<include name="Channel1_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Channel1_TimePerImage">
+	<include condition="Skin.String(Channel1_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Channel1_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Channel1_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Channel1_Fadetime">
+	<include condition="Skin.String(Channel1_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Channel1_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Channel1_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Channel1_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Channel1_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Channel1_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Channel1_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Channel1_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Channel1_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Channel1_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Channel1_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Channel1_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Channel1_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Channel1_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Channel1_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Channel1_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Channel1_Opacity_Default">
+	<animation effect="fade" start="0" end="30" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="30" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="30" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="30" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="Channel1_Opacity">
+	<include condition="Skin.String(Channel1_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Channel1_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Channel1_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Channel1_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Channel1_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Channel1_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Channel1_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Channel1_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Channel1_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Channel1_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Channel1_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype Channel2 (901) -->
+<include name="Channel2_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Channel2_TimePerImage">
+	<include condition="Skin.String(Channel2_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Channel2_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Channel2_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Channel2_Fadetime">
+	<include condition="Skin.String(Channel2_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Channel2_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Channel2_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Channel2_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Channel2_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Channel2_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Channel2_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Channel2_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Channel2_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Channel2_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Channel2_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Channel2_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Channel2_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Channel2_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Channel2_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Channel2_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Channel2_Opacity_Default">
+	<animation effect="fade" start="0" end="30" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="30" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="30" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="30" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="Channel2_Opacity">
+	<include condition="Skin.String(Channel2_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Channel2_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Channel2_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Channel2_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Channel2_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Channel2_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Channel2_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Channel2_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Channel2_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Channel2_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Channel2_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype Channel3 (902) -->
+<include name="Channel3_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Channel3_TimePerImage">
+	<include condition="Skin.String(Channel3_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Channel3_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Channel3_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Channel3_Fadetime">
+	<include condition="Skin.String(Channel3_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Channel3_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Channel3_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Channel3_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Channel3_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Channel3_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Channel3_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Channel3_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Channel3_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Channel3_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Channel3_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Channel3_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Channel3_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Channel3_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Channel3_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Channel3_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Channel3_Opacity_Default">
+	<animation effect="fade" start="0" end="30" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="30" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="30" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="30" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="Channel3_Opacity">
+	<include condition="Skin.String(Channel3_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Channel3_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Channel3_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Channel3_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Channel3_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Channel3_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Channel3_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Channel3_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Channel3_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Channel3_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Channel3_Opacity,100)">background_opacity_100</include>		
 </include>
 
 

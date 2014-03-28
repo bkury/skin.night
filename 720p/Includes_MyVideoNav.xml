@@ -3,8 +3,8 @@
 	<!-- #################################### Viewtype Navigation ################################# -->
 	<include name="viewtype_navigation">
 	<control type="group">
-		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | Window.isActive(1120) ]</visible>
-		<animation effect="slide" start="0,200" time="800" tween="back" easing="inout" condition="ControlGroup(7000).HasFocus | Window.isActive(1120) | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus">conditional</animation>
+		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus | Window.isActive(1120) ]</visible>
+		<animation effect="slide" start="0,200" time="800" tween="back" easing="inout" condition="ControlGroup(7000).HasFocus | Window.isActive(1120) | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus">conditional</animation>
 		<animation effect="fade" end="0" time="800">Hidden</animation>
 		<animation effect="fade" end="100" time="800">Visible</animation>
 		<animation effect="fade" end="0" time="800">WindowClose</animation>
@@ -377,8 +377,8 @@
 						<colordiffuse>mainblue</colordiffuse>
 						<onleft>413</onleft>
 						<onright>411</onright>
-						<ondown>100</ondown>
-	                                        <onup>100</onup>
+						<onup>900</onup>
+						<ondown>900</ondown>
 						<onclick>Container.SetViewmode(100)</onclick>
 						<visible allowhiddenfocus="true">Control.HasFocus(410)</visible>
 	                                </control>
@@ -411,9 +411,9 @@
 						<colordiffuse>mainblue</colordiffuse>
 						<onleft>410</onleft>
 						<onright>412</onright>
-						<ondown>100</ondown>
-	                                        <onup>100</onup>
-						<onclick>Container.SetViewmode(210)</onclick>
+						<ondown>900</ondown>
+	                                        <onup>900</onup>
+						<onclick>Container.SetViewmode(901)</onclick>
 						<visible allowhiddenfocus="true">Control.HasFocus(411)</visible>
 	                                </control>
 					<control type="label">
@@ -445,9 +445,9 @@
 						<colordiffuse>mainblue</colordiffuse>
 						<onleft>411</onleft>
 						<onright>413</onright>
-						<ondown>100</ondown>
-	                                        <onup>100</onup>
-						<onclick>Container.SetViewmode(310)</onclick>
+						<ondown>900</ondown>
+	                                        <onup>900</onup>
+						<onclick>Container.SetViewmode(902)</onclick>
 						<visible allowhiddenfocus="true">Control.HasFocus(412)</visible>
 	                                </control>
 					<control type="label">
@@ -461,6 +461,40 @@
 					</control>
 				</control>
 
+				<!-- Options -->
+				<control type="group">
+					<posx>840</posx>
+					<control type="image">
+						<width>26</width>
+						<height>26</height>
+						<texture>b-pp-system.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="413">
+	                                        <width>26</width>
+	                                        <height>26</height>
+						<texturefocus>b-pp-system.png</texturefocus>
+						<texturenofocus>b-pp-system.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
+						<onclick>Skin.SetString(selector2,Options)</onclick>
+	                                        <onclick>Control.SetFocus(1305)</onclick>
+						<onleft>412</onleft>
+						<onright>414</onright>
+						<ondown>900</ondown>
+						<onup>900</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(413)</visible>
+	                                </control>
+					<control type="label">
+						<posx>30</posx>
+						<width>100</width>
+						<height>24</height>
+						<label>Options</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<shadowcolor>FF000000</shadowcolor>
+					</control>
+				</control>
 
 				<!-- Search -->
 				<control type="group">
@@ -471,18 +505,18 @@
 						<texture>b-pp-search.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="413">
+					<control type="button" id="414">
 	                                        <width>29</width>
 	                                        <height>24</height>
 						<texturefocus>b-pp-search.png</texturefocus>
 						<texturenofocus>b-pp-search.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 	                                        <onclick>ActivateWindow(51)</onclick>
-						<onleft>412</onleft>
+						<onleft>413</onleft>
 						<onright>410</onright>
-						<ondown>100</ondown>
-						<onup>100</onup>
-						<visible allowhiddenfocus="true">Control.HasFocus(413)</visible>
+						<ondown>900</ondown>
+						<onup>900</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(414)</visible>
 	                                </control>
 					<control type="label">
 						<posx>35</posx>
@@ -886,6 +920,45 @@
 
 		</control>
 	</control>
+	</include>
+
+	<!-- Background Options only (Short) -->
+	<include name="viewtype_options_short">
+		<control type="group">
+			<visible>ControlGroup(1305).HasFocus + ![ Window.IsActive(1120) | Window.IsActive(126) ]</visible>
+
+			<!-- Animations -->
+			<include>viewtype_animations</include>
+
+			<!-- Dialog Header -->
+			<include>dialog_header_viewtype</include>
+
+			<control type="group" id="1305">
+				
+				<!-- Static Focus Item (Workaround) -->
+				<control type="button" id="9998">
+					<width>0</width>
+					<height>0</height>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<onfocus>SetFocus(1355)</onfocus>
+				</control>
+
+				<!-- Background -->
+				<control type="grouplist" id="1355">
+					<posx>540</posx>
+					<posy>330</posy>
+					<width>220</width>
+					<height>302</height>
+					<onleft>7000</onleft>
+					<onright>7000</onright>
+					<itemgap>-1</itemgap>
+					<pagecontrol>667</pagecontrol>
+					<include>Background_Settings_Viewmodes</include>
+				</control>
+			</control>
+
+		</control>
 	</include>
 
 	<!-- #################################### ANIMATIONS ################################# -->

@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Thu Mar 27 01:35:48 CET 2014 -->
+<!-- Fri Mar 28 02:21:43 CET 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -26,7 +26,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -37,11 +37,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -193,7 +193,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -204,11 +204,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -383,7 +383,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -396,11 +396,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -582,7 +582,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -595,11 +595,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -760,7 +760,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -771,11 +771,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -927,7 +927,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -938,11 +938,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -1117,7 +1117,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -1130,11 +1130,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -1316,7 +1316,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -1329,11 +1329,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -1494,7 +1494,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -1505,11 +1505,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -1661,7 +1661,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -1672,11 +1672,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -1851,7 +1851,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -1864,11 +1864,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -2050,7 +2050,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -2063,11 +2063,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -2228,7 +2228,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -2239,11 +2239,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -2395,7 +2395,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -2406,11 +2406,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -2585,7 +2585,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -2598,11 +2598,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -2784,7 +2784,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -2797,11 +2797,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -2962,7 +2962,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -2973,11 +2973,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -3129,7 +3129,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -3140,11 +3140,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -3319,7 +3319,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -3332,11 +3332,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -3518,7 +3518,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -3531,11 +3531,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -3696,7 +3696,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -3707,11 +3707,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -3863,7 +3863,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -3874,11 +3874,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -4053,7 +4053,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -4066,11 +4066,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -4252,7 +4252,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -4265,11 +4265,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>840</width>
+				<width>785</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -4433,7 +4433,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -4444,11 +4444,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -4600,7 +4600,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -4611,11 +4611,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -4790,7 +4790,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -4803,11 +4803,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -4989,7 +4989,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -5002,11 +5002,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -5167,7 +5167,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -5178,11 +5178,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -5334,7 +5334,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -5345,11 +5345,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -5524,7 +5524,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -5537,11 +5537,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -5723,7 +5723,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -5736,11 +5736,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -5901,7 +5901,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -5912,11 +5912,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -6068,7 +6068,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -6079,11 +6079,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -6258,7 +6258,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -6271,11 +6271,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -6457,7 +6457,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -6470,11 +6470,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -6635,7 +6635,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -6646,11 +6646,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -6802,7 +6802,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -6813,11 +6813,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -6992,7 +6992,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -7005,11 +7005,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -7191,7 +7191,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -7204,11 +7204,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -7369,7 +7369,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -7380,11 +7380,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -7536,7 +7536,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -7547,11 +7547,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -7726,7 +7726,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -7739,11 +7739,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -7925,7 +7925,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -7938,11 +7938,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -8103,7 +8103,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -8114,11 +8114,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -8270,7 +8270,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -8281,11 +8281,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -8460,7 +8460,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -8473,11 +8473,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -8659,7 +8659,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -8672,11 +8672,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>1260</width>
+				<width>1205</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -8817,7 +8817,7 @@
 </include>
 <!-- List3 -->
 <include name="Viewmode_List3_Itemlayout">
-	<itemlayout condition="Skin.HasSetting(List3_Images_Small) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="700" height="30">
+	<itemlayout condition="Skin.HasSetting(List3_Images_Small) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="580" height="30">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
@@ -8840,7 +8840,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -8851,11 +8851,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -8868,7 +8868,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -8880,7 +8880,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -8892,7 +8892,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -8904,7 +8904,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -8921,7 +8921,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -8932,7 +8932,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -8945,7 +8945,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -8960,7 +8960,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -8973,7 +8973,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9007,7 +9007,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9018,11 +9018,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -9035,7 +9035,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9047,7 +9047,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -9059,7 +9059,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9071,7 +9071,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9088,7 +9088,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9099,7 +9099,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9112,7 +9112,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9127,7 +9127,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9140,7 +9140,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9152,13 +9152,13 @@
 	</control>
 
 	</itemlayout>
-	<focusedlayout condition="Skin.HasSetting(List3_Images_Small) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="700" height="30">
+	<focusedlayout condition="Skin.HasSetting(List3_Images_Small) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="580" height="30">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>30</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -9170,7 +9170,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>50</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -9197,7 +9197,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9210,11 +9210,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -9228,7 +9228,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9242,7 +9242,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -9255,7 +9255,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9269,7 +9269,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9288,7 +9288,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9299,7 +9299,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9312,7 +9312,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9327,7 +9327,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9340,7 +9340,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9357,7 +9357,7 @@
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>30</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -9369,7 +9369,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>50</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -9396,7 +9396,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9409,11 +9409,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -9427,7 +9427,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9441,7 +9441,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -9454,7 +9454,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9468,7 +9468,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9487,7 +9487,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9498,7 +9498,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9511,7 +9511,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9526,7 +9526,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9539,7 +9539,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9551,7 +9551,7 @@
 	</control>
 
 	</focusedlayout>
-	<itemlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Small)" width="700" height="50">
+	<itemlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Small)" width="580" height="50">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
@@ -9574,7 +9574,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9585,11 +9585,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -9602,7 +9602,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9614,7 +9614,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -9626,7 +9626,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9638,7 +9638,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9655,7 +9655,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9666,7 +9666,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9679,7 +9679,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9694,7 +9694,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9707,7 +9707,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9741,7 +9741,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9752,11 +9752,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -9769,7 +9769,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9781,7 +9781,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -9793,7 +9793,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9805,7 +9805,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9822,7 +9822,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9833,7 +9833,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9846,7 +9846,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -9861,7 +9861,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9874,7 +9874,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -9886,13 +9886,13 @@
 	</control>
 
 	</itemlayout>
-	<focusedlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Small)" width="700" height="50">
+	<focusedlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Small)" width="580" height="50">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>30</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -9904,7 +9904,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>50</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -9931,7 +9931,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9944,11 +9944,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -9962,7 +9962,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -9976,7 +9976,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -9989,7 +9989,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -10003,7 +10003,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -10022,7 +10022,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10033,7 +10033,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10046,7 +10046,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10061,7 +10061,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10074,7 +10074,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10091,7 +10091,7 @@
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>30</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -10103,7 +10103,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>50</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -10130,7 +10130,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -10143,11 +10143,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -10161,7 +10161,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -10175,7 +10175,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>30</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -10188,7 +10188,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -10202,7 +10202,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>30</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Small</font>
@@ -10221,7 +10221,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10232,7 +10232,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10245,7 +10245,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>30</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10260,7 +10260,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>28</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10273,7 +10273,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>48</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10285,7 +10285,7 @@
 	</control>
 
 	</focusedlayout>
-	<itemlayout condition="!Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="700" height="40">
+	<itemlayout condition="!Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="580" height="40">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
@@ -10308,7 +10308,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10319,11 +10319,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -10336,7 +10336,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10348,7 +10348,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -10360,7 +10360,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10372,7 +10372,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10389,7 +10389,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10400,7 +10400,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10413,7 +10413,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10428,7 +10428,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10441,7 +10441,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10475,7 +10475,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10486,11 +10486,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -10503,7 +10503,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10515,7 +10515,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -10527,7 +10527,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10539,7 +10539,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10556,7 +10556,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10567,7 +10567,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10580,7 +10580,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10595,7 +10595,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10608,7 +10608,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10620,13 +10620,13 @@
 	</control>
 
 	</itemlayout>
-	<focusedlayout condition="!Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="700" height="40">
+	<focusedlayout condition="!Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="580" height="40">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>40</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -10638,7 +10638,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>60</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -10665,7 +10665,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10678,11 +10678,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -10696,7 +10696,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10710,7 +10710,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -10723,7 +10723,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10737,7 +10737,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10756,7 +10756,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10767,7 +10767,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10780,7 +10780,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10795,7 +10795,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10808,7 +10808,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -10825,7 +10825,7 @@
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>40</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -10837,7 +10837,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>60</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -10864,7 +10864,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10877,11 +10877,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -10895,7 +10895,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10909,7 +10909,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -10922,7 +10922,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10936,7 +10936,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -10955,7 +10955,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10966,7 +10966,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10979,7 +10979,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -10994,7 +10994,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11007,7 +11007,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11019,7 +11019,7 @@
 	</control>
 
 	</focusedlayout>
-	<itemlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + !Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large)" width="700" height="60">
+	<itemlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + !Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large)" width="580" height="60">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
@@ -11042,7 +11042,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11053,11 +11053,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -11070,7 +11070,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11082,7 +11082,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -11094,7 +11094,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11106,7 +11106,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11123,7 +11123,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11134,7 +11134,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11147,7 +11147,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11162,7 +11162,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11175,7 +11175,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11209,7 +11209,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11220,11 +11220,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -11237,7 +11237,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11249,7 +11249,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -11261,7 +11261,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11273,7 +11273,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11290,7 +11290,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11301,7 +11301,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11314,7 +11314,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11329,7 +11329,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11342,7 +11342,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11354,13 +11354,13 @@
 	</control>
 
 	</itemlayout>
-	<focusedlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + !Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large)" width="700" height="60">
+	<focusedlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + !Skin.HasSetting(List3_Images_Small) + !Skin.HasSetting(List3_Images_Large)" width="580" height="60">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>40</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -11372,7 +11372,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>60</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -11399,7 +11399,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11412,11 +11412,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -11430,7 +11430,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11444,7 +11444,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -11457,7 +11457,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11471,7 +11471,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11490,7 +11490,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11501,7 +11501,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11514,7 +11514,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11529,7 +11529,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11542,7 +11542,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11559,7 +11559,7 @@
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>40</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -11571,7 +11571,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>60</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -11598,7 +11598,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11611,11 +11611,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -11629,7 +11629,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11643,7 +11643,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>40</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -11656,7 +11656,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11670,7 +11670,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>40</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Medium</font>
@@ -11689,7 +11689,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11700,7 +11700,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11713,7 +11713,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>40</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11728,7 +11728,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>38</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11741,7 +11741,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>58</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11753,7 +11753,7 @@
 	</control>
 
 	</focusedlayout>
-	<itemlayout condition="Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="700" height="48">
+	<itemlayout condition="Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="580" height="48">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
@@ -11776,7 +11776,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -11787,11 +11787,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -11804,7 +11804,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -11816,7 +11816,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -11828,7 +11828,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -11840,7 +11840,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -11857,7 +11857,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11868,7 +11868,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11881,7 +11881,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -11896,7 +11896,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11909,7 +11909,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -11943,7 +11943,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -11954,11 +11954,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -11971,7 +11971,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -11983,7 +11983,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -11995,7 +11995,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12007,7 +12007,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12024,7 +12024,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12035,7 +12035,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12048,7 +12048,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12063,7 +12063,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12076,7 +12076,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12088,13 +12088,13 @@
 	</control>
 
 	</itemlayout>
-	<focusedlayout condition="Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="700" height="48">
+	<focusedlayout condition="Skin.HasSetting(List3_Images_Large) + ![ !isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) ]" width="580" height="48">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>48</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -12106,7 +12106,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>68</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -12133,7 +12133,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12146,11 +12146,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -12164,7 +12164,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12178,7 +12178,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -12191,7 +12191,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12205,7 +12205,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12224,7 +12224,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12235,7 +12235,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12248,7 +12248,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12263,7 +12263,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12276,7 +12276,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12293,7 +12293,7 @@
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>48</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -12305,7 +12305,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>68</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -12332,7 +12332,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12345,11 +12345,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -12363,7 +12363,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12377,7 +12377,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -12390,7 +12390,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12404,7 +12404,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12423,7 +12423,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12434,7 +12434,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12447,7 +12447,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12462,7 +12462,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12475,7 +12475,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12487,7 +12487,7 @@
 	</control>
 
 	</focusedlayout>
-	<itemlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Large)" width="700" height="68">
+	<itemlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Large)" width="580" height="68">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
@@ -12510,7 +12510,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12521,11 +12521,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -12538,7 +12538,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12550,7 +12550,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -12562,7 +12562,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12574,7 +12574,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12591,7 +12591,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12602,7 +12602,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12615,7 +12615,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12630,7 +12630,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12643,7 +12643,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12677,7 +12677,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12688,11 +12688,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
 			</control>
@@ -12705,7 +12705,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12717,7 +12717,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -12729,7 +12729,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12741,7 +12741,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12758,7 +12758,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12769,7 +12769,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12782,7 +12782,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12797,7 +12797,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12810,7 +12810,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -12822,13 +12822,13 @@
 	</control>
 
 	</itemlayout>
-	<focusedlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Large)" width="700" height="68">
+	<focusedlayout condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes) + Skin.HasSetting(List3_Images_Large)" width="580" height="68">
 	<control type="group">
 		<visible>!Skin.HasSetting(List3_Images_Transparent)</visible>
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>48</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -12840,7 +12840,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>68</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -12867,7 +12867,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12880,11 +12880,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -12898,7 +12898,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12912,7 +12912,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -12925,7 +12925,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12939,7 +12939,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -12958,7 +12958,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12969,7 +12969,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12982,7 +12982,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -12997,7 +12997,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -13010,7 +13010,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -13027,7 +13027,7 @@
 
 		<!-- Navigation (No Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>48</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -13039,7 +13039,7 @@
 
 		<!-- Navigation (Filter) -->
 		<control type="image">
-			<width>700</width>
+			<width>580</width>
 			<height>68</height>
 			<aligny>center</aligny>
 			<include>navigation_options_image</include>
@@ -13066,7 +13066,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -13079,11 +13079,11 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>525</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
-				<label>$INFO[ListItem.TvShowTitle]</label>
+				<label fallback="Unknown">$INFO[ListItem.TvShowTitle]</label>
 				<include>navigation_options_accent</include>
 				<include>Viewmode_List_Overlay</include>
 				<visible>!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)</visible>
@@ -13097,7 +13097,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -13111,7 +13111,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>48</posy>
-				<width>700</width>
+				<width>580</width>
 				<height>12</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_List_Label</font>
@@ -13124,7 +13124,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -13138,7 +13138,7 @@
 			<control type="label">
 				<posx>10</posx>
 				<posy>0</posy>
-				<width>420</width>
+				<width>300</width>
 				<height>48</height>
 				<aligny>center</aligny>
 				<font>Viewmode_List_Font_Large</font>
@@ -13157,7 +13157,7 @@
 
 			<!-- Duration -->
 			<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -13168,7 +13168,7 @@
 
 			<!-- WxH Picture -->
 			<!--<control type="label">
-				<posx>490</posx>
+				<posx>370</posx>
 				<width>100</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -13181,7 +13181,7 @@
 
 			<!-- Airdate -->
 			<control type="label">
-				<posx>590</posx>
+				<posx>470</posx>
 				<width>160</width>
 				<height>48</height>
 				<font>Font_Bartowski_List_Label</font>
@@ -13196,7 +13196,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>46</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -13209,7 +13209,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>66</posy>
-			<width>700</width>
+			<width>580</width>
 			<height>4</height>
 			<aligny>center</aligny>
 			<aspectratio>stretch</aspectratio>
@@ -15904,6 +15904,900 @@
 
 	</focusedlayout>
 </include>
+<!-- Channel2 -->
+<include name="Viewmode_Channel2_Itemlayout">
+	<itemlayout condition="Skin.HasSetting(Channel2_Images_Small)" width="120" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel2_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Channel2_Images_Small)" width="120" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel2_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel2_Focus_1) + !Skin.HasSetting(Channel2_Focus_2) + !Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel2_Focus_1) + !Skin.HasSetting(Channel2_Focus_2) + !Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="!Skin.HasSetting(Channel2_Images_Small) + !Skin.HasSetting(Channel2_Images_Large)" width="160" height="220">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel2_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="!Skin.HasSetting(Channel2_Images_Small) + !Skin.HasSetting(Channel2_Images_Large)" width="160" height="220">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel2_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel2_Focus_1) + !Skin.HasSetting(Channel2_Focus_2) + !Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel2_Focus_1) + !Skin.HasSetting(Channel2_Focus_2) + !Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="Skin.HasSetting(Channel2_Images_Large)" width="200" height="320">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel2_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Channel2_Images_Large)" width="200" height="320">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel2_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel2_Focus_1) + !Skin.HasSetting(Channel2_Focus_2) + !Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel2_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel2_Focus_1) + !Skin.HasSetting(Channel2_Focus_2) + !Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel2_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel2_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+</include>
+<!-- Channel3 -->
+<include name="Viewmode_Channel3_Itemlayout">
+	<itemlayout condition="Skin.HasSetting(Channel3_Images_Small)" width="120" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel3_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Channel3_Images_Small)" width="120" height="160">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel3_Focus_1) + !Skin.HasSetting(Channel3_Focus_2) + !Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel3_Focus_1) + !Skin.HasSetting(Channel3_Focus_2) + !Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Small</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Small</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>65</posx>
+				<posy>105</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>70</posx>
+				<posy>50</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="!Skin.HasSetting(Channel3_Images_Small) + !Skin.HasSetting(Channel3_Images_Large)" width="160" height="220">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel3_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="!Skin.HasSetting(Channel3_Images_Small) + !Skin.HasSetting(Channel3_Images_Large)" width="160" height="220">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel3_Focus_1) + !Skin.HasSetting(Channel3_Focus_2) + !Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel3_Focus_1) + !Skin.HasSetting(Channel3_Focus_2) + !Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Medium</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Medium</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>95</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>100</posx>
+				<posy>82</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+	<itemlayout condition="Skin.HasSetting(Channel3_Images_Large)" width="200" height="320">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel3_Images_Transparent)</visible>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(Channel3_Images_Large)" width="200" height="320">
+		<!-- Transparency Off -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>!Skin.HasSetting(Channel3_Images_Transparent)</visible>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel3_Focus_1) + !Skin.HasSetting(Channel3_Focus_2) + !Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+		<!-- Transparency On -->
+		<control type="group">
+
+			<!-- Transparency -->
+			<visible>Skin.HasSetting(Channel3_Images_Transparent)</visible>
+			<include>Viewmode_Layout_Image_Transparent</include>
+
+			<!-- Focus Animations -->
+			<animation effect="zoom" reversible="false" center="auto" end="120" time="300" tween="back" easing="out" condition="!Skin.HasSetting(Channel3_Focus_1) + !Skin.HasSetting(Channel3_Focus_2) + !Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+			<animation effect="rotatey" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_1)">Focus</animation>
+			<animation effect="rotatex" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_2)">Focus</animation>
+			<animation effect="rotate" reversible="false" center="auto" end="360" time="800" tween="cubic" easing="out" condition="Skin.HasSetting(Channel3_Focus_3)">Focus</animation>
+
+			<!-- Image Layout -->
+			<include>Viewmode_Layout_Image_Large</include>
+                                
+			<!-- Labels -->
+			<control type="group">
+				<visible>![ !Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] ]</visible>
+				<include>Viewmode_Layout_Label_Large</include>
+			</control>
+                                
+			<!-- Overlays -->
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>225</posy>
+				<include>Viewmode_Visible_Cover</include>
+				<include>viewtype_overlays</include>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-25" condition="Skin.HasSetting(Channel3_Images_Label) + [ Container.Content(movies) | Container.Content(tvshows) ]">Conditional</animation>
+				<posx>155</posx>
+				<posy>145</posy>
+				<include>Viewmode_Visible_Thumb</include>
+				<include>viewtype_overlays</include>
+			</control>
+		</control>
+
+	</focusedlayout>
+</include>
 <!-- Layout Image (Small) -->
 <include name="Viewmode_Layout_Image_Small">
 	<!-- Cover -->
@@ -16817,6 +17711,467 @@
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
 	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+
+</include>
+<!-- Channel2 (General) -->
+<include name="Viewmode_Channel2_General">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_Sidebar_Right)">Conditional</animation>
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+
+</include>
+<!-- Channel2 (General) -->
+<include name="Viewmode_Channel2_General_NoSidebar">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+
+</include>
+<!-- Channel3 (General) -->
+<include name="Viewmode_Channel3_General">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_Sidebar_Right)">Conditional</animation>
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+
+</include>
+<!-- Channel3 (General) -->
+<include name="Viewmode_Channel3_General_NoSidebar">
+	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<pagecontrol>60</pagecontrol>
+	<include>Animation_ZoomOutZoomIn</include>
+                        
+
+	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+
+	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+
+</include>
+<include name="Viewmode_Image_Small">
+	<!-- Cover -->
+	<control type="group">
+		<include>Viewmode_Visible_Cover</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>-1</posy>
+			<width>122</width>
+			<height>162</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>@COVER_POSY@</posy>
+			<width>120</width>
+			<height>160</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- Reflection -->
+		<!--<control type="image">
+			<posy>@COVER_MIRROR@</posy>
+			<width>120</width>
+			<height>160</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>-->
+	</control>
+
+	<!-- Square -->
+	<control type="group">
+		<include>Viewmode_Visible_Square</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>39</posy>
+			<width>122</width>
+			<height>122</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>40</posy>
+			<width>120</width>
+			<height>120</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+	<!-- Thumb -->
+	<control type="group">
+		<include>Viewmode_Visible_Thumb</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>89</posy>
+			<width>122</width>
+			<height>72</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>90</posy>
+			<width>120</width>
+			<height>70</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+</include>
+<include name="Viewmode_Image_Medium">
+	<!-- Cover -->
+	<control type="group">
+		<include>Viewmode_Visible_Cover</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>-1</posy>
+			<width>162</width>
+			<height>222</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>@COVER_POSY@</posy>
+			<width>160</width>
+			<height>220</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- Reflection -->
+		<!--<control type="image">
+			<posy>@COVER_MIRROR@</posy>
+			<width>160</width>
+			<height>220</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>-->
+	</control>
+
+	<!-- Square -->
+	<control type="group">
+		<include>Viewmode_Visible_Square</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>59</posy>
+			<width>162</width>
+			<height>162</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>60</posy>
+			<width>160</width>
+			<height>160</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+	<!-- Thumb -->
+	<control type="group">
+		<include>Viewmode_Visible_Thumb</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>119</posy>
+			<width>162</width>
+			<height>102</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>120</posy>
+			<width>160</width>
+			<height>100</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+</include>
+<include name="Viewmode_Image_Large">
+	<!-- Cover -->
+	<control type="group">
+		<include>Viewmode_Visible_Cover</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>-1</posy>
+			<width>202</width>
+			<height>322</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>@COVER_POSY@</posy>
+			<width>200</width>
+			<height>320</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- Reflection -->
+		<!--<control type="image">
+			<posy>@COVER_MIRROR@</posy>
+			<width>200</width>
+			<height>320</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>-->
+	</control>
+
+	<!-- Square -->
+	<control type="group">
+		<include>Viewmode_Visible_Square</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>119</posy>
+			<width>202</width>
+			<height>202</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>120</posy>
+			<width>200</width>
+			<height>200</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+	<!-- Thumb -->
+	<control type="group">
+		<include>Viewmode_Visible_Thumb</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>169</posy>
+			<width>202</width>
+			<height>152</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>170</posy>
+			<width>200</width>
+			<height>150</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+</include>
+<include name="Viewmode_Image_xLarge">
+	<!-- Cover -->
+	<control type="group">
+		<include>Viewmode_Visible_Cover</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>-1</posy>
+			<width>242</width>
+			<height>362</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>@COVER_POSY@</posy>
+			<width>240</width>
+			<height>360</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- Reflection -->
+		<!--<control type="image">
+			<posy>@COVER_MIRROR@</posy>
+			<width>240</width>
+			<height>360</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>-->
+	</control>
+
+	<!-- Square -->
+	<control type="group">
+		<include>Viewmode_Visible_Square</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>119</posy>
+			<width>242</width>
+			<height>242</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>120</posy>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+	<!-- Thumb -->
+	<control type="group">
+		<include>Viewmode_Visible_Thumb</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>189</posy>
+			<width>242</width>
+			<height>172</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>190</posy>
+			<width>240</width>
+			<height>170</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+</include>
+<include name="Viewmode_Image_xxLarge">
+	<!-- Cover -->
+	<control type="group">
+		<include>Viewmode_Visible_Cover</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>-1</posy>
+			<width>282</width>
+			<height>402</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>@COVER_POSY@</posy>
+			<width>280</width>
+			<height>400</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		<!-- Reflection -->
+		<!--<control type="image">
+			<posy>@COVER_MIRROR@</posy>
+			<width>280</width>
+			<height>400</height>
+			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>89FFFFFF</colordiffuse>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>Viewmode_Visible_Mirror</include>
+		</control>-->
+	</control>
+
+	<!-- Square -->
+	<control type="group">
+		<include>Viewmode_Visible_Square</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>119</posy>
+			<width>282</width>
+			<height>282</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>120</posy>
+			<width>280</width>
+			<height>280</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
+
+	<!-- Thumb -->
+	<control type="group">
+		<include>Viewmode_Visible_Thumb</include>
+		<control type="image">
+			<posx>-1</posx>
+			<posy>209</posy>
+			<width>282</width>
+			<height>192</height>
+			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+			<texture background="true">frameOrange.png</texture>
+			<colordiffuse>77AAAAAA</colordiffuse>
+		</control>
+		<control type="image">
+			<posy>210</posy>
+			<width>280</width>
+			<height>190</height>
+			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+        </control>
 
 </include>
 </includes>

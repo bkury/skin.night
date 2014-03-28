@@ -52,39 +52,32 @@
 
 			<!-- Image -->
 			<control type="group">
-				<animation effect="slide" end="960" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
+				<animation effect="slide" end="1000" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
+
 				<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(List3_Sidebar_Right)">WindowOpen</animation>
 				<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(List3_Sidebar_Right)">WindowClose</animation>
 				<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(List3_Sidebar_Right)">WindowOpen</animation>
 				<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(List3_Sidebar_Right)">WindowClose</animation>
 
-				<control type="image">
-					<posx>30</posx>
-					<posy>320</posy>
-					<width>260</width>
-					<height>380</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
+				<control type="group">
 					<include>Viewmode_Visible_Cover</include>
+					<posx>20</posx>
+					<posy>340</posy>
+					<include>Viewmode_Image_xLarge</include>
 				</control>
-				<control type="image">
-					<posx>10</posx>
-					<posy>480</posy>
-					<width>300</width>
-					<height>170</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
-					<include>Viewmode_Visible_Thumb</include>
-				</control>
-				<control type="image">
-					<posx>30</posx>
-					<posy>430</posy>
-					<width>260</width>
-					<height>260</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
+				<control type="group">
 					<include>Viewmode_Visible_Square</include>
+					<posx>20</posx>
+					<posy>325</posy>
+					<include>Viewmode_Image_xLarge</include>
 				</control>
+				<control type="group">
+					<include>Viewmode_Visible_Thumb</include>
+					<posx>20</posx>
+					<posy>290</posy>
+					<include>Viewmode_Image_xLarge</include>
+				</control>
+
 			</control>
 		</control>
 
@@ -125,17 +118,17 @@
 
 		<!-- List #3 (120/Low) -->
 		<control type="fixedlist" id="120">
-			<posx>330</posx>
+			<posx>280</posx>
 			<posy>420</posy>
 			<height>280</height>
-			<width>540</width>
+			<width>580</width>
 			<onleft>7000</onleft>
 			<onright>60</onright>
 			<viewtype label="List #3">list</viewtype>
 			<orientation>vertical</orientation>
-			<focusposition>2</focusposition>
-			<movement>2</movement>
-			<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
+			<focusposition>1</focusposition>
+			<movement>1</movement>
+			<animation effect="slide" end="135" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
 
 			<include>Viewmode_List2_General_NoSidebar</include>
 			<include>Viewmode_List3_Itemlayout</include>
