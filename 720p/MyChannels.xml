@@ -2,7 +2,7 @@
 <window id="99">
 	<defaultcontrol>900</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>900,901</views>
+	<views>900,901,902</views>
 	<onload>Skin.SetString(selector1,$INFO[Container.ViewMode])</onload>
 	<onunload>Skin.Reset(selector1)</onunload>
 	<onunload>Skin.Reset(selector2)</onunload>
@@ -70,9 +70,23 @@
 		<include>Viewmode_Channel2_Itemlayout</include>
 	</control>
 
+	<!-- Viewmode Channel #3 (902) -->
+	<control type="panel" id="902">
+		<posx>80</posx>
+		<posy>40</posy>
+		<width>1120</width>
+		<height>640</height>
+		<onleft>7000</onleft>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		<viewtype label="Channel #3">panel</viewtype>
+		<include>Viewmode_Channel3_General_NoSidebar</include>
+		<include>Viewmode_Channel3_Itemlayout</include>
+	</control>
+
 	<!-- Includes -->
 	<include>viewtype_clock</include>
-	<include>viewtype_options_short</include>
+	<include>viewtype_options</include>
 	<include>viewtype_navigation</include>
 	<include>viewtype_scrolling</include>
 

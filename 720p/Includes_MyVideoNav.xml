@@ -478,7 +478,7 @@
 						<colordiffuse>mainblue</colordiffuse>
 						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 						<onclick>Skin.SetString(selector2,Options)</onclick>
-	                                        <onclick>Control.SetFocus(1305)</onclick>
+	                                        <onclick>Control.SetFocus(9999)</onclick>
 						<onleft>412</onleft>
 						<onright>414</onright>
 						<ondown>900</ondown>
@@ -923,7 +923,7 @@
 	</include>
 
 	<!-- Background Options only (Short) -->
-	<include name="viewtype_options_short">
+	<include name="viewtype_options_background">
 		<control type="group">
 			<visible>ControlGroup(1305).HasFocus + ![ Window.IsActive(1120) | Window.IsActive(126) ]</visible>
 
