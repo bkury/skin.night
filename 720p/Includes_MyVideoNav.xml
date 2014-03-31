@@ -710,7 +710,7 @@
 				<itemgap>-1</itemgap>
 				<onup>3500</onup>
 				<onleft>3530</onleft>
-				<onright>3500</onright>
+				<onright>7000</onright>
 
 				<control type="label" id="3541">
 					<width>280</width>
@@ -736,6 +736,13 @@
 					<label>Full</label>
 					<onclick>Container.SetViewMode(410)</onclick>
 					<selected>StringCompare(Container.Viewmode,Banner #2)</selected>
+					<include>radiobutton_ticked</include>
+				</control>
+				<control type="radiobutton" id="3544">
+					<width>280</width>
+					<label>Deck</label>
+					<onclick>Container.SetViewMode(420)</onclick>
+					<selected>StringCompare(Container.Viewmode,Banner #3)</selected>
 					<include>radiobutton_ticked</include>
 				</control>
 

@@ -1,6 +1,5 @@
 <!-- Viewmode Banner -->
 <includes>
-
 <include name="Viewmode_Banner">
 
 		<!-- Banner #1 (400/Info) -->
@@ -42,16 +41,15 @@
 
 		<!-- Banner #3 (420/Deck) -->
 		<control type="panel" id="420">
-			<posx>75</posx>
-			<posy>140</posy>
-			<width>1620</width>
-			<height>640</height>
+			<posx>30</posx>
+			<posy>130</posy>
+                        <width>1720</width>
+                        <height>640</height>
 			<onleft>7000</onleft>
 			<orientation>vertical</orientation>
 			<preloaditems>2</preloaditems>
 			<viewtype label="Banner #3">panel</viewtype>
-
-			<animation effect="zoom" end="70" condition="true">Conditional</animation>
+			<animation effect="zoom" end="72" condition="true">Conditional</animation>-
 
 			<!-- Position Size -->
 			<animation effect="slide" end="15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Small)">Conditional</animation>

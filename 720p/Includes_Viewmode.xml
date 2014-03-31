@@ -243,8 +243,6 @@
 	</control>
 
 
-
-
 	<!-- Viewmode Banner #1 (400/Info) -->
 	<control type="group">
 		<visible>Control.isVisible(400)</visible>
@@ -292,6 +290,36 @@
 			<include>Viewmode_Sidebar_Clock_Right</include>
 		</control>
 	</control>
+
+	<!-- Viewmode Banner #3 (420/Deck) -->
+	<control type="group">
+		<visible>Control.isVisible(420)</visible>
+		<!--<animation effect="slide" end="860,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Poster3_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Poster3_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(Poster3_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="Skin.HasSetting(Poster3_Sidebar_Right)">WindowClose</animation>-->
+
+		<!-- Horizontal Info -->
+		<control type="group">
+			<include>Animation_Preplay_Up</include>
+                        <animation effect="zoom" end="90" condition="true">Conditional</animation>
+
+			<posx>40</posx>
+			<posy>5</posy>
+			<include>Viewmode_Horizontal_Info</include>
+		</control>
+		<control type="group">
+			<include>Animation_Preplay_Down</include>
+			<posx>40</posx>
+			<posy>595</posy>
+			<include>Viewmode_Horizontal_Info_More</include>
+		</control>
+		
+	</control>
+
+
+
 
 </include>
 

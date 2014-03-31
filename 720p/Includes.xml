@@ -487,6 +487,8 @@
 
 
 		<control type="group">
+			<visible>![ Window.isVisible(4) | Window.isVisible(12) | Window.isVisible(20) | Window.isVisible(1111) ]</visible>
+
 			<!-- Number of Items (NOFILTER) -->
 			<control type="group">
 				<posx>0</posx>

@@ -152,7 +152,7 @@
 			<visible>!Skin.HasSetting(Hide_SkinSettings)</visible>
 		</item>
 		<item id="22">
-			<description>Update and Restart</description>
+			<description>Update</description>
 			<label>[COLOR darkred]$LOCALIZE[31563][/COLOR]</label>
 			<onclick>Plex.UpdateAndRestart</onclick>
 			<visible>System.UpdateIsAvailable</visible>
@@ -165,7 +165,7 @@
 			<visible>Skin.HasSetting(HomeMenuNoSearchButton)</visible>
 		</item>
 		<item id="24">
-			<description>Channel Directory</description>
+			<description>Channel Store</description>
 			<label>$LOCALIZE[31539]</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
@@ -179,7 +179,7 @@
 			<visible>!Skin.HasSetting(Hide_Quit)</visible>
 		</item>
 		<item id="26">
-			<description>Sleep</description>
+			<description>Suspend</description>
 			<label>$LOCALIZE[31561]</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.Suspend</onclick>
