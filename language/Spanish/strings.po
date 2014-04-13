@@ -1,0 +1,449 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Night Skin\n"
+"Language: es\n"
+
+#: 
+msgctxt "#31000 (max. 14 Chars)"
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: 
+msgctxt "#31001 (max. 14 Chars)"
+msgid "Skin Options"
+msgstr "Opciones de piel"
+
+#: 
+msgctxt "#31002 (max. 14 Chars)"
+msgid "Update"
+msgstr "Actualizar"
+
+#: 
+msgctxt "#31003 (max. 14 Chars)"
+msgid "Search"
+msgstr "Buscar"
+
+#: 
+msgctxt "#31004 (max. 14 Chars)"
+msgid "Channel Store"
+msgstr "Tienda de canales"
+
+#: 
+msgctxt "#31005 (max. 14 Chars)"
+msgid "Quit"
+msgstr "Salir"
+
+#: 
+msgctxt "#31006 (max. 14 Chars)"
+msgid "Suspend"
+msgstr "Suspender"
+
+#: 
+msgctxt "#31007 (max. 14 Chars)"
+msgid "Reboot"
+msgstr "Reiniciar"
+
+#: 
+msgctxt "#31008 (max. 14 Chars)"
+msgid "Shutdown"
+msgstr "Apagar"
+
+#: 
+msgctxt "#31009 (max. 20 Chars)"
+msgid "Movies"
+msgstr "Películas"
+
+#: 
+msgctxt "#31010 (max. 20 Chars)"
+msgid "TV Shows"
+msgstr "Series"
+
+#: 
+msgctxt "#31011 (max. 20 Chars)"
+msgid "Seasons"
+msgstr "Temporadas"
+
+#: 
+msgctxt "#31012 (max. 20 Chars)"
+msgid "Season"
+msgstr "Temporada"
+
+#: 
+msgctxt "#31013 (max. 20 Chars)"
+msgid "Episodes"
+msgstr "Episodios"
+
+#: 
+msgctxt "#31014 (max. 20 Chars)"
+msgid "Albums"
+msgstr "Albumes"
+
+#: 
+msgctxt "#31015 (max. 20 Chars)"
+msgid "Artists"
+msgstr "Artistas"
+
+#: 
+msgctxt "#31016 (max. 20 Chars)"
+msgid "Songs"
+msgstr "Canciones"
+
+#: 
+msgctxt "#31017 (max. 20 Chars)"
+msgid "Channels"
+msgstr "Canales"
+
+#: 
+msgctxt "#31018 (max. 20 Chars)"
+msgid "Photos"
+msgstr "Fotos"
+
+#: 
+msgctxt "#31019 (max. 20 Chars)"
+msgid "Photo Albums"
+msgstr "Albumes de fotos"
+
+#: 
+msgctxt "#31020 (max. 20 Chars)"
+msgid "Clips"
+msgstr "Clips"
+
+#: 
+msgctxt "#31021 (max. 12 Chars)"
+msgid "Filter"
+msgstr "Filtro"
+
+#: 
+msgctxt "#31022 (max. 12 Chars)"
+msgid "Sort"
+msgstr "Ordenar"
+
+#: 
+msgctxt "#31023 (max. 12 Chars)"
+msgid "Options"
+msgstr "Opciones"
+
+#: 
+msgctxt "#31024 (max. 16 Chars)"
+msgid "View Mode"
+msgstr "Vista"
+
+#: 
+msgctxt "#31025 (max. 20 Chars)"
+msgid "Next View Mode"
+msgstr "Siguiente vista"
+
+#: 
+msgctxt "#31026 (max. 16 Chars)"
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: 
+msgctxt "#31027 (max. 16 Chars)"
+msgid "Rewind"
+msgstr "Rebobinar"
+
+#: 
+msgctxt "#31028 (max. 16 Chars)"
+msgid "Stop"
+msgstr "Parar"
+
+#: 
+msgctxt "#31029 (max. 16 Chars)"
+msgid "Play"
+msgstr "Reproducir"
+
+#: 
+msgctxt "#31030 (max. 16 Chars)"
+msgid "Fast Forward"
+msgstr "Avanzar"
+
+#: 
+msgctxt "#31031 (max. 14 Chars)"
+msgid "Default"
+msgstr "Por defecto"
+
+#: 
+msgctxt "#31032 (max. 14 Chars)"
+msgid "Top"
+msgstr "Arriba"
+
+#: 
+msgctxt "#31033 (max. 14 Chars)"
+msgid "Bottom"
+msgstr "Abajo"
+
+#: 
+msgctxt "#31034 (max. 14 Chars)"
+msgid "Minimal"
+msgstr "Minimalista"
+
+#: 
+msgctxt "#31035 (max. 14 Chars)"
+msgid "Auto"
+msgstr "Auto"
+
+#: 
+msgctxt "#31036 (max. 14 Chars)"
+msgid "Off"
+msgstr "Apagado"
+
+#: 
+msgctxt "#31037 (max. 14 Chars)"
+msgid "Rate"
+msgstr "Valorar"
+
+#: 
+msgctxt "#31038 (max. 14 Chars)"
+msgid "Share"
+msgstr "Compartir"
+
+#: 
+msgctxt "#31039 (max. 14 Chars)"
+msgid "Mark as"
+msgstr "Marcar como"
+
+#: 
+msgctxt "#31040 (max. 10 Chars)"
+msgid "Director"
+msgstr "Director"
+
+#: 
+msgctxt "#31041 (max. 10 Chars)"
+msgid "Writer"
+msgstr "Escritor"
+
+#: 
+msgctxt "#31042 (max. 10 Chars)"
+msgid "Date"
+msgstr "Fecha"
+
+#: 
+msgctxt "#31043 (max. 10 Chars)"
+msgid "Airdate"
+msgstr "Emision"
+
+#: 
+msgctxt "#31044 (max. 10 Chars)"
+msgid "Channel"
+msgstr "Canal"
+
+#: 
+msgctxt "#31045 (max. 10 Chars)"
+msgid "Cast"
+msgstr "Reparto"
+
+#: 
+msgctxt "#31046 (max. 10 Chars)"
+msgid "Rating"
+msgstr "Valoracion"
+
+#: 
+msgctxt "#31047 (max. 20 Chars)"
+msgid "Content Rating"
+msgstr "Valoracion de contenido"
+
+#: 
+msgctxt "#31048 (max. 20 Chars)"
+msgid "Studio"
+msgstr "Estudio"
+
+#: 
+msgctxt "#31049 (max. 14 Chars)"
+msgid "Plot"
+msgstr "Sinopsis"
+
+#: 
+msgctxt "#31050 (max. 10 Chars)"
+msgid "Total"
+msgstr "Total"
+
+#: 
+msgctxt "#31051 (max. 20 Chars)"
+msgid "On Deck"
+msgstr "En cubierta"
+
+#: 
+msgctxt "#31052 (max. 20 Chars)"
+msgid "Recently Added"
+msgstr "Añadido recientemente"
+
+#: 
+msgctxt "#31053 (max. 20 Chars)"
+msgid "Recently Used"
+msgstr "Usado recientemente"
+
+#: 
+msgctxt "#31054 (max. 20 Chars)"
+msgid "Queue"
+msgstr "Cola"
+
+#: 
+msgctxt "#31055 (max. 20 Chars)"
+msgid "Shared Content"
+msgstr "Contenido compartido"
+
+#: 
+msgctxt "#31056 (max. 10 Chars)"
+msgid "Small"
+msgstr ""
+
+#: 
+msgctxt "#31057 (max. 10 Chars)"
+msgid "Medium"
+msgstr ""
+
+#: 
+msgctxt "#31058 (max. 10 Chars)"
+msgid "Large"
+msgstr ""
+
+#: 
+msgctxt "#31059 (max. 10 Chars)"
+msgid "Effect"
+msgstr ""
+
+#: 
+msgctxt "#31060 (max. 20 Chars)"
+msgid "Not Available"
+msgstr ""
+
+#: 
+msgctxt "#31061 (max. 6 Chars)"
+msgid "N/A"
+msgstr ""
+
+#: 
+msgctxt "#31062 (max. 10 Chars)"
+msgid "Right"
+msgstr ""
+
+#: 
+msgctxt "#31063 (max. 10 Chars)"
+msgid "Left"
+msgstr ""
+
+#: 
+msgctxt "#31064 (max. 10 Chars)"
+msgid "Labels"
+msgstr ""
+
+#: 
+msgctxt "#31065 (max. 10 Chars)"
+msgid "Text"
+msgstr ""
+
+#: 
+msgctxt "#31066 (max. 10 Chars)"
+msgid "Images"
+msgstr ""
+
+#: 
+msgctxt "#31067 (max. 10 Chars)"
+msgid "Focus"
+msgstr ""
+
+#: 
+msgctxt "#31068 (max. 10 Chars)"
+msgid "Style"
+msgstr ""
+
+#: 
+msgctxt "#31069 (max. 10 Chars)"
+msgid "Design"
+msgstr ""
+
+#: 
+msgctxt "#31070 (max. 14 Chars)"
+msgid "Information"
+msgstr ""
+
+#: 
+msgctxt "#31071 (max. 14 Chars)"
+msgid "Animation"
+msgstr ""
+
+#: 
+msgctxt "#31072 (max. 16 Chars)"
+msgid "Time per Image"
+msgstr ""
+
+#: 
+msgctxt "#31073 (max. 16 Chars)"
+msgid "Opacity"
+msgstr ""
+
+#: 
+msgctxt "#31074 (max. 16 Chars)"
+msgid "Custom Image"
+msgstr ""
+
+#: 
+msgctxt "#31075 (max. 16 Chars)"
+msgid "Custom Slideshow"
+msgstr ""
+
+#: 
+msgctxt "#31076 (max. 16 Chars)"
+msgid "Fadetime"
+msgstr ""
+
+#: 
+msgctxt "#31077 (max. 16 Chars)"
+msgid "Reset to Defaults"
+msgstr ""
+
+#: 
+msgctxt "#31078 (max. 12 Chars)"
+msgid "Home Screen"
+msgstr ""
+
+#: 
+msgctxt "#31079 (max. 12 Chars)"
+msgid "Accent Color"
+msgstr ""
+
+#: 
+msgctxt "#31080 (max. 12 Chars)"
+msgid "Home Addons"
+msgstr ""
+
+#: 
+msgctxt "#31081 (max. 12 Chars)"
+msgid "Navigation"
+msgstr ""
+
+#: 
+msgctxt "#31082 (Shortcut \"Minute\" if different, max. 5 Chars)"
+msgid "min"
+msgstr ""
+
+#: 
+msgctxt "#31083 (max. 20 Chars)"
+msgid "Please Wait ..."
+msgstr ""
+
+#: 
+msgctxt "#31084 (max. 20 Chars)"
+msgid "Buffering ..."
+msgstr ""
+
+#: 
+msgctxt "#31085 (max. 24 Chars)"
+msgid "Translucent Watched"
+msgstr ""
+
+#: 
+msgctxt "#31086 (max. 20 Chars)"
+msgid "Remaining Time"
+msgstr ""
+
+#: 
+msgctxt "#31087 (max. 20 Chars)"
+msgid "Finish Time"
+msgstr ""
+
