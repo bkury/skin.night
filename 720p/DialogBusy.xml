@@ -35,7 +35,7 @@
 	                        <focusedcolor>mainblue</focusedcolor>
 	                        <align>center</align>
 	                        <aligny>middle</aligny>
-	                        <label>$LOCALIZE[31528]</label>
+	                        <label>31083</label> <!-- Please Wait -->
 	                </control>
 			<!-- Ajax Loading -->
 	                <control type="image">

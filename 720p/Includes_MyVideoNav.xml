@@ -117,8 +117,6 @@
 								<onright>402</onright>
 								<ondown>100</ondown>
 			                                        <onup>100</onup>
-								<onclick>Skin.SetString(selector1,View)</onclick>
-								<onclick>Skin.SetString(selector2,Modes)</onclick>
 								<onclick>Control.SetFocus(1300)</onclick>
 								<visible allowhiddenfocus="true">Control.HasFocus(401)</visible>
 			                                </control>
@@ -158,7 +156,7 @@
 
 				<!-- Filter -->
 				<control type="group">
-					<posx>345</posx>
+					<posx>335</posx>
 					<control type="group">
 						<visible>![Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))]</visible>
 						<control type="image">
@@ -174,8 +172,8 @@
 							<texturenofocus>options_osd.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
 
-							<onclick>Skin.SetString(selector1,Filter)</onclick>
-							<onclick>Skin.SetString(selector2,Options)</onclick>
+							<onclick>Skin.SetString(selector1,$LOCALIZE[31021])</onclick>
+							<onclick>Skin.SetString(selector2,)</onclick>
 		                                        <onclick>Control.SetFocus(19000)</onclick>
 	
 							<onleft>401</onleft>
@@ -186,9 +184,9 @@
 		                                </control>
 						<control type="label">
 							<posx>35</posx>
-							<width>100</width>
+							<width>90</width>
 							<height>24</height>
-							<label>Filter</label>
+							<label>31021</label><!-- Filter -->
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -215,9 +213,9 @@
 						</control>
 						<control type="label">
 							<posx>40</posx>
-							<width>100</width>
+							<width>90</width>
 							<height>24</height>
-							<label>Filter</label>
+							<label>31021</label><!-- Filter -->
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -227,7 +225,8 @@
 
 				<!-- Sort -->
 				<control type="group">
-					<posx>610</posx>
+					<!--<posx>610</posx>-->
+					<posx>580</posx>
 			
 					<control type="group">
 						<visible>![Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes)]</visible>
@@ -244,8 +243,8 @@
 							<texturenofocus>options_osd.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
 	
-							<onclick>Skin.SetString(selector1,Sort)</onclick>
-							<onclick>Skin.SetString(selector2,Options)</onclick>
+							<onclick>Skin.SetString(selector1,$LOCALIZE[31022])</onclick> <!-- Sort -->
+							<onclick>Skin.SetString(selector2,)</onclick>
 		                                        <onclick>Control.SetFocus(19010)</onclick>
 
 							<onleft>402</onleft>
@@ -258,7 +257,7 @@
 							<posx>35</posx>
 							<width>100</width>
 							<height>24</height>
-							<label>Sort</label>
+							<label>31022</label><!-- Sort -->
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -276,9 +275,9 @@
 						</control>
 						<control type="label">
 							<posx>35</posx>
-							<width>100</width>
+							<width>120</width>
 							<height>24</height>
-							<label>Sort</label>
+							<label>31022</label><!-- Sort -->
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -302,7 +301,7 @@
 						<texturenofocus>b-pp-system.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
-						<onclick>Skin.SetString(selector2,Options)</onclick>
+						<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
 	                                        <onclick>Control.SetFocus(9999)</onclick>
 						<onleft>403</onleft>
 						<onright>405</onright>
@@ -314,7 +313,7 @@
 						<posx>30</posx>
 						<width>100</width>
 						<height>24</height>
-						<label>Options</label>
+						<label>31023</label><!-- Options -->
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -323,7 +322,7 @@
 
 				<!-- Search -->
 				<control type="group">
-					<posx>1100</posx>
+					<posx>1090</posx>
 					<control type="image">
 						<width>29</width>
 						<height>24</height>
@@ -347,7 +346,7 @@
 						<posx>35</posx>
 						<width>100</width>
 						<height>24</height>
-						<label>Search</label>
+						<label>31003</label><!-- Search -->
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -542,7 +541,7 @@
 			<include>viewtype_animations</include>
 
 			<!-- Dialog Header -->
-			<include>dialog_header_viewtype</include>				
+			<include>dialog_header_viewmode</include>
 
 			<control type="group" id="1300">
 				<posx>340</posx>
@@ -551,7 +550,7 @@
 				<!-- Next Viewmode -->
 				<control type="button" id="3500">
 					<width>600</width>
-					<label>Next Viewmode</label>
+					<label>31025</label><!-- Next Viewmode -->
 					<textoffsetx>0</textoffsetx>
 					<align>center</align>
                                         <font>font16caps</font>
@@ -874,7 +873,7 @@
 		<include>viewtype_animations</include>
 
 		<!-- Dialog Header -->
-		<include>dialog_header_viewtype</include>
+		<include>dialog_header_viewtype_options</include>
 
 		<control type="group" id="1303">
 
@@ -889,9 +888,9 @@
 
 			<control type="grouplist" id="1350">
 				<posx>320</posx>
-				<posy>330</posy>
+				<posy>270</posy>
 				<width>200</width>
-				<height>302</height>
+				<height>362</height>
 				<itemgap>-1</itemgap>
 				<pagecontrol>667</pagecontrol>
 				<onright>1351</onright>
@@ -901,9 +900,9 @@
 			</control>
 			<control type="grouplist" id="1351">
 				<posx>530</posx>
-				<posy>330</posy>
+				<posy>270</posy>
 				<width>200</width>
-				<height>302</height>
+				<height>362</height>
 				<itemgap>-1</itemgap>
 				<pagecontrol>667</pagecontrol>
 				<onright>1352</onright>
@@ -913,9 +912,9 @@
 			</control>
 			<control type="grouplist" id="1352">
 				<posx>740</posx>
-				<posy>330</posy>
+				<posy>270</posy>
 				<width>220</width>
-				<height>302</height>
+				<height>362</height>
 				<itemgap>-1</itemgap>
 				<pagecontrol>667</pagecontrol>
 				<onright>7000</onright>
@@ -1023,18 +1022,18 @@
 	</include>
 
 	<variable name="Viewmode_Container_Type">
-		<value condition="Container.Content(movies)">Movies</value>
-		<value condition="Container.Content(tvshows)">TV Shows</value>
-		<value condition="StringCompare(Container.NumItems,1) + Container.Content(seasons)">Season</value>
-		<value condition="!StringCompare(Container.NumItems,1) + Container.Content(seasons)">Seasons</value>
-		<value condition="Container.Content(episodes)">Episodes</value>
-		<value condition="Container.Content(albums)">Albums</value>
-		<value condition="Container.Content(artists)">Artists</value>
-		<value condition="Container.Content(songs)">Tracks</value>
-		<value condition="Container.Content(channels)">Channels</value>
-		<value condition="Container.Content(photos)">Photos</value>
-		<value condition="Container.Content(photoalbums)">Photo Albums</value>
-		<value condition="ListItem.Type(clip)">Clips</value>
+		<value condition="Container.Content(movies)">$LOCALIZE[31009]</value>
+		<value condition="Container.Content(tvshows)">$LOCALIZE[31010]</value>
+		<value condition="StringCompare(Container.NumItems,1) + Container.Content(seasons)">$LOCALIZE[31012]</value>
+		<value condition="!StringCompare(Container.NumItems,1) + Container.Content(seasons)">$LOCALIZE[31011]</value>
+		<value condition="Container.Content(episodes)">$LOCALIZE[31013]</value>
+		<value condition="Container.Content(albums)">$LOCALIZE[31014]</value>
+		<value condition="Container.Content(artists)">$LOCALIZE[31015]</value>
+		<value condition="Container.Content(songs)">$LOCALIZE[31016]</value>
+		<value condition="Container.Content(channels)">$LOCALIZE[31017]</value>
+		<value condition="Container.Content(photos)">$LOCALIZE[31018]</value>
+		<value condition="Container.Content(photoalbums)">$LOCALIZE[31019]</value>
+		<value condition="ListItem.Type(clip)">$LOCALIZE[31020]</value>
 		<value>Items</value>
 	</variable>
 

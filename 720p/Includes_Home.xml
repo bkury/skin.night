@@ -19,8 +19,8 @@
 	<animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998)">conditional</animation>
 
 	<!-- My Shared Content -->
-	<onright condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onright>
-	<onright condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onright>
+	<onright condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onright>
+	<onright condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onright>
 
 	<onleft>Plex.ActivateWindow(4998)</onleft>
 	<onright>5000</onright>
@@ -31,8 +31,8 @@
 	<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(4998)">conditional</animation>
 
 	<!-- My Shared Content -->
-	<onup condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onup>
-	<onup condition="SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onup>
+	<onup condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onup>
+	<onup condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onup>
 
 	<onup>5000</onup>
 	<ondown>Plex.ActivateWindow(4998)</ondown>
@@ -75,7 +75,7 @@
 	<content>
 		<item id="11">
 			<description>Search</description>
-			<label>$LOCALIZE[137]</label>
+			<label>31003</label>
 			<icon>backgrounds/search.jpg</icon>
 			<onclick>Plex.ActivateWindow(10051)</onclick>
 			<visible>!Skin.HasSetting(HomeMenuNoSearchButton)</visible>
@@ -140,61 +140,61 @@
 	<content>
 		<item id="20">
 			<description>Preferences</description>
-			<label>$LOCALIZE[31595]</label>
+			<label>31000</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>XBMC.ActivateWindow(settings)</onclick>
 		</item>
 		<item id="21">
 			<description>Skin Settings</description>
-			<label>$LOCALIZE[31596]</label>
+			<label>31001</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>XBMC.ActivateWindow(1111)</onclick>
 			<visible>!Skin.HasSetting(Hide_SkinSettings)</visible>
 		</item>
 		<item id="22">
 			<description>Update</description>
-			<label>[COLOR darkred]$LOCALIZE[31563][/COLOR]</label>
+			<label>[COLOR darkred]31002[/COLOR]</label>
 			<onclick>Plex.UpdateAndRestart</onclick>
 			<visible>System.UpdateIsAvailable</visible>
 		</item>
 		<item id="23">
 			<description>Search</description>
-			<label>$LOCALIZE[137]</label>
+			<label>31003</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.ActivateWindow(10051)</onclick>
 			<visible>Skin.HasSetting(HomeMenuNoSearchButton)</visible>
 		</item>
 		<item id="24">
 			<description>Channel Store</description>
-			<label>$LOCALIZE[31539]</label>
+			<label>31004</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
 			<visible>!Skin.HasSetting(Hide_ChannelDirectory)</visible>
 		</item>
 		<item id="25">
 			<description>Quit</description>
-			<label>$LOCALIZE[31560]</label>
+			<label>31005</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.Quit</onclick>
 			<visible>!Skin.HasSetting(Hide_Quit)</visible>
 		</item>
 		<item id="26">
 			<description>Suspend</description>
-			<label>$LOCALIZE[31561]</label>
+			<label>31006</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.Suspend</onclick>
 			<visible>!Skin.HasSetting(Hide_Sleep)</visible>
 		</item>
 		<item id="27">
 			<description>Reboot</description>
-			<label>Reboot</label>
+			<label>31007</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.Reboot</onclick>
 			<visible>!Skin.HasSetting(Hide_Reboot)</visible>
 		</item>
 		<item id="28">
 			<description>Shut Down</description>
-			<label>$LOCALIZE[31562]</label>
+			<label>31008</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.Powerdown</onclick>
 			<visible>!Skin.HasSetting(Hide_Shutdown)</visible>

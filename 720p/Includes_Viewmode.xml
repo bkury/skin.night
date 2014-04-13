@@ -33,7 +33,7 @@
 
 		<!-- Sidebar -->
 		<control type="group">
-			<posy>15</posy>
+			<posy>10</posy>
 			<posx>20</posx>
 			<include>Viewmode_Sidebar_Header</include>
 			<include>Viewmode_Sidebar_Content</include>
@@ -193,7 +193,7 @@
 
 		<!-- Sidebar -->
 		<control type="group">
-			<posy>15</posy>
+			<posy>10</posy>
 			<posx>20</posx>
 			<include>Viewmode_Sidebar_Header</include>
 			<include>Viewmode_Sidebar_Content</include>
@@ -273,7 +273,7 @@
 
 		<!-- Sidebar -->
 		<control type="group">
-			<posy>15</posy>
+			<posy>10</posy>
 			<posx>20</posx>
 			<include>Viewmode_Sidebar_Header</include>
 			<include>Viewmode_Sidebar_Content</include>
@@ -305,13 +305,13 @@
 			<include>Animation_Preplay_Up</include>
                         <animation effect="zoom" end="90" condition="true">Conditional</animation>
 
-			<posx>40</posx>
+			<posx>60</posx>
 			<posy>5</posy>
 			<include>Viewmode_Horizontal_Info</include>
 		</control>
 		<control type="group">
 			<include>Animation_Preplay_Down</include>
-			<posx>40</posx>
+			<posx>60</posx>
 			<posy>595</posy>
 			<include>Viewmode_Horizontal_Info_More</include>
 		</control>
@@ -394,7 +394,7 @@
 					<posy>75</posy>
 					<width>280</width>
 					<align>left</align>
-					<label>$INFO[Container.SecondTitle][COLOR=mainblue] &#xB7; [/COLOR]Episode $INFO[ListItem.Episode]</label>
+					<label>$INFO[Container.SecondTitle][COLOR=mainblue] &#xB7; [/COLOR]$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
 					<visible>Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))</visible>
@@ -403,7 +403,7 @@
 					<posy>75</posy>
 					<width>280</width>
 					<align>left</align>
-					<label>Season $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]Episode $INFO[ListItem.Episode]</label>
+					<label>$LOCALIZE[20373] $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
 					<visible>Container.Content(episodes) + !isEmpty(Container.Property(primaryFilterActivated))</visible>
@@ -434,7 +434,8 @@
 			<visible>Container.Content(movies)</visible>
 				<control type="label">
 					<posy>230</posy>
-					<label>Cast</label>
+					<label>31045</label><!-- Cast -->
+					<width>90</width>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 				</control>
@@ -454,9 +455,9 @@
 				<visible>!Container.Content(movies)</visible>
 				<control type="label">
 					<posx>0</posx>
-					<!--<posy>242</posy>-->
 					<posy>229</posy>
-					<label>Airdate</label>
+					<width>90</width>
+					<label>31043</label><!-- Airdate -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 				</control>
@@ -522,20 +523,21 @@
 					<width>110</width>
 					<height>30</height>
 					<align>center</align>
-					<label>Rating $INFO[ListItem.Rating]</label>
+					<label>$LOCALIZE[31046] $INFO[ListItem.Rating]</label><!-- Rating -->
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFCCCCCC</textcolor>
 					<wrapmultiline>false</wrapmultiline>
 					<visible>!isEmpty(ListItem.Rating) + Container.Content(clip)</visible>
 				</control>
 	
-				<!-- 1st Line (Director, PictureMode)
+				<!-- 1st Line (Director, PictureMode) -->
 
 				<!-- Director -->
 				<control type="label">
 					<posx>0</posx>
 					<posy>168</posy>
-					<label>Director</label>
+					<width>90</width>
+					<label>31040</label><!-- Director -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)</visible>
@@ -554,7 +556,8 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>168</posy>
-					<label>Total</label>
+					<width>90</width>
+					<label>31050</label><!-- Total -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 					<visible>Container.Content(tvshows)</visible>
@@ -573,6 +576,7 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>168</posy>
+					<width>90</width>
 					<label>Mode</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
@@ -588,13 +592,14 @@
 					<visible>!isEmpty(ListItem.PictureExpMode)</visible>
 				</control>
 
-				<!-- 2nd Line (Writer, PictureResolution)
+				<!-- 2nd Line (Writer, PictureResolution) -->
 
 				<!-- Writer -->
 				<control type="label">
 					<posx>0</posx>
 					<posy>199</posy>
-					<label>Writer</label>
+					<width>90</width>
+					<label>31041</label><!-- Writer -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies)</visible>
@@ -613,7 +618,8 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>199</posy>
-					<label>Cast</label>
+					<width>90</width>
+					<label>31045</label><!-- Cast -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 					<visible>Container.Content(tvshows)</visible>
@@ -632,7 +638,8 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>199</posy>
-					<label>Channel</label>
+					<width>90</width>
+					<label>31044</label><!-- Channel -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 					<visible>Container.Content(channel)</visible>
@@ -651,6 +658,7 @@
 				<control type="label">
 					<posx>0</posx>
 					<posy>199</posy>
+					<width>90</width>
 					<label>WxH</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
@@ -688,15 +696,54 @@
 
 				<control type="group">
 					<include>Viewmode_Visible_Cover</include>
-					<control type="image">
-						<posx>20</posx>
-						<posy>300</posy>
-						<width>140</width>
-						<height>200</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>scale</aspectratio>
+
+					<!-- TV Shows / Seasons -->
+					<control type="group">
+						<visible>![Container.Content(movies) | Container.Content(homemovies)]</visible>
 						<animation effect="slide" end="95" condition="Skin.HasSetting(NoContentRating) + Skin.HasSetting(NoStudioLogo)">Conditional</animation>
+						<control type="image">
+							<posx>9</posx>
+							<posy>274</posy>
+							<width>152</width>
+							<height>222</height>
+							<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+							<texture background="true">frameOrange.png</texture>
+							<colordiffuse>77AAAAAA</colordiffuse>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>275</posy>
+							<width>150</width>
+							<height>220</height>
+							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
 					</control>
+
+					<!-- Movies -->
+					<control type="group">
+						<visible>Container.Content(movies) | Container.Content(homemovies)</visible>
+						<animation effect="slide" end="95" condition="Skin.HasSetting(NoContentRating) + Skin.HasSetting(NoStudioLogo)">Conditional</animation>
+						<control type="image">
+							<posx>19</posx>
+							<posy>299</posy>
+							<width>142</width>
+							<height>202</height>
+							<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+							<texture background="true">frameOrange.png</texture>
+							<colordiffuse>77AAAAAA</colordiffuse>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>300</posy>	
+							<width>140</width>
+							<height>200</height>
+							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+					</control>
+
+
 					<control type="textbox">
 						<description>Plot</description>
 						<posx>0</posx>
@@ -715,9 +762,9 @@
 					<control type="label">
 						<posx>180</posx>
 						<posy>310</posy>
-						<width>200</width>
+						<width>210</width>
 						<height>40</height>
-						<label>Content Rating</label>
+						<label>31047</label><!-- Content Rating -->
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FF888888</textcolor>
 						<align>left</align>
@@ -741,9 +788,9 @@
 					<control type="label">
 						<posx>180</posx>
 						<posy>385</posy>
-						<width>200</width>
+						<width>210</width>
 						<height>40</height>
-						<label>Studio</label>
+						<label>31048</label><!-- Studio -->
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FF888888</textcolor>
 						<align>left</align>
@@ -793,9 +840,9 @@
 						<posx>0</posx>
 						<posy>300</posy>
 						<width>380</width>
-						<height>190</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>scale</aspectratio>
+						<height>180</height>
+						<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="textbox">
 						<description>Plot</description>

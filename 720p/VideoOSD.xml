@@ -154,7 +154,7 @@
 					<posx>-60</posx>
 					<width>146</width>
 					<height>24</height>
-					<label>Bookmarks</label>
+					<label>31026</label><!-- Bookmarks -->
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
@@ -369,7 +369,7 @@
 					<control type="label">
 						<width>160</width>
 						<height>24</height>
-						<label>Play</label>
+						<label>31029</label><!-- Play -->
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -379,7 +379,7 @@
 					<control type="label">
 						<width>160</width>
 						<height>24</height>
-						<label>Pause</label>
+						<label>Pause</label><!-- Pause MISSING -->
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -389,7 +389,7 @@
 					<control type="label">
 						<width>160</width>
 						<height>24</height>
-						<label>Rewind</label>
+						<label>31027</label><!-- Rewind -->
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -399,7 +399,7 @@
 					<control type="label">
 						<width>160</width>
 						<height>24</height>
-						<label>Fast Forward</label>
+						<label>31030</label><!-- Fast Forward -->
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -409,7 +409,7 @@
 					<control type="label">
 						<width>160</width>
 						<height>24</height>
-						<label>Stop</label>
+						<label>31028</label><!-- Stop -->
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -447,7 +447,6 @@
 						<posy>25</posy>
 						<width>124</width>
 						<height>24</height>
-						<!--<label>$LOCALIZE[31590]</label>-->
 						<label fallback="$LOCALIZE[31590]">[UPPERCASE]$INFO[VideoPlayer.AudioCodec][/UPPERCASE]</label>
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>

@@ -133,7 +133,7 @@
 					<posy>365</posy>
 					<width>255</width>
 					<align>center</align>
-					<label fallback="N/A">Season $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]Episode $INFO[ListItem.Episode]</label>
+					<label fallback="N/A">$LOCALIZE[20373] $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
 					<include>Animation_Preplay_Left</include>
@@ -226,7 +226,8 @@
 				<control type="label">
 					<posx>235</posx>
 					<posy>187</posy>
-					<label>Cast</label>
+					<width>110</width>
+					<label>31045</label><!-- Cast -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 				</control>
@@ -249,7 +250,8 @@
 				<control type="label">
 					<posx>235</posx>
 					<posy>187</posy>
-					<label>Airdate</label>
+					<width>110</width>
+					<label>31043</label><!-- Airdate -->
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFAAAAAA</textcolor>
 				</control>
@@ -362,7 +364,8 @@
 			<control type="label">
 				<posx>235</posx>
 				<posy>120</posy>
-				<label>Director</label>
+				<width>110</width>
+				<label>31040</label><!-- Director -->
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>FFAAAAAA</textcolor>
 			</control>
@@ -378,7 +381,8 @@
 			<control type="label">
 				<posx>235</posx>
 				<posy>154</posy>
-				<label>Writer</label>
+				<width>110</width>
+				<label>31041</label><!-- Writer -->
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>FFAAAAAA</textcolor>
 			</control>
@@ -483,10 +487,12 @@
 				</control>
 				<control type="label">
 					<posy>34</posy>
-					<posx>-2</posx>
-					<width>76</width>
+					<!--<posx>-2</posx>
+					<width>76</width>-->
+					<posx>-12</posx>
+					<width>96</width>
 					<height>30</height>
-					<label>Play</label>
+					<label>31029</label><!-- Play -->
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
@@ -615,10 +621,10 @@
 				</control>
 				<control type="label">
 					<posy>34</posy>
-					<posx>0</posx>
-					<width>76</width>
+					<posx>-10</posx>
+					<width>96</width>
 					<height>30</height>
-					<label>Rate</label>
+					<label>31037</label><!-- Rate -->
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
@@ -648,10 +654,10 @@
 				</control>
 				<control type="label">
 					<posy>34</posy>
-					<posx>0</posx>
-					<width>76</width>
+					<posx>-10</posx>
+					<width>96</width>
 					<height>30</height>
-					<label>Share</label>
+					<label>31038</label><!-- Share -->
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
@@ -693,7 +699,7 @@
 					<posx>0</posx>
 					<width>76</width>
 					<height>30</height>
-					<label>Share</label>
+					<label>31038</label><!-- Share -->
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
@@ -753,18 +759,19 @@
 				</control>
 				<control type="label">
 					<posy>34</posy>
-					<posx>20</posx>
-					<width>76</width>
+					<posx>0</posx>
+					<width>120</width>
 					<height>30</height>
-					<label>Mark as</label>
+					<label>31039</label><!-- Mark as -->
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
+					<wrapmultiline>false</wrapmultiline>
 					<align>center</align>
 				</control>
 			</control>
 		</control>
-	<include>Global_Time_TopRight_Library</include>
 	</control>
+	<include>viewtype_clock</include>
 </controls>
 </window>

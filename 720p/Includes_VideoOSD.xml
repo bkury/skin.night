@@ -289,7 +289,7 @@
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[112]</label>
+			<label>112</label><!-- Paused -->
 			<font>Font_Bartowski_OSD</font>
 			<textcolor>FFCCCCCC</textcolor>
 			<visible>player.paused + !player.caching</visible>
@@ -301,7 +301,7 @@
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[112]</label>
+			<label>112</label><!-- Paused -->
 			<font>Font_Bartowski_OSD</font>
 			<textcolor>mainblue</textcolor>
 			<visible>!Skin.HasSetting(osd_flash) + player.paused + !player.caching</visible>
@@ -316,7 +316,7 @@
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31553]</label>
+			<label>31084</label><!-- Buffering -->
 			<font>Font_Bartowski_OSD</font>
 			<textcolor>FFCCCCCC</textcolor>
 			<visible>player.caching</visible>
@@ -328,7 +328,7 @@
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31553]</label>
+			<label>31084</label><!-- Buffering -->
 			<font>Font_Bartowski_OSD</font>
 			<textcolor>mainblue</textcolor>
 			<visible>!Skin.HasSetting(osd_flash) + player.caching</visible>

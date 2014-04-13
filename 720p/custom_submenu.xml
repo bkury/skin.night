@@ -6,9 +6,6 @@
 		<!-- SUBMENU -->
 		<control type="group" id="1400">
 			<include>Submenu_Navigation</include>
-			<!--<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Sub_Wraplist</include>
-			<include condition="Skin.HasSetting(Home_Fixed)">Sub_Fixedlist</include>
-			<include condition="Skin.HasSetting(Home_Simple)">Sub_Simplelist</include>-->
 		</control>
         </controls>
 </window>

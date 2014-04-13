@@ -294,18 +294,416 @@
 	</include>
 
 
+	<!-- Now Playing (RIGHT) -->
+	<include name="viewtype_nowplaying_right">
+
+		<!-- Video -->
+		<control type="group">
+			<visible>Player.HasVideo</visible>
+
+			<!-- Content -->
+			<control type="group">
+				<include>Animation_CommonFade</include>
+
+				<control type="videowindow" id="8">
+					<posx>300</posx>
+					<width>100</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>290</posx>
+					<posy>-5</posy>
+					<width>120</width>
+					<height>70</height>
+					<texture>music/musicwallframeF.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+
+				<!-- 1st Line -->
+				<control type="label">
+					<posx>290</posx>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>$INFO[VideoPlayer.TvShowTitle]</label>
+					<visible>!isEmpty(VideoPlayer.TvShowTitle)</visible>
+				</control>
+				<control type="label">
+					<posx>290</posx>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>Now Playing</label>
+					<visible>isEmpty(VideoPlayer.TvShowTitle)</visible>
+				</control>
+
+				<!-- 2nd Line -->
+				<control type="label">
+					<posx>290</posx>
+					<posy>22</posy>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<scroll>yes</scroll>
+				</control>
+
+				<!-- Time / Duration -->
+				<control type="label">
+					<posx>290</posx>
+					<posy>42</posy>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[VideoPlayer.Time] [COLOR=mainblue]/[/COLOR] $INFO[VideoPlayer.Duration]</label>
+				</control>
+			</control>
+		</control>
+
+
+		<!-- Audio -->
+		<control type="group">
+			<visible>Player.HasAudio</visible>
+
+			<control type="group">
+				<include>Animation_CommonFade</include>
+
+				<!-- Cover -->
+				<control type="image">
+					<description>cover image</description>
+					<posx>340</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture diffuse="music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>334</posx>
+					<posy>-6</posy>
+					<width>72</width>
+					<height>72</height>
+					<texture>music/musicwallframeF.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+
+				<!-- Artist -->
+				<control type="label">
+					<posx>330</posx>
+					<width>360</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="fade" start="0" end="100" time="500" delay="0" />
+						<effect type="fade" start="100" end="0" time="500" delay="7000" />
+						<effect type="fade" start="100" end="0" time="500" delay="14000" />
+					</animation>
+				</control>
+
+				<!-- Album -->
+				<control type="label">
+					<posx>330</posx>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>$INFO[MusicPlayer.Album]</label>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="fade" start="0" end="100" time="500" delay="7500" />
+						<effect type="fade" start="100" end="0" time="500" delay="14000" />
+					</animation>
+				</control>
+
+				<!-- Streaming -->
+				<control type="label">
+					<posx>330</posx>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>	
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>Streaming</label>
+					<visible>isEmpty(MusicPlayer.Album) + isEmpty(MusicPlayer.Artist)</visible>
+				</control>
+
+				<!-- Title -->
+				<control type="label">
+					<posx>330</posx>
+					<posy>22</posy>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<scroll>yes</scroll>
+				</control>
+
+				<!-- Time / Duration -->
+				<control type="label">
+					<posx>330</posx>
+					<posy>42</posy>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[MusicPlayer.Time] [COLOR=mainblue]/[/COLOR] $INFO[MusicPlayer.Duration]</label>
+					<visible>!isEmpty(MusicPlayer.Duration)</visible>
+				</control>
+				<control type="label">
+					<posx>330</posx>
+					<posy>42</posy>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>right</align>	
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<visible>isEmpty(MusicPlayer.Duration)</visible>
+				</control>
+		</control>
+	</control>
+
+	</include>
+
+	<!-- Now Playing (LEFT) -->
+	<include name="viewtype_nowplaying_left">
+
+		<!-- Video -->
+		<control type="group">
+			<visible>Player.HasVideo</visible>
+
+			<!-- Content -->
+			<control type="group">
+				<include>Animation_CommonFade</include>
+
+				<control type="videowindow" id="8">
+					<posx>20</posx>
+					<width>100</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>-5</posy>
+					<width>120</width>
+					<height>70</height>
+					<texture>music/musicwallframeF.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+
+				<!-- 1st Line -->
+				<control type="label">
+					<posx>130</posx>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>$INFO[VideoPlayer.TvShowTitle]</label>
+					<visible>!isEmpty(VideoPlayer.TvShowTitle)</visible>
+				</control>
+				<control type="label">
+					<posx>130</posx>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>Now Playing</label>
+					<visible>isEmpty(VideoPlayer.TvShowTitle)</visible>
+				</control>
+
+				<!-- 2nd Line -->
+				<control type="label">
+					<posx>130</posx>
+					<posy>22</posy>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<scroll>yes</scroll>
+				</control>
+
+				<!-- Time / Duration -->
+				<control type="label">
+					<posx>130</posx>
+					<posy>42</posy>
+					<width>270</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[VideoPlayer.Time] [COLOR=mainblue]/[/COLOR] $INFO[VideoPlayer.Duration]</label>
+				</control>
+			</control>
+		</control>
+
+
+		<!-- Audio -->
+		<control type="group">
+			<visible>Player.HasAudio</visible>
+
+			<control type="group">
+				<include>Animation_CommonFade</include>
+
+				<!-- Cover -->
+				<control type="image">
+					<description>cover image</description>
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture diffuse="music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>14</posx>
+					<posy>-6</posy>
+					<width>72</width>
+					<height>72</height>
+					<texture>music/musicwallframeF.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+
+				<!-- Artist -->
+				<control type="label">
+					<posx>90</posx>
+					<width>360</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="fade" start="0" end="100" time="500" delay="0" />
+						<effect type="fade" start="100" end="0" time="500" delay="7000" />
+						<effect type="fade" start="100" end="0" time="500" delay="14000" />
+					</animation>
+				</control>
+
+				<!-- Album -->
+				<control type="label">
+					<posx>90</posx>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>$INFO[MusicPlayer.Album]</label>
+					<animation type="Conditional" reversible="false" condition="true" loop="true">
+						<effect type="fade" start="0" end="100" time="500" delay="7500" />
+						<effect type="fade" start="100" end="0" time="500" delay="14000" />
+					</animation>
+				</control>
+
+				<!-- Streaming -->
+				<control type="label">
+					<posx>90</posx>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>	
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>mainblue</textcolor>
+					<label>Streaming</label>
+					<visible>isEmpty(MusicPlayer.Album) + isEmpty(MusicPlayer.Artist)</visible>
+				</control>
+
+				<!-- Title -->
+				<control type="label">
+					<posx>90</posx>
+					<posy>22</posy>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<scroll>yes</scroll>
+				</control>
+
+				<!-- Time / Duration -->
+				<control type="label">
+					<posx>90</posx>
+					<posy>42</posy>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[MusicPlayer.Time] [COLOR=mainblue]/[/COLOR] $INFO[MusicPlayer.Duration]</label>
+					<visible>!isEmpty(MusicPlayer.Duration)</visible>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>42</posy>
+					<width>310</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>	
+					<font>Font_Date</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<visible>isEmpty(MusicPlayer.Duration)</visible>
+				</control>
+		</control>
+	</control>
+
+	</include>
 
 	<include name="Global_Time_Home">
 		<control type="group">
                         <visible>[Control.IsVisible(300) + !Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock)]</visible>
-			<posx>1256</posx>
-			<posy>0</posy>
+			<posx>1270</posx>
+			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
-				<control type="image"> 
+				<!--<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   
 					<width>413</width>     
 					<height>215</height> 
+					<texture>common/library_time_gradient.png</texture>
+				</control>-->
+				<control type="image"> 
+					<posx>-400</posx>
+					<posy>-10</posy>   
+					<width>420</width>     
+					<height>200</height> 
 					<texture>common/library_time_gradient.png</texture>
 				</control>
 				<control type="label">
@@ -316,8 +714,8 @@
 					<align>right</align>
 				</control>
 				<control type="label">
-					<posy>24</posy>
 					<width>300</width>
+					<posy>25</posy>
 					<font>Font_Date</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
@@ -326,11 +724,37 @@
 		</control>
 	</include>
 
+	<!-- Sidebar Clock (LEFT) -->
 	<include name="Viewmode_Sidebar_Clock_Left">
+			<!-- Now Playing -->
+			<control type="group">
+				<include>Animation_CommonFade</include>
+				<visible>Player.HasVideo | Player.HasAudio</visible>
+
+				<posx>0</posx>
+				<posy>650</posy>
+				<include>viewtype_nowplaying_left</include>
+
+				<!-- Clock / Date -->
+				<control type="label">
+					<posy>42</posy>
+					<posx>400</posx>
+					<width>200</width>
+                                        <height>18</height>
+					<font>Font_Date</font>
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>right</align>
+                                        <aligny>center</aligny>
+				</control>
+
+			</control>
+
 			<!-- Viewmode / Sidebar Left -->
 			<control type="group">
+				<visible>![Player.HasVideo | Player.HasAudio]</visible>
 				<posx>20</posx>
-				<posy>670</posy>
+				<posy>660</posy>
 				<width>380</width>
 
 				<!-- Clock / Date -->
@@ -384,12 +808,40 @@
 			</control>
 	</include>
 
+	<!-- Sidebar Clock (RIGHT) -->
 	<include name="Viewmode_Sidebar_Clock_Right">
-			<!-- Viewmode / Sidebar Right -->
+
+			<!-- Now Playing -->
 			<control type="group">
+				<include>Animation_CommonFade</include>
+				<visible>Player.HasVideo | Player.HasAudio</visible>
+
+				<posx>0</posx>
+				<posy>650</posy>
+				<include>viewtype_nowplaying_right</include>
+
+				<!-- Clock / Date -->
+				<control type="label">
+					<posy>42</posy>
+					<posx>20</posx>
+					<width>200</width>
+                                        <height>18</height>
+					<font>Font_Date</font>
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>left</align>
+                                        <aligny>center</aligny>
+				</control>
+
+			</control>
+
+			<!-- Sidebar -->
+			<control type="group">
+				<include>Animation_CommonFade</include>
+				<visible>![Player.HasVideo | Player.HasAudio]</visible>
+
 				<posx>20</posx>
-				<posy>670</posy>
-				<width>380</width>
+				<posy>660</posy>
 
 				<!-- Clock / Date -->
 				<control type="label">
@@ -452,15 +904,51 @@
 			<visible>!Skin.HasSetting(NoGlobalClock) + [	Control.isVisible(110) | Control.isVisible(120) |
 									Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) |
 									Control.isVisible(310) | Control.isVisible(320) |
-									Control.isVisible(410) |
+									Control.isVisible(410) | Control.isVisible(420) |
 									Control.isVisible(900) |  Control.isVisible(901) |  Control.isVisible(902) |
-									Window.isVisible(4) | Window.isVisible(12) | Window.isVisible(20) | Window.isVisible(1111)
+									Window.isVisible(4) | Window.isVisible(12) | Window.isVisible(20) | Window.isVisible(1111) |
+									Window.isVisible(10090) + !Skin.HasSetting(Preplay_NoClock)
 								   ]
 			</visible>
-
 			<include>Animation_CommonFade</include>
 
+			<!-- Now Playing -->
 			<control type="group">
+				<posx>-390</posx>
+				<posy>10</posy>
+				<animation effect="fade" start="0" end="100" time="800" delay="1000">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="800">Hidden</animation>
+				<visible>Player.HasAudio | Player.HasVideo</visible>
+		
+				<!-- Background -->
+				<control type="image"> 
+					<posx>-60</posx>
+					<posy>-20</posy>   
+					<width>500</width>     
+					<height>215</height> 
+					<texture>common/library_time_gradient.png</texture>
+				</control>
+
+				<include>viewtype_nowplaying_right</include>
+
+				<control type="label">
+					<posx>402</posx>
+					<posy>68</posy>
+					<width>200</width>
+					<height>18</height>
+					<font>Font_Date</font>
+					<!--<font>Font_NowPlaying_Global</font>-->
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>right</align>
+					<aligny>center</aligny>
+				</control>
+			</control>
+
+
+			<control type="group">
+				<visible>![ Player.HasAudio | Player.HasVideo ]</visible>
+				<include>Animation_CommonFade</include>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   
@@ -487,7 +975,8 @@
 
 
 		<control type="group">
-			<visible>![ Window.isVisible(4) | Window.isVisible(12) | Window.isVisible(20) | Window.isVisible(1111) ]</visible>
+			<include>Animation_CommonFade</include>
+			<visible>![ Window.isVisible(4) | Window.isVisible(12) | Window.isVisible(20) | Window.isVisible(1111) | Window.isVisible(10090) ] + ![ Player.HasAudio | Player.HasVideo ]</visible>
 
 			<!-- Number of Items (NOFILTER) -->
 			<control type="group">
@@ -526,30 +1015,6 @@
 
 		</control>
 	</include>
-
-
-
-	<include name="viewtype_clock_video">
-		<control type="group">
-			<posy>10</posy>
-			<posx>908</posx>
-			<visible>false</visible>
-			<control type="image">
-				<width>400</width>
-				<height>336</height>
-				<texture>dialogs/trailer_diffuse_back.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-               
-			<control type="videowindow" id="8">
-				<posx>50</posx>
-				<posy>40</posy>
-				<width>300</width>
-				<height>256</height>
-			</control>
-	       	</control>
-	</include>
-
 
 	<include name="Global_Time_TopRight_OSD">
 		<control type="group">
@@ -1243,6 +1708,56 @@
 		</control>
 	</include>
 
+	<!-- DIALOG HEADER VIEWTYPE OPTIONS -->
+	<include name="dialog_header_viewtype_options">
+		<!-- Background -->
+		<control type="image">
+			<posx>300</posx>
+			<posy>170</posy>
+			<width>680</width>
+			<height>488</height>
+			<texture border="6">base-rounded.png</texture>
+			<colordiffuse>DD000000</colordiffuse>
+		</control>
+		<!-- Header -->
+                <control type="group">
+                        <posx>0</posx>
+                        <posy>180</posy>
+			<!-- Custom Selector Labels -->
+			<control type="label">
+				<posx>360</posx>
+				<posy>0</posy>
+				<width>560</width>
+				<height>30</height>
+				<font>Font_Bartowski_Main_SubMenu</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<label>$INFO[Skin.String(selector1)] $INFO[Skin.String(selector2)]</label>
+			</control>
+			<!-- 1st SEPERATOR LINE -->
+                        <control type="image">
+				<posx>320</posx>
+                                <posy>75</posy>
+				<width>640</width>
+                                <height>1</height>
+                                <texture>base-rounded.png</texture>
+                                <colordiffuse>mainblue</colordiffuse>
+                                <align>center</align>
+                        </control>
+			<!-- 2nd SEPERATOR LINE -->
+                        <!--<control type="image">
+				<posx>320</posx>
+                                <posy>425</posy>
+				<width>640</width>
+                                <height>1</height>
+                                <texture>base-rounded.png</texture>
+                                <colordiffuse>mainblue</colordiffuse>
+                                <align>center</align>
+				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(126) | Window.IsVisible(100)</visible>
+                        </control>-->
+		</control>
+	</include>
+
 	<!-- DIALOG HEADER VIEWTYPE -->
 	<include name="dialog_header_viewtype">
 		<!-- Background -->
@@ -1290,6 +1805,45 @@
                                 <align>center</align>
 				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(126) | Window.IsVisible(100)</visible>
                         </control>-->
+		</control>
+	</include>
+
+	<!-- DIALOG HEADER VIEWTYPE -->
+	<include name="dialog_header_viewmode">
+		<!-- Background -->
+		<control type="image">
+			<posx>300</posx>
+			<posy>230</posy>
+			<width>680</width>
+			<height>428</height>
+			<texture border="6">base-rounded.png</texture>
+			<colordiffuse>DD000000</colordiffuse>
+		</control>
+		<!-- Header -->
+                <control type="group">
+                        <posx>0</posx>
+                        <posy>240</posy>
+			<!-- Custom Selector Labels -->
+			<control type="label">
+				<posx>360</posx>
+				<posy>0</posy>
+				<width>560</width>
+				<height>30</height>
+				<font>Font_Bartowski_Main_SubMenu</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<label>31024</label><!-- View Mode -->
+			</control>
+			<!-- 1st SEPERATOR LINE -->
+                        <control type="image">
+				<posx>320</posx>
+                                <posy>75</posy>
+				<width>640</width>
+                                <height>1</height>
+                                <texture>base-rounded.png</texture>
+                                <colordiffuse>mainblue</colordiffuse>
+                                <align>center</align>
+                        </control>
 		</control>
 	</include>
 

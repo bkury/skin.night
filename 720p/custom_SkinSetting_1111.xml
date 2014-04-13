@@ -67,7 +67,6 @@
 						<height>76</height>
 						<texture border="5">confluence/button-focus.png</texture>
 						<colordiffuse>77FFFFFF</colordiffuse>
-						<!--<animation effect="fade" start="100" end="60" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>--> <!-- WTF -->
 					</control>
 					<control type="label">
 						<posx>20</posx>
@@ -94,23 +93,23 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<label>128</label>
+						<label>128</label> <!-- General -->
 						<label2>5</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="2">
-						<label>31609</label>
+						<label>31078</label> <!-- Home Screen -->
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="4">
-						<label>Home Addons</label>
+						<label>31080</label> <!-- Home Addons -->
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="3">
-						<label>33068</label>
-						<label2>31115</label2>
+						<label>33068</label> <!-- Background -->
+						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 					<!--<item id="5">
@@ -119,7 +118,7 @@
 						<onclick>-</onclick>
 					</item>-->
 					<item id="5">
-						<label>Viewmode</label>
+						<label>31024</label> <!-- View Mode -->
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
@@ -129,8 +128,8 @@
 						<onclick>-</onclick>
 					</item>-->
 					<item id="9">
-						<label>$LOCALIZE[31545]</label>
-						<label2>$LOCALIZE[31063]</label2>
+						<label>31079</label> <!-- Accent Color -->
+						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 				</content>
@@ -166,10 +165,9 @@
 					<ondown>9001</ondown>
 					<control type="label" id="100">
 						<width>860</width>
-						<!--<height>45</height>-->
 						<height>35</height>
 						<font>font13caps</font>
-						<label>$LOCALIZE[31256]</label>
+						<label>Global Settings</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -180,37 +178,23 @@
 					</control>
 					<control type="radiobutton" id="104">
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31032]</label>
+						<label>Disable Global Clock</label>
 						<onclick>Skin.ToggleSetting(NoGlobalClock)</onclick>
 						<selected>Skin.HasSetting(NoGlobalClock)</selected>
 					</control>
 
 					<control type="radiobutton" id="108">
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31247]</label>
+						<label>Disable Home Clock</label>
 						<onclick>Skin.ToggleSetting(NoHomeClock)</onclick>
 						<selected>Skin.HasSetting(NoHomeClock)</selected>
 					</control>
-					<!--<control type="radiobutton" id="122">
-						<include>skin_settings_labels</include>
-						<label>Enable Dual Arrow Navigation</label>
-						<onclick>Skin.ToggleSetting(dual_arrow)</onclick>
-						<selected>Skin.HasSetting(dual_arrow)</selected>
-					</control>-->
-
 					<control type="radiobutton" id="112">
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31037]</label>
+						<label>Kiosk Mode</label>
 						<onclick>Skin.ToggleSetting(LockViews)</onclick>
 						<selected>Skin.HasSetting(LockViews)</selected>
 					</control>
-					<!--<control type="radiobutton" id="120">
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31248]</label>
-						<onclick>Skin.ToggleSetting(zune_music)</onclick>
-						<selected>Skin.HasSetting(zune_music)</selected>
-					</control>-->
-
 					<!-- Preplay -->
 					<control type="label" id="124">
 						<width>860</width>
@@ -233,14 +217,6 @@
 						<onclick>Skin.Reset(preplay_after)</onclick>
 						<selected>Skin.HasSetting(preplay_off)</selected>
 					</control>
-					<!--<control type="radiobutton" id="127">
-						<include>skin_settings_labels</include>
-						<label>Disable Before Playback</label>
-						<onclick>Skin.ToggleSetting(preplay_before)</onclick>
-						<onclick>Skin.Reset(preplay_off)</onclick>
-						<onclick>Skin.Reset(preplay_after)</onclick>
-						<selected>Skin.HasSetting(preplay_before)</selected>
-					</control>-->
 					<control type="radiobutton" id="127">
 						<include>skin_settings_labels</include>
 						<label>Disable PostPlay Screen</label>
@@ -255,6 +231,12 @@
 						<onclick>Skin.ToggleSetting(Preplay_NoSeparator)</onclick>
 						<selected>Skin.HasSetting(Preplay_NoSeparator)</selected>
 					</control>
+					<!--<control type="radiobutton" id="129">
+						<include>skin_settings_labels</include>
+						<label>Disable Clock</label>
+						<onclick>Skin.ToggleSetting(Preplay_NoClock)</onclick>
+						<selected>Skin.HasSetting(Preplay_NoClock)</selected>
+					</control>-->
 
 					<!-- Navigation Style -->
 					<control type="label" id="130">
@@ -284,7 +266,6 @@
 						<selected>Skin.HasSetting(navigation_circle)</selected>
 						<include>skin_settings_labels</include>
 					</control>
-
 					<control type="radiobutton" id="134">
 						<label>Enable Button Style #1</label>
 						<onclick>Skin.Reset(navigation_smoke)</onclick>
@@ -305,26 +286,7 @@
 						<include>skin_settings_labels</include>
 					</control>
 
-					<!-- Channel Screen -->
-					<!--<control type="label" id="152">
-						<width>860</width>
-						<height>35</height>
-						<font>font13caps</font>
-						<label>Channel Screen</label>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="image" id="154">
-						<include>settings_separator</include>
-					</control>
-					<control type="radiobutton" id="156">
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31547]</label>
-						<onclick>Skin.ToggleSetting(ChannelPageLogo)</onclick>
-						<selected>Skin.HasSetting(ChannelPageLogo)</selected>
-					</control>-->
+					<!-- Shared Content -->
 					<control type="label" id="160">
 						<width>860</width>
 						<height>35</height>
@@ -340,7 +302,7 @@
 					</control>
 					<control type="radiobutton" id="164">
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31548]</label>
+						<label>Enable Server Name</label>
 						<onclick>Skin.ToggleSetting(SharedPageId)</onclick>
 						<selected>Skin.HasSetting(SharedPageId)</selected>
 					</control>
@@ -529,7 +491,7 @@
 					<control type="radiobutton" id="202">
 						<description>Home Big Clock</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31558]</label>
+						<label>Enable Big Clock</label>
 						<onclick>Skin.ToggleSetting(home_bigclock)</onclick>
 						<selected>Skin.HasSetting(home_bigclock)</selected>
 					</control>
@@ -543,7 +505,7 @@
 					<control type="radiobutton" id="204">
 						<description>Disable Submenu Navigation Arrow</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31593]</label>
+						<label>Disable Submenu Arrow</label>
 						<onclick>Skin.ToggleSetting(HomeArrow)</onclick>
 						<selected>Skin.HasSetting(HomeArrow)</selected>
 					</control>
@@ -628,7 +590,7 @@
 					<control type="radiobutton" id="223">
 						<description>Enable 7 Menu Items</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31531]</label>
+						<label>Enable 7 Items Home</label>
 						<onclick>Skin.Reset(HomeExtendedMore)</onclick>
 						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<onclick>Skin.ToggleSetting(HomeExtended)</onclick>
@@ -637,7 +599,7 @@
 					<control type="radiobutton" id="224">
 						<description>Enable 5 Menu Items</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31532]</label>
+						<label>Enable 5 Items Home</label>
 						<onclick>Skin.Reset(HomeExtended)</onclick>
 						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<onclick>Skin.ToggleSetting(HomeExtendedMore)</onclick>
@@ -672,7 +634,7 @@
 					<control type="radiobutton" id="228">
 						<description>Aeon Home Font</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31533]</label>
+						<label>Enable Aeon Font</label>
 						<onclick>Skin.ToggleSetting(AeonHomeMenu)</onclick>
 						<selected>Skin.HasSetting(AeonHomeMenu)</selected>
 					</control>
@@ -763,7 +725,7 @@
 						<width>860</width>
 						<height>35</height>
 						<font>font13caps</font>
-						<label>$LOCALIZE[31594]</label>
+						<label>Accent Color Options</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -775,28 +737,28 @@
 					<control type="radiobutton" id="232">
 						<description>Disable Accent Home Menu</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31534]</label>
+						<label>Disable Accent Color for Home Menu</label>
 						<onclick>Skin.ToggleSetting(HomeNoAccent)</onclick>
 						<selected>Skin.HasSetting(HomeNoAccent)</selected>
 					</control>
 					<control type="radiobutton" id="233">
 						<description>Disable Accent Color for OnDeck</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31535]</label>
+						<label>Disable Accent Color for On Deck and Recently Added</label>
 						<onclick>Skin.ToggleSetting(HomeNoAccentDeck)</onclick>
 						<selected>Skin.HasSetting(HomeNoAccentDeck)</selected>
 					</control>
 					<control type="radiobutton" id="234">
 						<description>Disable Accent Color for Big Clock</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31536]</label>
+						<label>Disable Accent Color for Clock</label>
 						<onclick>Skin.ToggleSetting(NoAccentClock)</onclick>
 						<selected>Skin.HasSetting(NoAccentClock)</selected>
 					</control>
 					<control type="radiobutton" id="235">
 						<description>Disable Accent Color for Arrow</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31592]</label>
+						<label>Disable Accent Color for Navigation Arrow</label>
 						<onclick>Skin.ToggleSetting(NoAccentArrow)</onclick>
 						<selected>Skin.HasSetting(NoAccentArrow)</selected>
 					</control>
@@ -805,7 +767,7 @@
 						<width>860</width>
 						<height>35</height>
 						<font>font13caps</font>
-						<label>$LOCALIZE[31042]</label>
+						<label>Move to Submenu</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -817,7 +779,7 @@
 					<control type="radiobutton" id="238">
 						<description>Move Search Button</description>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31538]</label>
+						<label>Search</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoSearchButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoSearchButton)</selected>
 					</control>
@@ -877,30 +839,6 @@
 						<onclick>Skin.ToggleSetting(Hide_SkinSettings)</onclick>
 						<selected>Skin.HasSetting(Hide_SkinSettings)</selected>
 					</control>
-
-
-					<!--<control type="radiobutton" id="232">
-						<description>Hide Channel Store</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31111] - $LOCALIZE[31539]</label>
-						<onclick>Skin.ToggleSetting(HideAppStore)</onclick>
-						<selected>Skin.HasSetting(HideAppStore)</selected>
-					</control>
-					<control type="radiobutton" id="231">
-						<description>Hide DVD Button</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31111] - $LOCALIZE[341]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoPlayDVDButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoPlayDVDButton)</selected>
-					</control>
-					<control type="radiobutton" id="220">
-						<description>Hide Quit Button</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31111] - $LOCALIZE[31529]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoShutdownButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoShutdownButton)</selected>
-					</control>-->
-
 				</control>
 
 				<!-- Background Customizer WORK HERE -->
@@ -1127,64 +1065,41 @@
 						</control>
 						<control type="radiobutton" id="503">
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31033]</label>
+							<label>Scroll Plot</label>
 							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 							<selected>Skin.HasSetting(autoscroll)</selected>
 						</control>
 						<control type="radiobutton" id="505">
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31034]</label>
+							<label>Disable Media Flags</label>
 							<onclick>Skin.ToggleSetting(NoMediaFlags)</onclick>
 							<selected>Skin.HasSetting(NoMediaFlags)</selected>
 						</control>
 						<control type="radiobutton" id="508">
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31549]</label>
+							<label>Disable Studio Logo</label>
 							<onclick>Skin.ToggleSetting(NoStudioLogo)</onclick>
 							<selected>Skin.HasSetting(NoStudioLogo)</selected>
 						</control>
 						<control type="radiobutton" id="509">
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31550]</label>
+							<label>Disable Content Ratings</label>
 							<onclick>Skin.ToggleSetting(NoContentRating)</onclick>
 							<selected>Skin.HasSetting(NoContentRating)</selected>
 						</control>
-						<!--<control type="radiobutton" id="512">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31554]</label>
-							<onclick>Skin.ToggleSetting(no_star_rating)</onclick>
-							<selected>Skin.HasSetting(no_star_rating)</selected>
-						</control>-->
 						<control type="radiobutton" id="506">
 							<include>skin_settings_labels</include>
 							<label>Disable Scroll Letter</label>
 							<onclick>Skin.ToggleSetting(no_scroll_letter)</onclick>
 							<selected>Skin.HasSetting(no_scroll_letter)</selected>
 						</control>
-						<!--<control type="radiobutton" id="506">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31035]</label>
-							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
-							<selected>Skin.HasSetting(movieoverlays)</selected>
-						</control>
-						<control type="radiobutton" id="507">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31036]</label>
-							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
-							<selected>Skin.HasSetting(tvoverlays)</selected>
-						</control>-->
-						<!--<control type="radiobutton" id="510">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31552]</label>
-							<onclick>Skin.ToggleSetting(custom_tv_logos)</onclick>
-							<selected>Skin.HasSetting(custom_tv_logos)</selected>
-						</control>-->
+
 						<!-- Overlays -->
 						<control type="label" id="520">
 							<width>860</width>
 							<height>35</height>
 							<font>font13caps</font>
-							<label>$LOCALIZE[31580]</label>
+							<label>Overlay Options</label>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -1196,49 +1111,49 @@
 						<control type="radiobutton" id="524">
 							<description>Disable Overlays Accent Color</description>
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31581]</label>
+							<label>Disable Accent Color</label>
 							<onclick>Skin.ToggleSetting(overlay_color)</onclick>
 							<selected>Skin.HasSetting(overlay_color)</selected>
 						</control>
 						<control type="radiobutton" id="526">
 							<description>Disable Lists Overlays</description>
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31582]</label>
+							<label>Disable List Overlays</label>
 							<onclick>Skin.ToggleSetting(overlay_lists)</onclick>
 							<selected>Skin.HasSetting(overlay_lists)</selected>
 						</control>
 						<control type="radiobutton" id="528">
 							<description>Disable Movies Overlays</description>
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31583]</label>
+							<label>Disable Movie Overlays</label>
 							<onclick>Skin.ToggleSetting(overlay_movies)</onclick>
 							<selected>Skin.HasSetting(overlay_movies)</selected>
 						</control>
 						<control type="radiobutton" id="530">
 							<description>Disable TV Shows Overlays</description>
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31584]</label>
+							<label>Disable TV Show Overlays</label>
 							<onclick>Skin.ToggleSetting(overlay_tvshows)</onclick>
 							<selected>Skin.HasSetting(overlay_tvshows)</selected>
 						</control>
 						<control type="radiobutton" id="532">
 							<description>Disable TV Seasons Overlays</description>
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31585]</label>
+							<label>Disable TV Season Overlays</label>
 							<onclick>Skin.ToggleSetting(overlay_seasons)</onclick>
 							<selected>Skin.HasSetting(overlay_seasons)</selected>
 						</control>
 						<control type="radiobutton" id="534">
 							<description>Disable TV Episodes Overlays</description>
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31586]</label>
+							<label>Disable TV Episode Overlays</label>
 							<onclick>Skin.ToggleSetting(overlay_episodes)</onclick>
 							<selected>Skin.HasSetting(overlay_episodes)</selected>
 						</control>
 						<control type="radiobutton" id="536">
 							<description>Disable Overlays Count</description>
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31587]</label>
+							<label>Disable TV Unwatched Count</label>
 							<onclick>Skin.ToggleSetting(overlay_count)</onclick>
 							<selected>Skin.HasSetting(overlay_count)</selected>
 						</control>
@@ -1294,7 +1209,7 @@
 						<width>860</width>
 						<height>45</height>
 						<font>font13caps</font>
-						<label>$LOCALIZE[31546]</label>
+						<label>you can change accent colors in settings / appearance</label>
 						<textcolor>FFFFFFFF</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>

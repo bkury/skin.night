@@ -35,7 +35,7 @@
 				<include>Deck_Placeholder</include>
 				<control type="label">
 					<include>Deck_Name</include>
-					<label>On Deck</label>
+					<label>31051</label> <!-- On Deck -->
 				</control>
 				<control type="fixedlist" id="11001">
 					<ondown condition="!Skin.HasSetting(Home_Horizontal)">11000</ondown>
@@ -86,7 +86,7 @@
 				<control type="label">
 					<animation effect="slide" end="0,200" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001)">Conditional</animation>
 					<include>Deck_Name</include>
-					<label>Recently Added</label>
+					<label>31052</label> <!-- Recently Added -->
 				</control>
 				<control type="fixedlist" id="11000">
 					<onup>11001</onup>
@@ -131,7 +131,7 @@
 				<include>Deck_Placeholder</include>
 				<control type="label">
 					<include>Deck_Name</include>
-					<label>Recently Used</label>
+					<label>31053</label> <!-- Recently Used -->
 				</control>
 				<control type="fixedlist" id="11002">
 					<include>Deck_Content</include>
@@ -160,7 +160,7 @@
 				<include>Deck_Placeholder</include>
 				<control type="label">
 					<include>Deck_Name</include>
-					<label>Queue</label>
+					<label>31054</label> <!-- Queue -->
 				</control>
 				<control type="fixedlist" id="11003">
 					<include>Deck_Content</include>
@@ -183,13 +183,13 @@
 		<!-- Shared Content -->
 		<control type="group">
 			<include>Animation_CommonFade_600</include>
-			<visible>SubString(Container(300).ListItem.Label,Shared Content) + !Skin.HasSetting(Deck_NoShared)</visible>
+			<visible>SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)</visible>
 
 			<control type="group">
 				<include>Deck_Placeholder</include>
 				<control type="label">
 					<include>Deck_Name</include>
-					<label>Shared Content</label>
+					<label>44020</label><!-- Shared Content -->
 				</control>
 				<control type="fixedlist">
 					<include>Deck_Content</include>
