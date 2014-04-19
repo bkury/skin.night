@@ -990,7 +990,7 @@
 				                        <width>860</width>
 				                        <height>35</height>
 				                        <font>font13caps</font>
-				                        <label>Configuration</label>
+				                        <label>10507</label> <!-- Configuration -->
 				                        <textcolor>white</textcolor>
 				                        <shadowcolor>black</shadowcolor>
 				                        <align>left</align>
@@ -1205,15 +1205,16 @@
 					<!-- TITLE -->
 					<control type="label">
 						<posx>260</posx>
-						<posy>90</posy>
+						<posy>70</posy>
 						<width>860</width>
 						<height>45</height>
 						<font>font13caps</font>
-						<label>you can change accent colors in settings / appearance</label>
+						<label>31093</label> <!-- You can change ... -->
 						<textcolor>FFFFFFFF</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
+						<wrapmultiline>true</wrapmultiline>
 					</control>
 					<!-- First Column -->
 					<control type="grouplist">

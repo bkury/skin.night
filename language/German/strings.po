@@ -90,7 +90,7 @@ msgstr "Künstler"
 #: 
 msgctxt "#31016 (max. 20 Chars)"
 msgid "Songs"
-msgstr "Lieder"
+msgstr "Titel"
 
 #: 
 msgctxt "#31017 (max. 20 Chars)"
@@ -423,14 +423,15 @@ msgid "min"
 msgstr "min"
 
 #: 
+#, fuzzy
 msgctxt "#31083 (max. 20 Chars)"
-msgid "Please Wait ..."
-msgstr "Bitte Warten ..."
+msgid "Please Wait"
+msgstr "Bitte Warten"
 
 #: 
 msgctxt "#31084 (max. 20 Chars)"
 msgid "Buffering ..."
-msgstr "Zwischenspeichern ..."
+msgstr "Zwischenspeichern"
 
 #: 
 msgctxt "#31085 (max. 24 Chars)"
@@ -446,4 +447,29 @@ msgstr "Restlaufzeit"
 msgctxt "#31087 (max. 20 Chars)"
 msgid "Finish Time"
 msgstr "Endet um"
+
+#: 
+msgctxt "#31088 (max. 20 Chars)"
+msgid "Item"
+msgstr "Objekt"
+
+#: 
+msgctxt "#31089 (max. 20 Chars)"
+msgid "Items"
+msgstr "Objekte"
+
+#: 
+msgctxt "#31090 (max. 20 Chars)"
+msgid "Permanent Clock"
+msgstr "Permanente Uhr"
+
+#: 
+msgctxt "#31092 (max. 20 Chars)"
+msgid "Preview Image"
+msgstr "Vorschaubild"
+
+#: 
+msgctxt "#31093 (max. 50 Chars)"
+msgid "You can change accent colors in settings / appearance"
+msgstr "Sie können die Akzentfarbe unter Einstellungen / Darstellung ändern"
 

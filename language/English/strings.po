@@ -424,7 +424,7 @@ msgstr ""
 
 #: 
 msgctxt "#31083 (max. 20 Chars)"
-msgid "Please Wait ..."
+msgid "Please Wait"
 msgstr ""
 
 #: 
@@ -445,5 +445,30 @@ msgstr ""
 #: 
 msgctxt "#31087 (max. 20 Chars)"
 msgid "Finish Time"
+msgstr ""
+
+#: 
+msgctxt "#31088 (max. 20 Chars)"
+msgid "Item"
+msgstr ""
+
+#: 
+msgctxt "#31089 (max. 20 Chars)"
+msgid "Items"
+msgstr ""
+
+#: 
+msgctxt "#31090 (max. 20 Chars)"
+msgid "Permanent Clock"
+msgstr ""
+
+#: 
+msgctxt "#31092 (max. 20 Chars)"
+msgid "Preview Image"
+msgstr ""
+
+#: 
+msgctxt "#31093 (max. 50 Chars)"
+msgid "You can change accent colors in settings / appearance"
 msgstr ""
 

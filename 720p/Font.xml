@@ -95,7 +95,7 @@
 			<size>180</size>
 			<linespacing>1</linespacing>
 		</font>
-		<!-- WORK HERE -->
+
 		<font>
 			<name>Font_Bartowski_OSD</name>
 			<filename>alaska_thin.ttf</filename>
@@ -106,6 +106,12 @@
 			<name>Font_Bartowski_OSD2</name>
 			<filename>alaska_thin.ttf</filename>
 			<size>180</size>
+			<linespacing>1</linespacing>
+		</font>
+		<font>
+			<name>Font_Bartowski_OSD_Small</name>
+			<filename>alaska_thin.ttf</filename>
+			<size>100</size>
 			<linespacing>1</linespacing>
 		</font>
 		<font><!--was 34-->

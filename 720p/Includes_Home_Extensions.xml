@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Wed Feb 26 07:33:39 CET 2014 -->
+<!-- Sat Apr 19 17:18:30 CEST 2014 -->
 <includes>
 
 <!-- Home Menu Extension -->
@@ -689,21 +689,21 @@
 		</control>
 		<control type="radiobutton" id="12">
 			<include>skin_settings_labels</include>
-			<label>Enable</label>
+			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_20_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_20_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="13">
 			<include>skin_settings_labels</include>
-			<label>Rename</label>
+			<label>118</label>
 			<onclick>Skin.SetString(Home_20_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
                         <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_20_Name))</visible>
 		</control>
 		<control type="radiobutton" id="14">
 			<include>skin_settings_labels</include>
-			<label>Rename [$INFO[Skin.String(Home_20_Name)]]</label>
+			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_20_Name)]]</label>
 			<onclick>Skin.Reset(Home_20_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
                         <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_20_Name))</visible>
@@ -758,21 +758,21 @@
 		</control>
 		<control type="radiobutton" id="21">
 			<include>skin_settings_labels</include>
-			<label>Enable</label>
+			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_21_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_21_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="22">
 			<include>skin_settings_labels</include>
-			<label>Rename</label>
+			<label>118</label>
 			<onclick>Skin.SetString(Home_21_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
                         <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_21_Name))</visible>
 		</control>
 		<control type="radiobutton" id="23">
 			<include>skin_settings_labels</include>
-			<label>Rename [$INFO[Skin.String(Home_21_Name)]]</label>
+			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_21_Name)]]</label>
 			<onclick>Skin.Reset(Home_21_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
                         <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_21_Name))</visible>
@@ -843,21 +843,21 @@
 		</control>
 		<control type="radiobutton" id="32">
 			<include>skin_settings_labels</include>
-			<label>Enable</label>
+			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_22_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_22_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="33">
 			<include>skin_settings_labels</include>
-			<label>Rename</label>
+			<label>118</label>
 			<onclick>Skin.SetString(Home_22_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
                         <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_22_Name))</visible>
 		</control>
 		<control type="radiobutton" id="34">
 			<include>skin_settings_labels</include>
-			<label>Rename [$INFO[Skin.String(Home_22_Name)]]</label>
+			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_22_Name)]]</label>
 			<onclick>Skin.Reset(Home_22_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
                         <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_22_Name))</visible>
@@ -920,21 +920,21 @@
 		</control>
 		<control type="radiobutton" id="42">
 			<include>skin_settings_labels</include>
-			<label>Enable</label>
+			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_23_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_23_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="43">
 			<include>skin_settings_labels</include>
-			<label>Rename</label>
+			<label>118</label>
 			<onclick>Skin.SetString(Home_23_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
                         <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_23_Name))</visible>
 		</control>
 		<control type="radiobutton" id="44">
 			<include>skin_settings_labels</include>
-			<label>Rename [$INFO[Skin.String(Home_23_Name)]]</label>
+			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_23_Name)]]</label>
 			<onclick>Skin.Reset(Home_23_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
                         <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_23_Name))</visible>
@@ -973,21 +973,21 @@
 		</control>
 		<control type="radiobutton" id="49">
 			<include>skin_settings_labels</include>
-			<label>Enable</label>
+			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_24_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_24_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="50">
 			<include>skin_settings_labels</include>
-			<label>Rename</label>
+			<label>118</label>
 			<onclick>Skin.SetString(Home_24_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
                         <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_24_Name))</visible>
 		</control>
 		<control type="radiobutton" id="51">
 			<include>skin_settings_labels</include>
-			<label>Rename [$INFO[Skin.String(Home_24_Name)]]</label>
+			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_24_Name)]]</label>
 			<onclick>Skin.Reset(Home_24_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
                         <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_24_Name))</visible>
@@ -1042,21 +1042,21 @@
 		</control>
 		<control type="radiobutton" id="58">
 			<include>skin_settings_labels</include>
-			<label>Enable</label>
+			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_25_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_25_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="59">
 			<include>skin_settings_labels</include>
-			<label>Rename</label>
+			<label>118</label>
 			<onclick>Skin.SetString(Home_25_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
                         <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_25_Name))</visible>
 		</control>
 		<control type="radiobutton" id="60">
 			<include>skin_settings_labels</include>
-			<label>Rename [$INFO[Skin.String(Home_25_Name)]]</label>
+			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_25_Name)]]</label>
 			<onclick>Skin.Reset(Home_25_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
                         <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_25_Name))</visible>

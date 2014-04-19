@@ -341,7 +341,7 @@
 			<control type="radiobutton" id="411">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
-				<label>Permanent Clock</label>
+				<label>31090</label> <!-- Permanent Clock -->
 				<onclick>Skin.ToggleSetting(OSD_Clock)</onclick>
 				<selected>Skin.HasSetting(OSD_Clock)</selected>
 				<include>radiobutton_circle</include>
@@ -349,7 +349,7 @@
 			<control type="radiobutton" id="412">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
-				<label>Show Plot</label>
+				<label>31049</label> <!-- Show Plot -->
 				<onclick>Skin.ToggleSetting(OSD_Plot)</onclick>
 				<selected>!Skin.HasSetting(OSD_Plot)</selected>
 				<include>radiobutton_circle</include>
@@ -357,7 +357,7 @@
 			<control type="radiobutton" id="413">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
-				<label>Preview Image</label>
+				<label>31092</label> <!-- Preview Image -->
 				<onclick>Skin.ToggleSetting(OSD_Cover)</onclick>
 				<selected>!Skin.HasSetting(OSD_Cover)</selected>
 				<include>radiobutton_circle</include>
@@ -365,24 +365,33 @@
 			<control type="radiobutton" id="414">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
-				<label>VideoPlayer OSD</label>
+				<label>OSD ($LOCALIZE[112], ...)</label> <!-- OSD (Paused) -->
 				<onclick>Skin.ToggleSetting(OSD_Label)</onclick>
 				<selected>!Skin.HasSetting(OSD_Label)</selected>
 				<include>radiobutton_circle</include>
 			</control>
-			<control type="radiobutton" id="415">
-				<textoffsetx>10</textoffsetx>
+			<control type="radiobutton" id="416">
 				<width>280</width>
-				<label>VideoPlayer Animation</label>
+				<label>31071</label> <!-- Animation -->
 				<onclick>Skin.ToggleSetting(osd_flash)</onclick>
 				<selected>!Skin.HasSetting(osd_flash)</selected>
+				<textoffsetx>30</textoffsetx>
 				<include>radiobutton_circle</include>
 				<visible>!Skin.HasSetting(OSD_Label)</visible>
 			</control>
-			<control type="radiobutton" id="416">
+			<control type="radiobutton" id="415">
+				<width>280</width>
+				<label>31086</label> <!-- Time -->
+				<onclick>Skin.ToggleSetting(OSD_Big_Time)</onclick>
+				<selected>Skin.HasSetting(OSD_Big_Time)</selected>
+				<textoffsetx>30</textoffsetx>
+				<include>radiobutton_circle</include>
+				<visible>!Skin.HasSetting(OSD_Label)</visible>
+			</control>
+			<control type="radiobutton" id="417">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
-				<label>Opacity</label>
+				<label>31073</label> <!-- Opacity -->
 				<include>radiobutton_circle</include>
 				<onclick>Skin.SetString(selector1,OSD)</onclick>
 				<onclick>Skin.SetString(selector2,Opacity)</onclick>
@@ -390,10 +399,10 @@
 				<selected>!IsEmpty(Skin.String(OSD_Opacity))</selected>
 				<visible>IsEmpty(Skin.String(OSD_Opacity))</visible>
 			</control>
-			<control type="radiobutton" id="417">
+			<control type="radiobutton" id="418">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
-				<label>Opacity ($INFO[Skin.String(OSD_Opacity)]%)</label>
+				<label>$LOCALIZE[31073] ($INFO[Skin.String(OSD_Opacity)]%)</label> <!-- Opacity -->
 				<include>radiobutton_circle</include>
 				<onclick>Skin.SetString(selector1,OSD)</onclick>
 				<onclick>Skin.SetString(selector2,Opacity)</onclick>

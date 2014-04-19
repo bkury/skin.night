@@ -1034,7 +1034,9 @@
 		<value condition="Container.Content(photos)">$LOCALIZE[31018]</value>
 		<value condition="Container.Content(photoalbums)">$LOCALIZE[31019]</value>
 		<value condition="ListItem.Type(clip)">$LOCALIZE[31020]</value>
-		<value>Items</value>
+		<value condition="StringCompare(Container.NumItems,1)">$LOCALIZE[31088]</value>
+		<value condition="!StringCompare(Container.NumItems,1)">$LOCALIZE[31089]</value>
+		<value>$LOCALIZE[13205]</value> <!-- Unknown -->
 	</variable>
 
 </includes>
