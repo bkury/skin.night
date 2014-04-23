@@ -290,160 +290,220 @@ msgstr "Contenido compartido"
 #: 
 msgctxt "#31056 (max. 10 Chars)"
 msgid "Small"
-msgstr ""
+msgstr "Pequeño"
 
 #: 
 msgctxt "#31057 (max. 10 Chars)"
 msgid "Medium"
-msgstr ""
+msgstr "Mediano"
 
 #: 
 msgctxt "#31058 (max. 10 Chars)"
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 #: 
 msgctxt "#31059 (max. 10 Chars)"
 msgid "Effect"
-msgstr ""
+msgstr "Efecto"
 
 #: 
 msgctxt "#31060 (max. 20 Chars)"
 msgid "Not Available"
-msgstr ""
+msgstr "No disponible"
 
 #: 
 msgctxt "#31061 (max. 6 Chars)"
 msgid "N/A"
-msgstr ""
+msgstr "N/D"
 
 #: 
 msgctxt "#31062 (max. 10 Chars)"
 msgid "Right"
-msgstr ""
+msgstr "Derecha"
 
 #: 
 msgctxt "#31063 (max. 10 Chars)"
 msgid "Left"
-msgstr ""
+msgstr "Izquierda"
 
 #: 
 msgctxt "#31064 (max. 10 Chars)"
 msgid "Labels"
-msgstr ""
+msgstr "Etiquetas"
 
 #: 
 msgctxt "#31065 (max. 10 Chars)"
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: 
 msgctxt "#31066 (max. 10 Chars)"
 msgid "Images"
-msgstr ""
+msgstr "Imagenes"
 
 #: 
 msgctxt "#31067 (max. 10 Chars)"
 msgid "Focus"
-msgstr ""
+msgstr "Foco"
 
 #: 
 msgctxt "#31068 (max. 10 Chars)"
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: 
 msgctxt "#31069 (max. 10 Chars)"
 msgid "Design"
-msgstr ""
+msgstr "Diseño"
 
 #: 
 msgctxt "#31070 (max. 14 Chars)"
 msgid "Information"
-msgstr ""
+msgstr "Informacion"
 
 #: 
 msgctxt "#31071 (max. 14 Chars)"
 msgid "Animation"
-msgstr ""
+msgstr "Animacion"
 
 #: 
 msgctxt "#31072 (max. 16 Chars)"
 msgid "Time per Image"
-msgstr ""
+msgstr "Tiempo por imagen"
 
 #: 
 msgctxt "#31073 (max. 16 Chars)"
 msgid "Opacity"
-msgstr ""
+msgstr "Opacidad"
 
 #: 
 msgctxt "#31074 (max. 16 Chars)"
 msgid "Custom Image"
-msgstr ""
+msgstr "Imagen personalizada"
 
 #: 
 msgctxt "#31075 (max. 16 Chars)"
 msgid "Custom Slideshow"
-msgstr ""
+msgstr "Carrusel personalizado"
 
 #: 
 msgctxt "#31076 (max. 16 Chars)"
 msgid "Fadetime"
-msgstr ""
+msgstr "Tiempo de desvanecimiento"
 
 #: 
 msgctxt "#31077 (max. 16 Chars)"
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "Volver al original"
 
 #: 
 msgctxt "#31078 (max. 12 Chars)"
 msgid "Home Screen"
-msgstr ""
+msgstr "Pantalla de inicio"
 
 #: 
 msgctxt "#31079 (max. 12 Chars)"
 msgid "Accent Color"
-msgstr ""
+msgstr "Color de acentuado"
 
 #: 
 msgctxt "#31080 (max. 12 Chars)"
 msgid "Home Addons"
-msgstr ""
+msgstr "Añadidos de inicio"
 
 #: 
 msgctxt "#31081 (max. 12 Chars)"
 msgid "Navigation"
-msgstr ""
+msgstr "Navegacion"
 
 #: 
 msgctxt "#31082 (Shortcut \"Minute\" if different, max. 5 Chars)"
 msgid "min"
-msgstr ""
+msgstr "min"
 
 #: 
 msgctxt "#31083 (max. 20 Chars)"
-msgid "Please Wait ..."
-msgstr ""
+msgid "Please Wait"
+msgstr "Espere"
 
 #: 
 msgctxt "#31084 (max. 20 Chars)"
 msgid "Buffering ..."
-msgstr ""
+msgstr "Cargando..."
 
 #: 
 msgctxt "#31085 (max. 24 Chars)"
 msgid "Translucent Watched"
-msgstr ""
+msgstr "Vistos transparentes"
 
 #: 
 msgctxt "#31086 (max. 20 Chars)"
 msgid "Remaining Time"
-msgstr ""
+msgstr "Tiempo restante"
 
 #: 
 msgctxt "#31087 (max. 20 Chars)"
 msgid "Finish Time"
-msgstr ""
+msgstr "Hora de finalizacion"
+
+#: 
+msgctxt "#31088 (max. 20 Chars)"
+msgid "Item"
+msgstr "Objeto"
+
+#: 
+msgctxt "#31089 (max. 20 Chars)"
+msgid "Items"
+msgstr "Objetos"
+
+#: 
+msgctxt "#31090 (max. 20 Chars)"
+msgid "Permanent Clock"
+msgstr "Reloj permanente"
+
+#: 
+msgctxt "#31092 (max. 20 Chars)"
+msgid "Preview Image"
+msgstr "Vista previa de imagen"
+
+#: 
+msgctxt "#31093 (max. 50 Chars)"
+msgid "You can change accent colors in settings / appearance"
+msgstr "Puedes cambiar el color de acentuado en Ajustes/apariencia"
+
+#: 
+msgctxt "#31094 (max. 50 Chars)"
+msgid "Wrap List"
+msgstr "Lista envolvente"
+
+#: 
+msgctxt "#31095 (max. 50 Chars)"
+msgid "Fixed List"
+msgstr "Lista fija"
+
+#: 
+msgctxt "#31096 (max. 50 Chars)"
+msgid "Simple List"
+msgstr "Lista simple"
+
+#: 
+msgctxt "#31097 (max. 50 Chars)"
+msgid "Vertical"
+msgstr "Vertical"
+
+#: 
+msgctxt "#31098 (max. 50 Chars)"
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: 
+msgctxt "#31099 (max. 50 Chars)"
+msgid "Now Playing"
+msgstr "Reproduciendo"
+
+#: 
+msgctxt "#31100 (max. 50 Chars)"
+msgid "Current Time"
+msgstr "Tiempo actual"
 

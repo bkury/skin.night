@@ -212,6 +212,7 @@
                         <animation effect="slide" end="17" time="300" condition="Window.IsActive(4998)">conditional</animation>
                         <animation effect="fade" end="0" time="300" reversible="false">hidden</animation>
 			<visible>!Skin.HasSetting(HomeArrow) + Window.IsActive(4998)</visible>
+			<include>Animation_CommonFade</include>
 		</control>
 		<control type="image">
 			<posy>690</posy>
@@ -223,6 +224,7 @@
 			<include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
 			<colordiffuse>50b8b7b7</colordiffuse>
 			<visible>!Skin.HasSetting(HomeArrow) + !ControlGroup(5000).HasFocus</visible>
+			<include>Animation_CommonFade</include>
 		</control>
 		<control type="image">
 			<posy>690</posy>
@@ -235,6 +237,7 @@
 			<colordiffuse>50b8b7b7</colordiffuse>
 			<include>Animation_CommonFade</include>
 			<visible>Skin.HasSetting(Deck_Hide) + ![ControlGroup(5000).HasFocus | Window.IsActive(4998)]</visible>
+			<include>Animation_CommonFade</include>
 		</control>
 	</control>
 

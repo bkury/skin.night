@@ -370,7 +370,25 @@
 				<selected>!Skin.HasSetting(OSD_Label)</selected>
 				<include>radiobutton_circle</include>
 			</control>
+			<control type="radiobutton" id="415">
+				<width>280</width>
+				<label>31086</label> <!-- Remaining/Finish Time -->
+				<onclick>Skin.ToggleSetting(OSD_Big_Time)</onclick>
+				<selected>Skin.HasSetting(OSD_Big_Time)</selected>
+				<textoffsetx>30</textoffsetx>
+				<include>radiobutton_circle</include>
+				<visible>!Skin.HasSetting(OSD_Label)</visible>
+			</control>
 			<control type="radiobutton" id="416">
+				<width>280</width>
+				<label>31100</label> <!-- Current Time -->
+				<onclick>Skin.ToggleSetting(OSD_Big_Time_Current)</onclick>
+				<selected>Skin.HasSetting(OSD_Big_Time_Current)</selected>
+				<textoffsetx>30</textoffsetx>
+				<include>radiobutton_circle</include>
+				<visible>!Skin.HasSetting(OSD_Label)</visible>
+			</control>
+			<control type="radiobutton" id="417">
 				<width>280</width>
 				<label>31071</label> <!-- Animation -->
 				<onclick>Skin.ToggleSetting(osd_flash)</onclick>
@@ -379,16 +397,7 @@
 				<include>radiobutton_circle</include>
 				<visible>!Skin.HasSetting(OSD_Label)</visible>
 			</control>
-			<control type="radiobutton" id="415">
-				<width>280</width>
-				<label>31086</label> <!-- Time -->
-				<onclick>Skin.ToggleSetting(OSD_Big_Time)</onclick>
-				<selected>Skin.HasSetting(OSD_Big_Time)</selected>
-				<textoffsetx>30</textoffsetx>
-				<include>radiobutton_circle</include>
-				<visible>!Skin.HasSetting(OSD_Label)</visible>
-			</control>
-			<control type="radiobutton" id="417">
+			<control type="radiobutton" id="418">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
 				<label>31073</label> <!-- Opacity -->
@@ -399,7 +408,7 @@
 				<selected>!IsEmpty(Skin.String(OSD_Opacity))</selected>
 				<visible>IsEmpty(Skin.String(OSD_Opacity))</visible>
 			</control>
-			<control type="radiobutton" id="418">
+			<control type="radiobutton" id="419">
 				<textoffsetx>10</textoffsetx>
 				<width>280</width>
 				<label>$LOCALIZE[31073] ($INFO[Skin.String(OSD_Opacity)]%)</label> <!-- Opacity -->

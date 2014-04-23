@@ -472,3 +472,38 @@ msgctxt "#31093 (max. 50 Chars)"
 msgid "You can change accent colors in settings / appearance"
 msgstr ""
 
+#: 
+msgctxt "#31094 (max. 50 Chars)"
+msgid "Wrap List"
+msgstr ""
+
+#: 
+msgctxt "#31095 (max. 50 Chars)"
+msgid "Fixed List"
+msgstr ""
+
+#: 
+msgctxt "#31096 (max. 50 Chars)"
+msgid "Simple List"
+msgstr ""
+
+#: 
+msgctxt "#31097 (max. 50 Chars)"
+msgid "Vertical"
+msgstr ""
+
+#: 
+msgctxt "#31098 (max. 50 Chars)"
+msgid "Horizontal"
+msgstr ""
+
+#: 
+msgctxt "#31099 (max. 50 Chars)"
+msgid "Now Playing"
+msgstr ""
+
+#: 
+msgctxt "#31100 (max. 50 Chars)"
+msgid "Current Time"
+msgstr ""
+

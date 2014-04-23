@@ -210,7 +210,7 @@ msgstr "Marquer comme"
 #: 
 msgctxt "#31040 (max. 10 Chars)"
 msgid "Director"
-msgstr "Directeur"
+msgstr "Réalisateur"
 
 #: 
 msgctxt "#31041 (max. 10 Chars)"
@@ -265,7 +265,7 @@ msgstr "Total"
 #: 
 msgctxt "#31051 (max. 20 Chars)"
 msgid "On Deck"
-msgstr "Sur le Pont"
+msgstr "En Cours"
 
 #: 
 msgctxt "#31052 (max. 20 Chars)"
@@ -423,8 +423,9 @@ msgid "min"
 msgstr "min"
 
 #: 
+#, fuzzy
 msgctxt "#31083 (max. 20 Chars)"
-msgid "Please Wait ..."
+msgid "Please Wait"
 msgstr "Patientez..."
 
 #: 
@@ -446,4 +447,64 @@ msgstr "Temps Restant"
 msgctxt "#31087 (max. 20 Chars)"
 msgid "Finish Time"
 msgstr "Temps de Fin"
+
+#: 
+msgctxt "#31088 (max. 20 Chars)"
+msgid "Item"
+msgstr "Element"
+
+#: 
+msgctxt "#31089 (max. 20 Chars)"
+msgid "Items"
+msgstr "Elements"
+
+#: 
+msgctxt "#31090 (max. 20 Chars)"
+msgid "Permanent Clock"
+msgstr "Horloge Permanente"
+
+#: 
+msgctxt "#31092 (max. 20 Chars)"
+msgid "Preview Image"
+msgstr "Apperçu de l'Image"
+
+#: 
+msgctxt "#31093 (max. 50 Chars)"
+msgid "You can change accent colors in settings / appearance"
+msgstr "Vous pouvez changez les couleurs d'accentuation dans Paramètre / Apparence"
+
+#: 
+msgctxt "#31094 (max. 50 Chars)"
+msgid "Wrap List"
+msgstr "liste d'enveloppe"
+
+#: 
+msgctxt "#31095 (max. 50 Chars)"
+msgid "Fixed List"
+msgstr "Liste Fixe"
+
+#: 
+msgctxt "#31096 (max. 50 Chars)"
+msgid "Simple List"
+msgstr "Liste Simple"
+
+#: 
+msgctxt "#31097 (max. 50 Chars)"
+msgid "Vertical"
+msgstr "Vertical"
+
+#: 
+msgctxt "#31098 (max. 50 Chars)"
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: 
+msgctxt "#31099 (max. 50 Chars)"
+msgid "Now Playing"
+msgstr "Lecture En Cours"
+
+#: 
+msgctxt "#31100 (max. 50 Chars)"
+msgid "Current Time"
+msgstr "Heure Actuelle"
 

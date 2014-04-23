@@ -14,7 +14,6 @@
 
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_Objects.xml" />
-	<include file="Includes_Music_Global.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="Plexincludes.xml" />
 	<include file="Includes_Home_Extensions.xml" />

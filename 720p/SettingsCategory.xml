@@ -138,6 +138,6 @@
 			<font>-</font>
 			<visible>false</visible>
 		</control>
-		<include>viewmode_clock</include>
+		<!--<include>viewmode_clock</include>-->
 	</controls>
 </window>

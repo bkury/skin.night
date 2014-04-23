@@ -107,26 +107,21 @@
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="6">
+						<label>Deck</label> <!-- Deck -->
+						<label2>33063</label2>
+						<onclick>-</onclick>
+					</item>
 					<item id="3">
 						<label>33068</label> <!-- Background -->
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
-					<!--<item id="5">
-						<label>$LOCALIZE[20342] / $LOCALIZE[31209]</label>
-						<label2>33063</label2>
-						<onclick>-</onclick>
-					</item>-->
 					<item id="5">
 						<label>31024</label> <!-- View Mode -->
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
-					<!--<item id="6">
-						<label>31029</label>
-						<label2>33063</label2>
-						<onclick>-</onclick>
-					</item>-->
 					<item id="9">
 						<label>31079</label> <!-- Accent Color -->
 						<label2>33063</label2>
@@ -136,16 +131,31 @@
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<posx>460</posx>
+				<posx>250</posx>
 				<posy>0</posy>
-				<width>740</width>
+				<width>860</width>
 				<height>30</height>
 				<font>Font_Bartowski_MainMenu_Context</font>
-				<label>$LOCALIZE[20077] - $INFO[Container(9000).ListItem.Label]</label>
+				<label>$INFO[Container(9000).ListItem.Label][COLOR=mainblue] &#xB7; [/COLOR]$INFO[Container(9000).ListItem.Label2]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>!Player.HasAudio</visible>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>250</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>30</height>
+				<font>Font_Bartowski_MainMenu_Context</font>
+				<label>$INFO[Container(9000).ListItem.Label][COLOR=mainblue] &#xB7; [/COLOR]$INFO[Container(9000).ListItem.Label2]</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasAudio</visible>
 			</control>
 
 			<!-- General Settings -->
@@ -474,6 +484,7 @@
 					<onup>9002</onup>
 					<ondown>9002</ondown>
 					<pagecontrol>62</pagecontrol>
+
 					<!-- General Home Options -->
 					<control type="label" id="200">
 						<width>860</width>
@@ -639,87 +650,6 @@
 						<selected>Skin.HasSetting(AeonHomeMenu)</selected>
 					</control>
 
-					<!-- Deck Options -->
-					<control type="label" id="250">
-						<width>860</width>
-						<height>35</height>
-						<font>font13caps</font>
-						<label>Deck Options</label>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="image" id="251">
-						<include>settings_separator</include>
-					</control>
-					<control type="radiobutton" id="252">
-						<description>Disable Deck</description>
-						<include>skin_settings_labels</include>
-						<label>Disable Deck</label>
-						<onclick>Skin.ToggleSetting(Deck_Disable)</onclick>
-						<selected>Skin.HasSetting(Deck_Disable)</selected>
-					</control>
-					<control type="radiobutton" id="253">
-						<description>Hide Deck</description>
-						<include>skin_settings_labels</include>
-						<label>Hide Deck</label>
-						<onclick>Skin.ToggleSetting(Deck_Hide)</onclick>
-						<onclick>Skin.Reset(Deck_Short)</onclick>
-						<selected>Skin.HasSetting(Deck_Hide)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="254">
-						<description>Short Deck</description>
-						<include>skin_settings_labels</include>
-						<label>Short Deck</label>
-						<onclick>Skin.ToggleSetting(Deck_Short)</onclick>
-						<onclick>Skin.Reset(Deck_Hide)</onclick>
-						<selected>Skin.HasSetting(Deck_Short)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<!-- WORK HERE -->
-					<!--<control type="radiobutton" id="255">
-						<description>Disable On Deck</description>
-						<include>skin_settings_labels</include>
-						<label>Disable OnDeck</label>
-						<onclick>Skin.ToggleSetting(Deck_NoOnDeck)</onclick>
-						<selected>Skin.HasSetting(Deck_NoOnDeck)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="256">
-						<description>Disable Recently Added</description>
-						<include>skin_settings_labels</include>
-						<label>Disable Recently Added</label>
-						<onclick>Skin.ToggleSetting(Deck_NoRecently)</onclick>
-						<selected>Skin.HasSetting(Deck_NoRecently)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>-->
-					<control type="radiobutton" id="257">
-						<description>Disable Recently Used</description>
-						<include>skin_settings_labels</include>
-						<label>Disable Recently Used</label>
-						<onclick>Skin.ToggleSetting(Deck_NoUsed)</onclick>
-						<selected>Skin.HasSetting(Deck_NoUsed)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="258">
-						<description>Disable Shared Content</description>
-						<include>skin_settings_labels</include>
-						<label>Disable Shared Content</label>
-						<onclick>Skin.ToggleSetting(Deck_NoShared)</onclick>
-						<selected>Skin.HasSetting(Deck_NoShared)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="259">
-						<description>Disable Deck Info</description>
-						<include>skin_settings_labels</include>
-						<label>Disable Plot &amp; Mediaflags</label>
-						<onclick>Skin.ToggleSetting(deck_moreinfo)</onclick>
-						<selected>Skin.HasSetting(deck_moreinfo)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-
 					<!-- Accent Color Settings -->
 					<control type="label" id="230">
 						<width>860</width>
@@ -740,13 +670,6 @@
 						<label>Disable Accent Color for Home Menu</label>
 						<onclick>Skin.ToggleSetting(HomeNoAccent)</onclick>
 						<selected>Skin.HasSetting(HomeNoAccent)</selected>
-					</control>
-					<control type="radiobutton" id="233">
-						<description>Disable Accent Color for OnDeck</description>
-						<include>skin_settings_labels</include>
-						<label>Disable Accent Color for On Deck and Recently Added</label>
-						<onclick>Skin.ToggleSetting(HomeNoAccentDeck)</onclick>
-						<selected>Skin.HasSetting(HomeNoAccentDeck)</selected>
 					</control>
 					<control type="radiobutton" id="234">
 						<description>Disable Accent Color for Big Clock</description>
@@ -1161,7 +1084,8 @@
 					</control>
 				</control>
 
-				<control type="group"><!--mcborzu Disable Views-->
+				<!-- Deck -->
+				<control type="group">
 					<control type="grouplist" id="9006">
 						<include>Animation_CommonFade</include>
 						<visible>Container(9000).Hasfocus(6)</visible>
@@ -1175,25 +1099,137 @@
 						<onright>61</onright>
 						<onup>9006</onup>
 						<ondown>9006</ondown>
-						<control type="label" id="600">
-							<width>860</width>
-							<height>35</height>
-							<font>font13caps</font>
-							<label>Seasons</label>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-						<control type="image" id="601">
-							<include>settings_separator</include>
-						</control>
-						<control type="radiobutton" id="655">
-							<include>skin_settings_labels</include>
-							<label>"$LOCALIZE[31048]"</label>
-							<onclick>Skin.ToggleSetting(no_16x9)</onclick>
-							<selected>Skin.HasSetting(no_16x9)</selected>
-						</control>
+
+					<!-- Deck Options -->
+					<control type="label" id="600">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Deck</label> <!-- Deck -->
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="image" id="601">
+						<include>settings_separator</include>
+					</control>
+					<control type="radiobutton" id="604">
+						<description>Disable Deck</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021]</label> <!-- Disable Deck -->
+						<onclick>Skin.ToggleSetting(Deck_Disable)</onclick>
+						<selected>Skin.HasSetting(Deck_Disable)</selected>
+					</control>
+					<control type="radiobutton" id="606">
+						<description>Hide Deck</description>
+						<include>skin_settings_labels</include>
+						<label>Hide</label>
+						<onclick>Skin.ToggleSetting(Deck_Hide)</onclick>
+						<onclick>Skin.Reset(Deck_Short)</onclick>
+						<selected>Skin.HasSetting(Deck_Hide)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="608">
+						<description>Short Deck</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[31034]</label> <!-- Minimal -->
+						<onclick>Skin.ToggleSetting(Deck_Short)</onclick>
+						<onclick>Skin.Reset(Deck_Hide)</onclick>
+						<selected>Skin.HasSetting(Deck_Short)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+
+					<!-- Disable Section -->
+					<control type="label" id="610">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>33063</label> <!-- Options -->
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="image" id="612">
+						<include>settings_separator</include>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="614">
+						<description>Disable On Deck</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31051]</label> <!-- Disable On Deck -->
+						<onclick>Skin.ToggleSetting(Deck_NoOnDeck)</onclick>
+						<selected>Skin.HasSetting(Deck_NoOnDeck)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="616">
+						<description>Disable Recently Added</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31052]</label> <!-- Disable Recently Added -->
+						<onclick>Skin.ToggleSetting(Deck_NoRecently)</onclick>
+						<selected>Skin.HasSetting(Deck_NoRecently)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="618">
+						<description>Disable Recently Used</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31053]</label> <!-- Disable Recently Used -->
+						<onclick>Skin.ToggleSetting(Deck_NoUsed)</onclick>
+						<selected>Skin.HasSetting(Deck_NoUsed)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="620">
+						<description>Disable Queue</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31054]</label> <!-- Disable Queue -->
+						<onclick>Skin.ToggleSetting(Deck_NoQueue)</onclick>
+						<selected>Skin.HasSetting(Deck_NoQueue)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="622">
+						<description>Disable Shared Content</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31055]</label> <!-- Disable Shared -->
+						<onclick>Skin.ToggleSetting(Deck_NoShared)</onclick>
+						<selected>Skin.HasSetting(Deck_NoShared)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+
+
+					<!-- Deck Other -->
+					<control type="label" id="630">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>33029</label> <!-- Details -->
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="image" id="632">
+						<include>settings_separator</include>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="634">
+						<description>Disable Deck Info</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31049]</label> <!-- Disable Plot -->
+						<onclick>Skin.ToggleSetting(deck_moreinfo)</onclick>
+						<selected>Skin.HasSetting(deck_moreinfo)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="636">
+						<description>Disable Accent Color</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31079]</label> <!-- Disable Accent Color -->
+						<onclick>Skin.ToggleSetting(HomeNoAccentDeck)</onclick>
+						<selected>Skin.HasSetting(HomeNoAccentDeck)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
 
 					</control>
 				</control>

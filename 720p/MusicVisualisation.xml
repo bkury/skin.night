@@ -22,6 +22,20 @@
 			<animation effect="fade" end="50" condition="true">Conditional</animation>
 		</control>
 
+		<!-- Paused -->
+		<control type="label" id="0">
+			<posx>300</posx>
+			<posy>200</posy>
+			<width>680</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>112</label> <!-- Paused -->
+			<font>Font_Bartowski_OSD</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<visible>player.paused + !player.caching</visible>
+			<include>Animation_CommonFade_600</include>
+		</control>
+
 		<!-- Fullscreen -->
 		<control type="group">
 			<posy>630</posy>
@@ -46,13 +60,13 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>-20</posy>
-			<!--<animation effect="slide" start="0,0" end="80,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(7026))">Conditional</animation>-->
 
-		<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
-			<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
-			<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
-			<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
-		</animation>
+			<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
+				<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
+				<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
+				<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
+			</animation>
+
 			<control type="label">
 				<description>Track</description>
 				<posx>250</posx>
@@ -116,6 +130,7 @@
 				<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 			</control>
 	</control>
+
 		
 		<!-- Now Playing (Next) -->		
 		<control type="group">
@@ -202,6 +217,7 @@
 				<label>$INFO[MusicPlayer.PlaylistPosition,[B]$LOCALIZE[554]: [/B]]$INFO[MusicPlayer.PlaylistLength,/]</label>
 			</control>
 		
+
 	<control type="group">
 		<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 			<effect type="slide" start="-400,0" end="0,0" time="500" delay="0" />
@@ -290,6 +306,7 @@ Visualization Fullscreen
 				
 <!--  track current and next control -->
 <!-- localize 13350 is for NOW PLAYING string you can substitue for 143 wich is CURRENT, in this control-->
+<!--
 	<control type="group">
 	<posx>0</posx>
 	<posy>-20</posy>
@@ -361,9 +378,6 @@ Visualization Fullscreen
 				<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 			</control>
 	</control>
-		
-		
-		
 		
 		
 		<control type="group">
@@ -444,10 +458,8 @@ Visualization Fullscreen
 				<font>Font_MainMenuLabel</font>
 				<textcolor>ListTrackF</textcolor>
 				<label>[B]$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration][/B]</label>
-				<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.BitRate)">Conditional</animation>-->
 			</control>
 			
-<!--  Track # control  -->
 			<control type="label">
 				<description>Track Info</description>
 				<posx>1250</posx>
@@ -460,7 +472,6 @@ Visualization Fullscreen
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[MusicPlayer.PlaylistPosition,[B]$LOCALIZE[554]: [/B]]$INFO[MusicPlayer.PlaylistLength,/]</label>
 			</control>
-		
 	<control type="group">
 		<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 			<effect type="slide" start="-400,0" end="0,0" time="500" delay="0" />
@@ -497,6 +508,7 @@ Visualization Fullscreen
 			</control>
 		</control>
 		
+-->		
 	<control type="group">
 		<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 			<effect type="slide" start="-400,0" end="0,0" time="500" delay="21500" />
@@ -522,6 +534,7 @@ Visualization Fullscreen
 			</control>
 		</control>
 	</control>
+
 
 
 </controls>

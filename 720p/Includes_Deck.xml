@@ -27,8 +27,9 @@
 
 			<control type="group">
 				<!-- Vertical Home -->
-				<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000)">Conditional</animation>
+				<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoRecently) + Control.IsVisible(11000) ]">Conditional</animation>
 				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11000)">conditional</animation>
+
 				<!-- Horizontal Home -->
 				<animation effect="slide" end="0,-300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11000)">Conditional</animation>
 
@@ -52,8 +53,8 @@
 			<control type="group">
 				<visible>Control.HasFocus(11001)</visible>
 				<include>Animation_CommonFade_Deck_400</include>
-				<animation effect="slide" end="0,-275" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
-				<animation effect="slide" end="0,175" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,-275" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoRecently) + Control.IsVisible(11000) ] + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,175" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Control.IsVisible(11000) | Skin.HasSetting(Deck_NoRecently) ] + Control.HasFocus(11001)">Conditional</animation>
 
 				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_Position</include>
 				<include>Deck_Information</include>
@@ -62,8 +63,9 @@
 			<control type="group">
 				<visible>Control.HasFocus(11001)</visible>
 				<include>Animation_CommonFade_Deck_400</include>
-				<animation effect="slide" end="0,275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
-				<animation effect="slide" end="0,-175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11000) + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,275" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoRecently) + Control.IsVisible(11000) ] + Control.HasFocus(11001)">Conditional</animation>
+				<animation effect="slide" end="0,-175" time="400" delay="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Control.IsVisible(11000) | Skin.HasSetting(Deck_NoRecently) ] + Control.HasFocus(11001)">Conditional</animation>
+
 				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_More_Position</include>
 				<include>Deck_Information_More</include>
 			</control>
@@ -76,8 +78,9 @@
 				
 			<control type="group">
 				<!-- Vertical Home -->
-				<animation effect="slide" end="0,100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001)">Conditional</animation>
+				<animation effect="slide" end="0,100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoOnDeck) + Control.IsVisible(11001) ]">Conditional</animation>
 				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11001)">conditional</animation>
+
 				<!-- Horizontal Home -->
 				<animation effect="slide" end="0,-300" condition="Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001)">Conditional</animation>
 				<animation effect="slide" end="0,300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11000) + Control.IsVisible(11001)">Conditional</animation>
@@ -103,8 +106,8 @@
 			<control type="group">
 				<visible>Control.HasFocus(11000)</visible>
 				<include>Animation_CommonFade_Deck_400</include>
-				<animation effect="slide" end="0,275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
-				<animation effect="slide" end="0,175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
+				<animation effect="slide" end="0,275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoOnDeck) + Control.IsVisible(11001) ] + Control.HasFocus(11000)">Conditional</animation>
+				<animation effect="slide" end="0,175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + [ !Control.IsVisible(11001) | Skin.HasSetting(Deck_NoOnDeck) ] + Control.HasFocus(11000)">Conditional</animation>
 
 				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_Position</include>
 				<include>Deck_Information</include>
@@ -113,8 +116,8 @@
 			<control type="group">
 				<visible>Control.HasFocus(11000) + ![Container(11000).ListItem.Type(album) | Container(11000).ListItem.Type(photo)]</visible>
 				<include>Animation_CommonFade_Deck_400</include>
-				<animation effect="slide" end="0,-275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
-				<animation effect="slide" end="0,-175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + !Control.IsVisible(11001) + Control.HasFocus(11000)">Conditional</animation>
+				<animation effect="slide" end="0,-275" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoOnDeck) + Control.IsVisible(11001) ] + Control.HasFocus(11000)">Conditional</animation>
+				<animation effect="slide" end="0,-175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + [ !Control.IsVisible(11001) | Skin.HasSetting(Deck_NoOnDeck) ] + Control.HasFocus(11000)">Conditional</animation>
 
 				<include condition="Skin.HasSetting(Home_Horizontal)">Deck_Information_More_Position</include>
 				<include>Deck_Information_More</include>
@@ -153,7 +156,7 @@
 
 		<!-- Queue -->
 		<control type="group" id="7003">
-			<visible>Control.isVisible(11003)</visible>
+			<visible>Control.isVisible(11003) + !Skin.HasSetting(Deck_NoQueue)</visible>
 			<include>Animation_CommonFade_600</include>
 
 			<control type="group">
