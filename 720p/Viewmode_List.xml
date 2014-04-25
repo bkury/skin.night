@@ -10,6 +10,7 @@
 				<texture>list/files_fanart_background.png</texture>
 				<colordiffuse>99000000</colordiffuse>
 				<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
+				<include>Animation_ZoomOutZoomIn</include>
 			</control>
 
 		</control>
@@ -22,8 +23,8 @@
 				<include>Dimensions_Fullscreen</include>
 				<texture>list/files_fanart_background.png</texture>
 				<colordiffuse>99000000</colordiffuse>
+				<include>Animation_ZoomOutZoomIn</include>
 			</control>
-
 		</control>
 
 		<!-- List #3 -->
@@ -94,6 +95,14 @@
 			<focusposition>5</focusposition>
 			<movement>5</movement>
 
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+        
+			<animation effect="zoom" end="85" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-60" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+
 			<include>Viewmode_List1_General</include>
 			<include>Viewmode_List1_Itemlayout</include>
 
@@ -112,6 +121,14 @@
 			<focusposition>8</focusposition>
 			<movement>8</movement>
 
+			<animation effect="zoom" end="104" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+        
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="4" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+
 			<include>Viewmode_List2_General_NoSidebar</include>
 			<include>Viewmode_List2_Itemlayout</include>
 		</control>		
@@ -129,6 +146,14 @@
 			<focusposition>1</focusposition>
 			<movement>1</movement>
 			<animation effect="slide" end="135" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
+
+			<animation effect="zoom" end="104" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-8" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
+			<animation effect="slide" end="0,10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
+        
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="4" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
+			<animation effect="slide" end="0,-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
 
 			<include>Viewmode_List2_General_NoSidebar</include>
 			<include>Viewmode_List3_Itemlayout</include>

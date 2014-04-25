@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Sat Apr 19 01:20:09 CEST 2014 -->
+<!-- Fri Apr 25 04:34:03 CEST 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -16925,27 +16925,18 @@
 <include name="Viewmode_Layout_Banner_Small">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Frame -->
-		<control type="image">
-			<posx>14</posx>
-			<posy>24</posy>
-			<width>182</width>
-			<height>32</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
-		</control>
 		<!-- Banner -->
 		<control type="image">
 			<posx>15</posx>
 			<posy>25</posy>
 			<width>180</width>
 			<height>30</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Banner]</texture>
+			<texture>$INFO[ListItem.Banner]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
 		</control>
 		<!-- Label -->
@@ -16962,7 +16953,6 @@
 			<font>Viewmode_Banner_Small</font>
 			<visible>!Container.Content(tvshows)</visible>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>15</posx>
@@ -16982,27 +16972,18 @@
 <include name="Viewmode_Layout_Banner_Medium">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Frame -->
-		<control type="image">
-			<posx>19</posx>
-			<posy>30</posy>
-			<width>242</width>
-			<height>46</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
-		</control>
 		<!-- Banner -->
 		<control type="image">
 			<posx>20</posx>
 			<posy>31</posy>
 			<width>240</width>
 			<height>44</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Banner]</texture>
+			<texture>$INFO[ListItem.Banner]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
 		</control>
 		<!-- Label -->
@@ -17019,7 +17000,6 @@
 			<font>Viewmode_Banner_Medium</font>
 			<visible>!Container.Content(tvshows)</visible>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>20</posx>
@@ -17039,27 +17019,18 @@
 <include name="Viewmode_Layout_Banner_Large">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Frame -->
-		<control type="image">
-			<posx>24</posx>
-			<posy>44</posy>
-			<width>372</width>
-			<height>72</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
-		</control>
 		<!-- Banner -->
 		<control type="image">
 			<posx>25</posx>
 			<posy>45</posy>
 			<width>370</width>
 			<height>70</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Banner]</texture>
+			<texture>$INFO[ListItem.Banner]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
 		</control>
 		<!-- Label -->
@@ -17076,7 +17047,6 @@
 			<font>Viewmode_Banner_Large</font>
 			<visible>!Container.Content(tvshows)</visible>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>25</posx>
@@ -17096,17 +17066,6 @@
 <include name="Viewmode_Layout_Clearart_Small">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Frame -->
-		<!--<control type="image">
-			<posx>34</posx>
-			<posy>11</posy>
-			<width>142</width>
-			<height>57</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>-->
-
 		<!-- Clearart -->
 		<control type="image">
 			<posx>35</posx>
@@ -17117,7 +17076,6 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
-
 		<!-- Label -->
 		<control type="label">
 			<posx>105</posx>
@@ -17131,7 +17089,6 @@
 			<visible>!Container.Content(tvshows)</visible>
 			<wrapmultiline>true</wrapmultiline>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>35</posx>
@@ -17146,22 +17103,12 @@
 			<include>Viewmode_Visible_Mirror</include>
 		</control>
 	</control>
+
 </include>
 <!-- Layout Clearart (Medium) -->
 <include name="Viewmode_Layout_Clearart_Medium">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Frame -->
-		<!--<control type="image">
-			<posx>44</posx>
-			<posy>14</posy>
-			<width>192</width>
-			<height>78</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>-->
-
 		<!-- Clearart -->
 		<control type="image">
 			<posx>45</posx>
@@ -17172,7 +17119,6 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
-
 		<!-- Label -->
 		<control type="label">
 			<posx>140</posx>
@@ -17186,7 +17132,6 @@
 			<visible>!Container.Content(tvshows)</visible>
 			<wrapmultiline>true</wrapmultiline>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>45</posx>
@@ -17201,22 +17146,12 @@
 			<include>Viewmode_Visible_Mirror</include>
 		</control>
 	</control>
+
 </include>
 <!-- Layout Clearart (Large) -->
 <include name="Viewmode_Layout_Clearart_Large">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Frame -->
-		<!--<control type="image">
-			<posx>54</posx>
-			<posy>16</posy>
-			<width>312</width>
-			<height>127</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>-->
-
 		<!-- Clearart -->
 		<control type="image">
 			<posx>55</posx>
@@ -17227,7 +17162,6 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
-
 		<!-- Label -->
 		<control type="label">
 			<posx>210</posx>
@@ -17241,7 +17175,6 @@
 			<visible>!Container.Content(tvshows)</visible>
 			<wrapmultiline>true</wrapmultiline>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>55</posx>
@@ -17256,6 +17189,7 @@
 			<include>Viewmode_Visible_Mirror</include>
 		</control>
 	</control>
+
 </include>
 <!-- Poster1 -->
 <include name="Viewmode_Poster1_Itemlayout">
@@ -20839,25 +20773,17 @@
 	<control type="group">
 		<include>Viewmode_Visible_Cover</include>
 		<control type="image">
-			<posx>9</posx>
-			<posy>9</posy>
-			<width>102</width>
-			<height>142</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>10</posx>
 			<posy>10</posy>
 			<width>100</width>
 			<height>140</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 			<align>center</align>
 			<aligny>center</aligny>
+			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>10</posx>
@@ -20877,21 +20803,12 @@
 	<control type="group">
 		<include>Viewmode_Visible_Square</include>
 		<control type="image">
-			<posx>9</posx>
-			<posy>4</posy>
-			<width>102</width>
-			<height>152</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>10</posx>
 			<posy>5</posy>
 			<width>100</width>
 			<height>150</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -20899,10 +20816,11 @@
 			<posy>5</posy>
 			<width>100</width>
 			<height>100</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<texture>$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>10</posx>
@@ -20922,21 +20840,12 @@
 	<control type="group">
 		<include>Viewmode_Visible_Thumb</include>
 		<control type="image">
-			<posx>9</posx>
-			<posy>19</posy>
-			<width>102</width>
-			<height>122</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>10</posx>
 			<posy>20</posy>
 			<width>100</width>
 			<height>120</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -20944,8 +20853,10 @@
 			<posy>20</posy>
 			<width>100</width>
 			<height>70</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<texture>$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 		</control>
 
 		<!-- Reflection -->
@@ -20983,7 +20894,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>false</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
@@ -20995,11 +20906,11 @@
 			<posx>60</posx>
 			<posy>105</posy>
 			<width>100</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
@@ -21011,11 +20922,11 @@
 			<posx>60</posx>
 			<posy>90</posy>
 			<width>100</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
@@ -21026,11 +20937,11 @@
  			<posx>60</posx>
 			<posy>90</posy>
 			<width>100</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <!--<wrapmultiline>false</wrapmultiline>-->
 		        <wrapmultiline>true</wrapmultiline>
@@ -21045,25 +20956,17 @@
 	<control type="group">
 		<include>Viewmode_Visible_Cover</include>
 		<control type="image">
-			<posx>19</posx>
-			<posy>19</posy>
-			<width>122</width>
-			<height>172</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>20</posx>
 			<posy>20</posy>
 			<width>120</width>
 			<height>170</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 			<align>center</align>
 			<aligny>center</aligny>
+			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>20</posx>
@@ -21083,21 +20986,12 @@
 	<control type="group">
 		<include>Viewmode_Visible_Square</include>
 		<control type="image">
-			<posx>19</posx>
-			<posy>19</posy>
-			<width>122</width>
-			<height>172</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>20</posx>
 			<posy>20</posy>
 			<width>120</width>
 			<height>170</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -21105,10 +20999,11 @@
 			<posy>20</posy>
 			<width>120</width>
 			<height>120</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<texture>$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>20</posx>
@@ -21128,21 +21023,12 @@
 	<control type="group">
 		<include>Viewmode_Visible_Thumb</include>
 		<control type="image">
-			<posx>19</posx>
-			<posy>36</posy>
-			<width>122</width>
-			<height>137</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>20</posx>
 			<posy>37</posy>
 			<width>120</width>
 			<height>135</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -21150,8 +21036,10 @@
 			<posy>37</posy>
 			<width>120</width>
 			<height>85</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<texture>$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 		</control>
 
 		<!-- Reflection -->
@@ -21189,7 +21077,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>false</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
@@ -21201,11 +21089,11 @@
 			<posx>80</posx>
 			<posy>140</posy>
 			<width>120</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
@@ -21217,11 +21105,11 @@
 			<posx>80</posx>
 			<posy>122</posy>
 			<width>120</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
@@ -21232,11 +21120,11 @@
  			<posx>80</posx>
 			<posy>122</posy>
 			<width>120</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <!--<wrapmultiline>false</wrapmultiline>-->
 		        <wrapmultiline>true</wrapmultiline>
@@ -21251,25 +21139,17 @@
 	<control type="group">
 		<include>Viewmode_Visible_Cover</include>
 		<control type="image">
-			<posx>39</posx>
-			<posy>39</posy>
-			<width>162</width>
-			<height>232</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>40</posx>
 			<posy>40</posy>
 			<width>160</width>
 			<height>230</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 			<align>center</align>
 			<aligny>center</aligny>
+			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>40</posx>
@@ -21289,21 +21169,12 @@
 	<control type="group">
 		<include>Viewmode_Visible_Square</include>
 		<control type="image">
-			<posx>39</posx>
-			<posy>49</posy>
-			<width>162</width>
-			<height>212</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>40</posx>
 			<posy>50</posy>
 			<width>160</width>
 			<height>210</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -21311,10 +21182,11 @@
 			<posy>50</posy>
 			<width>160</width>
 			<height>160</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<texture>$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 		</control>
-
 		<!-- Reflection -->
 		<control type="image">
 			<posx>40</posx>
@@ -21334,21 +21206,12 @@
 	<control type="group">
 		<include>Viewmode_Visible_Thumb</include>
 		<control type="image">
-			<posx>39</posx>
-			<posy>71</posy>
-			<width>162</width>
-			<height>167</height>
-			<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-			<texture background="true">frameOrange.png</texture>
-			<colordiffuse>77AAAAAA</colordiffuse>
-		</control>
-		<control type="image">
 			<posx>40</posx>
 			<posy>72</posy>
 			<width>160</width>
 			<height>165</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -21356,8 +21219,10 @@
 			<posy>72</posy>
 			<width>160</width>
 			<height>115</height>
-			<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+			<texture>$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
 		</control>
 
 		<!-- Reflection -->
@@ -21395,7 +21260,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>false</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
@@ -21407,11 +21272,11 @@
 			<posx>120</posx>
 			<posy>210</posy>
 			<width>160</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Label]</label>
@@ -21423,11 +21288,11 @@
 			<posx>120</posx>
 			<posy>187</posy>
 			<width>160</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <wrapmultiline>true</wrapmultiline>
 			<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
@@ -21438,11 +21303,11 @@
  			<posx>120</posx>
 			<posy>187</posy>
 			<width>160</width>
-			<height>45</height>
+			<height>48</height>
 			<align>center</align>
 			<aligny>center</aligny>
 		        <scroll>false</scroll>
-		        <font>Default</font>
+		        <font>SearchResultSmaller</font>
 		        <textcolor>FFDDDDDD</textcolor>
 		        <!--<wrapmultiline>false</wrapmultiline>-->
 		        <wrapmultiline>true</wrapmultiline>
@@ -21459,13 +21324,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Banner1 (General) -->
@@ -21475,13 +21340,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Banner2 (General) -->
@@ -21492,13 +21357,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Banner2 (General) -->
@@ -21508,13 +21373,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Banner3 (General) -->
@@ -21525,13 +21390,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Banner3 (General) -->
@@ -21541,13 +21406,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- List1 (General) -->
@@ -21558,13 +21423,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- List1 (General) -->
@@ -21574,13 +21439,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- List2 (General) -->
@@ -21591,13 +21456,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- List2 (General) -->
@@ -21607,13 +21472,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- List3 (General) -->
@@ -21624,13 +21489,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- List3 (General) -->
@@ -21640,13 +21505,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Poster1 (General) -->
@@ -21657,13 +21522,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Poster1 (General) -->
@@ -21673,13 +21538,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Poster2 (General) -->
@@ -21690,13 +21555,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Poster2 (General) -->
@@ -21706,13 +21571,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Poster3 (General) -->
@@ -21723,13 +21588,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Poster3 (General) -->
@@ -21739,13 +21604,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Panel1 (General) -->
@@ -21756,13 +21621,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Panel1 (General) -->
@@ -21772,13 +21637,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Panel2 (General) -->
@@ -21789,13 +21654,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Panel2 (General) -->
@@ -21805,13 +21670,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Panel3 (General) -->
@@ -21822,13 +21687,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Panel3 (General) -->
@@ -21838,13 +21703,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Channel2 (General) -->
@@ -21855,13 +21720,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Channel2 (General) -->
@@ -21871,13 +21736,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel2_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Channel3 (General) -->
@@ -21888,13 +21753,13 @@
                         
 	<animation effect="slide" end="-420,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_Sidebar_Right)">Conditional</animation>
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>-->
 
 </include>
 <!-- Channel3 (General) -->
@@ -21904,13 +21769,13 @@
 	<include>Animation_ZoomOutZoomIn</include>
                         
 
-	<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
+	<!--<animation effect="zoom" end="115" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
 	<animation effect="rotatey" end="-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
 	<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_1)">Conditional</animation>
 
 	<animation effect="zoom" end="75" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
 	<animation effect="rotatey" end="10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
-	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>
+	<animation effect="slide" end="-100" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Channel3_3D_2)">Conditional</animation>-->
 
 </include>
 <include name="Viewmode_Image_Small">

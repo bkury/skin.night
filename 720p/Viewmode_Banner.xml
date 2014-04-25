@@ -16,6 +16,14 @@
 			<!-- Position Size -->
 			<!--<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Images_Large)">Conditional</animation>-->
+    
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_1)">Conditional</animation>
+
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_3D_2)">Conditional</animation>
 
                         <include>Viewmode_Banner1_General</include>
 			<include>Viewmode_Banner1_Itemlayout</include>
@@ -34,6 +42,14 @@
 
 			<animation effect="slide" end="60,0" time="0" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
 			<animation effect="slide" end="60,0" time="0" condition="!Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
+
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
+
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_2)">Conditional</animation>
 
                         <include>Viewmode_Banner2_General_NoSidebar</include>
 			<include>Viewmode_Banner2_Itemlayout</include>
@@ -54,6 +70,14 @@
 			<!-- Position Size -->
 			<animation effect="slide" end="15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Large)">Conditional</animation>
+
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+			<animation effect="slide" end="20" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
+
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-60" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_2)">Conditional</animation>
 
                         <include>Viewmode_Banner3_General_NoSidebar</include>
 			<include>Viewmode_Banner3_Itemlayout</include>

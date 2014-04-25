@@ -1,5 +1,24 @@
 <includes>
 
+<include name="Viewmode_Visible_Cover">
+	<visible>Container.Content(movies) | Container.Content(homemovies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
+</include>
+
+<include name="Viewmode_Visible_Thumb">
+	<visible>Container.Content(episodes) | Container.Content(clips) | Container.Content(clip) | ListItem.Type(clip) | ListItem.Type(clips)</visible>
+</include>
+
+<include name="Viewmode_Visible_Square">
+	<visible>Container.Content(channel) + !ListItem.Type(clip) | Container.Content(channels) + !ListItem.Type(clip) | Container.Content(photoAlbums) | Container.Content(photos) | Container.Content(albums) | Container.Content(Songs) | Container.Content(Artists) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)</visible>
+</include>
+
+<include name="Viewmode_Visible_Mirror">
+	<visible>[ StringCompare(Container.Viewmode,Poster #1) + Skin.HasSetting(Poster1_Images_Mirror) ] | 
+		 [ StringCompare(Container.Viewmode,Poster #2) + Skin.HasSetting(Poster2_Images_Mirror) ] |
+		 [ StringCompare(Container.Viewmode,Poster #3) + Skin.HasSetting(Poster3_Images_Mirror) ]
+	</visible>
+</include>
+
 <!-- Sidebar -->
 <include name="Viewmode_Infocard">
 
@@ -211,10 +230,6 @@
 		</control>
 	</control>
 
-
-
-
-
 	<!-- Viewmode Panel#3 (320/Deck) -->
 	<control type="group">
 		<visible>Control.isVisible(320)</visible>
@@ -318,15 +333,12 @@
 		
 	</control>
 
-
-
-
 </include>
 
 <!-- Sidebar Header -->
 <include name="Viewmode_Sidebar_Header">
 		<control type="group">
-			<include>Viewmode_Infocard_Background</include>
+			<!--<include>Viewmode_Infocard_Background</include>-->
 
 			<!-- Header  -->
 			<control type="group">
@@ -361,7 +373,7 @@
 					<label>$INFO[Container.SecondTitle]</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
-					<visible>Container.Content(seasons) | Container.Content(albums)</visible>
+					<visible>Container.Content(seasons) | Container.Content(songs)</visible>
 				</control>
 
 				<!-- Label -->
@@ -386,7 +398,8 @@
 					<label fallback="Not Available">$INFO[ListItem.Genre]</label>
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums)</visible>
+					<!--<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums)</visible>-->
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
 
 				<!-- Season/Episode -->
@@ -592,6 +605,55 @@
 					<visible>!isEmpty(ListItem.PictureExpMode)</visible>
 				</control>
 
+				<!-- Total (Arist) -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>168</posy>
+					<width>90</width>
+					<label>31050</label> <!-- Total -->
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>Container.Content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>168</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[Container.Total]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(artists)</visible>
+				</control>
+
+				<!-- Artist (Album) -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>168</posy>
+					<width>90</width>
+					<label>557</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>Container.Content(albums) | Container.Content(songs)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>168</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[Container.SecondTitle]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>168</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[Container.FirstTitle]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(songs)</visible>
+				</control>
+
 				<!-- 2nd Line (Writer, PictureResolution) -->
 
 				<!-- Writer -->
@@ -632,6 +694,26 @@
 					<font>Font_Bartowski_Movies_Plot</font>
 					<textcolor>FFCCCCCC</textcolor>
 					<visible>Container.Content(tvshows)</visible>
+				</control>
+
+				<!-- Genre / Album -->
+				<control type="label">
+					<posx>0</posx>
+					<posy>199</posy>
+					<width>90</width>
+					<label>515</label> <!-- Genre -->
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFAAAAAA</textcolor>
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>199</posy>
+					<width>280</width>
+					<label fallback="Not Available">$INFO[ListItem.Genre]</label>
+					<font>Font_Bartowski_Movies_Plot</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 				</control>
 
 				<!-- Channel -->
@@ -702,21 +784,14 @@
 						<visible>![Container.Content(movies) | Container.Content(homemovies)]</visible>
 						<animation effect="slide" end="95" condition="Skin.HasSetting(NoContentRating) + Skin.HasSetting(NoStudioLogo)">Conditional</animation>
 						<control type="image">
-							<posx>9</posx>
-							<posy>274</posy>
-							<width>152</width>
-							<height>222</height>
-							<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-							<texture background="true">frameOrange.png</texture>
-							<colordiffuse>77AAAAAA</colordiffuse>
-						</control>
-						<control type="image">
 							<posx>10</posx>
 							<posy>275</posy>
 							<width>150</width>
 							<height>220</height>
-							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+							<texture>$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
+							<bordertexture>confluence/button-nofocus.png</bordertexture>
+							<bordersize>1</bordersize>
 						</control>
 					</control>
 
@@ -725,21 +800,14 @@
 						<visible>Container.Content(movies) | Container.Content(homemovies)</visible>
 						<animation effect="slide" end="95" condition="Skin.HasSetting(NoContentRating) + Skin.HasSetting(NoStudioLogo)">Conditional</animation>
 						<control type="image">
-							<posx>19</posx>
-							<posy>299</posy>
-							<width>142</width>
-							<height>202</height>
-							<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-							<texture background="true">frameOrange.png</texture>
-							<colordiffuse>77AAAAAA</colordiffuse>
-						</control>
-						<control type="image">
 							<posx>20</posx>
 							<posy>300</posy>	
 							<width>140</width>
 							<height>200</height>
 							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
+							<bordertexture>confluence/button-nofocus.png</bordertexture>
+							<bordersize>1</bordersize>
 						</control>
 					</control>
 
@@ -841,8 +909,11 @@
 						<posy>300</posy>
 						<width>380</width>
 						<height>180</height>
-						<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+						<!--<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>-->
+						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture>confluence/button-nofocus.png</bordertexture>
+						<bordersize>1</bordersize>
 					</control>
 					<control type="textbox">
 						<description>Plot</description>
@@ -869,6 +940,8 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>Container.Content(artists)</visible>
+						<bordertexture>confluence/button-nofocus.png</bordertexture>
+						<bordersize>1</bordersize>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -878,6 +951,8 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(artists)</visible>
+						<bordertexture>confluence/button-nofocus.png</bordertexture>
+						<bordersize>1</bordersize>
 					</control>
 					<control type="textbox">
 						<description>Plot</description>
@@ -1221,7 +1296,6 @@
 	<animation effect="fade" start="0" end="100" time="600" condition="![Container.OnNext | Container.OnPrevious]">Conditional</animation>
 </include>
 
-
 <!-- Viewtype Option Normal/Transparent -->
 <include name="Viewmode_Layout_Image_Transparent">
 	<animation effect="fade" start="100" end="20" time="400" delay="0" condition="[ Container.Content(movies) | Container.Content(episodes) ] + StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
@@ -1232,10 +1306,37 @@
 	<animation effect="fade" start="20" end="40" time="0" delay="0" condition="[ Container.Content(tvshows) | Container.Content(seasons) ] + !IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)">Conditional</animation>
 </include>
 
-
 <!-- Viewmode List Overlay -->                                
 <include name="Viewmode_List_Overlay">
 	<animation effect="slide" end="40" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(homemovies)">Conditional</animation>
 </include>
+
+<!-- Viewmode Focus -->
+<include name="Viewmode_Focus">
+        <animation type="Focus" reversible="false">
+                <effect type="zoom" center="auto" end="120" time="300" tween="back" easing="out" loop="true" />
+        </animation>
+</include>
+
+<!-- Focusposition -->
+<include name="Viewmode_FocusPosition_0">
+	<focusposition>0</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_1">
+	<focusposition>1</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_2">
+	<focusposition>2</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_3">
+	<focusposition>3</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_4">
+	<focusposition>4</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_5">
+	<focusposition>5</focusposition>
+</include>
+
 
 </includes>

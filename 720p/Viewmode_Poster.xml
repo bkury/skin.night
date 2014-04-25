@@ -18,6 +18,14 @@
 			<animation effect="slide" end="0,40" condition="Skin.HasSetting(Poster1_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="0,-80" condition="Skin.HasSetting(Poster1_Images_Large)">Conditional</animation>
 
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
+			<animation effect="slide" end="80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_1)">Conditional</animation>
+                        
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-30,-80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster1_3D_2)">Conditional</animation>
+
 			<!-- Layout -->
                         <include>Viewmode_Poster1_General</include>
                         <include>Viewmode_Poster1_Itemlayout</include>
@@ -25,6 +33,8 @@
 
 		<!-- Poster #2 (Full/210) -->
 		<control type="fixedlist" id="210">
+			<include condition="Skin.HasSetting(Poster2_Images_Large)">Viewmode_FocusPosition_3</include>
+			<include condition="Skin.HasSetting(Poster2_Images_Small)">Viewmode_FocusPosition_5</include>
 			<focusposition>4</focusposition>
                         <posx>-80</posx>
                         <posy>460</posy>
@@ -38,6 +48,14 @@
 
 			<animation effect="slide" end="0,40" condition="Skin.HasSetting(Poster2_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="0,-80" condition="Skin.HasSetting(Poster2_Images_Large)">Conditional</animation>
+
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-8" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
+			<animation effect="slide" end="80,20" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_1)">Conditional</animation>
+                        
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="8" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-60,-40" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster2_3D_2)">Conditional</animation>
 
 			<!-- Layout -->
                         <include>Viewmode_Poster2_General_NoSidebar</include>
@@ -60,6 +78,14 @@
 
 			<animation effect="slide" end="0,20" condition="Skin.HasSetting(Poster3_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="0,-40" condition="Skin.HasSetting(Poster3_Images_Large)">Conditional</animation>
+
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-8" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
+			<animation effect="slide" end="80,20" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_1)">Conditional</animation>
+                        
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="8" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-60,-10" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Poster3_3D_2)">Conditional</animation>
 
 			<!-- Layout -->
                         <include>Viewmode_Poster3_General_NoSidebar</include>

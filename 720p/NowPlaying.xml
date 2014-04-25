@@ -335,20 +335,6 @@
 		  <aspectratio>keep</aspectratio>
 		  <visible>Player.HasAudio + Skin.HasSetting(customfanartfolder) + !Skin.HasSetting(MusicBackdropsYes)</visible>
 	</control>
-		<control type="multiimage">
-		  <posx>0</posx>
-		  <posy>-</posy>
-		  <width>1280</width>
-		  <height>720</height>
-		  <timeperimage>24000</timeperimage>
-		  <fadetime>2000</fadetime>
-		  <pauseatend>4000</pauseatend>
-		  <randomize>true</randomize>
-		  <loop>yes</loop>
-          <include>Background_VirtualImageFolder</include>
-          <info>Skin.String(CustomMusicFolder)</info>
-          <visible>Player.HasAudio + Skin.HasSetting(MusicBackdropsYes)</visible>
-	    </control>  
 
 <!-- end artist slideshow -->
 

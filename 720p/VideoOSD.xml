@@ -560,16 +560,16 @@
 				<posy>0</posy>
 				<posx>0</posx>
 				<include>navigation_arrow_up</include>
-				<animation effect="slide" end="78,0" time="200" condition="Control.HasFocus(722)">Conditional</animation>
-				<animation effect="slide" end="242,0" time="200" condition="Control.HasFocus(720)">Conditional</animation>
-				<animation effect="slide" end="414,0" time="200" condition="Control.HasFocus(721)">Conditional</animation>
-				<animation effect="slide" end="568,0" time="200" condition="Control.HasFocus(710)">Conditional</animation>
-				<animation effect="slide" end="613,0" time="200" condition="Control.HasFocus(711)">Conditional</animation>
-				<animation effect="slide" end="644,0" time="200" condition="Control.HasFocus(712)">Conditional</animation>
-				<animation effect="slide" end="695,0" time="200" condition="Control.HasFocus(713)">Conditional</animation>
-				<animation effect="slide" end="823,0" time="200" condition="Control.HasFocus(717)">Conditional</animation>
-				<animation effect="slide" end="925,0" time="200" condition="Control.HasFocus(718)">Conditional</animation>
-				<animation effect="slide" end="1023,0" time="200" condition="Control.HasFocus(719)">Conditional</animation>
+				<animation effect="slide" end="78,0" time="0" condition="Control.HasFocus(722)">Conditional</animation>
+				<animation effect="slide" end="242,0" time="0" condition="Control.HasFocus(720)">Conditional</animation>
+				<animation effect="slide" end="414,0" time="0" condition="Control.HasFocus(721)">Conditional</animation>
+				<animation effect="slide" end="568,0" time="0" condition="Control.HasFocus(710)">Conditional</animation>
+				<animation effect="slide" end="613,0" time="0" condition="Control.HasFocus(711)">Conditional</animation>
+				<animation effect="slide" end="644,0" time="0" condition="Control.HasFocus(712)">Conditional</animation>
+				<animation effect="slide" end="695,0" time="0" condition="Control.HasFocus(713)">Conditional</animation>
+				<animation effect="slide" end="823,0" time="0" condition="Control.HasFocus(717)">Conditional</animation>
+				<animation effect="slide" end="925,0" time="0" condition="Control.HasFocus(718)">Conditional</animation>
+				<animation effect="slide" end="1023,0" time="0" condition="Control.HasFocus(719)">Conditional</animation>
 				<visible>Skin.HasSetting(navigation_arrow)</visible>
 			</control>
 			<!-- Circle -->
@@ -577,16 +577,16 @@
 				<posy>0</posy>
 				<posx>0</posx>
 				<include>navigation_circle</include>
-				<animation effect="slide" end="78,0" time="200" condition="Control.HasFocus(722)">Conditional</animation>
-				<animation effect="slide" end="242,0" time="200" condition="Control.HasFocus(720)">Conditional</animation>
-				<animation effect="slide" end="414,0" time="200" condition="Control.HasFocus(721)">Conditional</animation>
-				<animation effect="slide" end="568,0" time="200" condition="Control.HasFocus(710)">Conditional</animation>
-				<animation effect="slide" end="613,0" time="200" condition="Control.HasFocus(711)">Conditional</animation>
-				<animation effect="slide" end="644,0" time="200" condition="Control.HasFocus(712)">Conditional</animation>
-				<animation effect="slide" end="695,0" time="200" condition="Control.HasFocus(713)">Conditional</animation>
-				<animation effect="slide" end="823,0" time="200" condition="Control.HasFocus(717)">Conditional</animation>
-				<animation effect="slide" end="925,0" time="200" condition="Control.HasFocus(718)">Conditional</animation>
-				<animation effect="slide" end="1023,0" time="200" condition="Control.HasFocus(719)">Conditional</animation>
+				<animation effect="slide" end="78,0" time="0" condition="Control.HasFocus(722)">Conditional</animation>
+				<animation effect="slide" end="242,0" time="0" condition="Control.HasFocus(720)">Conditional</animation>
+				<animation effect="slide" end="414,0" time="0" condition="Control.HasFocus(721)">Conditional</animation>
+				<animation effect="slide" end="568,0" time="0" condition="Control.HasFocus(710)">Conditional</animation>
+				<animation effect="slide" end="613,0" time="0" condition="Control.HasFocus(711)">Conditional</animation>
+				<animation effect="slide" end="644,0" time="0" condition="Control.HasFocus(712)">Conditional</animation>
+				<animation effect="slide" end="695,0" time="0" condition="Control.HasFocus(713)">Conditional</animation>
+				<animation effect="slide" end="823,0" time="0" condition="Control.HasFocus(717)">Conditional</animation>
+				<animation effect="slide" end="925,0" time="0" condition="Control.HasFocus(718)">Conditional</animation>
+				<animation effect="slide" end="1023,0" time="0" condition="Control.HasFocus(719)">Conditional</animation>
 				<visible>Skin.HasSetting(navigation_circle)</visible>
 			</control>
 		</control>

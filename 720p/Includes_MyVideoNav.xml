@@ -72,11 +72,11 @@
 					<posx>0</posx>
 					<posy>-26</posy>
 					<include>navigation_arrow_down</include>
-					<animation effect="slide" end="123,0" time="200" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
-					<animation effect="slide" end="379,0" time="200" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
-					<animation effect="slide" end="635,0" time="200" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
-					<animation effect="slide" end="891,0" time="200" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
-					<animation effect="slide" end="1149,0" time="200" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
+					<animation effect="slide" end="123,0" time="0" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
+					<animation effect="slide" end="379,0" time="0" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
+					<animation effect="slide" end="635,0" time="0" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
+					<animation effect="slide" end="891,0" time="0" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
+					<animation effect="slide" end="1149,0" time="0" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
 					<visible>Skin.HasSetting(navigation_arrow) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
 				</control>
 				<!-- Circle -->
@@ -84,11 +84,11 @@
 					<posy>-29</posy>
 					<posx>0</posx>
 					<include>navigation_circle</include>
-					<animation effect="slide" end="123,0" time="200" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
-					<animation effect="slide" end="379,0" time="200" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
-					<animation effect="slide" end="635,0" time="200" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
-					<animation effect="slide" end="891,0" time="200" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
-					<animation effect="slide" end="1149,0" time="200" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
+					<animation effect="slide" end="123,0" time="0" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
+					<animation effect="slide" end="379,0" time="0" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
+					<animation effect="slide" end="635,0" time="0" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
+					<animation effect="slide" end="891,0" time="0" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
+					<animation effect="slide" end="1149,0" time="0" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
 					<visible>Skin.HasSetting(navigation_circle) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
 				</control>
 

@@ -1,26 +1,5 @@
 <!-- Viewmode Panel -->
 <includes>
-
-<include name="Viewmode_Visible_Cover">
-	<visible>Container.Content(movies) | Container.Content(homemovies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
-</include>
-
-<include name="Viewmode_Visible_Thumb">
-	<visible>Container.Content(episodes) | Container.Content(clips) | Container.Content(clip) | ListItem.Type(clip) | ListItem.Type(clips)</visible>
-</include>
-
-<include name="Viewmode_Visible_Square">
-	<visible>Container.Content(channel) + !ListItem.Type(clip) | Container.Content(channels) + !ListItem.Type(clip) | Container.Content(photoAlbums) | Container.Content(photos) | Container.Content(albums) | Container.Content(Songs) | Container.Content(Artists) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)</visible>
-</include>
-
-<include name="Viewmode_Visible_Mirror">
-	<visible>[ StringCompare(Container.Viewmode,Poster #1) + Skin.HasSetting(Poster1_Images_Mirror) ] | 
-		 [ StringCompare(Container.Viewmode,Poster #2) + Skin.HasSetting(Poster2_Images_Mirror) ] |
-		 [ StringCompare(Container.Viewmode,Poster #3) + Skin.HasSetting(Poster3_Images_Mirror) ]
-	</visible>
-</include>
-
-<!-- VIEWTYPE PANEL -->
 <include name="Viewmode_Panel">
 
 		<!-- Panel #1 (300/Info) -->
@@ -38,6 +17,14 @@
 			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Large)">Conditional</animation>
 
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+
                         <include>Viewmode_Panel1_General</include>
 			<include>Viewmode_Panel1_Itemlayout</include>
 		</control>
@@ -52,6 +39,14 @@
 			<orientation>vertical</orientation>
 			<preloaditems>2</preloaditems>
 			<viewtype label="Panel #2">panel</viewtype>
+
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
 
                         <include>Viewmode_Panel2_General_NoSidebar</include>
 			<include>Viewmode_Panel2_Itemlayout</include>
@@ -74,40 +69,18 @@
 			<animation effect="slide" end="15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Large)">Conditional</animation>
 
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+
                         <include>Viewmode_Panel3_General_NoSidebar</include>
 			<include>Viewmode_Panel3_Itemlayout</include>
 		</control>
 
 </include>
-
-<include name="Viewmode_Focus">
-	<animation type="Focus" reversible="false">
-		<effect type="zoom" center="auto" end="120" time="300" tween="back" easing="out" loop="true" />
-	</animation>
-	<!--<animation type="Focus" reversible="false">
-		<effect type="rotatex" center="auto" end="360" time="2000" tween="cubic" easing="out" />
-		<effect type="rotatex" center="auto" end="360" time="2000" tween="cubic" easing="out" />
-		<effect type="rotatey" center="auto" end="360" time="2000" tween="cubic" easing="out" />
-	</animation>-->
-
-<!--	<animation type="Conditional" reversible="false" condition="true" loop="true">
-		<effect type="zoom" center="auto" start="110" end="100" time="1000" delay="2000" tween="back" easing="out" loop="true" />
-		<effect type="zoom" center="auto" start="100" end="110" time="1000" delay="3000" tween="back" easing="out" loop="true" />
-	</animation>-->
-
-</include>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </includes>

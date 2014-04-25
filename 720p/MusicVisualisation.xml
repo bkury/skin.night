@@ -134,10 +134,15 @@
 		
 		<!-- Now Playing (Next) -->		
 		<control type="group">
+
+		<animation effect="slide" end="-400,0" condition="!MusicPlayer.HasNext">Conditional</animation>
+
 		<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 			<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 			<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
 		</animation>
+
+
 			<control type="label">
 				<description>Track</description>
 				<posx>250</posx>
@@ -508,7 +513,6 @@ Visualization Fullscreen
 			</control>
 		</control>
 		
--->		
 	<control type="group">
 		<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 			<effect type="slide" start="-400,0" end="0,0" time="500" delay="21500" />
@@ -533,6 +537,11 @@ Visualization Fullscreen
 				<visible>Player.HasAudio</visible>
 			</control>
 		</control>
+
+
+
+-->		
+
 	</control>
 
 
