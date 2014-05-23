@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="10080" type="dialog">
+	<defaultcontrol always="true">10085</defaultcontrol>
+        <include>Animation_Bartowski_Context_Zoom</include>
+	<controls>
+	<control type="group">
+		<include>dialog_header</include>	
+                <include>Settings_Custom</include>
+    
+		<!-- Header -->
+		<control type="label">
+			<posx>360</posx>
+			<posy>65</posy>
+			<width>560</width>
+			<height>30</height>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<label>myPlex Log In</label>
+			<align>center</align>
+			<textcolor>white</textcolor>
+		</control>
+ 
+		<!-- Separator -->
+		<control type="image">
+			<posx>320</posx>
+			<posy>485</posy>
+			<width>640</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<align>center</align>
+		</control>
+
+		<!-- Pin Area -->
+		<control type="group">
+			<visible>Control.IsVisible(10082) + !Control.IsVisible(10083) + !Control.IsVisible(10088) + !Control.IsVisible(10089)</visible>
+			<posy>140</posy>
+			<posx>320</posx>
+			<!-- PIN Description -->
+			<control type="label" id="10081">
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>640</width>
+				<height>60</height>
+				<align>center</align>
+				<font>Font_Bartowski_Title_TVShow</font>
+				<shadowcolor>FF222222</shadowcolor>
+				<include>Animation_CommonFade_600</include>			
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<!-- PIN -->
+			<control type="label" id="10082">
+				<posx>0</posx>
+				<posy>150</posy>
+				<width>640</width>
+				<height>150</height>
+				<align>center</align>
+				<font>AeonFont_LogIn</font>
+				<shadowcolor>FF222222</shadowcolor>
+				<include>Animation_CommonFade_600</include>			
+			</control>
+		</control>
+
+		<!-- Manual Login -->
+		<control type="group">
+			<visible>Control.IsVisible(10083) + Control.IsVisible(10084)</visible>
+			<posy>140</posy>
+			<posx>320</posx>
+
+			<!-- Username -->
+			<control type="label">
+				<posy>40</posy>
+				<height>50</height>
+				<width>640</width>
+				<align>center</align>
+				<font>Font_Bartowski_Title_TVShow</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[1014]:</label>
+				<shadowcolor>FF222222</shadowcolor>
+			</control>
+			<control type="image">
+				<posx>120</posx>
+				<posy>92</posy>
+				<width>400</width>
+				<height>50</height>
+				<texture border="5">base-rounded.png</texture>
+				<colordiffuse>66000000</colordiffuse>
+			</control>
+			<control type="edit" id="10083">
+				<posx>130</posx>
+				<posy>90</posy>
+				<width>380</width>
+				<height>50</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>-</onup>
+				<ondown>10084</ondown>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_Bartowski_Title_TVShow</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+			<!-- Password -->
+			<control type="label">
+				<posy>170</posy>
+				<height>50</height>
+				<width>640</width>
+				<align>center</align>
+				<font>Font_Bartowski_Title_TVShow</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[15052]:</label>
+				<shadowcolor>FF222222</shadowcolor>
+			</control>
+			<control type="image">
+				<posx>120</posx>
+				<posy>222</posy>
+				<width>400</width>
+				<height>50</height>
+				<texture border="5">base-rounded.png</texture>
+				<colordiffuse>66000000</colordiffuse>
+			</control>
+			<control type="edit" id="10084">
+				<posx>130</posx>
+				<posy>220</posy>
+				<width>380</width>
+				<height>50</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>-</onup>
+				<onup>10083</onup>
+				<ondown>10087</ondown>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_Bartowski_Title_TVShow</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+		</control>
+
+		<!-- Buttons -->
+		<control type="group">
+			<posx>380</posx>
+			<posy>515</posy>
+			<width>640</width>
+			<height>40</height>
+                        <animation effect="slide" end="-130" condition="Control.isVisible(10087)">Conditional</animation>
+			<control type="button" id="10085">
+				<posx>0</posx>
+				<font>Font_MenuValue</font>
+				<textcolor>white</textcolor>
+				<label>AbbrechenTEST</label>
+				<focusedcolor>mainblue</focusedcolor>
+				<width>260</width>
+				<align>center</align>
+				<onleft>-</onleft>
+				<onright>10086</onright>
+				<onup>10084</onup>
+				<animation effect="slide" end="130" condition="!Control.isVisible(10086) + !Control.isVisible(10087)">Conditional</animation>
+			</control>
+			<control type="button" id="10086">
+				<posx>260</posx>
+				<font>Font_MenuValue</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>mainblue</focusedcolor>
+				<width>260</width>
+				<align>center</align>
+				<onleft>10085</onleft>
+				<onright>10087</onright>
+				<onup>10084</onup>
+			</control>
+			<control type="button" id="10087">
+				<posx>520</posx>
+				<font>Font_MenuValue</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>mainblue</focusedcolor>
+				<width>260</width>
+				<align>center</align>
+				<onleft>10086</onleft>
+				<onright>10085</onright>
+				<onup>10084</onup>
+			</control>
+                </control>
+
+		<!-- Result (Success/Failed) -->
+		<control type="group" id="10088">
+			<posx>320</posx>
+			<posy>140</posy>
+			<!-- Success -->
+			<control type="label">
+				<label>36016</label>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>640</width>
+				<height>60</height>
+				<align>center</align>
+				<font>Font_Bartowski_Title_TVShow</font>
+				<shadowcolor>FF222222</shadowcolor>
+				<include>Animation_CommonFade_600</include>			
+				<wrapmultiline>true</wrapmultiline>
+				<textcolor>lightgreen</textcolor>
+			</control>
+		</control>
+
+		<control type="group" id="10089">
+			<posx>320</posx>
+			<posy>140</posy>
+			<!-- Failed -->
+			<control type="label">
+				<label>$LOCALIZE[257]!</label>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>640</width>
+				<height>60</height>
+				<align>center</align>
+				<font>Font_Bartowski_Title_TVShow</font>
+				<textcolor>TextDisabled</textcolor>
+				<shadowcolor>FF222222</shadowcolor>
+				<include>Animation_CommonFade_600</include>			
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+		</control>
+
+	</control>
+	</controls>
+</window>

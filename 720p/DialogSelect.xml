@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="2000">
 	<defaultcontrol always="true">3</defaultcontrol>
 	<zorder>3</zorder>
@@ -31,48 +32,6 @@
 
 	<!-- Dialog Footer -->
 	<include>dialog_footer</include>
-
-			<!--<control type="label">
-				<description>number of files/pages in list text label</description>
-				<posx>580</posx>
-				<posy>592</posy>
-				<width>300</width>
-				<height>35</height>
-				<font>font13caps_title</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<textcolor>white</textcolor>
-				<label>([COLOR=white]$INFO[Container(3).ListItem(0).Label] $INFO[Container(3).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=white]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR])</label>
-			</control>
-			<control type="label">
-				<description>number of files/pages in list text label</description>
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>720</width>
-				<height>500</height>
-				<font>font13caps_title</font>
-				<align>left</align>
-				<scroll>true</scroll>
-				<textcolor>white</textcolor>
-			</control>-->
-			<!--<control type="button" id="5">
-				<description>Manual button</description>
-				<posx>20</posx>
-				<posy>590</posy>
-				<width>200</width>
-				<height>40</height>
-				<label>186</label>
-				<font>font13caps_title</font>
-				<textcolor>black</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<align>center</align>
-				<texturefocus border="5">confluence/button-focus.png</texturefocus>
-				<onleft>61</onleft>
-				<onright>3</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
-			</control>-->
 
 	</controls>
 </window>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="123">
 	<defaultcontrol>5</defaultcontrol>
 	<include>Animation_Bartowski_Context_Zoom</include>
@@ -138,10 +139,5 @@
 			<reverse>yes</reverse>
 			<include>navigation_options</include>
 		</control>
-		<!--<control type="image" id="11">
-			<description>separator image</description>
-			<height>2</height>
-			<texture>confluence/separator2.png</texture>
-		</control>-->
 	</controls>
 </window>

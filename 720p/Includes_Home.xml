@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 <!-- Homemenu -->
@@ -9,7 +10,7 @@
 
 	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Home_Wraplist</include>
 	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Home_Fixedlist</include>
-	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Home_Simplelist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Home_Simplelist</include>
 </include>
 
 <include name="Home_Navigation_Vertical">
@@ -22,7 +23,7 @@
 	<onright condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onright>
 	<onright condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onright>
 
-	<onleft>Plex.ActivateWindow(4998)</onleft>
+	<onleft>ActivateWindow(4998)</onleft>
 	<onright>5000</onright>
 	<include>Navigation_Vertical</include>
 </include>
@@ -35,13 +36,13 @@
 	<onup condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onup>
 
 	<onup>5000</onup>
-	<ondown>Plex.ActivateWindow(4998)</ondown>
+	<ondown>ActivateWindow(4998)</ondown>
 	<include>Navigation_Horizontal</include>
 </include>
 <include name="Home_Navigation_Panel">
 	<!-- Submenu Animation -->
 	<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(4998)">conditional</animation>
-	<ondown>Plex.ActivateWindow(4998)</ondown>
+	<ondown>ActivateWindow(4998)</ondown>
 	<include>Navigation_Panel</include>
 </include>
 <include name="Home_Wraplist">
@@ -73,14 +74,21 @@
 </include>
 <include name="Home_Navigation_Content">
 	<content>
-		<item id="11">
+		<item id="15">
 			<description>Search</description>
-			<label>31003</label>
+			<label>31003</label> <!-- Search -->
 			<icon>backgrounds/search.jpg</icon>
-			<onclick>Plex.ActivateWindow(10051)</onclick>
-			<visible>!Skin.HasSetting(HomeMenuNoSearchButton)</visible>
+			<onclick>ActivateWindow(10051)</onclick>
+			<visible>!Skin.HasSetting(HomeMenuNoSearchButton) + !Skin.HasSetting(XBMC)</visible>
 		</item>
-		<include>Home_Extension_Menu</include>
+		<item id="16">
+			<description>Update</description>
+			<label>[COLOR TextDisabled]$LOCALIZE[24069][/COLOR]</label> <!-- Update -->
+			<onclick>Plex.UpdateAndRestart</onclick>
+			<visible>!Skin.HasSetting(XBMC) + !Skin.HasSetting(Home_Update) + System.UpdateIsAvailable</visible>
+		</item>
+		<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Menu</include>
+		<include condition="Skin.HasSetting(XBMC)">XBMC_Home</include>
 	</content>
 </include>
 
@@ -93,7 +101,7 @@
 
 	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Submenu_Wraplist</include>
 	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Submenu_Fixedlist</include>
-	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Submenu_Simplelist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Submenu_Simplelist</include>
 </include>
 <include name="Submenu_Navigation_Vertical">
 	<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(5000).HasFocus">conditional</animation>
@@ -144,59 +152,46 @@
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>XBMC.ActivateWindow(settings)</onclick>
 		</item>
-		<item id="21">
-			<description>Skin Settings</description>
-			<label>31001</label>
-			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>XBMC.ActivateWindow(1111)</onclick>
-			<visible>!Skin.HasSetting(Hide_SkinSettings)</visible>
-		</item>
-		<item id="22">
-			<description>Update</description>
-			<label>[COLOR darkred]31002[/COLOR]</label>
-			<onclick>Plex.UpdateAndRestart</onclick>
-			<visible>System.UpdateIsAvailable</visible>
-		</item>
 		<item id="23">
 			<description>Search</description>
 			<label>31003</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>Plex.ActivateWindow(10051)</onclick>
+			<onclick>ActivateWindow(10051)</onclick>
 			<visible>Skin.HasSetting(HomeMenuNoSearchButton)</visible>
 		</item>
 		<item id="24">
 			<description>Channel Store</description>
 			<label>31004</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
-			<visible>!Skin.HasSetting(Hide_ChannelDirectory)</visible>
+			<onclick>ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
+			<visible>!Skin.HasSetting(Hide_ChannelDirectory) | !Skin.HasSetting(XBMC)</visible>
 		</item>
 		<item id="25">
 			<description>Quit</description>
 			<label>31005</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>Plex.Quit</onclick>
+			<onclick>XBMC.Quit</onclick>
 			<visible>!Skin.HasSetting(Hide_Quit)</visible>
 		</item>
 		<item id="26">
 			<description>Suspend</description>
 			<label>31006</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>Plex.Suspend</onclick>
+			<onclick>XBMC.Suspend</onclick>
 			<visible>!Skin.HasSetting(Hide_Sleep)</visible>
 		</item>
 		<item id="27">
 			<description>Reboot</description>
 			<label>31007</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>Plex.Reboot</onclick>
+			<onclick>XBMC.Reboot</onclick>
 			<visible>!Skin.HasSetting(Hide_Reboot)</visible>
 		</item>
 		<item id="28">
 			<description>Shut Down</description>
 			<label>31008</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>Plex.Powerdown</onclick>
+			<onclick>XBMC.Powerdown</onclick>
 			<visible>!Skin.HasSetting(Hide_Shutdown)</visible>
 		</item>
 	</content>
@@ -212,7 +207,7 @@
 
 	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Shared_Wraplist</include>
 	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Shared_Fixedlist</include>
-	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Shared_Simplelist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Shared_Simplelist</include>
 </include>
 <include name="Shared_Navigation_Vertical">
 	<!--<onleft>ReplaceWindow(home)</onleft>
@@ -262,7 +257,7 @@
 
 	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Channel_Wraplist</include>
 	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Channel_Fixedlist</include>
-	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel">Channel_Simplelist</include>
+	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Channel_Simplelist</include>
 </include>
 <include name="Channel_Navigation_Vertical">
 	<onright>7000</onright>
@@ -277,7 +272,6 @@
 <include name="Channel_Navigation_Panel">
 	<include>Navigation_Panel</include>
 </include>
-<!-- BKURY HERE -->
 <include name="Channel_Wraplist">
 	<control type="wraplist" id="900">
 		<viewtype label="Channel #1">list</viewtype>

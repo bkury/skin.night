@@ -1,4 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
+<include name="Viewmode_Navigation">
+	<defaultcontrol>100</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<onload>Skin.SetString(selector1,$INFO[Container.ViewMode])</onload>
+	<onunload>Skin.Reset(selector1)</onunload>
+	<onunload>Skin.Reset(selector2)</onunload>
+	<views>100,110,120,200,210,220,300,310,320,400,410,420</views>
+	<controls>
+
+   		<!-- Default Background -->
+		<control type="group">
+			<visible>isEmpty(ListItem.Property(Fanart_Image))</visible>
+			<!-- Opacity Option -->
+			<include condition="isEmpty(Skin.String(Default_Opacity))">Default_Opacity_Default</include>
+			<include condition="!isEmpty(Skin.String(Default_Opacity))">Default_Opacity</include>
+			<include>Default_Custom</include>
+		</control>
+
+		<!-- Fanart Background -->
+		<include>Background_Viewtypes</include>
+
+		<!-- Views -->
+		<control type="group">
+			<include>Viewmode_List</include>        <!-- 100/110/120 -->
+			<include>Viewmode_Poster</include>      <!-- 200/210/220 -->
+			<include>Viewmode_Panel</include>       <!-- 300/310/320 -->
+			<include>Viewmode_Banner</include>      <!-- 400/410/420 -->
+			<include>Viewmode_Infocard</include>
+		</control>
+
+		<include>viewtype_clock</include>
+		<include>viewtype_mode</include>
+		<include>viewtype_filter</include>
+		<include>viewtype_sort</include>
+		<include>viewtype_options</include>
+		<include>viewtype_navigation</include>
+		<include>viewtype_scrolling</include>
+		<!--<include>debugInfos</include>-->
+	</controls>
+</include>
 
 <include name="Viewmode_Visible_Cover">
 	<visible>Container.Content(movies) | Container.Content(homemovies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
@@ -9,7 +51,7 @@
 </include>
 
 <include name="Viewmode_Visible_Square">
-	<visible>Container.Content(channel) + !ListItem.Type(clip) | Container.Content(channels) + !ListItem.Type(clip) | Container.Content(photoAlbums) | Container.Content(photos) | Container.Content(albums) | Container.Content(Songs) | Container.Content(Artists) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)</visible>
+	<visible>Container.Content(channel) + !ListItem.Type(clip) | Container.Content(channels) + !ListItem.Type(clip) | Container.Content(photoAlbums) | Container.Content(photos) | Container.Content(albums) | Container.Content(Songs) | Container.Content(Artists) | StringCompare(Window.Property(xmlfile),MySharedContent.xml) | Container.Content(addons)</visible>
 </include>
 
 <include name="Viewmode_Visible_Mirror">
@@ -34,18 +76,18 @@
 		<!-- Background -->
 		<control type="image">
 			<posx>0</posx>
-			<posy>0</posy>
+			<posy>-10</posy>
 			<width>420</width>
-			<height>720</height>
-			<texture border="5">base-rounded.png</texture>
+			<height>740</height>
+			<texture background="true" border="5">base-rounded.png</texture>
 			<colordiffuse>99000000</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>420</posx>
-			<posy>0</posy>
+			<posy>-10</posy>
 			<width>1</width>
-			<height>720</height>
-			<texture border="0">base-rounded.png</texture>
+			<height>740</height>
+			<texture background="true" border="0">base-rounded.png</texture>
 			<colordiffuse>99444444</colordiffuse>
 			<animation effect="slide" end="-420,0" condition="Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
 		</control>
@@ -194,17 +236,17 @@
 		<!-- Background -->
 		<control type="image">
 			<posx>0</posx>
-			<posy>0</posy>
+			<posy>-10</posy>
 			<width>420</width>
-			<height>720</height>
+			<height>740</height>
 			<texture border="5">base-rounded.png</texture>
 			<colordiffuse>99000000</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>420</posx>
-			<posy>0</posy>
+			<posy>-10</posy>
 			<width>1</width>
-			<height>720</height>
+			<height>740</height>
 			<texture border="0">base-rounded.png</texture>
 			<colordiffuse>99444444</colordiffuse>
 			<animation effect="slide" end="-420,0" condition="Skin.HasSetting(Panel1_Sidebar_Right)">Conditional</animation>
@@ -270,17 +312,17 @@
 		<!-- Background -->
 		<control type="image">
 			<posx>0</posx>
-			<posy>0</posy>
+			<posy>-10</posy>
 			<width>420</width>
-			<height>720</height>
+			<height>740</height>
 			<texture border="5">base-rounded.png</texture>
 			<colordiffuse>99000000</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>420</posx>
-			<posy>0</posy>
+			<posy>-10</posy>
 			<width>1</width>
-			<height>720</height>
+			<height>740</height>
 			<texture border="0">base-rounded.png</texture>
 			<colordiffuse>99444444</colordiffuse>
 			<animation effect="slide" end="-420,0" condition="Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
@@ -439,7 +481,7 @@
 				<posy>105</posy>
 				<width>510</width>
 				<height>190</height>
-				<texture>preplay_info.png</texture>
+				<texture background="true">preplay_info.png</texture>
 			</control>
 
 			<!-- Cast (Movie only) -->
@@ -788,7 +830,7 @@
 							<posy>275</posy>
 							<width>150</width>
 							<height>220</height>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<bordertexture>confluence/button-nofocus.png</bordertexture>
 							<bordersize>1</bordersize>
@@ -910,7 +952,7 @@
 						<width>380</width>
 						<height>180</height>
 						<!--<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>-->
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<bordertexture>confluence/button-nofocus.png</bordertexture>
 						<bordersize>1</bordersize>
@@ -937,7 +979,7 @@
 						<posy>280</posy>
 						<width>380</width>
 						<height>200</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>Container.Content(artists)</visible>
 						<bordertexture>confluence/button-nofocus.png</bordertexture>
@@ -948,7 +990,7 @@
 						<posy>280</posy>
 						<width>380</width>
 						<height>200</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(artists)</visible>
 						<bordertexture>confluence/button-nofocus.png</bordertexture>
@@ -1281,6 +1323,54 @@
 <variable name="Viewmode_Label_VideoCodec">
         <value>$INFO[Listitem.Art(mediaTag::videoCodec)]</value>
 </variable>
+
+<!-- Mediaflags -->
+<include name="color_flags">
+	<!-- PLEX MEDIAFLAGS -->
+		<control type="image">
+                               <visible>!IsEmpty(Listitem.Art(mediaTag::videoResolution))</visible>
+                               <height>17</height>
+                               <width min="1" max="95">auto</width>
+                               <info>Listitem.Art(mediaTag::videoResolution)</info>
+                               <aspectratio>keep</aspectratio>
+                       </control>
+                       <control type="image">
+                               <visible>!IsEmpty(Listitem.Art(mediaTag::videoCodec))</visible>
+                               <height>17</height>
+                               <width min="1" max="95">auto</width>
+                               <info>Listitem.Art(mediaTag::videoCodec)</info>
+                               <aspectratio>keep</aspectratio>
+                       </control>
+                       <control type="image">
+                               <visible>!IsEmpty(Listitem.Art(mediaTag::audioCodec))</visible>
+                               <height>17</height>
+                               <width min="1" max="95">auto</width>
+                               <info>Listitem.Art(mediaTag::audioCodec)</info>
+                               <aspectratio>keep</aspectratio>
+                       </control>
+                       <control type="image">
+                               <visible>!IsEmpty(Listitem.Art(mediaTag::audioChannels))</visible>
+                               <height>17</height>
+                               <width min="1" max="95">auto</width>
+                               <info>Listitem.Art(mediaTag::audioChannels)</info>
+                               <aspectratio>keep</aspectratio>
+                       </control>
+                       <control type="image">
+                               <visible>!IsEmpty(Listitem.Art(mediaTag::aspectRatio))</visible>
+                               <height>17</height>
+                               <width min="1" max="95">auto</width>
+                               <info>Listitem.Art(mediaTag::aspectRatio)</info>
+                               <aspectratio>keep</aspectratio>
+                       </control>
+                       <control type="image">
+                               <visible>!IsEmpty(Listitem.Art(mediaTag::videoFrameRate))</visible>
+                               <height>17</height>
+                               <width min="1" max="95">auto</width>
+                               <info>Listitem.Art(mediaTag::videoFrameRate)</info>
+                               <aspectratio>keep</aspectratio>
+                       </control>
+</include>
+
 
 <!-- Autohide -->
 <include name="Animation_Infocard_Autohide_Left">

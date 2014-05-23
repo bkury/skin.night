@@ -1,4 +1,4 @@
-<!--Alaska-->
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
 	<onload>Skin.Reset(OSD_Hide)</onload>
 	<onunload>Skin.Reset(OSD_Hide)</onunload>
@@ -183,6 +183,7 @@
 					<onright>721</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
 					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<include condition="Skin.HasSetting(XBMC)">XBMC_Audio_Click</include>
 					<onclick>ActivateWindow(10205)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(720)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -192,6 +193,7 @@
 					<posx>-60</posx>
 					<width>146</width>
 					<height>24</height>
+					<include condition="Skin.HasSetting(XBMC)">XBMC_Audio_Label</include>
 					<label>$INFO[VideoPlayer.AudioStream]</label>
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
@@ -223,6 +225,7 @@
 					<onright>710</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
 					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<include condition="Skin.HasSetting(XBMC)">XBMC_Subtitle_Click</include>
 					<onclick>ActivateWindow(10204)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(721)</visible>
 					<colordiffuse>mainblue</colordiffuse>
@@ -232,6 +235,7 @@
 					<posx>-60</posx>
 					<width>146</width>
 					<height>24</height>
+					<include condition="Skin.HasSetting(XBMC)">XBMC_Subtitle_Label</include>
 					<label>$INFO[VideoPlayer.SubtitleStream]</label>
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
@@ -592,8 +596,14 @@
 		</control>
 	</control>
 
-	<include>OSD_Labels</include>
+	<control type="group">
+		<posy>-100</posy>
+		<visible>!Skin.HasSetting(XBMC)</visible>
+		<include>OSD_Labels</include>
+	</control>
+
 	<include>OSD_Bottom</include>
+
 </control>
 </controls>
 </window>

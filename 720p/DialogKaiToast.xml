@@ -1,47 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="107">
-	<animation type="WindowOpen">
-                        <effect type="zoom" time="600" center="640,360" start="50" end="100" tween="cubic" easing="out" />
-                        <effect type="fade" time="600" start="40" end="100" />
-	</animation>
-	<animation type="WindowClose">
-                        <effect type="zoom" time="600" center="640,360" start="100" end="50" tween="cubic" easing="in" />
-                        <effect type="fade" time="600" start="100" end="40" />
-	</animation>
 	<coordinates>
 		<system>1</system>
-		<posx>340</posx>
-		<posy>585</posy>
+		<posx>0</posx>
+		<posy>0</posy>
 	</coordinates>
+            
+	<!-- Animations -->
+	<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">Visible</animation>
+	<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">WindowOpen</animation>
+	<animation effect="zoom" start="100" center="640,620" end="20" time="600" tween="back" easing="in">Hidden</animation>
+	<animation effect="zoom" start="100" center="640,620" end="20" time="600" tween="back" easing="in">WindowClose</animation>
+
 	<controls>
 		<control type="group">
+			<posx>340</posx>
+			<posy>530</posy>
+			<!-- Background -->
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>600</width>
-				<height>140</height>
-				<texture border="20,20,20,2">panel/panel-back.png</texture>
-				<colordiffuse>CC000000</colordiffuse>
+				<height>180</height>
+				<texture>kaitoast-bg.png</texture>
+				<colordiffuse>DD666666</colordiffuse>
 			</control>
+			<!-- Separator -->
 			<control type="image">
 				<posx>25</posx>
-				<posy>70</posy>
+				<posy>111</posy>
 				<width>550</width>
 				<height>1</height>
 				<texture>base-rounded.png</texture>
 				<colordiffuse>mainblue</colordiffuse>
 			</control>
-			<!--<control type="image">
-				<posx>-110</posx>
-				<posy>-60</posy>
-				<width>800</width>
-				<height>300</height>
-				<texture>dialogs/trailer_diffuse_back.png</texture>
+			<!-- Header -->
+			<control type="label">
+				<posy>15</posy>
+				<width>600</width>
+				<height>18</height>
+				<font>Font_Time_Global</font>
 				<align>center</align>
-			</control>-->
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<label>$VAR[KaiToast_Header]</label>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>600</width>
+				<height>6</height>
+				<aligny>center</aligny>
+				<aspectratio>stretch</aspectratio>
+				<texture>confluence/separator.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+			<!-- Label 1 -->
 			<control type="label" id="401">
 				<description>Line 1 Label</description>
-				<posx>35</posx>
-				<posy>27</posy>
+				<posx>40</posx>
+				<posy>70</posy>
 				<width>550</width>
 				<height>18</height>
 				<font>Font_TVShow</font>
@@ -49,13 +67,12 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<scrollout>false</scrollout>
-				<texturefocus>-</texturefocus>
-                                <texturenofocus>-</texturenofocus>
 			</control>
+			<!-- Label 2 -->
 			<control type="label" id="402">
 				<description>Line 2 Label</description>
-				<posx>35</posx>
-				<posy>95</posy>
+				<posx>40</posx>
+				<posy>130</posy>
 				<width>550</width>
 				<height>20</height>
 				<font>Font_Bartowski_Movies_Plot</font>
@@ -63,9 +80,11 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<scrollout>true</scrollout>
-				<texturefocus>-</texturefocus>
-                                <texturenofocus>-</texturenofocus>
 			</control>
 		</control>
+
+
+		  
+
 	</controls>
 </window>

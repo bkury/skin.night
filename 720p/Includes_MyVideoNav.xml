@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 	<!-- #################################### Viewtype Navigation ################################# -->
@@ -18,145 +19,256 @@
 				<colordiffuse>DD000000</colordiffuse>
 			</control>
 					
-			<!-- Separator -->
-			<control type="group">
-			<posy>680</posy>
+			<!-- Bottom Seperator -->
 			<control type="image">
-				<posx>256</posx>
-				<posy>-18</posy>
-				<width>1</width>
-				<height>60</height>
-				<texture>confluence/separator-hz.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>512</posx>
-				<posy>-18</posy>
-				<width>1</width>
-				<height>60</height>
-				<texture>confluence/separator-hz.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>768</posx>
-				<posy>-18</posy>
-				<width>1</width>
-				<height>60</height>
-				<texture>confluence/separator-hz.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>1024</posx>
-				<posy>-18</posy>
-				<width>1</width>
-				<height>60</height>
-				<texture>confluence/separator-hz.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>-23</posy>
-				<width>1280</width>
+				<posx>-5</posx>
+				<posy>657</posy>
+				<width>1290</width>
 				<height>1</height>
 				<texture>base-rounded.png</texture>
 				<colordiffuse>mainblue</colordiffuse>
 			</control>
+
+			<!-- Separator -->
+			<control type="group">
+				<animation effect="slide" end="-110" condition="Window.isVisible(10094)">Conditional</animation>
+				<posy>680</posy>
+
+				<control type="image">
+					<posx>210</posx>
+					<posy>-18</posy>
+					<width>1</width>
+					<height>60</height>
+					<texture>confluence/separator-hz.png</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<visible>!Window.isVisible(10094)</visible>
+				</control>
+				<control type="image">
+					<posx>420</posx>
+					<posy>-18</posy>
+					<width>1</width>
+					<height>60</height>
+					<texture>confluence/separator-hz.png</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>630</posx>
+					<posy>-18</posy>
+					<width>1</width>
+					<height>60</height>
+					<texture>confluence/separator-hz.png</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>840</posx>
+					<posy>-18</posy>
+					<width>1</width>
+					<height>60</height>
+					<texture>confluence/separator-hz.png</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>1050</posx>
+					<posy>-18</posy>
+					<width>1</width>
+					<height>60</height>
+					<texture>confluence/separator-hz.png</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+				</control>
 			</control>
 
 			<!-- Navigation -->
 			<control type="group" id="7000">
 				<posy>680</posy>
+				<animation effect="slide" end="-110" condition="Window.isVisible(10094)">Conditional</animation>
 
 				<!-- Arrow -->
 				<control type="image">
 					<posx>0</posx>
 					<posy>-26</posy>
 					<include>navigation_arrow_down</include>
-					<animation effect="slide" end="123,0" time="0" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
-					<animation effect="slide" end="379,0" time="0" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
-					<animation effect="slide" end="635,0" time="0" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
-					<animation effect="slide" end="891,0" time="0" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
-					<animation effect="slide" end="1149,0" time="0" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
-					<visible>Skin.HasSetting(navigation_arrow) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
+					<animation effect="slide" end="70,0" time="0" condition="Control.HasFocus(490)">Conditional</animation>
+					<animation effect="slide" end="120,0" time="0" condition="Control.HasFocus(491)">Conditional</animation>
+					<animation effect="slide" end="170,0" time="0" condition="Control.HasFocus(492)">Conditional</animation>
+					<animation effect="slide" end="-20" condition="Control.HasFocus(490) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
+					<animation effect="slide" end="-20" condition="Control.HasFocus(491) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
+					<animation effect="slide" end="-20" condition="Control.HasFocus(492) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
+
+					<animation effect="slide" end="315,0" time="0" condition="Control.HasFocus(493)">Conditional</animation>
+					<animation effect="slide" end="525,0" time="0" condition="Control.HasFocus(494)">Conditional</animation>
+					<animation effect="slide" end="735,0" time="0" condition="Control.HasFocus(495)">Conditional</animation>
+					<animation effect="slide" end="945,0" time="0" condition="Control.HasFocus(496)">Conditional</animation>
+					<animation effect="slide" end="1155,0" time="0" condition="Control.HasFocus(497)">Conditional</animation>
+
+					<visible>Skin.HasSetting(navigation_arrow) + ControlGroup(7000).hasFocus</visible>
 				</control>
 				<!-- Circle -->
 				<control type="image">
 					<posy>-29</posy>
 					<posx>0</posx>
 					<include>navigation_circle</include>
-					<animation effect="slide" end="123,0" time="0" condition="Control.HasFocus(401) | ControlGroup(1300).HasFocus">Conditional</animation>
-					<animation effect="slide" end="379,0" time="0" condition="Control.HasFocus(402) | ControlGroup(1301).HasFocus">Conditional</animation>
-					<animation effect="slide" end="635,0" time="0" condition="Control.HasFocus(403) | ControlGroup(1302).HasFocus">Conditional</animation>
-					<animation effect="slide" end="891,0" time="0" condition="Control.HasFocus(404) | ControlGroup(1303).HasFocus">Conditional</animation>
-					<animation effect="slide" end="1149,0" time="0" condition="Control.HasFocus(405) | ControlGroup(1304).HasFocus">Conditional</animation>
-					<visible>Skin.HasSetting(navigation_circle) + [ ControlGroup(7000).hasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus ]</visible>
+					<animation effect="slide" end="70,0" time="0" condition="Control.HasFocus(490)">Conditional</animation>
+					<animation effect="slide" end="120,0" time="0" condition="Control.HasFocus(491)">Conditional</animation>
+					<animation effect="slide" end="170,0" time="0" condition="Control.HasFocus(492)">Conditional</animation>
+					<animation effect="slide" end="-20" condition="Control.HasFocus(490) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
+					<animation effect="slide" end="-20" condition="Control.HasFocus(491) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
+					<animation effect="slide" end="-20" condition="Control.HasFocus(492) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
+
+					<animation effect="slide" end="315,0" time="0" condition="Control.HasFocus(493)">Conditional</animation>
+					<animation effect="slide" end="525,0" time="0" condition="Control.HasFocus(494)">Conditional</animation>
+					<animation effect="slide" end="735,0" time="0" condition="Control.HasFocus(495)">Conditional</animation>
+					<animation effect="slide" end="945,0" time="0" condition="Control.HasFocus(496)">Conditional</animation>
+					<animation effect="slide" end="1155,0" time="0" condition="Control.HasFocus(497)">Conditional</animation>
+
+					<visible>Skin.HasSetting(navigation_circle) + ControlGroup(7000).hasFocus</visible>
 				</control>
 
 				<!-- Long Navigation Menu -->
 				<control type="group">
 					<visible>![StringCompare(Window.Property(xmlfile),MyChannels.xml) | StringCompare(Window.Property(xmlfile),MySharedContent.xml)]</visible>
 
-					<!-- Viewmodes -->
 					<control type="group">
-						<posx>80</posx>
-						<control type="group">
-							<visible>!Skin.HasSetting(LockViews)</visible>
-							<control type="image">
-								<width>29</width>
-								<height>24</height>
-								<texture>b-video.png</texture>
-								<colordiffuse>FFDDDDDD</colordiffuse>
-							</control>
-							<control type="button" id="401">
-			                                        <width>29</width>
-			                                        <height>24</height>
-								<texturefocus>b-video.png</texturefocus>
-								<texturenofocus>b-video.png</texturenofocus>
-								<colordiffuse>mainblue</colordiffuse>
-								<onleft>405</onleft>
-								<onright>402</onright>
-								<ondown>100</ondown>
-			                                        <onup>100</onup>
-								<onclick>Control.SetFocus(1300)</onclick>
-								<visible allowhiddenfocus="true">Control.HasFocus(401)</visible>
-			                                </control>
-							<control type="label">
-								<posx>40</posx>
-								<width>100</width>
-								<height>24</height>
-								<label>$INFO[Container.ViewMode]</label>
-								<font>Font_Bartowski_Movies_Plot</font>
-								<textcolor>FFDDDDDD</textcolor>
-								<shadowcolor>FF000000</shadowcolor>
-							</control>
+					<visible>!Window.isVisible(10094)</visible>
+
+					<!-- Play All -->
+					<control type="group">
+						<posx>50</posx>
+						<animation effect="slide" end="20" condition="![Player.hasAudio | Player.hasVideo]">Conditional</animation>
+						<control type="image">
+							<width>26</width>
+							<height>26</height>
+							<texture>b-play2.png</texture>
+							<colordiffuse>FFDDDDDD</colordiffuse>
 						</control>
-						<!-- KIOSK MODE -->
-						<control type="group">
-							<visible>Skin.HasSetting(LockViews)</visible>
-							<control type="image">
-								<width>29</width>
-								<height>24</height>
-								<texture>b-video.png</texture>
-								<colordiffuse>TextDisabled</colordiffuse>
-							</control>
-							<control type="label">
-								<posx>40</posx>
-								<width>100</width>
-								<height>24</height>
-								<label>$INFO[Container.ViewMode]</label>
-								<font>Font_Bartowski_Movies_Plot</font>
-								<textcolor>FFDDDDDD</textcolor>
-								<shadowcolor>FF000000</shadowcolor>
-							</control>
-						</control>
+						<control type="button" id="490">
+		                                        <width>26</width>	
+		                                        <height>26</height>
+							<texturefocus>b-play2.png</texturefocus>
+							<texturenofocus>b-play2.png</texturenofocus>
+							<colordiffuse>mainblue</colordiffuse>
+							<onclick>SetFocus(100)</onclick>
+		                                        <onclick>Plex.PlayAll()</onclick>
+							<onleft>497</onleft>
+							<onright>491</onright>
+							<ondown>100</ondown>
+							<onup>100</onup>
+							<visible allowhiddenfocus="true">Control.HasFocus(490)</visible>
+		                                </control>
 					</control>
 
+					<!-- Shuffle All -->
+					<control type="group">
+						<posx>100</posx>
+						<animation effect="slide" end="20" condition="![Player.hasAudio | Player.hasVideo]">Conditional</animation>
+						<control type="image">
+							<width>26</width>
+							<height>26</height>
+							<texture>b-shuffle.png</texture>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="491">
+		                                        <width>26</width>
+		                                        <height>26</height>
+							<texturefocus>b-shuffle.png</texturefocus>
+							<texturenofocus>b-shuffle.png</texturenofocus>
+							<colordiffuse>mainblue</colordiffuse>
+							<onclick>SetFocus(100)</onclick>
+		                                        <onclick>Plex.ShuffleAll()</onclick>
+							<onleft>490</onleft>
+							<onright>492</onright>
+							<ondown>100</ondown>
+							<onup>100</onup>
+							<visible allowhiddenfocus="true">Control.HasFocus(491)</visible>
+		                                </control>
+					</control>
 
+					<!-- Fullscreen -->
+					<control type="group">
+						<visible>Player.hasAudio | Player.hasVideo</visible>
+						<posy>2</posy>
+						<posx>150</posx>
+						<control type="image">
+							<width>22</width>
+							<height>22</height>
+							<texture>b-fullscreen.png</texture>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="492">
+		                                        <width>22</width>
+		                                        <height>22</height>
+							<texturefocus>b-fullscreen.png</texturefocus>
+							<texturenofocus>b-fullscreen.png</texturenofocus>
+							<colordiffuse>mainblue</colordiffuse>
+							<onclick>SetFocus(100)</onclick>
+		                                        <onclick>fullscreen</onclick>
+							<onleft>491</onleft>
+							<onright>493</onright>
+							<ondown>100</ondown>
+							<onup>100</onup>
+							<visible allowhiddenfocus="true">Control.HasFocus(492)</visible>
+		                                </control>
+					</control>
 
+					</control>
+
+					<!-- Viewmodes -->
+					<control type="group">
+					<posx>260</posx>
+					<control type="group">
+						<visible>!Skin.HasSetting(LockViews)</visible>
+						<control type="image">
+							<width>29</width>
+							<height>24</height>
+							<texture>b-video.png</texture>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="493">
+		                                        <width>29</width>
+		                                        <height>24</height>
+							<texturefocus>b-video.png</texturefocus>
+							<texturenofocus>b-video.png</texturenofocus>
+							<colordiffuse>mainblue</colordiffuse>
+							<onleft>492</onleft>
+							<onright>494</onright>
+							<ondown>100</ondown>
+		                                        <onup>100</onup>
+							<onclick>Control.SetFocus(1300)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(493)</visible>
+		                                </control>
+						<control type="label">
+							<posx>40</posx>
+							<width>100</width>
+							<height>24</height>
+							<label>$INFO[Container.ViewMode]</label>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<textcolor>FFDDDDDD</textcolor>
+							<shadowcolor>FF000000</shadowcolor>
+						</control>
+					</control>
+					<!-- KIOSK MODE -->
+					<control type="group">
+						<visible>Skin.HasSetting(LockViews)</visible>
+						<control type="image">
+							<width>29</width>
+							<height>24</height>
+							<texture>b-video.png</texture>
+							<colordiffuse>TextDisabled</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>40</posx>
+							<width>100</width>
+							<height>24</height>
+							<label>$INFO[Container.ViewMode]</label>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<textcolor>FFDDDDDD</textcolor>
+							<shadowcolor>FF000000</shadowcolor>
+						</control>
+					</control>
+				</control>
 
 				<!-- Filter -->
 				<control type="group">
-					<posx>335</posx>
+					<posx>470</posx>
 					<control type="group">
 						<visible>![Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))]</visible>
 						<control type="image">
@@ -165,22 +277,20 @@
 							<texture>options_osd.png</texture>
 							<colordiffuse>FFDDDDDD</colordiffuse>
 						</control>
-						<control type="button" id="402">
+						<control type="button" id="494">
 		                                        <width>29</width>
 		                                        <height>24</height>
 							<texturefocus>options_osd.png</texturefocus>
 							<texturenofocus>options_osd.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
-
 							<onclick>Skin.SetString(selector1,$LOCALIZE[31021])</onclick>
 							<onclick>Skin.SetString(selector2,)</onclick>
 		                                        <onclick>Control.SetFocus(19000)</onclick>
-	
-							<onleft>401</onleft>
-							<onright>403</onright>
+							<onleft>493</onleft>
+							<onright>495</onright>
 							<ondown>100</ondown>
 							<onup>100</onup>
-							<visible allowhiddenfocus="true">Control.HasFocus(402)</visible>
+							<visible allowhiddenfocus="true">Control.HasFocus(494)</visible>
 		                                </control>
 						<control type="label">
 							<posx>35</posx>
@@ -225,8 +335,7 @@
 
 				<!-- Sort -->
 				<control type="group">
-					<!--<posx>610</posx>-->
-					<posx>580</posx>
+					<posx>680</posx>
 			
 					<control type="group">
 						<visible>![Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes)]</visible>
@@ -236,7 +345,7 @@
 							<texture>options_osd.png</texture>
 							<colordiffuse>FFDDDDDD</colordiffuse>
 						</control>
-						<control type="button" id="403">
+						<control type="button" id="495">
 		                                        <width>29</width>
 		                                        <height>24</height>
 							<texturefocus>options_osd.png</texturefocus>
@@ -247,11 +356,11 @@
 							<onclick>Skin.SetString(selector2,)</onclick>
 		                                        <onclick>Control.SetFocus(19010)</onclick>
 
-							<onleft>402</onleft>
-							<onright>404</onright>
+							<onleft>494</onleft>
+							<onright>496</onright>
 							<ondown>100</ondown>
 							<onup>100</onup>
-							<visible allowhiddenfocus="true">Control.HasFocus(403)</visible>
+							<visible allowhiddenfocus="true">Control.HasFocus(495)</visible>
 		                                </control>
 						<control type="label">
 							<posx>35</posx>
@@ -287,14 +396,14 @@
 
 				<!-- Options -->
 				<control type="group">
-					<posx>840</posx>
+					<posx>890</posx>
 					<control type="image">
 						<width>26</width>
 						<height>26</height>
 						<texture>b-pp-system.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="404">
+					<control type="button" id="496">
 	                                        <width>26</width>
 	                                        <height>26</height>
 						<texturefocus>b-pp-system.png</texturefocus>
@@ -303,11 +412,11 @@
 						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 						<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
 	                                        <onclick>Control.SetFocus(9999)</onclick>
-						<onleft>403</onleft>
-						<onright>405</onright>
+						<onleft>495</onleft>
+						<onright>497</onright>
 						<ondown>100</ondown>
 						<onup>100</onup>
-						<visible allowhiddenfocus="true">Control.HasFocus(404)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(496)</visible>
 	                                </control>
 					<control type="label">
 						<posx>30</posx>
@@ -322,25 +431,25 @@
 
 				<!-- Search -->
 				<control type="group">
-					<posx>1090</posx>
+					<posx>1100</posx>
 					<control type="image">
 						<width>29</width>
 						<height>24</height>
 						<texture>b-pp-search.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="405">
+					<control type="button" id="497">
 	                                        <width>29</width>
 	                                        <height>24</height>
 						<texturefocus>b-pp-search.png</texturefocus>
 						<texturenofocus>b-pp-search.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 	                                        <onclick>ActivateWindow(51)</onclick>
-						<onleft>404</onleft>
-						<onright>401</onright>
+						<onleft>496</onleft>
+						<onright>490</onright>
 						<ondown>100</ondown>
 						<onup>100</onup>
-						<visible allowhiddenfocus="true">Control.HasFocus(405)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(497)</visible>
 	                                </control>
 					<control type="label">
 						<posx>35</posx>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 <include name="Home_Deck">
@@ -22,12 +22,17 @@
 
 		<!-- On Deck -->
 		<control type="group" id="7001">
-			<visible>Control.isVisible(11001) + !Skin.HasSetting(Deck_NoOnDeck)</visible>
-			<include>Animation_CommonFade_600</include>
+			<visible>!Skin.HasSetting(Deck_NoOnDeck) + 
+				 [ !Skin.hasSetting(XBMC) + Control.isVisible(11001)] | 
+				 [ Skin.HasSetting(XBMC) + Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.1.Title))   ] | 
+				 [ Skin.HasSetting(XBMC) + Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) ] | 
+				 [ Skin.HasSetting(XBMC) + Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.1.Title))]
+			</visible>
+			<include>Animation_CommonFade_600</include>		
 
 			<control type="group">
 				<!-- Vertical Home -->
-				<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoRecently) + Control.IsVisible(11000) ]">Conditional</animation>
+				<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoRecently) + Control.IsVisible(11000) + Control.IsVisible(11001)]">Conditional</animation>
 				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11000)">conditional</animation>
 
 				<!-- Horizontal Home -->
@@ -42,6 +47,9 @@
 					<ondown condition="!Skin.HasSetting(Home_Horizontal)">11000</ondown>
 					<onup condition="Skin.HasSetting(Home_Horizontal)">11000</onup>
 					<include>Deck_Content</include>
+
+					<!-- XBMC Items -->
+					<include condition="Skin.HasSetting(XBMC)">XBMC_Deck_Recommended_Items</include>
 				</control>
 				<control type="group">
 					<visible>Control.hasFocus(11001)</visible>
@@ -73,12 +81,17 @@
 
 		<!-- Recently Added -->
 		<control type="group" id="7000">
-			<visible>Control.isVisible(11000) + !Skin.HasSetting(Deck_NoRecently)</visible>
-			<include>Animation_CommonFade_600</include>
-				
+			<visible>!Skin.HasSetting(Deck_NoRecently) +
+				 [ !Skin.hasSetting(XBMC) + Control.isVisible(11000)] | 
+				 [ Skin.HasSetting(XBMC) + Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.1.Title))   ] | 
+				 [ Skin.HasSetting(XBMC) + Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.1.Title)) ] | 
+				 [ Skin.HasSetting(XBMC) + Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.1.Title))]
+			</visible>
+			<include>Animation_CommonFade_600</include>		
+
 			<control type="group">
 				<!-- Vertical Home -->
-				<animation effect="slide" end="0,100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoOnDeck) + Control.IsVisible(11001) ]">Conditional</animation>
+				<animation effect="slide" end="0,100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoOnDeck) + Control.IsVisible(11001) + Control.IsVisible(11000)]">Conditional</animation>
 				<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11001)">conditional</animation>
 
 				<!-- Horizontal Home -->
@@ -87,13 +100,16 @@
 
 				<include>Deck_Placeholder</include>
 				<control type="label">
-					<animation effect="slide" end="0,200" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001)">Conditional</animation>
+					<animation effect="slide" end="0,205" condition="!Skin.HasSetting(Home_Horizontal) + Control.IsVisible(11001) + Control.IsVisible(11000)">Conditional</animation>
 					<include>Deck_Name</include>
 					<label>31052</label> <!-- Recently Added -->
 				</control>
 				<control type="fixedlist" id="11000">
 					<onup>11001</onup>
 					<include>Deck_Content</include>
+
+					<!-- XBMC -->
+					<include condition="Skin.HasSetting(XBMC)">XBMC_Deck_Recent_Items</include>
 				</control>
 				<control type="group">
 					<include>Animation_CommonFade_600</include>
@@ -127,7 +143,7 @@
 
 		<!-- Recently Used -->
 		<control type="group" id="7002">
-			<visible>Control.isVisible(11002) + !Skin.HasSetting(Deck_NoRecently)</visible>
+			<visible>Control.isVisible(11002) + ![ Skin.HasSetting(Deck_NoRecently) | Skin.HasSetting(XBMC) ]</visible>
 			<include>Animation_CommonFade_600</include>
 
 			<control type="group">
@@ -156,7 +172,7 @@
 
 		<!-- Queue -->
 		<control type="group" id="7003">
-			<visible>Control.isVisible(11003) + !Skin.HasSetting(Deck_NoQueue)</visible>
+			<visible>Control.isVisible(11003) + ![ Skin.HasSetting(Deck_NoQueue) | Skin.HasSetting(XBMC) ]</visible>
 			<include>Animation_CommonFade_600</include>
 
 			<control type="group">
@@ -183,10 +199,104 @@
 			</control>
 		</control>
 
-		<!-- Shared Content -->
-		<control type="group">
+		<!-- Play Queue (Video/11005) -->
+		<control type="group" id="7005">
+			<visible>Control.isVisible(11005) + ![ Skin.HasSetting(Deck_NoPlayQueue) | Skin.HasSetting(XBMC) ]</visible>
 			<include>Animation_CommonFade_600</include>
-			<visible>SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)</visible>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Video</label> <!-- Video -->
+				</control>
+				<control type="fixedlist" id="11005">
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(11005)</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11005)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(11005)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Information_More_Position</include>
+				<include>Deck_Information_More</include>
+			</control>
+
+		</control>
+
+		<!-- Play Queue (Music/11006) -->
+		<control type="group" id="7006">
+			<visible>Control.isVisible(11006) + ![ Skin.HasSetting(Deck_NoPlayQueue) | Skin.HasSetting(XBMC) ]</visible>
+			<include>Animation_CommonFade_600</include>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Music</label> <!-- Music -->
+				</control>
+				<control type="fixedlist" id="11006">
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(11006)</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11006)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+		</control>
+
+		<!-- Play Queue (Photo/11007) -->
+		<control type="group" id="7007">
+			<visible>Control.isVisible(11007) + ![ Skin.HasSetting(Deck_NoPlayQueue) | Skin.HasSetting(XBMC) ]</visible>
+			<include>Animation_CommonFade_600</include>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Photos</label> <!-- Photos -->
+				</control>
+				<control type="fixedlist" id="11007">
+					<include>Deck_Content</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(11007)</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Control.HasFocus(11007)</visible>
+				<include>Animation_CommonFade_600</include>
+				<include>Deck_Information_Position</include>
+				<include>Deck_Information</include>
+			</control>
+		</control>
+
+		<!-- Shared Content -->
+		<control type="group" id="7009">
+			<include>Animation_CommonFade_600</include>
+			<visible>SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + ![ Skin.HasSetting(Deck_NoShared) | Skin.HasSetting(XBMC) ]</visible>
 
 			<control type="group">
 				<include>Deck_Placeholder</include>
@@ -194,7 +304,7 @@
 					<include>Deck_Name</include>
 					<label>44020</label><!-- Shared Content -->
 				</control>
-				<control type="fixedlist">
+				<control type="fixedlist" id="11009">
 					<include>Deck_Content</include>
 					<content>
 					<item>
@@ -208,21 +318,184 @@
 			</control>
 		</control>
 
-		<!-- DECK EXTENSIONS -->
-		<include>Home_Extension_Deck</include>
+		<!-- Live TV (Next Aired) -->
+		<control type="group" id="7010">
+			<include>Animation_CommonFade_600</include>
+			<visible>Skin.HasSetting(XBMC) + Container(300).hasFocus(1) + !isEmpty(Window(Home).Property(NextAired.1.Label))</visible>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Aired Today ($INFO[Window(Home).Property(NextAired.TodayTotal)])</label><!-- Airing Today -->
+				</control>
+				<control type="fixedlist" id="11010">
+					<include>Deck_Content</include>
+					<include>XBMC_Deck_NextAired_Items</include>
+				</control>
+				<control type="group">
+					<visible>ControlGroup(7010).hasFocus</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+  
+			<control type="group">
+				<visible>ControlGroup(7010).HasFocus</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<include>Deck_Information_Position</include>
+				<include>Deck_Information</include>
+                        </control>
+
+			<control type="group">
+				<visible>ControlGroup(7010).HasFocus</visible>
+                                <include>Animation_CommonFade_Deck_400</include>
+                                <include>Deck_Information_More_Position</include>
+                                <include>Deck_Information_More</include>
+                        </control>
+
+		</control>
+
+		<!-- PlexXBMC -->
+		<control type="group" id="7080">
+			<include>Animation_CommonFade_600</include>
+			<visible>Skin.HasSetting(XBMC) + Container(300).hasFocus(8)</visible>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Plex</label>
+				</control>
+				<control type="fixedlist" id="11080">
+					<include>Deck_Content</include>
+					<include>XBMC_Deck_Plexbmc_Items</include>
+				</control>
+				<control type="group">
+					<visible>ControlGroup(7080).hasFocus</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+  
+			<control type="group">
+				<visible>ControlGroup(7080).HasFocus</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<include>Deck_Information_Position</include>
+				<include>Deck_Information</include>
+                        </control>
+
+			<control type="group">
+				<visible>ControlGroup(7080).HasFocus</visible>
+                                <include>Animation_CommonFade_Deck_400</include>
+                                <include>Deck_Information_More_Position</include>
+                                <include>Deck_Information_More</include>
+                        </control>
+
+		</control>
+
+
+		<!-- Favourites 1 -->
+		<control type="group" id="7012">
+			<include>Animation_CommonFade_600</include>
+			<visible>Skin.HasSetting(XBMC) + Container(300).hasFocus(9) + !isEmpty(Window(Home).Property(favourite.1.path))</visible>
+
+			<!-- Vertical Home -->
+			<animation effect="slide" end="0,-100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoRecently) + !isEmpty(Window(Home).Property(favourite.8.path)) ]">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11013)">conditional</animation>
+
+			<!-- Horizontal Home -->
+			<animation effect="slide" end="0,-300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11013)">Conditional</animation>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+					<include>Deck_Name</include>
+					<label>Favourites</label>
+				</control>
+				<control type="fixedlist" id="11012">
+					<ondown condition="!Skin.HasSetting(Home_Horizontal)">11013</ondown>
+					<onup condition="Skin.HasSetting(Home_Horizontal)">11013</onup>
+					<include>Deck_Content</include>
+					<include>XBMC_Deck_Favourite_Items1</include>
+				</control>
+				<control type="group">
+					<visible>ControlGroup(7012).hasFocus</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+  
+			<control type="group">
+				<visible>ControlGroup(7012).HasFocus</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<include>Deck_Information</include>
+                        </control>
+
+		</control>
+
+		<!-- Favourites 2 -->
+		<control type="group" id="7013">
+			<include>Animation_CommonFade_600</include>
+			<visible>Skin.HasSetting(XBMC) + Container(300).hasFocus(9) + !isEmpty(Window(Home).Property(favourite.8.path))</visible>
+
+			<!-- Vertical Home -->
+			<animation effect="slide" end="0,100" time="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + [ !Skin.HasSetting(Deck_NoRecently) + !isEmpty(Window(Home).Property(favourite.1.path)) ]">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="400" condition="Control.HasFocus(11012)">conditional</animation>
+
+			<!-- Horizontal Home -->
+			<animation effect="slide" end="0,-300" time="600" tween="cubic" easing="inout" condition="Skin.HasSetting(Home_Horizontal) + Control.hasFocus(11013)">Conditional</animation>
+
+			<control type="group">
+				<include>Deck_Placeholder</include>
+				<control type="label">
+                                        <animation effect="slide" end="0,200" condition="true">Conditional</animation>
+					<include>Deck_Name</include>
+					<label>Favourites</label>
+				</control>
+				<control type="fixedlist" id="11013">
+					<onup condition="!Skin.HasSetting(Home_Horizontal)">11012</onup>
+					<ondown condition="Skin.HasSetting(Home_Horizontal)">11012</ondown>
+					<include>Deck_Content</include>
+					<include>XBMC_Deck_Favourite_Items2</include>
+				</control>
+				<control type="group">
+					<visible>ControlGroup(7013).hasFocus</visible>
+					<include>Animation_CommonFade_600</include>
+					<include>Deck_Focus</include>
+				</control>
+			</control>
+  
+			<control type="group">
+				<visible>ControlGroup(7013).HasFocus</visible>
+				<include>Animation_CommonFade_Deck_400</include>
+				<include>Deck_Information</include>
+                        </control>
+
+		</control>
+
+
+		<!-- XBMC CUSTOM HOME -->
+		<include condition="Skin.HasSetting(XBMC)">XBMC_Home_Custom_Deck</include>
+
+		<!-- PLEX DECK EXTENSIONS -->
+		<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Deck</include>
 
 	</control>
 </include>
 
 <!-- DECK FOCUS -->
 <include name="Deck_Focus">
-	<!-- Arrow -->
+	<!-- Arrow --> 
 	<control type="image">
-		<posy>0</posy>
+		<posy>72</posy>
 		<posx>-20</posx>
-		<height>170</height>
-		<texture background="true">newlistselector.png</texture>
+		<width>18</width>
+		<height>26</height>
+		<texture background="true">arrowdeck.png</texture>
 		<colordiffuse>mainblue</colordiffuse>
+		<aspectratio>scale</aspectratio>
+		<!--21 x 33-->
 	</control>
 	<!-- Focus Frame -->
 	<control type="image">
@@ -241,7 +514,7 @@
 	<include>Animation_CommonFade_600</include>
 
 	<!-- Vertical Animation -->
-	<animation effect="slide" end="0,175" time="400" tween="cubic" easing="out" delay="400" condition="!Skin.HasSetting(Home_Horizontal) + ControlGroup(5000).HasFocus">Conditional</animation>
+	<animation effect="slide" end="0,175" time="400" tween="cubic" easing="out" delay="500" condition="!Skin.HasSetting(Home_Horizontal) + ControlGroup(5000).HasFocus">Conditional</animation>
 
 	<!-- Horizontal Animation -->
 	<animation effect="slide" end="0,330" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom) + ControlGroup(5000).HasFocus">Conditional</animation>
@@ -251,7 +524,7 @@
 	<include>Animation_CommonFade_600</include>
 
 	<!-- Vertical Animation -->
-	<animation effect="slide" end="0,-175" time="500" delay="600" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + ControlGroup(5000).HasFocus">Conditional</animation>
+	<animation effect="slide" end="0,-175" time="400" delay="500" tween="cubic" easing="out" condition="!Skin.HasSetting(Home_Horizontal) + ControlGroup(5000).HasFocus">Conditional</animation>
 
 	<!-- Horizontal Animation -->
 	<animation effect="slide" end="0,450" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom) + ControlGroup(5000).HasFocus">Conditional</animation>
@@ -336,6 +609,24 @@
 	</control>
 </include>
 <variable name="Deck_Label_Title_1">
+	<!-- XBMC -->
+        <value condition="Control.HasFocus(11000) + Skin.HasSetting(XBMC)">$INFO[Container(11000).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11001) + Skin.HasSetting(XBMC)">$INFO[Container(11001).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11010) + Skin.HasSetting(XBMC)">$INFO[Container(11010).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11012) + Skin.HasSetting(XBMC)">$INFO[Container(11012).ListItem.Label]</value>
+
+	<!-- XBMC Custom Home -->
+        <value condition="Control.HasFocus(11050) + Skin.HasSetting(XBMC)">$INFO[Container(11050).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11051) + Skin.HasSetting(XBMC)">$INFO[Container(11051).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11052) + Skin.HasSetting(XBMC)">$INFO[Container(11052).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11053) + Skin.HasSetting(XBMC)">$INFO[Container(11053).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11054) + Skin.HasSetting(XBMC)">$INFO[Container(11054).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11055) + Skin.HasSetting(XBMC)">$INFO[Container(11055).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11056) + Skin.HasSetting(XBMC)">$INFO[Container(11056).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11057) + Skin.HasSetting(XBMC)">$INFO[Container(11057).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11058) + Skin.HasSetting(XBMC)">$INFO[Container(11058).ListItem.Label]</value>
+        <value condition="Control.HasFocus(11059) + Skin.HasSetting(XBMC)">$INFO[Container(11059).ListItem.Label]</value>
+
 	<!-- Recently Added -->
 	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(episode)">$INFO[Container(11000).ListItem.TVShowTitle]</value>
 	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(album)">$INFO[Container(11000).ListItem.Artist]</value>
@@ -350,6 +641,14 @@
 
 	<!-- Queue -->
 	<value condition="Control.HasFocus(11003)">$INFO[Container(11003).ListItem.Title]</value>
+
+	<!-- PlayQueue -->
+	<value condition="Control.HasFocus(11005) + Container(11005).ListItem.Type(episode)">$INFO[Container(11005).ListItem.TVShowTitle]</value>
+	<value condition="Control.HasFocus(11005) + !Container(11005).ListItem.Type(episode)">$INFO[Container(11005).ListItem.Title]</value>
+
+	<value condition="Control.HasFocus(11006)">$INFO[Container(11006).ListItem.Artist]</value>
+
+	<value condition="Control.HasFocus(11007)">$INFO[Container(11007).ListItem.Title]</value>
 
 	<!-- Home Extennsions -->
 	<value condition="Control.HasFocus(8850)">$INFO[Container(8850).ListItem.Label]</value>
@@ -371,8 +670,14 @@
 
 	<!-- Shared Content -->
 	<value condition="Control.HasFocus(56)">$INFO[Container(56).ListItem.Label]</value>
+
 </variable>
 <variable name="Deck_Label_Title_2">
+	<!-- XBMC -->
+        <value condition="Control.HasFocus(11000) + Skin.HasSetting(XBMC)">$INFO[Container(11000).ListItem.Label2]</value>
+        <value condition="Control.HasFocus(11001) + Skin.HasSetting(XBMC)">$INFO[Container(11001).ListItem.Label2]</value>
+        <value condition="Control.HasFocus(11010) + Skin.HasSetting(XBMC)">$INFO[Container(11010).ListItem.Label2]</value>
+
 	<!-- Recently Added -->
 	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(episode)">$INFO[Container(11000).ListItem.Title][COLOR=mainblue] / [/COLOR]$INFO[Container(11000).ListItem(0).Duration]min</value>
 	<value condition="Control.HasFocus(11000) + Container(11000).ListItem.Type(movie)">$INFO[Container(11000).ListItem.Year][COLOR=mainblue] / [/COLOR]$INFO[Container(11000).ListItem(0).Duration]min</value>
@@ -385,6 +690,17 @@
 
 	<!-- Queue -->
 	<value condition="Control.HasFocus(11003)">$INFO[Container(11003).ListItem.Property(sourceTitle)]</value>
+
+	<!-- PlayQueue Video -->
+	<value condition="Control.HasFocus(11005) + Container(11005).ListItem.Type(episode)">$INFO[Container(11005).ListItem.Title][COLOR=mainblue] / [/COLOR]$INFO[Container(11005).ListItem(0).Duration]min</value>
+	<value condition="Control.HasFocus(11005) + Container(11005).ListItem.Type(movie)">$INFO[Container(11005).ListItem.Year][COLOR=mainblue] / [/COLOR]$INFO[Container(11005).ListItem(0).Duration]min</value>
+
+	<!-- PlayQueue Music -->
+	<!--<value condition="Control.HasFocus(11006)">$INFO[Container(11006).ListItem.Album][COLOR=mainblue] / [/COLOR]$INFO[Container(11006).ListItem.Label]</value>-->
+	<value condition="Control.HasFocus(11006)">$INFO[Container(11006).ListItem.Album]</value>
+
+	<!-- PlayQueue Photo -->
+	<value condition="Control.HasFocus(11007)">$INFO[Container(11007).ListItem.Date]</value>
 
 	<!-- Shared Content -->
 	<value condition="Control.HasFocus(56)">$INFO[ListItem.Property(sourceTitle)]</value>
@@ -506,11 +822,20 @@
 	</control>
 </include>
 <variable name="Deck_Label_Plot">
+	<!-- XBMC -->
+        <value condition="Control.HasFocus(11000) + Skin.HasSetting(XBMC)">$INFO[Container(11000).ListItem.Property(Plot)]</value>
+        <value condition="Control.HasFocus(11001) + Skin.HasSetting(XBMC)">$INFO[Container(11001).ListItem.Property(Plot)]</value>
+        <value condition="Control.HasFocus(11010) + Skin.HasSetting(XBMC)">$INFO[Container(11001).ListItem.Property(Plot)]</value>
+
 	<!-- Recently Added -->
 	<value condition="Control.HasFocus(11000)">$INFO[Container(11000).ListItem.Plot]</value>
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).ListItem.Plot]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).ListItem.Plot]</value>
+
 </variable>
 <variable name="Deck_Label_ContentRating">
 	<!-- Recently Added -->
@@ -518,6 +843,9 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001) + !isEmpty(Container(11001).ListItem.Art(mediaTag::contentRating))">$INFO[Container(11001).ListItem.Art(mediaTag::contentRating)]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005) + !isEmpty(Container(11005).ListItem.Art(mediaTag::contentRating))">$INFO[Container(11005).ListItem.Art(mediaTag::contentRating)]</value>
 
 	<!-- Fallback -->
 	<value condition="!Control.HasFocus(300)">DefaultVideoCover.png</value>
@@ -528,6 +856,9 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).ListItem.StarRating]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).ListItem.StarRating]</value>
 </variable>
 <variable name="Deck_Label_Studio">
 	<!-- Recently Added -->
@@ -535,6 +866,9 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::studio)]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).Listitem.Art(mediaTag::studio)]</value>
 </variable>
 
 <!-- Mediaflags -->
@@ -544,6 +878,9 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::videoResolution)]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).Listitem.Art(mediaTag::videoResolution)]</value>
 </variable>
 <variable name="Deck_Label_AudioCodec">
 	<!-- Recently Added -->
@@ -551,6 +888,9 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::audioCodec)]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).Listitem.Art(mediaTag::audioCodec)]</value>
 </variable>
 <variable name="Deck_Label_AudioChannels">
 	<!-- Recently Added -->
@@ -558,6 +898,9 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::audioChannels)]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).Listitem.Art(mediaTag::audioChannels)]</value>
 </variable>
 <variable name="Deck_Label_AspectRatio">
 	<!-- Recently Added -->
@@ -565,6 +908,9 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::aspectRatio)]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).Listitem.Art(mediaTag::aspectRatio)]</value>
 </variable>
 <variable name="Deck_Label_VideoCodec">
 	<!-- Recently Added -->
@@ -572,36 +918,164 @@
 
 	<!-- On Deck -->
 	<value condition="Control.HasFocus(11001)">$INFO[Container(11001).Listitem.Art(mediaTag::videoCodec)]</value>
+
+	<!-- Play Queue (Video) -->
+	<value condition="Control.HasFocus(11005)">$INFO[Container(11005).Listitem.Art(mediaTag::videoCodec)]</value>
 </variable>
 
 
 <!-- Deck Layout -->
 <include name="Deck_Layout">
-		<!-- Cover/Thumb -->
-		<control type="image">
-			<width>110</width>
-			<height>170</height>
-			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
-			<visible>ListItem.Type(tvshow) | ListItem.Type(season) | ListItem.Type(episode)</visible>
-		</control>
+
+		<!-- DECK LAYOUT (XBMC) -->
 		<control type="group">
-			<visible>![ListItem.Type(tvshow) | ListItem.Type(season) | ListItem.Type(episode)]</visible>
-			<control type="image">
-				<width>110</width>
-				<height>110</height>
-				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
-				<include>Deck_Visible_Half</include>
-			</control>
+			<visible>Skin.HasSetting(XBMC)</visible>
+
+			<!-- Cover -->
 			<control type="image">
 				<width>110</width>
 				<height>170</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
-				<include>Deck_Visible_Full</include>
+				<visible>StringCompare(ListItem.Property(Type),Cover)</visible>
 			</control>
+			<control type="image">
+				<posy>145</posy>
+				<width>110</width>
+				<height>25</height>
+				<texture border="10">base-rounded.png</texture>
+				<colordiffuse>AA000000</colordiffuse>
+	                        <visible>StringCompare(ListItem.Property(Type2),Cover)</visible>
+			</control>
+	                <control type="label">
+	                        <include>Deck_Label_Nowrap</include>
+	                        <label>$INFO[ListItem.Label]</label>
+	                        <visible>StringCompare(ListItem.Property(Type2),Cover)</visible>
+	                </control>
+                
+			<!-- Square -->
+			<control type="image">
+				<width>110</width>
+				<height>110</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
+				<visible>StringCompare(ListItem.Property(Type),Square)</visible>
+			</control>
+	                <control type="label">
+	                        <label>$INFO[ListItem.Label]</label>
+	                        <include>Deck_Label_Wrap</include>
+	                        <visible>StringCompare(ListItem.Property(Type2),Square)</visible>
+	                </control>
+
+			<!-- Next Aired -->
+			<control type="group">
+				<visible>!isEmpty(ListItem.Property(Airtime))</visible>
+
+				<control type="image">
+					<posy>145</posy>
+					<width>110</width>
+					<height>25</height>
+					<texture border="10">base-rounded.png</texture>
+					<colordiffuse>AA000000</colordiffuse>
+				</control>
+				<control type="label">
+					<include>Deck_Label_Nowrap</include>
+					<label>$INFO[ListItem.Property(Airtime)]</label>
+				</control>
+			</control>
+
+	                <!-- TV / Episode Overlay -->
+	                <control type="image">
+	                        <posy>145</posy>
+	                        <width>110</width>
+	                        <height>25</height>
+	                        <texture border="10">base-rounded.png</texture>
+	                        <colordiffuse>AA000000</colordiffuse>
+	                        <visible>!isEmpty(ListItem.Property(Number))</visible>
+        	        </control>
+	                <control type="label">
+	                        <include>Deck_Label_Nowrap</include>
+	                        <label>$INFO[ListItem.Property(Number)]</label>
+	                        <visible>!isEmpty(ListItem.Property(Number))</visible>
+	                </control>
+
+
 		</control>
+
+		<!-- DECK LAYOUT (PLEX) -->
+		<control type="group">
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		
+			<!-- TvShow / Season / Episode -->
+			<control type="group">
+				<visible>ListItem.Type(tvshow) | ListItem.Type(season) | ListItem.Type(episode)</visible>
+
+				<!-- TV Show -->
+				<control type="image">
+					<width>110</width>
+					<height>170</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture fallback="default-poster-big.png" diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+					<visible>!isEmpty(ListItem.GrandparentThumb)</visible>
+					<include>Deck_Visible_Full</include>
+				</control>
+
+				<!-- Tv Episode -->
+				<control type="image">
+					<width>110</width>
+					<height>170</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture fallback="default-poster-big.png" diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
+					<visible>isEmpty(ListItem.GrandparentThumb)</visible>
+					<include>Deck_Visible_Full</include>
+				</control>
+
+				<!-- TV Default -->
+				<control type="image">
+					<width>110</width>
+					<height>145</height>
+					<include>Default_Icon</include>
+					<include>Deck_Visible_Full</include>
+					<visible>isEmpty(ListItem.GrandparentThumb) + isEmpty(ListItem.Icon)</visible>
+				</control>
+			</control>
+
+			<!-- Other -->
+			<control type="group">
+				<visible>![ ListItem.Type(tvshow) | ListItem.Type(season) | ListItem.Type(episode) ]</visible>
+				<!-- Square -->
+				<control type="image">
+					<width>110</width>
+					<height>110</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
+					<include>Deck_Visible_Half</include>
+				</control>
+				<control type="image">
+					<width>110</width>
+					<height>110</height>
+					<include>Default_Icon</include>
+					<include>Deck_Visible_Half</include>
+					<visible>isEmpty(ListItem.Icon)</visible>
+				</control>
+
+				<!-- Poster -->
+				<control type="image">
+					<width>110</width>
+					<height>170</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="posterMaskSmall.png" background="true">$INFO[ListItem.Icon]</texture>
+					<include>Deck_Visible_Full</include>
+				</control>
+				<control type="image">
+					<width>110</width>
+					<height>170</height>
+					<include>Default_Icon</include>
+					<include>Deck_Visible_Full</include>
+					<visible>isEmpty(ListItem.Icon)</visible>
+				</control>
+
+			</control>
 
 		<!-- Cover/Thumb Overlay -->
 		<control type="image">
@@ -629,11 +1103,6 @@
 			<label>S$INFO[ListItem.Season] [COLOR=mainblue]/[/COLOR] E$INFO[ListItem.Episode]</label>
 			<visible>ListItem.Type(episode)</visible>
 		</control>
-		<!--<control type="label">
-			<include>Deck_Label_Nowrap</include>
-			<label>$INFO[ListItem.Year]</label>
-			<visible>ListItem.Type(movie)</visible>
-		</control>-->
 
 		<control type="group">
 			<visible>![ListItem.Type(episode) | ListItem.Type(movie)]</visible>
@@ -649,22 +1118,30 @@
 			</control>
 		</control>
 
+
+	</control>
+
 </include>
 
 <!-- Deck Visibility -->
 <include name="Deck_Visible_Half">
-	<visible>ListItem.Type(photo) | ListItem.Type(album) | ListItem.Type(channel) | ListItem.Type(channels) | ListItem.Type(clip) | Skin.HasSetting(mysharedcontent_helper)</visible>
+	<visible>Control.isVisible(11006) | Control.isVisible(11007) | ListItem.Type(photo) | ListItem.Type(album) | ListItem.Type(song) | ListItem.Type(channel) | ListItem.Type(channels) | ListItem.Type(clip) | Skin.HasSetting(mysharedcontent_helper) | SubString(ListItem.Property(Type),Square)</visible>
 </include>
 
 <include name="Deck_Visible_Full">
-	<visible>ListItem.Type(movie) | ListItem.Type(tvshow) | ListItem.Type(episode) | ListItem.Type(season) | ListItem.Type(video)</visible>
+	<visible>Control.isVisible(11005) | ListItem.Type(movie) | ListItem.Type(tvshow) | ListItem.Type(episode) | ListItem.Type(season) | ListItem.Type(video) | SubString(ListItem.Property(Type),Cover)</visible>
 </include>
 
 <!-- Deck Name -->
 <include name="Deck_Name">
-	<posy>-25</posy>
+	<visible>!Skin.HasSetting(Deck_NoLabels)</visible>
+	<!--<posy>-25</posy>-->
+	<posy>-30</posy>
 	<width>200</width>
-	<font>MediumSmallTitleFont2</font>
+	<!--<font>MediumSmallTitleFont2</font>-->
+	<!--<font>Font_Bartowski_Main_Preplay</font>-->
+	<font>Font_Bartowski_Movies_Plot</font>
+
 	<include condition="!Skin.HasSetting(HomeNoAccentDeck)">HomeNoAccent</include>
 	<textcolor>ffffffff</textcolor>
 	<shadowcolor>FF222222</shadowcolor>
@@ -683,7 +1160,6 @@
 
 <!-- Deck Content -->
 <include name="Deck_Content">
-
 	<!-- Vertical Navigation -->
 	<onleft condition="!Skin.HasSetting(Home_Horizontal)">300</onleft>
 
@@ -744,7 +1220,7 @@
 		<width>110</width>
 		<height>170</height>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<texture border="5">base-rounded.png</texture>
+		<texture background="true" border="5">base-rounded.png</texture>
 		<colordiffuse>77000000</colordiffuse>
 	</control>
  	
@@ -762,7 +1238,7 @@
 		<width>110</width>
 		<height>170</height>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<texture border="5">base-rounded.png</texture>
+		<texture background="true" border="5">base-rounded.png</texture>
 		<colordiffuse>77000000</colordiffuse>
 	</control>
 
@@ -780,7 +1256,7 @@
 		<width>110</width>
 		<height>170</height>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<texture border="5">base-rounded.png</texture>
+		<texture background="true" border="5">base-rounded.png</texture>
 		<colordiffuse>77000000</colordiffuse>
 	</control>
 
@@ -798,7 +1274,7 @@
 		<width>110</width>
 		<height>170</height>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<texture border="5">base-rounded.png</texture>
+		<texture background="true" border="5">base-rounded.png</texture>
 		<colordiffuse>77000000</colordiffuse>
 	</control>
 
@@ -816,7 +1292,7 @@
 		<width>110</width>
 		<height>170</height>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<texture border="5">base-rounded.png</texture>
+		<texture background="true" border="5">base-rounded.png</texture>
 		<colordiffuse>77000000</colordiffuse>
 	</control>
 
@@ -834,7 +1310,7 @@
 		<width>110</width>
 		<height>170</height>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<texture border="5">base-rounded.png</texture>
+		<texture background="true" border="5">base-rounded.png</texture>
 		<colordiffuse>77000000</colordiffuse>
 	</control>
 
@@ -852,7 +1328,7 @@
 		<width>110</width>
 		<height>170</height>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<texture border="5">base-rounded.png</texture>
+		<texture background="true" border="5">base-rounded.png</texture>
 		<colordiffuse>77000000</colordiffuse>
 	</control>
 </include>

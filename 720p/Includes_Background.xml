@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Sun Apr 13 21:18:55 CEST 2014 -->
+<!-- Thu May 22 13:22:48 CEST 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -1024,6 +1024,62 @@
 </control>
 
 </include>
+<include name="Default_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Default_Fadetime))">Default_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Default_Fadetime))">Default_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Default_TimePerImage))">Default_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Default_TimePerImage))">Default_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Default_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Default_Single)) | !isEmpty(Skin.String(Default_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Default_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Default_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Default_Fadetime))">Default_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Default_Fadetime))">Default_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Default_TimePerImage))">Default_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Default_TimePerImage))">Default_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Default_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Default_Single)) + isEmpty(Skin.String(Default_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Default_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Default_Fadetime))">Default_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Default_Fadetime))">Default_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Default_TimePerImage))">Default_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Default_TimePerImage))">Default_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Default_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Default_Single)) + !isEmpty(Skin.String(Default_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Default_Grainy)</visible>
+	</control>
+</include>
 <include name="Home_Custom">
 	<!-- Custom Single -->
 	<control type="image">
@@ -1036,9 +1092,6 @@
 		<!-- Time per Image Option -->
 		<include condition="isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
 		<include condition="!isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
-		<!-- Opacity Option -->
-		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
-		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
 		<!-- Kenburns Option -->
 		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
 		<visible>!isEmpty(Skin.String(Home_Single)) + isEmpty(Skin.String(Home_Multi))</visible>
@@ -1053,9 +1106,6 @@
 		<!-- Time per Image Option -->
 		<include condition="isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
 		<include condition="!isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
-		<!-- Opacity Option -->
-		<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
-		<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
 		<!-- Kenburns Option -->
 		<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
 		<visible>isEmpty(Skin.String(Home_Single)) + !isEmpty(Skin.String(Home_Multi))</visible>
@@ -1169,7 +1219,8 @@
 	<!-- Default -->
 	<control type="image">
 		<include>background_default</include>
-		<texture background="true">backdrops/curtains.png</texture>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
 		<!-- Fadetime Option -->
 		<include condition="isEmpty(Skin.String(Settings_Fadetime))">Settings_Fadetime_Default</include>
 		<include condition="!isEmpty(Skin.String(Settings_Fadetime))">Settings_Fadetime</include>
@@ -1288,9 +1339,6 @@
 		<!-- Time per Image Option -->
 		<include condition="isEmpty(Skin.String(Search_TimePerImage))">Search_TimePerImage_Default</include>
 		<include condition="!isEmpty(Skin.String(Search_TimePerImage))">Search_TimePerImage</include>
-		<!-- Opacity Option -->
-		<include condition="isEmpty(Skin.String(Search_Opacity))">Search_Opacity_Default</include>
-		<include condition="!isEmpty(Skin.String(Search_Opacity))">Search_Opacity</include>
 		<!-- Kenburns Option -->
 		<include condition="Skin.HasSetting(Search_Kenburns)">background_kenburns</include>
 		<visible>!isEmpty(Skin.String(Search_Single)) + isEmpty(Skin.String(Search_Multi))</visible>
@@ -1305,9 +1353,6 @@
 		<!-- Time per Image Option -->
 		<include condition="isEmpty(Skin.String(Search_TimePerImage))">Search_TimePerImage_Default</include>
 		<include condition="!isEmpty(Skin.String(Search_TimePerImage))">Search_TimePerImage</include>
-		<!-- Opacity Option -->
-		<include condition="isEmpty(Skin.String(Search_Opacity))">Search_Opacity_Default</include>
-		<include condition="!isEmpty(Skin.String(Search_Opacity))">Search_Opacity</include>
 		<!-- Kenburns Option -->
 		<include condition="Skin.HasSetting(Search_Kenburns)">background_kenburns</include>
 		<visible>isEmpty(Skin.String(Search_Single)) + !isEmpty(Skin.String(Search_Multi))</visible>
@@ -1368,6 +1413,510 @@
 			<effect type="fade" start="100" end="0" time="600"/>
 		</animation>
 		<visible>Skin.HasSetting(OSD_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom1_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom1_Fadetime))">XBMC_Custom1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom1_Fadetime))">XBMC_Custom1_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom1_TimePerImage))">XBMC_Custom1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom1_TimePerImage))">XBMC_Custom1_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom1_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom1_Single)) | !isEmpty(Skin.String(XBMC_Custom1_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom1_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom1_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom1_Fadetime))">XBMC_Custom1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom1_Fadetime))">XBMC_Custom1_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom1_TimePerImage))">XBMC_Custom1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom1_TimePerImage))">XBMC_Custom1_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom1_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom1_Single)) + isEmpty(Skin.String(XBMC_Custom1_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom1_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom1_Fadetime))">XBMC_Custom1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom1_Fadetime))">XBMC_Custom1_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom1_TimePerImage))">XBMC_Custom1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom1_TimePerImage))">XBMC_Custom1_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom1_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom1_Single)) + !isEmpty(Skin.String(XBMC_Custom1_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom1_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom2_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom2_Fadetime))">XBMC_Custom2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom2_Fadetime))">XBMC_Custom2_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom2_TimePerImage))">XBMC_Custom2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom2_TimePerImage))">XBMC_Custom2_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom2_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom2_Single)) | !isEmpty(Skin.String(XBMC_Custom2_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom2_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom2_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom2_Fadetime))">XBMC_Custom2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom2_Fadetime))">XBMC_Custom2_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom2_TimePerImage))">XBMC_Custom2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom2_TimePerImage))">XBMC_Custom2_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom2_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom2_Single)) + isEmpty(Skin.String(XBMC_Custom2_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom2_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom2_Fadetime))">XBMC_Custom2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom2_Fadetime))">XBMC_Custom2_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom2_TimePerImage))">XBMC_Custom2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom2_TimePerImage))">XBMC_Custom2_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom2_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom2_Single)) + !isEmpty(Skin.String(XBMC_Custom2_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom2_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom3_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom3_Fadetime))">XBMC_Custom3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom3_Fadetime))">XBMC_Custom3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom3_TimePerImage))">XBMC_Custom3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom3_TimePerImage))">XBMC_Custom3_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom3_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom3_Single)) | !isEmpty(Skin.String(XBMC_Custom3_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom3_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom3_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom3_Fadetime))">XBMC_Custom3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom3_Fadetime))">XBMC_Custom3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom3_TimePerImage))">XBMC_Custom3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom3_TimePerImage))">XBMC_Custom3_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom3_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom3_Single)) + isEmpty(Skin.String(XBMC_Custom3_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom3_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom3_Fadetime))">XBMC_Custom3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom3_Fadetime))">XBMC_Custom3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom3_TimePerImage))">XBMC_Custom3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom3_TimePerImage))">XBMC_Custom3_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom3_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom3_Single)) + !isEmpty(Skin.String(XBMC_Custom3_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom3_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom4_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom4_Fadetime))">XBMC_Custom4_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom4_Fadetime))">XBMC_Custom4_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom4_TimePerImage))">XBMC_Custom4_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom4_TimePerImage))">XBMC_Custom4_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom4_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom4_Single)) | !isEmpty(Skin.String(XBMC_Custom4_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom4_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom4_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom4_Fadetime))">XBMC_Custom4_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom4_Fadetime))">XBMC_Custom4_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom4_TimePerImage))">XBMC_Custom4_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom4_TimePerImage))">XBMC_Custom4_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom4_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom4_Single)) + isEmpty(Skin.String(XBMC_Custom4_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom4_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom4_Fadetime))">XBMC_Custom4_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom4_Fadetime))">XBMC_Custom4_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom4_TimePerImage))">XBMC_Custom4_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom4_TimePerImage))">XBMC_Custom4_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom4_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom4_Single)) + !isEmpty(Skin.String(XBMC_Custom4_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom4_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom5_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom5_Fadetime))">XBMC_Custom5_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom5_Fadetime))">XBMC_Custom5_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom5_TimePerImage))">XBMC_Custom5_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom5_TimePerImage))">XBMC_Custom5_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom5_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom5_Single)) | !isEmpty(Skin.String(XBMC_Custom5_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom5_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom5_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom5_Fadetime))">XBMC_Custom5_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom5_Fadetime))">XBMC_Custom5_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom5_TimePerImage))">XBMC_Custom5_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom5_TimePerImage))">XBMC_Custom5_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom5_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom5_Single)) + isEmpty(Skin.String(XBMC_Custom5_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom5_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom5_Fadetime))">XBMC_Custom5_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom5_Fadetime))">XBMC_Custom5_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom5_TimePerImage))">XBMC_Custom5_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom5_TimePerImage))">XBMC_Custom5_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom5_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom5_Single)) + !isEmpty(Skin.String(XBMC_Custom5_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom5_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom6_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom6_Fadetime))">XBMC_Custom6_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom6_Fadetime))">XBMC_Custom6_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom6_TimePerImage))">XBMC_Custom6_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom6_TimePerImage))">XBMC_Custom6_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom6_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom6_Single)) | !isEmpty(Skin.String(XBMC_Custom6_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom6_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom6_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom6_Fadetime))">XBMC_Custom6_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom6_Fadetime))">XBMC_Custom6_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom6_TimePerImage))">XBMC_Custom6_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom6_TimePerImage))">XBMC_Custom6_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom6_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom6_Single)) + isEmpty(Skin.String(XBMC_Custom6_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom6_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom6_Fadetime))">XBMC_Custom6_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom6_Fadetime))">XBMC_Custom6_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom6_TimePerImage))">XBMC_Custom6_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom6_TimePerImage))">XBMC_Custom6_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom6_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom6_Single)) + !isEmpty(Skin.String(XBMC_Custom6_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom6_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom7_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom7_Fadetime))">XBMC_Custom7_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom7_Fadetime))">XBMC_Custom7_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom7_TimePerImage))">XBMC_Custom7_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom7_TimePerImage))">XBMC_Custom7_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom7_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom7_Single)) | !isEmpty(Skin.String(XBMC_Custom7_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom7_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom7_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom7_Fadetime))">XBMC_Custom7_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom7_Fadetime))">XBMC_Custom7_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom7_TimePerImage))">XBMC_Custom7_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom7_TimePerImage))">XBMC_Custom7_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom7_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom7_Single)) + isEmpty(Skin.String(XBMC_Custom7_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom7_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom7_Fadetime))">XBMC_Custom7_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom7_Fadetime))">XBMC_Custom7_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom7_TimePerImage))">XBMC_Custom7_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom7_TimePerImage))">XBMC_Custom7_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom7_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom7_Single)) + !isEmpty(Skin.String(XBMC_Custom7_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom7_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom8_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom8_Fadetime))">XBMC_Custom8_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom8_Fadetime))">XBMC_Custom8_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom8_TimePerImage))">XBMC_Custom8_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom8_TimePerImage))">XBMC_Custom8_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom8_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom8_Single)) | !isEmpty(Skin.String(XBMC_Custom8_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom8_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom8_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom8_Fadetime))">XBMC_Custom8_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom8_Fadetime))">XBMC_Custom8_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom8_TimePerImage))">XBMC_Custom8_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom8_TimePerImage))">XBMC_Custom8_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom8_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom8_Single)) + isEmpty(Skin.String(XBMC_Custom8_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom8_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom8_Fadetime))">XBMC_Custom8_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom8_Fadetime))">XBMC_Custom8_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom8_TimePerImage))">XBMC_Custom8_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom8_TimePerImage))">XBMC_Custom8_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom8_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom8_Single)) + !isEmpty(Skin.String(XBMC_Custom8_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom8_Grainy)</visible>
+	</control>
+</include>
+<include name="XBMC_Custom9_Custom">
+	<!-- Default -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<texture background="true">backdrops/curtains.png</texture>-->
+		<texture background="true">default-background.jpg</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom9_Fadetime))">XBMC_Custom9_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom9_Fadetime))">XBMC_Custom9_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom9_TimePerImage))">XBMC_Custom9_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom9_TimePerImage))">XBMC_Custom9_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom9_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(XBMC_Custom9_Single)) | !isEmpty(Skin.String(XBMC_Custom9_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(XBMC_Custom9_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(XBMC_Custom9_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom9_Fadetime))">XBMC_Custom9_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom9_Fadetime))">XBMC_Custom9_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom9_TimePerImage))">XBMC_Custom9_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom9_TimePerImage))">XBMC_Custom9_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom9_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(XBMC_Custom9_Single)) + isEmpty(Skin.String(XBMC_Custom9_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(XBMC_Custom9_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom9_Fadetime))">XBMC_Custom9_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom9_Fadetime))">XBMC_Custom9_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(XBMC_Custom9_TimePerImage))">XBMC_Custom9_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(XBMC_Custom9_TimePerImage))">XBMC_Custom9_TimePerImage</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(XBMC_Custom9_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(XBMC_Custom9_Single)) + !isEmpty(Skin.String(XBMC_Custom9_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(XBMC_Custom9_Grainy)</visible>
 	</control>
 </include>
 <include name="Background_Settings_Viewmodes">
@@ -8096,9 +8645,131 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 </include>
+<include name="Background_Settings_Default">
+	<!-- Default Background Toggle -->
+	<control type="radiobutton" id="5102">
+		<description>Default Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(Default_Enabled)</onclick>
+		<selected>Skin.HasSetting(Default_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5103">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(Default_Kenburns)</onclick>
+		<selected>Skin.HasSetting(Default_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5104">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(Default_Grainy)</onclick>
+		<selected>Skin.HasSetting(Default_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5105">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,Default)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(Default_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5106">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,Default)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(Default_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5107">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,Default)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(Default_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5108">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Default_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Default_Single)</onclick>
+		<selected>!isEmpty(Skin.String(Default_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled) + isEmpty(Skin.String(Default_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5109">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Default_Single)</onclick>
+		<selected>!isEmpty(Skin.String(Default_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled) + !isEmpty(Skin.String(Default_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5110">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Default_Single)</onclick>
+		<onclick>Skin.SetPath(Default_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(Default_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled) + isEmpty(Skin.String(Default_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5111">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Default_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(Default_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled) + !isEmpty(Skin.String(Default_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5112">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(Default_Single)</onclick>
+		<onclick>Skin.Reset(Default_Multi)</onclick>
+		<onclick>Skin.Reset(Default_Fadetime)</onclick>
+		<onclick>Skin.Reset(Default_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Default_Opacity)</onclick>
+		<onclick>Skin.Reset(Default_Grainy)</onclick>
+		<onclick>Skin.Reset(Default_Kenburns)</onclick>
+		<onclick>Skin.Reset(Default_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(Default_Enabled)</visible>
+	</control>
+</include>
 <include name="Background_Settings_Home">
 	<!-- Home Background Toggle -->
-	<control type="radiobutton" id="302">
+	<control type="radiobutton" id="5122">
 		<description>Home Enable Toggle</description>
 		<include>skin_settings_labels</include>
 		<label>24022</label> <!-- Enable -->
@@ -8106,7 +8777,7 @@
 		<selected>Skin.HasSetting(Home_Enabled)</selected>
 	</control>
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="303">
+	<control type="radiobutton" id="5123">
 		<textoffset>50</textoffset>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -8116,7 +8787,7 @@
 		<visible>Skin.HasSetting(Home_Enabled)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="304">
+	<control type="radiobutton" id="5124">
 		<textoffset>50</textoffset>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -8126,7 +8797,7 @@
 		<visible>Skin.HasSetting(Home_Enabled)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="305">
+	<control type="radiobutton" id="5125">
 		<textoffset>50</textoffset>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -8138,7 +8809,7 @@
 		<visible>Skin.HasSetting(Home_Enabled)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="306">
+	<control type="radiobutton" id="5126">
 		<textoffset>50</textoffset>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -8150,7 +8821,7 @@
 		<visible>Skin.HasSetting(Home_Enabled)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="307">
+	<control type="radiobutton" id="5127">
 		<textoffset>50</textoffset>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -8162,7 +8833,7 @@
 		<visible>Skin.HasSetting(Home_Enabled)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="308">
+	<control type="radiobutton" id="5128">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8172,7 +8843,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Home_Enabled) + isEmpty(Skin.String(Home_Single))</visible>
 	</control>
-	<control type="radiobutton" id="309">
+	<control type="radiobutton" id="5129">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8182,7 +8853,7 @@
 		<visible>Skin.HasSetting(Home_Enabled) + !isEmpty(Skin.String(Home_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="310">
+	<control type="radiobutton" id="5130">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8192,7 +8863,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Home_Enabled) + isEmpty(Skin.String(Home_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="311">
+	<control type="radiobutton" id="5131">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8202,7 +8873,7 @@
 		<visible>Skin.HasSetting(Home_Enabled) + !isEmpty(Skin.String(Home_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="312">
+	<control type="radiobutton" id="5132">
 		<textoffset>50</textoffset>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Home_Single)</onclick>
@@ -8220,7 +8891,7 @@
 </include>
 <include name="Background_Settings_Deck">
 	<!-- Deck Background Toggle -->
-	<control type="radiobutton" id="322">
+	<control type="radiobutton" id="5142">
 		<description>Deck Enable Toggle</description>
 		<include>skin_settings_labels</include>
 		<label>24022</label> <!-- Enable -->
@@ -8228,7 +8899,7 @@
 		<selected>Skin.HasSetting(Deck_Enabled)</selected>
 	</control>
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="323">
+	<control type="radiobutton" id="5143">
 		<textoffset>50</textoffset>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -8238,7 +8909,7 @@
 		<visible>Skin.HasSetting(Deck_Enabled)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="324">
+	<control type="radiobutton" id="5144">
 		<textoffset>50</textoffset>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -8248,7 +8919,7 @@
 		<visible>Skin.HasSetting(Deck_Enabled)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="325">
+	<control type="radiobutton" id="5145">
 		<textoffset>50</textoffset>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -8260,7 +8931,7 @@
 		<visible>Skin.HasSetting(Deck_Enabled)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="326">
+	<control type="radiobutton" id="5146">
 		<textoffset>50</textoffset>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -8272,7 +8943,7 @@
 		<visible>Skin.HasSetting(Deck_Enabled)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="327">
+	<control type="radiobutton" id="5147">
 		<textoffset>50</textoffset>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -8284,7 +8955,7 @@
 		<visible>Skin.HasSetting(Deck_Enabled)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="328">
+	<control type="radiobutton" id="5148">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8294,7 +8965,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Deck_Enabled) + isEmpty(Skin.String(Deck_Single))</visible>
 	</control>
-	<control type="radiobutton" id="329">
+	<control type="radiobutton" id="5149">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8304,7 +8975,7 @@
 		<visible>Skin.HasSetting(Deck_Enabled) + !isEmpty(Skin.String(Deck_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="330">
+	<control type="radiobutton" id="5150">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8314,7 +8985,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Deck_Enabled) + isEmpty(Skin.String(Deck_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="331">
+	<control type="radiobutton" id="5151">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8324,7 +8995,7 @@
 		<visible>Skin.HasSetting(Deck_Enabled) + !isEmpty(Skin.String(Deck_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="332">
+	<control type="radiobutton" id="5152">
 		<textoffset>50</textoffset>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Deck_Single)</onclick>
@@ -8342,7 +9013,7 @@
 </include>
 <include name="Background_Settings_Preplay">
 	<!-- Preplay Background Toggle -->
-	<control type="radiobutton" id="342">
+	<control type="radiobutton" id="5162">
 		<description>Preplay Enable Toggle</description>
 		<include>skin_settings_labels</include>
 		<label>24022</label> <!-- Enable -->
@@ -8350,7 +9021,7 @@
 		<selected>Skin.HasSetting(Preplay_Enabled)</selected>
 	</control>
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="343">
+	<control type="radiobutton" id="5163">
 		<textoffset>50</textoffset>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -8360,7 +9031,7 @@
 		<visible>Skin.HasSetting(Preplay_Enabled)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="344">
+	<control type="radiobutton" id="5164">
 		<textoffset>50</textoffset>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -8370,7 +9041,7 @@
 		<visible>Skin.HasSetting(Preplay_Enabled)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="345">
+	<control type="radiobutton" id="5165">
 		<textoffset>50</textoffset>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -8382,7 +9053,7 @@
 		<visible>Skin.HasSetting(Preplay_Enabled)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="346">
+	<control type="radiobutton" id="5166">
 		<textoffset>50</textoffset>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -8394,7 +9065,7 @@
 		<visible>Skin.HasSetting(Preplay_Enabled)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="347">
+	<control type="radiobutton" id="5167">
 		<textoffset>50</textoffset>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -8406,7 +9077,7 @@
 		<visible>Skin.HasSetting(Preplay_Enabled)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="348">
+	<control type="radiobutton" id="5168">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8416,7 +9087,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Preplay_Enabled) + isEmpty(Skin.String(Preplay_Single))</visible>
 	</control>
-	<control type="radiobutton" id="349">
+	<control type="radiobutton" id="5169">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8426,7 +9097,7 @@
 		<visible>Skin.HasSetting(Preplay_Enabled) + !isEmpty(Skin.String(Preplay_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="350">
+	<control type="radiobutton" id="5170">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8436,7 +9107,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Preplay_Enabled) + isEmpty(Skin.String(Preplay_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="351">
+	<control type="radiobutton" id="5171">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8446,7 +9117,7 @@
 		<visible>Skin.HasSetting(Preplay_Enabled) + !isEmpty(Skin.String(Preplay_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="352">
+	<control type="radiobutton" id="5172">
 		<textoffset>50</textoffset>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Preplay_Single)</onclick>
@@ -8464,7 +9135,7 @@
 </include>
 <include name="Background_Settings_Settings">
 	<!-- Settings Background Toggle -->
-	<control type="radiobutton" id="362">
+	<control type="radiobutton" id="5182">
 		<description>Settings Enable Toggle</description>
 		<include>skin_settings_labels</include>
 		<label>24022</label> <!-- Enable -->
@@ -8472,7 +9143,7 @@
 		<selected>Skin.HasSetting(Settings_Enabled)</selected>
 	</control>
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="363">
+	<control type="radiobutton" id="5183">
 		<textoffset>50</textoffset>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -8482,7 +9153,7 @@
 		<visible>Skin.HasSetting(Settings_Enabled)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="364">
+	<control type="radiobutton" id="5184">
 		<textoffset>50</textoffset>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -8492,7 +9163,7 @@
 		<visible>Skin.HasSetting(Settings_Enabled)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="365">
+	<control type="radiobutton" id="5185">
 		<textoffset>50</textoffset>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -8504,7 +9175,7 @@
 		<visible>Skin.HasSetting(Settings_Enabled)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="366">
+	<control type="radiobutton" id="5186">
 		<textoffset>50</textoffset>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -8516,7 +9187,7 @@
 		<visible>Skin.HasSetting(Settings_Enabled)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="367">
+	<control type="radiobutton" id="5187">
 		<textoffset>50</textoffset>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -8528,7 +9199,7 @@
 		<visible>Skin.HasSetting(Settings_Enabled)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="368">
+	<control type="radiobutton" id="5188">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8538,7 +9209,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Settings_Enabled) + isEmpty(Skin.String(Settings_Single))</visible>
 	</control>
-	<control type="radiobutton" id="369">
+	<control type="radiobutton" id="5189">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8548,7 +9219,7 @@
 		<visible>Skin.HasSetting(Settings_Enabled) + !isEmpty(Skin.String(Settings_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="370">
+	<control type="radiobutton" id="5190">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8558,7 +9229,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Settings_Enabled) + isEmpty(Skin.String(Settings_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="371">
+	<control type="radiobutton" id="5191">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8568,7 +9239,7 @@
 		<visible>Skin.HasSetting(Settings_Enabled) + !isEmpty(Skin.String(Settings_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="372">
+	<control type="radiobutton" id="5192">
 		<textoffset>50</textoffset>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Settings_Single)</onclick>
@@ -8586,7 +9257,7 @@
 </include>
 <include name="Background_Settings_NowPlaying">
 	<!-- NowPlaying Background Toggle -->
-	<control type="radiobutton" id="382">
+	<control type="radiobutton" id="5202">
 		<description>NowPlaying Enable Toggle</description>
 		<include>skin_settings_labels</include>
 		<label>24022</label> <!-- Enable -->
@@ -8594,7 +9265,7 @@
 		<selected>Skin.HasSetting(NowPlaying_Enabled)</selected>
 	</control>
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="383">
+	<control type="radiobutton" id="5203">
 		<textoffset>50</textoffset>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -8604,7 +9275,7 @@
 		<visible>Skin.HasSetting(NowPlaying_Enabled)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="384">
+	<control type="radiobutton" id="5204">
 		<textoffset>50</textoffset>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -8614,7 +9285,7 @@
 		<visible>Skin.HasSetting(NowPlaying_Enabled)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="385">
+	<control type="radiobutton" id="5205">
 		<textoffset>50</textoffset>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -8626,7 +9297,7 @@
 		<visible>Skin.HasSetting(NowPlaying_Enabled)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="386">
+	<control type="radiobutton" id="5206">
 		<textoffset>50</textoffset>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -8638,7 +9309,7 @@
 		<visible>Skin.HasSetting(NowPlaying_Enabled)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="387">
+	<control type="radiobutton" id="5207">
 		<textoffset>50</textoffset>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -8650,7 +9321,7 @@
 		<visible>Skin.HasSetting(NowPlaying_Enabled)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="388">
+	<control type="radiobutton" id="5208">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8660,7 +9331,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(NowPlaying_Enabled) + isEmpty(Skin.String(NowPlaying_Single))</visible>
 	</control>
-	<control type="radiobutton" id="389">
+	<control type="radiobutton" id="5209">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8670,7 +9341,7 @@
 		<visible>Skin.HasSetting(NowPlaying_Enabled) + !isEmpty(Skin.String(NowPlaying_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="390">
+	<control type="radiobutton" id="5210">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8680,7 +9351,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(NowPlaying_Enabled) + isEmpty(Skin.String(NowPlaying_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="391">
+	<control type="radiobutton" id="5211">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8690,7 +9361,7 @@
 		<visible>Skin.HasSetting(NowPlaying_Enabled) + !isEmpty(Skin.String(NowPlaying_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="392">
+	<control type="radiobutton" id="5212">
 		<textoffset>50</textoffset>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(NowPlaying_Single)</onclick>
@@ -8708,7 +9379,7 @@
 </include>
 <include name="Background_Settings_Search">
 	<!-- Search Background Toggle -->
-	<control type="radiobutton" id="402">
+	<control type="radiobutton" id="5222">
 		<description>Search Enable Toggle</description>
 		<include>skin_settings_labels</include>
 		<label>24022</label> <!-- Enable -->
@@ -8716,7 +9387,7 @@
 		<selected>Skin.HasSetting(Search_Enabled)</selected>
 	</control>
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="403">
+	<control type="radiobutton" id="5223">
 		<textoffset>50</textoffset>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -8726,7 +9397,7 @@
 		<visible>Skin.HasSetting(Search_Enabled)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="404">
+	<control type="radiobutton" id="5224">
 		<textoffset>50</textoffset>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -8736,7 +9407,7 @@
 		<visible>Skin.HasSetting(Search_Enabled)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="405">
+	<control type="radiobutton" id="5225">
 		<textoffset>50</textoffset>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -8748,7 +9419,7 @@
 		<visible>Skin.HasSetting(Search_Enabled)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="406">
+	<control type="radiobutton" id="5226">
 		<textoffset>50</textoffset>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -8760,7 +9431,7 @@
 		<visible>Skin.HasSetting(Search_Enabled)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="407">
+	<control type="radiobutton" id="5227">
 		<textoffset>50</textoffset>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -8772,7 +9443,7 @@
 		<visible>Skin.HasSetting(Search_Enabled)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="408">
+	<control type="radiobutton" id="5228">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8782,7 +9453,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Search_Enabled) + isEmpty(Skin.String(Search_Single))</visible>
 	</control>
-	<control type="radiobutton" id="409">
+	<control type="radiobutton" id="5229">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8792,7 +9463,7 @@
 		<visible>Skin.HasSetting(Search_Enabled) + !isEmpty(Skin.String(Search_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="410">
+	<control type="radiobutton" id="5230">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8802,7 +9473,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(Search_Enabled) + isEmpty(Skin.String(Search_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="411">
+	<control type="radiobutton" id="5231">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8812,7 +9483,7 @@
 		<visible>Skin.HasSetting(Search_Enabled) + !isEmpty(Skin.String(Search_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="412">
+	<control type="radiobutton" id="5232">
 		<textoffset>50</textoffset>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Search_Single)</onclick>
@@ -8830,7 +9501,7 @@
 </include>
 <include name="Background_Settings_OSD">
 	<!-- OSD Background Toggle -->
-	<control type="radiobutton" id="422">
+	<control type="radiobutton" id="5242">
 		<description>OSD Enable Toggle</description>
 		<include>skin_settings_labels</include>
 		<label>24022</label> <!-- Enable -->
@@ -8838,7 +9509,7 @@
 		<selected>Skin.HasSetting(OSD_Enabled)</selected>
 	</control>
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="423">
+	<control type="radiobutton" id="5243">
 		<textoffset>50</textoffset>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -8848,7 +9519,7 @@
 		<visible>Skin.HasSetting(OSD_Enabled)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="424">
+	<control type="radiobutton" id="5244">
 		<textoffset>50</textoffset>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -8858,7 +9529,7 @@
 		<visible>Skin.HasSetting(OSD_Enabled)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="425">
+	<control type="radiobutton" id="5245">
 		<textoffset>50</textoffset>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -8870,7 +9541,7 @@
 		<visible>Skin.HasSetting(OSD_Enabled)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="426">
+	<control type="radiobutton" id="5246">
 		<textoffset>50</textoffset>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -8882,7 +9553,7 @@
 		<visible>Skin.HasSetting(OSD_Enabled)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="427">
+	<control type="radiobutton" id="5247">
 		<textoffset>50</textoffset>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -8894,7 +9565,7 @@
 		<visible>Skin.HasSetting(OSD_Enabled)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="428">
+	<control type="radiobutton" id="5248">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8904,7 +9575,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(OSD_Enabled) + isEmpty(Skin.String(OSD_Single))</visible>
 	</control>
-	<control type="radiobutton" id="429">
+	<control type="radiobutton" id="5249">
 		<textoffset>50</textoffset>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -8914,7 +9585,7 @@
 		<visible>Skin.HasSetting(OSD_Enabled) + !isEmpty(Skin.String(OSD_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="430">
+	<control type="radiobutton" id="5250">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8924,7 +9595,7 @@
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(OSD_Enabled) + isEmpty(Skin.String(OSD_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="431">
+	<control type="radiobutton" id="5251">
 		<textoffset>50</textoffset>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -8934,7 +9605,7 @@
 		<visible>Skin.HasSetting(OSD_Enabled) + !isEmpty(Skin.String(OSD_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="432">
+	<control type="radiobutton" id="5252">
 		<textoffset>50</textoffset>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(OSD_Single)</onclick>
@@ -8948,6 +9619,1104 @@
 		<selected>-</selected>
 		<include>skin_settings_labels</include>
 		<visible>Skin.HasSetting(OSD_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom1">
+	<!-- XBMC_Custom1 Background Toggle -->
+	<control type="radiobutton" id="5262">
+		<description>XBMC_Custom1 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom1_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom1_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5263">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom1_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom1_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5264">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom1_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom1_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5265">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom1)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom1_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5266">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom1)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom1_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5267">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom1)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom1_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5268">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom1_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom1_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom1_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled) + isEmpty(Skin.String(XBMC_Custom1_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5269">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom1_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom1_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled) + !isEmpty(Skin.String(XBMC_Custom1_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5270">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom1_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom1_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom1_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled) + isEmpty(Skin.String(XBMC_Custom1_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5271">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom1_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom1_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled) + !isEmpty(Skin.String(XBMC_Custom1_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5272">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom1_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom1_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom1_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom1_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom1_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom1_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom1_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom1_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom1_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom2">
+	<!-- XBMC_Custom2 Background Toggle -->
+	<control type="radiobutton" id="5282">
+		<description>XBMC_Custom2 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom2_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom2_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5283">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom2_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom2_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5284">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom2_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom2_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5285">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom2)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom2_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5286">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom2)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom2_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5287">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom2)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom2_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5288">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom2_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom2_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom2_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled) + isEmpty(Skin.String(XBMC_Custom2_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5289">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom2_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom2_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled) + !isEmpty(Skin.String(XBMC_Custom2_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5290">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom2_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom2_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom2_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled) + isEmpty(Skin.String(XBMC_Custom2_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5291">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom2_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom2_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled) + !isEmpty(Skin.String(XBMC_Custom2_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5292">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom2_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom2_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom2_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom2_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom2_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom2_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom2_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom2_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom2_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom3">
+	<!-- XBMC_Custom3 Background Toggle -->
+	<control type="radiobutton" id="5302">
+		<description>XBMC_Custom3 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom3_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom3_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5303">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom3_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom3_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5304">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom3_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom3_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5305">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom3)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom3_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5306">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom3)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom3_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5307">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom3)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom3_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5308">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom3_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom3_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom3_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled) + isEmpty(Skin.String(XBMC_Custom3_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5309">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom3_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom3_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled) + !isEmpty(Skin.String(XBMC_Custom3_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5310">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom3_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom3_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom3_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled) + isEmpty(Skin.String(XBMC_Custom3_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5311">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom3_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom3_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled) + !isEmpty(Skin.String(XBMC_Custom3_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5312">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom3_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom3_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom3_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom3_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom3_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom3_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom3_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom3_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom3_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom4">
+	<!-- XBMC_Custom4 Background Toggle -->
+	<control type="radiobutton" id="5322">
+		<description>XBMC_Custom4 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom4_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom4_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5323">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom4_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom4_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5324">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom4_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom4_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5325">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom4)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom4_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5326">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom4)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom4_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5327">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom4)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom4_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5328">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom4_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom4_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom4_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled) + isEmpty(Skin.String(XBMC_Custom4_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5329">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom4_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom4_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled) + !isEmpty(Skin.String(XBMC_Custom4_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5330">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom4_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom4_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom4_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled) + isEmpty(Skin.String(XBMC_Custom4_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5331">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom4_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom4_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled) + !isEmpty(Skin.String(XBMC_Custom4_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5332">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom4_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom4_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom4_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom4_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom4_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom4_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom4_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom4_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom4_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom5">
+	<!-- XBMC_Custom5 Background Toggle -->
+	<control type="radiobutton" id="5342">
+		<description>XBMC_Custom5 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom5_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom5_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5343">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom5_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom5_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5344">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom5_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom5_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5345">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom5)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom5_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5346">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom5)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom5_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5347">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom5)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom5_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5348">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom5_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom5_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom5_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled) + isEmpty(Skin.String(XBMC_Custom5_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5349">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom5_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom5_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled) + !isEmpty(Skin.String(XBMC_Custom5_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5350">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom5_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom5_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom5_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled) + isEmpty(Skin.String(XBMC_Custom5_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5351">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom5_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom5_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled) + !isEmpty(Skin.String(XBMC_Custom5_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5352">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom5_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom5_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom5_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom5_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom5_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom5_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom5_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom5_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom5_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom6">
+	<!-- XBMC_Custom6 Background Toggle -->
+	<control type="radiobutton" id="5362">
+		<description>XBMC_Custom6 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom6_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom6_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5363">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom6_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom6_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5364">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom6_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom6_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5365">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom6)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom6_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5366">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom6)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom6_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5367">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom6)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom6_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5368">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom6_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom6_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom6_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled) + isEmpty(Skin.String(XBMC_Custom6_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5369">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom6_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom6_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled) + !isEmpty(Skin.String(XBMC_Custom6_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5370">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom6_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom6_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom6_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled) + isEmpty(Skin.String(XBMC_Custom6_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5371">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom6_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom6_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled) + !isEmpty(Skin.String(XBMC_Custom6_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5372">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom6_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom6_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom6_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom6_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom6_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom6_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom6_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom6_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom6_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom7">
+	<!-- XBMC_Custom7 Background Toggle -->
+	<control type="radiobutton" id="5382">
+		<description>XBMC_Custom7 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom7_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom7_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5383">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom7_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom7_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5384">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom7_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom7_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5385">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom7)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom7_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5386">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom7)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom7_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5387">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom7)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom7_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5388">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom7_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom7_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom7_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled) + isEmpty(Skin.String(XBMC_Custom7_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5389">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom7_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom7_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled) + !isEmpty(Skin.String(XBMC_Custom7_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5390">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom7_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom7_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom7_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled) + isEmpty(Skin.String(XBMC_Custom7_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5391">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom7_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom7_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled) + !isEmpty(Skin.String(XBMC_Custom7_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5392">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom7_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom7_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom7_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom7_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom7_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom7_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom7_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom7_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom7_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom8">
+	<!-- XBMC_Custom8 Background Toggle -->
+	<control type="radiobutton" id="5402">
+		<description>XBMC_Custom8 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom8_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom8_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5403">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom8_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom8_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5404">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom8_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom8_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5405">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom8)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom8_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5406">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom8)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom8_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5407">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom8)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom8_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5408">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom8_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom8_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom8_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled) + isEmpty(Skin.String(XBMC_Custom8_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5409">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom8_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom8_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled) + !isEmpty(Skin.String(XBMC_Custom8_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5410">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom8_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom8_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom8_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled) + isEmpty(Skin.String(XBMC_Custom8_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5411">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom8_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom8_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled) + !isEmpty(Skin.String(XBMC_Custom8_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5412">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom8_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom8_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom8_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom8_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom8_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom8_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom8_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom8_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom8_Enabled)</visible>
+	</control>
+</include>
+<include name="Background_Settings_XBMC_Custom9">
+	<!-- XBMC_Custom9 Background Toggle -->
+	<control type="radiobutton" id="5422">
+		<description>XBMC_Custom9 Enable Toggle</description>
+		<include>skin_settings_labels</include>
+		<label>24022</label> <!-- Enable -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom9_Enabled)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom9_Enabled)</selected>
+	</control>
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="5423">
+		<textoffset>50</textoffset>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom9_Kenburns)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom9_Kenburns)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="5424">
+		<textoffset>50</textoffset>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(XBMC_Custom9_Grainy)</onclick>
+		<selected>Skin.HasSetting(XBMC_Custom9_Grainy)</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="5425">
+		<textoffset>50</textoffset>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom9)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom9_Fadetime))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="5426">
+		<textoffset>50</textoffset>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom9)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom9_TimePerImage))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="5427">
+		<textoffset>50</textoffset>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,XBMC_Custom9)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom9_Opacity))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="5428">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom9_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(XBMC_Custom9_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom9_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled) + isEmpty(Skin.String(XBMC_Custom9_Single))</visible>
+	</control>
+	<control type="radiobutton" id="5429">
+		<textoffset>50</textoffset>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(XBMC_Custom9_Single)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom9_Single))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled) + !isEmpty(Skin.String(XBMC_Custom9_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="5430">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom9_Single)</onclick>
+		<onclick>Skin.SetPath(XBMC_Custom9_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom9_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled) + isEmpty(Skin.String(XBMC_Custom9_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="5431">
+		<textoffset>50</textoffset>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(XBMC_Custom9_Multi)</onclick>
+		<selected>!isEmpty(Skin.String(XBMC_Custom9_Multi))</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled) + !isEmpty(Skin.String(XBMC_Custom9_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="5432">
+		<textoffset>50</textoffset>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(XBMC_Custom9_Single)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom9_Multi)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom9_Fadetime)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom9_TimePerImage)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom9_Opacity)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom9_Grainy)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom9_Kenburns)</onclick>
+		<onclick>Skin.Reset(XBMC_Custom9_Enabled)</onclick>
+		<selected>-</selected>
+		<include>skin_settings_labels</include>
+		<visible>Skin.HasSetting(XBMC_Custom9_Enabled)</visible>
 	</control>
 </include>
 <include name="Viewmode_Visible_Plot">
@@ -9900,6 +11669,68 @@
 </include>
 
 
+<!-- Viewtype Default (0) -->
+<include name="Default_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Default_TimePerImage">
+	<include condition="Skin.String(Default_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Default_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Default_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Default_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Default_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Default_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Default_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Default_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Default_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Default_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Default_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Default_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Default_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Default_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Default_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Default_Fadetime">
+	<include condition="Skin.String(Default_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Default_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Default_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Default_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Default_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Default_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Default_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Default_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Default_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Default_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Default_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Default_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Default_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Default_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Default_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Default_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Default_Opacity_Default">
+	<animation effect="fade" start="0" end="50" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="Default_Opacity">
+	<include condition="Skin.String(Default_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Default_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Default_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Default_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Default_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Default_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Default_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Default_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Default_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Default_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Default_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
 <!-- Viewtype Home (0) -->
 <include name="Home_TimePerImage_Default">
 	<timeperimage>8000</timeperimage>
@@ -9942,24 +11773,23 @@
 	<include condition="Skin.String(Home_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="Home_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="600" delay="0" condition="true">Conditional</animation>
-	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="600" delay="0">Hidden</animation>
 </include>
 <include name="Home_Opacity">
-	<include condition="Skin.String(Home_Opacity,0)">background_opacity_0_force</include>		
-	<include condition="Skin.String(Home_Opacity,10)">background_opacity_10_force</include>		
-	<include condition="Skin.String(Home_Opacity,20)">background_opacity_20_force</include>		
-	<include condition="Skin.String(Home_Opacity,30)">background_opacity_30_force</include>		
-	<include condition="Skin.String(Home_Opacity,40)">background_opacity_40_force</include>		
-	<include condition="Skin.String(Home_Opacity,50)">background_opacity_50_force</include>		
-	<include condition="Skin.String(Home_Opacity,60)">background_opacity_60_force</include>		
-	<include condition="Skin.String(Home_Opacity,70)">background_opacity_70_force</include>		
-	<include condition="Skin.String(Home_Opacity,80)">background_opacity_80_force</include>		
-	<include condition="Skin.String(Home_Opacity,90)">background_opacity_90_force</include>		
-	<include condition="Skin.String(Home_Opacity,100)">background_opacity_100_force</include>		
+	<include condition="Skin.String(Home_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Home_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Home_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Home_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Home_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Home_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Home_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Home_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Home_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Home_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Home_Opacity,100)">background_opacity_100</include>		
 </include>
 
 
@@ -10129,10 +11959,10 @@
 	<include condition="Skin.String(Settings_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="Settings_Opacity_Default">
-	<animation effect="fade" start="0" end="30" time="600" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="30" end="0" time="600" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="30" time="600" delay="0">Visible</animation>
-	<animation effect="fade" start="30" end="0" time="600" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="40" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="40" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="40" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="40" end="0" time="600" delay="0">Hidden</animation>
 </include>
 <include name="Settings_Opacity">
 	<include condition="Skin.String(Settings_Opacity,0)">background_opacity_0</include>		
@@ -10191,10 +12021,10 @@
 	<include condition="Skin.String(NowPlaying_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="NowPlaying_Opacity_Default">
-	<animation effect="fade" start="0" end="30" time="600" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="30" end="0" time="600" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="30" time="600" delay="0">Visible</animation>
-	<animation effect="fade" start="30" end="0" time="600" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="40" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="40" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="40" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="40" end="0" time="600" delay="0">Hidden</animation>
 </include>
 <include name="NowPlaying_Opacity">
 	<include condition="Skin.String(NowPlaying_Opacity,0)">background_opacity_0</include>		
@@ -10253,10 +12083,10 @@
 	<include condition="Skin.String(Search_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="Search_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="600" delay="0">Hidden</animation>
 </include>
 <include name="Search_Opacity">
 	<include condition="Skin.String(Search_Opacity,0)">background_opacity_0</include>		
@@ -10332,6 +12162,564 @@
 	<include condition="Skin.String(OSD_Opacity,80)">background_opacity_80</include>		
 	<include condition="Skin.String(OSD_Opacity,90)">background_opacity_90</include>		
 	<include condition="Skin.String(OSD_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom1 (0) -->
+<include name="XBMC_Custom1_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom1_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom1_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom1_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom1_Fadetime">
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom1_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom1_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom1_Opacity">
+	<include condition="Skin.String(XBMC_Custom1_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom1_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom2 (0) -->
+<include name="XBMC_Custom2_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom2_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom2_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom2_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom2_Fadetime">
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom2_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom2_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom2_Opacity">
+	<include condition="Skin.String(XBMC_Custom2_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom2_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom3 (0) -->
+<include name="XBMC_Custom3_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom3_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom3_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom3_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom3_Fadetime">
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom3_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom3_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom3_Opacity">
+	<include condition="Skin.String(XBMC_Custom3_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom3_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom4 (0) -->
+<include name="XBMC_Custom4_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom4_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom4_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom4_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom4_Fadetime">
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom4_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom4_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom4_Opacity">
+	<include condition="Skin.String(XBMC_Custom4_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom4_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom5 (0) -->
+<include name="XBMC_Custom5_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom5_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom5_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom5_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom5_Fadetime">
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom5_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom5_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom5_Opacity">
+	<include condition="Skin.String(XBMC_Custom5_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom5_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom6 (0) -->
+<include name="XBMC_Custom6_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom6_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom6_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom6_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom6_Fadetime">
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom6_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom6_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom6_Opacity">
+	<include condition="Skin.String(XBMC_Custom6_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom6_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom7 (0) -->
+<include name="XBMC_Custom7_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom7_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom7_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom7_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom7_Fadetime">
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom7_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom7_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom7_Opacity">
+	<include condition="Skin.String(XBMC_Custom7_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom7_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom8 (0) -->
+<include name="XBMC_Custom8_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom8_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom8_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom8_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom8_Fadetime">
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom8_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom8_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom8_Opacity">
+	<include condition="Skin.String(XBMC_Custom8_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom8_Opacity,100)">background_opacity_100</include>		
+</include>
+
+
+<!-- Viewtype XBMC_Custom9 (0) -->
+<include name="XBMC_Custom9_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="XBMC_Custom9_TimePerImage">
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(XBMC_Custom9_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="XBMC_Custom9_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="XBMC_Custom9_Fadetime">
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(XBMC_Custom9_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="XBMC_Custom9_Opacity_Default">
+	<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
+	<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+</include>
+<include name="XBMC_Custom9_Opacity">
+	<include condition="Skin.String(XBMC_Custom9_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(XBMC_Custom9_Opacity,100)">background_opacity_100</include>		
 </include>
 
 </includes>

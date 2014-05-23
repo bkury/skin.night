@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="100">
 	<defaultcontrol>100</defaultcontrol>
 	<onunload>Skin.SetString(mysharedcontent_servername,$INFO[ListItem.Property(sourceTitle)])</onunload>
@@ -12,144 +12,13 @@
 		<include>Deck_Custom</include>
 	</control>
 
-	<!-- Background -->
 	<control type="group">
-		<!-- Shared Content Multiple Poster Background -->
-		<control type="grouplist">
-			<visible>!Container.OnNext + !Container.OnPrevious</visible>
-			<visible>![ Skin.HasSetting(mysharedcontent_helper) + [ !isEmpty(Skin.String(Deck_Single)) | !isEmpty(Skin.String(Deck_Multi))] ]</visible>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<posx>0</posx>
-			<posy>0</posy>
-			<animation effect="fade" start="0" end="60" time="400" delay="300" condition="Control.HasFocus(56)" reversible="false">Conditional</animation>
-			<animation effect="fade" start="0" end="60" time="1000" delay="0">WindowOpen</animation>
-			<animation effect="fade" start="0" end="60" time="800" delay="0">Visible</animation>
-			<animation effect="fade" start="60" end="0" time="0">Hidden</animation>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb0]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb0)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb2]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb2)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb4]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb4)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb4]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb4)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb1]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb1)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb1]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb1)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb3]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb3)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb3]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb3)</visible>
-			</control>
-		</control>
-		<control type="grouplist">
-			<visible>!Container.OnNext + !Container.OnPrevious</visible>
-			<visible>![ Skin.HasSetting(mysharedcontent_helper) + [ !isEmpty(Skin.String(Deck_Single)) | !isEmpty(Skin.String(Deck_Multi))] ]</visible>
-			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
-			<posx>0</posx>
-			<posy>360</posy>
-			<animation effect="fade" start="0" end="60" time="400" delay="300" condition="Control.HasFocus(56)" reversible="false">Conditional</animation>
-			<animation effect="fade" start="0" end="60" time="1000" delay="0">WindowOpen</animation>
-			<animation effect="fade" start="0" end="60" time="800" delay="0">Visible</animation>
-			<animation effect="fade" start="60" end="0" time="0">Hidden</animation>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb3]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb3)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb5]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb5)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb1]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb1)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb4]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb4)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb1]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb1)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb1]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb1)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(1).Thumb3]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(1).Thumb3)</visible>
-			</control>
-			<control type="image">
-				<width max="500">auto</width>
-				<height>360</height>
-				<texture background="true">$INFO[ListItem(0).Thumb3]</texture>
-				<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-				<visible>!IsEmpty(ListItem(0).Thumb3)</visible>
-			</control>
+
+		<!-- Background -->
+		<control type="image">
+			<include>background_default</include>
+			<texture background="true">bg-myplex.png</texture>
+			<include>Animation_CommonFade_600</include>
 		</control>
 
 		<!-- Vignette Background -->
@@ -161,6 +30,7 @@
                         <colordiffuse>ff15efd9</colordiffuse>
                         <include>Animation_CommonFadeNoHide</include>
                         <visible>!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(mysharedcontent_helper)</visible>
+			<include>Animation_CommonFade_600</include>
                 </control>
 
 		<!-- Navigation Arrow -->

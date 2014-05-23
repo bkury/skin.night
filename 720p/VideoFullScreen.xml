@@ -1,4 +1,4 @@
-<!--Alaska-->
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="2005">
 	<controls>
 	<!-- codec infos -->
@@ -74,6 +74,6 @@
 			<textcolor>ListTitleNF</textcolor>
 			<font>Font_RSS_Unicode</font>
 		</control>-->
-		<include>Object_DebugGrid</include>
+		<!--<include>Object_DebugGrid</include>-->
 	</controls>
 </window>

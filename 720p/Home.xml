@@ -1,8 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="0">
 	<defaultcontrol always="true">301</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+  
 	<onload>Skin.Reset(mysharedcontent_helper)</onload>
+	<onload condition="Skin.HasSetting(XBMC)">RunScript(script.favourites)</onload>
+	<onload condition="Skin.HasSetting(XBMC)">SetProperty(SkinWidgets_RandomItems_Update,true)</onload>
+
+	<onload condition="Skin.HasSetting(XBMC) + System.HasAddon(plugin.video.plexbmc)">RunScript(plugin.video.plexbmc,skin)</onload>
+
 	<controls>
 
 	<!-- PHT NoFocus Bug Workaround -->
@@ -15,16 +21,22 @@
 		<texturefocus>-</texturefocus>
 		<onfocus>SetFocus(300)</onfocus>
 	</control>
-
+       
 	<!-- Background Stuff -->
 	<control type="group">
 
-		<!-- Plex General Fanart -->
+		<!-- PLEX Fanart -->
 		<control type="group">
 			<visible>Control.IsVisible(300) | Control.IsVisible(1400)</visible>
-			<visible>![ControlGroup(5000).HasFocus | ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus]</visible>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+			<visible>![ControlGroup(5000).HasFocus | ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus | ControlGroup(7006).HasFocus | ControlGroup(7007).HasFocus | ControlGroup(7008).HasFocus | ControlGroup(7009).HasFocus | ControlGroup(7010).HasFocus ]</visible>
 			<visible>![Container(300).HasFocus(20) | Container(300).HasFocus(21) | Container(300).HasFocus(22) | Container(300).HasFocus(23) | Container(300).HasFocus(24) | Container(300).HasFocus(25) | Container(300).HasFocus(26) | Container(300).HasFocus(27) | Container(300).HasFocus(28) | Container(300).HasFocus(29) | Container(300).HasFocus(30)]</visible>
-			<visible>![Container(300).HasFocus(11) + [!isEmpty(Skin.String(Search_Single)) | !isEmpty(Skin.String(Search_Multi))]]</visible>
+			<visible>![Container(300).HasFocus(15) + [!isEmpty(Skin.String(Search_Single)) | !isEmpty(Skin.String(Search_Multi))]]</visible>
+
+			<!-- Opacity Option -->
+			<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+			<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+
 			<control type="multiimage" id="10101">
 				<include>background_default</include>
 				<!-- Fadetime Option -->
@@ -33,9 +45,6 @@
 				<!-- Time per Image Option -->
 				<include condition="isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
 				<include condition="!isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
-				<!-- Opacity Option -->
-				<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
-				<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
 				<!-- Kenburns Option -->
 				<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
 				<visible>![!isEmpty(Skin.String(Home_Single)) | !isEmpty(Skin.String(Home_Multi))]</visible>
@@ -45,13 +54,18 @@
 			<include>Home_Custom</include>	                   
 		</control>
 
+		<!-- XBMC Fanart -->
+		<include condition="Skin.HasSetting(XBMC)">XBMC_Background</include>
+		<include condition="Skin.HasSetting(XBMC)">XBMC_Home_Custom_Backgrounds</include>
+
 		<!-- Deck Fanart -->
 		<control type="group">
 			<visible>![!isEmpty(Skin.String(Deck_Single)) | !isEmpty(Skin.String(Deck_Multi))]</visible>
+
 			<!-- Recently Added Fanart -->
 			<control type="multiimage">
-                                <visible>ControlGroup(7000).HasFocus</visible>
-                                <info background="true">Container(11000).ListItem.Art(fanart)</info>
+                                <visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(XBMC)</visible>
+				<info background="true">Container(11000).ListItem.Art(fanart)</info>
                                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
                                 <posx>0</posx>
                                 <posy>0</posy>
@@ -69,9 +83,30 @@
 				<!-- Kenburns Option -->
 				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
                         </control>
+			<control type="multiimage">
+                                <visible>ControlGroup(7000).HasFocus + Skin.HasSetting(XBMC)</visible>
+				<info background="true">Container(11000).ListItem.Property(fanart)</info>
+                                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>1280</width>
+                                <height>720</height>
+				<!-- Fadetime Option -->
+				<include condition="isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime</include>
+				<!-- Time per Image Option -->
+				<include condition="isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage</include>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity</include>
+				<!-- Kenburns Option -->
+				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
+                        </control>
+
 			<!-- On Deck Fanart -->
                         <control type="multiimage">
-                                <visible>ControlGroup(7001).HasFocus</visible>
+                                <visible>ControlGroup(7001).HasFocus + !Skin.HasSetting(XBMC)</visible>
                                 <info background="true">Container(11001).ListItem.Art(fanart)</info>
                                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
                                 <posx>0</posx>
@@ -90,6 +125,27 @@
 				<!-- Kenburns Option -->
 				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
                         </control>
+                        <control type="multiimage">
+                                <visible>ControlGroup(7001).HasFocus + Skin.HasSetting(XBMC)</visible>
+                                <info background="true">Container(11001).ListItem.Property(fanart)</info>
+                                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>1280</width>
+                                <height>720</height>
+				<!-- Fadetime Option -->
+				<include condition="isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime</include>
+				<!-- Time per Image Option -->
+				<include condition="isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage</include>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity</include>
+				<!-- Kenburns Option -->
+				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
+                        </control>
+
 			<!-- Recently Used -->
                         <control type="multiimage">
                                 <visible>ControlGroup(7002).HasFocus</visible>
@@ -111,6 +167,7 @@
 				<!-- Kenburns Option -->
 				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
                         </control>
+
 			<!-- QUEUE & RECOMMANDATIONS (HACK)-->
                         <control type="multiimage">
                                 <visible>ControlGroup(7003).HasFocus</visible>
@@ -132,9 +189,11 @@
 				<!-- Kenburns Option -->
 				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
                         </control>
+
+			<!-- PlayQeueue Video/Music/Photo -->
                         <control type="multiimage">
                                 <visible>ControlGroup(7005).HasFocus</visible>
-                                <info background="true">Container(11004).ListItem.Art(thumb)</info>
+				<info background="true">Container(11005).ListItem.Art(fanart)</info>
        	                        <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
                                 <posx>0</posx>
                                 <posy>0</posy>
@@ -152,6 +211,69 @@
 				<!-- Kenburns Option -->
 				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
                         </control>
+                        <control type="multiimage">
+                                <visible>ControlGroup(7006).HasFocus</visible>
+				<info background="true">Container(11006).ListItem.Art(fanart)</info>
+       	                        <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>1280</width>
+                                <height>720</height>
+				<!-- Fadetime Option -->
+				<include condition="isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime</include>
+				<!-- Time per Image Option -->
+				<include condition="isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage</include>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity</include>
+				<!-- Kenburns Option -->
+				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
+                        </control>
+                        <control type="multiimage">
+                                <visible>ControlGroup(7007).HasFocus</visible>
+				<info background="true">Container(11007).ListItem.Art(fanart)</info>
+       	                        <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>1280</width>
+                                <height>720</height>
+				<!-- Fadetime Option -->
+				<include condition="isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime</include>
+				<!-- Time per Image Option -->
+				<include condition="isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage</include>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity</include>
+				<!-- Kenburns Option -->
+				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
+                        </control>
+
+			<!-- XBMC (Next Aired - Today) -->
+                        <control type="multiimage">
+                                <visible>ControlGroup(7010).HasFocus + Skin.HasSetting(XBMC)</visible>
+                                <info background="true">Container(11010).ListItem.Property(fanart)</info>
+                                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>1280</width>
+                                <height>720</height>
+				<!-- Fadetime Option -->
+				<include condition="isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Fadetime))">Deck_Fadetime</include>
+				<!-- Time per Image Option -->
+				<include condition="isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_TimePerImage))">Deck_TimePerImage</include>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(Deck_Opacity))">Deck_Opacity</include>
+				<!-- Kenburns Option -->
+				<include condition="Skin.HasSetting(Deck_Kenburns)">background_kenburns</include>
+                        </control>
+
 			<!-- Grainy Option -->
 			<control type="largeimage">
 				<posx>0</posx>
@@ -178,12 +300,16 @@
 
 		<!-- Search Custom Background -->
 		<control type="group">
-			<visible>Container(300).hasFocus(11)</visible>	
+			<visible>Container(300).hasFocus(15)</visible>	
+			<!-- Opacity Option WORK HERE -->
+			<include condition="isEmpty(Skin.String(Search_Opacity))">Search_Opacity_Default</include>
+			<include condition="!isEmpty(Skin.String(Search_Opacity))">Search_Opacity</include>
 			<include>Search_Custom</include>
 		</control>
 
 		<!-- Home Extentions Background -->
 		<include>Home_Extension_Background</include>
+
 	</control>
 
 	<!-- Vertical Home Menu -->
@@ -250,22 +376,8 @@
 			<height>22</height>
 			<textcolor>FFCCCCCC</textcolor>
 			<label>$INFO[Container(300).ListItem.Label2]</label>
-			<visible>Control.hasFocus(300) + Skin.HasSetting(Home_Servername) + ![System.UpdateIsAvailable | Window.IsActive(4998)]</visible>
+			<visible>Control.hasFocus(300) + Skin.HasSetting(Home_Servername) + ![ Window.IsActive(4998) ]</visible>
                         <include>Animation_CommonFade</include>
-		</control>
-		<!-- Update Available Notification-->
-		<control type="label">		
-			<posy>684</posy>
-			<posx>35</posx>
-			<width>300</width>
-			<height>22</height>
-			<textcolor>white</textcolor>
-			<label>$LOCALIZE[31564]</label>
-			<animation type="Conditional" reversible="false" condition="true" loop="true">
-				<effect type="fade" start="0" end="100" time="2500" delay="0" loop="true" reversible="false" />
-				<effect type="fade" start="100" end="0" time="2500" delay="2500" loop="true" reversible="false" />
-			</animation>
-			<visible>System.UpdateIsAvailable + ![Window.IsActive(4998) | Skin.HasSetting(Home_Update)]</visible>-->
 		</control>
 		<!-- New Year Notification-->
 		<control type="label">		
@@ -279,7 +391,7 @@
 				<effect type="fade" start="0" end="100" time="5000" delay="0" loop="true" reversible="false" />
 				<effect type="fade" start="100" end="0" time="5000" delay="5000" loop="true" reversible="false" />
 			</animation>
-			<visible>SubString(System.Date(ddmm),0101) + ![System.UpdateIsAvailable | Skin.HasSetting(Home_Servername)]</visible>
+			<visible>SubString(System.Date(ddmm),0101) + ![ Skin.HasSetting(Home_Servername) ]</visible>
 		</control>
 	</control>
 

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="10090">
 <onload condition="Window.Previous(home)">Skin.SetString(preplay_helper,home)</onload>
 <onload condition="Window.Previous(videolibrary)">Skin.SetString(preplay_helper,videolibrary)</onload>

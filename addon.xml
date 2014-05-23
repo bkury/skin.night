@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.night.git"
-	version="1.6"
+	version="1.7"
 	name="Night (Git)"
 	provider-name="bkury">
 	<requires>
-		<import addon="xbmc.gui" version="2.11"/>
+		<import addon="xbmc.gui" version="5.0.0"/>
+		<import addon="service.skin.widgets" version="0.0.2"/>
+		<import addon="script.tv.show.next.aired" version="6.0.5"/>
 	</requires>
 	<extension 
 	point="xbmc.gui.skin"
@@ -14,10 +16,11 @@
 	defaultthemename="textures.xbt" 
 	effectslowdown="1"
 	debugging="false"/>
+	<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
 	<extension point="xbmc.addon.metadata">
-		<summary>Night is a beautiful, clean and Fanart focused Skin for Plex. Created by Mcborzu, PHC port by Maverick214, PHT port/mod by bkury</summary>
-		<description>(Mcborzu) Night started as a project for myself to learn skinning but quickly evolved into a full skin. It's main features include: TV Show Logos, Bigger Episode thumbs, more realistic 3D thumbs in some views, all while having fast window transitions. Amongst many features just a skin that tries to do things differently...</description>	
-		<disclaimer>More info on the skin can be found at the Plex Forums.</disclaimer>
+		<summary>Night is a beautiful, clean and Fanart focused Skin for PHT 1.0+ and XBMC Gotham</summary>
+		<description>Night is a beautiful, clean and Fanart focused Skin for PHT 1.0+ and XBMC Gotham. Based on Night Skin by mcborzu, PHC port by maverick214, Rewritten for PHT/XBMC by bkury</description>	
+		<disclaimer>More info on the skin can be found at the Plex or XBMC Forums.</disclaimer>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
 		<forum>https://forums.plexapp.com/index.php/topic/76918-night-skin-for-pht/</forum>

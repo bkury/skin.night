@@ -1,5 +1,4 @@
-<!--Alaska-->
-
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="400">
 	<defaultcontrol always="true">404</defaultcontrol>
 

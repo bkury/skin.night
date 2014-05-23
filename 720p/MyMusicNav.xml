@@ -1,24 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="502">
-	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-        <views>50,51,52,60,61,70,71</views>
-	<controls>
-
-        <!-- Backgrounds -->
-        <include>Background_Viewtypes</include>
-
-	<include>Viewmode_List</include>
-	<include>Viewmode_Poster</include>
-	<include>Viewmode_Panel</include>
-	<include>Viewmode_Infocard</include>
-
-	<include>viewtype_mode</include>
-        <include>viewtype_filter</include>
-        <include>viewtype_sort</include>
-        <include>viewtype_options</include>
-        <include>viewtype_navigation</include>
-        <include>viewtype_clock</include>
-
-	</controls>
+        <include>Viewmode_Navigation</include>
 </window>

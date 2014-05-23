@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Fri Apr 25 04:34:03 CEST 2014 -->
+<!-- Thu May 22 03:24:44 CEST 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -16925,19 +16925,33 @@
 <include name="Viewmode_Layout_Banner_Small">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Banner -->
+		<!-- Banner (PLEX) -->
 		<control type="image">
 			<posx>15</posx>
 			<posy>25</posy>
 			<width>180</width>
 			<height>30</height>
-			<texture>$INFO[ListItem.Banner]</texture>
+			<texture background="true">$INFO[ListItem.Banner]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
-			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+			<visible>!Skin.HasSetting(XBMC) + [ Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label) ]</visible>
+		</control>
+		<!-- Banner (XBMC) -->
+		<control type="image">
+			<posx>15</posx>
+			<posy>25</posy>
+			<width>180</width>
+			<height>30</height>
+			<texture background="true">$INFO[ListItem.Art(banner)]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
+			<visible>Skin.HasSetting(XBMC) + [ Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label) ]</visible>
 		</control>
 		<!-- Label -->
 		<control type="label">
@@ -16972,19 +16986,33 @@
 <include name="Viewmode_Layout_Banner_Medium">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Banner -->
+		<!-- Banner (PLEX) -->
 		<control type="image">
 			<posx>20</posx>
 			<posy>31</posy>
 			<width>240</width>
 			<height>44</height>
-			<texture>$INFO[ListItem.Banner]</texture>
+			<texture background="true">$INFO[ListItem.Banner]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
-			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+			<visible>!Skin.HasSetting(XBMC) + [ Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label) ]</visible>
+		</control>
+		<!-- Banner (XBMC) -->
+		<control type="image">
+			<posx>20</posx>
+			<posy>31</posy>
+			<width>240</width>
+			<height>44</height>
+			<texture background="true">$INFO[ListItem.Art(banner)]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
+			<visible>Skin.HasSetting(XBMC) + [ Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label) ]</visible>
 		</control>
 		<!-- Label -->
 		<control type="label">
@@ -17019,19 +17047,33 @@
 <include name="Viewmode_Layout_Banner_Large">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Banner -->
+		<!-- Banner (PLEX) -->
 		<control type="image">
 			<posx>25</posx>
 			<posy>45</posy>
 			<width>370</width>
 			<height>70</height>
-			<texture>$INFO[ListItem.Banner]</texture>
+			<texture background="true">$INFO[ListItem.Banner]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
-			<visible>Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label)</visible>
+			<visible>!Skin.HasSetting(XBMC) + [ Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label) ]</visible>
+		</control>
+		<!-- Banner (XBMC) -->
+		<control type="image">
+			<posx>25</posx>
+			<posy>45</posy>
+			<width>370</width>
+			<height>70</height>
+			<texture background="true">$INFO[ListItem.Art(banner)]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+			<bordertexture>confluence/button-nofocus.png</bordertexture>
+			<bordersize>2</bordersize>
+			<visible>Skin.HasSetting(XBMC) + [ Container.Content(tvshows) + !Skin.HasSetting(@VIEWMODE@_Images_Label) ]</visible>
 		</control>
 		<!-- Label -->
 		<control type="label">
@@ -17066,15 +17108,25 @@
 <include name="Viewmode_Layout_Clearart_Small">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Clearart -->
+		<!-- Clearart (PLEX) -->
 		<control type="image">
 			<posx>35</posx>
 			<posy>12</posy>
 			<width>140</width>
 			<height>55</height>
-			<texture background="true" fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
+			<texture fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<visible>Container.Content(tvshows)</visible>
+			<visible>!Skin.HasSetting(XBMC) + Container.Content(tvshows)</visible>
+		</control>
+		<!-- Clearart (XBMC) -->
+		<control type="image">
+			<posx>35</posx>
+			<posy>12</posy>
+			<width>140</width>
+			<height>55</height>
+			<texture fallback="backgrounds/fallback.png">$INFO[ListItem.Path]logo.png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>Skin.HasSetting(XBMC) + Container.Content(tvshows)</visible>
 		</control>
 		<!-- Label -->
 		<control type="label">
@@ -17095,7 +17147,7 @@
 			<posy>67</posy>
 			<width>140</width>
 			<height>55</height>
-			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<texture flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<colordiffuse>89FFFFFF</colordiffuse>
 			<align>center</align>
@@ -17109,15 +17161,25 @@
 <include name="Viewmode_Layout_Clearart_Medium">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Clearart -->
+		<!-- Clearart (PLEX) -->
 		<control type="image">
 			<posx>45</posx>
 			<posy>15</posy>
 			<width>190</width>
 			<height>76</height>
-			<texture background="true" fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
+			<texture fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<visible>Container.Content(tvshows)</visible>
+			<visible>!Skin.HasSetting(XBMC) + Container.Content(tvshows)</visible>
+		</control>
+		<!-- Clearart (XBMC) -->
+		<control type="image">
+			<posx>45</posx>
+			<posy>15</posy>
+			<width>190</width>
+			<height>76</height>
+			<texture fallback="backgrounds/fallback.png">$INFO[ListItem.Path]logo.png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>Skin.HasSetting(XBMC) + Container.Content(tvshows)</visible>
 		</control>
 		<!-- Label -->
 		<control type="label">
@@ -17138,7 +17200,7 @@
 			<posy>91</posy>
 			<width>190</width>
 			<height>76</height>
-			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<texture flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<colordiffuse>89FFFFFF</colordiffuse>
 			<align>center</align>
@@ -17152,15 +17214,25 @@
 <include name="Viewmode_Layout_Clearart_Large">
 	<!-- Banner -->
 	<control type="group">
-		<!-- Clearart -->
+		<!-- Clearart (PLEX) -->
 		<control type="image">
 			<posx>55</posx>
 			<posy>17</posy>
 			<width>310</width>
 			<height>125</height>
-			<texture background="true" fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
+			<texture fallback="backgrounds/fallback.png">tvlogos/$INFO[ListItem.Title].png</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<visible>Container.Content(tvshows)</visible>
+			<visible>!Skin.HasSetting(XBMC) + Container.Content(tvshows)</visible>
+		</control>
+		<!-- Clearart (XBMC) -->
+		<control type="image">
+			<posx>55</posx>
+			<posy>17</posy>
+			<width>310</width>
+			<height>125</height>
+			<texture fallback="backgrounds/fallback.png">$INFO[ListItem.Path]logo.png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<visible>Skin.HasSetting(XBMC) + Container.Content(tvshows)</visible>
 		</control>
 		<!-- Label -->
 		<control type="label">
@@ -17181,7 +17253,7 @@
 			<posy>142</posy>
 			<width>310</width>
 			<height>125</height>
-			<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+			<texture flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<colordiffuse>89FFFFFF</colordiffuse>
 			<align>center</align>
@@ -20777,7 +20849,7 @@
 			<posy>10</posy>
 			<width>100</width>
 			<height>140</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
 			<align>center</align>
@@ -20808,7 +20880,7 @@
 			<width>100</width>
 			<height>150</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="15">base-rounded.png</texture>
+			<texture background="true" border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -20816,7 +20888,7 @@
 			<posy>5</posy>
 			<width>100</width>
 			<height>100</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
@@ -20845,7 +20917,7 @@
 			<width>100</width>
 			<height>120</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="15">base-rounded.png</texture>
+			<texture background="true" border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -20853,7 +20925,7 @@
 			<posy>20</posy>
 			<width>100</width>
 			<height>70</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
@@ -20882,7 +20954,7 @@
 			<height>25</height>
 			<width>100</width>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture background="true" border="5">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 			<include>Viewmode_Visible_Cover</include>
 		</control>
@@ -20960,7 +21032,7 @@
 			<posy>20</posy>
 			<width>120</width>
 			<height>170</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
 			<align>center</align>
@@ -20991,7 +21063,7 @@
 			<width>120</width>
 			<height>170</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="15">base-rounded.png</texture>
+			<texture background="true" border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -20999,7 +21071,7 @@
 			<posy>20</posy>
 			<width>120</width>
 			<height>120</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
@@ -21028,7 +21100,7 @@
 			<width>120</width>
 			<height>135</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="15">base-rounded.png</texture>
+			<texture background="true" border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -21036,7 +21108,7 @@
 			<posy>37</posy>
 			<width>120</width>
 			<height>85</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
@@ -21065,7 +21137,7 @@
 			<height>25</height>
 			<width>120</width>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture background="true" border="5">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 			<include>Viewmode_Visible_Cover</include>
 		</control>
@@ -21143,7 +21215,7 @@
 			<posy>40</posy>
 			<width>160</width>
 			<height>230</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
 			<align>center</align>
@@ -21174,7 +21246,7 @@
 			<width>160</width>
 			<height>210</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="15">base-rounded.png</texture>
+			<texture background="true" border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -21182,7 +21254,7 @@
 			<posy>50</posy>
 			<width>160</width>
 			<height>160</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
@@ -21211,7 +21283,7 @@
 			<width>160</width>
 			<height>165</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="15">base-rounded.png</texture>
+			<texture background="true" border="15">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
@@ -21219,7 +21291,7 @@
 			<posy>72</posy>
 			<width>160</width>
 			<height>115</height>
-			<texture>$INFO[ListItem.Icon]</texture>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<bordertexture>confluence/button-nofocus.png</bordertexture>
 			<bordersize>2</bordersize>
@@ -21248,7 +21320,7 @@
 			<height>25</height>
 			<width>160</width>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture border="5">base-rounded.png</texture>
+			<texture background="true" border="5">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 			<include>Viewmode_Visible_Cover</include>
 		</control>

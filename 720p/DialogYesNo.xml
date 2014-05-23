@@ -1,4 +1,4 @@
-﻿<!--Alaska-->
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="100">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<include>Animation_Bartowski_Context_Zoom</include>
@@ -58,9 +58,5 @@
 		<include>dialog_footer</include>
 
 		</control>
-
-		<include>Object_DebugGrid</include>
-
 	</controls>
-
 </window>

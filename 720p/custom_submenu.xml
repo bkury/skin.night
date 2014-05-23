@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="4998">
         <allowoverlay>yes</allowoverlay>
         <defaultcontrol always="true">1300</defaultcontrol>

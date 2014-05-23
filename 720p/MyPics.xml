@@ -1,26 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="2">
-	<defaultcontrol>100</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-        <views>100,110,120,200,210,220,300,310,320,400,410,420</views>
-	<controls>
-
-        <!-- Backgrounds -->
-        <include>Background_Viewtypes</include>
-
-	<include>Viewmode_List</include>
-	<include>Viewmode_Panel</include>
-	<include>Viewmode_Poster</include>
-	<include>Viewmode_Banner</include>
-	<include>Viewmode_Infocard</include>
-
-	<include>viewtype_mode</include>
-        <include>viewtype_filter</include>
-        <include>viewtype_sort</include>
-        <include>viewtype_options</include>
-        <include>viewtype_navigation</include>
-        <include>viewtype_clock</include>
-
-	<!--<include>debugInfos</include>-->
-
-	</controls>
+        <include>Viewmode_Navigation</include>
 </window>

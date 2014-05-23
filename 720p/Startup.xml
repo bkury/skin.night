@@ -1,31 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<include>XBMC_Detect</include>
 	<controls>
-		<!--
-		<control type="button" id="10">
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<onfocus>PlayMedia(sounds/start.wav)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<description>Trigger</description>
-			<onfocus>SetFocus(11)</onfocus>
-			<visible>!Skin.HasSetting(DisableStartupSound)</visible>
-		</control>
-		<control type="button" id="10">
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<description>Trigger</description>
-			<onfocus>SetFocus(11)</onfocus>
-			<visible>Skin.HasSetting(DisableStartupSound)</visible>
-		</control>-->
 		<control type="button" id="11">
 			<posx>-20</posx>
 			<posy>-20</posy>

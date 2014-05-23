@@ -1,109 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- File includes -->
+	<!-- Includes -->
 	<include file="Defaults.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_Deck.xml" />
-
 	<include file="Includes_Viewmode.xml" />
 	<include file="Includes_Viewmode_Layout.xml" />
+	<include file="Includes_Animations.xml" />
+	<include file="Includes_Objects.xml" />
+	<include file="Includes_Home_Extensions.xml" />
+	<include file="Includes_Background.xml" />
+	<include file="Includes_MyVideoNav.xml" />
+	<include file="Includes_VideoOSD.xml" />
+	<include file="Includes_MySharedContent.xml" />
+	<include file="Includes_PLEX.xml" />
+	<include file="Includes_XBMC.xml" />
+	<include file="Includes_XBMC_Generated.xml" />
+
+	<!-- Viewmodes -->
 	<include file="Viewmode_List.xml" />
 	<include file="Viewmode_Panel.xml" />
 	<include file="Viewmode_Poster.xml" />
 	<include file="Viewmode_Banner.xml" />
 	<include file="Viewmode_Search.xml" />
 
-	<include file="Includes_Animations.xml" />
-	<include file="Includes_Objects.xml" />
-	<include file="IncludesCodecFlagging.xml" />
-	<include file="Plexincludes.xml" />
-	<include file="Includes_Home_Extensions.xml" />
-	<include file="Includes_Background.xml" />
-	<include file="Includes_MyVideoNav.xml" />
-	<include file="Includes_VideoOSD.xml" />
-	<include file="Includes_MySharedContent.xml" />
-
+	<!-- Debug -->
 	<include file="Debug.xml" />
 
-	<include name="FullScreenBGImage">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1280</width>
-                <height>720</height>
-                <aspectratio>scale</aspectratio>
-        </include>
-
-	<include name="posterview_width_dark">
-		<width>1400</width>
-	</include>
-	<include name="posterview_width_fanart">
-		<width>1900</width>
-	</include>
-	
-	<include name="horizontal_onup_middle">
-		<onup></onup>
-	</include>
-	<include name="horizontal_onup_lower">
-		<onup>78881</onup>
-	</include>
-	
-	<include name="color_flags">
-		<include>VideoCodecFlaggingConditions</include>
-		<include>AudioCodecFlaggingConditions</include>
-	</include>
-	<include name="grey_flags">
-		<include>VideoCodecFlaggingConditions_grey</include>
-		<include>AudioCodecFlaggingConditions_grey</include>
-	</include>
-	
-	<include name="home_kenburns_fanart">
-		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-	</include>
-
-	<include name="global_kenburns_fanart">
-		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_all)">Conditional</animation>
-		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_all)">Conditional</animation>
-	</include>
-	
-	<include name="middle_horizontal_movies">
-		<onup>301</onup>
-		<ondown>Control.SetFocus(8000,0)</ondown>
-	</include>
-	<include name="lower_horizontal_movies">
-		<onup>Control.SetFocus(8000,0)</onup>
-		<ondown>301</ondown>
-	</include>
-	<include name="middle_horizontal_tv">
-		<onup>301</onup>
-		<ondown>Control.SetFocus(8001,0)</ondown>
-	</include>
-	<include name="lower_horizontal_tv">
-		<onup>Control.SetFocus(8001,0)</onup>
-		<ondown>301</ondown>
-	</include>
-	<include name="middle_horizontal_music">
-		<onup>301</onup>
-		<ondown>Control.SetFocus(8002,0)</ondown>
-	</include>
-	<include name="lower_horizontal_music">
-		<onup>Control.SetFocus(8002,0)</onup>
-		<ondown>301</ondown>
-	</include>
-	
-	<include name="switch_vertical_home">
-		<onfocus>SetFocus(300)</onfocus>
-	</include>
-	<include name="switch_horizontal_home">
-		<onfocus>SetFocus(301)</onfocus>
-	</include>
-	
-	<include name="switch_vertical_fanart">
-		<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
-	</include>
-	<include name="switch_horizontal_fanart">
-		<imagepath background="true">$INFO[Container(301).ListItem.Icon]</imagepath>
-	</include>
-	
 	<include name="dialogConfirmButton">	
 		<width>120</width>
 		<height>42</height>
@@ -121,7 +44,7 @@
 		<height>34</height>
 		<textoffsetx>20</textoffsetx>
 		<font>font16caps</font>
-		<textcolor>grey2</textcolor>
+		<textcolor>grey</textcolor>
 		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 		<include>navigation_options</include>
 	</include>
@@ -147,51 +70,6 @@
 		<!--<focusedcolor>white</focusedcolor>
 		<texturefocus>confluence/MenuItemFO1.png</texturefocus>-->
 		<include>navigation_options</include>
-	</include>
-	
-	<include name="ButtonHomeSubCommonValues">
-		<include condition="!Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues2</include>
-		<include condition="Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues3</include>
-	</include>
-	<include name="ButtonHomeSubCommonValues2">
-		<width>600</width>
-		<height>56</height>
-		<textoffsetx>20</textoffsetx>
-		<textwidth>600</textwidth>
-		<posx>150</posx>
-		<posy>91</posy>
-		<font>Font_Bartowski_Main_SubMenu</font>
-		<textcolor>38b8b7b7</textcolor>
-		<focusedcolor>mainblue</focusedcolor>
-	</include>
-	<include name="ButtonHomeSubCommonValues3">
-		<width>600</width>
-		<height>56</height>
-		<textoffsetx>20</textoffsetx>
-		<textwidth>600</textwidth>
-		<posx>150</posx>
-		<posy>91</posy>
-		<font>AeonFont_MainMenu</font>
-		<textcolor>38b8b7b7</textcolor>
-		<focusedcolor>mainblue</focusedcolor>
-	</include>
-	<include name="ButtonHomeSubCommonValues_Horizontal">
-		<include condition="!Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues2</include>
-		<include condition="Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues3</include>
-	</include>
-	<include name="ButtonHomeSubCommonValues_Horizontal2">
-		<width>320</width>
-		<height>56</height>
-		<font>Font_Bartowski_Main_SubMenu</font>
-		<textcolor>ffb8b7b7</textcolor>
-		<focusedcolor>mainblue</focusedcolor>
-	</include>
-	<include name="ButtonHomeSubCommonValues_Horizontal3">
-		<width>320</width>
-		<height>56</height>
-		<font>AeonFont_MainMenu</font>
-		<textcolor>ffb8b7b7</textcolor>
-		<focusedcolor>mainblue</focusedcolor>
 	</include>
 	
 	<!-- Debug objects -->
@@ -402,7 +280,7 @@
 				<!-- Artist -->
 				<control type="label">
 					<posx>330</posx>
-					<width>360</width>
+					<width>310</width>
 					<height>18</height>
 					<aligny>center</aligny>
 					<align>right</align>
@@ -598,7 +476,7 @@
 				<!-- Artist -->
 				<control type="label">
 					<posx>90</posx>
-					<width>360</width>
+					<width>310</width>
 					<height>18</height>
 					<aligny>center</aligny>
 					<align>left</align>
@@ -904,6 +782,7 @@
 									Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) |
 									Control.isVisible(310) | Control.isVisible(320) |
 									Control.isVisible(410) | Control.isVisible(420) |
+									StringCompare(Window.Property(xmlfile),MySharedContent.xml) |
 									Control.isVisible(900) |  Control.isVisible(901) |  Control.isVisible(902) |
 									Window.isVisible(4) | Window.isVisible(12) | Window.isVisible(20) | Window.isVisible(1111) |
 									Window.isVisible(10090) + !Skin.HasSetting(Preplay_NoClock)
@@ -1900,7 +1779,7 @@
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
-				<visible>!Skin.HasSetting(Preplay_NoSeparator)</visible>
+				<!--<visible>!Skin.HasSetting(Preplay_NoSeparator)</visible>-->
                         </control>
 			</control>
 
@@ -1914,7 +1793,7 @@
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
 				<include>Animation_Preplay_Down</include>
-				<visible>!Skin.HasSetting(Preplay_NoSeparator)</visible>
+				<!--<visible>!Skin.HasSetting(Preplay_NoSeparator)</visible>-->
                         </control>
 		</control>
 	</include>
@@ -2250,7 +2129,8 @@
 		<control type="image">
 			<posx>630</posx>
 			<posy>490</posy>
-			<width>20</width>
+			<height>14</height>
+			<width>18</width>
 			<texture flipy="true">arrowdownnew.png</texture>
 			<colordiffuse>FFCCCCCC</colordiffuse>
 			<visible>Control.IsVisible(61)</visible>
@@ -2272,6 +2152,7 @@
 	                	<font>Font_Bartowski_Showcase_plot</font>
                                 <textcolor>FFCCCCCC</textcolor>
 	                	<label>$INFO[Container(6).ListItem(0).Property(Addon.Name)] v$INFO[Container(6).ListItem(0).Property(Addon.Version)] by $INFO[Container(6).ListItem(0).Property(Addon.Creator)]</label>
+				<visible>!isEmpty(Container(6).ListItem(0).Property(Addon.Name))</visible>
                         </control>
 			<!-- Separator -->
 			<control type="image">
@@ -2295,15 +2176,27 @@
 	                	<label>$INFO[Container(6).ListItem(0).Property(Addon.Summary)]</label>
 		        </control>
 			<control type="label">
-                                <description>Number of Skins</description>
                                 <posx>850</posx>
                                 <posy>515</posy>
                                 <width>100</width>
                                 <height>35</height>
 	                	<font>Font_Bartowski_Showcase_plot</font>
                                 <textcolor>FFCCCCCC</textcolor>
-                                <label>$INFO[Container(6).NumItems] Skins</label>
+                                <label>$INFO[Container(6).NumItems] $LOCALIZE[31088]</label>
+				<visible>StringCompare(Container.NumItems,1)</visible>
                         </control>
+			<control type="label">
+                                <posx>850</posx>
+                                <posy>515</posy>
+                                <width>100</width>
+                                <height>35</height>
+	                	<font>Font_Bartowski_Showcase_plot</font>
+                                <textcolor>FFCCCCCC</textcolor>
+                                <label>$INFO[Container(6).NumItems] $LOCALIZE[31089]</label>
+				<visible>!StringCompare(Container.NumItems,1)</visible>
+                        </control>
+
+
 		</control>
 		<!-- File Browser Buttons -->
 		<control type="grouplist" id="7001">
@@ -2397,23 +2290,6 @@
 				<onup>10</onup>
 				<ondown>10</ondown>
                         </control>
-			<!-- Navigation Arrows -->
-			<control type="image">
-				<posx>140</posx>
-				<posy>-25</posy>
-				<width>20</width>
-				<texture flipy="true">arrowdownnew.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
-				<visible>Control.hasFocus(10)</visible>
-			</control>
-			<control type="image">
-				<posx>440</posx>
-				<posy>-25</posy>
-				<width>20</width>
-				<texture flipy="true">arrowdownnew.png</texture>
-				<colordiffuse>FFCCCCCC</colordiffuse>
-				<visible>Control.hasFocus(11)</visible>
-			</control>
 		</control>
 
 		<!-- Dialog OSD Bookmarks -->
@@ -2555,5 +2431,48 @@
 		<textcolor>white</textcolor>
 		<selectedcolor>white</selectedcolor>
 	</include>
+
+
+	<!-- Settings Category -->
+	<include name="Settings_Section">
+		<include>Animation_CommonFade</include>
+		<posx>320</posx>
+		<posy>75</posy>
+		<width>860</width>
+		<height>594</height>
+		<itemgap>0</itemgap>
+		<pagecontrol>-</pagecontrol>
+		<onleft>100</onleft>
+		<onright>100</onright>
+	</include>
+
+	<!-- Default Icon -->
+	<include name="Default_Icon">
+		<texture diffuse="posterMaskSmall.png" background="true">default-icon.png</texture>
+		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+		<colordiffuse>mainblue</colordiffuse>
+		<animation effect="fade" end="60" condition="true">Conditional</animation>
+	</include>
+
+	<!-- KaiToast Header -->
+	<variable name="KaiToast_Header">
+
+		<!-- Error -->
+		<value condition="SubString(Control.GetLabel(401),success)">[COLOR=green]SUCCESS![/COLOR]</value>
+
+		<!-- Error -->
+		<value condition="SubString(Control.GetLabel(401),error)">[COLOR=TextDisabled]ERROR![/COLOR]</value>
+		<value condition="SubString(Control.GetLabel(401),failed)">[COLOR=TextDisabled]FAILED![/COLOR]</value>
+
+		<!-- Queue -->
+		<value condition="SubString(Control.GetLabel(401),queue)">[COLOR=FFEEEEEE]QUEUE[/COLOR]</value>
+
+		<!-- Signed In -->
+		<value condition="SubString(Control.GetLabel(401),signed in)">[COLOR=FFEEEEEE]WELCOME![/COLOR]</value>
+		<value condition="SubString(Control.GetLabel(401),myplex)">[COLOR=FFEEEEEE]WELCOME![/COLOR]</value>
+
+		<!-- Default -->
+		<value>[COLOR=FFEEEEEE]Notification[/COLOR]</value> <!-- Notification -->
+	</variable>
 
 </includes>

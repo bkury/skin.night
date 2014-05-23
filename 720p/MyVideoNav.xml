@@ -1,38 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="25">
-	<defaultcontrol>100</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
-
-	<onload>Skin.SetString(selector1,$INFO[Container.ViewMode])</onload>
-	<onunload>Skin.Reset(selector1)</onunload>
-	<onunload>Skin.Reset(selector2)</onunload>
-
-	<views>100,110,120,200,210,220,300,310,320,400,410,420</views>
-
-	<controls>
-
-	<!-- Backgrounds -->
-	<include>Background_Viewtypes</include>
-
-	<!-- Views -->
-	<control type="group">
-		<include>Viewmode_List</include>	<!-- 100/110/120 -->
-		<include>Viewmode_Poster</include>	<!-- 200/210/220 -->
-		<include>Viewmode_Panel</include>	<!-- 300/310/320 -->
-		<include>Viewmode_Banner</include>	<!-- 400/410/420 -->
-		<include>Viewmode_Infocard</include>
-	</control>
-
-	<include>viewtype_clock</include>
-
-	<include>viewtype_mode</include>
-	<include>viewtype_filter</include>
-	<include>viewtype_sort</include>
-	<include>viewtype_options</include>
-	<include>viewtype_navigation</include>
-	<include>viewtype_scrolling</include>
-
-	<!--<include>debugInfos</include>-->
-
-	</controls>	
+	<onload condition="Skin.HasSetting(XBMC) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
+	<onload condition="Skin.HasSetting(XBMC)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<include>Viewmode_Navigation</include>
 </window>
