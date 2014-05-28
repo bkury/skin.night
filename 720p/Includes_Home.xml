@@ -74,6 +74,21 @@
 </include>
 <include name="Home_Navigation_Content">
 	<content>
+		<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Menu</include>
+
+		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_Content</include>
+		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_Plexbmc</include>
+		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_More</include>
+
+		<!-- Now Playing -->
+		<item id="17">
+			<description>Now Playing</description>
+			<label>31099</label> <!-- Now Playing -->
+			<onclick>fullscreen</onclick>
+			<visible>!Skin.HasSetting(XBMC) + [Player.HasVideo | Player.hasAudio]</visible>
+			<property name="HomeMenuPulse">true</property>
+		</item>
+		<!-- Search -->
 		<item id="15">
 			<description>Search</description>
 			<label>31003</label> <!-- Search -->
@@ -81,14 +96,15 @@
 			<onclick>ActivateWindow(10051)</onclick>
 			<visible>!Skin.HasSetting(HomeMenuNoSearchButton) + !Skin.HasSetting(XBMC)</visible>
 		</item>
+		<!-- Update -->
 		<item id="16">
 			<description>Update</description>
 			<label>[COLOR TextDisabled]$LOCALIZE[24069][/COLOR]</label> <!-- Update -->
 			<onclick>Plex.UpdateAndRestart</onclick>
 			<visible>!Skin.HasSetting(XBMC) + !Skin.HasSetting(Home_Update) + System.UpdateIsAvailable</visible>
 		</item>
-		<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Menu</include>
-		<include condition="Skin.HasSetting(XBMC)">XBMC_Home</include>
+
+
 	</content>
 </include>
 
@@ -164,7 +180,7 @@
 			<label>31004</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
-			<visible>!Skin.HasSetting(Hide_ChannelDirectory) | !Skin.HasSetting(XBMC)</visible>
+			<visible>![Skin.HasSetting(Hide_ChannelDirectory) | Skin.HasSetting(XBMC)]</visible>
 		</item>
 		<item id="25">
 			<description>Quit</description>
@@ -312,26 +328,112 @@
 	<movement>0</movement>
 	<include>Animation_Bartowski_ZoomOutZoomIn</include>
 	<itemlayout width="700" height="64">
-		<control type="label">
-			<posy>-10</posy>
-			<width>700</width>
-			<height>64</height>
-			<font>Font_Bartowski_MainMenu</font>
-			<textcolor>50b8b7b7</textcolor>
-			<info>ListItem.Label</info>
-			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+
+		<!-- Default -->
+		<control type="group">
+			<visible>isEmpty(ListItem.Property(HomeMenuPulse))</visible>
+			<!-- Default -->
+			<control type="label">
+				<posy>-10</posy>
+				<width>700</width>
+				<height>64</height>
+				<font>Font_Bartowski_MainMenu</font>
+				<textcolor>50b8b7b7</textcolor>
+				<info>ListItem.Label</info>
+				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>
+			<!-- Aeon -->
+			<control type="label">
+				<posy>-6</posy>
+				<width>700</width>
+				<height>64</height>
+				<font>AeonFont_MainMenu</font>
+				<textcolor>50b8b7b7</textcolor>
+				<info>ListItem.Label</info>
+				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>			
 		</control>
-		<control type="label">
-			<posy>-6</posy>
-			<width>700</width>
-			<height>64</height>
-			<font>AeonFont_MainMenu</font>
-			<textcolor>50b8b7b7</textcolor>
-			<info>ListItem.Label</info>
-			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>			
+
+		<!-- Pulsating -->
+		<control type="group">
+			<visible>!isEmpty(ListItem.Property(HomeMenuPulse))</visible>
+			<!-- Default -->		
+			<control type="label">
+				<posy>-10</posy>
+				<width>700</width>
+				<height>64</height>
+				<font>Font_Bartowski_MainMenu</font>
+				<textcolor>mainblue</textcolor>
+				<info>ListItem.Label</info>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
+					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
+				</animation>
+				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>
+			<!-- Aeon -->
+			<control type="label">
+				<posy>-6</posy>
+				<width>700</width>
+				<height>64</height>
+				<font>AeonFont_MainMenu</font>
+				<textcolor>mainblue</textcolor>
+				<info>ListItem.Label</info>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
+					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
+				</animation>
+				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>			
+		</control>		
+
+		<!-- Section Type -->
+		<control type="group">
+			<visible>!isEmpty(ListItem.Property(HomeMenuSection))</visible>
+			<control type="label">
+				<posx>5</posx>
+				<posy>15</posy>
+				<width>500</width>
+				<height>64</height>
+				<font>Font_Time_Global</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<info>ListItem.Property(HomeMenuSection)</info>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>50</posy>
+				<width>500</width>
+				<height>1</height>
+				<colordiffuse>mainblue</colordiffuse>
+				<texture>base-rounded.png</texture>
+			</control>
+		</control>
+
 	</itemlayout>
 	<focusedlayout width="670" height="92">
+
+		<!-- Section Type -->
+		<control type="group">
+			<visible>!isEmpty(ListItem.Property(HomeMenuSection))</visible>
+			<control type="label">
+				<posx>5</posx>
+				<posy>15</posy>
+				<width>500</width>
+				<height>64</height>
+				<font>Font_Time_Global</font>
+				<textcolor>mainblue</textcolor>
+				<info>ListItem.Property(HomeMenuSection)</info>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>50</posy>
+				<width>500</width>
+				<height>1</height>
+				<colordiffuse>mainblue</colordiffuse>
+				<texture>base-rounded.png</texture>
+			</control>
+		</control>
+
 		<control type="label">
 			<posy>-10</posy>
 			<width>670</width>
@@ -412,24 +514,63 @@
 	<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Animation_Preplay_Down</include>
 	<include condition="!Skin.HasSetting(Home_Horizontal_Bottom)">Animation_CommonFade_600</include>
 	<itemlayout width="420" height="70">
-		<control type="label">
-			<width>410</width>
-			<font>Font_Bartowski_Main_SubMenu</font>
-			<textcolor>FFAAAAAA</textcolor>
-			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
-			<info>ListItem.Label</info>
-			<align>center</align>
-			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>			
-		<control type="label">
-			<width>410</width>
-			<font>AeonFont_MainMenu</font>
-			<textcolor>FFAAAAAA</textcolor>
-			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
-			<info>ListItem.Label</info>
-			<align>center</align>
-			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>			
+
+
+
+		<!-- Default -->
+		<control type="group">
+			<visible>isEmpty(ListItem.Property(HomeMenuPulse))</visible>
+			<!-- Normal -->
+			<control type="label">
+				<width>410</width>
+				<font>Font_Bartowski_Main_SubMenu</font>
+				<textcolor>FFAAAAAA</textcolor>
+				<info>ListItem.Label</info>
+				<align>center</align>
+				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>			
+			<!-- Aeon -->
+			<control type="label">
+				<width>410</width>
+				<font>AeonFont_MainMenu</font>
+				<textcolor>FFAAAAAA</textcolor>
+				<info>ListItem.Label</info>
+				<align>center</align>
+				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>			
+		</control>
+
+		<!-- Pulsating -->
+		<control type="group">
+			<visible>!isEmpty(ListItem.Property(HomeMenuPulse))</visible>
+			<!-- Normal -->
+			<control type="label">
+				<width>410</width>
+				<font>Font_Bartowski_Main_SubMenu</font>
+				<textcolor>mainblue</textcolor>
+				<info>ListItem.Label</info>
+				<align>center</align>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
+					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
+				</animation>
+				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>			
+			<!-- Aeon -->
+			<control type="label">
+				<width>410</width>
+				<font>AeonFont_MainMenu</font>
+				<textcolor>mainblue</textcolor>
+				<info>ListItem.Label</info>
+				<align>center</align>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
+					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
+				</animation>
+				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+			</control>
+		</control>
+
 	</itemlayout>
 	<focusedlayout width="420" height="70">
 		<control type="label">

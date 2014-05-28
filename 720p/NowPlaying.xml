@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="50">
-  
-  <animation effect="fade" start="0" end="100" time="1000" reversible="true">WindowOpen</animation>
-  <animation effect="fade" start="100" end="0" time="1000" reversible="true">WindowClose</animation>
+  <defaultcontrol always="true">504</defaultcontrol>
+  <animation effect="fade" start="0" end="100" time="600" reversible="true">WindowOpen</animation>
+  <animation effect="fade" start="100" end="0" time="600" reversible="true">WindowClose</animation>
   <controls>
 
 	<control type="image">
@@ -72,10 +72,10 @@
           
           <control type="progress" id="20">
             <description>Progress control</description>
-            <posx>129</posx>
-            <posy>162</posy>
+            <posx>120</posx>
+            <posy>140</posy>
             <aligny>center</aligny>
-            <width>372</width>
+            <width>320</width>
             <info>Player.Progress</info>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
             <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
@@ -88,6 +88,17 @@
 				<overlaytexture>-</overlaytexture>
           </control>
           
+	<control type="group">
+		<posx>115</posx>
+		<posy>135</posy>
+		<include>NowPlayingTime</include>
+	</control>
+	<control type="group">
+		<posx>-100</posx>
+		<posy>170</posy>
+		<include>NowPlayingControl</include>
+	</control>
+
           <control type="group">
             <posy>219</posy>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
@@ -125,10 +136,10 @@
           
           <control type="progress" id="21">
             <description>Progress control</description>
-            <posx>129</posx>
-            <posy>162</posy>
+            <posx>120</posx>
+            <posy>140</posy><!-- 162 -->
             <aligny>center</aligny>
-            <width>372</width>
+            <width>320</width> <!-- 372 -->
             <info>Player.Progress</info>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
             <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
@@ -141,7 +152,18 @@
 				<overlaytexture>-</overlaytexture>
 
           </control>
-          
+	
+	<control type="group">
+		<posx>115</posx>
+		<posy>135</posy>
+		<include>NowPlayingTime</include>
+	</control>
+	<control type="group">
+		<posx>-100</posx>
+		<posy>170</posy>
+		<include>NowPlayingControl</include>
+	</control>
+
           <control type="group">
             <posy>219</posy>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
@@ -202,10 +224,10 @@
           
           <control type="progress" id="22">
             <description>Progress control</description>
-            <posx>0</posx>
-            <posy>162</posy>
+            <posx>60</posx>
+            <posy>140</posy>
             <aligny>center</aligny>
-            <width>372</width>
+            <width>320</width>
             <info>Player.Progress</info>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
             <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
@@ -218,6 +240,17 @@
 				<overlaytexture>-</overlaytexture>
           </control>
           
+	<control type="group">
+		<posx>55</posx><!-- 115 -->
+		<posy>135</posy>
+		<include>NowPlayingTime</include>
+	</control>
+	<control type="group">
+		<posx>-160</posx>
+		<posy>170</posy>
+		<include>NowPlayingControl</include>
+	</control>
+
           <control type="group">
             <posy>219</posy>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
@@ -261,10 +294,10 @@
           
           <control type="progress" id="23">
             <description>Progress control</description>
-            <posx>0</posx>
-            <posy>162</posy>
+            <posx>60</posx>
+            <posy>140</posy>
             <aligny>center</aligny>
-            <width>372</width>
+            <width>320</width>
             <info>Player.Progress</info>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
             <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
@@ -277,6 +310,17 @@
 				<overlaytexture>-</overlaytexture>
           </control>
           
+	<control type="group">
+		<posx>55</posx><!-- 115 -->
+		<posy>135</posy>
+		<include>NowPlayingTime</include>
+	</control>
+	<control type="group">
+		<posx>-160</posx>
+		<posy>170</posy>
+		<include>NowPlayingControl</include>
+	</control>
+
           <control type="group">
             <posy>219</posy>
             <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
@@ -693,7 +737,64 @@
 				
 	
 	</control>
-</control>
-  </controls>
 
+
+
+</control>
+
+	<!-- PAUSED -->
+	<control type="label" id="0">
+		<posx>300</posx>
+		<posy>10</posy>
+		<width>680</width>
+		<align>center</align>
+		<label>112</label> <!-- Paused -->
+		<font>Font_Bartowski_OSD</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<visible>player.paused + !player.caching</visible>
+		<include>Animation_CommonFade_600</include>
+	</control>
+	<control type="label" id="0">
+		<posx>300</posx>
+		<posy>10</posy>
+		<width>680</width>
+		<align>center</align>
+		<label>112</label> <!-- Paused -->
+		<font>Font_Bartowski_OSD</font>
+		<textcolor>mainblue</textcolor>
+		<visible>player.paused + !player.caching</visible>
+		<include>Animation_CommonFade_600</include>
+		<include>Animation_OSD</include>
+	</control>
+
+	<!-- Clock -->
+	<control type="group">
+		<visible>!Skin.HasSetting(NoGlobalClock)</visible>
+		<posx>1260</posx>
+		<posy>10</posy>
+
+		<control type="image">
+			<posx>-380</posx>
+			<posy>-10</posy>
+			<width>413</width>
+			<height>215</height>
+			<texture>common/library_time_gradient.png</texture>
+		</control>
+		<control type="label">
+			<width>200</width>
+			<font>Font_Time_Global</font>
+			<textcolor>mainblue</textcolor>
+			<info>System.Time(hh:mm xx)</info>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posy>25</posy>
+			<width>200</width>
+			<font>Font_Date</font>
+			<textcolor>white</textcolor>
+			<info>System.Date</info>
+			<align>right</align>
+		</control>
+	</control>
+</controls>
 </window>

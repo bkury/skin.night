@@ -27,11 +27,11 @@
 
 		<!-- PLEX Fanart -->
 		<control type="group">
-			<visible>Control.IsVisible(300) | Control.IsVisible(1400)</visible>
-			<visible>!Skin.HasSetting(XBMC)</visible>
+			<visible>!Skin.HasSetting(XBMC) + [ Control.IsVisible(300) | Control.IsVisible(1400) ]</visible>
 			<visible>![ControlGroup(5000).HasFocus | ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus | ControlGroup(7006).HasFocus | ControlGroup(7007).HasFocus | ControlGroup(7008).HasFocus | ControlGroup(7009).HasFocus | ControlGroup(7010).HasFocus ]</visible>
 			<visible>![Container(300).HasFocus(20) | Container(300).HasFocus(21) | Container(300).HasFocus(22) | Container(300).HasFocus(23) | Container(300).HasFocus(24) | Container(300).HasFocus(25) | Container(300).HasFocus(26) | Container(300).HasFocus(27) | Container(300).HasFocus(28) | Container(300).HasFocus(29) | Container(300).HasFocus(30)]</visible>
-			<visible>![Container(300).HasFocus(15) + [!isEmpty(Skin.String(Search_Single)) | !isEmpty(Skin.String(Search_Multi))]]</visible>
+			<visible>![Container(300).hasFocus(15) | Container(300).hasFocus(17) ]</visible>
+			<visible>![StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome1.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome2.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome3.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome4.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome5.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome6.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome7.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome8.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome9.Label)) ]</visible>
 
 			<!-- Opacity Option -->
 			<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
@@ -50,8 +50,7 @@
 				<visible>![!isEmpty(Skin.String(Home_Single)) | !isEmpty(Skin.String(Home_Multi))]</visible>
 			</control>
 
-			<!-- Home Custom -->
-			<include>Home_Custom</include>	                   
+			<include>Home_Custom</include>
 		</control>
 
 		<!-- XBMC Fanart -->
@@ -298,17 +297,45 @@
 			<include>Deck_Custom</include>
 		</control>
 
-		<!-- Search Custom Background -->
+		<!-- Now Playing  -->
 		<control type="group">
-			<visible>Container(300).hasFocus(15)</visible>	
-			<!-- Opacity Option WORK HERE -->
-			<include condition="isEmpty(Skin.String(Search_Opacity))">Search_Opacity_Default</include>
-			<include condition="!isEmpty(Skin.String(Search_Opacity))">Search_Opacity</include>
-			<include>Search_Custom</include>
+			<visible>Container(300).hasFocus(17)</visible>	
+			<include>Home_Opacity_Default</include>
+			<!-- Audio -->
+			<control type="image">
+				<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+				<include>background_default</include>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<visible>Player.HasAudio</visible>
+			</control>
+ 			<!-- Video -->
+			<control type="videowindow">
+				<include>background_default</include>
+				<visible>Player.HasVideo</visible>
+			</control>
 		</control>
 
+		<!-- PLEX -->
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom1_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom2_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom3_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom4_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom5_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom6_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom7_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom8_Custom</include>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom9_Custom</include>
+
 		<!-- Home Extentions Background -->
-		<include>Home_Extension_Background</include>
+		<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Background</include>
+
+		<!-- XBMC -->
+		<include condition="Skin.HasSetting(XBMC)">Plex_Custom</include>
+		<include condition="Skin.HasSetting(XBMC)">Weather_Custom</include>
+		<include condition="Skin.HasSetting(XBMC)">Pictures_Custom</include>
+
+		<!-- Search Custom Background -->
+		<include>Search_Custom</include>
 
 	</control>
 

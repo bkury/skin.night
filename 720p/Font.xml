@@ -3,26 +3,22 @@
 	<fontset id="Default" unicode="true">
 		<font>
 			<name>PlexNPArtistFont</name>
-			<filename>HelveticaNeueLight.ttf</filename>
-			<!--<variant>Bold</variant>-->
+			<filename>Roboto-Light.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
 			<name>PlexNPTitleFont</name>
-			<filename>HelveticaNeueLight.ttf</filename>
-			<!--<variant>Bold</variant>-->
+			<filename>Roboto-Light.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>PlexNPAlbumFont</name>
-			<filename>HelveticaNeueLight.ttf</filename>
-			<!--<variant>Regular</variant>-->
+			<filename>Roboto-Light.ttf</filename>
 			<size>32</size>
 		</font>
 		 <font>
 			<name>PlexNPNextFont</name>
-			<filename>HelveticaNeueLight.ttf</filename>
-                        <!--<variant>Regular</variant>-->
+			<filename>Roboto-Light.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
@@ -77,13 +73,6 @@
 			<linespacing>1</linespacing>
 		</font>
 		<font>
-			<name>Font_Bartowski_Digital_Clock</name>
-			<filename>digital_clock.ttf</filename>
-			<size>20</size>
-			<linespacing>1</linespacing>
-		</font>
-
-		<font>
 			<name>Font_Bartowski_OSD</name>
 			<filename>alaska_thin.ttf</filename>
 			<size>180</size>
@@ -95,7 +84,7 @@
 			<size>100</size>
 			<linespacing>1</linespacing>
 		</font>
-		<font><!--was 34-->
+		<font>
 			<name>Font_Bartowski_Title_TVShow</name>
 			<filename>alaska_light_nocaps.ttf</filename>
 			<size>40</size>
@@ -110,7 +99,6 @@
 		<font>
 			<name>Font_Bartowski_MainMenu_Focus</name>
 			<filename>alaska_thin.ttf</filename>
-			<!--<size>148</size>-->
 			<size>120</size>
 			<linespacing>1</linespacing>
 		</font>
@@ -122,25 +110,25 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Movies_Plot</name>
-			<filename>HelveticaNeueLight.ttf</filename>
+			<filename>Roboto-Light.ttf</filename>
 			<size>20</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Font_Bartowski_Preplay</name>
-			<filename>HelveticaNeueLight.ttf</filename>
+			<filename>Roboto-Light.ttf</filename>
 			<size>15</size>
 			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Font_Bartowski_List_Label</name>
-			<filename>HelveticaNeueLight.ttf</filename>
+			<filename>Roboto-Light.ttf</filename>
 			<size>18</size>
 			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Font_Bartowski_OSD_Time</name>
-			<filename>HelveticaNeueLight.ttf</filename>
+			<filename>Roboto-Light.ttf</filename>
 			<size>18</size>
 			<linespacing>1</linespacing>
 		</font>
@@ -167,19 +155,15 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Showcase_plot</name>
-			<!--<filename>alaska_light_nocaps.ttf</filename>-->
-			<filename>HelveticaNeueLight.ttf</filename>
+			<filename>Roboto-Light.ttf</filename>
 			<size>20</size>
 			<linespacing>1.3</linespacing>
-			<!--<linespacing>0.8</linespacing>-->
 		</font>
 		<font>
 			<name>Font_Bartowski_Unwatched</name>
-			<!--<filename>alaska_light_nocaps.ttf</filename>-->
-			<filename>HelveticaNeueLight.ttf</filename>
+			<filename>Roboto-Light.ttf</filename>
 			<size>16</size>
 			<linespacing>1.3</linespacing>
-			<!--<linespacing>0.8</linespacing>-->
 		</font>
 		<font>
 			<name>Font_Bartowski_Showcase_Title</name>
@@ -247,13 +231,11 @@
 			<filename>alaska_black.ttf</filename>
 			<size>26</size>
 		</font>
-
 		<font>
 			<name>Font_Date</name>
 			<filename>alaska_light.ttf</filename>
 			<size>21</size>
 		</font>	
-
 		<font>
 			<name>Font_RSS_Unicode</name>
 			<filename>Default.ttf</filename>
@@ -420,7 +402,5 @@
 			<filename>scoutlightnc.ttf</filename>
 			<size>38</size>
 		</font>
-
-
 	</fontset>
 </fonts>

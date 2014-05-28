@@ -48,6 +48,15 @@
 		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 		<include>navigation_options</include>
 	</include>
+	<include name="skin_settings_labels_half">
+		<width>420</width>
+		<height>34</height>
+		<textoffsetx>20</textoffsetx>
+		<font>font16caps</font>
+		<textcolor>grey</textcolor>
+		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+		<include>navigation_options</include>
+	</include>
 	<include name="skin_settings_dialog">
 		<width>600</width>
 		<height>34</height>
@@ -1247,81 +1256,70 @@
 
 	<!-- Opacity Hack for MultiImage Home (Force Animation) -->
 	<include name="background_opacity_0_force">
-		<animation effect="fade" start="0" end="0" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="0" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="0" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="0" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="0" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="0" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="0" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="0" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="0" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_10_force">
-		<animation effect="fade" start="0" end="10" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="10" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="10" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="10" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="10" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="10" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="10" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="10" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="10" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_20_force">
-		<animation effect="fade" start="0" end="20" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="20" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="20" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="20" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="20" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="20" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="20" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="20" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="20" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_30_force">
-		<animation effect="fade" start="0" end="30" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="30" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="30" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="30" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="30" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="30" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="30" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="30" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="30" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_40_force">
-		<animation effect="fade" start="0" end="40" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="40" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="40" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="40" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="40" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="40" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="40" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="40" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_50_force">
-		<animation effect="fade" start="0" end="50" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="50" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="50" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="50" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="50" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="50" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="50" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_60_force">
-		<animation effect="fade" start="0" end="60" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="60" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="60" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="60" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="60" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="60" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="60" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_70_force">
-		<animation effect="fade" start="0" end="70" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="70" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="70" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="70" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="70" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="70" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="70" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="70" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="70" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_80_force">
-		<animation effect="fade" start="0" end="80" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="80" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="80" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="80" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="80" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="80" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="80" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="80" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="80" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_90_force">
-		<animation effect="fade" start="0" end="90" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="90" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="90" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="90" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="90" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="90" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="90" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="90" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="90" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 	<include name="background_opacity_100_force">
-		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
-		<animation effect="fade" start="0" end="100" time="600" delay="0">WindowOpen</animation>
-		<animation effect="fade" start="100" end="0" time="600" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="100" time="600" delay="0">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="600" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="300" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="300" delay="0">Hidden</animation>
 	</include>
 
 
@@ -2436,9 +2434,31 @@
 	<!-- Settings Category -->
 	<include name="Settings_Section">
 		<include>Animation_CommonFade</include>
-		<posx>320</posx>
+		<posx>300</posx>
 		<posy>75</posy>
 		<width>860</width>
+		<height>594</height>
+		<itemgap>0</itemgap>
+		<pagecontrol>-</pagecontrol>
+		<onleft>100</onleft>
+		<onright>100</onright>
+	</include>
+	<include name="Settings_Section_HalfLeft">
+		<include>Animation_CommonFade</include>
+		<posx>300</posx>
+		<posy>75</posy>
+		<width>420</width><!--860 -->
+		<height>594</height>
+		<itemgap>0</itemgap>
+		<pagecontrol>-</pagecontrol>
+		<onleft>100</onleft>
+		<onright>100</onright>
+	</include>
+	<include name="Settings_Section_HalfRight">
+		<include>Animation_CommonFade</include>
+		<posx>770</posx>
+		<posy>75</posy>
+		<width>420</width><!--860 -->
 		<height>594</height>
 		<itemgap>0</itemgap>
 		<pagecontrol>-</pagecontrol>

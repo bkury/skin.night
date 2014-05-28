@@ -1539,159 +1539,209 @@
 		</control>
 	</include>
 	<include name="XBMC_Home_Custom_Backgrounds_Settings">
-		<control type="label" id="5500">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 1 ($INFO[Skin.String(CustomHome1.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+		<control type="radiobutton" id="5360">
+			<include>Background_Settings_Button_XBMC_Custom1</include>
+			<label>$INFO[Skin.String(CustomHome1.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome1.Label))</visible>
 		</control>
-		<control type="image" id="5501">
+
+<!--		<control type="image" id="5361">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome1.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome1.Label))">Background_Settings_XBMC_Custom1</include>
 
-		<control type="label" id="5520">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 2 ($INFO[Skin.String(CustomHome2.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5380">
+			<include>Background_Settings_Button_XBMC_Custom2</include>
+			<label>$INFO[Skin.String(CustomHome2.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome2.Label))</visible>
 		</control>
-		<control type="image" id="5521">
+
+<!--		<control type="image" id="5381">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome2.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome2.Label))">Background_Settings_XBMC_Custom2</include>
 
-		<control type="label" id="5540">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 3 ($INFO[Skin.String(CustomHome3.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5400">
+			<include>Background_Settings_Button_XBMC_Custom3</include>
+			<label>$INFO[Skin.String(CustomHome3.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome3.Label))</visible>
 		</control>
-		<control type="image" id="5541">
+
+<!--		<control type="image" id="5401">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome3.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome3.Label))">Background_Settings_XBMC_Custom3</include>
 
-		<control type="label" id="5560">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 4 ($INFO[Skin.String(CustomHome4.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5420">
+			<include>Background_Settings_Button_XBMC_Custom4</include>
+			<label>$INFO[Skin.String(CustomHome4.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome4.Label))</visible>
 		</control>
-		<control type="image" id="5561">
+
+<!--		<control type="image" id="5421">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome4.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome4.Label))">Background_Settings_XBMC_Custom4</include>
 
-		<control type="label" id="5580">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 5 ($INFO[Skin.String(CustomHome5.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5440">
+			<include>Background_Settings_Button_XBMC_Custom5</include>
+			<label>$INFO[Skin.String(CustomHome5.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome5.Label))</visible>
 		</control>
-		<control type="image" id="5581">
+
+<!--		<control type="image" id="5441">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome5.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome5.Label))">Background_Settings_XBMC_Custom5</include>
 
-		<control type="label" id="5600">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 6 ($INFO[Skin.String(CustomHome6.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5460">
+			<include>Background_Settings_Button_XBMC_Custom6</include>
+			<label>$INFO[Skin.String(CustomHome6.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome6.Label))</visible>
 		</control>
-		<control type="image" id="5601">
+
+<!--		<control type="image" id="5461">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome6.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome6.Label))">Background_Settings_XBMC_Custom6</include>
 
-		<control type="label" id="5620">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 7 ($INFO[Skin.String(CustomHome7.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5480">
+			<include>Background_Settings_Button_XBMC_Custom7</include>
+			<label>$INFO[Skin.String(CustomHome7.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome7.Label))</visible>
 		</control>
-		<control type="image" id="5621">
+
+<!--		<control type="image" id="5481">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome7.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome7.Label))">Background_Settings_XBMC_Custom7</include>
 
-		<control type="label" id="5640">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 8 ($INFO[Skin.String(CustomHome8.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5500">
+			<include>Background_Settings_Button_XBMC_Custom8</include>
+			<label>$INFO[Skin.String(CustomHome8.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome8.Label))</visible>
 		</control>
-		<control type="image" id="5641">
+
+<!--		<control type="image" id="5501">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome8.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome8.Label))">Background_Settings_XBMC_Custom8</include>
 
-		<control type="label" id="5660">
-			<width>860</width>
-			<height>35</height>
-			<font>font13caps</font>
-			<label>Custom Home 9 ($INFO[Skin.String(CustomHome9.Label)])</label><!-- LOC -->
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+-->
+		<control type="radiobutton" id="5520">
+			<include>Background_Settings_Button_XBMC_Custom9</include>
+			<label>$INFO[Skin.String(CustomHome9.Label)]</label>
 			<visible>!isEmpty(Skin.String(CustomHome9.Label))</visible>
 		</control>
-		<control type="image" id="5661">
+
+<!--		<control type="image" id="5521">
 			<include>settings_separator</include>
                         <visible>!isEmpty(Skin.String(CustomHome9.Label))</visible>
 		</control>
 		<include condition="!isEmpty(Skin.String(CustomHome9.Label))">Background_Settings_XBMC_Custom9</include>
 
+-->
+	</include>
+	<include name="PLEX_Home_Custom_Backgrounds_Settings">
+		<control type="radiobutton" id="5540">
+			<include>Background_Settings_Button_PLEX_Custom1</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome1.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome1.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5541">
+			<include>Background_Settings_Button_PLEX_Custom1</include>
+			<label>$INFO[Skin.String(CustomHome1.Label)]</label>
+			<onclick>Skin.SetString(CustomHome1.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome1.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5560">
+			<include>Background_Settings_Button_PLEX_Custom2</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome2.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome2.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5561">
+			<include>Background_Settings_Button_PLEX_Custom2</include>
+			<label>$INFO[Skin.String(CustomHome2.Label)]</label>
+			<onclick>Skin.SetString(CustomHome2.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome2.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5580">
+			<include>Background_Settings_Button_PLEX_Custom3</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome3.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome3.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5581">
+			<include>Background_Settings_Button_PLEX_Custom3</include>
+			<label>$INFO[Skin.String(CustomHome3.Label)]</label>
+			<onclick>Skin.SetString(CustomHome3.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome3.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5600">
+			<include>Background_Settings_Button_PLEX_Custom4</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome4.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome4.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5601">
+			<include>Background_Settings_Button_PLEX_Custom4</include>
+			<label>$INFO[Skin.String(CustomHome4.Label)]</label>
+			<onclick>Skin.SetString(CustomHome4.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome4.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5620">
+			<include>Background_Settings_Button_PLEX_Custom5</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome5.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome5.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5621">
+			<include>Background_Settings_Button_PLEX_Custom5</include>
+			<label>$INFO[Skin.String(CustomHome5.Label)]</label>
+			<onclick>Skin.SetString(CustomHome5.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome5.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5640">
+			<include>Background_Settings_Button_PLEX_Custom6</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome6.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome6.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5641">
+			<include>Background_Settings_Button_PLEX_Custom6</include>
+			<label>$INFO[Skin.String(CustomHome6.Label)]</label>
+			<onclick>Skin.SetString(CustomHome6.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome6.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5660">
+			<include>Background_Settings_Button_PLEX_Custom7</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome7.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome7.Label)</visible>
+		</control>
+		<control type="radiobutton" id="5661">
+			<include>Background_Settings_Button_PLEX_Custom7</include>
+			<label>$INFO[Skin.String(CustomHome7.Label)]</label>
+			<onclick>Skin.SetString(CustomHome7.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome7.Label)</visible>
+		</control>
 	</include>
 	<include name="XBMC_Home_Custom_Deck">
 	<!-- Custom Home 1 -->
@@ -3307,7 +3357,7 @@
 	</control>
 	<control type="radiobutton" id="3502">
 		<description>Custom Position 1</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.Label))</selected>
@@ -3316,7 +3366,7 @@
 
 	<control type="radiobutton" id="3503">
 		<description>Custom Position 1</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.Label))</selected>
@@ -3327,7 +3377,7 @@
 		<description>Custom Home 1 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.1.Label))</selected>
@@ -3338,7 +3388,7 @@
 		<description>Custom Home 1 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome1.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.1.Label))</selected>
@@ -3349,7 +3399,7 @@
 		<description>Custom Home 1 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome1.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.1.Plot))</selected>
@@ -3360,7 +3410,7 @@
 		<description>Custom Home 1 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome1.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome1.1.Cover)</selected>
@@ -3371,7 +3421,7 @@
 		<description>Custom Home 1 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.2.Label))</selected>
@@ -3382,7 +3432,7 @@
 		<description>Custom Home 1 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome1.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.2.Label))</selected>
@@ -3393,7 +3443,7 @@
 		<description>Custom Home 1 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome1.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.2.Plot))</selected>
@@ -3404,7 +3454,7 @@
 		<description>Custom Home 1 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome1.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome1.2.Cover)</selected>
@@ -3415,7 +3465,7 @@
 		<description>Custom Home 1 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.3.Label))</selected>
@@ -3426,7 +3476,7 @@
 		<description>Custom Home 1 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome1.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.3.Label))</selected>
@@ -3437,7 +3487,7 @@
 		<description>Custom Home 1 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome1.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.3.Plot))</selected>
@@ -3448,7 +3498,7 @@
 		<description>Custom Home 1 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome1.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome1.3.Cover)</selected>
@@ -3459,7 +3509,7 @@
 		<description>Custom Home 1 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.4.Label))</selected>
@@ -3470,7 +3520,7 @@
 		<description>Custom Home 1 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome1.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.4.Label))</selected>
@@ -3481,7 +3531,7 @@
 		<description>Custom Home 1 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome1.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.4.Plot))</selected>
@@ -3492,7 +3542,7 @@
 		<description>Custom Home 1 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome1.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome1.4.Cover)</selected>
@@ -3503,7 +3553,7 @@
 		<description>Custom Home 1 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.5.Label))</selected>
@@ -3514,7 +3564,7 @@
 		<description>Custom Home 1 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome1.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.5.Label))</selected>
@@ -3525,7 +3575,7 @@
 		<description>Custom Home 1 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome1.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.5.Plot))</selected>
@@ -3536,7 +3586,7 @@
 		<description>Custom Home 1 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome1.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome1.5.Cover)</selected>
@@ -3547,7 +3597,7 @@
 		<description>Custom Home 1 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.6.Label))</selected>
@@ -3558,7 +3608,7 @@
 		<description>Custom Home 1 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome1.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.6.Label))</selected>
@@ -3569,7 +3619,7 @@
 		<description>Custom Home 1 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome1.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.6.Plot))</selected>
@@ -3580,7 +3630,7 @@
 		<description>Custom Home 1 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome1.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome1.6.Cover)</selected>
@@ -3591,7 +3641,7 @@
 		<description>Custom Home 1 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.7.Label))</selected>
@@ -3602,7 +3652,7 @@
 		<description>Custom Home 1 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome1.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome1.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.7.Label))</selected>
@@ -3613,7 +3663,7 @@
 		<description>Custom Home 1 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome1.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome1.7.Plot))</selected>
@@ -3624,7 +3674,7 @@
 		<description>Custom Home 1 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome1.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome1.7.Cover)</selected>
@@ -3649,7 +3699,7 @@
 	</control>
 	<control type="radiobutton" id="3534">
 		<description>Custom Position 2</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.Label))</selected>
@@ -3658,7 +3708,7 @@
 
 	<control type="radiobutton" id="3535">
 		<description>Custom Position 2</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.Label))</selected>
@@ -3669,7 +3719,7 @@
 		<description>Custom Home 2 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.1.Label))</selected>
@@ -3680,7 +3730,7 @@
 		<description>Custom Home 2 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome2.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.1.Label))</selected>
@@ -3691,7 +3741,7 @@
 		<description>Custom Home 2 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome2.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.1.Plot))</selected>
@@ -3702,7 +3752,7 @@
 		<description>Custom Home 2 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome2.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome2.1.Cover)</selected>
@@ -3713,7 +3763,7 @@
 		<description>Custom Home 2 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.2.Label))</selected>
@@ -3724,7 +3774,7 @@
 		<description>Custom Home 2 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome2.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.2.Label))</selected>
@@ -3735,7 +3785,7 @@
 		<description>Custom Home 2 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome2.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.2.Plot))</selected>
@@ -3746,7 +3796,7 @@
 		<description>Custom Home 2 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome2.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome2.2.Cover)</selected>
@@ -3757,7 +3807,7 @@
 		<description>Custom Home 2 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.3.Label))</selected>
@@ -3768,7 +3818,7 @@
 		<description>Custom Home 2 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome2.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.3.Label))</selected>
@@ -3779,7 +3829,7 @@
 		<description>Custom Home 2 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome2.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.3.Plot))</selected>
@@ -3790,7 +3840,7 @@
 		<description>Custom Home 2 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome2.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome2.3.Cover)</selected>
@@ -3801,7 +3851,7 @@
 		<description>Custom Home 2 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.4.Label))</selected>
@@ -3812,7 +3862,7 @@
 		<description>Custom Home 2 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome2.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.4.Label))</selected>
@@ -3823,7 +3873,7 @@
 		<description>Custom Home 2 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome2.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.4.Plot))</selected>
@@ -3834,7 +3884,7 @@
 		<description>Custom Home 2 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome2.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome2.4.Cover)</selected>
@@ -3845,7 +3895,7 @@
 		<description>Custom Home 2 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.5.Label))</selected>
@@ -3856,7 +3906,7 @@
 		<description>Custom Home 2 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome2.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.5.Label))</selected>
@@ -3867,7 +3917,7 @@
 		<description>Custom Home 2 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome2.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.5.Plot))</selected>
@@ -3878,7 +3928,7 @@
 		<description>Custom Home 2 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome2.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome2.5.Cover)</selected>
@@ -3889,7 +3939,7 @@
 		<description>Custom Home 2 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.6.Label))</selected>
@@ -3900,7 +3950,7 @@
 		<description>Custom Home 2 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome2.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.6.Label))</selected>
@@ -3911,7 +3961,7 @@
 		<description>Custom Home 2 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome2.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.6.Plot))</selected>
@@ -3922,7 +3972,7 @@
 		<description>Custom Home 2 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome2.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome2.6.Cover)</selected>
@@ -3933,7 +3983,7 @@
 		<description>Custom Home 2 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.7.Label))</selected>
@@ -3944,7 +3994,7 @@
 		<description>Custom Home 2 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome2.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome2.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.7.Label))</selected>
@@ -3955,7 +4005,7 @@
 		<description>Custom Home 2 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome2.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome2.7.Plot))</selected>
@@ -3966,7 +4016,7 @@
 		<description>Custom Home 2 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome2.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome2.7.Cover)</selected>
@@ -3991,7 +4041,7 @@
 	</control>
 	<control type="radiobutton" id="3566">
 		<description>Custom Position 3</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.Label))</selected>
@@ -4000,7 +4050,7 @@
 
 	<control type="radiobutton" id="3567">
 		<description>Custom Position 3</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.Label))</selected>
@@ -4011,7 +4061,7 @@
 		<description>Custom Home 3 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.1.Label))</selected>
@@ -4022,7 +4072,7 @@
 		<description>Custom Home 3 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome3.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.1.Label))</selected>
@@ -4033,7 +4083,7 @@
 		<description>Custom Home 3 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome3.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.1.Plot))</selected>
@@ -4044,7 +4094,7 @@
 		<description>Custom Home 3 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome3.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome3.1.Cover)</selected>
@@ -4055,7 +4105,7 @@
 		<description>Custom Home 3 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.2.Label))</selected>
@@ -4066,7 +4116,7 @@
 		<description>Custom Home 3 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome3.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.2.Label))</selected>
@@ -4077,7 +4127,7 @@
 		<description>Custom Home 3 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome3.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.2.Plot))</selected>
@@ -4088,7 +4138,7 @@
 		<description>Custom Home 3 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome3.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome3.2.Cover)</selected>
@@ -4099,7 +4149,7 @@
 		<description>Custom Home 3 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.3.Label))</selected>
@@ -4110,7 +4160,7 @@
 		<description>Custom Home 3 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome3.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.3.Label))</selected>
@@ -4121,7 +4171,7 @@
 		<description>Custom Home 3 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome3.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.3.Plot))</selected>
@@ -4132,7 +4182,7 @@
 		<description>Custom Home 3 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome3.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome3.3.Cover)</selected>
@@ -4143,7 +4193,7 @@
 		<description>Custom Home 3 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.4.Label))</selected>
@@ -4154,7 +4204,7 @@
 		<description>Custom Home 3 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome3.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.4.Label))</selected>
@@ -4165,7 +4215,7 @@
 		<description>Custom Home 3 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome3.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.4.Plot))</selected>
@@ -4176,7 +4226,7 @@
 		<description>Custom Home 3 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome3.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome3.4.Cover)</selected>
@@ -4187,7 +4237,7 @@
 		<description>Custom Home 3 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.5.Label))</selected>
@@ -4198,7 +4248,7 @@
 		<description>Custom Home 3 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome3.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.5.Label))</selected>
@@ -4209,7 +4259,7 @@
 		<description>Custom Home 3 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome3.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.5.Plot))</selected>
@@ -4220,7 +4270,7 @@
 		<description>Custom Home 3 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome3.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome3.5.Cover)</selected>
@@ -4231,7 +4281,7 @@
 		<description>Custom Home 3 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.6.Label))</selected>
@@ -4242,7 +4292,7 @@
 		<description>Custom Home 3 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome3.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.6.Label))</selected>
@@ -4253,7 +4303,7 @@
 		<description>Custom Home 3 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome3.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.6.Plot))</selected>
@@ -4264,7 +4314,7 @@
 		<description>Custom Home 3 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome3.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome3.6.Cover)</selected>
@@ -4275,7 +4325,7 @@
 		<description>Custom Home 3 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.7.Label))</selected>
@@ -4286,7 +4336,7 @@
 		<description>Custom Home 3 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome3.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome3.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.7.Label))</selected>
@@ -4297,7 +4347,7 @@
 		<description>Custom Home 3 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome3.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome3.7.Plot))</selected>
@@ -4308,7 +4358,7 @@
 		<description>Custom Home 3 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome3.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome3.7.Cover)</selected>
@@ -4333,7 +4383,7 @@
 	</control>
 	<control type="radiobutton" id="3598">
 		<description>Custom Position 4</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.Label))</selected>
@@ -4342,7 +4392,7 @@
 
 	<control type="radiobutton" id="3599">
 		<description>Custom Position 4</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.Label))</selected>
@@ -4353,7 +4403,7 @@
 		<description>Custom Home 4 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.1.Label))</selected>
@@ -4364,7 +4414,7 @@
 		<description>Custom Home 4 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome4.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.1.Label))</selected>
@@ -4375,7 +4425,7 @@
 		<description>Custom Home 4 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome4.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.1.Plot))</selected>
@@ -4386,7 +4436,7 @@
 		<description>Custom Home 4 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome4.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome4.1.Cover)</selected>
@@ -4397,7 +4447,7 @@
 		<description>Custom Home 4 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.2.Label))</selected>
@@ -4408,7 +4458,7 @@
 		<description>Custom Home 4 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome4.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.2.Label))</selected>
@@ -4419,7 +4469,7 @@
 		<description>Custom Home 4 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome4.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.2.Plot))</selected>
@@ -4430,7 +4480,7 @@
 		<description>Custom Home 4 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome4.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome4.2.Cover)</selected>
@@ -4441,7 +4491,7 @@
 		<description>Custom Home 4 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.3.Label))</selected>
@@ -4452,7 +4502,7 @@
 		<description>Custom Home 4 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome4.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.3.Label))</selected>
@@ -4463,7 +4513,7 @@
 		<description>Custom Home 4 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome4.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.3.Plot))</selected>
@@ -4474,7 +4524,7 @@
 		<description>Custom Home 4 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome4.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome4.3.Cover)</selected>
@@ -4485,7 +4535,7 @@
 		<description>Custom Home 4 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.4.Label))</selected>
@@ -4496,7 +4546,7 @@
 		<description>Custom Home 4 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome4.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.4.Label))</selected>
@@ -4507,7 +4557,7 @@
 		<description>Custom Home 4 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome4.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.4.Plot))</selected>
@@ -4518,7 +4568,7 @@
 		<description>Custom Home 4 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome4.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome4.4.Cover)</selected>
@@ -4529,7 +4579,7 @@
 		<description>Custom Home 4 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.5.Label))</selected>
@@ -4540,7 +4590,7 @@
 		<description>Custom Home 4 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome4.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.5.Label))</selected>
@@ -4551,7 +4601,7 @@
 		<description>Custom Home 4 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome4.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.5.Plot))</selected>
@@ -4562,7 +4612,7 @@
 		<description>Custom Home 4 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome4.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome4.5.Cover)</selected>
@@ -4573,7 +4623,7 @@
 		<description>Custom Home 4 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.6.Label))</selected>
@@ -4584,7 +4634,7 @@
 		<description>Custom Home 4 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome4.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.6.Label))</selected>
@@ -4595,7 +4645,7 @@
 		<description>Custom Home 4 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome4.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.6.Plot))</selected>
@@ -4606,7 +4656,7 @@
 		<description>Custom Home 4 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome4.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome4.6.Cover)</selected>
@@ -4617,7 +4667,7 @@
 		<description>Custom Home 4 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.7.Label))</selected>
@@ -4628,7 +4678,7 @@
 		<description>Custom Home 4 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome4.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome4.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.7.Label))</selected>
@@ -4639,7 +4689,7 @@
 		<description>Custom Home 4 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome4.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome4.7.Plot))</selected>
@@ -4650,7 +4700,7 @@
 		<description>Custom Home 4 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome4.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome4.7.Cover)</selected>
@@ -4675,7 +4725,7 @@
 	</control>
 	<control type="radiobutton" id="3630">
 		<description>Custom Position 5</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.Label))</selected>
@@ -4684,7 +4734,7 @@
 
 	<control type="radiobutton" id="3631">
 		<description>Custom Position 5</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.Label))</selected>
@@ -4695,7 +4745,7 @@
 		<description>Custom Home 5 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.1.Label))</selected>
@@ -4706,7 +4756,7 @@
 		<description>Custom Home 5 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome5.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.1.Label))</selected>
@@ -4717,7 +4767,7 @@
 		<description>Custom Home 5 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome5.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.1.Plot))</selected>
@@ -4728,7 +4778,7 @@
 		<description>Custom Home 5 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome5.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome5.1.Cover)</selected>
@@ -4739,7 +4789,7 @@
 		<description>Custom Home 5 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.2.Label))</selected>
@@ -4750,7 +4800,7 @@
 		<description>Custom Home 5 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome5.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.2.Label))</selected>
@@ -4761,7 +4811,7 @@
 		<description>Custom Home 5 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome5.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.2.Plot))</selected>
@@ -4772,7 +4822,7 @@
 		<description>Custom Home 5 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome5.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome5.2.Cover)</selected>
@@ -4783,7 +4833,7 @@
 		<description>Custom Home 5 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.3.Label))</selected>
@@ -4794,7 +4844,7 @@
 		<description>Custom Home 5 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome5.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.3.Label))</selected>
@@ -4805,7 +4855,7 @@
 		<description>Custom Home 5 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome5.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.3.Plot))</selected>
@@ -4816,7 +4866,7 @@
 		<description>Custom Home 5 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome5.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome5.3.Cover)</selected>
@@ -4827,7 +4877,7 @@
 		<description>Custom Home 5 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.4.Label))</selected>
@@ -4838,7 +4888,7 @@
 		<description>Custom Home 5 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome5.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.4.Label))</selected>
@@ -4849,7 +4899,7 @@
 		<description>Custom Home 5 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome5.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.4.Plot))</selected>
@@ -4860,7 +4910,7 @@
 		<description>Custom Home 5 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome5.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome5.4.Cover)</selected>
@@ -4871,7 +4921,7 @@
 		<description>Custom Home 5 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.5.Label))</selected>
@@ -4882,7 +4932,7 @@
 		<description>Custom Home 5 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome5.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.5.Label))</selected>
@@ -4893,7 +4943,7 @@
 		<description>Custom Home 5 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome5.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.5.Plot))</selected>
@@ -4904,7 +4954,7 @@
 		<description>Custom Home 5 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome5.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome5.5.Cover)</selected>
@@ -4915,7 +4965,7 @@
 		<description>Custom Home 5 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.6.Label))</selected>
@@ -4926,7 +4976,7 @@
 		<description>Custom Home 5 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome5.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.6.Label))</selected>
@@ -4937,7 +4987,7 @@
 		<description>Custom Home 5 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome5.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.6.Plot))</selected>
@@ -4948,7 +4998,7 @@
 		<description>Custom Home 5 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome5.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome5.6.Cover)</selected>
@@ -4959,7 +5009,7 @@
 		<description>Custom Home 5 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.7.Label))</selected>
@@ -4970,7 +5020,7 @@
 		<description>Custom Home 5 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome5.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome5.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.7.Label))</selected>
@@ -4981,7 +5031,7 @@
 		<description>Custom Home 5 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome5.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome5.7.Plot))</selected>
@@ -4992,7 +5042,7 @@
 		<description>Custom Home 5 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome5.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome5.7.Cover)</selected>
@@ -5017,7 +5067,7 @@
 	</control>
 	<control type="radiobutton" id="3662">
 		<description>Custom Position 6</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.Label))</selected>
@@ -5026,7 +5076,7 @@
 
 	<control type="radiobutton" id="3663">
 		<description>Custom Position 6</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.Label))</selected>
@@ -5037,7 +5087,7 @@
 		<description>Custom Home 6 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.1.Label))</selected>
@@ -5048,7 +5098,7 @@
 		<description>Custom Home 6 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome6.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.1.Label))</selected>
@@ -5059,7 +5109,7 @@
 		<description>Custom Home 6 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome6.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.1.Plot))</selected>
@@ -5070,7 +5120,7 @@
 		<description>Custom Home 6 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome6.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome6.1.Cover)</selected>
@@ -5081,7 +5131,7 @@
 		<description>Custom Home 6 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.2.Label))</selected>
@@ -5092,7 +5142,7 @@
 		<description>Custom Home 6 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome6.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.2.Label))</selected>
@@ -5103,7 +5153,7 @@
 		<description>Custom Home 6 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome6.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.2.Plot))</selected>
@@ -5114,7 +5164,7 @@
 		<description>Custom Home 6 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome6.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome6.2.Cover)</selected>
@@ -5125,7 +5175,7 @@
 		<description>Custom Home 6 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.3.Label))</selected>
@@ -5136,7 +5186,7 @@
 		<description>Custom Home 6 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome6.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.3.Label))</selected>
@@ -5147,7 +5197,7 @@
 		<description>Custom Home 6 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome6.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.3.Plot))</selected>
@@ -5158,7 +5208,7 @@
 		<description>Custom Home 6 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome6.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome6.3.Cover)</selected>
@@ -5169,7 +5219,7 @@
 		<description>Custom Home 6 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.4.Label))</selected>
@@ -5180,7 +5230,7 @@
 		<description>Custom Home 6 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome6.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.4.Label))</selected>
@@ -5191,7 +5241,7 @@
 		<description>Custom Home 6 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome6.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.4.Plot))</selected>
@@ -5202,7 +5252,7 @@
 		<description>Custom Home 6 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome6.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome6.4.Cover)</selected>
@@ -5213,7 +5263,7 @@
 		<description>Custom Home 6 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.5.Label))</selected>
@@ -5224,7 +5274,7 @@
 		<description>Custom Home 6 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome6.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.5.Label))</selected>
@@ -5235,7 +5285,7 @@
 		<description>Custom Home 6 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome6.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.5.Plot))</selected>
@@ -5246,7 +5296,7 @@
 		<description>Custom Home 6 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome6.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome6.5.Cover)</selected>
@@ -5257,7 +5307,7 @@
 		<description>Custom Home 6 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.6.Label))</selected>
@@ -5268,7 +5318,7 @@
 		<description>Custom Home 6 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome6.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.6.Label))</selected>
@@ -5279,7 +5329,7 @@
 		<description>Custom Home 6 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome6.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.6.Plot))</selected>
@@ -5290,7 +5340,7 @@
 		<description>Custom Home 6 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome6.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome6.6.Cover)</selected>
@@ -5301,7 +5351,7 @@
 		<description>Custom Home 6 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.7.Label))</selected>
@@ -5312,7 +5362,7 @@
 		<description>Custom Home 6 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome6.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome6.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.7.Label))</selected>
@@ -5323,7 +5373,7 @@
 		<description>Custom Home 6 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome6.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome6.7.Plot))</selected>
@@ -5334,7 +5384,7 @@
 		<description>Custom Home 6 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome6.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome6.7.Cover)</selected>
@@ -5359,7 +5409,7 @@
 	</control>
 	<control type="radiobutton" id="3694">
 		<description>Custom Position 7</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.Label))</selected>
@@ -5368,7 +5418,7 @@
 
 	<control type="radiobutton" id="3695">
 		<description>Custom Position 7</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.Label))</selected>
@@ -5379,7 +5429,7 @@
 		<description>Custom Home 7 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.1.Label))</selected>
@@ -5390,7 +5440,7 @@
 		<description>Custom Home 7 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome7.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.1.Label))</selected>
@@ -5401,7 +5451,7 @@
 		<description>Custom Home 7 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome7.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.1.Plot))</selected>
@@ -5412,7 +5462,7 @@
 		<description>Custom Home 7 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome7.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome7.1.Cover)</selected>
@@ -5423,7 +5473,7 @@
 		<description>Custom Home 7 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.2.Label))</selected>
@@ -5434,7 +5484,7 @@
 		<description>Custom Home 7 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome7.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.2.Label))</selected>
@@ -5445,7 +5495,7 @@
 		<description>Custom Home 7 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome7.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.2.Plot))</selected>
@@ -5456,7 +5506,7 @@
 		<description>Custom Home 7 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome7.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome7.2.Cover)</selected>
@@ -5467,7 +5517,7 @@
 		<description>Custom Home 7 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.3.Label))</selected>
@@ -5478,7 +5528,7 @@
 		<description>Custom Home 7 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome7.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.3.Label))</selected>
@@ -5489,7 +5539,7 @@
 		<description>Custom Home 7 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome7.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.3.Plot))</selected>
@@ -5500,7 +5550,7 @@
 		<description>Custom Home 7 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome7.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome7.3.Cover)</selected>
@@ -5511,7 +5561,7 @@
 		<description>Custom Home 7 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.4.Label))</selected>
@@ -5522,7 +5572,7 @@
 		<description>Custom Home 7 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome7.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.4.Label))</selected>
@@ -5533,7 +5583,7 @@
 		<description>Custom Home 7 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome7.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.4.Plot))</selected>
@@ -5544,7 +5594,7 @@
 		<description>Custom Home 7 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome7.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome7.4.Cover)</selected>
@@ -5555,7 +5605,7 @@
 		<description>Custom Home 7 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.5.Label))</selected>
@@ -5566,7 +5616,7 @@
 		<description>Custom Home 7 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome7.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.5.Label))</selected>
@@ -5577,7 +5627,7 @@
 		<description>Custom Home 7 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome7.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.5.Plot))</selected>
@@ -5588,7 +5638,7 @@
 		<description>Custom Home 7 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome7.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome7.5.Cover)</selected>
@@ -5599,7 +5649,7 @@
 		<description>Custom Home 7 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.6.Label))</selected>
@@ -5610,7 +5660,7 @@
 		<description>Custom Home 7 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome7.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.6.Label))</selected>
@@ -5621,7 +5671,7 @@
 		<description>Custom Home 7 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome7.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.6.Plot))</selected>
@@ -5632,7 +5682,7 @@
 		<description>Custom Home 7 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome7.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome7.6.Cover)</selected>
@@ -5643,7 +5693,7 @@
 		<description>Custom Home 7 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.7.Label))</selected>
@@ -5654,7 +5704,7 @@
 		<description>Custom Home 7 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome7.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome7.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.7.Label))</selected>
@@ -5665,7 +5715,7 @@
 		<description>Custom Home 7 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome7.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome7.7.Plot))</selected>
@@ -5676,7 +5726,7 @@
 		<description>Custom Home 7 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome7.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome7.7.Cover)</selected>
@@ -5701,7 +5751,7 @@
 	</control>
 	<control type="radiobutton" id="3726">
 		<description>Custom Position 8</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.Label))</selected>
@@ -5710,7 +5760,7 @@
 
 	<control type="radiobutton" id="3727">
 		<description>Custom Position 8</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome8.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.Label))</selected>
@@ -5721,7 +5771,7 @@
 		<description>Custom Home 8 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.1.Label))</selected>
@@ -5732,7 +5782,7 @@
 		<description>Custom Home 8 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome8.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.1.Label))</selected>
@@ -5743,7 +5793,7 @@
 		<description>Custom Home 8 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome8.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.1.Plot))</selected>
@@ -5754,7 +5804,7 @@
 		<description>Custom Home 8 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome8.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome8.1.Cover)</selected>
@@ -5765,7 +5815,7 @@
 		<description>Custom Home 8 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.2.Label))</selected>
@@ -5776,7 +5826,7 @@
 		<description>Custom Home 8 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome8.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.2.Label))</selected>
@@ -5787,7 +5837,7 @@
 		<description>Custom Home 8 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome8.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.2.Plot))</selected>
@@ -5798,7 +5848,7 @@
 		<description>Custom Home 8 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome8.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome8.2.Cover)</selected>
@@ -5809,7 +5859,7 @@
 		<description>Custom Home 8 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.3.Label))</selected>
@@ -5820,7 +5870,7 @@
 		<description>Custom Home 8 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome8.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.3.Label))</selected>
@@ -5831,7 +5881,7 @@
 		<description>Custom Home 8 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome8.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.3.Plot))</selected>
@@ -5842,7 +5892,7 @@
 		<description>Custom Home 8 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome8.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome8.3.Cover)</selected>
@@ -5853,7 +5903,7 @@
 		<description>Custom Home 8 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.4.Label))</selected>
@@ -5864,7 +5914,7 @@
 		<description>Custom Home 8 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome8.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.4.Label))</selected>
@@ -5875,7 +5925,7 @@
 		<description>Custom Home 8 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome8.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.4.Plot))</selected>
@@ -5886,7 +5936,7 @@
 		<description>Custom Home 8 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome8.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome8.4.Cover)</selected>
@@ -5897,7 +5947,7 @@
 		<description>Custom Home 8 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.5.Label))</selected>
@@ -5908,7 +5958,7 @@
 		<description>Custom Home 8 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome8.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.5.Label))</selected>
@@ -5919,7 +5969,7 @@
 		<description>Custom Home 8 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome8.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.5.Plot))</selected>
@@ -5930,7 +5980,7 @@
 		<description>Custom Home 8 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome8.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome8.5.Cover)</selected>
@@ -5941,7 +5991,7 @@
 		<description>Custom Home 8 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.6.Label))</selected>
@@ -5952,7 +6002,7 @@
 		<description>Custom Home 8 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome8.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.6.Label))</selected>
@@ -5963,7 +6013,7 @@
 		<description>Custom Home 8 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome8.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.6.Plot))</selected>
@@ -5974,7 +6024,7 @@
 		<description>Custom Home 8 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome8.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome8.6.Cover)</selected>
@@ -5985,7 +6035,7 @@
 		<description>Custom Home 8 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.7.Label))</selected>
@@ -5996,7 +6046,7 @@
 		<description>Custom Home 8 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome8.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome8.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.7.Label))</selected>
@@ -6007,7 +6057,7 @@
 		<description>Custom Home 8 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome8.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome8.7.Plot))</selected>
@@ -6018,7 +6068,7 @@
 		<description>Custom Home 8 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome8.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome8.7.Cover)</selected>
@@ -6043,7 +6093,7 @@
 	</control>
 	<control type="radiobutton" id="3758">
 		<description>Custom Position 9</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$LOCALIZE[504]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.Label))</selected>
@@ -6052,7 +6102,7 @@
 
 	<control type="radiobutton" id="3759">
 		<description>Custom Position 9</description>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>$INFO[Skin.String(CustomHome9.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.Label))</selected>
@@ -6063,7 +6113,7 @@
 		<description>Custom Home 9 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 1</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.1.Label))</selected>
@@ -6074,7 +6124,7 @@
 		<description>Custom Home 9 / Deck 1</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome9.1.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.1)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.1.Label))</selected>
@@ -6085,7 +6135,7 @@
 		<description>Custom Home 9 / Deck 1 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome9.1.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.1.Plot))</selected>
@@ -6096,7 +6146,7 @@
 		<description>Custom Home 9 / Deck 1 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome9.1.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome9.1.Cover)</selected>
@@ -6107,7 +6157,7 @@
 		<description>Custom Home 9 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 2</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.2.Label))</selected>
@@ -6118,7 +6168,7 @@
 		<description>Custom Home 9 / Deck 2</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome9.2.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.2)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.2.Label))</selected>
@@ -6129,7 +6179,7 @@
 		<description>Custom Home 9 / Deck 2 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome9.2.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.2.Plot))</selected>
@@ -6140,7 +6190,7 @@
 		<description>Custom Home 9 / Deck 2 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome9.2.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome9.2.Cover)</selected>
@@ -6151,7 +6201,7 @@
 		<description>Custom Home 9 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 3</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.3.Label))</selected>
@@ -6162,7 +6212,7 @@
 		<description>Custom Home 9 / Deck 3</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome9.3.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.3)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.3.Label))</selected>
@@ -6173,7 +6223,7 @@
 		<description>Custom Home 9 / Deck 3 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome9.3.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.3.Plot))</selected>
@@ -6184,7 +6234,7 @@
 		<description>Custom Home 9 / Deck 3 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome9.3.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome9.3.Cover)</selected>
@@ -6195,7 +6245,7 @@
 		<description>Custom Home 9 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 4</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.4.Label))</selected>
@@ -6206,7 +6256,7 @@
 		<description>Custom Home 9 / Deck 4</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome9.4.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.4)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.4.Label))</selected>
@@ -6217,7 +6267,7 @@
 		<description>Custom Home 9 / Deck 4 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome9.4.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.4.Plot))</selected>
@@ -6228,7 +6278,7 @@
 		<description>Custom Home 9 / Deck 4 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome9.4.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome9.4.Cover)</selected>
@@ -6239,7 +6289,7 @@
 		<description>Custom Home 9 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 5</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.5.Label))</selected>
@@ -6250,7 +6300,7 @@
 		<description>Custom Home 9 / Deck 5</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome9.5.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.5)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.5.Label))</selected>
@@ -6261,7 +6311,7 @@
 		<description>Custom Home 9 / Deck 5 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome9.5.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.5.Plot))</selected>
@@ -6272,7 +6322,7 @@
 		<description>Custom Home 9 / Deck 5 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome9.5.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome9.5.Cover)</selected>
@@ -6283,7 +6333,7 @@
 		<description>Custom Home 9 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 6</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.6.Label))</selected>
@@ -6294,7 +6344,7 @@
 		<description>Custom Home 9 / Deck 6</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome9.6.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.6)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.6.Label))</selected>
@@ -6305,7 +6355,7 @@
 		<description>Custom Home 9 / Deck 6 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome9.6.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.6.Plot))</selected>
@@ -6316,7 +6366,7 @@
 		<description>Custom Home 9 / Deck 6 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome9.6.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome9.6.Cover)</selected>
@@ -6327,7 +6377,7 @@
 		<description>Custom Home 9 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] Deck Item 7</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.7.Label))</selected>
@@ -6338,7 +6388,7 @@
 		<description>Custom Home 9 / Deck 7</description>
 		<textoffsetx>40</textoffsetx>
 		<font>font15caps</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>[COLOR=mainblue]\_[/COLOR] $INFO[Skin.String(CustomHome9.7.Label)]</label>
 		<onclick>RunScript(script.favourites,changetitle=true&amp;property=CustomHome9.7)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.7.Label))</selected>
@@ -6349,7 +6399,7 @@
 		<description>Custom Home 9 / Deck 7 / Description</description>
 		<textoffsetx>63</textoffsetx>
 		<font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Description</label>
 		<onclick>Skin.SetString(CustomHome9.7.Plot)</onclick>
 		<selected>!isEmpty(Skin.String(CustomHome9.7.Plot))</selected>
@@ -6360,7 +6410,7 @@
 		<description>Custom Home 9 / Deck 7 / Cover Image</description>
 		<textoffsetx>63</textoffsetx>
                 <font>font13caps_title</font>
-		<include>skin_settings_labels</include>
+		<include>skin_settings_labels_half</include>
 		<label>(optional) Cover Image</label>
 		<onclick>Skin.ToggleSetting(CustomHome9.7.Cover)</onclick>
 		<selected>Skin.HasSetting(CustomHome9.7.Cover)</selected>
@@ -6369,470 +6419,510 @@
 
 	</include>
 	<include name="XBMC_Deck_Plexbmc_Items">
-		<content>
-	<item>
+	<item id="100">
                 <label>$INFO[Window(Home).Property(plexbmc.0.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.0.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.0.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.0.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.0.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.0.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.0.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.0.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.0.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.0.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.0.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.0.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.0.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.0.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.0.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.0.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.0.path))</visible>
 	</item>
-
-	<item>
+	<item id="101">
                 <label>$INFO[Window(Home).Property(plexbmc.1.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.1.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.1.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.1.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.1.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.1.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.1.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.1.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.1.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.1.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.1.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.1.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.1.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.1.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.1.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.1.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.1.path))</visible>
 	</item>
-
-	<item>
+	<item id="102">
                 <label>$INFO[Window(Home).Property(plexbmc.2.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.2.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.2.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.2.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.2.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.2.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.2.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.2.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.2.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.2.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.2.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.2.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.2.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.2.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.2.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.2.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.2.path))</visible>
 	</item>
-
-	<item>
+	<item id="103">
                 <label>$INFO[Window(Home).Property(plexbmc.3.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.3.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.3.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.3.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.3.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.3.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.3.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.3.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.3.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.3.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.3.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.3.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.3.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.3.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.3.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.3.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.3.path))</visible>
 	</item>
-
-	<item>
+	<item id="104">
                 <label>$INFO[Window(Home).Property(plexbmc.4.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.4.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.4.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.4.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.4.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.4.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.4.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.4.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.4.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.4.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.4.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.4.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.4.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.4.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.4.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.4.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.4.path))</visible>
 	</item>
-
-	<item>
+	<item id="105">
                 <label>$INFO[Window(Home).Property(plexbmc.5.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.5.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.5.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.5.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.5.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.5.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.5.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.5.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.5.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.5.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.5.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.5.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.5.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.5.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.5.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.5.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.5.path))</visible>
 	</item>
-
-	<item>
+	<item id="106">
                 <label>$INFO[Window(Home).Property(plexbmc.6.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.6.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.6.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.6.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.6.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.6.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.6.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.6.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.6.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.6.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.6.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.6.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.6.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.6.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.6.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.6.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.6.path))</visible>
 	</item>
-
-	<item>
+	<item id="107">
                 <label>$INFO[Window(Home).Property(plexbmc.7.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.7.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.7.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.7.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.7.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.7.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.7.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.7.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.7.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.7.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.7.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.7.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.7.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.7.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.7.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.7.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.7.path))</visible>
 	</item>
-
-	<item>
+	<item id="108">
                 <label>$INFO[Window(Home).Property(plexbmc.8.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.8.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.8.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.8.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.8.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.8.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.8.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.8.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.8.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.8.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.8.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.8.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.8.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.8.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.8.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.8.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.8.path))</visible>
 	</item>
-
-	<item>
+	<item id="109">
                 <label>$INFO[Window(Home).Property(plexbmc.9.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.9.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.9.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.9.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.9.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.9.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.9.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.9.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.9.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.9.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.9.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.9.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.9.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.9.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.9.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.9.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.9.path))</visible>
 	</item>
-
-	<item>
+	<item id="110">
                 <label>$INFO[Window(Home).Property(plexbmc.10.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.10.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.10.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.10.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.10.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.10.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.10.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.10.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.10.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.10.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.10.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.10.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.10.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.10.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.10.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.10.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.10.path))</visible>
 	</item>
-
-	<item>
+	<item id="111">
                 <label>$INFO[Window(Home).Property(plexbmc.11.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.11.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.11.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.11.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.11.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.11.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.11.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.11.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.11.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.11.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.11.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.11.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.11.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.11.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.11.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.11.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.11.path))</visible>
 	</item>
-
-	<item>
+	<item id="112">
                 <label>$INFO[Window(Home).Property(plexbmc.12.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.12.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.12.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.12.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.12.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.12.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.12.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.12.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.12.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.12.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.12.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.12.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.12.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.12.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.12.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.12.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.12.path))</visible>
 	</item>
-
-	<item>
+	<item id="113">
                 <label>$INFO[Window(Home).Property(plexbmc.13.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.13.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.13.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.13.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.13.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.13.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.13.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.13.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.13.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.13.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.13.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.13.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.13.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.13.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.13.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.13.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.13.path))</visible>
 	</item>
-
-	<item>
+	<item id="114">
                 <label>$INFO[Window(Home).Property(plexbmc.14.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.14.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.14.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.14.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.14.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.14.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.14.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.14.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.14.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.14.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.14.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.14.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.14.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.14.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.14.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.14.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.14.path))</visible>
 	</item>
-
-	<item>
+	<item id="115">
                 <label>$INFO[Window(Home).Property(plexbmc.15.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.15.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.15.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.15.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.15.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.15.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.15.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.15.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.15.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.15.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.15.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.15.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.15.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.15.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.15.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.15.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.15.path))</visible>
 	</item>
-
-	<item>
+	<item id="116">
                 <label>$INFO[Window(Home).Property(plexbmc.16.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.16.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.16.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.16.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.16.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.16.path))</visible>
 	</item>
-
-	<item>
+	<item id="117">
                 <label>$INFO[Window(Home).Property(plexbmc.17.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.17.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.17.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.17.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.17.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.17.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.17.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.17.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.17.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.17.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.17.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.17.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.17.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.17.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.17.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.17.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.17.path))</visible>
 	</item>
-
-	<item>
+	<item id="118">
                 <label>$INFO[Window(Home).Property(plexbmc.18.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.18.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.18.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.18.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.18.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.18.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.18.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.18.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.18.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.18.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.18.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.18.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.18.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.18.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.18.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.18.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.18.path))</visible>
 	</item>
-
-	<item>
+	<item id="119">
                 <label>$INFO[Window(Home).Property(plexbmc.19.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.19.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.19.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.19.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.19.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.19.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.19.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.19.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.19.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.19.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.19.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.19.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.19.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.19.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.19.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.19.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.19.path))</visible>
 	</item>
-
-	<item>
+	<item id="120">
                 <label>$INFO[Window(Home).Property(plexbmc.20.title)]</label>
                 <label2>$INFO[Window(Home).Property(plexbmc.20.subtitle)]</label2>
                 <onclick>$INFO[Window(Home).Property(plexbmc.20.path)]</onclick>
                 <thumb background="true">$INFO[Skin.String(Plexbmc.20.Background)]</thumb>
                 <icon>$INFO[Window(Home).Property(plexbmc.20.art)]</icon>
+
 		<property name="Type">Cover</property>
 		<property name="Type2">Cover</property>
-	      <!--<property name="uuid">$INFO[Window(Home).Property(plexbmc.16.uuid)]</property>
-	      <property name="type">$INFO[Window(Home).Property(plexbmc.16.type)]</property>
-	      <property name="partial">$INFO[Window(Home).Property(plexbmc.16.partialpath)]</property>
-	      <property name="search">$INFO[Window(Home).Property(plexbmc.16.search)]</property>
-	      <property name="recent">$INFO[Window(Home).Property(plexbmc.16.recent)]</property>
-	      <property name="viewed">$INFO[Window(Home).Property(plexbmc.16.viewed)]</property>
-	      <property name="shared">$INFO[Window(Home).Property(plexbmc.16.shared)]</property>
-	      <property name="newest">$INFO[Window(Home).Property(plexbmc.16.released)]</property>
-	      <property name="ondeck">$INFO[Window(Home).Property(plexbmc.16.ondeck)]</property>
-	      <property name="album">$INFO[Window(Home).Property(plexbmc.16.album)]</property>
-	      <property name="year">$INFO[Window(Home).Property(plexbmc.16.year)]</property>-->
+	      
+		<property name="uuid">$INFO[Window(Home).Property(plexbmc.20.uuid)]</property>
+		<property name="plextype">$INFO[Window(Home).Property(plexbmc.20.type)]</property>
+		<property name="partial">$INFO[Window(Home).Property(plexbmc.20.partialpath)]</property>
+		<property name="search">$INFO[Window(Home).Property(plexbmc.20.search)]</property>
+		<property name="recent">$INFO[Window(Home).Property(plexbmc.20.recent)]</property>
+		<property name="viewed">$INFO[Window(Home).Property(plexbmc.20.viewed)]</property>
+		<property name="shared">$INFO[Window(Home).Property(plexbmc.20.shared)]</property>
+		<property name="newest">$INFO[Window(Home).Property(plexbmc.20.released)]</property>
+		<property name="ondeck">$INFO[Window(Home).Property(plexbmc.20.ondeck)]</property>
+		<property name="album">$INFO[Window(Home).Property(plexbmc.20.album)]</property>
+		<property name="year">$INFO[Window(Home).Property(plexbmc.20.year)]</property>
+
 		<visible>!isEmpty(Window(Home).Property(plexbmc.20.path))</visible>
 	</item>
-
-		</content>
 	</include>
 	<include name="XBMC_Deck_NextAired_Items">
 		<content>

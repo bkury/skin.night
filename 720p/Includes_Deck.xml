@@ -369,7 +369,9 @@
 				</control>
 				<control type="fixedlist" id="11080">
 					<include>Deck_Content</include>
-					<include>XBMC_Deck_Plexbmc_Items</include>
+					<content>
+						<include>XBMC_Deck_Plexbmc_Items</include>
+					</content>
 				</control>
 				<control type="group">
 					<visible>ControlGroup(7080).hasFocus</visible>
@@ -1117,10 +1119,7 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</control>
-
-
 	</control>
-
 </include>
 
 <!-- Deck Visibility -->
@@ -1129,7 +1128,7 @@
 </include>
 
 <include name="Deck_Visible_Full">
-	<visible>Control.isVisible(11005) | ListItem.Type(movie) | ListItem.Type(tvshow) | ListItem.Type(episode) | ListItem.Type(season) | ListItem.Type(video) | SubString(ListItem.Property(Type),Cover)</visible>
+	<visible>ListItem.Type(movie) | ListItem.Type(tvshow) | ListItem.Type(episode) | ListItem.Type(season) | ListItem.Type(video) | SubString(ListItem.Property(Type),Cover)</visible>
 </include>
 
 <!-- Deck Name -->

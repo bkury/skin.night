@@ -7,13 +7,22 @@
 	</include>
 
 	<!-- XBMC Home Menu -->
-	<include name="XBMC_Home">
+	<include name="XBMC_HomeMenu_Content">
+		<item>
+			<label>-</label> 
+			<onclick>-</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">XBMC</property>
+			<visible>Skin.HasSetting(XBMC_Plex_Home_Hybrid)</visible>
+		</item>
 		<item id="1">
 			<label>Live TV</label> <!-- Live TV -->
 			<onclick>ActivateWindow(PVR)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
 			<!--<visible>System.GetBool(pvrmanager.enabled)</visible>-->
+			<visible>!Skin.HasSetting(XBMC_Home_NoLiveTv)</visible>
 		</item>
 		<item id="2">
 			<label>3</label> <!-- Videos -->
@@ -21,54 +30,100 @@
 			<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoVideos) + ![ Skin.HasSetting(XBMC_Plex_Home_Full) ]</visible>
 		</item>
 		<item id="3">
 			<label>31009</label> <!-- Movies -->
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoMovies) + Library.HasContent(Movies) + ![ Skin.HasSetting(XBMC_Plex_Home_Full) ]</visible>
 		</item>
 		<item id="4">
 			<label>31010</label> <!-- TV Shows -->
 			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoTvShows) + Library.HasContent(TVShows) + ![ Skin.HasSetting(XBMC_Plex_Home_Full) ]</visible>
 		</item>
 		<item id="5">
 			<label>2</label> <!-- Music -->
 			<onclick>ActivateWindow(Music)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoMusic) + ![ Skin.HasSetting(XBMC_Plex_Home_Full) ]</visible>
 		</item>
 		<item id="7">
 			<label>1</label> <!-- Pictures -->
 			<onclick>ActivateWindow(Pictures)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoPictures) + ![ Skin.HasSetting(XBMC_Plex_Home_Full) ]</visible>
 		</item>
 		<item id="8">
 			<label>Plex</label> <!-- Plex -->
 			<onclick>ActivateWindow(Pictures)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoPlex) + ![ Skin.HasSetting(XBMC_Plex_Home_Full) | Skin.HasSetting(XBMC_Plex_Home_Hybrid) ]</visible>
+		</item>
+		<item id="12">
+			<label>Play DVD</label> <!-- Play DVD -->
+			<onclick>XBMC.PlayDVD()</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<visible>System.HasMediaDVD</visible>
+		</item>
+	</include>
+
+	<include name="XBMC_HomeMenu_Plexbmc">
+		<!-- PleXBMC Section -->
+		<item>
+			<label>-</label> 
+			<onclick>-</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">PLEX</property>
+			<visible>Skin.HasSetting(XBMC_Plex_Home_Hybrid)</visible>
+		</item>
+		<include condition="Skin.HasSetting(XBMC_Plex_Home_Full) | Skin.HasSetting(XBMC_Plex_Home_Hybrid)">XBMC_Deck_Plexbmc_Items</include>
+
+	</include>
+
+	<include name="XBMC_HomeMenu_More">
+		<!-- Header -->
+		<item>
+			<label>-</label>
+			<onclick>-</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">General</property>
+			<visible>Skin.HasSetting(XBMC_Plex_Home_Hybrid)</visible>
 		</item>
 
+		<!-- Now Playing -->
+		<item id="17">
+			<description>Now Playing</description>
+			<label>31099</label> <!-- Now Playing -->
+			<onclick>fullscreen</onclick>
+			<visible>Player.HasVideo | Player.hasAudio</visible>
+			<property name="HomeMenuPulse">true</property>
+		</item>
+
+		<!-- Custom Home Section -->
 		<include>XBMC_Home_Custom_Items</include>
 
+		<!-- Favourites -->
 		<item id="9">
-			<label>1036</label> <!-- Favourites -->
+			<label>1036</label>
 			<onclick>-</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
 			<visible>true</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoFavourites)</visible>
 		</item>
 
+		<!-- Addons -->
 		<item id="10">
 			<label>24001</label>
 			<!--<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>-->
@@ -78,26 +133,21 @@
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 		</item>
+		<!-- Weather -->
 		<item id="11">
 			<label>8</label>
 			<onclick>ActivateWindow(Weather)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoWeather) + !IsEmpty(Weather.Plugin)</visible>
 		</item>
-		<item id="12">
-			<label>Play DVD</label>
-			<onclick>XBMC.PlayDVD()</onclick>
-			<icon>-</icon>
-			<thumb>-</thumb>
-			<visible>System.HasMediaDVD</visible>
-		</item>
+		<!-- Search -->
 		<item id="15">
 			<label>31003</label> <!-- Search -->
 			<onclick>RunScript(script.globalsearch)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>!Skin.HasSetting(HomeMenuNoSearchButton)</visible>
+			<visible>!Skin.HasSetting(XBMC_Home_NoSearch)</visible>
 		</item>
 	</include>
 

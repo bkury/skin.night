@@ -1,46 +1,307 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-   <include name="MusicNowPlayingHomeSlideAnim">
-    <animation effect="slide" start="0,0" end="770,0" time="0" condition="Window.IsActive(Home)">Conditional</animation>
-  </include>
+	<include name="MusicNowPlayingHomeSlideAnim">
+		<animation effect="slide" start="0,0" end="770,0" time="0" condition="Window.IsActive(Home)">Conditional</animation>
+	</include>
 
-  <include name="MusicOverlayNowPlayingDims">
-    <posx>0</posx>
-    <posy>74</posy>
-  </include>
+	<include name="MusicOverlayNowPlayingDims">
+		<posx>0</posx>
+		<posy>74</posy>
+	</include>
 
-  <include name="MusicNowPlayingBGDims">
-    <posx>0</posx>
-    <posy>-14</posy>
-    <include>ProgressDialogBGDims</include>
-    <visible>!Window.IsActive(Home) | [Window.IsActive(Home)]</visible>
-  </include>
-
-  <include name="MusicNowPlayingCoverDims">
-    <posx>-8</posx>
-    <posy>-8</posy>
-    <width>130</width>
-    <height>130</height>
-  </include>
-
-  <include name="MusicNowPlayingTextDims">
-    <posx>124</posx>
-  </include>
-
-  <constant name="MusicNPTextWidth">352</constant>
-  <constant name="MusicNPHomeLeftTextWidth">250</constant>
-
-  <include name="MusicNextPrevTextDims">
-    <posx>124</posx>
-    <posy>86</posy>
-  </include>
-
-  <constant name="MusicNextPrevTextTextWidth">330</constant>
+	<include name="MusicNowPlayingBGDims">
+		<posx>0</posx>
+		<posy>-14</posy>
+		<include>ProgressDialogBGDims</include>
+		<visible>!Window.IsActive(Home) | [Window.IsActive(Home)]</visible>
+	</include>
   
- 
- 
- 
- 
+	<include name="MusicNowPlayingCoverDims">
+		<posx>-8</posx>
+		<posy>-8</posy>
+		<width>130</width>
+		<height>130</height>
+	</include>
+
+	<include name="MusicNowPlayingTextDims">
+		<posx>124</posx>
+	</include>
+
+	<constant name="MusicNPTextWidth">352</constant>
+	<constant name="MusicNPHomeLeftTextWidth">250</constant>
+
+	<include name="MusicNextPrevTextDims">
+		<posx>124</posx>
+		<posy>86</posy>
+	</include>
+
+	<include name="NowPlayingTime">
+		<control type="label">
+			<posx>0</posx>
+			<width>300</width>
+			<height>25</height>
+			<align>right</align>
+			<font>Font_ListDetail</font>
+			<textcolor>mainblue</textcolor>
+			<label>[B]$INFO[VideoPlayer.Time(mm:ss)][/B]</label>
+		</control>
+		<control type="label">
+			<posx>335</posx>
+			<width>300</width>
+			<height>25</height>
+			<font>Font_ListDetail</font>
+			<textcolor>ffffffff</textcolor>
+			<label>[B]$INFO[VideoPlayer.Duration(mm:ss)][/B]</label>
+		</control>
+	</include>
+
+	<include name="NowPlayingControl">
+		<!-- Controls -->
+		<!-- Queue -->      
+		<control type="image">
+			<posx>165</posx>
+			<width>24</width>
+			<height>22</height>
+			<texture>options_osd.png</texture>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+			<visible>!Control.HasFocus(500)</visible>
+		</control>
+		<control type="button" id="500">
+			<posx>165</posx>
+			<width>24</width>
+			<height>22</height>
+			<texturefocus>options_osd.png</texturefocus>
+			<texturenofocus>options_osd.png</texturenofocus>
+			<colordiffuse>mainblue</colordiffuse>
+			<onclick>ReplaceWindow(10094)</onclick>
+			<onleft>508</onleft>
+			<onright>501</onright>
+			<visible allowhiddenfocus="true">Control.HasFocus(500)</visible>
+		</control>
+		<!-- Repeat -->
+		<control type="image">
+			<posx>200</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-repeat2.png</texture>
+			<visible>!Control.HasFocus(501) + !Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+			<colordiffuse>FFCCCCCC</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>200</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-repeat-one2.png</texture>
+			<visible>!Control.HasFocus(501) + Playlist.IsRepeatOne</visible>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>200</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-repeat-all2.png</texture>
+			<visible>!Control.HasFocus(501) + Playlist.IsRepeat</visible>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+		</control>
+		<!-- Focus -->
+		<control type="image">
+			<posx>200</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-repeat2.png</texture>
+			<visible>Control.HasFocus(501) + !Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>200</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-repeat-one2.png</texture>
+			<visible>Control.HasFocus(501) + Playlist.IsRepeatOne</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>200</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-repeat-all2.png</texture>
+			<visible>Control.HasFocus(501) + Playlist.IsRepeat</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<control type="button" id="501">
+			<posx>200</posx>
+			<width>30</width>
+			<height>20</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>500</onleft>
+			<onright>502</onright>
+			<onclick>XBMC.PlayerControl(Repeat)</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(501)</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<!-- Previous Track -->
+		<control type="image">
+			<posx>285</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-previous.png</texture>
+			<visible>!Control.HasFocus(502)</visible>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+		</control>
+		<control type="button" id="502">
+			<posx>285</posx>
+			<width>30</width>
+			<height>20</height>
+			<texturefocus>b-previous.png</texturefocus>
+			<texturenofocus>b-previous.png</texturenofocus>
+			<onleft>501</onleft>
+			<onright>503</onright>
+			<onclick>PlayerControl(Previous)</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(502)</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<!-- Rewind -->
+		<control type="image">
+			<posx>325</posx>
+			<width>40</width>
+			<height>20</height>
+			<texture>b-rewind.png</texture>
+			<visible>!Control.HasFocus(503)</visible>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+		</control>
+		<control type="button" id="503">
+			<posx>325</posx>
+			<width>40</width>
+			<height>20</height>
+			<texturefocus>b-rewind.png</texturefocus>
+			<texturenofocus>b-rewind.png</texturenofocus>
+			<onclick>PlayerControl(SmallSkipBackward)</onclick>
+			<onleft>502</onleft>
+			<onright>504</onright>
+			<visible allowhiddenfocus="true">Control.HasFocus(503)</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<!-- Play / Pause -->
+		<control type="image">
+			<posx>380</posx>
+			<width>20</width>
+			<height>20</height>
+			<texture>b-pause2.png</texture>
+			<visible>!Control.HasFocus(504) + !Player.Paused</visible>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>380</posx>
+			<width>20</width>
+			<height>20</height>
+			<texture>b-play2.png</texture>
+			<visible>!Control.HasFocus(504) + Player.Paused</visible>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+		</control>
+		<control type="togglebutton" id="504">
+			<posx>380</posx>
+			<width>20</width>
+			<height>20</height>
+			<texturefocus>b-pause2.png</texturefocus>
+			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+			<alttexturefocus>b-play2.png</alttexturefocus>
+			<onleft>503</onleft>
+			<onright>505</onright>
+			<onclick>PlayerControl(Play)</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(504)</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<!-- Forward -->
+		<control type="image">
+			<posx>415</posx>
+			<width>40</width>
+			<height>20</height>
+			<texture>b-forward.png</texture>
+			<visible>!Control.HasFocus(505)</visible>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+		</control>
+		<control type="button" id="505">
+			<posx>415</posx>
+			<width>40</width>
+			<height>20</height>
+			<texturefocus>b-forward.png</texturefocus>
+			<texturenofocus>b-forward.png</texturenofocus>
+			<onleft>504</onleft>
+			<onright>506</onright>
+			<onclick>PlayerControl(SmallSkipForward)</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(505)</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<!-- Next Track -->
+		<control type="image">
+			<posx>465</posx>
+			<width>30</width>
+			<height>20</height>
+			<texture>b-next.png</texture>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+			<visible>!Control.HasFocus(506)</visible>
+		</control>
+		<control type="button" id="506">
+			<posx>465</posx>
+			<width>30</width>
+			<height>20</height>
+			<texturefocus>b-next.png</texturefocus>
+			<texturenofocus>b-next.png</texturenofocus>
+			<onleft>505</onleft>
+			<onright>507</onright>
+			<onclick>PlayerControl(Next)</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(506)</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+		<!-- Minimize -->      
+		<control type="image">
+			<posx>545</posx>
+			<width>20</width>
+			<height>20</height>
+			<texture>b-fullscreen.png</texture>
+			<colordiffuse>FFDDDDDD</colordiffuse>
+			<visible>!Control.HasFocus(507)</visible>
+		</control>
+		<control type="button" id="507">
+			<posx>545</posx>
+			<width>20</width>
+			<height>20</height>
+			<texturefocus>b-fullscreen.png</texturefocus>
+			<texturenofocus>b-fullscreen.png</texturenofocus>
+			<colordiffuse>mainblue</colordiffuse>
+			<onclick>ReplaceWindow(home)</onclick>
+			<onleft>506</onleft>
+			<onright>508</onright>
+			<visible allowhiddenfocus="true">Control.HasFocus(507)</visible>
+		</control>
+		<!-- Stop -->
+		<control type="image">
+			<posy>-2</posy>
+			<posx>575</posx>
+			<width>25</width>
+			<height>25</height>
+		<texture>b-stop2.png</texture>
+			<visible>!Control.HasFocus(508)</visible>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+		</control>
+		<control type="button" id="508">
+			<posy>-2</posy>
+			<posx>575</posx>
+			<width>25</width>
+			<height>25</height>
+			<texturefocus>b-stop2.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>507</onleft>
+			<onright>500</onright>
+			<onclick>PlayerControl(Stop)</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(508)</visible>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
+	</include>
+  
+	<constant name="MusicNextPrevTextTextWidth">330</constant>
+
   <include name="NowPlayingCurrentCover">
     <control type="group">
       <description>Current cover</description>
@@ -116,7 +377,7 @@
   
   <include name="NowPlayingCurrentInfo">
     <control type="group">
-      <description>Current track info</description>
+	<posy>-15</posy>
       
       <control type="label">
         <posx>500</posx>
@@ -151,114 +412,110 @@
   </include>
 
   <include name="NowPlayingNextInfo">
-    <control type="group">
-      <description>Next track info</description>
-      
-      <control type="label">
-        <posx>500</posx>
-        <posy>0</posy>
-        <width>500</width>
-      <font>PlexNPNextFont</font>
-      <textcolor>d0666666</textcolor>
-        <label>Next Track</label>
-        <align>right</align>
-      </control>
-      
-      <control type="label">
-        <posx>500</posx>
-        <posy>30</posy>
-        <width>500</width>
-        <font>PlexNPNextFont</font>
-     <textcolor>d033CCFF</textcolor>
-        <label>$INFO[MusicPlayer.Offset(1).Artist]</label>
-        <align>right</align>
-      </control>
-      
-      <control type="label">
-        <posx>500</posx>
-          <posy>53</posy>
-        <width>500</width>
-        
-       <font>PlexNPNextFont</font>
-      <textcolor>d0FFFFFF</textcolor>
-        <label>$INFO[MusicPlayer.Offset(1).Title]</label>
-        <align>right</align>
-      </control>
-    </control>
-  </include>
-  
-  <include name="NowPlayingCurrentInfoFlipped">
-    <control type="group">
-      <description>Current track info</description>
-      
-      <control type="label">
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>500</width>
-    <font>PlexNPArtistFont</font>
-     <textcolor>d033CCFF</textcolor>
-        <label>$INFO[MusicPlayer.Artist]</label>
-        <align>left</align>
-      </control>
-  
-      <control type="label">
-        <posx>0</posx>
-        <posy>50</posy>
-        <width>500</width>
-        <font>PlexNPAlbumFont</font>
-      <textcolor>d06495ed</textcolor>
-        <label>$INFO[MusicPlayer.Album]</label>
-        <align>left</align>
-      </control>
-  
-      <control type="label">
-        <posx>0</posx>
-        <posy>88</posy>
-        <width>500</width>
-        <font>PlexNPTitleFont</font>
-      
-      <textcolor>d0FFFFFF</textcolor>
-        <label>$INFO[MusicPlayer.Title]</label>
-        <align>left</align>
-      </control>
-    </control>
-  </include>
+	<control type="group">
+		<posy>15</posy>
+		<control type="label">
+			<posx>500</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<!--<font>PlexNPNextFont</font>-->
+			<font>Font_Time_Global</font>
+			<!--<textcolor>AACCCCCC</textcolor>-->
+			<textcolor>mainblue</textcolor>
+			<label>Next Track</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>500</posx>
+			<posy>30</posy>
+			<width>500</width>
+			<font>PlexNPNextFont</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>500</posx>
+			<posy>53</posy>
+			<width>500</width>
+			<font>PlexNPNextFont</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+			<align>right</align>
+			</control>
+		</control>
+	</include>
 
-  <include name="NowPlayingNextInfoFlipped">
-    <control type="group">
-      <description>Next track info</description>
-      
-      <control type="label">
-        <posx>0</posx>
-         <posy>0</posy>
-        <width>500</width>
-        <font>PlexNPNextFont</font>
-      <textcolor>d0666666</textcolor>
-        <label>Next Track</label>
-        <align>left</align>
-      </control>
-      
-      <control type="label">
-        <posx>0</posx>
-        <posy>30</posy>
-        <width>500</width>
-         <font>PlexNPNextFont</font>
-     <textcolor>d033CCFF</textcolor>
-        <label>$INFO[MusicPlayer.Offset(1).Artist]</label>
-        <align>left</align>
-      </control>
-      
-      <control type="label">
-        <posx>0</posx>
-        <posy>53</posy>
-        <width>500</width>
-        <font>PlexNPNextFont</font>
-        
-      <textcolor>d0FFFFFF</textcolor>
-        <label>$INFO[MusicPlayer.Offset(1).Title]</label>
-        <align>left</align>
-      </control>
-    </control>
+  
+	<include name="NowPlayingCurrentInfoFlipped">
+
+	<control type="group">
+		<posy>-15</posy>
+		<control type="label">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<font>PlexNPArtistFont</font>
+			<textcolor>d033CCFF</textcolor>
+			<label>$INFO[MusicPlayer.Artist]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>50</posy>
+			<width>500</width>
+			<font>PlexNPAlbumFont</font>
+			<textcolor>d06495ed</textcolor>
+			<label>$INFO[MusicPlayer.Album]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>88</posy>
+			<width>500</width>
+			<font>PlexNPTitleFont</font>
+			<textcolor>d0FFFFFF</textcolor>
+			<label>$INFO[MusicPlayer.Title]</label>
+			<align>left</align>
+		</control>
+	</control>
+  
+	</include>
+
+  
+	<include name="NowPlayingNextInfoFlipped">
+	<control type="group">
+		<posy>15</posy>
+		<control type="label">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<!--<font>PlexNPNextFont</font>-->
+			<font>Font_Time_Global</font>
+			<!--<textcolor>AACCCCCC</textcolor>-->
+			<textcolor>mainblue</textcolor>
+			<label>Next Track</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>30</posy>
+			<width>500</width>
+			<font>PlexNPNextFont</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>53</posy>
+			<width>500</width>
+			<font>PlexNPNextFont</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+			<align>left</align>
+			</control>
+		</control>
   </include>
 
 </includes>

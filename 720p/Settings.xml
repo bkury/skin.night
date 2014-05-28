@@ -273,13 +273,15 @@
 				<control type="radiobutton" id="1093">
 					<include>skin_settings_labels</include>
 					<label>Deck Mode</label>
-					<onclick>Skin.ToggleSetting(XBMC_Plex_Home_Deck)</onclick>
-					<selected>Skin.HasSetting(XBMC_Plex_Home_Deck)</selected>
+					<onclick>Skin.Reset(XBMC_Plex_Home_Hybrid)</onclick>
+					<onclick>Skin.Reset(XBMC_Plex_Home_Full)</onclick>
+					<selected>!Skin.HasSetting(XBMC_Plex_Home_Hybrid) + !Skin.HasSetting(XBMC_Plex_Home_Full)</selected>
 					<visible>Skin.HasSetting(XBMC)</visible>
 				</control>
 				<control type="radiobutton" id="1094">
 					<include>skin_settings_labels</include>
 					<label>Hybrid Mode</label>
+					<onclick>Skin.Reset(XBMC_Plex_Home_Full)</onclick>
 					<onclick>Skin.ToggleSetting(XBMC_Plex_Home_Hybrid)</onclick>
 					<selected>Skin.HasSetting(XBMC_Plex_Home_Hybrid)</selected>
 					<visible>Skin.HasSetting(XBMC)</visible>
@@ -287,6 +289,7 @@
 				<control type="radiobutton" id="1095">
 					<include>skin_settings_labels</include>
 					<label>Full Mode</label>
+					<onclick>Skin.Reset(XBMC_Plex_Home_Hybrid)</onclick>
 					<onclick>Skin.ToggleSetting(XBMC_Plex_Home_Full)</onclick>
 					<selected>Skin.HasSetting(XBMC_Plex_Home_Full)</selected>
 					<visible>Skin.HasSetting(XBMC)</visible>
@@ -712,10 +715,97 @@
 
 				<!-- Home Menu / Extensions -->
 				<control type="grouplist" id="3000">
-					<include>Settings_Section</include>
+					<onright>3001</onright>
+					<include>Settings_Section_HalfLeft</include>
 					<visible>Container(100).Hasfocus(130)</visible>
 
-					<!-- Reserve 3010 - 3090 -->
+
+					<!-- Hide Main Menu -->
+					<control type="label" id="3010">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Home Menu</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="image" id="3011">
+						<include>settings_separator</include>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3015">
+						<include>skin_settings_labels_half</include>
+						<label>Hide Live TV</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoLiveTv)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoLiveTv)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3020">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[3]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoVideos)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoVideos)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3025">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[31009]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoMovies)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoMovies)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3030">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[31010]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoTvShows)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoTvShows)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3035">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[2]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoMusic)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoMusic)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3040">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[1]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoPictures)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoPictures)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3045">
+						<include>skin_settings_labels_half</include>
+						<label>Hide Plex</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoPlex)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoPlex)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3050">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[1036]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoFavourites)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoFavourites)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3055">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[8]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoWeather)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoWeather)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="radiobutton" id="3060">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[31003]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoSearch)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoSearch)</selected>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
 
 					<!-- Move to Submenu Settings -->
 					<control type="label" id="3100">
@@ -733,7 +823,7 @@
 					</control>
 					<control type="radiobutton" id="3120">
 						<description>Move Search Button</description>
-						<include>skin_settings_labels</include>
+						<include>skin_settings_labels_half</include>
 						<label>Search</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoSearchButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoSearchButton)</selected>
@@ -754,53 +844,53 @@
 					</control>
 					<control type="radiobutton" id="3150">
 						<description>Quit</description>
-						<include>skin_settings_labels</include>
+						<include>skin_settings_labels_half</include>
 						<label>Hide Quit</label>
 						<onclick>Skin.ToggleSetting(Hide_Quit)</onclick>
 						<selected>Skin.HasSetting(Hide_Quit)</selected>
 					</control>
 					<control type="radiobutton" id="3160">
 						<description>Sleep</description>
-						<include>skin_settings_labels</include>
+						<include>skin_settings_labels_half</include>
 						<label>Hide Suspend</label>
 						<onclick>Skin.ToggleSetting(Hide_Sleep)</onclick>
 						<selected>Skin.HasSetting(Hide_Sleep)</selected>
 					</control>
 					<control type="radiobutton" id="3170">
 						<description>Quit</description>
-						<include>skin_settings_labels</include>
+						<include>skin_settings_labels_half</include>
 						<label>Hide Shutdown</label>
 						<onclick>Skin.ToggleSetting(Hide_Shutdown)</onclick>
 						<selected>Skin.HasSetting(Hide_Shutdown)</selected>
 					</control>
 					<control type="radiobutton" id="3180">
 						<description>Reboot</description>
-						<include>skin_settings_labels</include>
+						<include>skin_settings_labels_half</include>
 						<label>Hide Reboot</label>
 						<onclick>Skin.ToggleSetting(Hide_Reboot)</onclick>
 						<selected>Skin.HasSetting(Hide_Reboot)</selected>
 					</control>
 					<control type="radiobutton" id="3190">
 						<description>Channel Directory</description>
-						<include>skin_settings_labels</include>
+						<include>skin_settings_labels_half</include>
 						<label>Hide Channel Directory</label>
 						<onclick>Skin.ToggleSetting(Hide_ChannelDirectory)</onclick>
 						<selected>Skin.HasSetting(Hide_ChannelDirectory)</selected>
+						<visible>!Skin.HasSetting(XBMC)</visible>
 					</control>
-					<control type="radiobutton" id="3200">
-						<description>Quit</description>
-						<include>skin_settings_labels</include>
-						<label>Hide Skin Settings</label>
-						<onclick>Skin.ToggleSetting(Hide_SkinSettings)</onclick>
-						<selected>Skin.HasSetting(Hide_SkinSettings)</selected>
-					</control>
+				</control>
+
+				<control type="grouplist" id="3001">
+					<onleft>3000</onleft>
+					<include>Settings_Section_HalfRight</include>
+					<visible>Container(100).Hasfocus(130)</visible>
 
 					<!-- Plex Home Extensions -->
 					<control type="label" id="3210">
 			                        <width>860</width>
 			                        <height>35</height>
 			                        <font>font13caps</font>
-			                        <label>10507</label> <!-- Configuration -->
+			                        <label>24001</label> <!-- Configuration -->
 			                        <textcolor>white</textcolor>
 			                        <shadowcolor>black</shadowcolor>
 			                        <align>left</align>
@@ -829,7 +919,15 @@
 					<control type="label" id="3250">
 			                        <width>860</width>
 			                        <height>35</height>
-			                        <label>Point your browser to your Plex Server (e.g. http://127.0.0.1:32400)</label>
+			                        <label>Point your browser to your Plex Server</label>
+						<include>skin_settings_labels</include>
+						<visible>isEmpty(Skin.String(Identifier))</visible>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+			                </control>
+					<control type="label" id="3255">
+			                        <width>860</width>
+			                        <height>35</height>
+			                        <label>(e.g. http://127.0.0.1:32400)</label>
 						<include>skin_settings_labels</include>
 						<visible>isEmpty(Skin.String(Identifier))</visible>
 						<visible>!Skin.HasSetting(XBMC)</visible>
@@ -842,6 +940,8 @@
 						<visible>isEmpty(Skin.String(Identifier))</visible>
 						<visible>!Skin.HasSetting(XBMC)</visible>
 			                </control>
+
+					<!-- PLEX Custom Addons -->
 					<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Settings</include> <!-- 3300 -->
 
 					<!-- XBMC Custom Home -->
@@ -891,14 +991,6 @@
 						<onclick>Skin.ToggleSetting(Deck_Short)</onclick>
 						<onclick>Skin.Reset(Deck_Hide)</onclick>
 						<selected>Skin.HasSetting(Deck_Short)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="4055">
-						<description>Hide Labels</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[24021] $LOCALIZE[31064]</label> <!-- Disable Labels -->
-						<onclick>Skin.ToggleSetting(Deck_NoLabels)</onclick>
-						<selected>Skin.HasSetting(Deck_NoLabels)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 
@@ -983,6 +1075,14 @@
 						<include>settings_separator</include>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
+					<control type="radiobutton" id="4145">
+						<description>Hide Labels</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31064]</label> <!-- Disable Labels -->
+						<onclick>Skin.ToggleSetting(Deck_NoLabels)</onclick>
+						<selected>Skin.HasSetting(Deck_NoLabels)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
 					<control type="radiobutton" id="4150">
 						<description>Disable Deck Info</description>
 						<include>skin_settings_labels</include>
@@ -1003,109 +1103,158 @@
 
 				<!-- Background Customizer -->
 				<control type="grouplist" id="5000">
-					<include>Settings_Section</include>
+					<onright>5001</onright>
+					<include>Settings_Section_HalfLeft</include>
 					<visible>Container(100).Hasfocus(150)</visible>
 
-					<!-- Home -->		 
-					<control type="label" id="5100">
+					<!-- Home Menu -->
+					<control type="label" id="5010">
                                                	<width>860</width>
                                                 <height>35</height>
                                                 <font>font13caps</font>
-                                                <label>Home</label>
+                                                <label>Home Menu</label>
                                                 <textcolor>white</textcolor>
                                                 <shadowcolor>black</shadowcolor>
                                                 <align>left</align>
                                                 <aligny>center</aligny>
                                         </control>
-					<control type="image" id="5101">
+					<control type="image" id="5011">
 						<include>settings_separator</include>
 					</control>
-					<include>Background_Settings_Home</include>
 
-					<!-- Deck -->		 
-					<control type="label" id="5120">
+					<!-- Home -->
+					<control type="radiobutton" id="5100">
+						<include>Background_Settings_Button_Home</include>
+				                <label>Home</label>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Deck -->
+					<control type="radiobutton" id="5120">
+						<include>Background_Settings_Button_Deck</include>
+				                <label>Deck</label>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Live TV -->
+					<control type="radiobutton" id="5160">
+						<include>Background_Settings_Button_LiveTV</include>
+				                <label>Live TV</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Videos -->
+					<control type="radiobutton" id="5180">
+						<include>Background_Settings_Button_Videos</include>
+				                <label>Videos</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Movies -->
+					<control type="radiobutton" id="5200">
+						<include>Background_Settings_Button_Movies</include>
+				                <label>Movies</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- TV Shows -->
+					<control type="radiobutton" id="5220">
+						<include>Background_Settings_Button_TvShows</include>
+				                <label>TV Shows</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Music -->
+					<control type="radiobutton" id="5240">
+						<include>Background_Settings_Button_Music</include>
+				                <label>Music</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- PLEX -->
+					<control type="radiobutton" id="5280">
+						<include>Background_Settings_Button_Plex</include>
+				                <label>Plex</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Favourites -->
+					<control type="radiobutton" id="5300">
+						<include>Background_Settings_Button_Favourites</include>
+				                <label>Favourites</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Weather -->
+					<control type="radiobutton" id="5320">
+						<include>Background_Settings_Button_Weather</include>
+				                <label>Weather</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Search -->
+					<control type="radiobutton" id="5340">
+						<include>Background_Settings_Button_Search</include>
+				                <label>Search</label>
+					</control>
+
+					<!-- Custom Home -->
+					<control type="label" id="5015">
                                                	<width>860</width>
                                                 <height>35</height>
                                                 <font>font13caps</font>
-                                                <label>Deck</label>
+                                                <label>Custom Home</label>
                                                 <textcolor>white</textcolor>
                                                 <shadowcolor>black</shadowcolor>
                                                 <align>left</align>
                                                 <aligny>center</aligny>
                                         </control>
-					<control type="image" id="5121">
+					<control type="image" id="5016">
 						<include>settings_separator</include>
 					</control>
-					<include>Background_Settings_Deck</include>
-
-					<!-- Preplay -->		 
-					<control type="label" id="5140">
-                                               	<width>860</width>
-                                                <height>35</height>
-                                                <font>font13caps</font>
-                                                <label>Preplay</label><!-- LOC -->
-                                                <textcolor>white</textcolor>
-                                                <shadowcolor>black</shadowcolor>
-                                                <align>left</align>
-                                                <aligny>center</aligny>
-                                        </control>
-					<control type="image" id="5141">
-						<include>settings_separator</include>
-					</control>
-					<include>Background_Settings_Preplay</include>
-
-					<!-- Settings -->		 
-					<control type="label" id="5160">
-                                               	<width>860</width>
-                                                <height>35</height>
-                                                <font>font13caps</font>
-                                                <label>Settings</label><!-- LOC -->
-                                                <textcolor>white</textcolor>
-                                                <shadowcolor>black</shadowcolor>
-                                                <align>left</align>
-                                                <aligny>center</aligny>
-                                        </control>
-					<control type="image" id="5161">
-						<include>settings_separator</include>
-					</control>
-					<include>Background_Settings_Settings</include>
-
-					<!-- NowPlaying -->		 
-					<control type="label" id="5180">
-                                               	<width>860</width>
-                                                <height>35</height>
-                                                <font>font13caps</font>
-                                                <label>Now Playing</label><!-- LOC -->
-                                                <textcolor>white</textcolor>
-                                                <shadowcolor>black</shadowcolor>
-                                                <align>left</align>
-                                                <aligny>center</aligny>
-                                        </control>
-					<control type="image" id="5181">
-						<include>settings_separator</include>
-					</control>
-					<include>Background_Settings_NowPlaying</include>
-
-					<!-- Search -->		 
-					<control type="label" id="5200">
-                                               	<width>860</width>
-                                                <height>35</height>
-                                                <font>font13caps</font>
-                                                <label>Search (Home Menu)</label><!-- LOC -->
-                                                <textcolor>white</textcolor>
-                                                <shadowcolor>black</shadowcolor>
-                                                <align>left</align>
-                                                <aligny>center</aligny>
-                                        </control>
-					<control type="image" id="5201">
-						<include>settings_separator</include>
-					</control>
-					<include>Background_Settings_Search</include>
-
-					<!-- XBMC Custom Home Settings -->
+   
+					<!-- XBMC & PLEX Custom Home Settings -->
+					<include condition="!Skin.HasSetting(XBMC)">PLEX_Home_Custom_Backgrounds_Settings</include>
 					<include condition="Skin.HasSetting(XBMC)">XBMC_Home_Custom_Backgrounds_Settings</include>
 
+					<!-- General -->
+					<control type="label" id="5020">
+                                               	<width>860</width>
+                                                <height>35</height>
+                                                <font>font13caps</font>
+                                                <label>128</label>
+                                                <textcolor>white</textcolor>
+                                                <shadowcolor>black</shadowcolor>
+                                                <align>left</align>
+                                                <aligny>center</aligny>
+                                        </control>
+					<control type="image" id="5025">
+						<include>settings_separator</include>
+					</control>
+					<!-- Preplay -->
+					<control type="radiobutton" id="5140">
+						<include>Background_Settings_Button_Preplay</include>
+				                <label>Preplay</label>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Settings -->
+					<control type="radiobutton" id="5720">
+						<include>Background_Settings_Button_Settings</include>
+				                <label>Settings</label>
+					</control>
+					<!-- Now Playing -->
+					<control type="radiobutton" id="5740">
+						<include>Background_Settings_Button_NowPlaying</include>
+				                <label>Now Playing</label>
+					</control>
+					<!-- Default -->
+					<control type="radiobutton" id="5760">
+						<include>Background_Settings_Button_Default</include>
+				                <label>Default</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
 				</control>
+
+				<!-- Background Options -->
+				<control type="grouplist" id="5001">
+					<onleft>5000</onleft>
+					<onright>5000</onright>
+					<visible>Container(100).Hasfocus(150)</visible>
+					<include>Settings_Section_HalfRight</include>
+
+					<include>Background_Settings_All</include>
+				</control>
+
 
 				<!-- Movies / TV Settings -->
 				<control type="grouplist" id="6000">

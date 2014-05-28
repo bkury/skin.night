@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Sat May 17 01:19:31 CEST 2014 -->
+<!-- Tue May 27 13:47:24 CEST 2014 -->
 <includes>
 
 <!-- Home Menu Extension -->
@@ -688,21 +688,21 @@
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3302">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_20_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_20_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3303">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_20_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
                         <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_20_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3304">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_20_Name)]]</label>
 			<onclick>Skin.Reset(Home_20_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
@@ -710,7 +710,7 @@
 		</control>
 		<control type="radiobutton" id="3305">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>My Account</label>
 			<onclick>Skin.ToggleSetting(Home_20_myaccount)</onclick>
 			<selected>Skin.HasSetting(Home_20_myaccount)</selected>
@@ -718,7 +718,7 @@
 		</control>
 		<control type="radiobutton" id="3306">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Videos</label>
 			<onclick>Skin.ToggleSetting(Home_20_videos)</onclick>
 			<selected>Skin.HasSetting(Home_20_videos)</selected>
@@ -726,7 +726,7 @@
 		</control>
 		<control type="radiobutton" id="3307">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Channels</label>
 			<onclick>Skin.ToggleSetting(Home_20_channels)</onclick>
 			<selected>Skin.HasSetting(Home_20_channels)</selected>
@@ -734,7 +734,7 @@
 		</control>
 		<control type="radiobutton" id="3308">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Live</label>
 			<onclick>Skin.ToggleSetting(Home_20_live)</onclick>
 			<selected>Skin.HasSetting(Home_20_live)</selected>
@@ -757,21 +757,21 @@
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3311">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_21_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_21_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3312">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_21_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
                         <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_21_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3313">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_21_Name)]]</label>
 			<onclick>Skin.Reset(Home_21_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
@@ -779,7 +779,7 @@
 		</control>
 		<control type="radiobutton" id="3314">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>My Stuff</label>
 			<onclick>Skin.ToggleSetting(Home_21_mystuff)</onclick>
 			<selected>Skin.HasSetting(Home_21_mystuff)</selected>
@@ -787,7 +787,7 @@
 		</control>
 		<control type="radiobutton" id="3315">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Staff Picks</label>
 			<onclick>Skin.ToggleSetting(Home_21_staff)</onclick>
 			<selected>Skin.HasSetting(Home_21_staff)</selected>
@@ -795,7 +795,7 @@
 		</control>
 		<control type="radiobutton" id="3316">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>HD</label>
 			<onclick>Skin.ToggleSetting(Home_21_hd)</onclick>
 			<selected>Skin.HasSetting(Home_21_hd)</selected>
@@ -803,7 +803,7 @@
 		</control>
 		<control type="radiobutton" id="3317">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Featured Channels</label>
 			<onclick>Skin.ToggleSetting(Home_21_featured)</onclick>
 			<selected>Skin.HasSetting(Home_21_featured)</selected>
@@ -811,7 +811,7 @@
 		</control>
 		<control type="radiobutton" id="3318">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Channels</label>
 			<onclick>Skin.ToggleSetting(Home_21_channels)</onclick>
 			<selected>Skin.HasSetting(Home_21_channels)</selected>
@@ -819,7 +819,7 @@
 		</control>
 		<control type="radiobutton" id="3319">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Groups</label>
 			<onclick>Skin.ToggleSetting(Home_21_groups)</onclick>
 			<selected>Skin.HasSetting(Home_21_groups)</selected>
@@ -842,21 +842,21 @@
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3322">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_22_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_22_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3323">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_22_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
                         <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_22_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3324">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_22_Name)]]</label>
 			<onclick>Skin.Reset(Home_22_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
@@ -864,7 +864,7 @@
 		</control>
 		<control type="radiobutton" id="3325">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Just Added</label>
 			<onclick>Skin.ToggleSetting(Home_22_added)</onclick>
 			<selected>Skin.HasSetting(Home_22_added)</selected>
@@ -872,7 +872,7 @@
 		</control>
 		<control type="radiobutton" id="3326">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Most Popular</label>
 			<onclick>Skin.ToggleSetting(Home_22_popular)</onclick>
 			<selected>Skin.HasSetting(Home_22_popular)</selected>
@@ -880,7 +880,7 @@
 		</control>
 		<control type="radiobutton" id="3327">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Exclusive</label>
 			<onclick>Skin.ToggleSetting(Home_22_exclusive)</onclick>
 			<selected>Skin.HasSetting(Home_22_exclusive)</selected>
@@ -888,7 +888,7 @@
 		</control>
 		<control type="radiobutton" id="3328">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Genres</label>
 			<onclick>Skin.ToggleSetting(Home_22_genres)</onclick>
 			<selected>Skin.HasSetting(Home_22_genres)</selected>
@@ -896,7 +896,7 @@
 		</control>
 		<control type="radiobutton" id="3329">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Movie Studios</label>
 			<onclick>Skin.ToggleSetting(Home_22_studios)</onclick>
 			<selected>Skin.HasSetting(Home_22_studios)</selected>
@@ -919,21 +919,21 @@
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3332">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_23_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_23_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3333">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_23_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
                         <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_23_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3334">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_23_Name)]]</label>
 			<onclick>Skin.Reset(Home_23_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
@@ -941,7 +941,7 @@
 		</control>
 		<control type="radiobutton" id="3335">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Genres</label>
 			<onclick>Skin.ToggleSetting(Home_23_genres)</onclick>
 			<selected>Skin.HasSetting(Home_23_genres)</selected>
@@ -949,7 +949,7 @@
 		</control>
 		<control type="radiobutton" id="3336">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>TOP 500</label>
 			<onclick>Skin.ToggleSetting(Home_23_top)</onclick>
 			<selected>Skin.HasSetting(Home_23_top)</selected>
@@ -972,21 +972,21 @@
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3339">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_24_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_24_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3340">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_24_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
                         <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_24_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3341">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_24_Name)]]</label>
 			<onclick>Skin.Reset(Home_24_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
@@ -994,7 +994,7 @@
 		</control>
 		<control type="radiobutton" id="3342">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Recently Released</label>
 			<onclick>Skin.ToggleSetting(Home_24_recently)</onclick>
 			<selected>Skin.HasSetting(Home_24_recently)</selected>
@@ -1002,7 +1002,7 @@
 		</control>
 		<control type="radiobutton" id="3343">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Featured</label>
 			<onclick>Skin.ToggleSetting(Home_24_featured)</onclick>
 			<selected>Skin.HasSetting(Home_24_featured)</selected>
@@ -1010,7 +1010,7 @@
 		</control>
 		<control type="radiobutton" id="3344">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Featured Shows</label>
 			<onclick>Skin.ToggleSetting(Home_24_featuredshows)</onclick>
 			<selected>Skin.HasSetting(Home_24_featuredshows)</selected>
@@ -1018,7 +1018,7 @@
 		</control>
 		<control type="radiobutton" id="3345">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Archived Shows</label>
 			<onclick>Skin.ToggleSetting(Home_24_archivedshows)</onclick>
 			<selected>Skin.HasSetting(Home_24_archivedshows)</selected>
@@ -1041,21 +1041,21 @@
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3348">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_25_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_25_Enabled)</selected>
                         <visible>!isEmpty(Skin.String(Identifier))</visible>
 		</control>
 		<control type="radiobutton" id="3349">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_25_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
                         <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_25_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3350">
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_25_Name)]]</label>
 			<onclick>Skin.Reset(Home_25_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
@@ -1063,7 +1063,7 @@
 		</control>
 		<control type="radiobutton" id="3351">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Favourites</label>
 			<onclick>Skin.ToggleSetting(Home_25_favourites)</onclick>
 			<selected>Skin.HasSetting(Home_25_favourites)</selected>
@@ -1071,7 +1071,7 @@
 		</control>
 		<control type="radiobutton" id="3352">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Movies</label>
 			<onclick>Skin.ToggleSetting(Home_25_movies)</onclick>
 			<selected>Skin.HasSetting(Home_25_movies)</selected>
@@ -1079,7 +1079,7 @@
 		</control>
 		<control type="radiobutton" id="3353">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Movies (Recently)</label>
 			<onclick>Skin.ToggleSetting(Home_25_moviesrecently)</onclick>
 			<selected>Skin.HasSetting(Home_25_moviesrecently)</selected>
@@ -1087,7 +1087,7 @@
 		</control>
 		<control type="radiobutton" id="3354">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Movies (Latest)</label>
 			<onclick>Skin.ToggleSetting(Home_25_movieslatest)</onclick>
 			<selected>Skin.HasSetting(Home_25_movieslatest)</selected>
@@ -1095,7 +1095,7 @@
 		</control>
 		<control type="radiobutton" id="3355">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>TV Shows</label>
 			<onclick>Skin.ToggleSetting(Home_25_tvshows)</onclick>
 			<selected>Skin.HasSetting(Home_25_tvshows)</selected>
@@ -1103,7 +1103,7 @@
 		</control>
 		<control type="radiobutton" id="3356">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>TV Shows (Recently)</label>
 			<onclick>Skin.ToggleSetting(Home_25_tvshowsrecently)</onclick>
 			<selected>Skin.HasSetting(Home_25_tvshowsrecently)</selected>
@@ -1111,7 +1111,7 @@
 		</control>
 		<control type="radiobutton" id="3357">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>TV Shows (Latest)</label>
 			<onclick>Skin.ToggleSetting(Home_25_tvshowslatest)</onclick>
 			<selected>Skin.HasSetting(Home_25_tvshowslatest)</selected>
@@ -1119,7 +1119,7 @@
 		</control>
 		<control type="radiobutton" id="3358">
 			<textoffsetx>40</textoffsetx>
-			<include>skin_settings_labels</include>
+			<include>skin_settings_labels_half</include>
 			<label>Recently Watched</label>
 			<onclick>Skin.ToggleSetting(Home_25_recently)</onclick>
 			<selected>Skin.HasSetting(Home_25_recently)</selected>
