@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Tue May 27 13:47:24 CEST 2014 -->
+<!-- Thu May 29 15:51:36 CEST 2014 -->
 <includes>
 
 <!-- Home Menu Extension -->
@@ -7,78 +7,90 @@
 	<item id="20">
 		<description>Youtube</description>
 		<label>Youtube</label>
-		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_20_Enabled) + isEmpty(Skin.String(Home_20_Name))</visible>
 	</item>
 	<item id="20">
 		<description>Youtube</description>
 		<label>$INFO[Skin.String(Home_20_Name)]</label>
-                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/youtube|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Home_20_Name))</visible>
 	</item>
 
 	<item id="21">
 		<description>Vimeo</description>
 		<label>Vimeo</label>
-		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_21_Enabled) + isEmpty(Skin.String(Home_21_Name))</visible>
 	</item>
 	<item id="21">
 		<description>Vimeo</description>
 		<label>$INFO[Skin.String(Home_21_Name)]</label>
-                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Home_21_Name))</visible>
 	</item>
 
 	<item id="22">
 		<description>AppleTrailers</description>
 		<label>AppleTrailers</label>
-		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_22_Enabled) + isEmpty(Skin.String(Home_22_Name))</visible>
 	</item>
 	<item id="22">
 		<description>AppleTrailers</description>
 		<label>$INFO[Skin.String(Home_22_Name)]</label>
-                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/amt|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Home_22_Name))</visible>
 	</item>
 
 	<item id="23">
 		<description>Shoutcast</description>
 		<label>Shoutcast</label>
-		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_23_Enabled) + isEmpty(Skin.String(Home_23_Name))</visible>
 	</item>
 	<item id="23">
 		<description>Shoutcast</description>
 		<label>$INFO[Skin.String(Home_23_Name)]</label>
-                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/music/shoutcast|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Home_23_Name))</visible>
 	</item>
 
 	<item id="24">
 		<description>Revision3</description>
 		<label>Revision3</label>
-		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_24_Enabled) + isEmpty(Skin.String(Home_24_Name))</visible>
 	</item>
 	<item id="24">
 		<description>Revision3</description>
 		<label>$INFO[Skin.String(Home_24_Name)]</label>
-                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/revision3|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Home_24_Name))</visible>
 	</item>
 
 	<item id="25">
 		<description>LetMeWatchThis</description>
 		<label>LetMeWatchThis</label>
-		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_25_Enabled) + isEmpty(Skin.String(Home_25_Name))</visible>
 	</item>
 	<item id="25">
 		<description>LetMeWatchThis</description>
 		<label>$INFO[Skin.String(Home_25_Name)]</label>
-                <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>
+		<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>-->
+		<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt|containerSize=50&amp;containerStart=0,return)</onclick>
 		<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Home_25_Name))</visible>
 	</item>
 
@@ -113,7 +125,8 @@
 					<label>My Account</label>
 					<icon>extensions/20_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/MyAccount?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTAKTXkgQWNjb3VudHM1CnRpdGxlcjAK,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/MyAccount?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTAKTXkgQWNjb3VudHM1CnRpdGxlcjAK,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/youtube/:/function/MyAccount?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTAKTXkgQWNjb3VudHM1CnRpdGxlcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_myaccount)</visible>
 				</item>
 
@@ -122,7 +135,8 @@
 					<label>Videos</label>
 					<icon>extensions/20_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/VideosMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNgpWaWRlb3NzNQp0aXRsZXIwCg__,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/VideosMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNgpWaWRlb3NzNQp0aXRsZXIwCg__,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/youtube/:/function/VideosMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNgpWaWRlb3NzNQp0aXRsZXIwCg__,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_videos)</visible>
 				</item>
 
@@ -131,7 +145,8 @@
 					<label>Channels</label>
 					<icon>extensions/20_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/ChannelsMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzOApDaGFubmVsc3M1CnRpdGxlcjAK,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/ChannelsMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzOApDaGFubmVsc3M1CnRpdGxlcjAK,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/youtube/:/function/ChannelsMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzOApDaGFubmVsc3M1CnRpdGxlcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_channels)</visible>
 				</item>
 
@@ -140,7 +155,8 @@
 					<label>Live</label>
 					<icon>extensions/20_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/LiveMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNApMaXZlczUKdGl0bGVyMAo_,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/youtube/:/function/LiveMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNApMaXZlczUKdGl0bGVyMAo_,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/youtube/:/function/LiveMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzNApMaXZlczUKdGl0bGVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_20_live)</visible>
 				</item>
 
@@ -188,7 +204,8 @@
 					<label>My Stuff</label>
 					<icon>extensions/21_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/my_stuff?title=My+Stuff,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/my_stuff?title=My+Stuff,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo/my_stuff?title=My+Stuff,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_mystuff)</visible>
 				</item>
 
@@ -197,7 +214,8 @@
 					<label>Staff Picks</label>
 					<icon>extensions/21_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fstaffpicks%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=Staff+Picks,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fstaffpicks%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=Staff+Picks,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fstaffpicks%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=Staff+Picks,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_staff)</visible>
 				</item>
 
@@ -206,7 +224,8 @@
 					<label>HD</label>
 					<icon>extensions/21_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fhd%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=HD,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fhd%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=HD,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo/videos?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fhd%2Fvideos%2Fpage%3A%25d%2Fsort%3Apreset%2Fformat%3Adetail&amp;title=HD,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_hd)</visible>
 				</item>
 
@@ -215,7 +234,8 @@
 					<label>Featured Channels</label>
 					<icon>extensions/21_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/directory?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fpage%3A%25d%2Fsort%3Asubscribers&amp;title=Featured+Channels,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/directory?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fpage%3A%25d%2Fsort%3Asubscribers&amp;title=Featured+Channels,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo/directory?url=http%3A%2F%2Fvimeo.com%2Fchannels%2Fpage%3A%25d%2Fsort%3Asubscribers&amp;title=Featured+Channels,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_featured)</visible>
 				</item>
 
@@ -224,7 +244,8 @@
 					<label>Channels</label>
 					<icon>extensions/21_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/channels/categories?title=Channels,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/channels/categories?title=Channels,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo/channels/categories?title=Channels,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_channels)</visible>
 				</item>
 
@@ -233,7 +254,8 @@
 					<label>Groups</label>
 					<icon>extensions/21_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/groups/categories?title=Groups,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/vimeo/groups/categories?title=Groups,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/vimeo/groups/categories?title=Groups,return)</onclick>
 					<visible>Skin.HasSetting(Home_21_groups)</visible>
 				</item>
 
@@ -281,7 +303,8 @@
 					<label>Just Added</label>
 					<icon>extensions/22_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/just_added,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/just_added,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/amt/categories/just_added,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_added)</visible>
 				</item>
 
@@ -290,7 +313,8 @@
 					<label>Most Popular</label>
 					<icon>extensions/22_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/most_pop,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/most_pop,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/amt/categories/most_pop,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_popular)</visible>
 				</item>
 
@@ -299,7 +323,8 @@
 					<label>Exclusive</label>
 					<icon>extensions/22_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/exclusive,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/categories/exclusive,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/amt/categories/exclusive,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_exclusive)</visible>
 				</item>
 
@@ -308,7 +333,8 @@
 					<label>Genres</label>
 					<icon>extensions/22_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/genres,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/genres,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/amt/genres,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_genres)</visible>
 				</item>
 
@@ -317,7 +343,8 @@
 					<label>Movie Studios</label>
 					<icon>extensions/22_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/studios,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/amt/studios,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/amt/studios,return)</onclick>
 					<visible>Skin.HasSetting(Home_22_studios)</visible>
 				</item>
 
@@ -365,7 +392,8 @@
 					<label>Genres</label>
 					<icon>extensions/23_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genres,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genres,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/music/shoutcast/genres,return)</onclick>
 					<visible>Skin.HasSetting(Home_23_genres)</visible>
 				</item>
 
@@ -374,7 +402,8 @@
 					<label>TOP 500</label>
 					<icon>extensions/23_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genre?query=%2A%2Aignore%2A%2A&amp;queryParamName=http%3A%2F%2Fapi.shoutcast.com%2Flegacy%2FTop500%3F%25sk%3Dsh1t7hyn3Kh0jhlV&amp;title=Top+500+Stations,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/music/shoutcast/genre?query=%2A%2Aignore%2A%2A&amp;queryParamName=http%3A%2F%2Fapi.shoutcast.com%2Flegacy%2FTop500%3F%25sk%3Dsh1t7hyn3Kh0jhlV&amp;title=Top+500+Stations,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/music/shoutcast/genre?query=%2A%2Aignore%2A%2A&amp;queryParamName=http%3A%2F%2Fapi.shoutcast.com%2Flegacy%2FTop500%3F%25sk%3Dsh1t7hyn3Kh0jhlV&amp;title=Top+500+Stations,return)</onclick>
 					<visible>Skin.HasSetting(Home_23_top)</visible>
 				</item>
 
@@ -422,7 +451,8 @@
 					<label>Recently Released</label>
 					<icon>extensions/24_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=latest&amp;title=Recently+Released,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=latest&amp;title=Recently+Released,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/revision3/episodes?grouping=latest&amp;title=Recently+Released,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_recently)</visible>
 				</item>
 
@@ -431,7 +461,8 @@
 					<label>Featured</label>
 					<icon>extensions/24_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=featured&amp;title=Featured,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/episodes?grouping=featured&amp;title=Featured,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/revision3/episodes?grouping=featured&amp;title=Featured,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_featured)</visible>
 				</item>
 
@@ -440,7 +471,8 @@
 					<label>Featured Shows</label>
 					<icon>extensions/24_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=current&amp;title=Featured+Shows,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=current&amp;title=Featured+Shows,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/revision3/shows?grouping=current&amp;title=Featured+Shows,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_featuredshows)</visible>
 				</item>
 
@@ -449,7 +481,8 @@
 					<label>Archived Shows</label>
 					<icon>extensions/24_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=archived&amp;title=Archived+Shows,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/revision3/shows?grouping=archived&amp;title=Archived+Shows,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/revision3/shows?grouping=archived&amp;title=Archived+Shows,return)</onclick>
 					<visible>Skin.HasSetting(Home_24_archivedshows)</visible>
 				</item>
 
@@ -497,7 +530,8 @@
 					<label>Favourites</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/FavouritesMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/FavouritesMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/FavouritesMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_favourites)</visible>
 				</item>
 
@@ -506,7 +540,8 @@
 					<label>Movies</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzNgptb3ZpZXNzNAp0eXBlcjAK,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzNgptb3ZpZXNzNAp0eXBlcjAK,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzNgptb3ZpZXNzNAp0eXBlcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_movies)</visible>
 				</item>
 
@@ -515,7 +550,8 @@
 					<label>Movies (Recently)</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTQKUmVjZW50bHkgQWRkZWRzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHM2Cm1vdmllc3M0CnR5cGUxCnIyCjMKbnM1CmdlbnJlczYKbW92aWVzczQKdHlwZXM2Ck1vdmllc3M0CmVsZW1yMAo_,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTQKUmVjZW50bHkgQWRkZWRzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHM2Cm1vdmllc3M0CnR5cGUxCnIyCjMKbnM1CmdlbnJlczYKbW92aWVzczQKdHlwZXM2Ck1vdmllc3M0CmVsZW1yMAo_,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTQKUmVjZW50bHkgQWRkZWRzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHM2Cm1vdmllc3M0CnR5cGUxCnIyCjMKbnM1CmdlbnJlczYKbW92aWVzczQKdHlwZXM2Ck1vdmllc3M0CmVsZW1yMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_moviesrecently)</visible>
 				</item>
 
@@ -524,7 +560,8 @@
 					<label>Movies (Latest)</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTUKTGF0ZXN0IFJlbGVhc2VzczEyCnNlY3Rpb25fbmFtZW5zNQpnZW5yZXIxCnM0CnBhdGhzNgptb3ZpZXNzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXM2Cm1vdmllc3M0CnR5cGVzNgpNb3ZpZXNzNAplbGVtcjAK,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTUKTGF0ZXN0IFJlbGVhc2VzczEyCnNlY3Rpb25fbmFtZW5zNQpnZW5yZXIxCnM0CnBhdGhzNgptb3ZpZXNzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXM2Cm1vdmllc3M0CnR5cGVzNgpNb3ZpZXNzNAplbGVtcjAK,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzNgpNb3ZpZXNzMTEKcGFyZW50X25hbWVzMTUKTGF0ZXN0IFJlbGVhc2VzczEyCnNlY3Rpb25fbmFtZW5zNQpnZW5yZXIxCnM0CnBhdGhzNgptb3ZpZXNzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXM2Cm1vdmllc3M0CnR5cGVzNgpNb3ZpZXNzNAplbGVtcjAK,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_movieslatest)</visible>
 				</item>
 
@@ -533,7 +570,8 @@
 					<label>TV Shows</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzMgp0dnM0CnR5cGVyMAo_,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzMgp0dnM0CnR5cGVyMAo_,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/TypeMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMgpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVzMgp0dnM0CnR5cGVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_tvshows)</visible>
 				</item>
 
@@ -542,7 +580,8 @@
 					<label>TV Shows (Recently)</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNApSZWNlbnRseSBBZGRlZHMxMgpzZWN0aW9uX25hbWVuczUKZ2VucmVyMQpzNApwYXRoczIKdHZzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXMyCnR2czQKdHlwZXM4ClRWIFNob3dzczQKZWxlbXIwCg__,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNApSZWNlbnRseSBBZGRlZHMxMgpzZWN0aW9uX25hbWVuczUKZ2VucmVyMQpzNApwYXRoczIKdHZzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXMyCnR2czQKdHlwZXM4ClRWIFNob3dzczQKZWxlbXIwCg__,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczQKZGF0ZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNApSZWNlbnRseSBBZGRlZHMxMgpzZWN0aW9uX25hbWVuczUKZ2VucmVyMQpzNApwYXRoczIKdHZzNAp0eXBlMQpyMgozCm5zNQpnZW5yZXMyCnR2czQKdHlwZXM4ClRWIFNob3dzczQKZWxlbXIwCg__,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_tvshowsrecently)</visible>
 				</item>
 
@@ -551,7 +590,8 @@
 					<label>TV Shows (Latest)</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNQpMYXRlc3QgUmVsZWFzZXNzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHMyCnR2czQKdHlwZTEKcjIKMwpuczUKZ2VucmVzMgp0dnM0CnR5cGVzOApUViBTaG93c3M0CmVsZW1yMAo_,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNQpMYXRlc3QgUmVsZWFzZXNzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHMyCnR2czQKdHlwZTEKcjIKMwpuczUKZ2VucmVzMgp0dnM0CnR5cGVzOApUViBTaG93c3M0CmVsZW1yMAo_,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/ItemsMenu?function_args=Y2VyZWFsMQozCmRpY3QKbGlzdApkaWN0CjYKczcKcmVsZWFzZXM0CnNvcnRzOApUViBTaG93c3MxMQpwYXJlbnRfbmFtZXMxNQpMYXRlc3QgUmVsZWFzZXNzMTIKc2VjdGlvbl9uYW1lbnM1CmdlbnJlcjEKczQKcGF0aHMyCnR2czQKdHlwZTEKcjIKMwpuczUKZ2VucmVzMgp0dnM0CnR5cGVzOApUViBTaG93c3M0CmVsZW1yMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_tvshowslatest)</visible>
 				</item>
 
@@ -560,7 +600,8 @@
 					<label>Recently Watched</label>
 					<icon>extensions/25_icon.jpg</icon>
 					<property name="Type">Channel</property>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/HistoryMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
+					<!--<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://$INFO[Skin.String(Identifier)]/video/lmwt/:/function/HistoryMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>-->
+					<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/lmwt/:/function/HistoryMenu?function_args=Y2VyZWFsMQoxCmRpY3QKMQpzMTcKTGV0IE1lIFdhdGNoIFRoaXNzMTEKcGFyZW50X25hbWVyMAo_,return)</onclick>
 					<visible>Skin.HasSetting(Home_25_recently)</visible>
 				</item>
 
@@ -681,32 +722,33 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<visible>!isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="image" id="3301">
 			<include>settings_separator</include>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3302">
 			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_20_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_20_Enabled)</selected>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3303">
 			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_20_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
-                        <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_20_Name))</visible>
+                        <!--<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_20_Name))</visible>-->
+                        <visible>Skin.HasSetting(Home_20_Enabled) + isEmpty(Skin.String(Home_20_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3304">
 			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_20_Name)]]</label>
 			<onclick>Skin.Reset(Home_20_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_20_Name))</selected>
-                        <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_20_Name))</visible>
+                        <visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Home_20_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3305">
 			<textoffsetx>40</textoffsetx>
@@ -714,7 +756,8 @@
 			<label>My Account</label>
 			<onclick>Skin.ToggleSetting(Home_20_myaccount)</onclick>
 			<selected>Skin.HasSetting(Home_20_myaccount)</selected>
-			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_20_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3306">
 			<textoffsetx>40</textoffsetx>
@@ -722,7 +765,8 @@
 			<label>Videos</label>
 			<onclick>Skin.ToggleSetting(Home_20_videos)</onclick>
 			<selected>Skin.HasSetting(Home_20_videos)</selected>
-			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_20_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3307">
 			<textoffsetx>40</textoffsetx>
@@ -730,7 +774,8 @@
 			<label>Channels</label>
 			<onclick>Skin.ToggleSetting(Home_20_channels)</onclick>
 			<selected>Skin.HasSetting(Home_20_channels)</selected>
-			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_20_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3308">
 			<textoffsetx>40</textoffsetx>
@@ -738,7 +783,8 @@
 			<label>Live</label>
 			<onclick>Skin.ToggleSetting(Home_20_live)</onclick>
 			<selected>Skin.HasSetting(Home_20_live)</selected>
-			<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_20_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_20_Enabled)</visible>
 		</control>
 		<!-- Vimeo -->
 		<control type="label" id="3309">
@@ -750,32 +796,33 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<visible>!isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="image" id="3310">
 			<include>settings_separator</include>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3311">
 			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_21_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_21_Enabled)</selected>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3312">
 			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_21_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
-                        <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_21_Name))</visible>
+                        <!--<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_21_Name))</visible>-->
+                        <visible>Skin.HasSetting(Home_21_Enabled) + isEmpty(Skin.String(Home_21_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3313">
 			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_21_Name)]]</label>
 			<onclick>Skin.Reset(Home_21_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_21_Name))</selected>
-                        <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_21_Name))</visible>
+                        <visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Home_21_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3314">
 			<textoffsetx>40</textoffsetx>
@@ -783,7 +830,8 @@
 			<label>My Stuff</label>
 			<onclick>Skin.ToggleSetting(Home_21_mystuff)</onclick>
 			<selected>Skin.HasSetting(Home_21_mystuff)</selected>
-			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_21_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3315">
 			<textoffsetx>40</textoffsetx>
@@ -791,7 +839,8 @@
 			<label>Staff Picks</label>
 			<onclick>Skin.ToggleSetting(Home_21_staff)</onclick>
 			<selected>Skin.HasSetting(Home_21_staff)</selected>
-			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_21_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3316">
 			<textoffsetx>40</textoffsetx>
@@ -799,7 +848,8 @@
 			<label>HD</label>
 			<onclick>Skin.ToggleSetting(Home_21_hd)</onclick>
 			<selected>Skin.HasSetting(Home_21_hd)</selected>
-			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_21_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3317">
 			<textoffsetx>40</textoffsetx>
@@ -807,7 +857,8 @@
 			<label>Featured Channels</label>
 			<onclick>Skin.ToggleSetting(Home_21_featured)</onclick>
 			<selected>Skin.HasSetting(Home_21_featured)</selected>
-			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_21_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3318">
 			<textoffsetx>40</textoffsetx>
@@ -815,7 +866,8 @@
 			<label>Channels</label>
 			<onclick>Skin.ToggleSetting(Home_21_channels)</onclick>
 			<selected>Skin.HasSetting(Home_21_channels)</selected>
-			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_21_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3319">
 			<textoffsetx>40</textoffsetx>
@@ -823,7 +875,8 @@
 			<label>Groups</label>
 			<onclick>Skin.ToggleSetting(Home_21_groups)</onclick>
 			<selected>Skin.HasSetting(Home_21_groups)</selected>
-			<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_21_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_21_Enabled)</visible>
 		</control>
 		<!-- AppleTrailers -->
 		<control type="label" id="3320">
@@ -835,32 +888,33 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<visible>!isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="image" id="3321">
 			<include>settings_separator</include>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3322">
 			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_22_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_22_Enabled)</selected>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3323">
 			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_22_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
-                        <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_22_Name))</visible>
+                        <!--<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_22_Name))</visible>-->
+                        <visible>Skin.HasSetting(Home_22_Enabled) + isEmpty(Skin.String(Home_22_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3324">
 			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_22_Name)]]</label>
 			<onclick>Skin.Reset(Home_22_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_22_Name))</selected>
-                        <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_22_Name))</visible>
+                        <visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Home_22_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3325">
 			<textoffsetx>40</textoffsetx>
@@ -868,7 +922,8 @@
 			<label>Just Added</label>
 			<onclick>Skin.ToggleSetting(Home_22_added)</onclick>
 			<selected>Skin.HasSetting(Home_22_added)</selected>
-			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_22_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3326">
 			<textoffsetx>40</textoffsetx>
@@ -876,7 +931,8 @@
 			<label>Most Popular</label>
 			<onclick>Skin.ToggleSetting(Home_22_popular)</onclick>
 			<selected>Skin.HasSetting(Home_22_popular)</selected>
-			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_22_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3327">
 			<textoffsetx>40</textoffsetx>
@@ -884,7 +940,8 @@
 			<label>Exclusive</label>
 			<onclick>Skin.ToggleSetting(Home_22_exclusive)</onclick>
 			<selected>Skin.HasSetting(Home_22_exclusive)</selected>
-			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_22_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3328">
 			<textoffsetx>40</textoffsetx>
@@ -892,7 +949,8 @@
 			<label>Genres</label>
 			<onclick>Skin.ToggleSetting(Home_22_genres)</onclick>
 			<selected>Skin.HasSetting(Home_22_genres)</selected>
-			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_22_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3329">
 			<textoffsetx>40</textoffsetx>
@@ -900,7 +958,8 @@
 			<label>Movie Studios</label>
 			<onclick>Skin.ToggleSetting(Home_22_studios)</onclick>
 			<selected>Skin.HasSetting(Home_22_studios)</selected>
-			<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_22_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_22_Enabled)</visible>
 		</control>
 		<!-- Shoutcast -->
 		<control type="label" id="3330">
@@ -912,32 +971,33 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<visible>!isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="image" id="3331">
 			<include>settings_separator</include>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3332">
 			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_23_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_23_Enabled)</selected>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3333">
 			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_23_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
-                        <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_23_Name))</visible>
+                        <!--<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_23_Name))</visible>-->
+                        <visible>Skin.HasSetting(Home_23_Enabled) + isEmpty(Skin.String(Home_23_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3334">
 			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_23_Name)]]</label>
 			<onclick>Skin.Reset(Home_23_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_23_Name))</selected>
-                        <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_23_Name))</visible>
+                        <visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Home_23_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3335">
 			<textoffsetx>40</textoffsetx>
@@ -945,7 +1005,8 @@
 			<label>Genres</label>
 			<onclick>Skin.ToggleSetting(Home_23_genres)</onclick>
 			<selected>Skin.HasSetting(Home_23_genres)</selected>
-			<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_23_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3336">
 			<textoffsetx>40</textoffsetx>
@@ -953,7 +1014,8 @@
 			<label>TOP 500</label>
 			<onclick>Skin.ToggleSetting(Home_23_top)</onclick>
 			<selected>Skin.HasSetting(Home_23_top)</selected>
-			<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_23_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_23_Enabled)</visible>
 		</control>
 		<!-- Revision3 -->
 		<control type="label" id="3337">
@@ -965,32 +1027,33 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<visible>!isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="image" id="3338">
 			<include>settings_separator</include>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3339">
 			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_24_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_24_Enabled)</selected>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3340">
 			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_24_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
-                        <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_24_Name))</visible>
+                        <!--<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_24_Name))</visible>-->
+                        <visible>Skin.HasSetting(Home_24_Enabled) + isEmpty(Skin.String(Home_24_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3341">
 			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_24_Name)]]</label>
 			<onclick>Skin.Reset(Home_24_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_24_Name))</selected>
-                        <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_24_Name))</visible>
+                        <visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Home_24_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3342">
 			<textoffsetx>40</textoffsetx>
@@ -998,7 +1061,8 @@
 			<label>Recently Released</label>
 			<onclick>Skin.ToggleSetting(Home_24_recently)</onclick>
 			<selected>Skin.HasSetting(Home_24_recently)</selected>
-			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_24_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3343">
 			<textoffsetx>40</textoffsetx>
@@ -1006,7 +1070,8 @@
 			<label>Featured</label>
 			<onclick>Skin.ToggleSetting(Home_24_featured)</onclick>
 			<selected>Skin.HasSetting(Home_24_featured)</selected>
-			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_24_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3344">
 			<textoffsetx>40</textoffsetx>
@@ -1014,7 +1079,8 @@
 			<label>Featured Shows</label>
 			<onclick>Skin.ToggleSetting(Home_24_featuredshows)</onclick>
 			<selected>Skin.HasSetting(Home_24_featuredshows)</selected>
-			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_24_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3345">
 			<textoffsetx>40</textoffsetx>
@@ -1022,7 +1088,8 @@
 			<label>Archived Shows</label>
 			<onclick>Skin.ToggleSetting(Home_24_archivedshows)</onclick>
 			<selected>Skin.HasSetting(Home_24_archivedshows)</selected>
-			<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_24_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_24_Enabled)</visible>
 		</control>
 		<!-- LetMeWatchThis -->
 		<control type="label" id="3346">
@@ -1034,32 +1101,33 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<visible>!isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="image" id="3347">
 			<include>settings_separator</include>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3348">
 			<include>skin_settings_labels_half</include>
 			<label>24022</label> <!-- Enable -->
 			<onclick>Skin.ToggleSetting(Home_25_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_25_Enabled)</selected>
-                        <visible>!isEmpty(Skin.String(Identifier))</visible>
+                        <!--<visible>!isEmpty(Skin.String(Identifier))</visible>-->
 		</control>
 		<control type="radiobutton" id="3349">
 			<include>skin_settings_labels_half</include>
 			<label>118</label>
 			<onclick>Skin.SetString(Home_25_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
-                        <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_25_Name))</visible>
+                        <!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + isEmpty(Skin.String(Home_25_Name))</visible>-->
+                        <visible>Skin.HasSetting(Home_25_Enabled) + isEmpty(Skin.String(Home_25_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3350">
 			<include>skin_settings_labels_half</include>
 			<label>$LOCALIZE[118] [$INFO[Skin.String(Home_25_Name)]]</label>
 			<onclick>Skin.Reset(Home_25_Name)</onclick>
 			<selected>!isEmpty(Skin.String(Home_25_Name))</selected>
-                        <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier)) + !isEmpty(Skin.String(Home_25_Name))</visible>
+                        <visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Home_25_Name))</visible>
 		</control>
 		<control type="radiobutton" id="3351">
 			<textoffsetx>40</textoffsetx>
@@ -1067,7 +1135,8 @@
 			<label>Favourites</label>
 			<onclick>Skin.ToggleSetting(Home_25_favourites)</onclick>
 			<selected>Skin.HasSetting(Home_25_favourites)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3352">
 			<textoffsetx>40</textoffsetx>
@@ -1075,7 +1144,8 @@
 			<label>Movies</label>
 			<onclick>Skin.ToggleSetting(Home_25_movies)</onclick>
 			<selected>Skin.HasSetting(Home_25_movies)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3353">
 			<textoffsetx>40</textoffsetx>
@@ -1083,7 +1153,8 @@
 			<label>Movies (Recently)</label>
 			<onclick>Skin.ToggleSetting(Home_25_moviesrecently)</onclick>
 			<selected>Skin.HasSetting(Home_25_moviesrecently)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3354">
 			<textoffsetx>40</textoffsetx>
@@ -1091,7 +1162,8 @@
 			<label>Movies (Latest)</label>
 			<onclick>Skin.ToggleSetting(Home_25_movieslatest)</onclick>
 			<selected>Skin.HasSetting(Home_25_movieslatest)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3355">
 			<textoffsetx>40</textoffsetx>
@@ -1099,7 +1171,8 @@
 			<label>TV Shows</label>
 			<onclick>Skin.ToggleSetting(Home_25_tvshows)</onclick>
 			<selected>Skin.HasSetting(Home_25_tvshows)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3356">
 			<textoffsetx>40</textoffsetx>
@@ -1107,7 +1180,8 @@
 			<label>TV Shows (Recently)</label>
 			<onclick>Skin.ToggleSetting(Home_25_tvshowsrecently)</onclick>
 			<selected>Skin.HasSetting(Home_25_tvshowsrecently)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3357">
 			<textoffsetx>40</textoffsetx>
@@ -1115,7 +1189,8 @@
 			<label>TV Shows (Latest)</label>
 			<onclick>Skin.ToggleSetting(Home_25_tvshowslatest)</onclick>
 			<selected>Skin.HasSetting(Home_25_tvshowslatest)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 		<control type="radiobutton" id="3358">
 			<textoffsetx>40</textoffsetx>
@@ -1123,7 +1198,8 @@
 			<label>Recently Watched</label>
 			<onclick>Skin.ToggleSetting(Home_25_recently)</onclick>
 			<selected>Skin.HasSetting(Home_25_recently)</selected>
-			<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>
+			<!--<visible>Skin.HasSetting(Home_25_Enabled) + !isEmpty(Skin.String(Identifier))</visible>-->
+			<visible>Skin.HasSetting(Home_25_Enabled)</visible>
 		</control>
 </include>
 </includes>

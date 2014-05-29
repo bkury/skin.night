@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Thu May 29 00:23:45 CEST 2014 -->
+<!-- Thu May 29 19:28:34 CEST 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -1597,21 +1597,6 @@
 		<!-- Opacity Option -->
 		<include condition="isEmpty(Skin.String(Search_Opacity))">Search_Opacity_Default</include>
 		<include condition="!isEmpty(Skin.String(Search_Opacity))">Search_Opacity</include>
-	<!-- Default -->
-	<control type="image">
-		<include>background_default</include>
-		<!--<texture background="true">backdrops/curtains.png</texture>-->
-		<texture background="true">bg-myplex.png</texture>
-		<!-- Fadetime Option -->
-		<include condition="isEmpty(Skin.String(Search_Fadetime))">Search_Fadetime_Default</include>
-		<include condition="!isEmpty(Skin.String(Search_Fadetime))">Search_Fadetime</include>
-		<!-- Time per Image Option -->
-		<include condition="isEmpty(Skin.String(Search_TimePerImage))">Search_TimePerImage_Default</include>
-		<include condition="!isEmpty(Skin.String(Search_TimePerImage))">Search_TimePerImage</include>
-		<!-- Kenburns Option -->
-		<include condition="Skin.HasSetting(Search_Kenburns)">background_kenburns</include>
-		<visible>![!isEmpty(Skin.String(Search_Single)) | !isEmpty(Skin.String(Search_Multi))]</visible>
-	</control>
 	<!-- Custom Single -->
 	<control type="image">
 		<include>background_default</include>
@@ -15324,10 +15309,10 @@
 	<include condition="Skin.String(Home_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="Home_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="300">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="300">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="300">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="300">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="Home_Opacity">
 	<include condition="Skin.String(Home_Opacity,0)">background_opacity_0_force</include>		
@@ -16117,10 +16102,10 @@
 	<include condition="Skin.String(XBMC_Custom1_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom1_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom1_Opacity">
 	<include condition="Skin.String(XBMC_Custom1_Opacity,0)">background_opacity_0</include>		
@@ -16178,10 +16163,10 @@
 	<include condition="Skin.String(XBMC_Custom2_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom2_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom2_Opacity">
 	<include condition="Skin.String(XBMC_Custom2_Opacity,0)">background_opacity_0</include>		
@@ -16239,10 +16224,10 @@
 	<include condition="Skin.String(XBMC_Custom3_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom3_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom3_Opacity">
 	<include condition="Skin.String(XBMC_Custom3_Opacity,0)">background_opacity_0</include>		
@@ -16300,10 +16285,10 @@
 	<include condition="Skin.String(XBMC_Custom4_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom4_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom4_Opacity">
 	<include condition="Skin.String(XBMC_Custom4_Opacity,0)">background_opacity_0</include>		
@@ -16361,10 +16346,10 @@
 	<include condition="Skin.String(XBMC_Custom5_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom5_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom5_Opacity">
 	<include condition="Skin.String(XBMC_Custom5_Opacity,0)">background_opacity_0</include>		
@@ -16422,10 +16407,10 @@
 	<include condition="Skin.String(XBMC_Custom6_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom6_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom6_Opacity">
 	<include condition="Skin.String(XBMC_Custom6_Opacity,0)">background_opacity_0</include>		
@@ -16483,10 +16468,10 @@
 	<include condition="Skin.String(XBMC_Custom7_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom7_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom7_Opacity">
 	<include condition="Skin.String(XBMC_Custom7_Opacity,0)">background_opacity_0</include>		
@@ -16544,10 +16529,10 @@
 	<include condition="Skin.String(XBMC_Custom8_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom8_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom8_Opacity">
 	<include condition="Skin.String(XBMC_Custom8_Opacity,0)">background_opacity_0</include>		
@@ -16605,10 +16590,10 @@
 	<include condition="Skin.String(XBMC_Custom9_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="XBMC_Custom9_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="XBMC_Custom9_Opacity">
 	<include condition="Skin.String(XBMC_Custom9_Opacity,0)">background_opacity_0</include>		
@@ -16666,10 +16651,10 @@
 	<include condition="Skin.String(PLEX_Custom1_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom1_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom1_Opacity">
 	<include condition="Skin.String(PLEX_Custom1_Opacity,0)">background_opacity_0</include>		
@@ -16727,10 +16712,10 @@
 	<include condition="Skin.String(PLEX_Custom2_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom2_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom2_Opacity">
 	<include condition="Skin.String(PLEX_Custom2_Opacity,0)">background_opacity_0</include>		
@@ -16788,10 +16773,10 @@
 	<include condition="Skin.String(PLEX_Custom3_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom3_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom3_Opacity">
 	<include condition="Skin.String(PLEX_Custom3_Opacity,0)">background_opacity_0</include>		
@@ -16849,10 +16834,10 @@
 	<include condition="Skin.String(PLEX_Custom4_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom4_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom4_Opacity">
 	<include condition="Skin.String(PLEX_Custom4_Opacity,0)">background_opacity_0</include>		
@@ -16910,10 +16895,10 @@
 	<include condition="Skin.String(PLEX_Custom5_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom5_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom5_Opacity">
 	<include condition="Skin.String(PLEX_Custom5_Opacity,0)">background_opacity_0</include>		
@@ -16971,10 +16956,10 @@
 	<include condition="Skin.String(PLEX_Custom6_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom6_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom6_Opacity">
 	<include condition="Skin.String(PLEX_Custom6_Opacity,0)">background_opacity_0</include>		
@@ -17032,10 +17017,10 @@
 	<include condition="Skin.String(PLEX_Custom7_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom7_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom7_Opacity">
 	<include condition="Skin.String(PLEX_Custom7_Opacity,0)">background_opacity_0</include>		
@@ -17093,10 +17078,10 @@
 	<include condition="Skin.String(PLEX_Custom8_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom8_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom8_Opacity">
 	<include condition="Skin.String(PLEX_Custom8_Opacity,0)">background_opacity_0</include>		
@@ -17154,10 +17139,10 @@
 	<include condition="Skin.String(PLEX_Custom9_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="PLEX_Custom9_Opacity_Default">
-	<animation effect="fade" start="0" end="60" time="300" delay="0">WindowOpen</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-	<animation effect="fade" start="0" end="60" time="300" delay="0">Visible</animation>
-	<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
 </include>
 <include name="PLEX_Custom9_Opacity">
 	<include condition="Skin.String(PLEX_Custom9_Opacity,0)">background_opacity_0</include>		

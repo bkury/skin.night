@@ -29,9 +29,10 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(XBMC) + [ Control.IsVisible(300) | Control.IsVisible(1400) ]</visible>
 			<visible>![ControlGroup(5000).HasFocus | ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus | ControlGroup(7006).HasFocus | ControlGroup(7007).HasFocus | ControlGroup(7008).HasFocus | ControlGroup(7009).HasFocus | ControlGroup(7010).HasFocus ]</visible>
+			<visible>![Container(300).hasFocus(17)]</visible>
 			<visible>![Container(300).HasFocus(20) | Container(300).HasFocus(21) | Container(300).HasFocus(22) | Container(300).HasFocus(23) | Container(300).HasFocus(24) | Container(300).HasFocus(25) | Container(300).HasFocus(26) | Container(300).HasFocus(27) | Container(300).HasFocus(28) | Container(300).HasFocus(29) | Container(300).HasFocus(30)]</visible>
-			<visible>![Container(300).hasFocus(15) | Container(300).hasFocus(17) ]</visible>
 			<visible>![StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome1.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome2.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome3.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome4.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome5.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome6.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome7.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome8.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome9.Label)) ]</visible>
+			<visible>![Container(300).HasFocus(15) + [!isEmpty(Skin.String(Search_Single)) | !isEmpty(Skin.String(Search_Multi))]]</visible>
 
 			<!-- Opacity Option -->
 			<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
@@ -293,7 +294,7 @@
 		<!-- Deck Custom Background -->
 		<control type="group">
 			<visible>[!isEmpty(Skin.String(Deck_Single)) | !isEmpty(Skin.String(Deck_Multi))]</visible>
-			<visible>ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus</visible>
+			<visible>ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus | ControlGroup(7006).HasFocus | ControlGroup(7007).HasFocus</visible>
 			<include>Deck_Custom</include>
 		</control>
 
@@ -432,22 +433,18 @@
 	<include>Global_Time_Home</include>
 	<include>Global_Time_Home_Big</include>
 
-
 	<!-- Now Playing -->
 	<control type="group">
 		<visible>Player.HasVideo | Player.HasAudio</visible>
 		<posx>860</posx>
 		<posy>640</posy>
-
 		<control type="image">
 			<posx>-280</posx>
 			<posy>-100</posy>
-
 			<width>700</width>
 			<height>220</height>
 			<texture flipy="true">common/library_time_gradient.png</texture>
 		</control>
-
 		<include>viewtype_nowplaying_right</include>
 	</control>
 

@@ -886,11 +886,11 @@
 					<visible>Container(100).Hasfocus(130)</visible>
 
 					<!-- Plex Home Extensions -->
-					<control type="label" id="3210">
+					<!--<control type="label" id="3210">
 			                        <width>860</width>
 			                        <height>35</height>
 			                        <font>font13caps</font>
-			                        <label>24001</label> <!-- Configuration -->
+			                        <label>24001</label>
 			                        <textcolor>white</textcolor>
 			                        <shadowcolor>black</shadowcolor>
 			                        <align>left</align>
@@ -900,8 +900,8 @@
                				<control type="image" id="3220">
 			                        <include>settings_separator</include>
 						<visible>!Skin.HasSetting(XBMC)</visible>
-			                </control>
-					<control type="radiobutton" id="3230">
+			                </control>-->
+					<!--<control type="radiobutton" id="3230">
 						<include>skin_settings_labels</include>
                        				<label>Machine Identifier ($INFO[Skin.String(Identifier)])</label>
 						<onclick>Skin.SetString(Identifier)</onclick>
@@ -939,7 +939,7 @@
 						<include>skin_settings_labels</include>
 						<visible>isEmpty(Skin.String(Identifier))</visible>
 						<visible>!Skin.HasSetting(XBMC)</visible>
-			                </control>
+			                </control>-->
 
 					<!-- PLEX Custom Addons -->
 					<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Settings</include> <!-- 3300 -->

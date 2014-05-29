@@ -18,8 +18,8 @@
 	debugging="false"/>
 	<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
 	<extension point="xbmc.addon.metadata">
-		<summary>Night is a beautiful, clean and Fanart focused Skin for PHT 1.0+ and XBMC Gotham</summary>
-		<description>Night is a beautiful, clean and Fanart focused Skin for PHT 1.0+ and XBMC Gotham. Based on Night Skin by mcborzu, PHC port by maverick214, Rewritten for PHT/XBMC by bkury</description>	
+		<summary>Night is a beautiful, clean and Fanart focused Skin for PHT 1.1+ and XBMC Gotham</summary>
+		<description>Night is a beautiful, clean and Fanart focused Skin for PHT 1.1+ and XBMC Gotham. Based on Night Skin by mcborzu, PHC port by maverick214, Rewritten for PHT/XBMC by bkury</description>	
 		<disclaimer>More info on the skin can be found at the Plex or XBMC Forums.</disclaimer>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>

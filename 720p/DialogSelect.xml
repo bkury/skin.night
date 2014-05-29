@@ -33,5 +33,10 @@
 	<!-- Dialog Footer -->
 	<include>dialog_footer</include>
 
+	<!-- Workaround for now -->
+	<control type="button" id="5">
+		<animation effect="fade" end="0" condition="true">conditional</animation>
+	</control>
+
 	</controls>
 </window>
