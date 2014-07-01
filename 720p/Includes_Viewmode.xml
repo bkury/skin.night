@@ -7,7 +7,7 @@
 	<onload>Skin.SetString(selector1,$INFO[Container.ViewMode])</onload>
 	<onunload>Skin.Reset(selector1)</onunload>
 	<onunload>Skin.Reset(selector2)</onunload>
-	<views>100,110,120,200,210,220,300,310,320,400,410,420</views>
+	<views>100,110,120,200,210,220,300,310,320,400,410,420,500</views>
 	<controls>
 
    		<!-- Default Background -->
@@ -28,6 +28,7 @@
 			<include>Viewmode_Poster</include>      <!-- 200/210/220 -->
 			<include>Viewmode_Panel</include>       <!-- 300/310/320 -->
 			<include>Viewmode_Banner</include>      <!-- 400/410/420 -->
+			<include>Viewmode_Custom1</include>	<!-- 500 -->
 			<include>Viewmode_Infocard</include>
 		</control>
 
@@ -36,10 +37,15 @@
 		<include>viewtype_filter</include>
 		<include>viewtype_sort</include>
 		<include>viewtype_options</include>
+		<include>viewtype_options_edit</include>
 		<include>viewtype_navigation</include>
 		<include>viewtype_scrolling</include>
 		<!--<include>debugInfos</include>-->
 	</controls>
+</include>
+
+<include name="Viewmode_Visible_Unknown">
+	<visible>Container.Content(files)</visible>
 </include>
 
 <include name="Viewmode_Visible_Cover">
@@ -944,6 +950,35 @@
 					</control>-->
 				</control>
 
+				<!-- Unknown -->
+				<control type="group">
+					<include>Viewmode_Visible_Unknown</include>
+					<control type="image">
+						<posx>0</posx>
+						<posy>300</posy>
+						<width>380</width>
+						<height>180</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<bordertexture>confluence/button-nofocus.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>0</posx>
+						<posy>500</posy>
+						<width>380</width>
+						<height>125</height>
+						<align>justify</align>
+						<info>ListItem.Plot</info>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<include>Viewmode_Visible_Plot</include>
+					</control>
+				</control>
+
+				<!-- Thumb -->
 				<control type="group">
 					<include>Viewmode_Visible_Thumb</include>
 					<control type="image">
@@ -972,6 +1007,7 @@
 					</control>
 				</control>
 
+				<!-- Square -->
 				<control type="group">
 					<include>Viewmode_Visible_Square</include>
 					<control type="image">
@@ -1428,5 +1464,14 @@
 	<focusposition>5</focusposition>
 </include>
 
+<!-- Custom Viewmode Default -->
+<include name="Custom_Viewmode_Default">
+	<posx>20</posx>
+	<posy>20</posy>
+	<width>600</width>
+	<height>300</height>
+	<focusposition>0</focusposition>
+	<movement>0</movement>
+</include>
 
 </includes>

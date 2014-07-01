@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Thu May 29 19:28:34 CEST 2014 -->
+<!-- Mon Jun 30 20:00:33 CEST 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -816,6 +816,278 @@
 			<effect type="fade" start="100" end="0" time="600"/>
 		</animation>
 		<visible>Skin.HasSetting(Banner3_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Custom1 (500) -->
+<control type="group">
+        <visible>Control.HasFocus(500) | [ Control.IsVisible(500) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom1_Fadetime))">Custom1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_Fadetime))">Custom1_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Custom1_TimePerImage))">Custom1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_TimePerImage))">Custom1_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom1_Opacity))">Custom1_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_Opacity))">Custom1_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom1_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Custom1_Single)) | !isEmpty(Skin.String(Custom1_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Custom1_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Custom1_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom1_Fadetime))">Custom1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_Fadetime))">Custom1_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom1_TimePerImage))">Custom1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_TimePerImage))">Custom1_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom1_Opacity))">Custom1_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_Opacity))">Custom1_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom1_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Custom1_Single)) + isEmpty(Skin.String(Custom1_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Custom1_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom1_Fadetime))">Custom1_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_Fadetime))">Custom1_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom1_TimePerImage))">Custom1_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_TimePerImage))">Custom1_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom1_Opacity))">Custom1_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom1_Opacity))">Custom1_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom1_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Custom1_Single)) + !isEmpty(Skin.String(Custom1_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Custom1_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Custom2 (510) -->
+<control type="group">
+        <visible>Control.HasFocus(510) | [ Control.IsVisible(510) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom2_Fadetime))">Custom2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_Fadetime))">Custom2_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Custom2_TimePerImage))">Custom2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_TimePerImage))">Custom2_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom2_Opacity))">Custom2_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_Opacity))">Custom2_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom2_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Custom2_Single)) | !isEmpty(Skin.String(Custom2_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Custom2_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Custom2_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom2_Fadetime))">Custom2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_Fadetime))">Custom2_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom2_TimePerImage))">Custom2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_TimePerImage))">Custom2_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom2_Opacity))">Custom2_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_Opacity))">Custom2_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom2_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Custom2_Single)) + isEmpty(Skin.String(Custom2_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Custom2_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom2_Fadetime))">Custom2_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_Fadetime))">Custom2_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom2_TimePerImage))">Custom2_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_TimePerImage))">Custom2_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom2_Opacity))">Custom2_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom2_Opacity))">Custom2_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom2_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Custom2_Single)) + !isEmpty(Skin.String(Custom2_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Custom2_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Custom3 (520) -->
+<control type="group">
+        <visible>Control.HasFocus(520) | [ Control.IsVisible(520) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom3_Fadetime))">Custom3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_Fadetime))">Custom3_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Custom3_TimePerImage))">Custom3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_TimePerImage))">Custom3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom3_Opacity))">Custom3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_Opacity))">Custom3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom3_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Custom3_Single)) | !isEmpty(Skin.String(Custom3_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Custom3_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Custom3_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom3_Fadetime))">Custom3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_Fadetime))">Custom3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom3_TimePerImage))">Custom3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_TimePerImage))">Custom3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom3_Opacity))">Custom3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_Opacity))">Custom3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom3_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Custom3_Single)) + isEmpty(Skin.String(Custom3_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Custom3_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom3_Fadetime))">Custom3_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_Fadetime))">Custom3_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom3_TimePerImage))">Custom3_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_TimePerImage))">Custom3_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom3_Opacity))">Custom3_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom3_Opacity))">Custom3_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom3_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Custom3_Single)) + !isEmpty(Skin.String(Custom3_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Custom3_Grainy)</visible>
+	</control>
+</control>
+
+
+<!-- Viewmode Custom4 (530) -->
+<control type="group">
+        <visible>Control.HasFocus(530) | [ Control.IsVisible(530) + Control.IsVisible(7000) ]</visible>
+	<!-- Fanart -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom4_Fadetime))">Custom4_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_Fadetime))">Custom4_Fadetime</include>
+		<!-- Time per Image Option -->			
+		<include condition="isEmpty(Skin.String(Custom4_TimePerImage))">Custom4_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_TimePerImage))">Custom4_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom4_Opacity))">Custom4_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_Opacity))">Custom4_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom4_Kenburns)">background_kenburns</include>
+		<visible>![!isEmpty(Skin.String(Custom4_Single)) | !isEmpty(Skin.String(Custom4_Multi))]</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="image">
+		<include>background_default</include>
+		<!--<info>Skin.String(Custom4_Single)</info>-->
+		<texture background="true">$INFO[Skin.String(Custom4_Single)]</texture>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom4_Fadetime))">Custom4_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_Fadetime))">Custom4_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom4_TimePerImage))">Custom4_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_TimePerImage))">Custom4_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom4_Opacity))">Custom4_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_Opacity))">Custom4_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom4_Kenburns)">background_kenburns</include>
+		<visible>!isEmpty(Skin.String(Custom4_Single)) + isEmpty(Skin.String(Custom4_Multi))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="multiimage">
+		<include>background_default</include>
+		<info>Skin.String(Custom4_Multi)</info>
+		<!-- Fadetime Option -->
+		<include condition="isEmpty(Skin.String(Custom4_Fadetime))">Custom4_Fadetime_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_Fadetime))">Custom4_Fadetime</include>
+		<!-- Time per Image Option -->
+		<include condition="isEmpty(Skin.String(Custom4_TimePerImage))">Custom4_TimePerImage_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_TimePerImage))">Custom4_TimePerImage</include>
+		<!-- Opacity Option -->
+		<include condition="isEmpty(Skin.String(Custom4_Opacity))">Custom4_Opacity_Default</include>
+		<include condition="!isEmpty(Skin.String(Custom4_Opacity))">Custom4_Opacity</include>
+		<!-- Kenburns Option -->
+		<include condition="Skin.HasSetting(Custom4_Kenburns)">background_kenburns</include>
+		<visible>isEmpty(Skin.String(Custom4_Single)) + !isEmpty(Skin.String(Custom4_Multi))</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="largeimage">
+		<include>background_default</include>
+		<texture>grainy.png</texture>
+		<animation effect="fade" start="0" end="100" time="600" delay="0" condition="true">Conditional</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="600"/>
+		</animation>
+		<visible>Skin.HasSetting(Custom4_Grainy)</visible>
 	</control>
 </control>
 
@@ -4692,8 +4964,600 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(420)</visible>
 	</control>
-	<!-- Viewmode Channel1 (900) -->
+	<!-- Viewmode Custom1 (500) -->
 	<!--<control type="label" id="2144">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500)</visible>
+	</control>-->
+	<control type="label" id="2145">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33068</label><!-- Background -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2146">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(Custom1_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Custom1_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2147">
+		<width>220</width>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(Custom1_Grainy)</onclick>
+		<selected>Skin.HasSetting(Custom1_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2148">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,Custom1)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom1_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2149">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,Custom1)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom1_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2150">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,Custom1)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom1_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2151">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom1_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Custom1_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom1_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500) + isEmpty(Skin.String(Custom1_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2152">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom1_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom1_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500) + !isEmpty(Skin.String(Custom1_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2153">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom1_Single)</onclick>
+		<onclick>Skin.SetPath(Custom1_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom1_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500) + isEmpty(Skin.String(Custom1_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2154">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom1_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom1_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500) + !isEmpty(Skin.String(Custom1_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2155">
+		<width>220</width>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(Custom1_Single)</onclick>
+		<onclick>Skin.Reset(Custom1_Multi)</onclick>
+		<onclick>Skin.Reset(Custom1_Fadetime)</onclick>
+		<onclick>Skin.Reset(Custom1_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Custom1_Opacity)</onclick>
+		<onclick>Skin.Reset(Custom1_Grainy)</onclick>
+		<onclick>Skin.Reset(Custom1_Kenburns)</onclick>
+		<onclick>Skin.Reset(Custom1_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Viewmode Custom2 (510) -->
+	<!--<control type="label" id="2156">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>-->
+	<control type="label" id="2157">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33068</label><!-- Background -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2158">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(Custom2_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Custom2_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2159">
+		<width>220</width>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(Custom2_Grainy)</onclick>
+		<selected>Skin.HasSetting(Custom2_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2160">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,Custom2)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom2_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2161">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,Custom2)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom2_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2162">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,Custom2)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom2_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2163">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom2_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Custom2_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom2_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510) + isEmpty(Skin.String(Custom2_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2164">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom2_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom2_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510) + !isEmpty(Skin.String(Custom2_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2165">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom2_Single)</onclick>
+		<onclick>Skin.SetPath(Custom2_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom2_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510) + isEmpty(Skin.String(Custom2_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2166">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom2_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom2_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510) + !isEmpty(Skin.String(Custom2_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2167">
+		<width>220</width>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(Custom2_Single)</onclick>
+		<onclick>Skin.Reset(Custom2_Multi)</onclick>
+		<onclick>Skin.Reset(Custom2_Fadetime)</onclick>
+		<onclick>Skin.Reset(Custom2_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Custom2_Opacity)</onclick>
+		<onclick>Skin.Reset(Custom2_Grainy)</onclick>
+		<onclick>Skin.Reset(Custom2_Kenburns)</onclick>
+		<onclick>Skin.Reset(Custom2_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Viewmode Custom3 (520) -->
+	<!--<control type="label" id="2168">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>-->
+	<control type="label" id="2169">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33068</label><!-- Background -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2170">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(Custom3_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Custom3_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2171">
+		<width>220</width>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(Custom3_Grainy)</onclick>
+		<selected>Skin.HasSetting(Custom3_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2172">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,Custom3)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom3_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2173">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,Custom3)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom3_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2174">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,Custom3)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom3_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2175">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom3_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Custom3_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom3_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520) + isEmpty(Skin.String(Custom3_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2176">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom3_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom3_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520) + !isEmpty(Skin.String(Custom3_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2177">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom3_Single)</onclick>
+		<onclick>Skin.SetPath(Custom3_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom3_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520) + isEmpty(Skin.String(Custom3_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2178">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom3_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom3_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520) + !isEmpty(Skin.String(Custom3_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2179">
+		<width>220</width>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(Custom3_Single)</onclick>
+		<onclick>Skin.Reset(Custom3_Multi)</onclick>
+		<onclick>Skin.Reset(Custom3_Fadetime)</onclick>
+		<onclick>Skin.Reset(Custom3_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Custom3_Opacity)</onclick>
+		<onclick>Skin.Reset(Custom3_Grainy)</onclick>
+		<onclick>Skin.Reset(Custom3_Kenburns)</onclick>
+		<onclick>Skin.Reset(Custom3_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Viewmode Custom4 (530) -->
+	<!--<control type="label" id="2180">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>-->
+	<control type="label" id="2181">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33068</label><!-- Background -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!--<control type="image" id="121">
+		<include>settings_separator</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>-->
+	<!-- Kenburns -->                                
+	<control type="radiobutton" id="2182">
+		<width>220</width>
+		<description>Kenburns</description>
+		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
+		<onclick>Skin.ToggleSetting(Custom4_Kenburns)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>Skin.HasSetting(Custom4_Kenburns)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Haze Effect -->
+	<control type="radiobutton" id="2183">
+		<width>220</width>
+		<description>Haze Effect</description>
+                <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
+		<onclick>Skin.ToggleSetting(Custom4_Grainy)</onclick>
+		<selected>Skin.HasSetting(Custom4_Grainy)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Fadetime -->		
+	<control type="radiobutton" id="2184">
+		<width>220</width>
+		<description>Fadetime</description>
+		<label>31076</label> <!-- Fadetime -->
+		<onclick>Skin.SetString(selector1,Custom4)</onclick>
+		<onclick>Skin.SetString(selector2,Fadetime)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom4_Fadetime))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Time per Image -->
+	<control type="radiobutton" id="2185">
+		<width>220</width>
+		<description>TimePerImage</description>
+		<label>31072</label> <!-- TimePerImage -->
+		<onclick>Skin.SetString(selector1,Custom4)</onclick>
+		<onclick>Skin.SetString(selector2,TimePerImage)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom4_TimePerImage))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Opacity -->
+	<control type="radiobutton" id="2186">
+		<width>220</width>
+		<description>Opacity</description>
+		<label>31073</label> <!-- Opacity -->
+		<onclick>Skin.SetString(selector1,Custom4)</onclick>
+		<onclick>Skin.SetString(selector2,Opacity)</onclick>
+		<onclick>ActivateWindow(1120)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom4_Opacity))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Custom Single -->
+	<control type="radiobutton" id="2187">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom4_Multi)</onclick>
+		<onclick>Skin.SetLargeImage(Custom4_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom4_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530) + isEmpty(Skin.String(Custom4_Single))</visible>
+	</control>
+	<control type="radiobutton" id="2188">
+		<width>220</width>
+		<description>Custom Single Image</description>
+		<label>31074</label> <!-- Custom Single -->
+		<onclick>Skin.Reset(Custom4_Single)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom4_Single))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530) + !isEmpty(Skin.String(Custom4_Single))</visible>
+	</control>
+	<!-- Custom Multi -->
+	<control type="radiobutton" id="2189">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom4_Single)</onclick>
+		<onclick>Skin.SetPath(Custom4_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom4_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530) + isEmpty(Skin.String(Custom4_Multi))</visible>
+	</control>
+	<control type="radiobutton" id="2190">
+		<width>220</width>
+		<description>Custom Multi Image</description>
+		<label>31075</label> <!-- Custom Slideshow -->
+		<onclick>Skin.Reset(Custom4_Multi)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>!isEmpty(Skin.String(Custom4_Multi))</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530) + !isEmpty(Skin.String(Custom4_Multi))</visible>
+	</control>
+	<!-- Reset -->
+	<control type="radiobutton" id="2191">
+		<width>220</width>
+		<label>31077</label> <!-- Reset -->
+		<onclick>Skin.Reset(Custom4_Single)</onclick>
+		<onclick>Skin.Reset(Custom4_Multi)</onclick>
+		<onclick>Skin.Reset(Custom4_Fadetime)</onclick>
+		<onclick>Skin.Reset(Custom4_TimePerImage)</onclick>
+		<onclick>Skin.Reset(Custom4_Opacity)</onclick>
+		<onclick>Skin.Reset(Custom4_Grainy)</onclick>
+		<onclick>Skin.Reset(Custom4_Kenburns)</onclick>
+		<onclick>Skin.Reset(Custom4_Enabled)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
+		<selected>-</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Viewmode Channel1 (900) -->
+	<!--<control type="label" id="2192">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4704,7 +5568,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(900)</visible>
 	</control>-->
-	<control type="label" id="2145">
+	<control type="label" id="2193">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4720,7 +5584,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>-->
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="2146">
+	<control type="radiobutton" id="2194">
 		<width>220</width>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -4731,7 +5595,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="2147">
+	<control type="radiobutton" id="2195">
 		<width>220</width>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -4741,7 +5605,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="2148">
+	<control type="radiobutton" id="2196">
 		<width>220</width>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -4754,7 +5618,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="2149">
+	<control type="radiobutton" id="2197">
 		<width>220</width>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -4767,7 +5631,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="2150">
+	<control type="radiobutton" id="2198">
 		<width>220</width>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -4780,7 +5644,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="2151">
+	<control type="radiobutton" id="2199">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -4791,7 +5655,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(900) + isEmpty(Skin.String(Channel1_Single))</visible>
 	</control>
-	<control type="radiobutton" id="2152">
+	<control type="radiobutton" id="2200">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -4802,7 +5666,7 @@
 		<visible>Control.IsVisible(900) + !isEmpty(Skin.String(Channel1_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="2153">
+	<control type="radiobutton" id="2201">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -4813,7 +5677,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(900) + isEmpty(Skin.String(Channel1_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="2154">
+	<control type="radiobutton" id="2202">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -4824,7 +5688,7 @@
 		<visible>Control.IsVisible(900) + !isEmpty(Skin.String(Channel1_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="2155">
+	<control type="radiobutton" id="2203">
 		<width>220</width>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Channel1_Single)</onclick>
@@ -4841,7 +5705,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Viewmode Channel2 (901) -->
-	<!--<control type="label" id="2156">
+	<!--<control type="label" id="2204">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4852,7 +5716,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(901)</visible>
 	</control>-->
-	<control type="label" id="2157">
+	<control type="label" id="2205">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -4868,7 +5732,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>-->
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="2158">
+	<control type="radiobutton" id="2206">
 		<width>220</width>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -4879,7 +5743,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="2159">
+	<control type="radiobutton" id="2207">
 		<width>220</width>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -4889,7 +5753,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="2160">
+	<control type="radiobutton" id="2208">
 		<width>220</width>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -4902,7 +5766,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="2161">
+	<control type="radiobutton" id="2209">
 		<width>220</width>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -4915,7 +5779,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="2162">
+	<control type="radiobutton" id="2210">
 		<width>220</width>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -4928,7 +5792,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="2163">
+	<control type="radiobutton" id="2211">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -4939,7 +5803,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(901) + isEmpty(Skin.String(Channel2_Single))</visible>
 	</control>
-	<control type="radiobutton" id="2164">
+	<control type="radiobutton" id="2212">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -4950,7 +5814,7 @@
 		<visible>Control.IsVisible(901) + !isEmpty(Skin.String(Channel2_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="2165">
+	<control type="radiobutton" id="2213">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -4961,7 +5825,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(901) + isEmpty(Skin.String(Channel2_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="2166">
+	<control type="radiobutton" id="2214">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -4972,7 +5836,7 @@
 		<visible>Control.IsVisible(901) + !isEmpty(Skin.String(Channel2_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="2167">
+	<control type="radiobutton" id="2215">
 		<width>220</width>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Channel2_Single)</onclick>
@@ -4989,7 +5853,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Viewmode Channel3 (902) -->
-	<!--<control type="label" id="2168">
+	<!--<control type="label" id="2216">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -5000,7 +5864,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(902)</visible>
 	</control>-->
-	<control type="label" id="2169">
+	<control type="label" id="2217">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -5016,7 +5880,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>-->
 	<!-- Kenburns -->                                
-	<control type="radiobutton" id="2170">
+	<control type="radiobutton" id="2218">
 		<width>220</width>
 		<description>Kenburns</description>
 		<label>Kenburns $LOCALIZE[31059]</label> <!-- Kenburns -->
@@ -5027,7 +5891,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Haze Effect -->
-	<control type="radiobutton" id="2171">
+	<control type="radiobutton" id="2219">
 		<width>220</width>
 		<description>Haze Effect</description>
                 <label>Haze $LOCALIZE[31059]</label> <!-- Haze -->
@@ -5037,7 +5901,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Fadetime -->		
-	<control type="radiobutton" id="2172">
+	<control type="radiobutton" id="2220">
 		<width>220</width>
 		<description>Fadetime</description>
 		<label>31076</label> <!-- Fadetime -->
@@ -5050,7 +5914,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Time per Image -->
-	<control type="radiobutton" id="2173">
+	<control type="radiobutton" id="2221">
 		<width>220</width>
 		<description>TimePerImage</description>
 		<label>31072</label> <!-- TimePerImage -->
@@ -5063,7 +5927,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Opacity -->
-	<control type="radiobutton" id="2174">
+	<control type="radiobutton" id="2222">
 		<width>220</width>
 		<description>Opacity</description>
 		<label>31073</label> <!-- Opacity -->
@@ -5076,7 +5940,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Custom Single -->
-	<control type="radiobutton" id="2175">
+	<control type="radiobutton" id="2223">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -5087,7 +5951,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(902) + isEmpty(Skin.String(Channel3_Single))</visible>
 	</control>
-	<control type="radiobutton" id="2176">
+	<control type="radiobutton" id="2224">
 		<width>220</width>
 		<description>Custom Single Image</description>
 		<label>31074</label> <!-- Custom Single -->
@@ -5098,7 +5962,7 @@
 		<visible>Control.IsVisible(902) + !isEmpty(Skin.String(Channel3_Single))</visible>
 	</control>
 	<!-- Custom Multi -->
-	<control type="radiobutton" id="2177">
+	<control type="radiobutton" id="2225">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -5109,7 +5973,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(902) + isEmpty(Skin.String(Channel3_Multi))</visible>
 	</control>
-	<control type="radiobutton" id="2178">
+	<control type="radiobutton" id="2226">
 		<width>220</width>
 		<description>Custom Multi Image</description>
 		<label>31075</label> <!-- Custom Slideshow -->
@@ -5120,7 +5984,7 @@
 		<visible>Control.IsVisible(902) + !isEmpty(Skin.String(Channel3_Multi))</visible>
 	</control>
 	<!-- Reset -->
-	<control type="radiobutton" id="2179">
+	<control type="radiobutton" id="2227">
 		<width>220</width>
 		<label>31077</label> <!-- Reset -->
 		<onclick>Skin.Reset(Channel3_Single)</onclick>
@@ -5216,7 +6080,7 @@
 		<onclick>Skin.ToggleSetting(List1_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(List1_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(100) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(100) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (100) -->
@@ -5393,7 +6257,7 @@
 		<onclick>Skin.ToggleSetting(List2_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(List2_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(110) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(110) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (110) -->
@@ -5570,7 +6434,7 @@
 		<onclick>Skin.ToggleSetting(List3_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(List3_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(120) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(120) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (120) -->
@@ -5747,7 +6611,7 @@
 		<onclick>Skin.ToggleSetting(Poster1_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Poster1_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(200) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(200) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (200) -->
@@ -5924,7 +6788,7 @@
 		<onclick>Skin.ToggleSetting(Poster2_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Poster2_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(210) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(210) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (210) -->
@@ -6101,7 +6965,7 @@
 		<onclick>Skin.ToggleSetting(Poster3_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Poster3_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(220) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(220) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (220) -->
@@ -6278,7 +7142,7 @@
 		<onclick>Skin.ToggleSetting(Panel1_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Panel1_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(300) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(300) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (300) -->
@@ -6455,7 +7319,7 @@
 		<onclick>Skin.ToggleSetting(Panel2_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Panel2_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(310) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(310) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (310) -->
@@ -6632,7 +7496,7 @@
 		<onclick>Skin.ToggleSetting(Panel3_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Panel3_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(320) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(320) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (320) -->
@@ -6809,7 +7673,7 @@
 		<onclick>Skin.ToggleSetting(Banner1_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Banner1_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(400) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(400) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (400) -->
@@ -6986,7 +7850,7 @@
 		<onclick>Skin.ToggleSetting(Banner2_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Banner2_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(410) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(410) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (410) -->
@@ -7163,7 +8027,7 @@
 		<onclick>Skin.ToggleSetting(Banner3_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Banner3_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(420) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(420) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (420) -->
@@ -7262,7 +8126,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(420)</visible>
 	</control>
-	<!-- Viewmode Channel1 (900) -->
+	<!-- Viewmode Custom1 (500) -->
 	<!--<control type="label" id="3300">
 		<width>600</width>
 		<height>35</height>
@@ -7272,7 +8136,7 @@
 		<shadowcolor>black</shadowcolor>
 		<align>left</align>
 		<aligny>center</aligny>
-		<visible>Control.IsVisible(900)</visible>
+		<visible>Control.IsVisible(500)</visible>
 	</control>-->
 	<!-- Images Label -->
 	<control type="label" id="3301">
@@ -7284,10 +8148,718 @@
 		<shadowcolor>black</shadowcolor>
 		<align>left</align>
 		<aligny>center</aligny>
-		<visible>Control.IsVisible(900) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+		<visible>Control.IsVisible(500) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
 	<control type="label" id="3301">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31065</label> <!-- Text -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (500) -->
+	<control type="radiobutton" id="3302">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>31056</label> <!-- Small -->
+		<onclick>Skin.Reset(Custom1_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Custom1_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Custom1_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Medium Images (500) -->
+	<control type="radiobutton" id="3303">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>31057</label> <!-- Medium -->
+		<onclick>Skin.Reset(Custom1_Images_Small)</onclick>
+		<onclick>Skin.Reset(Custom1_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Custom1_Images_Small) + !Skin.HasSetting(Custom1_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Large Images (500) -->
+	<control type="radiobutton" id="3304">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>31058</label> <!-- Large -->
+		<onclick>Skin.Reset(Custom1_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Custom1_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Custom1_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Clearart Images (500) -->
+	<control type="radiobutton" id="3305">
+		<width>190</width>
+		<description>Clearart Image</description>
+		<label>Clearart</label>
+		<onclick>Skin.ToggleSetting(Custom1_Images_Clearart)</onclick>
+		<selected>Skin.HasSetting(Custom1_Images_Clearart)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
+	</control>
+
+	<!-- Mirror Images (500) -->
+	<control type="radiobutton" id="3306">
+		<width>190</width>
+		<description>Reflection</description>
+		<label>Reflection</label> <!-- LOC -->
+		<onclick>Skin.ToggleSetting(Custom1_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Custom1_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (500) -->
+	<control type="radiobutton" id="3307">
+		<height>60</height>
+		<width>190</width>
+		<description>Transparency</description>
+		<onclick>Skin.ToggleSetting(Custom1_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Custom1_Images_Transparent)</selected>
+                <!--<font>Font_Bartowski_Preplay</font>-->
+		<label>-</label>
+		<wrapmultiline>true</wrapmultiline>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+
+      <control type="label" id="3308">
+                <width>170</width>
+                <label>31085</label> <!-- Translucent Watched -->
+                <wrapmultiline>true</wrapmultiline>
+		<font>font16caps</font>
+                <textcolor>FFAAAAAA</textcolor>
+                <textoffsetx>15</textoffsetx>
+		<textoffsety>-57</textoffsety>
+                <!--<align>left</align>-->
+                <visible>Control.IsVisible(500)</visible>
+        </control>
+
+	<control type="label" id="3309">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31067</label> <!-- Focus -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+
+	<!-- Focus Effect Default (500) -->
+	<control type="radiobutton" id="3310">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom1_Focus_1)</onclick>
+		<onclick>Skin.Reset(Custom1_Focus_2)</onclick>
+		<onclick>Skin.Reset(Custom1_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Custom1_Focus_1) + !Skin.HasSetting(Custom1_Focus_2) + !Skin.HasSetting(Custom1_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Focus Effect #1 (500) -->
+	<control type="radiobutton" id="3311">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+                <onclick>Skin.Reset(Custom1_Focus_2)</onclick>
+                <onclick>Skin.Reset(Custom1_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom1_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Custom1_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Focus Effect #2 (500) -->
+	<control type="radiobutton" id="3312">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.Reset(Custom1_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom1_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom1_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Custom1_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Focus Effect #3 (500) -->
+	<control type="radiobutton" id="3313">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+                <label>$LOCALIZE[31059] #3</label>
+		<onclick>Skin.Reset(Custom1_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom1_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Custom1_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Custom1_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Viewmode Custom2 (510) -->
+	<!--<control type="label" id="3325">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3326">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31066</label> <!-- Images -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3326">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31065</label> <!-- Text -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (510) -->
+	<control type="radiobutton" id="3327">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>31056</label> <!-- Small -->
+		<onclick>Skin.Reset(Custom2_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Custom2_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Custom2_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Medium Images (510) -->
+	<control type="radiobutton" id="3328">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>31057</label> <!-- Medium -->
+		<onclick>Skin.Reset(Custom2_Images_Small)</onclick>
+		<onclick>Skin.Reset(Custom2_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Custom2_Images_Small) + !Skin.HasSetting(Custom2_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Large Images (510) -->
+	<control type="radiobutton" id="3329">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>31058</label> <!-- Large -->
+		<onclick>Skin.Reset(Custom2_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Custom2_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Custom2_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Clearart Images (510) -->
+	<control type="radiobutton" id="3330">
+		<width>190</width>
+		<description>Clearart Image</description>
+		<label>Clearart</label>
+		<onclick>Skin.ToggleSetting(Custom2_Images_Clearart)</onclick>
+		<selected>Skin.HasSetting(Custom2_Images_Clearart)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
+	</control>
+
+	<!-- Mirror Images (510) -->
+	<control type="radiobutton" id="3331">
+		<width>190</width>
+		<description>Reflection</description>
+		<label>Reflection</label> <!-- LOC -->
+		<onclick>Skin.ToggleSetting(Custom2_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Custom2_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (510) -->
+	<control type="radiobutton" id="3332">
+		<height>60</height>
+		<width>190</width>
+		<description>Transparency</description>
+		<onclick>Skin.ToggleSetting(Custom2_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Custom2_Images_Transparent)</selected>
+                <!--<font>Font_Bartowski_Preplay</font>-->
+		<label>-</label>
+		<wrapmultiline>true</wrapmultiline>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+
+      <control type="label" id="3333">
+                <width>170</width>
+                <label>31085</label> <!-- Translucent Watched -->
+                <wrapmultiline>true</wrapmultiline>
+		<font>font16caps</font>
+                <textcolor>FFAAAAAA</textcolor>
+                <textoffsetx>15</textoffsetx>
+		<textoffsety>-57</textoffsety>
+                <!--<align>left</align>-->
+                <visible>Control.IsVisible(510)</visible>
+        </control>
+
+	<control type="label" id="3334">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31067</label> <!-- Focus -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+
+	<!-- Focus Effect Default (510) -->
+	<control type="radiobutton" id="3335">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom2_Focus_1)</onclick>
+		<onclick>Skin.Reset(Custom2_Focus_2)</onclick>
+		<onclick>Skin.Reset(Custom2_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Custom2_Focus_1) + !Skin.HasSetting(Custom2_Focus_2) + !Skin.HasSetting(Custom2_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Focus Effect #1 (510) -->
+	<control type="radiobutton" id="3336">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+                <onclick>Skin.Reset(Custom2_Focus_2)</onclick>
+                <onclick>Skin.Reset(Custom2_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom2_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Custom2_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Focus Effect #2 (510) -->
+	<control type="radiobutton" id="3337">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.Reset(Custom2_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom2_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom2_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Custom2_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Focus Effect #3 (510) -->
+	<control type="radiobutton" id="3338">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+                <label>$LOCALIZE[31059] #3</label>
+		<onclick>Skin.Reset(Custom2_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom2_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Custom2_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Custom2_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Viewmode Custom3 (520) -->
+	<!--<control type="label" id="3350">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3351">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31066</label> <!-- Images -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3351">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31065</label> <!-- Text -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (520) -->
+	<control type="radiobutton" id="3352">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>31056</label> <!-- Small -->
+		<onclick>Skin.Reset(Custom3_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Custom3_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Custom3_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Medium Images (520) -->
+	<control type="radiobutton" id="3353">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>31057</label> <!-- Medium -->
+		<onclick>Skin.Reset(Custom3_Images_Small)</onclick>
+		<onclick>Skin.Reset(Custom3_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Custom3_Images_Small) + !Skin.HasSetting(Custom3_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Large Images (520) -->
+	<control type="radiobutton" id="3354">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>31058</label> <!-- Large -->
+		<onclick>Skin.Reset(Custom3_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Custom3_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Custom3_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Clearart Images (520) -->
+	<control type="radiobutton" id="3355">
+		<width>190</width>
+		<description>Clearart Image</description>
+		<label>Clearart</label>
+		<onclick>Skin.ToggleSetting(Custom3_Images_Clearart)</onclick>
+		<selected>Skin.HasSetting(Custom3_Images_Clearart)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
+	</control>
+
+	<!-- Mirror Images (520) -->
+	<control type="radiobutton" id="3356">
+		<width>190</width>
+		<description>Reflection</description>
+		<label>Reflection</label> <!-- LOC -->
+		<onclick>Skin.ToggleSetting(Custom3_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Custom3_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (520) -->
+	<control type="radiobutton" id="3357">
+		<height>60</height>
+		<width>190</width>
+		<description>Transparency</description>
+		<onclick>Skin.ToggleSetting(Custom3_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Custom3_Images_Transparent)</selected>
+                <!--<font>Font_Bartowski_Preplay</font>-->
+		<label>-</label>
+		<wrapmultiline>true</wrapmultiline>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+
+      <control type="label" id="3358">
+                <width>170</width>
+                <label>31085</label> <!-- Translucent Watched -->
+                <wrapmultiline>true</wrapmultiline>
+		<font>font16caps</font>
+                <textcolor>FFAAAAAA</textcolor>
+                <textoffsetx>15</textoffsetx>
+		<textoffsety>-57</textoffsety>
+                <!--<align>left</align>-->
+                <visible>Control.IsVisible(520)</visible>
+        </control>
+
+	<control type="label" id="3359">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31067</label> <!-- Focus -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+
+	<!-- Focus Effect Default (520) -->
+	<control type="radiobutton" id="3360">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom3_Focus_1)</onclick>
+		<onclick>Skin.Reset(Custom3_Focus_2)</onclick>
+		<onclick>Skin.Reset(Custom3_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Custom3_Focus_1) + !Skin.HasSetting(Custom3_Focus_2) + !Skin.HasSetting(Custom3_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Focus Effect #1 (520) -->
+	<control type="radiobutton" id="3361">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+                <onclick>Skin.Reset(Custom3_Focus_2)</onclick>
+                <onclick>Skin.Reset(Custom3_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom3_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Custom3_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Focus Effect #2 (520) -->
+	<control type="radiobutton" id="3362">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.Reset(Custom3_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom3_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom3_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Custom3_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Focus Effect #3 (520) -->
+	<control type="radiobutton" id="3363">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+                <label>$LOCALIZE[31059] #3</label>
+		<onclick>Skin.Reset(Custom3_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom3_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Custom3_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Custom3_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Viewmode Custom4 (530) -->
+	<!--<control type="label" id="3375">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3376">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31066</label> <!-- Images -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3376">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31065</label> <!-- Text -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530) + [ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+
+	<!-- Small Images (530) -->
+	<control type="radiobutton" id="3377">
+		<width>190</width>
+		<description>Small Images</description>
+		<label>31056</label> <!-- Small -->
+		<onclick>Skin.Reset(Custom4_Images_Large)</onclick>
+		<onclick>Skin.ToggleSetting(Custom4_Images_Small)</onclick>
+		<selected>Skin.HasSetting(Custom4_Images_Small)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Medium Images (530) -->
+	<control type="radiobutton" id="3378">
+		<width>190</width>
+		<description>Medium Images</description>
+		<label>31057</label> <!-- Medium -->
+		<onclick>Skin.Reset(Custom4_Images_Small)</onclick>
+		<onclick>Skin.Reset(Custom4_Images_Large)</onclick>
+		<selected>!Skin.HasSetting(Custom4_Images_Small) + !Skin.HasSetting(Custom4_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Large Images (530) -->
+	<control type="radiobutton" id="3379">
+		<width>190</width>
+		<description>Large Images</description>
+		<label>31058</label> <!-- Large -->
+		<onclick>Skin.Reset(Custom4_Images_Small)</onclick>
+		<onclick>Skin.ToggleSetting(Custom4_Images_Large)</onclick>
+		<selected>Skin.HasSetting(Custom4_Images_Large)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Clearart Images (530) -->
+	<control type="radiobutton" id="3380">
+		<width>190</width>
+		<description>Clearart Image</description>
+		<label>Clearart</label>
+		<onclick>Skin.ToggleSetting(Custom4_Images_Clearart)</onclick>
+		<selected>Skin.HasSetting(Custom4_Images_Clearart)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
+	</control>
+
+	<!-- Mirror Images (530) -->
+	<control type="radiobutton" id="3381">
+		<width>190</width>
+		<description>Reflection</description>
+		<label>Reflection</label> <!-- LOC -->
+		<onclick>Skin.ToggleSetting(Custom4_Images_Mirror)</onclick>
+		<selected>Skin.HasSetting(Custom4_Images_Mirror)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
+	</control>
+	<!-- Watched Transparency (530) -->
+	<control type="radiobutton" id="3382">
+		<height>60</height>
+		<width>190</width>
+		<description>Transparency</description>
+		<onclick>Skin.ToggleSetting(Custom4_Images_Transparent)</onclick>
+		<selected>Skin.HasSetting(Custom4_Images_Transparent)</selected>
+                <!--<font>Font_Bartowski_Preplay</font>-->
+		<label>-</label>
+		<wrapmultiline>true</wrapmultiline>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+
+      <control type="label" id="3383">
+                <width>170</width>
+                <label>31085</label> <!-- Translucent Watched -->
+                <wrapmultiline>true</wrapmultiline>
+		<font>font16caps</font>
+                <textcolor>FFAAAAAA</textcolor>
+                <textoffsetx>15</textoffsetx>
+		<textoffsety>-57</textoffsety>
+                <!--<align>left</align>-->
+                <visible>Control.IsVisible(530)</visible>
+        </control>
+
+	<control type="label" id="3384">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31067</label> <!-- Focus -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+
+	<!-- Focus Effect Default (530) -->
+	<control type="radiobutton" id="3385">
+		<width>190</width>
+		<description>Focus Effect Default</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom4_Focus_1)</onclick>
+		<onclick>Skin.Reset(Custom4_Focus_2)</onclick>
+		<onclick>Skin.Reset(Custom4_Focus_3)</onclick>
+		<selected>!Skin.HasSetting(Custom4_Focus_1) + !Skin.HasSetting(Custom4_Focus_2) + !Skin.HasSetting(Custom4_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Focus Effect #1 (530) -->
+	<control type="radiobutton" id="3386">
+		<width>190</width>
+		<description>Focus Effect #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+                <onclick>Skin.Reset(Custom4_Focus_2)</onclick>
+                <onclick>Skin.Reset(Custom4_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom4_Focus_1)</onclick>
+		<selected>Skin.HasSetting(Custom4_Focus_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Focus Effect #2 (530) -->
+	<control type="radiobutton" id="3387">
+		<width>190</width>
+		<description>Focus Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.Reset(Custom4_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom4_Focus_3)</onclick>
+		<onclick>Skin.ToggleSetting(Custom4_Focus_2)</onclick>
+		<selected>Skin.HasSetting(Custom4_Focus_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Focus Effect #3 (530) -->
+	<control type="radiobutton" id="3388">
+		<width>190</width>
+		<description>Focus Effect #3</description>
+                <label>$LOCALIZE[31059] #3</label>
+		<onclick>Skin.Reset(Custom4_Focus_1)</onclick>
+                <onclick>Skin.Reset(Custom4_Focus_2)</onclick>
+		<onclick>Skin.ToggleSetting(Custom4_Focus_3)</onclick>
+		<selected>Skin.HasSetting(Custom4_Focus_3)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Viewmode Channel1 (900) -->
+	<!--<control type="label" id="3400">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900)</visible>
+	</control>-->
+	<!-- Images Label -->
+	<control type="label" id="3401">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>31066</label> <!-- Images -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(900) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
+	</control>
+	<!-- Text Label -->
+	<control type="label" id="3401">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7300,7 +8872,7 @@
 	</control>
 
 	<!-- Small Images (900) -->
-	<control type="radiobutton" id="3302">
+	<control type="radiobutton" id="3402">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>31056</label> <!-- Small -->
@@ -7311,7 +8883,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Medium Images (900) -->
-	<control type="radiobutton" id="3303">
+	<control type="radiobutton" id="3403">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>31057</label> <!-- Medium -->
@@ -7322,7 +8894,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Large Images (900) -->
-	<control type="radiobutton" id="3304">
+	<control type="radiobutton" id="3404">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>31058</label> <!-- Large -->
@@ -7333,18 +8905,18 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Clearart Images (900) -->
-	<control type="radiobutton" id="3305">
+	<control type="radiobutton" id="3405">
 		<width>190</width>
 		<description>Clearart Image</description>
 		<label>Clearart</label>
 		<onclick>Skin.ToggleSetting(Channel1_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Channel1_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(900) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(900) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (900) -->
-	<control type="radiobutton" id="3306">
+	<control type="radiobutton" id="3406">
 		<width>190</width>
 		<description>Reflection</description>
 		<label>Reflection</label> <!-- LOC -->
@@ -7354,7 +8926,7 @@
 		<visible>Control.IsVisible(900) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
 	</control>
 	<!-- Watched Transparency (900) -->
-	<control type="radiobutton" id="3307">
+	<control type="radiobutton" id="3407">
 		<height>60</height>
 		<width>190</width>
 		<description>Transparency</description>
@@ -7367,7 +8939,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 
-      <control type="label" id="3308">
+      <control type="label" id="3408">
                 <width>170</width>
                 <label>31085</label> <!-- Translucent Watched -->
                 <wrapmultiline>true</wrapmultiline>
@@ -7379,7 +8951,7 @@
                 <visible>Control.IsVisible(900)</visible>
         </control>
 
-	<control type="label" id="3309">
+	<control type="label" id="3409">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7392,7 +8964,7 @@
 	</control>
 
 	<!-- Focus Effect Default (900) -->
-	<control type="radiobutton" id="3310">
+	<control type="radiobutton" id="3410">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>31031</label> <!-- Default -->
@@ -7404,7 +8976,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Focus Effect #1 (900) -->
-	<control type="radiobutton" id="3311">
+	<control type="radiobutton" id="3411">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>$LOCALIZE[31059] #1</label>
@@ -7416,7 +8988,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Focus Effect #2 (900) -->
-	<control type="radiobutton" id="3312">
+	<control type="radiobutton" id="3412">
 		<width>190</width>
 		<description>Focus Effect #2</description>
                 <label>$LOCALIZE[31059] #2</label>
@@ -7428,7 +9000,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Focus Effect #3 (900) -->
-	<control type="radiobutton" id="3313">
+	<control type="radiobutton" id="3413">
 		<width>190</width>
 		<description>Focus Effect #3</description>
                 <label>$LOCALIZE[31059] #3</label>
@@ -7440,7 +9012,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Viewmode Channel2 (901) -->
-	<!--<control type="label" id="3325">
+	<!--<control type="label" id="3425">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7452,7 +9024,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3326">
+	<control type="label" id="3426">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7464,7 +9036,7 @@
 		<visible>Control.IsVisible(901) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3326">
+	<control type="label" id="3426">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7477,7 +9049,7 @@
 	</control>
 
 	<!-- Small Images (901) -->
-	<control type="radiobutton" id="3327">
+	<control type="radiobutton" id="3427">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>31056</label> <!-- Small -->
@@ -7488,7 +9060,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Medium Images (901) -->
-	<control type="radiobutton" id="3328">
+	<control type="radiobutton" id="3428">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>31057</label> <!-- Medium -->
@@ -7499,7 +9071,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Large Images (901) -->
-	<control type="radiobutton" id="3329">
+	<control type="radiobutton" id="3429">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>31058</label> <!-- Large -->
@@ -7510,18 +9082,18 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Clearart Images (901) -->
-	<control type="radiobutton" id="3330">
+	<control type="radiobutton" id="3430">
 		<width>190</width>
 		<description>Clearart Image</description>
 		<label>Clearart</label>
 		<onclick>Skin.ToggleSetting(Channel2_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Channel2_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(901) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(901) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (901) -->
-	<control type="radiobutton" id="3331">
+	<control type="radiobutton" id="3431">
 		<width>190</width>
 		<description>Reflection</description>
 		<label>Reflection</label> <!-- LOC -->
@@ -7531,7 +9103,7 @@
 		<visible>Control.IsVisible(901) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
 	</control>
 	<!-- Watched Transparency (901) -->
-	<control type="radiobutton" id="3332">
+	<control type="radiobutton" id="3432">
 		<height>60</height>
 		<width>190</width>
 		<description>Transparency</description>
@@ -7544,7 +9116,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 
-      <control type="label" id="3333">
+      <control type="label" id="3433">
                 <width>170</width>
                 <label>31085</label> <!-- Translucent Watched -->
                 <wrapmultiline>true</wrapmultiline>
@@ -7556,7 +9128,7 @@
                 <visible>Control.IsVisible(901)</visible>
         </control>
 
-	<control type="label" id="3334">
+	<control type="label" id="3434">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7569,7 +9141,7 @@
 	</control>
 
 	<!-- Focus Effect Default (901) -->
-	<control type="radiobutton" id="3335">
+	<control type="radiobutton" id="3435">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>31031</label> <!-- Default -->
@@ -7581,7 +9153,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Focus Effect #1 (901) -->
-	<control type="radiobutton" id="3336">
+	<control type="radiobutton" id="3436">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>$LOCALIZE[31059] #1</label>
@@ -7593,7 +9165,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Focus Effect #2 (901) -->
-	<control type="radiobutton" id="3337">
+	<control type="radiobutton" id="3437">
 		<width>190</width>
 		<description>Focus Effect #2</description>
                 <label>$LOCALIZE[31059] #2</label>
@@ -7605,7 +9177,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Focus Effect #3 (901) -->
-	<control type="radiobutton" id="3338">
+	<control type="radiobutton" id="3438">
 		<width>190</width>
 		<description>Focus Effect #3</description>
                 <label>$LOCALIZE[31059] #3</label>
@@ -7617,7 +9189,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Viewmode Channel3 (902) -->
-	<!--<control type="label" id="3350">
+	<!--<control type="label" id="3450">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7629,7 +9201,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>-->
 	<!-- Images Label -->
-	<control type="label" id="3351">
+	<control type="label" id="3451">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7641,7 +9213,7 @@
 		<visible>Control.IsVisible(902) + ![ Control.isVisible(100) | Control.isVisible(110) | Control.isVisible(120) ]</visible>
 	</control>
 	<!-- Text Label -->
-	<control type="label" id="3351">
+	<control type="label" id="3451">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7654,7 +9226,7 @@
 	</control>
 
 	<!-- Small Images (902) -->
-	<control type="radiobutton" id="3352">
+	<control type="radiobutton" id="3452">
 		<width>190</width>
 		<description>Small Images</description>
 		<label>31056</label> <!-- Small -->
@@ -7665,7 +9237,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Medium Images (902) -->
-	<control type="radiobutton" id="3353">
+	<control type="radiobutton" id="3453">
 		<width>190</width>
 		<description>Medium Images</description>
 		<label>31057</label> <!-- Medium -->
@@ -7676,7 +9248,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Large Images (902) -->
-	<control type="radiobutton" id="3354">
+	<control type="radiobutton" id="3454">
 		<width>190</width>
 		<description>Large Images</description>
 		<label>31058</label> <!-- Large -->
@@ -7687,18 +9259,18 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Clearart Images (902) -->
-	<control type="radiobutton" id="3355">
+	<control type="radiobutton" id="3455">
 		<width>190</width>
 		<description>Clearart Image</description>
 		<label>Clearart</label>
 		<onclick>Skin.ToggleSetting(Channel3_Images_Clearart)</onclick>
 		<selected>Skin.HasSetting(Channel3_Images_Clearart)</selected>
 		<include>radiobutton_circle</include>
-		<visible>Control.IsVisible(902) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) ]</visible>
+		<visible>Control.IsVisible(902) + [ Control.isVisible(400) | Control.isVisible(410) | Control.isVisible(420) | Control.isVisible(500) ]</visible>
 	</control>
 
 	<!-- Mirror Images (902) -->
-	<control type="radiobutton" id="3356">
+	<control type="radiobutton" id="3456">
 		<width>190</width>
 		<description>Reflection</description>
 		<label>Reflection</label> <!-- LOC -->
@@ -7708,7 +9280,7 @@
 		<visible>Control.IsVisible(902) + [ Control.isVisible(200) | Control.isVisible(210) | Control.isVisible(220) ]</visible>
 	</control>
 	<!-- Watched Transparency (902) -->
-	<control type="radiobutton" id="3357">
+	<control type="radiobutton" id="3457">
 		<height>60</height>
 		<width>190</width>
 		<description>Transparency</description>
@@ -7721,7 +9293,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 
-      <control type="label" id="3358">
+      <control type="label" id="3458">
                 <width>170</width>
                 <label>31085</label> <!-- Translucent Watched -->
                 <wrapmultiline>true</wrapmultiline>
@@ -7733,7 +9305,7 @@
                 <visible>Control.IsVisible(902)</visible>
         </control>
 
-	<control type="label" id="3359">
+	<control type="label" id="3459">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -7746,7 +9318,7 @@
 	</control>
 
 	<!-- Focus Effect Default (902) -->
-	<control type="radiobutton" id="3360">
+	<control type="radiobutton" id="3460">
 		<width>190</width>
 		<description>Focus Effect Default</description>
 		<label>31031</label> <!-- Default -->
@@ -7758,7 +9330,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Focus Effect #1 (902) -->
-	<control type="radiobutton" id="3361">
+	<control type="radiobutton" id="3461">
 		<width>190</width>
 		<description>Focus Effect #1</description>
 		<label>$LOCALIZE[31059] #1</label>
@@ -7770,7 +9342,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Focus Effect #2 (902) -->
-	<control type="radiobutton" id="3362">
+	<control type="radiobutton" id="3462">
 		<width>190</width>
 		<description>Focus Effect #2</description>
                 <label>$LOCALIZE[31059] #2</label>
@@ -7782,7 +9354,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Focus Effect #3 (902) -->
-	<control type="radiobutton" id="3363">
+	<control type="radiobutton" id="3463">
 		<width>190</width>
 		<description>Focus Effect #3</description>
                 <label>$LOCALIZE[31059] #3</label>
@@ -9271,8 +10843,500 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(420)</visible>
 	</control>
-	<!-- Viewmode Channel1 (900) -->
+	<!-- Viewmode Custom1 (500) -->
 	<!--<control type="label" id="4264">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500)</visible>
+	</control>-->
+	<control type="label" id="4265">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>3D</label> <!-- 3D Optionen -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (500) -->
+	<control type="radiobutton" id="4266">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+		<onclick>Skin.ToggleSetting(Custom1_3D_1)</onclick>
+		<onclick>Skin.Reset(Custom1_3D_2)</onclick>
+		<selected>Skin.HasSetting(Custom1_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- 3D Effect #2 (500) -->
+	<control type="radiobutton" id="4267">
+		<width>190</width>
+		<description>3D Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.ToggleSetting(Custom1_3D_2)</onclick>
+		<onclick>Skin.Reset(Custom1_3D_1)</onclick>
+		<selected>Skin.HasSetting(Custom1_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<control type="label" id="4268">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Sidebar</label> <!-- Sidebar -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+
+	<!-- Sidebar (500) -->
+	<control type="radiobutton" id="4269">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom1_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Custom1_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Custom1_Sidebar_Left) + !Skin.HasSetting(Custom1_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Sidebar (500) -->
+	<control type="radiobutton" id="4270">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31062</label> <!-- Right -->
+		<onclick>Skin.Reset(Custom1_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Custom1_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Custom1_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Sidebar (500) -->
+	<control type="radiobutton" id="4271">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>31063</label> <!-- Left -->
+		<onclick>Skin.Reset(Custom1_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Custom1_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Custom1_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<control type="label" id="4272">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33029</label> <!-- Info -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+
+	<!-- Image Labels (500) -->
+	<control type="radiobutton" id="4273">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>31064</label> <!-- Labels -->
+		<onclick>Skin.ToggleSetting(Custom1_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Custom1_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Plot (500) -->
+	<control type="radiobutton" id="4274">
+		<width>190</width>
+		<description>Plot</description>
+		<label>31049</label> <!-- Plot -->
+		<onclick>Skin.ToggleSetting(Custom1_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Custom1_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(500)</visible>
+	</control>
+	<!-- Viewmode Custom2 (510) -->
+	<!--<control type="label" id="4286">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>-->
+	<control type="label" id="4287">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>3D</label> <!-- 3D Optionen -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (510) -->
+	<control type="radiobutton" id="4288">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+		<onclick>Skin.ToggleSetting(Custom2_3D_1)</onclick>
+		<onclick>Skin.Reset(Custom2_3D_2)</onclick>
+		<selected>Skin.HasSetting(Custom2_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- 3D Effect #2 (510) -->
+	<control type="radiobutton" id="4289">
+		<width>190</width>
+		<description>3D Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.ToggleSetting(Custom2_3D_2)</onclick>
+		<onclick>Skin.Reset(Custom2_3D_1)</onclick>
+		<selected>Skin.HasSetting(Custom2_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<control type="label" id="4290">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Sidebar</label> <!-- Sidebar -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+
+	<!-- Sidebar (510) -->
+	<control type="radiobutton" id="4291">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom2_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Custom2_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Custom2_Sidebar_Left) + !Skin.HasSetting(Custom2_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Sidebar (510) -->
+	<control type="radiobutton" id="4292">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31062</label> <!-- Right -->
+		<onclick>Skin.Reset(Custom2_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Custom2_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Custom2_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Sidebar (510) -->
+	<control type="radiobutton" id="4293">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>31063</label> <!-- Left -->
+		<onclick>Skin.Reset(Custom2_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Custom2_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Custom2_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<control type="label" id="4294">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33029</label> <!-- Info -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+
+	<!-- Image Labels (510) -->
+	<control type="radiobutton" id="4295">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>31064</label> <!-- Labels -->
+		<onclick>Skin.ToggleSetting(Custom2_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Custom2_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Plot (510) -->
+	<control type="radiobutton" id="4296">
+		<width>190</width>
+		<description>Plot</description>
+		<label>31049</label> <!-- Plot -->
+		<onclick>Skin.ToggleSetting(Custom2_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Custom2_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(510)</visible>
+	</control>
+	<!-- Viewmode Custom3 (520) -->
+	<!--<control type="label" id="4308">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>-->
+	<control type="label" id="4309">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>3D</label> <!-- 3D Optionen -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (520) -->
+	<control type="radiobutton" id="4310">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+		<onclick>Skin.ToggleSetting(Custom3_3D_1)</onclick>
+		<onclick>Skin.Reset(Custom3_3D_2)</onclick>
+		<selected>Skin.HasSetting(Custom3_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- 3D Effect #2 (520) -->
+	<control type="radiobutton" id="4311">
+		<width>190</width>
+		<description>3D Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.ToggleSetting(Custom3_3D_2)</onclick>
+		<onclick>Skin.Reset(Custom3_3D_1)</onclick>
+		<selected>Skin.HasSetting(Custom3_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<control type="label" id="4312">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Sidebar</label> <!-- Sidebar -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+
+	<!-- Sidebar (520) -->
+	<control type="radiobutton" id="4313">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom3_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Custom3_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Custom3_Sidebar_Left) + !Skin.HasSetting(Custom3_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Sidebar (520) -->
+	<control type="radiobutton" id="4314">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31062</label> <!-- Right -->
+		<onclick>Skin.Reset(Custom3_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Custom3_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Custom3_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Sidebar (520) -->
+	<control type="radiobutton" id="4315">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>31063</label> <!-- Left -->
+		<onclick>Skin.Reset(Custom3_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Custom3_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Custom3_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<control type="label" id="4316">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33029</label> <!-- Info -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+
+	<!-- Image Labels (520) -->
+	<control type="radiobutton" id="4317">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>31064</label> <!-- Labels -->
+		<onclick>Skin.ToggleSetting(Custom3_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Custom3_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Plot (520) -->
+	<control type="radiobutton" id="4318">
+		<width>190</width>
+		<description>Plot</description>
+		<label>31049</label> <!-- Plot -->
+		<onclick>Skin.ToggleSetting(Custom3_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Custom3_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(520)</visible>
+	</control>
+	<!-- Viewmode Custom4 (530) -->
+	<!--<control type="label" id="4330">
+		<width>600</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Options</label>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>-->
+	<control type="label" id="4331">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>3D</label> <!-- 3D Optionen -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+
+	<!-- 3D Effect #1 (530) -->
+	<control type="radiobutton" id="4332">
+		<width>190</width>
+		<description>3D #1</description>
+		<label>$LOCALIZE[31059] #1</label>
+		<onclick>Skin.ToggleSetting(Custom4_3D_1)</onclick>
+		<onclick>Skin.Reset(Custom4_3D_2)</onclick>
+		<selected>Skin.HasSetting(Custom4_3D_1)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- 3D Effect #2 (530) -->
+	<control type="radiobutton" id="4333">
+		<width>190</width>
+		<description>3D Effect #2</description>
+                <label>$LOCALIZE[31059] #2</label>
+		<onclick>Skin.ToggleSetting(Custom4_3D_2)</onclick>
+		<onclick>Skin.Reset(Custom4_3D_1)</onclick>
+		<selected>Skin.HasSetting(Custom4_3D_2)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<control type="label" id="4334">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>Sidebar</label> <!-- Sidebar -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+
+	<!-- Sidebar (530) -->
+	<control type="radiobutton" id="4335">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31031</label> <!-- Default -->
+		<onclick>Skin.Reset(Custom4_Sidebar_Left)</onclick>
+		<onclick>Skin.Reset(Custom4_Sidebar_Right)</onclick>
+		<selected>!Skin.HasSetting(Custom4_Sidebar_Left) + !Skin.HasSetting(Custom4_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Sidebar (530) -->
+	<control type="radiobutton" id="4336">
+		<width>190</width>
+		<description>Sidebar (Right)</description>
+		<label>31062</label> <!-- Right -->
+		<onclick>Skin.Reset(Custom4_Sidebar_Left)</onclick>
+		<onclick>Skin.ToggleSetting(Custom4_Sidebar_Right)</onclick>
+		<selected>Skin.HasSetting(Custom4_Sidebar_Right)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Sidebar (530) -->
+	<control type="radiobutton" id="4337">
+		<width>190</width>
+		<description>Sidebar (Left)</description>
+		<label>31063</label> <!-- Left -->
+		<onclick>Skin.Reset(Custom4_Sidebar_Right)</onclick>
+		<onclick>Skin.ToggleSetting(Custom4_Sidebar_Left)</onclick>
+		<selected>Skin.HasSetting(Custom4_Sidebar_Left)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<control type="label" id="4338">
+		<width>200</width>
+		<height>35</height>
+		<font>font13caps</font>
+		<label>33029</label> <!-- Info -->
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+
+	<!-- Image Labels (530) -->
+	<control type="radiobutton" id="4339">
+		<width>190</width>
+		<description>Image Labels</description>
+		<label>31064</label> <!-- Labels -->
+		<onclick>Skin.ToggleSetting(Custom4_Images_Label)</onclick>
+		<selected>Skin.HasSetting(Custom4_Images_Label)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Plot (530) -->
+	<control type="radiobutton" id="4340">
+		<width>190</width>
+		<description>Plot</description>
+		<label>31049</label> <!-- Plot -->
+		<onclick>Skin.ToggleSetting(Custom4_Sidebar_NoPlot)</onclick>
+		<selected>!Skin.HasSetting(Custom4_Sidebar_NoPlot)</selected>
+		<include>radiobutton_circle</include>
+		<visible>Control.IsVisible(530)</visible>
+	</control>
+	<!-- Viewmode Channel1 (900) -->
+	<!--<control type="label" id="4352">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9283,7 +11347,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(900)</visible>
 	</control>-->
-	<control type="label" id="4265">
+	<control type="label" id="4353">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9296,7 +11360,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (900) -->
-	<control type="radiobutton" id="4266">
+	<control type="radiobutton" id="4354">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>$LOCALIZE[31059] #1</label>
@@ -9307,7 +11371,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- 3D Effect #2 (900) -->
-	<control type="radiobutton" id="4267">
+	<control type="radiobutton" id="4355">
 		<width>190</width>
 		<description>3D Effect #2</description>
                 <label>$LOCALIZE[31059] #2</label>
@@ -9317,7 +11381,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(900)</visible>
 	</control>
-	<control type="label" id="4268">
+	<control type="label" id="4356">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9330,7 +11394,7 @@
 	</control>
 
 	<!-- Sidebar (900) -->
-	<control type="radiobutton" id="4269">
+	<control type="radiobutton" id="4357">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>31031</label> <!-- Default -->
@@ -9341,7 +11405,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Sidebar (900) -->
-	<control type="radiobutton" id="4270">
+	<control type="radiobutton" id="4358">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>31062</label> <!-- Right -->
@@ -9352,7 +11416,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Sidebar (900) -->
-	<control type="radiobutton" id="4271">
+	<control type="radiobutton" id="4359">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>31063</label> <!-- Left -->
@@ -9362,7 +11426,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(900)</visible>
 	</control>
-	<control type="label" id="4272">
+	<control type="label" id="4360">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9375,7 +11439,7 @@
 	</control>
 
 	<!-- Image Labels (900) -->
-	<control type="radiobutton" id="4273">
+	<control type="radiobutton" id="4361">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>31064</label> <!-- Labels -->
@@ -9385,7 +11449,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Plot (900) -->
-	<control type="radiobutton" id="4274">
+	<control type="radiobutton" id="4362">
 		<width>190</width>
 		<description>Plot</description>
 		<label>31049</label> <!-- Plot -->
@@ -9395,7 +11459,7 @@
 		<visible>Control.IsVisible(900)</visible>
 	</control>
 	<!-- Viewmode Channel2 (901) -->
-	<!--<control type="label" id="4286">
+	<!--<control type="label" id="4374">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9406,7 +11470,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(901)</visible>
 	</control>-->
-	<control type="label" id="4287">
+	<control type="label" id="4375">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9419,7 +11483,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (901) -->
-	<control type="radiobutton" id="4288">
+	<control type="radiobutton" id="4376">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>$LOCALIZE[31059] #1</label>
@@ -9430,7 +11494,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- 3D Effect #2 (901) -->
-	<control type="radiobutton" id="4289">
+	<control type="radiobutton" id="4377">
 		<width>190</width>
 		<description>3D Effect #2</description>
                 <label>$LOCALIZE[31059] #2</label>
@@ -9440,7 +11504,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(901)</visible>
 	</control>
-	<control type="label" id="4290">
+	<control type="label" id="4378">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9453,7 +11517,7 @@
 	</control>
 
 	<!-- Sidebar (901) -->
-	<control type="radiobutton" id="4291">
+	<control type="radiobutton" id="4379">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>31031</label> <!-- Default -->
@@ -9464,7 +11528,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Sidebar (901) -->
-	<control type="radiobutton" id="4292">
+	<control type="radiobutton" id="4380">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>31062</label> <!-- Right -->
@@ -9475,7 +11539,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Sidebar (901) -->
-	<control type="radiobutton" id="4293">
+	<control type="radiobutton" id="4381">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>31063</label> <!-- Left -->
@@ -9485,7 +11549,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(901)</visible>
 	</control>
-	<control type="label" id="4294">
+	<control type="label" id="4382">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9498,7 +11562,7 @@
 	</control>
 
 	<!-- Image Labels (901) -->
-	<control type="radiobutton" id="4295">
+	<control type="radiobutton" id="4383">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>31064</label> <!-- Labels -->
@@ -9508,7 +11572,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Plot (901) -->
-	<control type="radiobutton" id="4296">
+	<control type="radiobutton" id="4384">
 		<width>190</width>
 		<description>Plot</description>
 		<label>31049</label> <!-- Plot -->
@@ -9518,7 +11582,7 @@
 		<visible>Control.IsVisible(901)</visible>
 	</control>
 	<!-- Viewmode Channel3 (902) -->
-	<!--<control type="label" id="4308">
+	<!--<control type="label" id="4396">
 		<width>600</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9529,7 +11593,7 @@
 		<aligny>center</aligny>
 		<visible>Control.IsVisible(902)</visible>
 	</control>-->
-	<control type="label" id="4309">
+	<control type="label" id="4397">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9542,7 +11606,7 @@
 	</control>
 
 	<!-- 3D Effect #1 (902) -->
-	<control type="radiobutton" id="4310">
+	<control type="radiobutton" id="4398">
 		<width>190</width>
 		<description>3D #1</description>
 		<label>$LOCALIZE[31059] #1</label>
@@ -9553,7 +11617,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- 3D Effect #2 (902) -->
-	<control type="radiobutton" id="4311">
+	<control type="radiobutton" id="4399">
 		<width>190</width>
 		<description>3D Effect #2</description>
                 <label>$LOCALIZE[31059] #2</label>
@@ -9563,7 +11627,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(902)</visible>
 	</control>
-	<control type="label" id="4312">
+	<control type="label" id="4400">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9576,7 +11640,7 @@
 	</control>
 
 	<!-- Sidebar (902) -->
-	<control type="radiobutton" id="4313">
+	<control type="radiobutton" id="4401">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>31031</label> <!-- Default -->
@@ -9587,7 +11651,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Sidebar (902) -->
-	<control type="radiobutton" id="4314">
+	<control type="radiobutton" id="4402">
 		<width>190</width>
 		<description>Sidebar (Right)</description>
 		<label>31062</label> <!-- Right -->
@@ -9598,7 +11662,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Sidebar (902) -->
-	<control type="radiobutton" id="4315">
+	<control type="radiobutton" id="4403">
 		<width>190</width>
 		<description>Sidebar (Left)</description>
 		<label>31063</label> <!-- Left -->
@@ -9608,7 +11672,7 @@
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(902)</visible>
 	</control>
-	<control type="label" id="4316">
+	<control type="label" id="4404">
 		<width>200</width>
 		<height>35</height>
 		<font>font13caps</font>
@@ -9621,7 +11685,7 @@
 	</control>
 
 	<!-- Image Labels (902) -->
-	<control type="radiobutton" id="4317">
+	<control type="radiobutton" id="4405">
 		<width>190</width>
 		<description>Image Labels</description>
 		<label>31064</label> <!-- Labels -->
@@ -9631,7 +11695,7 @@
 		<visible>Control.IsVisible(902)</visible>
 	</control>
 	<!-- Plot (902) -->
-	<control type="radiobutton" id="4318">
+	<control type="radiobutton" id="4406">
 		<width>190</width>
 		<description>Plot</description>
 		<label>31049</label> <!-- Plot -->
@@ -14347,6 +16411,10 @@
 [ Control.isVisible(400) + !Skin.HasSetting(Banner1_Sidebar_NoPlot) ] |
 [ Control.isVisible(410) + !Skin.HasSetting(Banner2_Sidebar_NoPlot) ] |
 [ Control.isVisible(420) + !Skin.HasSetting(Banner3_Sidebar_NoPlot) ] |
+[ Control.isVisible(500) + !Skin.HasSetting(Custom1_Sidebar_NoPlot) ] |
+[ Control.isVisible(510) + !Skin.HasSetting(Custom2_Sidebar_NoPlot) ] |
+[ Control.isVisible(520) + !Skin.HasSetting(Custom3_Sidebar_NoPlot) ] |
+[ Control.isVisible(530) + !Skin.HasSetting(Custom4_Sidebar_NoPlot) ] |
 [ Control.isVisible(900) + !Skin.HasSetting(Channel1_Sidebar_NoPlot) ] |
 [ Control.isVisible(901) + !Skin.HasSetting(Channel2_Sidebar_NoPlot) ] |
 [ Control.isVisible(902) + !Skin.HasSetting(Channel3_Sidebar_NoPlot) ] 
@@ -15084,6 +17152,250 @@
 	<include condition="Skin.String(Banner3_Opacity,100)">background_opacity_100</include>		
 </include>
 
+<!-- Viewtype Custom1 (500) -->
+<include name="Custom1_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Custom1_TimePerImage">
+	<include condition="Skin.String(Custom1_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Custom1_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Custom1_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Custom1_Fadetime">
+	<include condition="Skin.String(Custom1_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Custom1_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Custom1_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Custom1_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Custom1_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Custom1_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Custom1_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Custom1_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Custom1_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Custom1_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Custom1_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Custom1_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Custom1_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Custom1_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Custom1_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Custom1_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Custom1_Opacity_Default">
+	<animation effect="fade" start="0" end="30" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="30" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">Hidden</animation>
+</include>
+<include name="Custom1_Opacity">
+	<include condition="Skin.String(Custom1_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Custom1_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Custom1_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Custom1_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Custom1_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Custom1_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Custom1_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Custom1_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Custom1_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Custom1_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Custom1_Opacity,100)">background_opacity_100</include>		
+</include>
+
+<!-- Viewtype Custom2 (510) -->
+<include name="Custom2_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Custom2_TimePerImage">
+	<include condition="Skin.String(Custom2_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Custom2_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Custom2_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Custom2_Fadetime">
+	<include condition="Skin.String(Custom2_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Custom2_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Custom2_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Custom2_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Custom2_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Custom2_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Custom2_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Custom2_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Custom2_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Custom2_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Custom2_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Custom2_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Custom2_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Custom2_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Custom2_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Custom2_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Custom2_Opacity_Default">
+	<animation effect="fade" start="0" end="30" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="30" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">Hidden</animation>
+</include>
+<include name="Custom2_Opacity">
+	<include condition="Skin.String(Custom2_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Custom2_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Custom2_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Custom2_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Custom2_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Custom2_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Custom2_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Custom2_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Custom2_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Custom2_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Custom2_Opacity,100)">background_opacity_100</include>		
+</include>
+
+<!-- Viewtype Custom3 (520) -->
+<include name="Custom3_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Custom3_TimePerImage">
+	<include condition="Skin.String(Custom3_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Custom3_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Custom3_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Custom3_Fadetime">
+	<include condition="Skin.String(Custom3_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Custom3_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Custom3_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Custom3_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Custom3_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Custom3_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Custom3_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Custom3_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Custom3_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Custom3_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Custom3_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Custom3_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Custom3_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Custom3_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Custom3_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Custom3_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Custom3_Opacity_Default">
+	<animation effect="fade" start="0" end="30" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="30" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">Hidden</animation>
+</include>
+<include name="Custom3_Opacity">
+	<include condition="Skin.String(Custom3_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Custom3_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Custom3_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Custom3_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Custom3_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Custom3_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Custom3_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Custom3_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Custom3_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Custom3_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Custom3_Opacity,100)">background_opacity_100</include>		
+</include>
+
+<!-- Viewtype Custom4 (530) -->
+<include name="Custom4_TimePerImage_Default">
+	<timeperimage>8000</timeperimage>
+</include>
+<include name="Custom4_TimePerImage">
+	<include condition="Skin.String(Custom4_TimePerImage,1)">background_timeperimage_1</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,2)">background_timeperimage_2</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,3)">background_timeperimage_3</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,4)">background_timeperimage_4</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,5)">background_timeperimage_5</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,6)">background_timeperimage_6</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,7)">background_timeperimage_7</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,8)">background_timeperimage_8</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,9)">background_timeperimage_9</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,10)">background_timeperimage_10</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,15)">background_timeperimage_15</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,20)">background_timeperimage_20</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,25)">background_timeperimage_25</include>		
+	<include condition="Skin.String(Custom4_TimePerImage,30)">background_timeperimage_30</include>		
+</include>
+<include name="Custom4_Fadetime_Default">
+	<fadetime>800</fadetime>
+</include>
+<include name="Custom4_Fadetime">
+	<include condition="Skin.String(Custom4_Fadetime,200)">background_fadetime_200</include>		
+	<include condition="Skin.String(Custom4_Fadetime,400)">background_fadetime_400</include>		
+	<include condition="Skin.String(Custom4_Fadetime,600)">background_fadetime_600</include>		
+	<include condition="Skin.String(Custom4_Fadetime,800)">background_fadetime_800</include>		
+	<include condition="Skin.String(Custom4_Fadetime,1000)">background_fadetime_1000</include>		
+	<include condition="Skin.String(Custom4_Fadetime,1200)">background_fadetime_1200</include>		
+	<include condition="Skin.String(Custom4_Fadetime,1400)">background_fadetime_1400</include>		
+	<include condition="Skin.String(Custom4_Fadetime,1600)">background_fadetime_1600</include>		
+	<include condition="Skin.String(Custom4_Fadetime,1800)">background_fadetime_1800</include>		
+	<include condition="Skin.String(Custom4_Fadetime,2000)">background_fadetime_2000</include>		
+	<include condition="Skin.String(Custom4_Fadetime,2500)">background_fadetime_2500</include>		
+	<include condition="Skin.String(Custom4_Fadetime,3000)">background_fadetime_3000</include>		
+	<include condition="Skin.String(Custom4_Fadetime,3500)">background_fadetime_3500</include>		
+	<include condition="Skin.String(Custom4_Fadetime,4000)">background_fadetime_4000</include>		
+	<include condition="Skin.String(Custom4_Fadetime,4500)">background_fadetime_4500</include>		
+	<include condition="Skin.String(Custom4_Fadetime,5000)">background_fadetime_5000</include>		
+</include>
+<include name="Custom4_Opacity_Default">
+	<animation effect="fade" start="0" end="30" time="300" delay="0">WindowOpen</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="30" time="300" delay="0">Visible</animation>
+	<animation effect="fade" start="30" end="0" time="300" delay="0">Hidden</animation>
+</include>
+<include name="Custom4_Opacity">
+	<include condition="Skin.String(Custom4_Opacity,0)">background_opacity_0</include>		
+	<include condition="Skin.String(Custom4_Opacity,10)">background_opacity_10</include>		
+	<include condition="Skin.String(Custom4_Opacity,20)">background_opacity_20</include>		
+	<include condition="Skin.String(Custom4_Opacity,30)">background_opacity_30</include>		
+	<include condition="Skin.String(Custom4_Opacity,40)">background_opacity_40</include>		
+	<include condition="Skin.String(Custom4_Opacity,50)">background_opacity_50</include>		
+	<include condition="Skin.String(Custom4_Opacity,60)">background_opacity_60</include>		
+	<include condition="Skin.String(Custom4_Opacity,70)">background_opacity_70</include>		
+	<include condition="Skin.String(Custom4_Opacity,80)">background_opacity_80</include>		
+	<include condition="Skin.String(Custom4_Opacity,90)">background_opacity_90</include>		
+	<include condition="Skin.String(Custom4_Opacity,100)">background_opacity_100</include>		
+</include>
+
 <!-- Viewtype Channel1 (900) -->
 <include name="Channel1_TimePerImage_Default">
 	<timeperimage>8000</timeperimage>
@@ -15288,7 +17600,7 @@
 	<include condition="Skin.String(Home_TimePerImage,30)">background_timeperimage_30</include>		
 </include>
 <include name="Home_Fadetime_Default">
-	<fadetime>800</fadetime>
+	<fadetime>600</fadetime>
 </include>
 <include name="Home_Fadetime">
 	<include condition="Skin.String(Home_Fadetime,200)">background_fadetime_200</include>		
@@ -15309,10 +17621,14 @@
 	<include condition="Skin.String(Home_Fadetime,5000)">background_fadetime_5000</include>		
 </include>
 <include name="Home_Opacity_Default">
-	<animation effect="fade" start="0" end="50" time="300" delay="300">WindowOpen</animation>
-	<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
+	<animation effect="fade" start="0" end="50" condition="true">Conditional</animation>
+
+	<!--
+	<animation effect="fade" start="50" end="0" time="300">WindowClose</animation>
+	<animation effect="fade" start="50" end="0" time="300">Hidden</animation>
+	<animation effect="fade" start="0" end="50" time="300">WindowOpen</animation>
 	<animation effect="fade" start="0" end="50" time="300" delay="300">Visible</animation>
-	<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
+	-->
 </include>
 <include name="Home_Opacity">
 	<include condition="Skin.String(Home_Opacity,0)">background_opacity_0_force</include>		
@@ -15327,7 +17643,6 @@
 	<include condition="Skin.String(Home_Opacity,90)">background_opacity_90_force</include>		
 	<include condition="Skin.String(Home_Opacity,100)">background_opacity_100_force</include>		
 </include>
-
 <!-- Viewtype Deck (0) -->
 <include name="Deck_TimePerImage_Default">
 	<timeperimage>8000</timeperimage>

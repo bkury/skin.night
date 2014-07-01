@@ -1,8 +1,8 @@
-Night Skin for PHT v1.0+ 
-======================== 
+Night Skin for PLEX & XBMC
+==========================
 
-Night is a beautiful, clean and Fanart focused Skin for Plex Home Theater v1.0+ 
-Created by Mcborzu, PHC port by Maverick214, PHT port/mod by bkury
+Night is a beautiful, clean and Fanart focused Skin for PHT v1.1+ and XBMC Gotham 
+Based on Night Skin by mcborzu, PHC port by maverick214, Rewritten for PHT/XBMC by bkury
 
 Support Forum: https://forums.plex.tv/index.php/topic/76918-night-skin-for-pht/
 

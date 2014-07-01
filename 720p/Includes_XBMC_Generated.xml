@@ -11,6 +11,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.1.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.1.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.1.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.1.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.1.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.1.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.1.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.1.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.1.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.1.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/1)-->
@@ -23,6 +34,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.1.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.1.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.1.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.1.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.1.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.1.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.1.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.1.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.1.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.1.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.1.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.1.Title))</visible>
 			</item>
@@ -46,6 +67,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.2.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.2.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.2.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.2.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.2.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.2.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.2.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.2.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.2.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.2.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/2)-->
@@ -58,6 +90,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.2.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.2.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.2.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.2.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.2.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.2.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.2.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.2.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.2.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.2.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.2.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.2.Title))</visible>
 			</item>
@@ -81,6 +123,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.3.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.3.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.3.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.3.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.3.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.3.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.3.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.3.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.3.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.3.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/3)-->
@@ -93,6 +146,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.3.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.3.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.3.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.3.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.3.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.3.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.3.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.3.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.3.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.3.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.3.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.3.Title))</visible>
 			</item>
@@ -116,6 +179,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.4.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.4.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.4.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.4.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.4.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.4.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.4.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.4.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.4.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.4.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/4)-->
@@ -128,6 +202,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.4.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.4.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.4.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.4.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.4.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.4.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.4.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.4.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.4.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.4.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.4.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.4.Title))</visible>
 			</item>
@@ -151,6 +235,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.5.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.5.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.5.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.5.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.5.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.5.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.5.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.5.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.5.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.5.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/5)-->
@@ -163,6 +258,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.5.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.5.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.5.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.5.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.5.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.5.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.5.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.5.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.5.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.5.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.5.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.5.Title))</visible>
 			</item>
@@ -186,6 +291,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.6.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.6.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.6.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.6.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.6.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.6.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.6.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.6.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.6.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.6.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/6)-->
@@ -198,6 +314,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.6.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.6.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.6.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.6.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.6.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.6.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.6.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.6.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.6.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.6.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.6.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.6.Title))</visible>
 			</item>
@@ -221,6 +347,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.7.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.7.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.7.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.7.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.7.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.7.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.7.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.7.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.7.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.7.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/7)-->
@@ -233,6 +370,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.7.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.7.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.7.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.7.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.7.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.7.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.7.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.7.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.7.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.7.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.7.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.7.Title))</visible>
 			</item>
@@ -256,6 +403,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.8.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.8.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.8.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.8.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.8.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.8.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.8.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.8.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.8.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.8.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/8)-->
@@ -268,6 +426,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.8.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.8.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.8.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.8.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.8.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.8.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.8.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.8.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.8.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.8.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.8.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.8.Title))</visible>
 			</item>
@@ -291,6 +459,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.9.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.9.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.9.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.9.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.9.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.9.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.9.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.9.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.9.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.9.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/9)-->
@@ -303,6 +482,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.9.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.9.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.9.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.9.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.9.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.9.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.9.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.9.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.9.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.9.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.9.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.9.Title))</visible>
 			</item>
@@ -326,6 +515,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.10.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.10.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.10.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.10.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.10.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.10.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.10.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.10.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.10.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.10.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/10)-->
@@ -338,6 +538,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.10.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.10.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.10.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.10.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.10.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.10.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.10.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.10.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.10.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.10.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.10.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.10.Title))</visible>
 			</item>
@@ -361,6 +571,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.11.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.11.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.11.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.11.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.11.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.11.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.11.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.11.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.11.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.11.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.11.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/11)-->
@@ -373,6 +594,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.11.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.11.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.11.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.11.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.11.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.11.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.11.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.11.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.11.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.11.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.11.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.11.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.11.Title))</visible>
 			</item>
@@ -396,6 +627,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.12.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.12.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.12.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.12.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.12.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.12.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.12.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.12.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.12.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.12.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.12.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/12)-->
@@ -408,6 +650,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.12.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.12.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.12.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.12.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.12.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.12.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.12.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.12.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.12.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.12.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.12.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.12.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.12.Title))</visible>
 			</item>
@@ -431,6 +683,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.13.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.13.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.13.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.13.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.13.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.13.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.13.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.13.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.13.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.13.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.13.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/13)-->
@@ -443,6 +706,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.13.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.13.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.13.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.13.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.13.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.13.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.13.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.13.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.13.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.13.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.13.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.13.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.13.Title))</visible>
 			</item>
@@ -466,6 +739,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.14.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.14.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.14.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.14.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.14.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.14.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.14.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.14.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.14.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.14.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.14.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/14)-->
@@ -478,6 +762,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.14.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.14.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.14.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.14.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.14.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.14.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.14.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.14.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.14.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.14.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.14.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.14.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.14.Title))</visible>
 			</item>
@@ -501,6 +795,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.15.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.15.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.15.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.15.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.15.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.15.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.15.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.15.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.15.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.15.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.15.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/15)-->
@@ -513,6 +818,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.15.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.15.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.15.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.15.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.15.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.15.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.15.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.15.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.15.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.15.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.15.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.15.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.15.Title))</visible>
 			</item>
@@ -536,6 +851,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.16.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.16.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.16.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.16.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.16.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.16.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.16.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.16.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.16.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.16.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.16.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/16)-->
@@ -548,6 +874,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.16.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.16.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.16.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.16.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.16.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.16.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.16.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.16.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.16.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.16.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.16.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.16.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.16.Title))</visible>
 			</item>
@@ -571,6 +907,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.17.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.17.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.17.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.17.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.17.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.17.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.17.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.17.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.17.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.17.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.17.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/17)-->
@@ -583,6 +930,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.17.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.17.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.17.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.17.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.17.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.17.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.17.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.17.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.17.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.17.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.17.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.17.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.17.Title))</visible>
 			</item>
@@ -606,6 +963,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.18.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.18.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.18.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.18.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.18.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.18.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.18.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.18.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.18.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.18.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.18.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/18)-->
@@ -618,6 +986,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.18.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.18.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.18.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.18.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.18.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.18.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.18.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.18.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.18.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.18.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.18.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.18.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.18.Title))</visible>
 			</item>
@@ -641,6 +1019,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.19.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.19.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.19.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.19.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.19.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.19.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.19.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.19.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.19.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.19.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.19.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/19)-->
@@ -653,6 +1042,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.19.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.19.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.19.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.19.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.19.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.19.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.19.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.19.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.19.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.19.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.19.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.19.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.19.Title))</visible>
 			</item>
@@ -676,6 +1075,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.20.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentMovie.20.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentMovie.20.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentMovie.20.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentMovie.20.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentMovie.20.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentMovie.20.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentMovie.20.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentMovie.20.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentMovie.20.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecentMovie.20.Title))</visible>
 			</item>
 			<!-- TV Show (Recent/20)-->
@@ -688,6 +1098,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.20.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.20.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.20.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.20.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecentEpisode.20.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecentEpisode.20.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecentEpisode.20.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecentEpisode.20.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecentEpisode.20.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecentEpisode.20.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecentEpisode.20.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecentEpisode.20.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecentEpisode.20.Title))</visible>
 			</item>
@@ -715,6 +1135,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.1.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.1.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.1.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.1.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.1.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.1.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.1.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.1.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.1.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/1)-->
@@ -727,6 +1158,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.1.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.1.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.1.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.1.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.1.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.1.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.1.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.1.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.1.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.1.Title))</visible>
 			</item>
@@ -750,6 +1191,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.2.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.2.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.2.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.2.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.2.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.2.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.2.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.2.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.2.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.2.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.2.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/2)-->
@@ -762,6 +1214,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.2.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.2.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.2.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.2.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.2.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.2.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.2.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.2.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.2.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.2.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.2.Title))</visible>
 			</item>
@@ -785,6 +1247,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.3.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.3.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.3.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.3.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.3.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.3.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.3.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.3.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.3.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.3.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.3.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/3)-->
@@ -797,6 +1270,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.3.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.3.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.3.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.3.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.3.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.3.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.3.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.3.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.3.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.3.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.3.Title))</visible>
 			</item>
@@ -820,6 +1303,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.4.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.4.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.4.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.4.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.4.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.4.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.4.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.4.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.4.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.4.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.4.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/4)-->
@@ -832,6 +1326,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.4.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.4.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.4.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.4.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.4.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.4.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.4.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.4.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.4.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.4.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.4.Title))</visible>
 			</item>
@@ -855,6 +1359,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.5.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.5.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.5.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.5.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.5.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.5.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.5.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.5.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.5.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.5.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.5.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/5)-->
@@ -867,6 +1382,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.5.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.5.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.5.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.5.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.5.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.5.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.5.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.5.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.5.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.5.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.5.Title))</visible>
 			</item>
@@ -890,6 +1415,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.6.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.6.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.6.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.6.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.6.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.6.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.6.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.6.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.6.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.6.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.6.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/6)-->
@@ -902,6 +1438,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.6.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.6.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.6.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.6.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.6.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.6.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.6.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.6.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.6.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.6.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.6.Title))</visible>
 			</item>
@@ -925,6 +1471,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.7.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.7.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.7.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.7.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.7.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.7.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.7.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.7.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.7.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.7.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.7.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/7)-->
@@ -937,6 +1494,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.7.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.7.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.7.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.7.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.7.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.7.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.7.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.7.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.7.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.7.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.7.Title))</visible>
 			</item>
@@ -960,6 +1527,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.8.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.8.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.8.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.8.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.8.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.8.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.8.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.8.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.8.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.8.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.8.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/8)-->
@@ -972,6 +1550,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.8.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.8.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.8.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.8.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.8.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.8.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.8.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.8.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.8.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.8.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.8.Title))</visible>
 			</item>
@@ -995,6 +1583,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.9.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.9.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.9.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.9.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.9.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.9.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.9.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.9.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.9.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.9.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.9.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/9)-->
@@ -1007,6 +1606,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.9.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.9.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.9.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.9.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.9.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.9.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.9.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.9.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.9.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.9.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.9.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.9.Title))</visible>
 			</item>
@@ -1030,6 +1639,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.10.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.10.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.10.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.10.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.10.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.10.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.10.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.10.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.10.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.10.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.10.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/10)-->
@@ -1042,6 +1662,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.10.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.10.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.10.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.10.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.10.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.10.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.10.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.10.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.10.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.10.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.10.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.10.Title))</visible>
 			</item>
@@ -1065,6 +1695,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.11.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.11.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.11.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.11.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.11.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.11.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.11.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.11.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.11.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.11.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.11.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/11)-->
@@ -1077,6 +1718,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.11.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.11.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.11.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.11.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.11.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.11.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.11.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.11.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.11.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.11.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.11.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.11.Title))</visible>
 			</item>
@@ -1100,6 +1751,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.12.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.12.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.12.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.12.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.12.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.12.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.12.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.12.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.12.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.12.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.12.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/12)-->
@@ -1112,6 +1774,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.12.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.12.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.12.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.12.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.12.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.12.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.12.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.12.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.12.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.12.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.12.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.12.Title))</visible>
 			</item>
@@ -1135,6 +1807,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.13.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.13.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.13.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.13.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.13.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.13.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.13.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.13.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.13.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.13.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.13.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/13)-->
@@ -1147,6 +1830,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.13.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.13.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.13.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.13.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.13.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.13.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.13.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.13.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.13.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.13.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.13.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.13.Title))</visible>
 			</item>
@@ -1170,6 +1863,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.14.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.14.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.14.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.14.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.14.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.14.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.14.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.14.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.14.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.14.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.14.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/14)-->
@@ -1182,6 +1886,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.14.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.14.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.14.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.14.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.14.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.14.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.14.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.14.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.14.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.14.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.14.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.14.Title))</visible>
 			</item>
@@ -1205,6 +1919,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.15.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.15.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.15.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.15.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.15.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.15.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.15.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.15.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.15.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.15.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.15.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/15)-->
@@ -1217,6 +1942,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.15.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.15.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.15.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.15.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.15.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.15.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.15.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.15.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.15.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.15.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.15.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.15.Title))</visible>
 			</item>
@@ -1240,6 +1975,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.16.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.16.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.16.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.16.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.16.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.16.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.16.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.16.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.16.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.16.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.16.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/16)-->
@@ -1252,6 +1998,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.16.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.16.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.16.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.16.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.16.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.16.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.16.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.16.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.16.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.16.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.16.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.16.Title))</visible>
 			</item>
@@ -1275,6 +2031,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.17.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.17.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.17.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.17.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.17.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.17.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.17.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.17.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.17.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.17.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.17.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/17)-->
@@ -1287,6 +2054,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.17.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.17.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.17.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.17.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.17.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.17.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.17.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.17.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.17.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.17.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.17.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.17.Title))</visible>
 			</item>
@@ -1310,6 +2087,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.18.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.18.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.18.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.18.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.18.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.18.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.18.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.18.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.18.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.18.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.18.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/18)-->
@@ -1322,6 +2110,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.18.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.18.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.18.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.18.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.18.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.18.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.18.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.18.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.18.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.18.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.18.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.18.Title))</visible>
 			</item>
@@ -1345,6 +2143,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.19.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.19.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.19.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.19.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.19.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.19.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.19.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.19.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.19.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.19.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.19.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/19)-->
@@ -1357,6 +2166,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.19.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.19.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.19.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.19.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.19.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.19.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.19.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.19.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.19.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.19.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.19.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.19.Title))</visible>
 			</item>
@@ -1380,6 +2199,17 @@
 				<property name="Type">cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.20.Art(fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedMovie.20.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedMovie.20.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedMovie.20.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedMovie.20.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedMovie.20.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedMovie.20.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedMovie.20.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedMovie.20.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedMovie.20.VideoResolution)]</property>
+
 				<visible>Container(300).hasFocus(3) + !isEmpty(Window(Home).Property(RecommendedMovie.20.Title))</visible>
 			</item>
 			<!-- TV Show (Recommended/20)-->
@@ -1392,6 +2222,16 @@
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.20.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.20.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.fanart))]</property>
+
+				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.20.Rating)]</property>
+				<property name="StarRating">$INFO[Window(Home).Property(RecommendedEpisode.20.StarRating)]</property>
+				<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.20.Mpaa)]</property>
+				<property name="PercentPlayed">$INFO[Window(Home).Property(RecommendedEpisode.20.PercentPlayed)]</property>
+				<property name="VideoCodec">$INFO[Window(Home).Property(RecommendedEpisode.20.VideoCodec)]</property>
+				<property name="VideoAspect">$INFO[Window(Home).Property(RecommendedEpisode.20.VideoAspect)]</property>
+				<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.20.AudioCodec)]</property>
+				<property name="AudioChannels">$INFO[Window(Home).Property(RecommendedEpisode.20.AudioChannels)]</property>
+				<property name="VideoResolution">$INFO[Window(Home).Property(RecommendedEpisode.20.VideoResolution)]</property>
 
 				<visible>Container(300).hasFocus(4) + !isEmpty(Window(Home).Property(RecommendedEpisode.20.Title))</visible>
 			</item>
@@ -1662,85 +2502,109 @@
 			<include>Background_Settings_Button_PLEX_Custom1</include>
 			<label>504</label>
 			<onclick>Skin.SetString(CustomHome1.Label)</onclick>
-			<visible>isEmpty(Skin.String(CustomHome1.Label)</visible>
+			<visible>isEmpty(Skin.String(CustomHome1.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5541">
 			<include>Background_Settings_Button_PLEX_Custom1</include>
 			<label>$INFO[Skin.String(CustomHome1.Label)]</label>
 			<onclick>Skin.SetString(CustomHome1.Label)</onclick>
-			<visible>!isEmpty(Skin.String(CustomHome1.Label)</visible>
+			<visible>!isEmpty(Skin.String(CustomHome1.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5560">
 			<include>Background_Settings_Button_PLEX_Custom2</include>
 			<label>504</label>
 			<onclick>Skin.SetString(CustomHome2.Label)</onclick>
-			<visible>isEmpty(Skin.String(CustomHome2.Label)</visible>
+			<visible>isEmpty(Skin.String(CustomHome2.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5561">
 			<include>Background_Settings_Button_PLEX_Custom2</include>
 			<label>$INFO[Skin.String(CustomHome2.Label)]</label>
 			<onclick>Skin.SetString(CustomHome2.Label)</onclick>
-			<visible>!isEmpty(Skin.String(CustomHome2.Label)</visible>
+			<visible>!isEmpty(Skin.String(CustomHome2.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5580">
 			<include>Background_Settings_Button_PLEX_Custom3</include>
 			<label>504</label>
 			<onclick>Skin.SetString(CustomHome3.Label)</onclick>
-			<visible>isEmpty(Skin.String(CustomHome3.Label)</visible>
+			<visible>isEmpty(Skin.String(CustomHome3.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5581">
 			<include>Background_Settings_Button_PLEX_Custom3</include>
 			<label>$INFO[Skin.String(CustomHome3.Label)]</label>
 			<onclick>Skin.SetString(CustomHome3.Label)</onclick>
-			<visible>!isEmpty(Skin.String(CustomHome3.Label)</visible>
+			<visible>!isEmpty(Skin.String(CustomHome3.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5600">
 			<include>Background_Settings_Button_PLEX_Custom4</include>
 			<label>504</label>
 			<onclick>Skin.SetString(CustomHome4.Label)</onclick>
-			<visible>isEmpty(Skin.String(CustomHome4.Label)</visible>
+			<visible>isEmpty(Skin.String(CustomHome4.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5601">
 			<include>Background_Settings_Button_PLEX_Custom4</include>
 			<label>$INFO[Skin.String(CustomHome4.Label)]</label>
 			<onclick>Skin.SetString(CustomHome4.Label)</onclick>
-			<visible>!isEmpty(Skin.String(CustomHome4.Label)</visible>
+			<visible>!isEmpty(Skin.String(CustomHome4.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5620">
 			<include>Background_Settings_Button_PLEX_Custom5</include>
 			<label>504</label>
 			<onclick>Skin.SetString(CustomHome5.Label)</onclick>
-			<visible>isEmpty(Skin.String(CustomHome5.Label)</visible>
+			<visible>isEmpty(Skin.String(CustomHome5.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5621">
 			<include>Background_Settings_Button_PLEX_Custom5</include>
 			<label>$INFO[Skin.String(CustomHome5.Label)]</label>
 			<onclick>Skin.SetString(CustomHome5.Label)</onclick>
-			<visible>!isEmpty(Skin.String(CustomHome5.Label)</visible>
+			<visible>!isEmpty(Skin.String(CustomHome5.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5640">
 			<include>Background_Settings_Button_PLEX_Custom6</include>
 			<label>504</label>
 			<onclick>Skin.SetString(CustomHome6.Label)</onclick>
-			<visible>isEmpty(Skin.String(CustomHome6.Label)</visible>
+			<visible>isEmpty(Skin.String(CustomHome6.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5641">
 			<include>Background_Settings_Button_PLEX_Custom6</include>
 			<label>$INFO[Skin.String(CustomHome6.Label)]</label>
 			<onclick>Skin.SetString(CustomHome6.Label)</onclick>
-			<visible>!isEmpty(Skin.String(CustomHome6.Label)</visible>
+			<visible>!isEmpty(Skin.String(CustomHome6.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5660">
 			<include>Background_Settings_Button_PLEX_Custom7</include>
 			<label>504</label>
 			<onclick>Skin.SetString(CustomHome7.Label)</onclick>
-			<visible>isEmpty(Skin.String(CustomHome7.Label)</visible>
+			<visible>isEmpty(Skin.String(CustomHome7.Label))</visible>
 		</control>
 		<control type="radiobutton" id="5661">
 			<include>Background_Settings_Button_PLEX_Custom7</include>
 			<label>$INFO[Skin.String(CustomHome7.Label)]</label>
 			<onclick>Skin.SetString(CustomHome7.Label)</onclick>
-			<visible>!isEmpty(Skin.String(CustomHome7.Label)</visible>
+			<visible>!isEmpty(Skin.String(CustomHome7.Label))</visible>
+		</control>
+		<control type="radiobutton" id="5680">
+			<include>Background_Settings_Button_PLEX_Custom8</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome8.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome8.Label))</visible>
+		</control>
+		<control type="radiobutton" id="5681">
+			<include>Background_Settings_Button_PLEX_Custom8</include>
+			<label>$INFO[Skin.String(CustomHome8.Label)]</label>
+			<onclick>Skin.SetString(CustomHome8.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome8.Label))</visible>
+		</control>
+		<control type="radiobutton" id="5700">
+			<include>Background_Settings_Button_PLEX_Custom9</include>
+			<label>504</label>
+			<onclick>Skin.SetString(CustomHome9.Label)</onclick>
+			<visible>isEmpty(Skin.String(CustomHome9.Label))</visible>
+		</control>
+		<control type="radiobutton" id="5701">
+			<include>Background_Settings_Button_PLEX_Custom9</include>
+			<label>$INFO[Skin.String(CustomHome9.Label)]</label>
+			<onclick>Skin.SetString(CustomHome9.Label)</onclick>
+			<visible>!isEmpty(Skin.String(CustomHome9.Label))</visible>
 		</control>
 	</include>
 	<include name="XBMC_Home_Custom_Deck">

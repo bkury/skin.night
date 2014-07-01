@@ -17,12 +17,19 @@
 	<include file="Includes_XBMC.xml" />
 	<include file="Includes_XBMC_Generated.xml" />
 
-	<!-- Viewmodes -->
+	<!-- Viewmodes (Default) -->
 	<include file="Viewmode_List.xml" />
 	<include file="Viewmode_Panel.xml" />
 	<include file="Viewmode_Poster.xml" />
 	<include file="Viewmode_Banner.xml" />
 	<include file="Viewmode_Search.xml" />
+
+	<!-- Viewmodes (Custom) -->
+
+	<!--
+	<include file="Includes_Viewmode_Custom.xml" />
+	<include file="Viewmode_Custom1.xml" />
+	-->
 
 	<!-- Debug -->
 	<include file="Debug.xml" />
@@ -372,6 +379,7 @@
 					<visible>isEmpty(MusicPlayer.Duration)</visible>
 				</control>
 		</control>
+
 	</control>
 
 	</include>
@@ -1256,72 +1264,38 @@
 
 	<!-- Opacity Hack for MultiImage Home (Force Animation) -->
 	<include name="background_opacity_0_force">
-		<animation effect="fade" start="0" end="0" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="0" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="0" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="0" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="0" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_10_force">
-		<animation effect="fade" start="0" end="10" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="10" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="10" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="10" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="10" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_20_force">
-		<animation effect="fade" start="0" end="20" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="20" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="20" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="20" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="20" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_30_force">
-		<animation effect="fade" start="0" end="30" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="30" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="30" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="30" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="30" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_40_force">
-		<animation effect="fade" start="0" end="40" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="40" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="40" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="40" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_50_force">
-		<animation effect="fade" start="0" end="50" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="50" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="50" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="50" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="50" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_60_force">
-		<animation effect="fade" start="0" end="60" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="60" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="60" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="60" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="60" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_70_force">
-		<animation effect="fade" start="0" end="70" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="70" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="70" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="70" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="70" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_80_force">
-		<animation effect="fade" start="0" end="80" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="80" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="80" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="80" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="80" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_90_force">
-		<animation effect="fade" start="0" end="90" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="90" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="90" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="90" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="90" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="background_opacity_100_force">
-		<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-		<animation effect="fade" start="100" end="0" time="300" delay="0">WindowClose</animation>
-		<animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="300" delay="0">Hidden</animation>
+		<animation effect="fade" start="0" end="100" time="300" condition="true">Conditional</animation>
 	</include>
-
 
 	<!-- Opacity -->
 	<include name="background_opacity_0">
@@ -1401,33 +1375,105 @@
 		<aligny>center</aligny>
 	</include>
 
+	<!-- Home Menu Font (MEDIUM) -->
+	<include name="Home_Font_Default_Medium">
+		<height>42</height>
+		<font>Font_Bartowski_MainMenu_Medium</font>
+	</include>
+	<include name="Home_Font_Default_Medium_Focus">
+		<height>62</height>
+		<font>Font_Bartowski_MainMenu_Medium_Focus</font>
+	</include>
+	<include name="Home_Font_Aeon_Medium">
+		<height>42</height>
+		<font>Home_Font_Aeon_Medium</font>
+	</include>
+	<include name="Home_Font_Aeon_Medium_Focus">
+		<height>62</height>
+		<font>Home_Font_Aeon_Medium_Focus</font>
+	</include>
+
+	<!-- Home Menu Font (SMALL) -->
+	<include name="Home_Font_Default_Small">
+		<height>30</height>
+		<font>Font_Bartowski_MainMenu_Small</font>
+	</include>
+	<include name="Home_Font_Default_Small_Focus">
+		<height>50</height>
+		<font>Font_Bartowski_MainMenu_Small_Focus</font>
+	</include>
+	<include name="Home_Font_Aeon_Small">
+		<height>30</height>
+		<font>Home_Font_Aeon_Small</font>
+	</include>
+	<include name="Home_Font_Aeon_Small_Focus">
+		<height>50</height>
+		<font>Home_Font_Aeon_Small_Focus</font>
+	</include>
+
+
 	<!-- Home Menu (5 Items) -->
 	<include name="Home_5Items">
+		<include condition="Skin.hasSetting(Home_Font_Medium)">Home_5Items_Medium</include>
+		<include condition="Skin.hasSetting(Home_Font_Small)">Home_5Items_Small</include>
 		<posx>20</posx>
-		<posy>175</posy>
-		<height>350</height>
+		<posy>160</posy>
+		<height>370</height>
 		<width>1000</width>
 		<focusposition>2</focusposition>
 		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
+	<include name="Home_5Items_Medium">
+		<posy>150</posy>
+		<height>400</height>
+		<focusposition>4</focusposition>
+	</include>
+	<include name="Home_5Items_Small">
+		<posy>180</posy>
+		<height>350</height>
+		<focusposition>5</focusposition>
+	</include>
+
 	<!-- Home Menu (7 Items) -->
 	<include name="Home_7Items">
+		<include condition="Skin.hasSetting(Home_Font_Medium)">Home_7Items_Medium</include>
+		<include condition="Skin.hasSetting(Home_Font_Small)">Home_7Items_Small</include>
 		<posx>20</posx>
-		<posy>110</posy>
-		<height>480</height>
+		<posy>100</posy>
+		<height>510</height>
 		<width>1000</width>
 		<focusposition>3</focusposition>
 		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
+	<include name="Home_7Items_Medium">
+		<posy>110</posy>
+		<height>480</height>
+		<focusposition>5</focusposition>
+	</include>
+	<include name="Home_7Items_Small">
+		<posy>120</posy>
+		<height>470</height>
+		<focusposition>7</focusposition>
+	</include>
+
 	<!-- Home Menu (9 Items) -->
 	<include name="Home_9Items">
+		<include condition="Skin.hasSetting(Home_Font_Medium)">Home_9Items_Medium</include>
+		<include condition="Skin.hasSetting(Home_Font_Small)">Home_9Items_Small</include>
 		<posx>20</posx>
-		<posy>45</posy>
-		<height>610</height>
+		<posy>20</posy>
+		<height>650</height>
 		<width>1000</width>
 		<focusposition>4</focusposition>
 		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
+	<include name="Home_9Items_Medium">
+		<focusposition>7</focusposition>
+	</include>
+	<include name="Home_9Items_Small">
+		<focusposition>10</focusposition>
+	</include>
+
 	<!-- Home Menu (Aeon Font) -->
 	<include name="Home_Font_Aeon">
 		<font>AeonFont_MainMenu_Focus</font>
@@ -1436,6 +1482,7 @@
 	<include name="Home_Font_Aeon">
 		<font>Font_Bartowski_MainMenu</font>
 	</include>
+
 	<!-- Home Menu (Accent Color) -->
 	<include name="HomeNoAccent">
 		<textcolor>mainblue</textcolor>
@@ -1587,14 +1634,23 @@
 	<!-- DIALOG HEADER VIEWTYPE OPTIONS -->
 	<include name="dialog_header_viewtype_options">
 		<!-- Background -->
-		<control type="image">
+		<!--<control type="image">
 			<posx>300</posx>
 			<posy>170</posy>
 			<width>680</width>
 			<height>488</height>
 			<texture border="6">base-rounded.png</texture>
 			<colordiffuse>DD000000</colordiffuse>
+		</control>-->
+		<control type="image">
+			<posx>300</posx>
+			<posy>170</posy>
+			<width>680</width>
+			<height>488</height>
+			<texture>dialog_header_viewtype_options.png</texture>
+			<colordiffuse>DD555555</colordiffuse>
 		</control>
+
 		<!-- Header -->
                 <control type="group">
                         <posx>0</posx>
@@ -1637,14 +1693,23 @@
 	<!-- DIALOG HEADER VIEWTYPE -->
 	<include name="dialog_header_viewtype">
 		<!-- Background -->
-		<control type="image">
+		<!--<control type="image">
 			<posx>300</posx>
 			<posy>230</posy>
 			<width>680</width>
 			<height>428</height>
 			<texture border="6">base-rounded.png</texture>
 			<colordiffuse>DD000000</colordiffuse>
+		</control>-->
+		<control type="image">
+			<posx>300</posx>
+			<posy>230</posy>
+			<width>680</width>
+			<height>428</height>
+			<texture>dialog_header_viewtype.png</texture>
+			<colordiffuse>DD555555</colordiffuse>
 		</control>
+
 		<!-- Header -->
                 <control type="group">
                         <posx>0</posx>
@@ -1687,14 +1752,23 @@
 	<!-- DIALOG HEADER VIEWTYPE -->
 	<include name="dialog_header_viewmode">
 		<!-- Background -->
-		<control type="image">
+		<!--<control type="image">
 			<posx>300</posx>
 			<posy>230</posy>
 			<width>680</width>
 			<height>428</height>
 			<texture border="6">base-rounded.png</texture>
 			<colordiffuse>DD000000</colordiffuse>
+		</control>-->
+		<control type="image">
+			<posx>300</posx>
+			<posy>230</posy>
+			<width>680</width>
+			<height>428</height>
+			<texture>dialog_header_viewtype.png</texture>
+			<colordiffuse>DD555555</colordiffuse>
 		</control>
+
 		<!-- Header -->
                 <control type="group">
                         <posx>0</posx>
@@ -2493,6 +2567,24 @@
 
 		<!-- Default -->
 		<value>[COLOR=FFEEEEEE]Notification[/COLOR]</value> <!-- Notification -->
+	</variable>
+
+	<variable name="Home_5Items_Number">
+		<value condition="Skin.HasSetting(Home_Font_Medium)">9</value>
+		<value condition="Skin.HasSetting(Home_Font_Small)">11</value>
+		<value>5</value>
+	</variable>
+
+	<variable name="Home_7Items_Number">
+		<value condition="Skin.HasSetting(Home_Font_Medium)">11</value>
+		<value condition="Skin.HasSetting(Home_Font_Small)">15</value>
+		<value>7</value>
+	</variable>
+
+	<variable name="Home_9Items_Number">
+		<value condition="Skin.HasSetting(Home_Font_Medium)">15</value>
+		<value condition="Skin.HasSetting(Home_Font_Small)">21</value>
+		<value>9</value>
 	</variable>
 
 </includes>

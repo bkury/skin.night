@@ -4,8 +4,8 @@
 	<!-- #################################### Viewtype Navigation ################################# -->
 	<include name="viewtype_navigation">
 	<control type="group">
-		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus | Window.isActive(1120) ]</visible>
-		<animation effect="slide" start="0,200" time="800" tween="back" easing="inout" condition="ControlGroup(7000).HasFocus | Window.isActive(1120) | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus">conditional</animation>
+		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus | ControlGroup(1306).HasFocus | Window.isActive(1120) ]</visible>
+		<animation effect="slide" start="0,200" time="800" tween="back" easing="inout" condition="ControlGroup(7000).HasFocus | Window.isActive(1120) | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus | ControlGroup(1306).HasFocus">conditional</animation>
 		<animation effect="fade" end="0" time="800">Hidden</animation>
 		<animation effect="fade" end="100" time="800">Visible</animation>
 		<animation effect="fade" end="0" time="800">WindowClose</animation>
@@ -94,6 +94,7 @@
 					<animation effect="slide" end="-20" condition="Control.HasFocus(491) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
 					<animation effect="slide" end="-20" condition="Control.HasFocus(492) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
 
+					<animation effect="slide" end="225,0" time="0" condition="Control.HasFocus(498)">Conditional</animation>
 					<animation effect="slide" end="315,0" time="0" condition="Control.HasFocus(493)">Conditional</animation>
 					<animation effect="slide" end="525,0" time="0" condition="Control.HasFocus(494)">Conditional</animation>
 					<animation effect="slide" end="735,0" time="0" condition="Control.HasFocus(495)">Conditional</animation>
@@ -114,6 +115,7 @@
 					<animation effect="slide" end="-20" condition="Control.HasFocus(491) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
 					<animation effect="slide" end="-20" condition="Control.HasFocus(492) + [Player.hasAudio | Player.hasVideo]">Conditional</animation>
 
+					<animation effect="slide" end="225,0" time="0" condition="Control.HasFocus(498)">Conditional</animation>
 					<animation effect="slide" end="315,0" time="0" condition="Control.HasFocus(493)">Conditional</animation>
 					<animation effect="slide" end="525,0" time="0" condition="Control.HasFocus(494)">Conditional</animation>
 					<animation effect="slide" end="735,0" time="0" condition="Control.HasFocus(495)">Conditional</animation>
@@ -192,6 +194,10 @@
 							<height>22</height>
 							<texture>b-fullscreen.png</texture>
 							<colordiffuse>FFDDDDDD</colordiffuse>
+							<animation type="Conditional" reversible="false" condition="true" loop="true">
+								<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
+								<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
+							</animation>
 						</control>
 						<control type="button" id="492">
 		                                        <width>22</width>
@@ -202,7 +208,7 @@
 							<onclick>SetFocus(100)</onclick>
 		                                        <onclick>fullscreen</onclick>
 							<onleft>491</onleft>
-							<onright>493</onright>
+							<onright>498</onright>
 							<ondown>100</ondown>
 							<onup>100</onup>
 							<visible allowhiddenfocus="true">Control.HasFocus(492)</visible>
@@ -210,6 +216,33 @@
 					</control>
 
 					</control>
+
+				<!-- Edit Custom Viewmode -->
+				<control type="group">
+					<posx>220</posx>
+					<visible>Control.isVisible(500)</visible>
+					<control type="image">
+						<width>29</width>
+						<height>26</height>
+						<texture>edit.png</texture>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="498">
+	                                        <width>29</width>
+	                                        <height>26</height>
+						<texturefocus>edit.png</texturefocus>
+						<texturenofocus>edit.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
+                                                <onclick>Skin.SetString(selector2,Edit)</onclick>
+                                                <onclick>Control.SetFocus(9995)</onclick>
+						<onleft>492</onleft>
+						<onright>493</onright>
+						<ondown>100</ondown>
+						<onup>100</onup>
+						<visible allowhiddenfocus="true">Control.HasFocus(498)</visible>
+	                                </control>
+				</control>
 
 					<!-- Viewmodes -->
 					<control type="group">
@@ -228,7 +261,7 @@
 							<texturefocus>b-video.png</texturefocus>
 							<texturenofocus>b-video.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
-							<onleft>492</onleft>
+							<onleft>498</onleft>
 							<onright>494</onright>
 							<ondown>100</ondown>
 		                                        <onup>100</onup>
@@ -461,6 +494,9 @@
 						<shadowcolor>FF000000</shadowcolor>
 					</control>
 				</control>
+
+
+
 			</control>
 
 			<!-- Short Navigation Menu (Channel/Shared Content) -->
@@ -528,7 +564,7 @@
 						<posx>40</posx>
 						<width>100</width>
 						<height>24</height>
-						<label>Cover</label>
+						<label>Poster</label>
 						<font>Font_Bartowski_Movies_Plot</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
@@ -652,26 +688,37 @@
 			<!-- Dialog Header -->
 			<include>dialog_header_viewmode</include>
 
+			<!-- Separator -->
+			<control type="image">
+				<posx>320</posx>
+				<posy>359</posy>
+				<width>640</width>
+				<height>1</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<align>center</align>
+			</control>
+
 			<control type="group" id="1300">
 				<posx>340</posx>
-				<posy>340</posy>
+				<posy>330</posy>
 
-				<!-- Next Viewmode -->
-				<control type="button" id="3500">
-					<width>600</width>
-					<label>31025</label><!-- Next Viewmode -->
-					<textoffsetx>0</textoffsetx>
-					<align>center</align>
-                                        <font>font16caps</font>
-					<onclick>Container.NextViewMode</onclick>
-					<onup>7000</onup>
-					<onleft>3510</onleft>
-					<ondown>3510</ondown>
-					<onright>3540</onright>
-					<include>skin_settings_dialog</include>
-				</control>
-
-
+			<!-- Next Viewmode -->
+			<control type="button" id="3500">
+				<posy>-10</posy>
+				<width>600</width>
+				<label>31025</label><!-- Next Viewmode -->
+				<textoffsetx>0</textoffsetx>
+				<align>center</align>
+				<font>font16caps</font>
+				<onclick>Container.NextViewMode</onclick>
+				<onup>7000</onup>
+				<onleft>3510</onleft>
+				<ondown>3510</ondown>
+				<onright>3540</onright>
+				<include>skin_settings_dialog</include>
+			</control>
+    
 			<!-- List -->
 			<control type="grouplist" id="3510">
 				<posx>0</posx>
@@ -682,6 +729,7 @@
 				<onup>3500</onup>
 				<onleft>7000</onleft>
 				<onright>3520</onright>
+				<ondown>3550</ondown>
      
 				<control type="label" id="3511">
 					<width>130</width>
@@ -728,12 +776,13 @@
 				<onup>3500</onup>
 				<onleft>3510</onleft>
 				<onright>3530</onright>
+				<ondown>3550</ondown>
 
 				<control type="label" id="3521">
 					<width>130</width>
 					<height>35</height>
 					<font>font13caps</font>
-					<label>Cover</label><!-- LOC -->
+					<label>Poster</label><!-- LOC -->
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<align>left</align>
@@ -772,6 +821,7 @@
 				<itemgap>-1</itemgap>
 				<onup>3500</onup>
 				<onleft>3520</onleft>
+				<ondown>3550</ondown>
 				<onright>3540</onright>
 
 				<control type="label" id="3531">
@@ -819,6 +869,7 @@
 				<onup>3500</onup>
 				<onleft>3530</onleft>
 				<onright>7000</onright>
+				<ondown>3550</ondown>
 
 				<control type="label" id="3541">
 					<width>280</width>
@@ -833,21 +884,21 @@
 
 				<!-- Banner -->
 				<control type="radiobutton" id="3542">
-					<width>280</width>
+					<width>130</width>
 					<label>Info</label>
 					<onclick>Container.SetViewMode(400)</onclick>
 					<selected>StringCompare(Container.Viewmode,Banner #1)</selected>
 					<include>radiobutton_ticked</include>
 				</control>
 				<control type="radiobutton" id="3543">
-					<width>280</width>
+					<width>130</width>
 					<label>Full</label>
 					<onclick>Container.SetViewMode(410)</onclick>
 					<selected>StringCompare(Container.Viewmode,Banner #2)</selected>
 					<include>radiobutton_ticked</include>
 				</control>
 				<control type="radiobutton" id="3544">
-					<width>280</width>
+					<width>130</width>
 					<label>Deck</label>
 					<onclick>Container.SetViewMode(420)</onclick>
 					<selected>StringCompare(Container.Viewmode,Banner #3)</selected>
@@ -855,6 +906,9 @@
 				</control>
 
 			</control>
+
+			<!-- Custom -->
+			<include>Custom_Viewmode_Select</include>
 
 		</control>
         </control>
@@ -943,7 +997,6 @@
 		                <focusposition>0</focusposition>
                                 <ondown>1302</ondown>
                                 <orientation>vertical</orientation>
-                                <scrolltime>150</scrolltime>
 				<!-- Sorting List -->
 				<control type="grouplist" id="19010">
 					<posx>540</posx>
@@ -1074,6 +1127,164 @@
 			</control>
 
 		</control>
+	</include>
+
+	<!-- #################################### CUSTOM EDIT MENU ################################# -->
+	<include name="viewtype_options_edit">
+	<control type="group">
+		<visible>ControlGroup(1306).HasFocus + ![ Window.IsActive(1120) | Window.IsActive(126) ]</visible>
+
+		<!-- Animations -->
+		<include>viewtype_animations</include>
+
+		<!-- Dialog Header -->
+		<include>dialog_header_viewtype_options</include>
+
+		<!-- Separator -->
+		<control type="image">
+			<posx>320</posx>
+			<posy>309</posy>
+			<width>640</width>
+			<height>1</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<align>center</align>
+			<aspectratio>scale</aspectratio>
+		</control>
+
+
+		<control type="group" id="1306">
+			<!-- Static Focus Item (Workaround) -->
+			<!--<control type="button" id="9995">
+				<width>0</width>
+				<height>0</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<onfocus>SetFocus(11000)</onfocus>
+			</control>-->
+
+			<!-- Apply Changes -->                                
+			<control type="button" id="9995">
+				<posx>340</posx>
+				<posy>265</posy>
+				<width>600</width>
+				<label>Apply Changes</label>
+				<textoffsetx>0</textoffsetx>
+				<align>center</align>
+				<font>font16caps</font>
+				<onclick>ReplaceWindow(videolibrary)</onclick>
+				<onup>7000</onup>
+				<onleft>11000</onleft>
+				<ondown>11000</ondown>
+				<onright>13000</onright>
+				<include>skin_settings_dialog</include>
+			</control>
+
+			<!-- 1st Column -->
+			<control type="grouplist" id="11000">
+				<posx>320</posx>
+				<posy>320</posy>
+				<width>200</width>
+				<height>362</height>
+				<itemgap>-1</itemgap>
+				<onright>12000</onright>
+				<onleft>7000</onleft>
+				<onup>9995</onup>
+				<control type="label" id="1105">
+			                <width>600</width>
+			                <height>35</height>
+			                <font>font13caps</font>
+			                <label>Category</label><!-- Background -->
+			                <textcolor>white</textcolor>
+			                <shadowcolor>black</shadowcolor>
+			                <align>left</align>
+			                <aligny>center</aligny>
+			        </control>
+				<include>Custom_Settings_Viewmode_Column_1</include>
+   
+				<!-- Tools -->
+				<control type="label" id="11900">
+			                <width>600</width>
+			                <height>35</height>
+			                <font>font13caps</font>
+			                <label>Tools</label>
+			                <textcolor>white</textcolor>
+			                <shadowcolor>black</shadowcolor>
+			                <align>left</align>
+			                <aligny>center</aligny>
+			        </control>
+				<!-- Debug Grid -->
+				<control type="radiobutton" id="11905">
+					<width>200</width>
+					<label>Grid</label>
+					<onclick>Skin.ToggleSetting(Custom_Debug_Grid)</onclick>
+					<selected>Skin.HasSetting(Custom_Debug_Grid)</selected>
+					<include>radiobutton_circle</include>
+				</control>
+				<!-- Border -->
+				<control type="radiobutton" id="11910">
+					<width>200</width>
+					<label>Frame</label>
+					<onclick>Skin.ToggleSetting(Custom_Debug_Frame)</onclick>
+					<selected>Skin.HasSetting(Custom_Debug_Frame)</selected>
+					<include>radiobutton_circle</include>
+				</control>
+
+
+			</control>
+
+			<!-- 2nd Column -->
+			<control type="grouplist" id="12000">
+				<posx>540</posx>
+				<posy>320</posy>
+				<width>200</width>
+				<height>362</height>
+				<itemgap>-1</itemgap>
+				<onright>13000</onright>
+				<onleft>11000</onleft>
+				<onup>9995</onup>
+
+				<include>Custom_Settings_Viewmode_Column_2_Header</include>
+				<include>Custom_Settings_Viewmode_Column_2</include>
+			</control>
+
+			<!-- 3rd Column -->
+			<control type="grouplist" id="13000">
+				<posx>760</posx>
+				<posy>320</posy>
+				<width>200</width>
+				<height>362</height>
+				<itemgap>-1</itemgap>
+				<onright>7000</onright>
+				<onleft>12000</onleft>
+				<onup>9995</onup>
+
+				<include>Custom_Settings_Viewmode_Column_3_Header</include>
+				<include>Custom_Settings_Viewmode_Column_3</include>
+			</control>
+			<!-- 3rd Column (Labels) -->
+			<control type="grouplist">
+				<posx>760</posx>
+				<posy>320</posy>
+				<width>180</width>
+				<height>362</height>
+				<itemgap>-1</itemgap>
+  				<!-- Placeholder -->
+				<control type="label">
+					<width>600</width>
+					<height>35</height>
+					<font>font13caps</font>
+					<label>-</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<include>Custom_Settings_Viewmode_Column_3_Labels</include>
+			</control>
+
+		</control>
+	</control>
 	</include>
 
 	<!-- #################################### ANIMATIONS ################################# -->

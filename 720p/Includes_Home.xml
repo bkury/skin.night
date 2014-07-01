@@ -15,7 +15,9 @@
 
 <include name="Home_Navigation_Vertical">
 	<!-- Deck Animation -->
-	<animation effect="slide" end="-800,0" time="500" tween="cubic" easing="out" condition="ControlGroup(5000).HasFocus">conditional</animation>
+	<animation effect="slide" end="-800,0" time="500" tween="cubic" easing="out" condition="!Skin.HasSetting(Deck_NoAnimation) + ControlGroup(5000).HasFocus">conditional</animation>
+	<animation effect="slide" end="-800,0" time="0" condition="Skin.HasSetting(Deck_NoAnimation) + ControlGroup(5000).HasFocus">conditional</animation>
+
 	<!-- Submenu Animation -->
 	<animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998)">conditional</animation>
 
@@ -103,8 +105,6 @@
 			<onclick>Plex.UpdateAndRestart</onclick>
 			<visible>!Skin.HasSetting(XBMC) + !Skin.HasSetting(Home_Update) + System.UpdateIsAvailable</visible>
 		</item>
-
-
 	</content>
 </include>
 
@@ -186,14 +186,16 @@
 			<description>Quit</description>
 			<label>31005</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>XBMC.Quit</onclick>
+			<onclick condition="Skin.HasSetting(XBMC)">XBMC.Quit</onclick>
+			<onclick condition="!Skin.HasSetting(XBMC)">PLEX.Quit</onclick>
 			<visible>!Skin.HasSetting(Hide_Quit)</visible>
 		</item>
 		<item id="26">
 			<description>Suspend</description>
 			<label>31006</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>XBMC.Suspend</onclick>
+			<onclick condition="Skin.HasSetting(XBMC)">XBMC.Suspend</onclick>
+			<onclick condition="!Skin.HasSetting(XBMC)">PLEX.Suspend</onclick>
 			<visible>!Skin.HasSetting(Hide_Sleep)</visible>
 		</item>
 		<item id="27">
@@ -207,7 +209,8 @@
 			<description>Shut Down</description>
 			<label>31008</label>
 			<onclick>Dialog.Close(4998)</onclick>
-			<onclick>XBMC.Powerdown</onclick>
+			<onclick condition="Skin.HasSetting(XBMC)">XBMC.Powerdown</onclick>
+			<onclick condition="!Skin.HasSetting(XBMC)">PLEX.Powerdown</onclick>
 			<visible>!Skin.HasSetting(Hide_Shutdown)</visible>
 		</item>
 	</content>
@@ -326,17 +329,44 @@
 	<viewtype>list</viewtype>
 	<orientation>vertical</orientation>
 	<movement>0</movement>
-	<include>Animation_Bartowski_ZoomOutZoomIn</include>
-	<itemlayout width="700" height="64">
+	<!--<include>Animation_Bartowski_ZoomOutZoomIn</include>-->
+	<include>Animation_ZoomOutZoomIn</include>
+
+	<!-- Default -->
+	<itemlayout width="700" height="70" condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)">
+		<include>Navigation_Vertical_Layout</include>
+	</itemlayout>
+	<focusedlayout width="700" height="90" condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)">
+		<include>Navigation_Vertical_Layout_Focus</include>
+	</focusedlayout>
+	<!-- Medium -->
+	<itemlayout width="700" height="42" condition="Skin.HasSetting(Home_Font_Medium)">
+		<include>Navigation_Vertical_Layout</include>
+	</itemlayout>
+	<focusedlayout width="700" height="62" condition="Skin.HasSetting(Home_Font_Medium)">
+		<include>Navigation_Vertical_Layout_Focus</include>
+	</focusedlayout>
+	<!-- Small -->
+	<itemlayout width="700" height="30" condition="Skin.HasSetting(Home_Font_Small)">
+		<include>Navigation_Vertical_Layout</include>
+	</itemlayout>
+	<focusedlayout width="700" height="50" condition="Skin.HasSetting(Home_Font_Small)">
+		<include>Navigation_Vertical_Layout_Focus</include>
+	</focusedlayout>
+</include>
+
+<include name="Navigation_Vertical_Layout">
 
 		<!-- Default -->
 		<control type="group">
-			<visible>isEmpty(ListItem.Property(HomeMenuPulse))</visible>
+		<visible>isEmpty(ListItem.Property(HomeMenuPulse))</visible>
 			<!-- Default -->
 			<control type="label">
-				<posy>-10</posy>
+				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Default_Medium</include>
+				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Default_Small</include>
 				<width>700</width>
-				<height>64</height>
+				<height>70</height>
+				<aligny>center</aligny>
 				<font>Font_Bartowski_MainMenu</font>
 				<textcolor>50b8b7b7</textcolor>
 				<info>ListItem.Label</info>
@@ -344,9 +374,11 @@
 			</control>
 			<!-- Aeon -->
 			<control type="label">
-				<posy>-6</posy>
+				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Aeon_Medium</include>
+				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Aeon_Small</include>
 				<width>700</width>
-				<height>64</height>
+				<height>70</height>
+				<aligny>center</aligny>
 				<font>AeonFont_MainMenu</font>
 				<textcolor>50b8b7b7</textcolor>
 				<info>ListItem.Label</info>
@@ -359,9 +391,11 @@
 			<visible>!isEmpty(ListItem.Property(HomeMenuPulse))</visible>
 			<!-- Default -->		
 			<control type="label">
-				<posy>-10</posy>
+				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Default_Medium</include>
+				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Default_Small</include>
 				<width>700</width>
-				<height>64</height>
+				<height>70</height>
+				<aligny>center</aligny>
 				<font>Font_Bartowski_MainMenu</font>
 				<textcolor>mainblue</textcolor>
 				<info>ListItem.Label</info>
@@ -373,9 +407,11 @@
 			</control>
 			<!-- Aeon -->
 			<control type="label">
-				<posy>-6</posy>
+				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Aeon_Medium</include>
+				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Aeon_Small</include>
 				<width>700</width>
-				<height>64</height>
+				<height>70</height>
+				<aligny>center</aligny>
 				<font>AeonFont_MainMenu</font>
 				<textcolor>mainblue</textcolor>
 				<info>ListItem.Label</info>
@@ -402,15 +438,43 @@
 			<control type="image">
 				<posx>5</posx>
 				<posy>50</posy>
-				<width>500</width>
+				<width>320</width>
 				<height>1</height>
 				<colordiffuse>mainblue</colordiffuse>
 				<texture>base-rounded.png</texture>
 			</control>
 		</control>
+</include>
 
-	</itemlayout>
-	<focusedlayout width="670" height="92">
+<include name="Navigation_Vertical_Layout_Focus">
+		<!-- Default -->
+		<control type="label">
+			<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Default_Medium_Focus</include>
+			<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Default_Small_Focus</include>
+			<width>670</width>
+			<height>90</height>
+			<aligny>center</aligny>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>ffffffff</textcolor>
+			<font>Font_Bartowski_MainMenu_Focus</font>
+			<shadowcolor>black</shadowcolor>
+			<info>ListItem.Label</info>
+			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
+		<!-- Aeon -->
+		<control type="label">
+			<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Aeon_Medium_Focus</include>
+			<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Aeon_Small_Focus</include>
+			<width>670</width>
+			<height>90</height>
+			<aligny>center</aligny>
+			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
+			<textcolor>ffffffff</textcolor>
+			<font>AeonFont_MainMenu_Focus</font>
+			<shadowcolor>black</shadowcolor>
+			<info>ListItem.Label</info>
+			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+		</control>
 
 		<!-- Section Type -->
 		<control type="group">
@@ -427,38 +491,20 @@
 			<control type="image">
 				<posx>5</posx>
 				<posy>50</posy>
-				<width>500</width>
+				<width>320</width>
 				<height>1</height>
 				<colordiffuse>mainblue</colordiffuse>
 				<texture>base-rounded.png</texture>
 			</control>
 		</control>
 
-		<control type="label">
-			<posy>-10</posy>
-			<width>670</width>
-			<height>92</height>
-			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-			<textcolor>ffffffff</textcolor>
-			<font>Font_Bartowski_MainMenu_Focus</font>
-			<shadowcolor>black</shadowcolor>
-			<info>ListItem.Label</info>
-			<!--<label>A12345678901234567890</label>-->
-			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>
-		<control type="label">
-			<posy>-10</posy>
-			<width>670</width>
-			<height>92</height>
-			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-			<textcolor>ffffffff</textcolor>
-			<font>AeonFont_MainMenu_Focus</font>
-			<shadowcolor>black</shadowcolor>
-			<info>ListItem.Label</info>
-			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>
-	</focusedlayout>
 </include>
+
+
+
+
+
+
 
 <!-- ########## NAVIGATION (HORIZONTAL) ########## -->
 <include name="Navigation_Horizontal_Header">

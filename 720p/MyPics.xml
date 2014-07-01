@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2">
-        <include>Viewmode_Navigation</include>
+	<include>Viewmode_Navigation</include>
 </window>

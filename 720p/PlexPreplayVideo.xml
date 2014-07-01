@@ -487,8 +487,8 @@
 					<onclick>Plex.PlayWith(VideoDefaultPlayer)</onclick>
 					<onleft>109</onleft>
 					<onright>103</onright>
-					<ondown>109</ondown>
-					<onup>103</onup>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(102)</visible>
 				</control>
@@ -532,8 +532,8 @@
 					<onclick>ActivateWindow(10205)</onclick>
 					<onright>104</onright>
 					<onleft>102</onleft>
-					<ondown>102</ondown>
-					<onup>104</onup>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(103)</visible>
 				</control>
@@ -577,8 +577,8 @@
 					<onclick>ActivateWindow(10204)</onclick>
 					<onleft>103</onleft>
 					<onright>105</onright>
-					<ondown>103</ondown>
-					<onup>105</onup>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(104)</visible>
 				</control>
@@ -621,8 +621,8 @@
 					<onclick>ActivateWindow(10200,$INFO[ListItem(0).Path])</onclick>
 					<onleft>104</onleft>
 					<onright>107</onright>
-					<ondown>104</ondown>
-					<onup>107</onup>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(105)</visible>
 				</control>
@@ -696,8 +696,8 @@
 					<onclick>-</onclick>
 					<onleft>105</onleft>
 					<onright>108</onright>
-					<ondown>105</ondown>
-					<onup>108</onup>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(107)</visible>
 				</control>
@@ -738,8 +738,8 @@
 					<onclick>markasunwatched</onclick>
 					<onleft>107</onleft>
 					<onright>109</onright>
-					<ondown>107</ondown>
-					<onup>109</onup>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(108)</visible>
 				</control>
@@ -759,8 +759,8 @@
 					<onclick>markaswatched</onclick>
 					<onleft>108</onleft>
 					<onright>102</onright>
-					<ondown>108</ondown>
-					<onup>102</onup>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(109)</visible>
 				</control>

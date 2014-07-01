@@ -608,6 +608,49 @@
 						<onclick>Skin.Reset(Home_Horizontal)</onclick>
 						<selected>Skin.HasSetting(Home_Panel)</selected>
 					</control>
+
+					<!-- Home Menu Font -->
+					<control type="label" id="2121">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Home Menu Font Size</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+					</control>
+					<control type="image" id="2122">
+						<include>settings_separator</include>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+					</control>
+
+					<control type="radiobutton" id="2125">
+						<include>skin_settings_labels</include>
+						<label>Large (Default)</label>
+						<onclick>Skin.Reset(Home_Font_Medium)</onclick>
+						<onclick>Skin.Reset(Home_Font_Small)</onclick>
+						<selected>!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+					</control>
+					<control type="radiobutton" id="2126">
+						<include>skin_settings_labels</include>
+						<label>Medium</label>
+						<onclick>Skin.Reset(Home_Font_Small)</onclick>
+						<onclick>Skin.ToggleSetting(Home_Font_Medium)</onclick>
+						<selected>Skin.HasSetting(Home_Font_Medium)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+					</control>
+					<control type="radiobutton" id="2127">
+						<include>skin_settings_labels</include>
+						<label>Small</label>
+						<onclick>Skin.Reset(Home_Font_Medium)</onclick>
+						<onclick>Skin.ToggleSetting(Home_Font_Small)</onclick>
+						<selected>Skin.HasSetting(Home_Font_Small)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+					</control>
+
 					<!-- Home Menu Settings -->
 					<control type="label" id="2130">
 						<width>860</width>
@@ -618,36 +661,37 @@
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 					<control type="image" id="2140">
 						<include>settings_separator</include>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
-
 					<control type="radiobutton" id="2150">
-						<description>Enable 9 Menu Items</description>
 						<include>skin_settings_labels</include>
-						<label>Enable 9 Menu Items (Default)</label>
+						<label>Enable $VAR[Home_9Items_Number] Menu Items (Default)</label>
 						<onclick>Skin.Reset(HomeExtended)</onclick>
 						<onclick>Skin.Reset(HomeExtendedMore)</onclick>
 						<selected>!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 					<control type="radiobutton" id="2160">
-						<description>Enable 7 Menu Items</description>
 						<include>skin_settings_labels</include>
-						<label>Enable 7 Items Home</label>
+						<label>Enable $VAR[Home_7Items_Number] Items Home</label>
 						<onclick>Skin.Reset(HomeExtendedMore)</onclick>
 						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<onclick>Skin.ToggleSetting(HomeExtended)</onclick>
 						<selected>Skin.HasSetting(HomeExtended)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 					<control type="radiobutton" id="2170">
-						<description>Enable 5 Menu Items</description>
 						<include>skin_settings_labels</include>
-						<label>Enable 5 Items Home</label>
+						<label>Enable $VAR[Home_5Items_Number] Items Home</label>
 						<onclick>Skin.Reset(HomeExtended)</onclick>
 						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<onclick>Skin.ToggleSetting(HomeExtendedMore)</onclick>
 						<selected>Skin.HasSetting(HomeExtendedMore)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 					<control type="radiobutton" id="2180">
 						<description>Wrap List</description>
@@ -656,6 +700,7 @@
 						<onclick>Skin.Reset(Home_Fixed)</onclick>
 						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<selected>!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 					<control type="radiobutton" id="2190">
 						<description>Fixed List</description>
@@ -664,6 +709,7 @@
 						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<onclick>Skin.ToggleSetting(Home_Fixed)</onclick>
 						<selected>Skin.HasSetting(Home_Fixed)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 					<control type="radiobutton" id="2200">
 						<description>Simple List</description>
@@ -674,6 +720,7 @@
 						<onclick>Skin.Reset(HomeExtendedMore)</onclick>
 						<onclick>Skin.ToggleSetting(Home_Simple)</onclick>
 						<selected>Skin.HasSetting(Home_Simple)</selected>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 
 					<!-- Accent Color Settings -->
@@ -1099,11 +1146,20 @@
 						<selected>Skin.HasSetting(HomeNoAccentDeck)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
+					<control type="radiobutton" id="4170">
+						<description>Disable Accent Color</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31071]</label> <!-- Disable Animation -->
+						<onclick>Skin.ToggleSetting(Deck_NoAnimation)</onclick>
+						<selected>Skin.HasSetting(Deck_NoAnimation)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
 				</control>
 
 				<!-- Background Customizer -->
 				<control type="grouplist" id="5000">
 					<onright>5001</onright>
+					<height>585</height>
 					<include>Settings_Section_HalfLeft</include>
 					<visible>Container(100).Hasfocus(150)</visible>
 
@@ -1367,6 +1423,7 @@
 						<onclick>Skin.ToggleSetting(overlay_count)</onclick>
 						<selected>Skin.HasSetting(overlay_count)</selected>
 					</control>
+
 				</control>
 
 				<!-- XBMC Settings -->
