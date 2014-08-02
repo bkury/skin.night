@@ -74,16 +74,6 @@
 			<posx>295</posx>
 			<posy>160</posy>
 
-			<!-- Background Grid -->
-			<control type="image">
-				<posy>50</posy>
-				<posx>220</posx>
-				<width>700</width>
-				<height>210</height>
-				<texture>preplay_info.png</texture>
-				<include>Animation_Preplay_Right</include>
-			</control>
-
 			<!-- TvShows -->
 			<control type="group">
 			<visible>Container.Content(episode)</visible>
@@ -145,9 +135,10 @@
 			</control>
 
 			<!-- Movie Stuff -->
+			<!-- Fanart -->
 			<control type="group">
-			<visible>Container.Content(movie)</visible>
-				<!-- Fanart -->
+				<visible>Container.Content(movie)</visible>
+
 				<control type="image">
 					<posx>-45</posx>
 					<posy>10</posy>
@@ -161,16 +152,55 @@
 					<animation effect="fade" start="0" end="80" time="600" delay="0" condition="true">Conditional</animation>
 					<include>Animation_Preplay_Left</include>
 				</control>
-				<!-- Genre (Movies only) -->
-				<control type="label">
-					<posx>235</posx>
-					<posy>5</posy>
-					<width>510</width>
-					<label fallback="Not Available">$INFO[ListItem.Genre]</label>
-					<font>Font_Bartowski_Main_Preplay</font>
-					<textcolor>FFCCCCCC</textcolor>
-					<include>Animation_Preplay_Right</include>
-				</control>
+			</control>
+
+			<control type="group">
+			<visible>!Control.HasFocus(3)</visible>
+			<animation effect="fade" start="100" end="0" time="300">hidden</animation>
+			<animation effect="fade" start="0" end="100" time="300">visible</animation>
+
+
+			<!-- Background Grid -->
+			<control type="image">
+				<posy>50</posy>
+				<posx>220</posx>
+				<width>700</width>
+				<height>210</height>
+				<texture>preplay_info.png</texture>
+				<include>Animation_Preplay_Right</include>
+			</control>
+
+			<!-- Genre (Movies only) -->
+			<control type="group">
+				<visible>Container.Content(movie)</visible>
+				<control type="grouplist">
+                                        <posx>235</posx>
+                                        <width>600</width>
+                                        <height>40</height>
+                                        <align>left</align>
+                                        <usecontrolcoords>true</usecontrolcoords>
+                                        <orientation>horizontal</orientation>
+                                        <itemgap>10</itemgap>
+                                        <!-- Genre -->
+                                        <control type="label">
+                                                <width min="30" max="460">auto</width>
+                                                <label fallback="Not Available">$INFO[ListItem.Genre]</label>
+                                                <font>Font_Bartowski_Main_Preplay</font>
+                                                <textcolor>FFCCCCCC</textcolor>
+                                                <scroll>true</scroll>
+                                                <include>Animation_Preplay_Right</include>
+                                        </control>
+                                        <!-- Overlay -->
+                                        <control type="image">
+                                                <posy>3</posy>
+                                                <width>36</width>
+                                                <height>32</height>
+                                                <info>ListItem.Overlay</info>
+                                                <include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
+                                                <colordiffuse>FFCCCCCC</colordiffuse>
+                                                <include>Animation_Preplay_Right</include>
+                                        </control>
+                                </control>
 			</control>
 
 			<!-- Channel/Clips -->
@@ -429,6 +459,8 @@
 
 			</control>
 
+
+			</control>
 		</control>
 
 		<!-- Navigation Style -->
@@ -441,28 +473,175 @@
 				<posy>0</posy>
 				<posx>0</posx>
 				<include>navigation_arrow_down</include>
-				<animation effect="slide" end="26,0" time="0" condition="Control.HasFocus(102)">Conditional</animation>
+				<!-- Play/Extras -->
+				<animation effect="slide" end="26,0" time="0" condition="Control.HasFocus(102) + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" end="6,0" time="0" condition="Control.HasFocus(102) + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" end="45,0" time="0" condition="Control.HasFocus(110)">Conditional</animation>
+				<!-- Other -->
 				<animation effect="slide" end="166,0" time="0" condition="Control.HasFocus(103)">Conditional</animation>
 				<animation effect="slide" end="318,0" time="0" condition="Control.HasFocus(104)">Conditional</animation>
 				<animation effect="slide" end="458,0" time="0" condition="Control.HasFocus(105)">Conditional</animation>
 				<animation effect="slide" end="598,0" time="0" condition="Control.HasFocus(107)">Conditional</animation>
 				<animation effect="slide" end="717,0" time="0" condition="Control.HasFocus(108)">Conditional</animation>
 				<animation effect="slide" end="757,0" time="0" condition="Control.HasFocus(109)">Conditional</animation>
+				<!-- Hide -->
+				<animation effect="slide" end="-1300,0" time="0" condition="![Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110)]">Conditional</animation>
 				<visible>Skin.HasSetting(navigation_arrow)</visible>
 			</control>
 			<control type="image">
 				<posy>-3</posy>
 				<posx>0</posx>
 				<include>navigation_circle</include>
-				<animation effect="slide" end="26,0" time="0" condition="Control.HasFocus(102)">Conditional</animation>
+				<!-- Play/Extras -->
+				<animation effect="slide" end="26,0" time="0" condition="Control.HasFocus(102) + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" end="6,0" time="0" condition="Control.HasFocus(102) + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" end="45,0" time="0" condition="Control.HasFocus(110)">Conditional</animation>
+				<!-- Other -->
 				<animation effect="slide" end="166,0" time="0" condition="Control.HasFocus(103)">Conditional</animation>
 				<animation effect="slide" end="318,0" time="0" condition="Control.HasFocus(104)">Conditional</animation>
 				<animation effect="slide" end="458,0" time="0" condition="Control.HasFocus(105)">Conditional</animation>
 				<animation effect="slide" end="598,0" time="0" condition="Control.HasFocus(107)">Conditional</animation>
 				<animation effect="slide" end="717,0" time="0" condition="Control.HasFocus(108)">Conditional</animation>
 				<animation effect="slide" end="757,0" time="0" condition="Control.HasFocus(109)">Conditional</animation>
+				<!-- Hide -->
+				<animation effect="slide" end="-1300,0" time="0" condition="![Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110)]">Conditional</animation>
 				<visible>Skin.HasSetting(navigation_circle)</visible>
 			</control>
+		</control>
+
+		<!-- Extras -->
+		<control type="group">
+			<posx>520</posx>
+			<posy>150</posy>
+			<visible>Control.HasFocus(3)</visible>
+
+			<!-- Animations -->
+			<animation effect="slide" end="800,0" time="400" tween="quadratic" easing="in" delay="0" condition="Window.IsActive(106)">Conditional</animation>
+
+			<animation effect="fade" start="100" end="0" time="300">hidden</animation>
+			<animation effect="fade" start="0" end="100" time="300">visible</animation>
+			<animation effect="slide" start="800,0" time="400" tween="quadratic" easing="out" delay="0">WindowOpen</animation>
+			<animation effect="slide" end="800,0" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
+
+			<!-- Extras Panel -->
+			<control type="panel" id="3">
+				<width>520</width>
+				<height>400</height>
+				<scrolltime>200</scrolltime>
+				<onleft>110</onleft>
+				<onright>110</onright>
+				<pagecontrol>-</pagecontrol>
+
+				<itemlayout width="260" height="200">
+
+					<!-- Thumb -->
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>220</width>
+						<height>130</height>
+						<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<bordertexture>confluence/button-nofocus.png</bordertexture>
+						<bordersize>2</bordersize>
+						<aspectratio>keep</aspectratio>
+					</control>
+
+					<!-- Extra #1 -->
+					<control type="label">
+						<posx>130</posx>
+						<posy>160</posy>
+						<width>220</width>
+						<height>15</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+
+					<!-- Extra #2 -->
+					<control type="label">
+						<posx>130</posx>
+						<posy>180</posy>
+						<width>220</width>
+						<height>15</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Bartowski_Preplay</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<label>$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.DurationStr]</label>
+					</control>
+
+
+				</itemlayout>
+
+				<focusedlayout width="260" height="200">
+
+					<control type="group">
+						<animation effect="zoom" reversible="false" center="auto" start="100" end="110" time="300" tween="back" easing="out">Focus</animation>
+
+						<!-- Thumb -->
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>220</width>
+							<height>130</height>
+							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture>confluence/button-nofocus.png</bordertexture>
+							<bordersize>2</bordersize>
+							<aspectratio>keep</aspectratio>
+						</control>
+
+						<!-- Extra #1 -->
+						<control type="label">
+							<posx>130</posx>
+							<posy>160</posy>
+							<width>220</width>
+							<height>15</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<include>navigation_options_accent</include>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+
+						<!-- Extra #2 -->
+						<control type="label">
+							<posx>130</posx>
+							<posy>180</posy>
+							<width>220</width>
+							<height>15</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_Preplay</font>
+							<textcolor>FFFFFFFF</textcolor>
+							<label>$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.DurationStr]</label>
+						</control>
+
+						<!-- Play Image -->
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>220</width>
+							<height>130</height>
+							<texture background="true">96-play.png</texture>
+							<aspectratio scalediffuse="false">center</aspectratio>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>220</width>
+							<height>130</height>
+							<texture background="true">96-play.png</texture>
+							<aspectratio scalediffuse="false">center</aspectratio>
+							<include>Animation_OSD_Play</include>
+							<colordiffuse>mainblue</colordiffuse>
+						</control>
+
+					</control>
+				</focusedlayout>
+			</control>
+
 		</control>
 
 		<!-- Navigation -->
@@ -478,6 +657,7 @@
 					<width>76</width>
 					<height>30</height>
 					<texture>b-pp-play.png</texture>
+					<animation effect="slide" end="-20,0" condition="!IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
 				</control>
 				<control type="button" id="102">
 					<width>76</width>
@@ -486,16 +666,15 @@
 					<texturenofocus>b-pp-play.png</texturenofocus>
 					<onclick>Plex.PlayWith(VideoDefaultPlayer)</onclick>
 					<onleft>109</onleft>
-					<onright>103</onright>
+					<onright>110</onright>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
 					<visible allowhiddenfocus="true">Control.HasFocus(102)</visible>
+					<animation effect="slide" end="-20,0" condition="!IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
 				</control>
 				<control type="label">
 					<posy>34</posy>
-					<!--<posx>-2</posx>
-					<width>76</width>-->
 					<posx>-12</posx>
 					<width>96</width>
 					<height>30</height>
@@ -515,6 +694,30 @@
 				</control>
 			</control>
 
+			<!-- Extras -->
+			<control type="group">
+				<posx>40</posx>
+				<posy>-1</posy>
+				<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
+				<control type="image">
+					<width>32</width>
+					<height>32</height>
+					<texture>b-pp-extras.png</texture>
+				</control>
+				<control type="button" id="110">
+					<width>32</width>
+					<height>32</height>
+					<texturefocus>b-pp-extras.png</texturefocus>
+					<texturenofocus>b-pp-extras.png</texturenofocus>
+					<onclick>SetFocus(3)</onclick>
+					<onleft>102</onleft>
+					<onright>103</onright>
+					<ondown>XBMC.NextItem</ondown>
+					<onup>XBMC.PrevItem</onup>
+					<colordiffuse>mainblue</colordiffuse>
+					<visible allowhiddenfocus="true">Control.HasFocus(110)</visible>
+				</control>
+			</control>
 
 			<!-- Audio -->
 			<control type="group">
@@ -531,7 +734,7 @@
 					<texturenofocus>b-pp-audio2.png</texturenofocus>
 					<onclick>ActivateWindow(10205)</onclick>
 					<onright>104</onright>
-					<onleft>102</onleft>
+					<onleft>110</onleft>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>

@@ -1818,6 +1818,7 @@
                                 <textcolor>white</textcolor>
 				<visible>[Container.Content(tvshows) | Container.Content(episode)]</visible>
                         </control>
+			<!-- No Extras -->
 			<control type="label">
                                 <description>header label</description>
                                 <posx>280</posx>
@@ -1828,8 +1829,23 @@
                                 <label>$INFO[ListItem.Label]</label>
                                 <align>center</align>
                                 <textcolor>white</textcolor>
-				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)]</visible>
+				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + !Control.HasFocus(3)</visible>
                         </control>
+			<!-- Extras -->
+			<control type="label">
+                                <description>header label</description>
+                                <posx>280</posx>
+                                <posy>5</posy>
+                                <width>720</width>
+                                <height>30</height>
+                                <font>Font_Bartowski_Main_SubMenu</font>
+                                <label>$INFO[ListItem.Label][COLOR=mainblue] / [/COLOR]Extras ($INFO[Container(3).NumItems])</label>
+                                <align>center</align>
+                                <textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + Control.HasFocus(3)</visible>
+                        </control>
+
 			<control type="label">
                                 <description>header label</description>
                                 <posx>280</posx>
