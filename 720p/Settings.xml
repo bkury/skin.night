@@ -589,6 +589,7 @@
 						<label>Horizontal Home Menu</label>
 						<onclick>Skin.ToggleSetting(Home_Horizontal)</onclick>
 						<onclick>Skin.Reset(Home_Panel)</onclick>
+						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<selected>Skin.HasSetting(Home_Horizontal)</selected>
 					</control>
 					<control type="radiobutton" id="2110">

@@ -15,10 +15,40 @@
 	<control type="group">
 
 		<!-- Background -->
+		<control type="multiimage" id="12345">
+			<include>background_default</include>
+			<!-- Opacity Option -->
+			<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+			<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+			<!-- Fadetime Option -->
+			<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+			<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+			<!-- Time per Image Option -->
+			<include condition="isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
+			<include condition="!isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
+			<!-- Kenburns Option -->
+			<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+			<imagepath background="true">plexserver://best:32400/library/arts</imagepath>
+		</control>
+
+		<!-- Background (Fallback) -->
 		<control type="image">
 			<include>background_default</include>
+			<!-- Animation -->
+			<animation effect="fade" start="0" end="60" time="300" delay="2000">WindowOpen</animation>
+			<animation effect="fade" start="60" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" start="0" end="60" time="300" delay="2000">Visible</animation>
+			<animation effect="fade" start="60" end="0" time="300">Hidden</animation>
+			<!-- Fadetime Option -->
+			<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+			<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+			<!-- Time per Image Option -->
+			<include condition="isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
+			<include condition="!isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
+			<!-- Kenburns Option -->
+			<include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
 			<texture background="true">bg-myplex.png</texture>
-			<include>Animation_CommonFade_600</include>
+			<visible>IsEmpty(Control.GetLabel(12345))</visible>
 		</control>
 
 		<!-- Vignette Background -->
