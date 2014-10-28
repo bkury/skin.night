@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="100">
 	<defaultcontrol>100</defaultcontrol>
-	<onunload>Skin.SetString(mysharedcontent_servername,$INFO[ListItem.Property(sourceTitle)])</onunload>
+	<onload condition="Skin.HasSetting(SharedContent_Update)">ActivateWindow(settings)</onload>
+	<include>PLEX_Home_SharedContent_Unload</include>
         <allowoverlay>yes</allowoverlay>
         <views>100,210,310</views>
-	<controls>
 
-	<!-- Deck Background -->
-	<control type="group">
-		<visible>Skin.HasSetting(mysharedcontent_helper)</visible>			
-		<include>Deck_Custom</include>
-	</control>
+	<controls>
 
 	<control type="group">
 
@@ -59,7 +55,7 @@
                         <texture>mainmenu/vignette.png</texture>
                         <colordiffuse>ff15efd9</colordiffuse>
                         <include>Animation_CommonFadeNoHide</include>
-                        <visible>!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(mysharedcontent_helper)</visible>
+                        <visible>!Skin.HasSetting(horizontal_home)</visible>
 			<include>Animation_CommonFade_600</include>
                 </control>
 
@@ -74,9 +70,10 @@
                         <include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
                         <colordiffuse>50b8b7b7</colordiffuse>
                         <include>Animation_CommonFade</include>
-                        <visible>!Skin.HasSetting(HomeArrow) + !Skin.HasSetting(mysharedcontent_helper)</visible>
+                        <visible>!Skin.HasSetting(HomeArrow)</visible>
                 </control>
-               <!-- Servername -->
+               
+		<!-- Servername -->
                 <control type="label">
                         <posy>684</posy>
                         <posx>35</posx>
@@ -85,21 +82,24 @@
                         <textcolor>FFCCCCCC</textcolor>
 			<label>$INFO[ListItem.Property(sourceTitle)]</label>
                         <include>Animation_CommonFade</include>
-			<visible>Skin.HasSetting(SharedPageId) + !Skin.HasSetting(mysharedcontent_helper)</visible>
+			<visible>Skin.HasSetting(SharedPageId)</visible>
                 </control>
 
-		<!-- MySharedContent Screen/Deck -->
-		<control type="group">
-                        <visible>Control.isVisible(100)</visible>
-			<include condition="Skin.HasSetting(mysharedcontent_helper)">mysharedcontent_deck</include>
-			<include condition="!Skin.HasSetting(mysharedcontent_helper)">Shared_Navigation</include>
-		</control>
-                
-		<include>viewtype_clock</include>
-		<!--<include>Viewmode_Poster</include>
-		<include>Viewmode_Panel</include>
-               	<include>viewtype_navigation</include>-->
+		<include>Shared_Navigation</include>
 
+		<include>viewtype_clock</include>
+		<!--
+		<include>Viewmode_Poster</include>
+		<include>Viewmode_Panel</include>
+               	<include>viewtype_navigation</include>
+		-->
+	</control>
+
+	<!-- Shared Content Refresh -->
+	<control type="image">
+		<include>background_default</include>
+		<texture>black.png</texture>
+		<visible>Skin.HasSetting(SharedContent_Update)</visible>
 	</control>
 
 	</controls>

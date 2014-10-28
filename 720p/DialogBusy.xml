@@ -12,6 +12,7 @@
 			<include>background_default</include>
                         <colordiffuse>99cccccc</colordiffuse>
                         <texture background="true">BlackTransparent.png</texture>
+			<visible>!Window.isVisible(10090)</visible> <!-- Preplay Screen -->
                 </control>
 		<!-- Spinner -->
 		<control type="image">

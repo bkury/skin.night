@@ -2,6 +2,7 @@
 <includes>
 	<!-- Includes -->
 	<include file="Defaults.xml" />
+	<include file="Includes_Variables.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_Deck.xml" />
 	<include file="Includes_Viewmode.xml" />
@@ -12,7 +13,6 @@
 	<include file="Includes_Background.xml" />
 	<include file="Includes_MyVideoNav.xml" />
 	<include file="Includes_VideoOSD.xml" />
-	<include file="Includes_MySharedContent.xml" />
 	<include file="Includes_PLEX.xml" />
 	<include file="Includes_XBMC.xml" />
 	<include file="Includes_XBMC_Generated.xml" />
@@ -129,63 +129,83 @@
 
 	<include name="Global_Time_Home_Big">
 		<control type="group">
-                        <visible>[Control.IsVisible(300) + Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock)]</visible>
-			<posx>1256</posx>
-			<posy>0</posy>
+                        <visible>[ Control.IsVisible(300) + Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock) + !Skin.HasSetting(Home_Horizontal) ]</visible>
+			<posx>1270</posx>
+			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
-				<control type="image"> 
-					<posx>-430</posx>
-					<posy>-10</posy>   
-					<width>453</width>     
-					<height>208</height> 
-					<texture>common/time_gradient_back.png</texture>
-				</control>
-				<!-- Normal Clock -->
-				<control type="group">
-				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-					<control type="label">
-	                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
-						<textcolor>white</textcolor>
-						<posy>10</posy>
-						<width>400</width>
-						<font>Font_Bartowski_MainMenu</font>
-						<label>$INFO[System.Time(hh:mm xx)]</label>
-						<align>right</align>
-					</control>
-					<control type="label">
-						<posy>95</posy>
-						<width>400</width>
-						<font>Font_Landscape_TitleTVShow</font>
-						<textcolor>white</textcolor>
-						<info>System.Date</info>
-						<align>right</align>
-					</control>
-				</control>
-				<!-- Aeon Clock -->
-				<control type="group">
-				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-					<control type="label">
-	                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
-						<textcolor>white</textcolor>
-						<posy>10</posy>
-						<width>400</width>
-						<!--<font>Font_Bartowski_MainMenu</font>-->
-						<font>AeonFont_MainMenu_Focus</font>
-						<info>System.Time(hh:mm xx)</info>
-						<align>right</align>
-					</control>
-					<control type="label">
-						<posy>100</posy>
-						<width>400</width>
-						<font>Font_Landscape_TitleTVShow</font>
-						<textcolor>white</textcolor>
-						<info>System.Date</info>
-						<align>right</align>
-					</control>
-				</control>
-		</control>
-	</include>
 
+			<!-- Backgorund -->
+			<control type="image"> 
+				<posx>-430</posx>
+				<posy>-10</posy>   
+				<width>453</width>     
+				<height>208</height> 
+				<texture background="true">common/time_gradient_back.png</texture>
+			</control>
+
+			<!-- Clock -->
+			<control type="group">
+				<control type="label">
+                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
+					<textcolor>white</textcolor>
+					<width>400</width>
+					<height>70</height>
+					<include>Font_Main_SubHeader</include>
+					<label>$INFO[System.Time(hh:mm xx)]</label>
+					<align>right</align>
+					<animation effect="slide" end="0,-5" condition="Skin.HasSetting(Home_Font_Aeon)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posy>45</posy>
+					<width>400</width>
+					<font>Font_Landscape_TitleTVShow</font>
+					<textcolor>white</textcolor>
+					<info>System.Date</info>
+					<align>right</align>
+				</control>
+			</control>
+			<control type="group">
+				<posy>25</posy>
+				<include>Timer_Label</include>
+			</control>
+		</control>
+
+
+		<!-- Horizontal Home -->
+		<control type="group">
+                        <visible>[ Control.IsVisible(300) + Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock) + Skin.HasSetting(Home_Horizontal) ]</visible>
+
+			<control type="group">
+				<animation effect="slide" end="0,440" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom)">Conditional</animation>
+				<animation effect="slide" end="0,40" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom)">Conditional</animation>
+
+				<visible>![ Control.hasFocus(11000) | Control.hasFocus(11001) | Control.hasFocus(11002) | Control.hasFocus(11003) | Control.hasFocus(11004) | 
+					    Control.hasFocus(11005) | Control.hasFocus(11006) | Control.hasFocus(11007) | Control.hasFocus(11008) | Control.hasFocus(11009) | 
+					    Control.hasFocus(11010) | Control.hasFocus(11011) | Control.hasFocus(11012) | Control.hasFocus(11013) | Control.hasFocus(11001) ]
+				</visible>
+
+				<control type="label">
+                                        <include condition="!Skin.HasSetting(NoAccentClock)">HomeNoAccent</include>
+					<textcolor>white</textcolor>
+					<width>1280</width>
+					<height>70</height>
+					<font>Font_Bartowski_OSD</font>
+					<label>$INFO[System.Time(hh:mm xx)]</label>
+					<align>center</align>
+					<animation effect="slide" end="0,-5" condition="Skin.HasSetting(Home_Font_Aeon)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posy>160</posy>
+					<width>1280</width>
+					<font>Font_Landscape_TitleTVShow</font>
+					<textcolor>white</textcolor>
+					<info>System.Date</info>
+					<align>center</align>
+				</control>
+			</control>
+		</control>
+
+	</include>
 
 	<!-- Now Playing (RIGHT) -->
 	<include name="viewtype_nowplaying_right">
@@ -580,6 +600,42 @@
 
 	</include>
 
+	<include name="Weather_Widget">
+		<control type="group">
+			<visible>Skin.HasSetting(Weather_Widget) + ![ Player.hasAudio | Player.hasVideo ]</visible>
+			<posx>1190</posx>
+			<posy>640</posy>
+
+			<control type="image">
+				<width>80</width>
+				<height>80</height>
+				<texture>$INFO[Skin.String(Weather_Icon)]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+
+			<control type="label">
+				<posx>-10</posx>
+				<posy>14</posy>
+				<width>300</width>
+				<height>40</height>
+				<align>right</align>
+				<font>Font_Time_Global</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<label>$INFO[Skin.String(Weather_Condition)]</label>
+			</control>
+			<control type="label">
+				<posx>-10</posx>
+				<posy>44</posy>
+				<width>300</width>
+				<height>40</height>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<label>$INFO[Skin.String(Weather_Temperature)]</label>
+			</control>
+		</control>
+	</include>
+
 	<include name="Global_Time_Home">
 		<control type="group">
                         <visible>[Control.IsVisible(300) + !Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock)]</visible>
@@ -598,7 +654,7 @@
 					<posy>-10</posy>   
 					<width>420</width>     
 					<height>200</height> 
-					<texture>common/library_time_gradient.png</texture>
+					<texture background="true">common/library_time_gradient.png</texture>
 				</control>
 				<control type="label">
 					<width>300</width>
@@ -615,6 +671,9 @@
 					<info>System.Date</info>
 					<align>right</align>
 				</control>
+
+				<!-- Timer -->
+				<include>Timer_Label</include>
 		</control>
 	</include>
 
@@ -821,7 +880,7 @@
 					<posy>-20</posy>   
 					<width>500</width>     
 					<height>215</height> 
-					<texture>common/library_time_gradient.png</texture>
+					<texture background="true">common/library_time_gradient.png</texture>
 				</control>
 
 				<include>viewtype_nowplaying_right</include>
@@ -849,7 +908,7 @@
 					<posy>-10</posy>   
 					<width>413</width>     
 					<height>215</height> 
-					<texture>common/library_time_gradient.png</texture>
+					<texture background="true">common/library_time_gradient.png</texture>
 				</control>
 				<control type="label">
 					<width>200</width>
@@ -922,7 +981,7 @@
 					<posy>-10</posy>   
 					<width>413</width>     
 					<height>215</height> 
-					<texture>common/library_time_gradient.png</texture>
+					<texture background="true">common/library_time_gradient.png</texture>
 				</control>
 				<control type="label">
 					<width>300</width>
@@ -1368,119 +1427,361 @@
 	<!-- Settings Separator -->
 	<include name="settings_separator">
 		<width>860</width>
-		<height>1</height>
+		<height>0.5</height>
 		<texture>base-rounded.png</texture>
 		<colordiffuse>mainblue</colordiffuse>
 		<align>center</align>
 		<aligny>center</aligny>
 	</include>
 
+	<!-- Header (Large) -->
+	<include name="Font_Main_Header">
+		<include condition="Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Large_Thin_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Large_Regular_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Large_Aeon_NoFocus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Large_Light_NoFocus</include>
+	</include>
+
+	<!-- Header (Small) -->
+	<include name="Font_Main_SubHeader">
+		<include condition="Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Small_Thin_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Small_Regular_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Small_Aeon_NoFocus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Small_Light_NoFocus</include>
+	</include>
+
+	<!-- Compact (Small) -->
+	<include name="Font_Main_Compact">
+		<include condition="Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_xSmall_Thin_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_xSmall_Regular_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_xSmall_Aeon_NoFocus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_xSmall_Light_NoFocus</include>
+	</include>
+
+	<include name="Font_Sub_Header">
+		<include>Home_Menu_Font_Small_Light_NoFocus</include>
+	</include>
+
+	<!-- Home Menu (FONT) -->
+	<include name="Home_Menu_Label_NoFocus">
+		<!-- Large -->
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Large_Thin_NoFocus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Large_Regular_NoFocus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Large_Aeon_NoFocus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Large_Light_NoFocus</include>
+		<!-- Medium -->
+		<include condition="Skin.HasSetting(Home_Font_Medium) + Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Medium_Thin_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Medium) + Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Medium_Regular_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Medium) + Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Medium_Aeon_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Medium_Light_NoFocus</include>
+		<!-- Small -->
+		<include condition="Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Small_Thin_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Small_Regular_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Small_Aeon_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Small_Light_NoFocus</include>
+	</include>
+	<include name="Home_Menu_Label_Focus">
+		<!-- Large -->
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Large_Thin_Focus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Large_Regular_Focus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Large_Aeon_Focus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Large_Light_Focus</include>
+		<!-- Medium -->
+		<include condition="Skin.HasSetting(Home_Font_Medium) + Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Medium_Thin_Focus</include>
+		<include condition="Skin.HasSetting(Home_Font_Medium) + Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Medium_Regular_Focus</include>
+		<include condition="Skin.HasSetting(Home_Font_Medium) + Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Medium_Aeon_Focus</include>
+		<include condition="Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Medium_Light_Focus</include>
+		<!-- Small -->
+		<include condition="Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Thin)">Home_Menu_Font_Small_Thin_Focus</include>
+		<include condition="Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Regular)">Home_Menu_Font_Small_Regular_Focus</include>
+		<include condition="Skin.HasSetting(Home_Font_Small) + Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Small_Aeon_Focus</include>
+		<include condition="Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Home_Menu_Font_Small_Light_Focus</include>
+	</include>
+
+	<!-- Menu Section -->
+	<include name="Home_Menu_Section_Position">
+		<!-- Roboto -->
+		<animation effect="slide" end="0,15" condition="!Skin.HasSetting(Home_Font_Aeon) + !Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)">Conditional</animation>
+		<animation effect="slide" end="0,5" condition="!Skin.HasSetting(Home_Font_Aeon) + Skin.HasSetting(Home_Font_Medium) | Skin.HasSetting(Home_Font_Small)">Conditional</animation>
+		<!-- Aeon -->
+		<animation effect="slide" end="-5,20" condition="Skin.HasSetting(Home_Font_Aeon) + !Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)">Conditional</animation>
+		<animation effect="slide" end="-5,16" condition="Skin.HasSetting(Home_Font_Aeon) + Skin.HasSetting(Home_Font_Medium)">Conditional</animation>
+		<animation effect="slide" end="-5,4" condition="Skin.HasSetting(Home_Font_Aeon) + Skin.HasSetting(Home_Font_Small)">Conditional</animation>
+	</include>
+
+	<!-- Home Menu Font (LARGE) -->
+	<include name="Home_Menu_Font_Large_Default_NoFcous">
+		<posy>-20</posy>
+		<width>700</width>
+		<height>70</height>
+	</include>
+	<include name="Home_Menu_Font_Large_Default_Fcous">
+		<posy>-20</posy>
+		<width>700</width>
+		<height>80</height>
+	</include>
+	<include name="Home_Menu_Font_Large_Light_NoFocus">
+		<include>Home_Menu_Font_Large_Default_NoFcous</include>
+		<font>Font_Header1_Large_Light_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Large_Light_Focus">
+		<include>Home_Menu_Font_Large_Default_Fcous</include>
+		<font>Font_Header1_Large_Light_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Large_Thin_NoFocus">
+		<include>Home_Menu_Font_Large_Default_NoFcous</include>
+		<font>Font_Header1_Large_Thin_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Large_Thin_Focus">
+		<include>Home_Menu_Font_Large_Default_Fcous</include>
+		<font>Font_Header1_Large_Thin_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Large_Regular_NoFocus">
+		<include>Home_Menu_Font_Large_Default_NoFcous</include>
+		<font>Font_Header1_Large_Regular_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Large_Regular_Focus">
+		<include>Home_Menu_Font_Large_Default_Fcous</include>
+		<font>Font_Header1_Large_Regular_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Large_Aeon_NoFocus">
+		<width>700</width>
+		<height>70</height>
+		<font>Font_Header1_Large_Aeon_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Large_Aeon_Focus">
+		<width>700</width>
+		<height>80</height>
+		<font>Font_Header1_Large_Aeon_Focus</font>
+	</include>
+
 	<!-- Home Menu Font (MEDIUM) -->
-	<include name="Home_Font_Default_Medium">
-		<height>42</height>
-		<font>Font_Bartowski_MainMenu_Medium</font>
+	<include name="Home_Menu_Font_Medium_Default_NoFcous">
+		<posy>-20</posy>
+		<width>700</width>
+		<height>60</height>
 	</include>
-	<include name="Home_Font_Default_Medium_Focus">
-		<height>62</height>
-		<font>Font_Bartowski_MainMenu_Medium_Focus</font>
+	<include name="Home_Menu_Font_Medium_Default_Fcous">
+		<posy>-20</posy>
+		<width>700</width>
+		<height>70</height>
 	</include>
-	<include name="Home_Font_Aeon_Medium">
-		<height>42</height>
-		<font>Home_Font_Aeon_Medium</font>
+	<include name="Home_Menu_Font_Medium_Light_NoFocus">
+		<include>Home_Menu_Font_Medium_Default_NoFcous</include>
+		<font>Font_Header1_Medium_Light_NoFocus</font>
 	</include>
-	<include name="Home_Font_Aeon_Medium_Focus">
-		<height>62</height>
-		<font>Home_Font_Aeon_Medium_Focus</font>
+	<include name="Home_Menu_Font_Medium_Light_Focus">
+		<include>Home_Menu_Font_Medium_Default_Fcous</include>
+		<font>Font_Header1_Medium_Light_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Medium_Thin_NoFocus">
+		<include>Home_Menu_Font_Medium_Default_NoFcous</include>
+		<font>Font_Header1_Medium_Thin_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Medium_Thin_Focus">
+		<include>Home_Menu_Font_Medium_Default_Fcous</include>
+		<font>Font_Header1_Medium_Thin_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Medium_Regular_NoFocus">
+		<include>Home_Menu_Font_Medium_Default_NoFcous</include>
+		<font>Font_Header1_Medium_Regular_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Medium_Regular_Focus">
+		<include>Home_Menu_Font_Medium_Default_Fcous</include>
+		<font>Font_Header1_Medium_Regular_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Medium_Aeon_NoFocus">
+		<width>700</width>
+		<height>60</height>
+		<font>Font_Header1_Medium_Aeon_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Medium_Aeon_Focus">
+		<width>700</width>
+		<height>70</height>
+		<font>Font_Header1_Medium_Aeon_Focus</font>
 	</include>
 
 	<!-- Home Menu Font (SMALL) -->
-	<include name="Home_Font_Default_Small">
-		<height>30</height>
-		<font>Font_Bartowski_MainMenu_Small</font>
-	</include>
-	<include name="Home_Font_Default_Small_Focus">
+	<include name="Home_Menu_Font_Small_Default_NoFcous">
+		<posy>-14</posy>
+		<width>700</width>
 		<height>50</height>
-		<font>Font_Bartowski_MainMenu_Small_Focus</font>
 	</include>
-	<include name="Home_Font_Aeon_Small">
-		<height>30</height>
-		<font>Home_Font_Aeon_Small</font>
+	<include name="Home_Menu_Font_Small_Default_Fcous">
+		<posy>-14</posy>
+		<width>700</width>
+		<height>60</height>
 	</include>
-	<include name="Home_Font_Aeon_Small_Focus">
+	<include name="Home_Menu_Font_Small_Light_NoFocus">
+		<include>Home_Menu_Font_Small_Default_NoFcous</include>
+		<font>Font_Header1_Small_Light_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Small_Light_Focus">
+		<include>Home_Menu_Font_Small_Default_Fcous</include>
+		<font>Font_Header1_Small_Light_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Small_Thin_NoFocus">
+		<include>Home_Menu_Font_Small_Default_NoFcous</include>
+		<font>Font_Header1_Small_Thin_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Small_Thin_Focus">
+		<include>Home_Menu_Font_Small_Default_Fcous</include>
+		<font>Font_Header1_Small_Thin_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Small_Regular_NoFocus">
+		<include>Home_Menu_Font_Small_Default_NoFcous</include>
+		<font>Font_Header1_Small_Regular_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Small_Regular_Focus">
+		<include>Home_Menu_Font_Small_Default_Fcous</include>
+		<font>Font_Header1_Small_Regular_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_Small_Aeon_NoFocus">
+		<width>700</width>
 		<height>50</height>
-		<font>Home_Font_Aeon_Small_Focus</font>
+		<font>Font_Header1_Small_Aeon_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_Small_Aeon_Focus">
+		<width>700</width>
+		<height>60</height>
+		<font>Font_Header1_Small_Aeon_Focus</font>
+	</include>
+
+	<!-- Home Menu Font (xSMALL) -->
+	<include name="Home_Menu_Font_xSmall_Default_NoFcous">
+		<!--<posy>-14</posy>
+		<width>700</width>
+		<height>50</height>-->
+	</include>
+	<include name="Home_Menu_Font_xSmall_Default_Fcous">
+		<!--<posy>-14</posy>
+		<width>700</width>
+		<height>60</height>-->
+	</include>
+	<include name="Home_Menu_Font_xSmall_Light_NoFocus">
+		<include>Home_Menu_Font_xSmall_Default_NoFcous</include>
+		<font>Font_Header1_xSmall_Light_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_xSmall_Light_Focus">
+		<include>Home_Menu_Font_xSmall_Default_Fcous</include>
+		<font>Font_Header1_xSmall_Light_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_xSmall_Thin_NoFocus">
+		<include>Home_Menu_Font_xSmall_Default_NoFcous</include>
+		<font>Font_Header1_xSmall_Thin_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_xSmall_Thin_Focus">
+		<include>Home_Menu_Font_xSmall_Default_Fcous</include>
+		<font>Font_Header1_xSmall_Thin_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_xSmall_Regular_NoFocus">
+		<include>Home_Menu_Font_xSmall_Default_NoFcous</include>
+		<font>Font_Header1_xSmall_Regular_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_xSmall_Regular_Focus">
+		<include>Home_Menu_Font_xSmall_Default_Fcous</include>
+		<font>Font_Header1_xSmall_Regular_Focus</font>
+	</include>
+	<include name="Home_Menu_Font_xSmall_Aeon_NoFocus">
+		<width>700</width>
+		<height>50</height>
+		<font>Font_Header1_xSmall_Aeon_NoFocus</font>
+	</include>
+	<include name="Home_Menu_Font_xSmall_Aeon_Focus">
+		<width>700</width>
+		<height>60</height>
+		<font>Font_Header1_xSmall_Aeon_Focus</font>
 	</include>
 
 
-	<!-- Home Menu (5 Items) -->
-	<include name="Home_5Items">
-		<include condition="Skin.hasSetting(Home_Font_Medium)">Home_5Items_Medium</include>
-		<include condition="Skin.hasSetting(Home_Font_Small)">Home_5Items_Small</include>
+
+
+
+
+
+
+	<!-- Home Menu -->
+	<include name="Home_Menu_List">
+		<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore) + Skin.hasSetting(Home_Font_Small)">Home_Full_Small</include>
+		<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore) + Skin.hasSetting(Home_Font_Medium)">Home_Full_Medium</include>
+		<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore) + !Skin.hasSetting(Home_Font_Small) + !Skin.hasSetting(Home_Font_Medium)">Home_Full_Large</include>
+
+		<include condition="Skin.HasSetting(HomeExtended) + Skin.hasSetting(Home_Font_Small)">Home_Half_Small</include>
+		<include condition="Skin.HasSetting(HomeExtended) + Skin.hasSetting(Home_Font_Medium)">Home_Half_Medium</include>
+		<include condition="Skin.HasSetting(HomeExtended) + !Skin.hasSetting(Home_Font_Small) + !Skin.hasSetting(Home_Font_Medium)">Home_Half_Large</include>
+
+		<include condition="Skin.HasSetting(HomeExtendedMore) + Skin.hasSetting(Home_Font_Small)">Home_Quarter_Small</include>
+		<include condition="Skin.HasSetting(HomeExtendedMore) + Skin.hasSetting(Home_Font_Medium)">Home_Quarter_Medium</include>
+		<include condition="Skin.HasSetting(HomeExtendedMore) + !Skin.hasSetting(Home_Font_Small) + !Skin.hasSetting(Home_Font_Medium)">Home_Quarter_Large</include>
+	</include>
+
+	<!-- Home Menu (Large) -->
+	<include name="Home_Full_Large">
 		<posx>20</posx>
-		<posy>160</posy>
-		<height>370</height>
+		<posy>40</posy>
+		<height>640</height>
 		<width>1000</width>
-		<focusposition>2</focusposition>
-		<scrolltime tween="quadratic" easing="out">400</scrolltime>
-	</include>
-	<include name="Home_5Items_Medium">
-		<posy>150</posy>
-		<height>400</height>
 		<focusposition>4</focusposition>
 	</include>
-	<include name="Home_5Items_Small">
-		<posy>180</posy>
-		<height>350</height>
-		<focusposition>5</focusposition>
-	</include>
-
-	<!-- Home Menu (7 Items) -->
-	<include name="Home_7Items">
-		<include condition="Skin.hasSetting(Home_Font_Medium)">Home_7Items_Medium</include>
-		<include condition="Skin.hasSetting(Home_Font_Small)">Home_7Items_Small</include>
+	<include name="Home_Half_Large">
 		<posx>20</posx>
-		<posy>100</posy>
-		<height>510</height>
+		<posy>110</posy>
+		<height>500</height>
 		<width>1000</width>
 		<focusposition>3</focusposition>
-		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
-	<include name="Home_7Items_Medium">
-		<posy>110</posy>
-		<height>480</height>
+	<include name="Home_Quarter_Large">
+		<posx>20</posx>
+		<posy>180</posy>
+		<height>360</height>
+		<width>1000</width>
+		<focusposition>2</focusposition>
+	</include>
+
+	<!-- Home Menu (Medium) -->
+	<include name="Home_Full_Medium">
+		<posx>20</posx>
+		<posy>25</posy>
+		<height>670</height>
+		<width>1000</width>
 		<focusposition>5</focusposition>
 	</include>
-	<include name="Home_7Items_Small">
-		<posy>120</posy>
-		<height>470</height>
-		<focusposition>7</focusposition>
-	</include>
-
-	<!-- Home Menu (9 Items) -->
-	<include name="Home_9Items">
-		<include condition="Skin.hasSetting(Home_Font_Medium)">Home_9Items_Medium</include>
-		<include condition="Skin.hasSetting(Home_Font_Small)">Home_9Items_Small</include>
+	<include name="Home_Half_Medium">
 		<posx>20</posx>
-		<posy>20</posy>
-		<height>650</height>
+		<posy>85</posy>
+		<height>550</height>
 		<width>1000</width>
 		<focusposition>4</focusposition>
-		<scrolltime tween="quadratic" easing="out">400</scrolltime>
 	</include>
-	<include name="Home_9Items_Medium">
-		<focusposition>7</focusposition>
-	</include>
-	<include name="Home_9Items_Small">
-		<focusposition>10</focusposition>
+	<include name="Home_Quarter_Medium">
+		<posx>20</posx>
+		<posy>145</posy>
+		<height>430</height>
+		<width>1000</width>
+		<focusposition>3</focusposition>
 	</include>
 
-	<!-- Home Menu (Aeon Font) -->
-	<include name="Home_Font_Aeon">
-		<font>AeonFont_MainMenu_Focus</font>
+	<!-- Home Menu (Small) -->
+	<include name="Home_Full_Small">
+		<posx>20</posx>
+		<posy>30</posy>
+		<height>660</height>
+		<width>1000</width>
+		<focusposition>6</focusposition>
 	</include>
-	<!-- Home Menu (Big Font) -->
-	<include name="Home_Font_Aeon">
-		<font>Font_Bartowski_MainMenu</font>
+	<include name="Home_Half_Small">
+		<posx>20</posx>
+		<posy>80</posy>
+		<height>560</height>
+		<width>1000</width>
+		<focusposition>5</focusposition>
+	</include>
+	<include name="Home_Quarter_Small">
+		<posx>20</posx>
+		<posy>130</posy>
+		<height>460</height>
+		<width>1000</width>
+		<focusposition>4</focusposition>
 	</include>
 
 	<!-- Home Menu (Accent Color) -->
@@ -1513,7 +1814,8 @@
 			<posy>6</posy>
 			<width>34</width>
 			<height>34</height>
-			<info>ListItem.Overlay</info>
+			<!--<info>ListItem.Overlay</info>-->
+			<texture background="true">$INFO[ListItem.Overlay]</texture>
 			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
 			<colordiffuse>FFCCCCCC</colordiffuse>
 			<visible>[!Skin.HasSetting(overlay_movies) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)]</visible>
@@ -1524,7 +1826,8 @@
 			<posy>6</posy>
 			<width>34</width>
 			<height>34</height>
-			<info>ListItem.Overlay</info>
+			<texture background="true">$INFO[ListItem.Overlay]</texture>
+			<!--<info>ListItem.Overlay</info>-->
 			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
 			<colordiffuse>FFCCCCCC</colordiffuse>
 			<visible>[!Skin.HasSetting(overlay_movies) + !IsEmpty(ListItem.Overlay) + Container.Content(homemovies)]</visible>
@@ -1535,7 +1838,8 @@
 			<posy>6</posy>
 			<width>34</width>
 			<height>34</height>
-			<info>ListItem.Overlay</info>
+			<texture background="true">$INFO[ListItem.Overlay]</texture>
+			<!--<info>ListItem.Overlay</info>-->
 			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
 			<colordiffuse>FFCCCCCC</colordiffuse>
 			<visible>[!Skin.HasSetting(overlay_episodes) + !IsEmpty(ListItem.Overlay) + Container.Content(episodes)]</visible>
@@ -1546,7 +1850,8 @@
 			<posy>6</posy>
 			<width>34</width>
 			<height>34</height>
-			<texture>OverlayUnwatched.png</texture>
+			<texture background="true">OverlayUnwatched.png</texture>
+			<!--<texture>OverlayUnwatched.png</texture>-->
 			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
 			<colordiffuse>FFCCCCCC</colordiffuse>
 			<visible>Skin.HasSetting(overlay_count) + !Skin.HasSetting(overlay_tvshows) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(tvshows) ]</visible>
@@ -1560,7 +1865,7 @@
 				<posy>0</posy>
 				<width>45</width>
 				<height>45</height>
-				<texture>OverlayUnwatched.png</texture>
+				<texture background="true">OverlayUnwatched.png</texture>
 				<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
 				<colordiffuse>FFCCCCCC</colordiffuse>
 			</control>
@@ -1569,7 +1874,7 @@
 				<posy>5</posy>
 				<width>35</width>
 				<height>35</height>
-				<texture>OverlayUnwatched.png</texture>
+				<texture background="true">OverlayUnwatched.png</texture>
 				<colordiffuse>FF222222</colordiffuse>
 			</control>
 			<control type="label">
@@ -1591,7 +1896,7 @@
 			<posy>6</posy>
 			<width>34</width>
 			<height>34</height>
-			<texture>OverlayUnwatched.png</texture>
+			<texture background="true">OverlayUnwatched.png</texture>
 			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
 			<colordiffuse>FFCCCCCC</colordiffuse>
 			<visible>Skin.HasSetting(overlay_count) + !Skin.HasSetting(overlay_seasons) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(seasons) ]</visible>
@@ -1605,7 +1910,7 @@
 				<posy>0</posy>
 				<width>45</width>
 				<height>45</height>
-				<texture>OverlayUnwatched.png</texture>
+				<texture background="true">OverlayUnwatched.png</texture>
 				<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
 				<colordiffuse>FFCCCCCC</colordiffuse>
 			</control>
@@ -1614,7 +1919,7 @@
 				<posy>5</posy>
 				<width>35</width>
 				<height>35</height>
-				<texture>OverlayUnwatched.png</texture>
+				<texture background="true">OverlayUnwatched.png</texture>
 				<colordiffuse>FF222222</colordiffuse>
 			</control>
 			<control type="label">
@@ -1671,7 +1976,7 @@
 				<posx>320</posx>
                                 <posy>75</posy>
 				<width>640</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
@@ -1730,7 +2035,7 @@
 				<posx>320</posx>
                                 <posy>75</posy>
 				<width>640</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
@@ -1789,7 +2094,7 @@
 				<posx>320</posx>
                                 <posy>75</posy>
 				<width>640</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
@@ -1863,7 +2168,7 @@
 				<posx>230</posx>
                                 <posy>81</posy>
 				<width>820</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
@@ -1876,7 +2181,7 @@
 				<posx>230</posx>
                                 <posy>505</posy>
 				<width>820</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
@@ -1890,15 +2195,11 @@
 	<include name="dialog_header">
         
 		<!-- Background -->
-		<control type="largeimage">
-			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture border="40">osd/videoOSD_settings_back1.png</texture>
-			<animation effect="fade" start="0" end="40" time="600">Visible</animation>
-			<animation effect="fade" start="40" end="0" time="600">Hidden</animation>
+		<control type="image">
+			<include>background_default</include>
+			<texture>nav_black.png</texture>
+			<colordiffuse>CC000000</colordiffuse>
+			<visible>!Window.isVisible(10090)</visible> <!-- Preplay Screen -->
 		</control>
 
 		<!-- Header -->
@@ -1906,126 +2207,30 @@
 			<include>Animation_Bartowski_Context_Zoom</include>
                         <posx>0</posx>
                         <posy>70</posy>
-			<!-- Custom Selector Labels -->
-			<control type="label">
-				<posx>360</posx>
-				<posy>0</posy>
-				<width>560</width>
-				<height>30</height>
-				<font>Font_Bartowski_Main_SubMenu</font>
-				<textcolor>white</textcolor>
-				<align>center</align>
-				<label>$INFO[Skin.String(selector1)] $INFO[Skin.String(selector2)]</label>
-				<visible>[!isEmpty(Skin.String(selector1)) + !isEmpty(Skin.String(selector2))] + !Window.isVisible(106)</visible>
-			</control>
-                        <control type="label" id="1">
-                                <posx>360</posx>
-                                <posy>0</posy>
-                                <width>560</width>
-                                <height>30</height>
-				<label></label>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <textcolor>white</textcolor>
-                                <align>center</align>
+
+			<!-- ID1 (Hide) -->
+			<control type="label" id="1">
+                                <posy>-500</posy>
                         </control>
-  			<!-- CONTEXT DIALOG -->
-			<control type="label">
-                                <description>header label</description>
-                                <posx>360</posx>
-                                <posy>0</posy>
-                                <width>560</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$INFO[ListItem.Label]</label>
-				<scroll>true</scroll>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-                                <visible>Window.IsVisible(106) + !isEmpty(ListItem.Label)</visible>
-                        </control>
-  			<!-- CONTEXT DIALOG -->
-			<control type="label">
-                                <description>header label</description>
-                                <posx>360</posx>
-                                <posy>0</posy>
-                                <width>560</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>Options</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-                                <visible>Window.IsVisible(106) + isEmpty(ListItem.Label)</visible>
-                        </control>
-  			<!-- DIALOG OSD -->
-			<control type="label">
-                                <description>header label</description>
-                                <posx>360</posx>
-                                <posy>0</posy>
-                                <width>560</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>OSD Settings</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-                                <visible>Window.IsVisible(11115)</visible>
-                        </control>
-  			<!-- VIDEO OSD SETTINGS -->
-			<control type="label">
-                                <description>header label</description>
-                                <posx>360</posx>
-                                <posy>0</posy>
-                                <width>560</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$LOCALIZE[3] - $LOCALIZE[5]</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-                                <visible>Window.IsVisible(123)</visible>
-                        </control>
-  			<!-- AUDIO OSD SETTINGS -->
+
+  			<!-- Header Label -->
                         <control type="label">
-                                <description>header label</description>
-                                <posx>360</posx>
+                                <posx>340</posx>
                                 <posy>0</posy>
-                                <width>560</width>
+				<width>600</width>
                                 <height>30</height>
                                 <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$LOCALIZE[292] - $LOCALIZE[5]</label>
+                                <label>$VAR[Var_Dialog_Header]</label>
                                 <align>center</align>
                                 <textcolor>white</textcolor>
-                                <visible>Window.IsVisible(124)</visible>
-                        </control>
-  			<!-- FILE BROWSER -->
-                        <control type="label">
-                                <description>header label</description>
-                                <posx>360</posx>
-                                <posy>0</posy>
-                                <width>560</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>File Browser</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-                                <visible>Window.IsVisible(126)</visible>
-                        </control>
-  			<!-- BOOKMARKS -->
-                        <control type="label">
-                                <description>header label</description>
-                                <posx>360</posx>
-                                <posy>0</posy>
-                                <width>560</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$INFO[Container(11).NumItems] Bookmark(s)</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-                                <visible>Window.IsVisible(125)</visible>
+				<scroll>yes</scroll>
                         </control>
 			<!-- 1st SEPERATOR LINE -->
                         <control type="image">
 				<posx>320</posx>
                                 <posy>75</posy>
 				<width>640</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
@@ -2035,11 +2240,11 @@
 				<posx>320</posx>
                                 <posy>425</posy>
 				<width>640</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
-				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(125) |  Window.IsVisible(126) | Window.IsVisible(100) | Window.IsVisible(2002)</visible>
+				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(125) |  Window.IsVisible(126) | Window.IsVisible(100) |  Window.IsVisible(3100) | Window.IsVisible(2002)</visible>
                         </control>
 		</control>
 	</include>
@@ -2228,6 +2433,7 @@
 
 	<!-- Dialog Footer-->
 	<include name="dialog_footer">
+
 		<!-- Skin Select -->
 		<control type="group">
 			<visible>Control.IsVisible(6)</visible>
@@ -2297,6 +2503,7 @@
 			<ondown>666</ondown>
 			<itemgap>0</itemgap>
                         <orientation>horizontal</orientation>
+
 			<control type="button" id="413">
                                 <description>Ok</description>
                                 <label>$LOCALIZE[186]</label>
@@ -2306,6 +2513,7 @@
 				<width>320</width>
 				<align>center</align>
                         </control>
+
                         <control type="button" id="414">
                                 <description>Cancel</description>
                                 <label>$LOCALIZE[222]</label>
@@ -2416,7 +2624,6 @@
 				<ondown>11</ondown>
                         </control>
 		</control>
-
 	</include>
 	<!-- END Dialog Footer END -->
 
@@ -2525,7 +2732,7 @@
 	<include name="Settings_Section">
 		<include>Animation_CommonFade</include>
 		<posx>300</posx>
-		<posy>75</posy>
+		<posy>70</posy>
 		<width>860</width>
 		<height>594</height>
 		<itemgap>0</itemgap>
@@ -2536,7 +2743,7 @@
 	<include name="Settings_Section_HalfLeft">
 		<include>Animation_CommonFade</include>
 		<posx>300</posx>
-		<posy>75</posy>
+		<posy>70</posy>
 		<width>420</width><!--860 -->
 		<height>594</height>
 		<itemgap>0</itemgap>
@@ -2547,7 +2754,7 @@
 	<include name="Settings_Section_HalfRight">
 		<include>Animation_CommonFade</include>
 		<posx>770</posx>
-		<posy>75</posy>
+		<posy>70</posy>
 		<width>420</width><!--860 -->
 		<height>594</height>
 		<itemgap>0</itemgap>
@@ -2562,6 +2769,21 @@
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 		<colordiffuse>mainblue</colordiffuse>
 		<animation effect="fade" end="60" condition="true">Conditional</animation>
+	</include>
+
+	<!-- Mouse Support -->
+	<include name="Mouse_Trigger">
+		<label>-</label>
+		<font>-</font>
+		<!--<texturenofocus>dot.png</texturenofocus>
+		<texturefocus>dot.png</texturefocus>-->
+		<!--<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>-->
+		<onfocus>-</onfocus>
+		<onclick>-</onclick>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+		<visible>system.getbool(input.enablemouse)</visible>
 	</include>
 
 	<!-- KaiToast Header -->
@@ -2602,5 +2824,165 @@
 		<value condition="Skin.HasSetting(Home_Font_Small)">21</value>
 		<value>9</value>
 	</variable>
+
+	<include name="Keyboard_Viewmode">
+		<onup>Dialog.Close(103)</onup>
+		<onup>SetFocus(100)</onup>
+		<ondown>19101</ondown>
+		<width>50</width>
+		<height>50</height>
+		<texturenofocus border="3">confluence/KeyboardKeyNF.png</texturenofocus>
+		<texturefocus border="5">confluence/KeyboardKey.png</texturefocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Viewmode_List_Font_Keyboard</font>
+		<focusedcolor>black</focusedcolor>
+	</include>
+	<include name="Keyboard_Viewmode_2">
+		<onup>19100</onup>
+		<width>50</width>
+		<height>50</height>
+		<texturenofocus border="3">confluence/KeyboardKeyNF.png</texturenofocus>
+		<texturefocus border="5">confluence/KeyboardKey.png</texturefocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Viewmode_List_Font_Keyboard</font>
+		<focusedcolor>black</focusedcolor>
+	</include>
+
+	<include name="ScrollTime_200">
+		<scrolltime>200</scrolltime>
+	</include>
+
+	<include name="ScrollTime_400">
+		<scrolltime>400</scrolltime>
+	</include>
+
+	<include name="Font_Header1_NoFocus">
+		<include condition="Skin.HasSetting(Home_Font_Thin)">Font_Header1_Large_Thin_NoFocus</include>
+		<include condition="Skin.HasSetting(Home_Font_Regular)">Font_Header1_Large_Regular_NoFocus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Regular) + !Skin.HAsSetting(Home_Font_Thin)">Font_Header1_Large_Light_NoFocus</include>
+	</include>
+	<include name="Font_Header1_Focus">
+		<include condition="Skin.HasSetting(Home_Font_Thin)">Font_Header1_Large_Thin_Focus</include>
+		<include condition="Skin.HasSetting(Home_Font_Regular)">Font_Header1_Large_Regular_Focus</include>
+		<include condition="!Skin.HasSetting(Home_Font_Regular) + !Skin.HAsSetting(Home_Font_Thin)">Font_Header1_Large_Light_Focus</include>
+	</include>
+
+
+	<!-- Large -->
+	<include name="Font_Header1_Large_Thin_NoFocus">
+		<font>Font_Header1_Large_Thin_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Large_Light_NoFocus">
+		<font>Font_Header1_Large_Light_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Large_Regular_NoFocus">
+		<font>Font_Header1_Large_Regular_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Large_Thin_Focus">
+		<font>Font_Header1_Large_Thin_Focus</font>
+	</include>
+	<include name="Font_Header1_Large_Light_Focus">
+		<font>Font_Header1_Large_Light_Focus</font>
+	</include>
+	<include name="Font_Header1_Large_Regular_Focus">
+		<font>Font_Header1_Large_Regular_Focus</font>
+	</include>
+
+	<!-- Medium -->
+	<include name="Font_Header1_Medium_Thin_NoFocus">
+		<font>Font_Header1_Medium_Thin_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Medium_Light_NoFocus">
+		<font>Font_Header1_Medium_Light_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Medium_Regular_NoFocus">
+		<font>Font_Header1_Medium_Regular_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Medium_Thin_Focus">
+		<font>Font_Header1_Medium_Thin_Focus</font>
+	</include>
+	<include name="Font_Header1_Medium_Light_Focus">
+		<font>Font_Header1_Medium_Light_Focus</font>
+	</include>
+	<include name="Font_Header1_Medium_Regular_Focus">
+		<font>Font_Header1_Medium_Regular_Focus</font>
+	</include>
+
+	<!-- Small -->
+	<include name="Font_Header1_Small_Thin_NoFocus">
+		<font>Font_Header1_Small_Thin_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Small__Light_NoFocus">
+		<font>Font_Header1_Small_Light_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Small__Regular_NoFocus">
+		<font>Font_Header1_Small_Regular_NoFocus</font>
+	</include>
+	<include name="Font_Header1_Small__Thin_Focus">
+		<font>Font_Header1_Small_Thin_Focus</font>
+	</include>
+	<include name="Font_Header1_Small__Light_Focus">
+		<font>Font_Header1_Small_Light_Focus</font>
+	</include>
+	<include name="Font_Header1_Small__Regular_Focus">
+		<font>Font_Header1_Small_Regular_Focus</font>
+	</include>
+
+	<include name="Timer_Label">
+		<!-- Timer -->
+		<control type="group">
+			<visible>System.HasAlarm(alarm)</visible>
+			<control type="image">
+				<posx>-20</posx>
+				<posy>50</posy>
+				<width>20</width>
+				<height>20</height>
+				<texture background="true">nav_timer.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>-25</posx>
+				<posy>49</posy>
+				<width>250</width>
+				<font>Font_Date</font>
+				<textcolor>white</textcolor>
+				<info>Skin.String(Timer_Action)</info>
+				<align>right</align>
+			</control>
+		</control>				
+	</include>
+
+
+	<!-- XBMC -->
+	<include name="Context_Sort_Visible">
+		<visible>Skin.HasSetting(XBMC)</visible>
+	</include>
+
+	<!-- PLEX -->
+	<include name="Context_Queue_Visible">
+		<visible></visible>
+	</include>
+
+	<include name="Context_Favourite_Visible">
+		<visible>!Skin.HasSetting(XBMC) + !isEmpty(ListItem.Path)</visible>
+	</include>
+
+	<include name="Context_Unwatched_Visible">
+		<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png) + [ Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) ]</visible>
+	</include>
+
+	<include name="Context_Watched_Visible">
+		<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + [ Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) ]</visible>
+	</include>
+
+	<include name="Context_Context_Visible">
+		<visible>!Skin.HasSetting(Context_NoQuick)</visible>
+	</include>
+
+	<include name="Keyboard_Width">
+		<width>640</width>
+	</include>
 
 </includes>

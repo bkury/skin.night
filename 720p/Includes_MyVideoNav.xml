@@ -4,7 +4,12 @@
 	<!-- #################################### Viewtype Navigation ################################# -->
 	<include name="viewtype_navigation">
 	<control type="group">
-		<visible allowhiddenfocus="true">[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus | ControlGroup(1306).HasFocus | Window.isActive(1120) ]</visible>
+		<visible allowhiddenfocus="true">
+			[ ControlGroup(7000).HasFocus | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus | ControlGroup(1306).HasFocus |
+			Control.HasFocus(490) | Control.HasFocus(491) |
+			Window.isActive(1120) ]
+		</visible>
+
 		<animation effect="slide" start="0,200" time="800" tween="back" easing="inout" condition="ControlGroup(7000).HasFocus | Window.isActive(1120) | ControlGroup(1300).HasFocus | ControlGroup(1301).HasFocus | ControlGroup(1302).HasFocus | ControlGroup(1303).HasFocus | ControlGroup(1305).HasFocus | ControlGroup(1306).HasFocus">conditional</animation>
 		<animation effect="fade" end="0" time="800">Hidden</animation>
 		<animation effect="fade" end="100" time="800">Visible</animation>
@@ -24,7 +29,7 @@
 				<posx>-5</posx>
 				<posy>657</posy>
 				<width>1290</width>
-				<height>1</height>
+				<height>0.5</height>
 				<texture>base-rounded.png</texture>
 				<colordiffuse>mainblue</colordiffuse>
 			</control>
@@ -79,6 +84,18 @@
 
 			<!-- Navigation -->
 			<control type="group" id="7000">
+
+				<!-- Mouse Trigger -->
+				<control type="button" id="60041">
+					<posx>0</posx>
+					<posy>-580</posy>
+					<width>1280</width>
+					<height>620</height>
+					<include>Mouse_Trigger</include>
+					<visible>Control.hasFocus(60040) | Control.hasFocus(60041) | ControlGroup(7000).hasFocus</visible>
+				</control>
+
+
 				<posy>680</posy>
 				<animation effect="slide" end="-110" condition="Window.isVisible(10094)">Conditional</animation>
 
@@ -262,7 +279,7 @@
 							<texturenofocus>b-video.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
 							<onleft>498</onleft>
-							<onright>494</onright>
+							<onright>496</onright>
 							<ondown>100</ondown>
 		                                        <onup>100</onup>
 							<onclick>Control.SetFocus(1300)</onclick>
@@ -272,7 +289,7 @@
 							<posx>40</posx>
 							<width>100</width>
 							<height>24</height>
-							<label>$INFO[Container.ViewMode]</label>
+							<label>View Mode</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -291,7 +308,7 @@
 							<posx>40</posx>
 							<width>100</width>
 							<height>24</height>
-							<label>$INFO[Container.ViewMode]</label>
+							<label>Viewmode</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -299,8 +316,19 @@
 					</control>
 				</control>
 
+				<!-- Viewmode Name -->
+				<control type="label">
+					<posx>430</posx>
+					<posy>-12</posy>
+					<width>420</width>
+					<align>center</align>
+					<font>Font_Viewmode_Name</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[Container.ViewMode]</label>
+				</control>
+
 				<!-- Filter -->
-				<control type="group">
+<!--				<control type="group">
 					<posx>470</posx>
 					<control type="group">
 						<visible>![Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))]</visible>
@@ -329,7 +357,7 @@
 							<posx>35</posx>
 							<width>90</width>
 							<height>24</height>
-							<label>31021</label><!-- Filter -->
+							<label>31021</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
@@ -345,7 +373,6 @@
 						</control>
 					</control>
 
-					<!-- Disabled Filter -->
 					<control type="group">
 						<visible>[Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))]</visible>
 						<control type="image">
@@ -358,16 +385,16 @@
 							<posx>40</posx>
 							<width>90</width>
 							<height>24</height>
-							<label>31021</label><!-- Filter -->
+							<label>31021</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
 						</control>
 					</control>
-				</control>
+				</control>-->
 
 				<!-- Sort -->
-				<control type="group">
+<!--				<control type="group">
 					<posx>680</posx>
 			
 					<control type="group">
@@ -385,7 +412,7 @@
 							<texturenofocus>options_osd.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
 	
-							<onclick>Skin.SetString(selector1,$LOCALIZE[31022])</onclick> <!-- Sort -->
+							<onclick>Skin.SetString(selector1,$LOCALIZE[31022])</onclick>
 							<onclick>Skin.SetString(selector2,)</onclick>
 		                                        <onclick>Control.SetFocus(19010)</onclick>
 
@@ -399,14 +426,13 @@
 							<posx>35</posx>
 							<width>100</width>
 							<height>24</height>
-							<label>31022</label><!-- Sort -->
+							<label>31022</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
 						</control>
 					</control>
 
-					<!-- Disabled Sort -->
 					<control type="group">
 						<visible>[ Container.Content(seasons) | Container.Content(channels) | Container.Content(channel) | Container.Content(episodes) ]</visible>
 						<control type="image">
@@ -419,13 +445,13 @@
 							<posx>35</posx>
 							<width>120</width>
 							<height>24</height>
-							<label>31022</label><!-- Sort -->
+							<label>31022</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
 						</control>
 					</control>
-				</control>
+				</control>-->
 
 				<!-- Options -->
 				<control type="group">
@@ -442,10 +468,10 @@
 						<texturefocus>b-pp-system.png</texturefocus>
 						<texturenofocus>b-pp-system.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
-						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
+						<onclick>Skin.SetString(selector1,)</onclick>
 						<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
 	                                        <onclick>Control.SetFocus(9999)</onclick>
-						<onleft>495</onleft>
+						<onleft>493</onleft>
 						<onright>497</onright>
 						<ondown>100</ondown>
 						<onup>100</onup>
@@ -672,9 +698,677 @@
 						<shadowcolor>FF000000</shadowcolor>
 					</control>
 				</control>
+
 			</control>
 		</control>
 		</control>
+
+	<!-- ####################### QUICK NAVIGATION ######################## -->
+
+	<control type="group">
+		<posy>-720</posy>
+		<animation effect="slide" end="0,720" time="0" condition="ControlGroup(7001).HasFocus | Control.HasFocus(40001) | Control.HasFocus(40010)">Conditional</animation>
+		<include>Animation_CommonFade</include>
+		<visible allowhiddenfocus="true">[ ControlGroup(7001).HasFocus | Control.HasFocus(40001) | Control.HasFocus(40010) ] + !Window.isVisible(3100)</visible>
+
+		<control type="group" id="7001">
+
+			<!-- Mouse Trigger -->
+			<control type="button" id="60031">
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>1260</width>
+				<height>640</height>
+				<include>Mouse_Trigger</include>
+				<visible>Control.hasFocus(60030) | Control.hasFocus(60031) | ControlGroup(7001).hasFocus</visible>
+			</control>
+
+			<!-- Background -->
+			<control type="image">
+				<include>background_default</include>
+	                        <texture>nav_black.png</texture>
+				<colordiffuse>CD000000</colordiffuse>
+	                </control>
+
+			<!-- Quick Navigation -->
+			<control type="group">
+				<posy>120</posy>
+				<animation effect="slide" end="0,60" condition="!Skin.HasSetting(XBMC) + Container.Content(channel)">Conditonal</animation>
+
+				<!-- QUICK MENU (BUTTONS) -->
+				<control type="grouplist" id="18900">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>100</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<itemgap>60</itemgap>
+					<onup>100</onup>
+					<ondown>19000</ondown>
+
+					<!-- Navigation (UP) -->
+					<control type="button" id="450">
+	                                        <width>64</width>
+	                                        <height>96</height>
+						<texturefocus>nav_left.png</texturefocus>
+						<texturenofocus>nav_left.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+	                                        <onclick>PageUp(50)</onclick>
+	                                </control>
+
+					<!-- Navigation (DOWN) -->
+					<control type="button" id="451">
+	                                        <width>64</width>
+	                                        <height>96</height>
+						<texturefocus>nav_right.png</texturefocus>
+						<texturenofocus>nav_right.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+        	                                <onclick>PageDown(50)</onclick>
+	                                </control>
+
+					<!-- Unwatched -->
+					<control type="button" id="452">
+	                                        <width>96</width>
+	                                        <height>96</height>
+						<texturefocus>nav_unwatched.png</texturefocus>
+						<texturenofocus>nav_unwatched.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>ToggleWatched</onclick>
+						<include>Context_Unwatched_Visible</include>
+					</control>
+
+					<!-- Watched -->
+					<control type="button" id="453">
+	                                        <width>96</width>
+	                                        <height>96</height>
+						<texturefocus>nav_circle_checked.png</texturefocus>
+						<texturenofocus>nav_circle_checked.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>ToggleWatched</onclick>
+						<include>Context_Watched_Visible</include>
+	                                </control>
+
+					<!-- Queue -->
+					<control type="button" id="454">
+	                                        <width>96</width>
+	                                        <height>96</height>
+						<texturefocus>nav_add.png</texturefocus>
+						<texturenofocus>nav_add.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>Queue</onclick>
+						<include>Context_Queue_Visible</include>
+	                                </control>
+
+					<!-- Sort -->
+					<control type="button" id="455">
+	                                        <width>96</width>
+	                                        <height>96</height>
+						<texturefocus>nav_sort.png</texturefocus>
+						<texturenofocus>nav_sort.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>Container.NextSortMethod</onclick>
+						<visible>Skin.HasSetting(XBMC)</visible>
+						<include>Context_Sort_Visible</include>
+	                                </control>
+
+					<!-- Favourite -->
+					<control type="button" id="457">
+	                                        <width>96</width>
+	                                        <height>96</height>
+						<texturefocus>nav_star.png</texturefocus>
+						<texturenofocus>nav_star.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+        	                                <onclick>ActivateWindow(3100)</onclick>
+						<include>Context_Favourite_Visible</include>
+	                                </control>
+
+					<!-- Context Menu -->
+					<control type="button" id="458">
+	                                        <width>96</width>
+	                                        <height>90</height>
+						<texturefocus>nav_context.png</texturefocus>
+						<texturenofocus>nav_context.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>Skin.SetBool(Context_Enabled)</onclick>
+						<onclick>SetFocus(100)</onclick>
+						<onclick>ContextMenu</onclick>
+						<include>Context_Context_Visible</include>
+	                                </control>
+
+					<!-- Library (XBMC) -->
+					<control type="button" id="459">
+	                                        <width>96</width>
+	                                        <height>96</height>
+						<texturefocus>nav_reload.png</texturefocus>
+						<texturenofocus>nav_reload.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+        	                                <onclick>UpdateLibrary(video)</onclick>
+						<visible>Skin.HasSetting(XBMC)</visible>
+	                                </control>
+
+					<!-- Search -->
+					<control type="button" id="460">
+	                                        <width>96</width>
+	                                        <height>96</height>
+						<texturefocus>nav_search.png</texturefocus>
+						<texturenofocus>nav_search.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+						<onclick>SetFocus(100)</onclick>
+						<onclick>Filter</onclick>
+	                                </control>
+
+
+				</control>
+
+				<!-- QUICK MENU (IMAGES) -->
+				<control type="grouplist">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>100</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<itemgap>60</itemgap>
+
+					<!-- Navigation -->
+					<control type="image">
+						<width>64</width>
+						<height>96</height>
+						<texture>nav_left.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(450)">Conditional</animation>
+					</control>
+
+					<!-- Navigation -->
+					<control type="image">
+						<width>64</width>
+						<height>96</height>
+						<texture>nav_right.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(451)">Conditional</animation>
+					</control>
+
+					<!-- Unwatched -->
+					<control type="image">
+						<width>96</width>
+						<height>96</height>
+						<texture>nav_unwatched.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(452)">Conditional</animation>
+						<include>Context_Unwatched_Visible</include>
+					</control>
+
+					<!-- Watched -->
+					<control type="image">
+						<width>96</width>
+						<height>96</height>
+						<texture>nav_circle_checked.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(453)">Conditional</animation>
+						<include>Context_Watched_Visible</include>
+					</control>
+
+					<!-- Queue -->
+					<control type="image">
+						<width>96</width>
+						<height>96</height>
+						<texture>nav_add.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(454)">Conditional</animation>
+						<include>Context_Queue_Visible</include>
+					</control>
+
+					<!-- Sort -->
+					<control type="image">
+						<width>96</width>
+						<height>96</height>
+						<texture>nav_sort</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(455)">Conditional</animation>
+						<visible>Skin.HasSetting(XBMC)</visible>
+						<include>Context_Sort_Visible</include>
+					</control>
+
+					<!-- Favourite -->
+					<control type="image">
+						<width>96</width>
+						<height>96</height>
+						<texture>nav_star.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(457)">Conditional</animation>
+						<include>Context_Favourite_Visible</include>
+					</control>
+
+					<!-- Context Menu -->
+					<control type="image">
+						<width>96</width>
+						<height>90</height>
+						<texture>nav_context.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(458)">Conditional</animation>
+						<include>Context_Context_Visible</include>
+					</control>
+
+					<!-- Library -->
+					<control type="image">
+						<width>96</width>
+						<height>96</height>
+						<texture>nav_reload.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(459)">Conditional</animation>
+                                                <visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+
+					<!-- Search -->
+					<control type="image">
+						<width>96</width>
+						<height>96</height>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<texture>nav_search.png</texture>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(460)">Conditional</animation>
+					</control>
+				</control>
+
+
+				<!-- QUICK MENU (LABELS) -->
+				<control type="grouplist">
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>1280</width>
+					<height>100</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+
+					<!-- Navigation -->
+					<control type="label">
+						<width>228</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Page ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+					</control>
+
+					<!-- Unwatched -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Unwatched</label>
+						<include>Context_Unwatched_Visible</include>
+					</control>
+
+					<!-- Watched -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Watched</label>
+						<include>Context_Watched_Visible</include>
+					</control>
+
+					<!-- Queue -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Queue</label>
+						<include>Context_Queue_Visible</include>
+					</control>
+
+					<!-- Sort -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Sort</label>
+						<include>Context_Sort_Visible</include>
+					</control>
+
+					<!-- Favourite -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Favourite</label>
+						<include>Context_Favourite_Visible</include>
+					</control>
+					<!-- Context Menu -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Context</label>
+						<include>Context_Context_Visible</include>
+					</control>
+					<!-- Refresh -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Library</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Search -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Search</label>
+					</control>
+				</control>
+
+				<!-- QUICK MENU (SORTLETTER) -->
+				<control type="grouplist">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>100</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+
+					<!-- Navigation -->
+					<control type="label">
+						<!--<width>228</width>-->
+						<width>228</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Bartowski_Main_SubMenu</font>
+						<label>$VAR[Var_SortLetter]</label>
+					</control>
+
+					<!-- Unwatched -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<include>Context_Unwatched_Visible</include>
+					</control>
+
+					<!-- Watched -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<include>Context_Watched_Visible</include>
+					</control>
+
+					<!-- Queue -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<include>Context_Queue_Visible</include>
+					</control>
+
+					<!-- Sort -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<include>Context_Sort_Visible</include>
+					</control>
+
+					<!-- Favourite -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<include>Context_Favourite_Visible</include>
+					</control>
+					<!-- Context Menu -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<include>Context_Context_Visible</include>
+					</control>
+					<!-- Refresh -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<visible>Skin.HasSetting(XBMC)</visible>
+					</control>
+					<!-- Search -->
+					<control type="label">
+						<width>146</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+					</control>
+				</control>
+
+				<!-- Header -->
+				<control type="group">
+					<posx>0</posx>
+					<posy>160</posy>
+          
+					<control type="grouplist">
+	                                        <posx>0</posx>
+						<posy>0</posy>
+						<width>1280</width>
+						<height>100</height>
+						<align>center</align>
+						<usecontrolcoords>true</usecontrolcoords>
+						<orientation>horizontal</orientation>
+						<itemgap>10</itemgap>
+
+						<!-- Label -->
+						<control type="label">
+							<width min="30" max="960">auto</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font_Bartowski_Main_SubMenu</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<scroll>true</scroll>
+						</control>
+						<!-- Overlay -->
+						<control type="image">
+							<posx>0</posx>
+							<posy>15</posy>
+							<width>45</width>
+							<height>45</height>
+							<info>ListItem.Overlay</info>
+							<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
+							<colordiffuse>FFCCCCCC</colordiffuse>
+							<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						</control>
+
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>0</posy>
+						<width>1080</width>
+						<height>0.5</height>
+						<texture>base-rounded.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<align>center</align>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>75</posy>
+						<width>1080</width>
+						<height>0.5</height>
+						<texture>base-rounded.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<align>center</align>
+					</control>
+				</control>
+
+
+
+				<!-- PLEX FILTER/SORT -->
+				<control type="group">
+					<posx>160</posx>
+			                <posy>300</posy>
+					<animation effect="slide" end="160,0" condition="!isEmpty(Container.Property(primaryFilterActivated))">Conditonal</animation>
+					<visible>!Skin.HasSetting(XBMC) + !Container.Content(channel)</visible>
+
+					<!-- Filter/Sort Labels -->
+					<control type="grouplist">
+						<posx>0</posx>
+						<posy>-35</posy>
+						<width>960</width>
+						<height>100</height>
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+
+						<control type="label">
+							<width>320</width>
+							<font>Font_Time_Global</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<label>Filter</label>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<width>320</width>
+							<font>Font_Time_Global</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<label>Filter</label>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<width>320</width>
+							<font>Font_Time_Global</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<label>Sort</label>
+							<align>center</align>
+							<visible>isEmpty(Container.Property(primaryFilterActivated))</visible>
+						</control>
+
+
+					</control>
+
+					<!-- PLEX Filter/Sort -->
+
+					<!-- 1st Filter -->
+					<control type="grouplist" id="19000">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>320</width>
+						<itemgap>-1</itemgap>
+						<height>200</height>
+						<onup>18900</onup>
+						<onleft>100</onleft>
+						<onright>19001</onright>
+					</control>
+					<!-- 2nd Filter -->
+					<control type="grouplist" id="19001">
+	                                        <posx>320</posx>
+	                                        <posy>0</posy>
+						<width>320</width>
+						<height>200</height>
+	                                        <itemgap>-1</itemgap>
+						<onup>18900</onup>
+						<onleft>19000</onleft>
+						<onright condition="isEmpty(Container.Property(primaryFilterActivated))">19010</onright>
+						<onright condition="!isEmpty(Container.Property(primaryFilterActivated))">100</onright>
+	                                </control>
+					<!-- Buttons -->
+					<control type="button" id="19005">
+						<width>320</width>
+						<height>34</height>
+						<textoffsetx>0</textoffsetx>
+						<align>center</align>
+						<font>Font_Filter</font>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>mainblue</textcolor>
+	                			<focusedcolor>mainblue</focusedcolor>
+				                <texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<label>-</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<include>navigation_options</include>
+	                                </control>
+					<control type="radiobutton" id="19006">
+						<width>320</width>
+						<height>34</height>
+						<align>center</align>
+						<textoffsetx>0</textoffsetx>
+						<font>Font_Filter</font>
+						<include>radiobutton_ticked</include>
+					</control>
+					<!-- Sorting List -->
+					<control type="grouplist" id="19010">
+						<posx>640</posx>
+						<width>320</width>
+						<height>200</height>
+						<onright>100</onright>
+						<onleft>19001</onleft>
+						<onup>18900</onup>
+						<itemgap>-1</itemgap>
+						<visible>isEmpty(Container.Property(primaryFilterActivated))</visible>
+					</control>
+					<!-- Sorting Button -->
+					<control type="filterorderbutton" id="19011">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>320</width>
+						<height>34</height>
+						<align>center</align>
+						<font>Font_Filter</font>
+						<textoffsetx>0</textoffsetx>
+						<include>radiobutton_ticked</include>
+						<textureorderascending>arrowsort.png</textureorderascending>
+						<textureorderdescending flipy="true">arrowsort.png</textureorderdescending>
+						<radioheight>14</radioheight>
+						<radiowidth>16</radiowidth>
+						<radioposy>12</radioposy>
+						<visible>isEmpty(Container.Property(primaryFilterActivated))</visible>
+					</control>
+				</control>
+
+				<!-- XBMC Filter / Sort -->
+
+			</control>
+
+		</control>
+	</control>
+
 	</include>
 
 	<!-- #################################### VIEWMODE MENU ################################# -->
@@ -693,7 +1387,7 @@
 				<posx>320</posx>
 				<posy>359</posy>
 				<width>640</width>
-				<height>1</height>
+				<height>0.5</height>
 				<texture>base-rounded.png</texture>
 				<colordiffuse>mainblue</colordiffuse>
 				<align>center</align>
@@ -925,7 +1619,7 @@
 			<!-- Animations -->
 			<include>viewtype_animations</include>
 
-			<control type="group" id="1301">
+<!--			<control type="group" id="1301">
 				<posx>340</posx>
 		                <posy>340</posy>
 		                <width>600</width>
@@ -933,7 +1627,6 @@
 		                <scrolltime>300</scrolltime>
 		                <focusposition>0</focusposition>
                                 <orientation>vertical</orientation>
-				<!-- 1st Filter -->
 				<control type="grouplist" id="19000">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -943,7 +1636,6 @@
 					<onleft>7000</onleft>
 					<onright>19001</onright>
 				</control>
-				<!-- 2nd Filter -->
 				<control type="grouplist" id="19001">
                                         <posx>320</posx>
                                         <posy>0</posy>
@@ -953,7 +1645,6 @@
 					<onleft>19000</onleft>
 					<onright>7000</onright>
                                 </control>
-				<!-- Buttons -->
 				<control type="button" id="19005">
 					<width>280</width>
 					<height>34</height>
@@ -974,6 +1665,7 @@
 					<include>radiobutton_ticked</include>
 				</control>
 			</control>
+-->
 		</control>
 	</include>
 
@@ -997,31 +1689,6 @@
 		                <focusposition>0</focusposition>
                                 <ondown>1302</ondown>
                                 <orientation>vertical</orientation>
-				<!-- Sorting List -->
-				<control type="grouplist" id="19010">
-					<posx>540</posx>
-					<posy>340</posy>
-					<width>200</width>
-					<height>320</height>
-					<onright>7000</onright>
-					<onleft>7000</onleft>
-					<itemgap>-1</itemgap>
-				</control>
-				<!-- Sorting Button -->
-				<control type="filterorderbutton" id="19011">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>200</width>
-					<height>34</height>
-					<include>radiobutton_ticked</include>
-					<onright>7000</onright>
-					<onleft>7000</onleft>
-					<textureorderascending>arrowsort.png</textureorderascending>
-					<textureorderdescending flipy="true">arrowsort.png</textureorderdescending>
-					<radioheight>14</radioheight>
-					<radiowidth>16</radiowidth>
-					<radioposy>12</radioposy>
-				</control>
 			</control>
 		</control>
 	</include>
@@ -1145,7 +1812,7 @@
 			<posx>320</posx>
 			<posy>309</posy>
 			<width>640</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>mainblue</colordiffuse>
 			<align>center</align>
@@ -1308,16 +1975,24 @@
 	</include>
 
 	<include name="viewtype_scrolling">
+
+		<control type="scrollbar" id="50">
+			<visible>true</visible>
+			<showonepage>false</showonepage>
+		</control>
+
 		<control type="group">
-		<visible>!Skin.HasSetting(no_scroll_letter) + Container.Scrolling</visible>
-		<animation effect="fade" end="100" time="200" delay="300">Visible</animation>
-		<animation effect="fade" end="0" time="200">Hidden</animation>
+			<visible>!Skin.HasSetting(no_scroll_letter) + Container.Scrolling + !ControlGroup(7001).hasFocus</visible>
+			<animation effect="fade" end="100" time="200" delay="300">Visible</animation>
+			<animation effect="fade" end="0" time="200">Hidden</animation>
+			<animation effect="slide" end="0,-160" condition="ControlGroup(7001).HasFocus">Conditional</animation>
+
 			<control type="image">
 				<posx>574</posx>
 				<posy>204</posy>
 				<width>132</width>
 				<height>112</height>
-				<texture>frameOrange.png</texture>
+				<texture background="true">frameOrange.png</texture>
 				<colordiffuse>DD444444</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
@@ -1326,7 +2001,7 @@
 				<posy>205</posy>
 				<width>130</width>
 				<height>110</height>
-				<texture border="16">base-rounded.png</texture>
+				<texture background="true" border="16">base-rounded.png</texture>
 				<colordiffuse>DD000000</colordiffuse>
 			</control>
                         <control type="label">

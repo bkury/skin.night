@@ -36,7 +36,7 @@
 			<!-- Background -->
 			<control type="image">
 				<posx>0</posx>
-				<posy>400</posy>
+				<posy>401</posy>
 				<width>1280</width>
 				<height>400</height>
 				<texture border="5">base-rounded.png</texture>
@@ -45,11 +45,12 @@
 			</control>
 			<control type="image">
 				<posx>0</posx>
-				<posy>400</posy>
+				<posy>401</posy>
 				<width>1280</width>
-				<height>1</height>
+				<height>0.5</height>
 				<texture>base-rounded.png</texture>
-				<colordiffuse>99444444</colordiffuse>
+				<!--<colordiffuse>9944444</colordiffuse>-->
+				<colordiffuse>mainblue</colordiffuse>
 				<include>Animation_CommonFade</include>
 			</control>
 
@@ -91,7 +92,7 @@
 			<height>720</height>
 			<width>860</width>
 			<onleft>7000</onleft>
-			<onright>60</onright>
+			<onright>7001</onright>
 			<viewtype label="List #1">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>5</focusposition>
@@ -117,7 +118,7 @@
 			<height>720</height>
 			<width>1280</width>
 			<onleft>7000</onleft>
-			<onright>60</onright>
+			<onright>7001</onright>
 			<viewtype label="List #2">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>8</focusposition>
@@ -142,7 +143,7 @@
 			<height>280</height>
 			<width>580</width>
 			<onleft>7000</onleft>
-			<onright>60</onright>
+			<onright>7001</onright>
 			<viewtype label="List #3">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>1</focusposition>

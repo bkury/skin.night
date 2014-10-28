@@ -423,15 +423,7 @@
 			<onright>60</onright>
 			<viewtype label="Custom #1">list</viewtype>
 			<orientation>vertical</orientation>
-		<!--
-                        <animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
-                        <animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
-                        <animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
 
-                        <animation effect="zoom" end="85" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-                        <animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-                        <animation effect="slide" end="-60" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-		-->
 			<include>Viewmode_Custom1_General</include>
 			<include>Viewmode_Custom1_List_Itemlayout</include>
                 </control>
@@ -475,7 +467,7 @@
 			<preloaditems>2</preloaditems>
 
                         <include>Viewmode_Custom1_General</include>
-                        <include>Viewmode_Custom1_Default_Itemlayout</include>
+                        <include>Viewmode_Custom1_Poster_Itemlayout</include>
 		</control>
 
 	</include>
@@ -515,22 +507,9 @@
 			<orientation>vertical</orientation>
 			<preloaditems>2</preloaditems>
 			<viewtype label="Custom #1">list</viewtype>
-                <!--
-		        <animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Small)">Conditional</animation>
-                        <animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Large)">Conditional</animation>
-
-                        <animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-                        <animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-                        <animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-
-                        <animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-                        <animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-                        <animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-
-		-->
 
                         <include>Viewmode_Custom1_General</include>
-                        <include>Viewmode_Custom1_Default_Itemlayout</include>
+                        <include>Viewmode_Custom1_Panel_Itemlayout</include>
                 </control>
 	</include>
 
@@ -569,19 +548,6 @@
 			<orientation>vertical</orientation>
 			<preloaditems>2</preloaditems>
 			<viewtype label="Custom #1">list</viewtype>
-                <!--
-		        <animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Small)">Conditional</animation>
-                        <animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Images_Large)">Conditional</animation>
-
-                        <animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-                        <animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-                        <animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-
-                        <animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-                        <animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-                        <animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-
-		-->
 
                         <include>Viewmode_Custom1_General</include>
                         <include>Viewmode_Custom1_Banner_Itemlayout</include>

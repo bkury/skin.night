@@ -87,7 +87,14 @@
 			<visible>Skin.HasSetting(XBMC_Plex_Home_Hybrid)</visible>
 		</item>
 		<include condition="Skin.HasSetting(XBMC_Plex_Home_Full) | Skin.HasSetting(XBMC_Plex_Home_Hybrid)">XBMC_Deck_Plexbmc_Items</include>
-
+		<!-- Channels -->
+		<item id="150">
+			<label>Channels</label>
+			<onclick>-</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<visible>!isEmpty(Window(Home).Property(Plexbmc.LatestChannel.1.Path))</visible>
+		</item>
 	</include>
 
 	<include name="XBMC_HomeMenu_More">
@@ -119,20 +126,19 @@
 			<onclick>-</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>true</visible>
 			<visible>!Skin.HasSetting(XBMC_Home_NoFavourites)</visible>
 		</item>
 
 		<!-- Addons -->
-		<item id="10">
+		<!--<item id="10">
 			<label>24001</label>
-			<!--<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>-->
 			<onclick condition="!System.Platform.Android">ActivateWindow(Addons,return)</onclick>
 			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-		</item>
+		</item>-->
+
 		<!-- Weather -->
 		<item id="11">
 			<label>8</label>
@@ -141,6 +147,7 @@
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(XBMC_Home_NoWeather) + !IsEmpty(Weather.Plugin)</visible>
 		</item>
+
 		<!-- Search -->
 		<item id="15">
 			<label>31003</label> <!-- Search -->

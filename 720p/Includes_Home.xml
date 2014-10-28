@@ -3,50 +3,46 @@
 
 <!-- Homemenu -->
 <include name="Home_Navigation">
+	<!-- Horizontal Home -->
 	<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal_Header</include>
 
+	<!-- Compact Home -->
 	<include condition="Skin.HasSetting(Home_Panel)">Navigation_Panel_Header</include>
-	<include condition="Skin.HasSetting(Home_Panel)">Home_Panel</include>
 
+	<!-- Vertical Home -->
 	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Home_Wraplist</include>
 	<include condition="Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Panel)">Home_Fixedlist</include>
 	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Home_Simplelist</include>
 </include>
-
+<!-- Vertical Home -->
 <include name="Home_Navigation_Vertical">
 	<!-- Deck Animation -->
 	<animation effect="slide" end="-800,0" time="500" tween="cubic" easing="out" condition="!Skin.HasSetting(Deck_NoAnimation) + ControlGroup(5000).HasFocus">conditional</animation>
 	<animation effect="slide" end="-800,0" time="0" condition="Skin.HasSetting(Deck_NoAnimation) + ControlGroup(5000).HasFocus">conditional</animation>
 
 	<!-- Submenu Animation -->
-	<animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998)">conditional</animation>
-
-	<!-- My Shared Content -->
-	<onright condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onright>
-	<onright condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onright>
+	<animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998) + !Skin.HasSetting(Deck_NoAnimation)">conditional</animation>
+	<animation effect="slide" end="-850,0" time="0" condition="Window.IsActive(4998) + Skin.HasSetting(Deck_NoAnimation)">conditional</animation>
 
 	<onleft>ActivateWindow(4998)</onleft>
 	<onright>5000</onright>
 	<include>Navigation_Vertical</include>
 </include>
+<!-- Horizontal Home -->
 <include name="Home_Navigation_Horizontal">
 	<!-- Submenu Animation -->
 	<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(4998)">conditional</animation>
 
-	<!-- My Shared Content -->
-	<onup condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">Skin.SetBool(mysharedcontent_helper)</onup>
-	<onup condition="SubString(Container(300).ListItem.Label,$LOCALIZE[44020]) + !Skin.HasSetting(Deck_NoShared)">XBMC.ActivateWindow(MySharedContent,plexserver://shared,return)</onup>
-
 	<onup>5000</onup>
 	<ondown>ActivateWindow(4998)</ondown>
+
 	<include>Navigation_Horizontal</include>
 </include>
+<!-- Compact Home -->
 <include name="Home_Navigation_Panel">
-	<!-- Submenu Animation -->
-	<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(4998)">conditional</animation>
-	<ondown>ActivateWindow(4998)</ondown>
 	<include>Navigation_Panel</include>
 </include>
+
 <include name="Home_Wraplist">
 	<control type="wraplist" id="300">
 		<include condition="Skin.HasSetting(Home_Horizontal)">Home_Navigation_Horizontal</include>
@@ -76,15 +72,74 @@
 </include>
 <include name="Home_Navigation_Content">
 	<content>
+   
+		<!-- Shared Content -->
+		<item>
+			<label>[COLOR=mainblue][/COLOR]</label>
+			<onclick>-</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">$LOCALIZE[31055]</property><!-- Shared Content -->
+			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal) + [
+			Skin.HasSetting(Home_SharedContent0_Enabled) | Skin.HasSetting(Home_SharedContent1_Enabled) | Skin.HasSetting(Home_SharedContent2_Enabled) | 
+			Skin.HasSetting(Home_SharedContent3_Enabled) | Skin.HasSetting(Home_SharedContent4_Enabled) | Skin.HasSetting(Home_SharedContent5_Enabled) | 
+			Skin.HasSetting(Home_SharedContent6_Enabled) | Skin.HasSetting(Home_SharedContent7_Enabled) | Skin.HasSetting(Home_SharedContent8_Enabled) | 
+			Skin.HasSetting(Home_SharedContent9_Enabled) | Skin.HasSetting(Home_SharedContent10_Enabled) | Skin.HasSetting(Home_SharedContent11_Enabled) | 
+			Skin.HasSetting(Home_SharedContent12_Enabled) | Skin.HasSetting(Home_SharedContent13_Enabled) | Skin.HasSetting(Home_SharedContent14_Enabled) | 
+			Skin.HasSetting(Home_SharedContent15_Enabled) | Skin.HasSetting(Home_SharedContent16_Enabled) | Skin.HasSetting(Home_SharedContent17_Enabled) | 
+			Skin.HasSetting(Home_SharedContent18_Enabled) | Skin.HasSetting(Home_SharedContent19_Enabled) ]
+			</visible>
+                </item>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Home_SharedContent_Items</include>
+
+		<!-- Favourites (PLEX) -->
+		<item>
+			<label>[COLOR=mainblue][/COLOR]</label>
+			<onclick>-</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">Favourites</property><!-- Favourites -->
+			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal) + [
+			Skin.HasSetting(Favourite0_Enabled) | Skin.HasSetting(Favourite1_Enabled) | Skin.HasSetting(Favourite2_Enabled) | Skin.HasSetting(Favourite3_Enabled) | 
+			Skin.HasSetting(Favourite4_Enabled) | Skin.HasSetting(Favourite5_Enabled) | Skin.HasSetting(Favourite6_Enabled) | Skin.HasSetting(Favourite7_Enabled) | 
+			Skin.HasSetting(Favourite8_Enabled) | Skin.HasSetting(Favourite9_Enabled) | Skin.HasSetting(Favourite10_Enabled) | Skin.HasSetting(Favourite11_Enabled) | 
+			Skin.HasSetting(Favourite12_Enabled) | Skin.HasSetting(Favourite13_Enabled) | Skin.HasSetting(Favourite14_Enabled) | Skin.HasSetting(Favourite15_Enabled) | 
+			Skin.HasSetting(Favourite16_Enabled) | Skin.HasSetting(Favourite17_Enabled) | Skin.HasSetting(Favourite18_Enabled) | Skin.HasSetting(Favourite19_Enabled) ] 
+			</visible>
+                </item>
+		<include condition="!Skin.HasSetting(XBMC)">PLEX_Home_Favourite_Items</include>
+
+		<!-- Home Extensions -->
+		<item>
+			<label>[COLOR=mainblue][/COLOR]</label>
+			<onclick>-</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">$LOCALIZE[31017]</property><!-- Channels -->
+			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal) + [
+			Skin.HasSetting(Home_350_Enabled) | Skin.HasSetting(Home_351_Enabled) | Skin.HasSetting(Home_352_Enabled) | Skin.HasSetting(Home_353_Enabled) |
+			Skin.HasSetting(Home_354_Enabled) | Skin.HasSetting(Home_355_Enabled) | Skin.HasSetting(Home_356_Enabled) | Skin.HasSetting(Home_357_Enabled) |
+			Skin.HasSetting(Home_358_Enabled) | Skin.HasSetting(Home_359_Enabled) |	Skin.HasSetting(Home_360_Enabled) ]
+			</visible>
+                </item>
 		<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Menu</include>
 
+		<!-- XBMC -->
 		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_Content</include>
 		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_Plexbmc</include>
 		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_More</include>
 
+		<!-- Main Menu -->
+		<item>
+			<label>[COLOR=mainblue][/COLOR]</label>
+			<onclick>noop</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">Main Menu</property>
+			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal)</visible>
+                </item>
 		<!-- Now Playing -->
 		<item id="17">
-			<description>Now Playing</description>
 			<label>31099</label> <!-- Now Playing -->
 			<onclick>fullscreen</onclick>
 			<visible>!Skin.HasSetting(XBMC) + [Player.HasVideo | Player.hasAudio]</visible>
@@ -92,7 +147,6 @@
 		</item>
 		<!-- Search -->
 		<item id="15">
-			<description>Search</description>
 			<label>31003</label> <!-- Search -->
 			<icon>backgrounds/search.jpg</icon>
 			<onclick>ActivateWindow(10051)</onclick>
@@ -100,11 +154,45 @@
 		</item>
 		<!-- Update -->
 		<item id="16">
-			<description>Update</description>
 			<label>[COLOR TextDisabled]$LOCALIZE[24069][/COLOR]</label> <!-- Update -->
 			<onclick>Plex.UpdateAndRestart</onclick>
-			<visible>!Skin.HasSetting(XBMC) + !Skin.HasSetting(Home_Update) + System.UpdateIsAvailable</visible>
+			<!--<visible>!Skin.HasSetting(XBMC) + !Skin.HasSetting(Home_Update) + System.UpdateIsAvailable</visible>-->
+			<visible>!Skin.HasSetting(XBMC) + System.UpdateIsAvailable</visible>
 		</item>
+		<!-- Favourites -->
+		<item id="18">
+			<label>Favourites</label> <!-- Favourites -->
+			<icon>-</icon>
+			<onclick>-</onclick>
+			<visible>!Skin.HasSetting(PLEX_Home_NoFavourites) + !Skin.HasSetting(XBMC) + [
+			!isEmpty(Skin.String(Favourite0_Path)) | !isEmpty(Skin.String(Favourite1_Path)) | !isEmpty(Skin.String(Favourite2_Path)) | !isEmpty(Skin.String(Favourite3_Path)) |
+			!isEmpty(Skin.String(Favourite4_Path)) | !isEmpty(Skin.String(Favourite5_Path)) | !isEmpty(Skin.String(Favourite6_Path)) | !isEmpty(Skin.String(Favourite7_Path)) |
+			!isEmpty(Skin.String(Favourite8_Path)) | !isEmpty(Skin.String(Favourite9_Path)) | !isEmpty(Skin.String(Favourite10_Path)) | !isEmpty(Skin.String(Favourite11_Path)) |
+			!isEmpty(Skin.String(Favourite12_Path)) | !isEmpty(Skin.String(Favourite13_Path)) | !isEmpty(Skin.String(Favourite14_Path)) | !isEmpty(Skin.String(Favourite15_Path)) |
+			!isEmpty(Skin.String(Favourite16_Path)) | !isEmpty(Skin.String(Favourite17_Path)) | !isEmpty(Skin.String(Favourite18_Path)) | !isEmpty(Skin.String(Favourite19_Path)) ]
+			</visible>
+		</item>
+		<!-- Play File -->
+		<item>
+			<label>$LOCALIZE[208] $LOCALIZE[561]</label> <!-- Play File -->
+			<icon>-</icon>
+			<onclick>Skin.Reset(PlayFile)</onclick>
+			<onclick>Skin.SetFile(PlayFile)</onclick>
+			<onclick condition="!isEmpty(Skin.String(PlayFile))">PlayMedia($ESCINFO[Skin.String(PlayFile)])</onclick>
+			<onclick>Skin.Reset(PlayFile)</onclick>
+			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(PLEX_Home_PlayFile)</visible>
+		</item>
+
+		<!--<item>
+			<label>Update Weather</label>
+			<icon>-</icon>
+			<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/openweathermap/current?day=weather&amp;title=OpenWeatherUpdate)</onclick>
+			<onclick>Skin.SetString(Weather_Location,$INFO[ListItem(0).Label])</onclick>
+			<onclick>Skin.SetString(Weather_Icon,$INFO[ListItem(0).Icon])</onclick>
+			<onclick>Skin.SetString(Weather_Condition,$INFO[ListItem(1).Label])</onclick>
+			<onclick>Skin.SetString(Weather_Temperature,$INFO[ListItem(2).Label])</onclick>
+			<onclick>ActivateWindow(home)</onclick>
+		</item>-->
 	</content>
 </include>
 
@@ -162,57 +250,69 @@
 </include>
 <include name="Submenu_Navigation_Content">
 	<content>
-		<item id="20">
-			<description>Preferences</description>
-			<label>31000</label>
+		<item>
+			<label>31000</label> <!-- Preferences -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>XBMC.ActivateWindow(settings)</onclick>
 		</item>
-		<item id="23">
-			<description>Search</description>
-			<label>31003</label>
+		<item>
+			<label>19040</label> <!-- Timer -->
+			<onclick>ActivateWindow(3098)</onclick>
+			<visible>![ Skin.HasSetting(Hide_Timer) | System.HasAlarm(alarm) ]</visible>
+		</item>
+		<item>
+			<label>$LOCALIZE[222] $LOCALIZE[19040]</label> <!-- Cancel Timer -->
+			<onclick>CancelAlarm(Alarm)</onclick>
+			<visible>System.HasAlarm(alarm)</visible>
+		</item>
+                <item>
+                        <label>24001</label><!-- Addons -->
+			<onclick>Dialog.Close(4998)</onclick>
+                        <onclick condition="!System.Platform.Android">ActivateWindow(AddonBrowser,return)</onclick>
+                        <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+                        <visible>Skin.HasSetting(XBMC) + !Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+                </item>
+		<item>
+			<label>31003</label> <!-- Search -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>ActivateWindow(10051)</onclick>
 			<visible>Skin.HasSetting(HomeMenuNoSearchButton)</visible>
 		</item>
-		<item id="24">
-			<description>Channel Store</description>
-			<label>31004</label>
+		<item>
+			<label>31004</label> <!-- Channel Store -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
 			<visible>![Skin.HasSetting(Hide_ChannelDirectory) | Skin.HasSetting(XBMC)]</visible>
 		</item>
-		<item id="25">
-			<description>Quit</description>
-			<label>31005</label>
+		<item>
+			<label>31005</label> <!-- Quit -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick condition="Skin.HasSetting(XBMC)">XBMC.Quit</onclick>
 			<onclick condition="!Skin.HasSetting(XBMC)">PLEX.Quit</onclick>
 			<visible>!Skin.HasSetting(Hide_Quit)</visible>
 		</item>
-		<item id="26">
-			<description>Suspend</description>
-			<label>31006</label>
+		<item>
+			<label>31006</label> <!-- Suspend -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick condition="Skin.HasSetting(XBMC)">XBMC.Suspend</onclick>
 			<onclick condition="!Skin.HasSetting(XBMC)">PLEX.Suspend</onclick>
 			<visible>!Skin.HasSetting(Hide_Sleep)</visible>
 		</item>
-		<item id="27">
+		<item>
 			<description>Reboot</description>
-			<label>31007</label>
+			<label>31007</label> <!-- Reboot -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>XBMC.Reboot</onclick>
 			<visible>!Skin.HasSetting(Hide_Reboot)</visible>
 		</item>
-		<item id="28">
-			<description>Shut Down</description>
-			<label>31008</label>
+		<item>
+			<label>31008</label> <!-- Shut Down -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick condition="Skin.HasSetting(XBMC)">XBMC.Powerdown</onclick>
 			<onclick condition="!Skin.HasSetting(XBMC)">PLEX.Powerdown</onclick>
 			<visible>!Skin.HasSetting(Hide_Shutdown)</visible>
 		</item>
+
 	</content>
 </include>
 
@@ -229,8 +329,10 @@
 	<include condition="Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Panel)">Shared_Simplelist</include>
 </include>
 <include name="Shared_Navigation_Vertical">
-	<!--<onleft>ReplaceWindow(home)</onleft>
-	<onright>ReplaceWindow(home)</onright>-->
+	<!-- Submenu Animation -->
+	<animation effect="slide" end="-850,0" time="300" condition="Window.IsActive(4998) + !Skin.HasSetting(Deck_NoAnimation)">conditional</animation>
+	<animation effect="slide" end="-850,0" time="0" condition="Window.IsActive(4998) + Skin.HasSetting(Deck_NoAnimation)">conditional</animation>
+
 	<onleft>7000</onleft>
 	<onright>7000</onright>
 	<include>Navigation_Vertical</include>
@@ -323,34 +425,34 @@
 <!-- ########## NAVIGATION (VERTICAL) ########## -->
 <include name="Navigation_Vertical">
 	<!-- Menu Items -->
-	<include condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_9Items</include>
-	<include condition="Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Home_7Items</include>
-	<include condition="Skin.HasSetting(HomeExtendedMore)">Home_5Items</include>
+	<include>Home_Menu_List</include>
+
 	<viewtype>list</viewtype>
 	<orientation>vertical</orientation>
 	<movement>0</movement>
-	<!--<include>Animation_Bartowski_ZoomOutZoomIn</include>-->
-	<include>Animation_ZoomOutZoomIn</include>
+	<scrolltime>200</scrolltime>
+
+	<include condition="!Skin.HasSetting(Deck_NoAnimation)">Animation_ZoomOutZoomIn</include>
 
 	<!-- Default -->
 	<itemlayout width="700" height="70" condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)">
 		<include>Navigation_Vertical_Layout</include>
 	</itemlayout>
-	<focusedlayout width="700" height="90" condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)">
+	<focusedlayout width="700" height="80" condition="!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)">
 		<include>Navigation_Vertical_Layout_Focus</include>
 	</focusedlayout>
 	<!-- Medium -->
-	<itemlayout width="700" height="42" condition="Skin.HasSetting(Home_Font_Medium)">
+	<itemlayout width="700" height="60" condition="Skin.HasSetting(Home_Font_Medium)">
 		<include>Navigation_Vertical_Layout</include>
 	</itemlayout>
-	<focusedlayout width="700" height="62" condition="Skin.HasSetting(Home_Font_Medium)">
+	<focusedlayout width="700" height="70" condition="Skin.HasSetting(Home_Font_Medium)">
 		<include>Navigation_Vertical_Layout_Focus</include>
 	</focusedlayout>
 	<!-- Small -->
-	<itemlayout width="700" height="30" condition="Skin.HasSetting(Home_Font_Small)">
+	<itemlayout width="700" height="50" condition="Skin.HasSetting(Home_Font_Small)">
 		<include>Navigation_Vertical_Layout</include>
 	</itemlayout>
-	<focusedlayout width="700" height="50" condition="Skin.HasSetting(Home_Font_Small)">
+	<focusedlayout width="700" height="60" condition="Skin.HasSetting(Home_Font_Small)">
 		<include>Navigation_Vertical_Layout_Focus</include>
 	</focusedlayout>
 </include>
@@ -359,31 +461,12 @@
 
 		<!-- Default -->
 		<control type="group">
-		<visible>isEmpty(ListItem.Property(HomeMenuPulse))</visible>
-			<!-- Default -->
+			<visible>isEmpty(ListItem.Property(HomeMenuPulse))</visible>
 			<control type="label">
-				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Default_Medium</include>
-				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Default_Small</include>
-				<width>700</width>
-				<height>70</height>
-				<aligny>center</aligny>
-				<font>Font_Bartowski_MainMenu</font>
+				<include>Home_Menu_Label_NoFocus</include>
 				<textcolor>50b8b7b7</textcolor>
-				<info>ListItem.Label</info>
-				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+				<label>$INFO[ListItem.Label]</label>
 			</control>
-			<!-- Aeon -->
-			<control type="label">
-				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Aeon_Medium</include>
-				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Aeon_Small</include>
-				<width>700</width>
-				<height>70</height>
-				<aligny>center</aligny>
-				<font>AeonFont_MainMenu</font>
-				<textcolor>50b8b7b7</textcolor>
-				<info>ListItem.Label</info>
-				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-			</control>			
 		</control>
 
 		<!-- Pulsating -->
@@ -391,44 +474,24 @@
 			<visible>!isEmpty(ListItem.Property(HomeMenuPulse))</visible>
 			<!-- Default -->		
 			<control type="label">
-				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Default_Medium</include>
-				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Default_Small</include>
-				<width>700</width>
-				<height>70</height>
-				<aligny>center</aligny>
-				<font>Font_Bartowski_MainMenu</font>
+				<include>Home_Menu_Label_NoFocus</include>
 				<textcolor>mainblue</textcolor>
 				<info>ListItem.Label</info>
 				<animation type="Conditional" reversible="false" condition="true" loop="true">
 					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
 					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
 				</animation>
-				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
 			</control>
-			<!-- Aeon -->
-			<control type="label">
-				<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Aeon_Medium</include>
-				<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Aeon_Small</include>
-				<width>700</width>
-				<height>70</height>
-				<aligny>center</aligny>
-				<font>AeonFont_MainMenu</font>
-				<textcolor>mainblue</textcolor>
-				<info>ListItem.Label</info>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
-					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
-					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
-				</animation>
-				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-			</control>			
 		</control>		
 
 		<!-- Section Type -->
 		<control type="group">
 			<visible>!isEmpty(ListItem.Property(HomeMenuSection))</visible>
+			<include>Home_Menu_Section_Position</include>
+
 			<control type="label">
 				<posx>5</posx>
-				<posy>15</posy>
+				<posy>0</posy>
 				<width>500</width>
 				<height>64</height>
 				<font>Font_Time_Global</font>
@@ -437,9 +500,9 @@
 			</control>
 			<control type="image">
 				<posx>5</posx>
-				<posy>50</posy>
+				<posy>35</posy>
 				<width>320</width>
-				<height>1</height>
+				<height>0.5</height>
 				<colordiffuse>mainblue</colordiffuse>
 				<texture>base-rounded.png</texture>
 			</control>
@@ -449,39 +512,21 @@
 <include name="Navigation_Vertical_Layout_Focus">
 		<!-- Default -->
 		<control type="label">
-			<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Default_Medium_Focus</include>
-			<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Default_Small_Focus</include>
-			<width>670</width>
-			<height>90</height>
-			<aligny>center</aligny>
+			<include>Home_Menu_Label_Focus</include>
 			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
 			<textcolor>ffffffff</textcolor>
-			<font>Font_Bartowski_MainMenu_Focus</font>
 			<shadowcolor>black</shadowcolor>
-			<info>ListItem.Label</info>
-			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>
-		<!-- Aeon -->
-		<control type="label">
-			<include condition="Skin.HasSetting(Home_Font_Medium)">Home_Font_Aeon_Medium_Focus</include>
-			<include condition="Skin.HasSetting(Home_Font_Small)">Home_Font_Aeon_Small_Focus</include>
-			<width>670</width>
-			<height>90</height>
-			<aligny>center</aligny>
-			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-			<textcolor>ffffffff</textcolor>
-			<font>AeonFont_MainMenu_Focus</font>
-			<shadowcolor>black</shadowcolor>
-			<info>ListItem.Label</info>
-			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
+			<label>$INFO[ListItem.Label]</label>
 		</control>
 
 		<!-- Section Type -->
 		<control type="group">
 			<visible>!isEmpty(ListItem.Property(HomeMenuSection))</visible>
+			<include>Home_Menu_Section_Position</include>
+
 			<control type="label">
 				<posx>5</posx>
-				<posy>15</posy>
+				<posy>0</posy>
 				<width>500</width>
 				<height>64</height>
 				<font>Font_Time_Global</font>
@@ -490,9 +535,9 @@
 			</control>
 			<control type="image">
 				<posx>5</posx>
-				<posy>50</posy>
+				<posy>35</posy>
 				<width>320</width>
-				<height>1</height>
+				<height>0.5</height>
 				<colordiffuse>mainblue</colordiffuse>
 				<texture>base-rounded.png</texture>
 			</control>
@@ -500,16 +545,10 @@
 
 </include>
 
-
-
-
-
-
-
 <!-- ########## NAVIGATION (HORIZONTAL) ########## -->
 <include name="Navigation_Horizontal_Header">
 	<control type="group">
-		<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Home_Horizontal_Bottom</include>
+		<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Home_Horizontal_Bottom_Background</include>
 		<posy>320</posy>
 
 		<!-- Background -->
@@ -518,7 +557,7 @@
 			<width>1300</width>
                         <height>65</height>
                         <texture border="6">base-rounded.png</texture>
-                        <colordiffuse>DD000000</colordiffuse>
+                        <colordiffuse>CC000000</colordiffuse>
 			<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Animation_Preplay_Down</include>
 			<include condition="!Skin.HasSetting(Home_Horizontal_Bottom)">Animation_CommonFade_600</include>
                 </control>
@@ -527,7 +566,7 @@
 		<control type="image">
 			<posx>0</posx>
 			<width>1280</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>mainblue</colordiffuse>
 			<align>center</align>
@@ -538,7 +577,7 @@
 			<posx>0</posx>
 			<posy>65</posy>
 			<width>1280</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>mainblue</colordiffuse>
 			<align>center</align>
@@ -550,18 +589,16 @@
 <include name="Navigation_Horizontal">
 	<posx>-195</posx>
 	<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Home_Horizontal_Bottom</include>
-	<posy>320</posy>
+	<posy>330</posy>
 	<height>65</height>
 	<width>1700</width>
 	<viewtype>list</viewtype>
 	<orientation>horizontal</orientation>
-	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<scrolltime>200</scrolltime>
 	<focusposition>2</focusposition>
 	<include condition="Skin.HasSetting(Home_Horizontal_Bottom)">Animation_Preplay_Down</include>
 	<include condition="!Skin.HasSetting(Home_Horizontal_Bottom)">Animation_CommonFade_600</include>
 	<itemlayout width="420" height="70">
-
-
 
 		<!-- Default -->
 		<control type="group">
@@ -569,20 +606,10 @@
 			<!-- Normal -->
 			<control type="label">
 				<width>410</width>
-				<font>Font_Bartowski_Main_SubMenu</font>
+				<include>Font_Main_SubHeader</include>
 				<textcolor>FFAAAAAA</textcolor>
 				<info>ListItem.Label</info>
 				<align>center</align>
-				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-			</control>			
-			<!-- Aeon -->
-			<control type="label">
-				<width>410</width>
-				<font>AeonFont_MainMenu</font>
-				<textcolor>FFAAAAAA</textcolor>
-				<info>ListItem.Label</info>
-				<align>center</align>
-				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
 			</control>			
 		</control>
 
@@ -592,7 +619,7 @@
 			<!-- Normal -->
 			<control type="label">
 				<width>410</width>
-				<font>Font_Bartowski_Main_SubMenu</font>
+				<include>Font_Main_SubHeader</include>
 				<textcolor>mainblue</textcolor>
 				<info>ListItem.Label</info>
 				<align>center</align>
@@ -600,44 +627,19 @@
 					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
 					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
 				</animation>
-				<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
 			</control>			
-			<!-- Aeon -->
-			<control type="label">
-				<width>410</width>
-				<font>AeonFont_MainMenu</font>
-				<textcolor>mainblue</textcolor>
-				<info>ListItem.Label</info>
-				<align>center</align>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
-					<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
-					<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
-				</animation>
-				<visible>Skin.HasSetting(AeonHomeMenu)</visible>
-			</control>
 		</control>
 
 	</itemlayout>
 	<focusedlayout width="420" height="70">
+		<!-- Default -->
 		<control type="label">
 			<width>400</width>
-			<font>Font_Bartowski_Main_SubMenu</font>
+			<include>Font_Main_SubHeader</include>
 			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
 			<textcolor>FFFFFFFF</textcolor>
-			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
 			<info>ListItem.Label</info>
 			<align>center</align>
-			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>			
-		<control type="label">
-			<width>410</width>
-			<font>AeonFont_MainMenu</font>
-			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-			<textcolor>FFFFFFFF</textcolor>
-			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
-			<info>ListItem.Label</info>
-			<align>center</align>
-			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
 		</control>			
 	</focusedlayout>
 </include>
@@ -645,74 +647,216 @@
 <!-- ########## NAVIGATION (PANEL) ########## -->
 <include name="Navigation_Panel_Header">
 	<!-- Background -->
-	<control type="largeimage">
-		<description>background image</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<texture border="40">osd/videoOSD_settings_back1.png</texture>
-		<animation effect="fade" start="0" end="60" time="600">WindowOpen</animation>
-		<animation effect="fade" start="60" end="0" time="600">WindowClose</animation>
+	<control type="image">
+		<include>background_default</include>
+		<texture>black.png</texture>
+		<colordiffuse>CC000000</colordiffuse>
 	</control>
+
+	<!-- Compact Header -->
+	<control type="grouplist">
+		<posx>10</posx>
+		<posy>30</posy>
+		<width>1260</width>
+		<align>center</align>
+		<orientation>horizontal</orientation>
+		<itemgap>0</itemgap>
+		<visible>!Skin.HasSetting(Home_Compact_NoHeader)</visible>
+
+		<control type="list">
+			<include>Navigation_Compact_Layout_Header</include>
+			<content>
+			<item>
+				<label>Main Menu</label>
+				<icon>-</icon>
+				<onclick>-</onclick>
+			</item>
+			</content>
+		</control>
+
+		<control type="list">
+			<include>Navigation_Compact_Layout_Header</include>
+			<visible>!Skin.HasSetting(Home_Compact_NoShared)</visible>
+			<content>
+			<item>
+				<label>Shared Content</label>
+				<icon>-</icon>
+				<onclick>-</onclick>
+			</item>
+			</content>
+		</control>
+
+		<control type="list">
+			<include>Navigation_Compact_Layout_Header</include>
+			<visible>!Skin.HasSetting(Home_Compact_NoChannels)</visible>
+			<content>
+			<item>
+				<label>Channels</label>
+				<icon>-</icon>
+				<onclick>-</onclick>
+			</item>
+			</content>
+		</control>
+
+		<control type="list">
+			<include>Navigation_Compact_Layout_Header</include>
+			<visible>!Skin.HasSetting(Home_Compact_NoFavourites)</visible>
+			<content>
+			<item>
+				<label>Favourites</label>
+				<icon>-</icon>
+				<onclick>-</onclick>
+			</item>
+			</content>
+		</control>
+
+		<control type="list">
+			<include>Navigation_Compact_Layout_Header</include>
+			<content>
+			<item>
+				<label>SubMenu</label>
+				<icon>-</icon>
+				<onclick>-</onclick>
+			</item>
+			</content>
+		</control>
+
+	</control>
+
+	<!-- Compact Menu -->
+	<control type="grouplist">
+		<posx>10</posx>
+		<posy>70</posy>
+		<width>1260</width>
+		<align>center</align>
+		<orientation>horizontal</orientation>
+		<itemgap>0</itemgap>
+		<animation effect="slide" end="0,-20" condition="Skin.HasSetting(Home_Compact_NoHeader)">Conditional</animation>
+
+		<control type="list" id="300">
+			<onright>301</onright>
+			<onleft>304</onleft>
+			<include>Navigation_Compact_Layout</include>
+		</control>
+
+		<control type="list" id="301">
+			<onright>302</onright>
+			<onleft>300</onleft>
+			<include>Navigation_Compact_Layout</include>
+			<visible>!Skin.HasSetting(Home_Compact_NoShared)</visible>
+
+			<content>
+				<include>PLEX_Home_SharedContent_Items</include>
+			</content>
+		</control>
+
+		<control type="list" id="302">
+			<onright>304</onright>
+			<onleft>302</onleft>
+			<include>Navigation_Compact_Layout</include>
+			<visible>!Skin.HasSetting(Home_Compact_NoChannels)</visible>
+
+			<content>
+				<include>Home_Extension_Menu</include>
+			</content>
+		</control>
+
+		<control type="list" id="303">
+			<onright>303</onright>
+			<onleft>301</onleft>
+			<include>Navigation_Compact_Layout</include>
+			<visible>!Skin.HasSetting(Home_Compact_NoFavourites)</visible>
+
+			<content>
+				<include>PLEX_Home_Favourite_Items</include>
+			</content>
+		</control>
+
+		<control type="list" id="304">
+			<onright>300</onright>
+			<onleft>303</onleft>
+			<include>Navigation_Compact_Layout</include>
+			<include>Submenu_Navigation_Content</include>
+		</control>
+
+	</control>
+
+
 </include>
 
-<include name="Navigation_Panel">
-	<posy>130</posy>
+<include name="Navigation_Compact_Layout">
+	<posy>0</posy>
 	<posx>0</posx>
 	<height>460</height>
-	<width>1280</width>
-	<scrolltime tween="quadratic" easing="out">400</scrolltime>
+	<width>252</width>
+	<scrolltime>200</scrolltime>
 	<focusposition>0</focusposition>
 	<include>Animation_CommonFade_600</include>
-	<itemlayout width="400" height="100">
+
+	<itemlayout width="252" height="36">
 		<control type="label">
-			<posx>240</posx>
-			<width>400</width>
-			<font>Font_Bartowski_Main_SubMenu</font>
-			<textcolor>FFAAAAAA</textcolor>
-			<label>$INFO[ListItem.Label]</label>
-			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
-			<align>center</align>
-			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>			
-		<control type="label">
-			<posx>240</posx>
-			<width>400</width>
-			<font>AeonFont_MainMenu</font>
+			<posx>116</posx>
+			<width>232</width>
+			<height>36</height>
+			<include>Font_Main_Compact</include>
 			<textcolor>FFAAAAAA</textcolor>
 			<label>$INFO[ListItem.Label]</label>
 			<align>center</align>
-			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
 		</control>			
 	</itemlayout>
-	<focusedlayout width="400" height="100">
+	<focusedlayout width="252" height="36">
 		<control type="label">
-			<posx>240</posx>
-			<width>400</width>
-			<font>Font_Bartowski_Main_SubMenu</font>
-			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
-			<textcolor>FFFFFFFF</textcolor>
-			<label>$INFO[ListItem.Label]</label>
-			<!--<label>ABCDEFGHIJKLMNOPQRST</label>-->
-			<align>center</align>
-			<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
-		</control>			
-		<control type="label">
-			<posx>240</posx>
-			<width>400</width>
-			<font>AeonFont_MainMenu</font>
+			<posx>116</posx>
+			<width>232</width>
+			<height>36</height>
+			<include>Font_Main_Compact</include>
 			<include condition="!Skin.HasSetting(HomeNoAccent)">HomeNoAccent</include>
 			<textcolor>FFFFFFFF</textcolor>
 			<label>$INFO[ListItem.Label]</label>
 			<align>center</align>
-			<visible>Skin.HasSetting(AeonHomeMenu)</visible>
 		</control>			
 	</focusedlayout>
 </include>
 
+<include name="Navigation_Compact_Layout_Header">
+	<posy>0</posy>
+	<posx>0</posx>
+	<height>460</height>
+	<width>252</width>
+	<scrolltime>200</scrolltime>
+	<focusposition>0</focusposition>
+	<include>Animation_CommonFade_600</include>
+
+	<itemlayout width="252" height="36">
+		<control type="label">
+			<posx>116</posx>
+			<width>232</width>
+			<height>64</height>
+			<!--<font>Font_Time_Global</font>-->
+			<font>Font_Deck_Name</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+		</control>
+		<control type="image">
+			<posx>10</posx>
+			<posy>30</posy>
+			<width>232</width>
+			<height>0.5</height>
+			<colordiffuse>mainblue</colordiffuse>
+			<texture>base-rounded.png</texture>
+		</control>
+	</itemlayout>
+	<focusedlayout width="252" height="36">
+	</focusedlayout>
+</include>
+
+<include name="Home_Horizontal_Bottom_Background">
+	<posy>540</posy>
+</include>
+
 <include name="Home_Horizontal_Bottom">
-	<posy>600</posy>
+	<posy>550</posy>
 </include>
 
 </includes>

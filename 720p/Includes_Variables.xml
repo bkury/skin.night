@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<variable name="Var_Viewmode_Image">
+		<value condition="Control.isVisible(11000) + Container(11000).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_EpisodeThumb)">$INFO[ListItem.GrandparentThumb]</value>
+		<value condition="Control.isVisible(11001) + Container(11001).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_EpisodeThumb)">$INFO[ListItem.GrandparentThumb]</value>
+		<value condition="!isEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
+		<value>placeholder.png</value>
+	</variable>
+
+	<variable name="Var_Viewmode_Label">
+		<value condition="Control.isVisible(11000) + Container(11000).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_EpisodeThumb)">S$INFO[ListItem.Season] [COLOR=mainblue]/[/COLOR] E$INFO[ListItem.Episode]</value>
+		<value condition="Control.isVisible(11001) + Container(11001).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_EpisodeThumb)">S$INFO[ListItem.Season] [COLOR=mainblue]/[/COLOR] E$INFO[ListItem.Episode]</value>
+
+		<value condition="Control.isVisible(11000) + Container(11000).ListItem.Type(episode) + Skin.HasSetting(Deck_Images_EpisodeThumb)">S$INFO[ListItem.Season]E$INFO[ListItem.Episode] [COLOR=mainblue]/[/COLOR] $INFO[ListItem.TVShowTitle]</value>
+		<value condition="Control.isVisible(11001) + Container(11001).ListItem.Type(episode) + Skin.HasSetting(Deck_Images_EpisodeThumb)">S$INFO[ListItem.Season]E$INFO[ListItem.Episode] [COLOR=mainblue]/[/COLOR] $INFO[ListItem.TVShowTitle]</value>
+
+
+		<value condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)">S$INFO[ListItem.Season]E$INFO[ListItem.Episode] [COLOR=mainblue]/[/COLOR] $INFO[ListItem.TVShowTitle]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Episode]. $INFO[ListItem.Title]</value>
+		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber]. $INFO[ListItem.Title]</value>
+		<value condition="!isEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
+	<!-- Dialog Header -->
+	<variable name="Var_Dialog_Header">
+		<!--<value condition="Window.IsVisible(3100) + !isEmpty(ListItem.Label)">$LOCALIZE[1036] [COLOR=mainblue]/[/COLOR] $INFO[ListItem.Label]</value>-->
+		<!--<value condition="Window.IsVisible(3100) + isEmpty(ListItem.Label)">$LOCALIZE[1036]</value>-->
+		<value condition="Window.IsVisible(3100)">$LOCALIZE[1036]</value>
+		<value condition="Window.IsVisible(106) + !isEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
+		<value condition="Window.IsVisible(3098)">$LOCALIZE[19040]</value> <!-- Timer -->
+		<value condition="Window.IsVisible(106)">Context Menu</value>
+		<value condition="Window.IsVisible(123)">$LOCALIZE[3] - $LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(124)">$LOCALIZE[292] - $LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(126)">File Browser</value>
+		<value condition="Window.IsVisible(125)">$INFO[Container(11).NumItems] Bookmark(s)</value>
+		<value condition="Window.IsVisible(11115)">OSD Settings</value>
+		<value condition="!isEmpty(Control.GetLabel(1))">$INFO[Control.GetLabel(1)]</value>
+		<value condition="!isEmpty(Skin.String(selector1)) + !isEmpty(Skin.String(selector2))">$INFO[Skin.String(selector1)] $INFO[Skin.String(selector2)]</value>
+		<value condition="!isEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
+		<value>Unknown</value>
+	</variable>
+
+	<!-- Title -->
+	<variable name="Var_Info_Title">
+		<value condition="!isEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
+	<!-- Parent -->
+	<variable name="Var_Info_Parent">
+		<value condition="Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))">$INFO[Container.FirstTitle]</value>
+		<value condition="Container.Content(episodes) + !isEmpty(Container.Property(primaryFilterActivated))">$INFO[ListItem.TvShowTitle]</value>
+		<value condition="Container.Content(seasons) | Container.Content(songs)">$INFO[Container.SecondTitle]</value>
+	</variable>
+
+	<!-- Genre -->
+	<variable name="Var_Info_Genre">
+		<value>$INFO[ListItem.Genre]</value>
+	</variable>
+
+	<!-- Season / Episode -->
+	<variable name="Var_Info_SeasonEpisode">
+		<value condition="Skin.HasSetting(XBMC) + Container.Content(episodes)">$LOCALIZE[20373] $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]$LOCALIZE[20359] $INFO[ListItem.Episode]</value>
+		<value condition="Container.Content(episodes) + isEmpty(Container.Property(primaryFilterActivated))">$INFO[Container.SecondTitle][COLOR=mainblue] &#xB7; [/COLOR]$LOCALIZE[20359] $INFO[ListItem.Episode]</value>
+		<value condition="Container.Content(episodes) + !isEmpty(Container.Property(primaryFilterActivated))">$LOCALIZE[20373] $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]$LOCALIZE[20359] $INFO[ListItem.Episode]</value>
+	</variable>
+
+	<!-- Duration -->
+	<variable name="Var_Info_Duration">
+		<value condition="!isEmpty(ListItem.Duration)">$INFO[ListItem.Duration]min</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Year -->
+	<variable name="Var_Info_Year">
+		<value condition="!isEmpty(ListItem.Year)">$INFO[ListItem.Year]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Star Rating -->
+	<variable name="Var_Info_StarRating">
+		<value>$INFO[ListItem.StarRating]</value>
+	</variable>
+
+	<!-- Rating -->
+	<variable name="Var_Info_Rating">
+		<value condition="!isEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Director -->
+	<variable name="Var_Info_Director">
+		<value condition="!isEmpty(ListItem.Director)">$INFO[ListItem.Director]</value>
+		<!--<value>N/A</value>-->
+		<value>$LOCALIZE[31060]</value>
+	</variable>
+
+	<!-- Writer -->
+	<variable name="Var_Info_Writer">
+		<value condition="!isEmpty(ListItem.Writer)">$INFO[ListItem.Writer]</value>
+		<!--<value>N/A</value>-->
+		<value>$LOCALIZE[31060]</value>
+	</variable>
+
+	<!-- Cast -->
+	<variable name="Var_Info_Cast">
+		<value condition="!isEmpty(ListItem.Cast)">$INFO[ListItem.Cast]</value>
+		<value>$LOCALIZE[31060]</value>
+		<!--<value>N/A</value>-->
+	</variable>
+
+	<!-- Artist -->
+	<variable name="Var_Info_Artist">
+		<value condition="!isEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Airtime -->
+	<variable name="Var_Info_Date">
+		<value condition="!isEmpty(ListItem.Date)">$INFO[ListItem.Date]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Studio -->
+	<variable name="Var_Info_Studio">
+		<value condition="!isEmpty(ListItem.Studio)">$INFO[ListItem.Studio]</value>
+		<value condition="!isEmpty(Listitem.Property(mediaTag-Studio))">$INFO[Listitem.Property(mediaTag-Studio)]</value>
+		<value>N/A</value>
+	</variable>
+	<variable name="Var_Info_StudioImage">
+                <value condition="!Skin.HasSetting(XBMC)">mediaflags/studio/$INFO[Listitem.Property(mediaTag-Studio)].png</value>
+                <value condition="Skin.HasSetting(XBMC)">mediaflags/studio/$INFO[Listitem.Studio].png</value>
+	</variable>
+
+	<!-- Content Rating -->
+	<variable name="Var_Info_ContentRating">
+		<value condition="!isEmpty(ListItem.Mpaa)">$INFO[ListItem.Mpaa]</value>
+		<value condition="!isEmpty(Listitem.Property(mediaTag-contentRating))">$INFO[Listitem.Property(mediaTag-contentRating)]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Pic Resolution -->
+	<variable name="Var_Info_PictureResolution">
+		<value condition="!isEmpty(ListItem.PictureResolution)">$INFO[ListItem.PictureResolution]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Pic Mode -->
+	<variable name="Var_Info_PictureMode">
+		<value condition="!isEmpty(ListItem.PictureExpMode)">$INFO[ListItem.PictureExpMode]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Pic Model -->
+	<variable name="Var_Info_PictureModel">
+		<value condition="!isEmpty(ListItem.PictureCamModel)">$INFO[ListItem.PictureCamModel]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Pic Date -->
+	<variable name="Var_Info_PictureDate">
+		<value condition="!isEmpty(ListItem.PictureDate)">$INFO[ListItem.PictureDate]</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Total Time -->
+	<variable name="Var_Info_TotalTime">
+		<value condition="!isEmpty(Container.TotalTime)">$INFO[Container.TotalTime]min</value>
+		<value>N/A</value>
+	</variable>
+
+	<!-- Plot -->
+	<variable name="Var_Info_Plot">
+		<value condition="!isEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="!isEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+		<value condition="!isEmpty(ListItem.PictureDesc)">ListItem.PictureDesc</value>
+		<value condition="!isEmpty(ListItem.Property(summary))">$INFO[ListItem.Property(summary)]</value>
+		<value condition="!isEmpty(Container.Property(summary))">$INFO[Container.Property(summary)]</value>
+		<value condition="!isEmpty(Container.ShowPlot)">$INFO[Container.ShowPlot]</value>
+	</variable>
+
+	<!-- Episodes Unwatched Count -->
+	<variable name="Var_Info_Episodes_Unwatched">
+		<value condition="!isEmpty(ListItem.Property(UnwatchedEpisodes))">$INFO[ListItem.Property(UnwatchedEpisodes)]</value>
+		<value>0</value>
+	</variable>
+
+	<!-- Episodes Total Count -->
+	<variable name="Var_Info_Episodes_Total">
+		<value condition="!isEmpty(ListItem.Property(TotalEpisodes))">$INFO[ListItem.Property(TotalEpisodes)]</value>
+		<value condition="!isEmpty(ListItem.Property(LeafCount))">$INFO[ListItem.Property(LeafCount)]</value>
+		<value>0</value>
+	</variable>
+
+	<!-- Addon (Type) -->
+	<variable name="Var_Info_Addon_Type">
+		<value condition="!isEmpty(ListItem.Property(Addon.Type))">$INFO[ListItem.Property(Addon.Type)]</value>
+	</variable>
+	<!-- Addon (Creator) -->
+	<variable name="Var_Info_Addon_Creator">
+		<value condition="!isEmpty(ListItem.Property(Addon.Creator))">$INFO[ListItem.Property(Addon.Creator)]</value>
+	</variable>
+	<!-- Addon (Creator) -->
+	<variable name="Var_Info_Addon_Version">
+		<value condition="!isEmpty(ListItem.Property(Addon.Version))">$INFO[ListItem.Property(Addon.Version)]</value>
+	</variable>
+	<!-- Addon (Repo) -->
+	<variable name="Var_Info_Addon_Repo">
+		<value condition="!isEmpty(Container.Property(reponame))">$INFO[Container.Property(reponame)]</value>
+		<value>Addons</value><!-- LOC -->
+	</variable>
+
+	<!-- Channel -->
+	<variable name="Var_Info_Channel">
+		<value condition="!isEmpty(Container.SecondTitle)">$INFO[Container.SecondTitle]</value>
+		<value condition="!isEmpty(Container.FirstTitle)">$INFO[Container.FirstTitle]</value>
+	</variable>
+
+	<!-- SIDEBAR (1st Label) -->
+	<variable name="Var_Info_Sidebar_1">
+		<value condition="!Container.Content(songs)">$VAR[Var_Info_Parent]</value>
+	</variable>
+
+	<!-- SIDEBAR (3rd Label) -->
+	<variable name="Var_Info_Sidebar_3">
+		<value condition="Container.Content(Addons)">$VAR[Var_Info_Addon_Repo]</value>
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$VAR[Var_Info_Genre]</value>
+		<value condition="Container.Content(episodes)">$VAR[Var_Info_SeasonEpisode]</value>
+		<value condition="Container.Content(channel)">$VAR[Var_Info_Channel]</value>
+		<value condition="Container.Content(artists)">$VAR[Var_Info_Genre]</value>
+		<value condition="Container.Content(albums)">$VAR[Var_Info_Artist]</value>
+		<value condition="Container.Content(songs)">$VAR[Var_Info_Parent]</value>
+		<value condition="ListItem.Type(clip)">$VAR[Var_Info_Channel]</value>
+		<value condition="ListItem.Type(photo)">$VAR[Var_Info_PictureResolution]</value>
+	</variable>
+
+	<!-- SIDEBAR (Line 1) -->
+	<variable name="Var_Text_Sidebar_Line_1">
+		<!-- Type -->
+		<value condition="Container.Content(addons)">$LOCALIZE[467]</value>
+		<!-- Director -->
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$LOCALIZE[31040]</value>
+		<!-- Albums (Genre) -->
+		<value condition="Container.Content(albums) | Container.Content(songs)">$LOCALIZE[515]</value>
+		<!-- Photo (Mode) -->
+		<value condition="Container.Content(photos)">Mode</value>
+		<!-- TvShows (Airdate) -->
+		<value condition="Container.Content(tvshows)">$LOCALIZE[31043]</value>
+	</variable>
+
+	<variable name="Var_Info_Sidebar_Line_1">
+		<!-- Type -->
+		<value condition="Container.Content(addons)">$VAR[Var_Info_Addon_Type]</value>
+		<!-- Director -->
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$VAR[Var_Info_Director]</value>
+		<!-- Albums (Genre) -->
+		<value condition="Container.Content(albums) | Container.Content(songs)">$VAR[Var_Info_Genre]</value>
+		<!-- Photo (Mode) -->
+		<value condition="Container.Content(photos)">$VAR[Var_Info_PictureMode]</value>
+		<!-- TvShows (Airdate) -->
+		<value condition="Container.Content(tvshows)">$VAR[Var_Info_Date]</value>
+	</variable>
+
+	<!-- SIDEBAR (Line 2) -->
+	<variable name="Var_Text_Sidebar_Line_2">
+		<!-- Creator -->
+		<value condition="Container.Content(addons)">Creator</value><!-- LOC -->
+		<!-- Writer -->
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$LOCALIZE[31041]</value>
+		<!-- Songs (Artist) -->
+		<value condition="Container.Content(songs)">$LOCALIZE[557]</value>
+		<!-- Photo (Model) -->
+		<value condition="Container.Content(photos)">Camera</value>
+		<!-- Episodes -->
+		<value condition="Container.Content(tvshows)">$LOCALIZE[31013]</value>
+	</variable>
+
+	<variable name="Var_Info_Sidebar_Line_2">
+		<!-- Creator -->
+		<value condition="Container.Content(addons)">$VAR[Var_Info_Addon_Creator]</value>
+		<!-- Writer -->
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$VAR[Var_Info_Writer]</value>
+		<!-- Songs (Artist) -->
+		<value condition="Container.Content(songs)">$VAR[Var_Info_Artist]</value>
+		<!-- Photos (Model) -->
+		<value condition="Container.Content(photos)">$VAR[Var_Info_PictureModel]</value>
+		<!-- TV Shows -->
+		<value condition="Container.Content(tvshows)">$VAR[Var_Info_Episodes_Total] $LOCALIZE[20161] [COLOR=mainblue]/[/COLOR] $VAR[Var_Info_Episodes_Unwatched] $LOCALIZE[16101]</value>
+	</variable>
+
+	<!-- SIDEBAR (Line 3) -->
+	<variable name="Var_Text_Sidebar_Line_3">
+		<!-- Version -->
+		<value condition="Container.Content(addons)">$LOCALIZE[19114]</value>
+		<!-- Cast -->
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | Container.Content(tvshows)">$LOCALIZE[31045]</value>
+		<!-- Clips (Airdate) -->
+		<value condition="ListItem.Type(clip)">$LOCALIZE[31043]</value>
+		<!-- Songs (Total) -->
+		<value condition="Container.Content(songs)">Total</value>
+		<!-- Photos (Date) -->
+		<value condition="Container.Content(photos)">$LOCALIZE[31042]</value>
+	</variable>
+
+	<variable name="Var_Info_Sidebar_Line_3">
+		<!-- Version -->
+		<value condition="Container.Content(addons)">$VAR[Var_Info_Addon_Version]</value>
+		<!-- Cast -->
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | Container.Content(tvshows)">$VAR[Var_Info_Cast]</value>
+		<!-- Date -->
+		<value condition="ListItem.Type(clip)">$VAR[Var_Info_Date]</value>
+		<!-- Songs (Artist) -->
+		<value condition="Container.Content(songs)">$VAR[Var_Info_TotalTime]</value>
+		<!-- Photo (Mode) -->
+		<value condition="Container.Content(photos)">$VAR[Var_Info_Date]</value>
+		<value>$INFO[ListItem.Property(Addon.Status)]</value>
+	</variable>
+
+	<!-- MEDIAFLAGS -->
+	<variable name="Var_Info_VideoResolution">
+		<value condition="!Skin.HasSetting(XBMC)">$INFO[Listitem.Art(mediaTag::videoResolution)]</value>
+		<value condition="Skin.HasSetting(XBMC)">mediaflags/resolution/$INFO[Listitem.Property(VideoResolution)].png</value>
+	</variable>
+
+	<variable name="Var_Info_AudioCodec">
+		<value condition="!Skin.HasSetting(XBMC)">$INFO[Listitem.Art(mediaTag::audioCodec)]</value>
+		<value condition="Skin.HasSetting(XBMC)">mediaflags/acodec/$INFO[Listitem.Property(AudioCodec)].png</value>
+	</variable>
+
+	<variable name="Var_Info_AudioChannels">
+		<value condition="!Skin.HasSetting(XBMC)">$INFO[Listitem.Art(mediaTag::audioChannels)]</value>
+		<value condition="Skin.HasSetting(XBMC)">mediaflags/channels/$INFO[Listitem.Property(AudioChannels)].png</value>
+	</variable>
+
+	<variable name="Var_Info_AspectRatio">
+		<value condition="!Skin.HasSetting(XBMC)">$INFO[Listitem.Art(mediaTag::aspectRatio)]</value>
+		<value condition="Skin.HasSetting(XBMC)">mediaflags/ratio/$INFO[Listitem.Property(VideoAspect)].png</value>
+	</variable>
+
+	<variable name="Var_Info_VideoCodec">
+		<value condition="!Skin.HasSetting(XBMC)">$INFO[Listitem.Art(mediaTag::videoCodec)]</value>
+		<value condition="Skin.HasSetting(XBMC)">mediaflags/vcodec/$INFO[Listitem.Property(VideoCodec)].png</value>
+	</variable>
+
+	<variable name="Var_Info_AspectRatio">
+		<value condition="!Skin.HasSetting(XBMC)">$INFO[Listitem.Art(mediaTag::aspectRatio)]</value>
+	</variable>
+
+	<variable name="Var_Info_FrameRate">
+		<value condition="!Skin.HasSetting(XBMC)">$INFO[Listitem.Art(mediaTag::videoFrameRate)]</value>
+	</variable>
+
+	<variable name="Var_Font_Style">
+		<value condition="Skin.HasSetting(Home_Font_Thin)">Thin</value>
+		<value condition="Skin.HasSetting(Home_Font_Regular)">Regular</value>
+		<value condition="Skin.HasSetting(Home_Font_Aeon)">Aeon</value>
+		<value condition="!Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular)">Light (Default)</value>
+	</variable>
+
+	<variable name="Var_Font_Size">
+		<value condition="Skin.HasSetting(Home_Font_Small)">Small</value>
+		<value condition="Skin.HasSetting(Home_Font_Medium)">Medium</value>
+		<value condition="!Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Medium)">Large (Default)</value>
+	</variable>
+
+	<variable name="Var_Home_Type">
+		<value condition="Skin.HasSetting(Home_Fixed)">Fixed List</value>
+		<value condition="Skin.HasSetting(Home_Simple)">Simple List</value>
+		<value condition="!Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Fixed)">Wrap List (Default)</value>
+	</variable>
+
+	<variable name="Var_Home_Items">
+		<value condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore) + !Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Medium)">9 Items (Default)</value>
+		<value condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore) + Skin.HasSetting(Home_Font_Medium)">11 Items (Default)</value>
+		<value condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore) + Skin.HasSetting(Home_Font_Small)">13 Items (Default)</value>
+
+		<value condition="Skin.HasSetting(HomeExtended) + !Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Medium)">7 Items</value>
+		<value condition="Skin.HasSetting(HomeExtended) + Skin.HasSetting(Home_Font_Medium)">9 Items</value>
+		<value condition="Skin.HasSetting(HomeExtended) + Skin.HasSetting(Home_Font_Small)">11 Items</value>
+
+		<value condition="Skin.HasSetting(HomeExtendedMore) + !Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Medium)">5 Items</value>
+		<value condition="Skin.HasSetting(HomeExtendedMore) + Skin.HasSetting(Home_Font_Medium)">7 Items</value>
+		<value condition="Skin.HasSetting(HomeExtendedMore) + Skin.HasSetting(Home_Font_Small)">9 Items</value>
+	</variable>
+
+	<variable name="Var_Deck_Mode">
+		<value condition="!Skin.HasSetting(Deck_Disable) + !Skin.HasSetting(Deck_Hide) + !Skin.HasSetting(Deck_Short)">Normal (Default)</value>
+		<value condition="Skin.HasSetting(Deck_Short)">Short</value>
+		<value condition="Skin.HasSetting(Deck_Hide)">Hidden</value>
+		<value condition="Skin.HasSetting(Deck_Disable)">Disabled</value>
+	</variable>
+
+	<variable name="Var_Deck_Image">
+		<value condition="!Skin.HasSetting(Deck_Images_Small) + !Skin.HasSetting(Deck_Images_xLarge) + !Skin.HasSetting(Deck_Images_Large)">Medium (Default)</value>
+		<value condition="Skin.HasSetting(Deck_Images_Small)">Small</value>
+		<value condition="Skin.HasSetting(Deck_Images_xLarge)">Large</value>
+	</variable>
+
+	<variable name="Var_Deck_Focus">
+		<value condition="!Skin.HasSetting(Deck_Focus_Zoom) + !Skin.HasSetting(Deck_Focus_Drop)">None (Default)</value>
+		<value condition="Skin.HasSetting(Deck_Focus_Zoom)">Zoom</value>
+		<value condition="Skin.HasSetting(Deck_Focus_Drop)">Drop</value>
+	</variable>
+
+	<variable name="Var_Favourite_Background">
+	        <value condition="Container(300).HasFocus(400)">$INFO[Skin.String(Favourite0_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(401)">$INFO[Skin.String(Favourite1_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(402)">$INFO[Skin.String(Favourite2_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(403)">$INFO[Skin.String(Favourite3_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(404)">$INFO[Skin.String(Favourite4_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(405)">$INFO[Skin.String(Favourite5_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(406)">$INFO[Skin.String(Favourite6_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(407)">$INFO[Skin.String(Favourite7_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(408)">$INFO[Skin.String(Favourite8_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(409)">$INFO[Skin.String(Favourite9_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(410)">$INFO[Skin.String(Favourite10_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(411)">$INFO[Skin.String(Favourite11_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(412)">$INFO[Skin.String(Favourite12_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(413)">$INFO[Skin.String(Favourite13_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(414)">$INFO[Skin.String(Favourite14_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(415)">$INFO[Skin.String(Favourite15_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(416)">$INFO[Skin.String(Favourite16_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(417)">$INFO[Skin.String(Favourite17_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(418)">$INFO[Skin.String(Favourite18_Fanart)]</value>
+	        <value condition="Container(300).HasFocus(419)">$INFO[Skin.String(Favourite19_Fanart)]</value>
+	</variable>
+
+	
+	<variable name="Var_Favourite_Button_1">
+		<value condition="isEmpty(Skin.String(Favourite@COUNT@_Path)) + !isEmpty(ListItem.Label)">Add Favourite</value>
+		<value condition="isEmpty(Skin.String(Favourite@COUNT@_Path)) + isEmpty(ListItem.Label)">Custom File</value>
+		<value condition="!isEmpty(Skin.String(Favourite@COUNT@_Path))">Rename</value>
+	</variable>
+
+	<variable name="Var_Viewmode_List_Main">
+		<value condition="!isEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="!isEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
+	</variable>
+
+	<variable name="Var_Viewmode_List_TextMain">
+		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber]. $INFO[ListItem.Label]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Episode]. $INFO[ListItem.Label]</value>
+		<value condition="!isEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="!isEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
+	</variable>
+
+	<variable name="Var_Viewmode_List_TextMain_1">
+		<value condition="!isEmpty(ListItem.Duration)">$INFO[ListItem.Duration]min</value>
+		<!--<value condition="!isEmtpy(ListItem.PictureResolution)">$INFO[ListItem.PictureResolution]</value>-->
+	</variable>
+
+	<variable name="Var_Viewmode_List_TextMain_2">
+		<value condition="!isEmtpy(ListItem.Date)">$INFO[ListItem.Date]</value>
+	</variable>
+
+	<variable name="Var_SortLetter">
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums) | Container.Content(photos)">$INFO[ListItem.SortLetter]</value>
+	</variable>
+
+	<variable name="Var_Studio_Settings">
+		<value condition="!Skin.HasSetting(NoStudioLogo) + !Skin.HasSetting(StudioLogoImages)">Text (Default)</value>
+		<value condition="Skin.HasSetting(StudioLogoImages)">Logo</value>
+		<value condition="Skin.HasSetting(NoStudioLogo)">Disabled</value>
+	</variable>
+
+</includes>
+

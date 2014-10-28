@@ -7788,6 +7788,100 @@
 		<visible>!isEmpty(Window(Home).Property(plexbmc.20.path))</visible>
 	</item>
 	</include>
+	<include name="XBMC_Deck_Plexbmc_Channel_Items">
+		<content>
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.1.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.1.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.1.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.1.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.2.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.2.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.2.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.2.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.3.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.3.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.3.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.3.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.4.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.4.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.4.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.4.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.5.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.5.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.5.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.5.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.6.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.6.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.6.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.6.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.7.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.7.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.7.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.7.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.8.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.8.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.8.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.8.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.9.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.9.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.9.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.9.Path))</visible>
+	</item>
+
+	<item>
+		<label>$INFO[Window(Home).Property(Plexbmc.LatestChannel.10.Title)]</label>
+		<onclick>$INFO[Window(Home).Property(Plexbmc.LatestChannel.10.Path)]</onclick>
+		<thumb background="true">$INFO[Window(Home).Property(Plexbmc.LatestChannel.10.Thumb)]</thumb>
+		<property name="Type">Square</property>
+		<property name="Type2">Square</property>
+		<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestChannel.10.Path))</visible>
+	</item>
+
+		</content>
+	</include>
 	<include name="XBMC_Deck_NextAired_Items">
 		<content>
 			<!-- Next Aired (@WHAT@/1)-->
@@ -8185,6 +8279,3085 @@
 				<visible>!isEmpty(Window(Home).Property(favourite.14.path))</visible>
 			</item>
 		</content>
+	</include>
+	<include name="PLEX_Home_SharedContent_Items">
+			<!-- Shared Content (0) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent0_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent0_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent0_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent0_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent0_Enabled) + !isEmpty(Skin.String(Home_SharedContent0_Label))</visible>
+			</item>
+
+			<!-- Shared Content (1) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent1_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent1_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent1_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent1_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent1_Enabled) + !isEmpty(Skin.String(Home_SharedContent1_Label))</visible>
+			</item>
+
+			<!-- Shared Content (2) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent2_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent2_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent2_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent2_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent2_Enabled) + !isEmpty(Skin.String(Home_SharedContent2_Label))</visible>
+			</item>
+
+			<!-- Shared Content (3) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent3_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent3_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent3_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent3_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent3_Enabled) + !isEmpty(Skin.String(Home_SharedContent3_Label))</visible>
+			</item>
+
+			<!-- Shared Content (4) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent4_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent4_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent4_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent4_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent4_Enabled) + !isEmpty(Skin.String(Home_SharedContent4_Label))</visible>
+			</item>
+
+			<!-- Shared Content (5) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent5_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent5_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent5_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent5_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent5_Enabled) + !isEmpty(Skin.String(Home_SharedContent5_Label))</visible>
+			</item>
+
+			<!-- Shared Content (6) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent6_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent6_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent6_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent6_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent6_Enabled) + !isEmpty(Skin.String(Home_SharedContent6_Label))</visible>
+			</item>
+
+			<!-- Shared Content (7) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent7_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent7_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent7_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent7_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent7_Enabled) + !isEmpty(Skin.String(Home_SharedContent7_Label))</visible>
+			</item>
+
+			<!-- Shared Content (8) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent8_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent8_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent8_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent8_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent8_Enabled) + !isEmpty(Skin.String(Home_SharedContent8_Label))</visible>
+			</item>
+
+			<!-- Shared Content (9) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent9_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent9_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent9_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent9_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent9_Enabled) + !isEmpty(Skin.String(Home_SharedContent9_Label))</visible>
+			</item>
+
+			<!-- Shared Content (10) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent10_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent10_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent10_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent10_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent10_Enabled) + !isEmpty(Skin.String(Home_SharedContent10_Label))</visible>
+			</item>
+
+			<!-- Shared Content (11) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent11_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent11_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent11_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent11_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent11_Enabled) + !isEmpty(Skin.String(Home_SharedContent11_Label))</visible>
+			</item>
+
+			<!-- Shared Content (12) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent12_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent12_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent12_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent12_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent12_Enabled) + !isEmpty(Skin.String(Home_SharedContent12_Label))</visible>
+			</item>
+
+			<!-- Shared Content (13) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent13_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent13_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent13_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent13_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent13_Enabled) + !isEmpty(Skin.String(Home_SharedContent13_Label))</visible>
+			</item>
+
+			<!-- Shared Content (14) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent14_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent14_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent14_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent14_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent14_Enabled) + !isEmpty(Skin.String(Home_SharedContent14_Label))</visible>
+			</item>
+
+			<!-- Shared Content (15) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent15_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent15_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent15_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent15_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent15_Enabled) + !isEmpty(Skin.String(Home_SharedContent15_Label))</visible>
+			</item>
+
+			<!-- Shared Content (16) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent16_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent16_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent16_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent16_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent16_Enabled) + !isEmpty(Skin.String(Home_SharedContent16_Label))</visible>
+			</item>
+
+			<!-- Shared Content (17) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent17_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent17_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent17_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent17_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent17_Enabled) + !isEmpty(Skin.String(Home_SharedContent17_Label))</visible>
+			</item>
+
+			<!-- Shared Content (18) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent18_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent18_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent18_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent18_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent18_Enabled) + !isEmpty(Skin.String(Home_SharedContent18_Label))</visible>
+			</item>
+
+			<!-- Shared Content (19) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent19_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent19_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent19_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent19_Path)])</onclick>
+				<!--Home--><visible>Skin.HasSetting(Home_SharedContent19_Enabled) + !isEmpty(Skin.String(Home_SharedContent19_Label))</visible>
+			</item>
+
+	</include>
+	<include name="PLEX_Deck_SharedContent_Items">
+			<!-- Shared Content (0) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent0_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent0_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent0_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent0_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent0_Label))</visible>
+			</item>
+
+			<!-- Shared Content (1) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent1_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent1_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent1_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent1_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent1_Label))</visible>
+			</item>
+
+			<!-- Shared Content (2) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent2_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent2_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent2_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent2_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent2_Label))</visible>
+			</item>
+
+			<!-- Shared Content (3) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent3_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent3_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent3_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent3_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent3_Label))</visible>
+			</item>
+
+			<!-- Shared Content (4) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent4_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent4_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent4_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent4_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent4_Label))</visible>
+			</item>
+
+			<!-- Shared Content (5) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent5_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent5_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent5_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent5_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent5_Label))</visible>
+			</item>
+
+			<!-- Shared Content (6) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent6_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent6_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent6_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent6_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent6_Label))</visible>
+			</item>
+
+			<!-- Shared Content (7) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent7_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent7_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent7_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent7_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent7_Label))</visible>
+			</item>
+
+			<!-- Shared Content (8) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent8_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent8_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent8_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent8_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent8_Label))</visible>
+			</item>
+
+			<!-- Shared Content (9) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent9_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent9_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent9_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent9_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent9_Label))</visible>
+			</item>
+
+			<!-- Shared Content (10) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent10_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent10_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent10_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent10_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent10_Label))</visible>
+			</item>
+
+			<!-- Shared Content (11) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent11_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent11_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent11_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent11_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent11_Label))</visible>
+			</item>
+
+			<!-- Shared Content (12) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent12_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent12_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent12_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent12_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent12_Label))</visible>
+			</item>
+
+			<!-- Shared Content (13) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent13_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent13_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent13_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent13_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent13_Label))</visible>
+			</item>
+
+			<!-- Shared Content (14) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent14_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent14_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent14_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent14_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent14_Label))</visible>
+			</item>
+
+			<!-- Shared Content (15) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent15_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent15_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent15_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent15_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent15_Label))</visible>
+			</item>
+
+			<!-- Shared Content (16) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent16_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent16_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent16_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent16_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent16_Label))</visible>
+			</item>
+
+			<!-- Shared Content (17) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent17_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent17_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent17_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent17_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent17_Label))</visible>
+			</item>
+
+			<!-- Shared Content (18) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent18_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent18_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent18_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent18_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent18_Label))</visible>
+			</item>
+
+			<!-- Shared Content (19) -->
+			<item>
+				<label>$INFO[Skin.String(Home_SharedContent19_Label)]</label>
+				<label2>$INFO[Skin.String(Home_SharedContent19_Source)]</label2>
+				<thumb>$INFO[Skin.String(Home_SharedContent19_Thumb)]</thumb>
+				<property name="Type">Square</property>
+				<property name="Type2">Square</property>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Home_SharedContent19_Path)])</onclick>
+				<!--Deck--><visible>!isEmpty(Skin.String(Home_SharedContent19_Label))</visible>
+			</item>
+
+	</include>
+	<include name="PLEX_Home_SharedContent_Unload">
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,0)">Skin.SetString(Home_SharedContent0_Label,$INFO[ListItem(0).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,0)">Skin.SetString(Home_SharedContent0_Path,$INFO[ListItem(0).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,0)">Skin.SetString(Home_SharedContent0_Source,$INFO[ListItem(0).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,0)">Skin.SetString(Home_SharedContent0_Thumb,$INFO[ListItem(0).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,0)">Skin.SetString(Home_SharedContent0_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,0)">Skin.Reset(Home_SharedContent0_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,0)">Skin.Reset(Home_SharedContent0_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,0)">Skin.SetString(Home_SharedContent0_Source,$INFO[ListItem(0).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,0)">Skin.SetString(Home_SharedContent0_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,1)">Skin.SetString(Home_SharedContent1_Label,$INFO[ListItem(1).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,1)">Skin.SetString(Home_SharedContent1_Path,$INFO[ListItem(1).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,1)">Skin.SetString(Home_SharedContent1_Source,$INFO[ListItem(1).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,1)">Skin.SetString(Home_SharedContent1_Thumb,$INFO[ListItem(1).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,1)">Skin.SetString(Home_SharedContent1_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,1)">Skin.Reset(Home_SharedContent1_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,1)">Skin.Reset(Home_SharedContent1_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,1)">Skin.SetString(Home_SharedContent1_Source,$INFO[ListItem(1).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,1)">Skin.SetString(Home_SharedContent1_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,2)">Skin.SetString(Home_SharedContent2_Label,$INFO[ListItem(2).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,2)">Skin.SetString(Home_SharedContent2_Path,$INFO[ListItem(2).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,2)">Skin.SetString(Home_SharedContent2_Source,$INFO[ListItem(2).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,2)">Skin.SetString(Home_SharedContent2_Thumb,$INFO[ListItem(2).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,2)">Skin.SetString(Home_SharedContent2_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,2)">Skin.Reset(Home_SharedContent2_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,2)">Skin.Reset(Home_SharedContent2_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,2)">Skin.SetString(Home_SharedContent2_Source,$INFO[ListItem(2).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,2)">Skin.SetString(Home_SharedContent2_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,3)">Skin.SetString(Home_SharedContent3_Label,$INFO[ListItem(3).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,3)">Skin.SetString(Home_SharedContent3_Path,$INFO[ListItem(3).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,3)">Skin.SetString(Home_SharedContent3_Source,$INFO[ListItem(3).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,3)">Skin.SetString(Home_SharedContent3_Thumb,$INFO[ListItem(3).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,3)">Skin.SetString(Home_SharedContent3_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,3)">Skin.Reset(Home_SharedContent3_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,3)">Skin.Reset(Home_SharedContent3_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,3)">Skin.SetString(Home_SharedContent3_Source,$INFO[ListItem(3).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,3)">Skin.SetString(Home_SharedContent3_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,4)">Skin.SetString(Home_SharedContent4_Label,$INFO[ListItem(4).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,4)">Skin.SetString(Home_SharedContent4_Path,$INFO[ListItem(4).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,4)">Skin.SetString(Home_SharedContent4_Source,$INFO[ListItem(4).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,4)">Skin.SetString(Home_SharedContent4_Thumb,$INFO[ListItem(4).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,4)">Skin.SetString(Home_SharedContent4_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,4)">Skin.Reset(Home_SharedContent4_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,4)">Skin.Reset(Home_SharedContent4_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,4)">Skin.SetString(Home_SharedContent4_Source,$INFO[ListItem(4).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,4)">Skin.SetString(Home_SharedContent4_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,5)">Skin.SetString(Home_SharedContent5_Label,$INFO[ListItem(5).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,5)">Skin.SetString(Home_SharedContent5_Path,$INFO[ListItem(5).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,5)">Skin.SetString(Home_SharedContent5_Source,$INFO[ListItem(5).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,5)">Skin.SetString(Home_SharedContent5_Thumb,$INFO[ListItem(5).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,5)">Skin.SetString(Home_SharedContent5_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,5)">Skin.Reset(Home_SharedContent5_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,5)">Skin.Reset(Home_SharedContent5_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,5)">Skin.SetString(Home_SharedContent5_Source,$INFO[ListItem(5).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,5)">Skin.SetString(Home_SharedContent5_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,6)">Skin.SetString(Home_SharedContent6_Label,$INFO[ListItem(6).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,6)">Skin.SetString(Home_SharedContent6_Path,$INFO[ListItem(6).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,6)">Skin.SetString(Home_SharedContent6_Source,$INFO[ListItem(6).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,6)">Skin.SetString(Home_SharedContent6_Thumb,$INFO[ListItem(6).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,6)">Skin.SetString(Home_SharedContent6_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,6)">Skin.Reset(Home_SharedContent6_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,6)">Skin.Reset(Home_SharedContent6_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,6)">Skin.SetString(Home_SharedContent6_Source,$INFO[ListItem(6).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,6)">Skin.SetString(Home_SharedContent6_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,7)">Skin.SetString(Home_SharedContent7_Label,$INFO[ListItem(7).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,7)">Skin.SetString(Home_SharedContent7_Path,$INFO[ListItem(7).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,7)">Skin.SetString(Home_SharedContent7_Source,$INFO[ListItem(7).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,7)">Skin.SetString(Home_SharedContent7_Thumb,$INFO[ListItem(7).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,7)">Skin.SetString(Home_SharedContent7_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,7)">Skin.Reset(Home_SharedContent7_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,7)">Skin.Reset(Home_SharedContent7_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,7)">Skin.SetString(Home_SharedContent7_Source,$INFO[ListItem(7).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,7)">Skin.SetString(Home_SharedContent7_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,8)">Skin.SetString(Home_SharedContent8_Label,$INFO[ListItem(8).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,8)">Skin.SetString(Home_SharedContent8_Path,$INFO[ListItem(8).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,8)">Skin.SetString(Home_SharedContent8_Source,$INFO[ListItem(8).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,8)">Skin.SetString(Home_SharedContent8_Thumb,$INFO[ListItem(8).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,8)">Skin.SetString(Home_SharedContent8_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,8)">Skin.Reset(Home_SharedContent8_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,8)">Skin.Reset(Home_SharedContent8_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,8)">Skin.SetString(Home_SharedContent8_Source,$INFO[ListItem(8).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,8)">Skin.SetString(Home_SharedContent8_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,9)">Skin.SetString(Home_SharedContent9_Label,$INFO[ListItem(9).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,9)">Skin.SetString(Home_SharedContent9_Path,$INFO[ListItem(9).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,9)">Skin.SetString(Home_SharedContent9_Source,$INFO[ListItem(9).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,9)">Skin.SetString(Home_SharedContent9_Thumb,$INFO[ListItem(9).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,9)">Skin.SetString(Home_SharedContent9_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,9)">Skin.Reset(Home_SharedContent9_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,9)">Skin.Reset(Home_SharedContent9_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,9)">Skin.SetString(Home_SharedContent9_Source,$INFO[ListItem(9).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,9)">Skin.SetString(Home_SharedContent9_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,10)">Skin.SetString(Home_SharedContent10_Label,$INFO[ListItem(10).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,10)">Skin.SetString(Home_SharedContent10_Path,$INFO[ListItem(10).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,10)">Skin.SetString(Home_SharedContent10_Source,$INFO[ListItem(10).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,10)">Skin.SetString(Home_SharedContent10_Thumb,$INFO[ListItem(10).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,10)">Skin.SetString(Home_SharedContent10_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,10)">Skin.Reset(Home_SharedContent10_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,10)">Skin.Reset(Home_SharedContent10_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,10)">Skin.SetString(Home_SharedContent10_Source,$INFO[ListItem(10).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,10)">Skin.SetString(Home_SharedContent10_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,11)">Skin.SetString(Home_SharedContent11_Label,$INFO[ListItem(11).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,11)">Skin.SetString(Home_SharedContent11_Path,$INFO[ListItem(11).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,11)">Skin.SetString(Home_SharedContent11_Source,$INFO[ListItem(11).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,11)">Skin.SetString(Home_SharedContent11_Thumb,$INFO[ListItem(11).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,11)">Skin.SetString(Home_SharedContent11_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,11)">Skin.Reset(Home_SharedContent11_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,11)">Skin.Reset(Home_SharedContent11_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,11)">Skin.SetString(Home_SharedContent11_Source,$INFO[ListItem(11).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,11)">Skin.SetString(Home_SharedContent11_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,12)">Skin.SetString(Home_SharedContent12_Label,$INFO[ListItem(12).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,12)">Skin.SetString(Home_SharedContent12_Path,$INFO[ListItem(12).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,12)">Skin.SetString(Home_SharedContent12_Source,$INFO[ListItem(12).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,12)">Skin.SetString(Home_SharedContent12_Thumb,$INFO[ListItem(12).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,12)">Skin.SetString(Home_SharedContent12_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,12)">Skin.Reset(Home_SharedContent12_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,12)">Skin.Reset(Home_SharedContent12_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,12)">Skin.SetString(Home_SharedContent12_Source,$INFO[ListItem(12).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,12)">Skin.SetString(Home_SharedContent12_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,13)">Skin.SetString(Home_SharedContent13_Label,$INFO[ListItem(13).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,13)">Skin.SetString(Home_SharedContent13_Path,$INFO[ListItem(13).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,13)">Skin.SetString(Home_SharedContent13_Source,$INFO[ListItem(13).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,13)">Skin.SetString(Home_SharedContent13_Thumb,$INFO[ListItem(13).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,13)">Skin.SetString(Home_SharedContent13_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,13)">Skin.Reset(Home_SharedContent13_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,13)">Skin.Reset(Home_SharedContent13_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,13)">Skin.SetString(Home_SharedContent13_Source,$INFO[ListItem(13).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,13)">Skin.SetString(Home_SharedContent13_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,14)">Skin.SetString(Home_SharedContent14_Label,$INFO[ListItem(14).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,14)">Skin.SetString(Home_SharedContent14_Path,$INFO[ListItem(14).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,14)">Skin.SetString(Home_SharedContent14_Source,$INFO[ListItem(14).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,14)">Skin.SetString(Home_SharedContent14_Thumb,$INFO[ListItem(14).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,14)">Skin.SetString(Home_SharedContent14_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,14)">Skin.Reset(Home_SharedContent14_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,14)">Skin.Reset(Home_SharedContent14_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,14)">Skin.SetString(Home_SharedContent14_Source,$INFO[ListItem(14).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,14)">Skin.SetString(Home_SharedContent14_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,15)">Skin.SetString(Home_SharedContent15_Label,$INFO[ListItem(15).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,15)">Skin.SetString(Home_SharedContent15_Path,$INFO[ListItem(15).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,15)">Skin.SetString(Home_SharedContent15_Source,$INFO[ListItem(15).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,15)">Skin.SetString(Home_SharedContent15_Thumb,$INFO[ListItem(15).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,15)">Skin.SetString(Home_SharedContent15_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,15)">Skin.Reset(Home_SharedContent15_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,15)">Skin.Reset(Home_SharedContent15_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,15)">Skin.SetString(Home_SharedContent15_Source,$INFO[ListItem(15).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,15)">Skin.SetString(Home_SharedContent15_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,16)">Skin.SetString(Home_SharedContent16_Label,$INFO[ListItem(16).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,16)">Skin.SetString(Home_SharedContent16_Path,$INFO[ListItem(16).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,16)">Skin.SetString(Home_SharedContent16_Source,$INFO[ListItem(16).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,16)">Skin.SetString(Home_SharedContent16_Thumb,$INFO[ListItem(16).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,16)">Skin.SetString(Home_SharedContent16_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,16)">Skin.Reset(Home_SharedContent16_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,16)">Skin.Reset(Home_SharedContent16_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,16)">Skin.SetString(Home_SharedContent16_Source,$INFO[ListItem(16).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,16)">Skin.SetString(Home_SharedContent16_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,17)">Skin.SetString(Home_SharedContent17_Label,$INFO[ListItem(17).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,17)">Skin.SetString(Home_SharedContent17_Path,$INFO[ListItem(17).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,17)">Skin.SetString(Home_SharedContent17_Source,$INFO[ListItem(17).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,17)">Skin.SetString(Home_SharedContent17_Thumb,$INFO[ListItem(17).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,17)">Skin.SetString(Home_SharedContent17_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,17)">Skin.Reset(Home_SharedContent17_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,17)">Skin.Reset(Home_SharedContent17_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,17)">Skin.SetString(Home_SharedContent17_Source,$INFO[ListItem(17).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,17)">Skin.SetString(Home_SharedContent17_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,18)">Skin.SetString(Home_SharedContent18_Label,$INFO[ListItem(18).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,18)">Skin.SetString(Home_SharedContent18_Path,$INFO[ListItem(18).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,18)">Skin.SetString(Home_SharedContent18_Source,$INFO[ListItem(18).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,18)">Skin.SetString(Home_SharedContent18_Thumb,$INFO[ListItem(18).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,18)">Skin.SetString(Home_SharedContent18_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,18)">Skin.Reset(Home_SharedContent18_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,18)">Skin.Reset(Home_SharedContent18_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,18)">Skin.SetString(Home_SharedContent18_Source,$INFO[ListItem(18).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,18)">Skin.SetString(Home_SharedContent18_Thumb,logo-myplex.png)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,19)">Skin.SetString(Home_SharedContent19_Label,$INFO[ListItem(19).Label])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,19)">Skin.SetString(Home_SharedContent19_Path,$INFO[ListItem(19).Path])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,19)">Skin.SetString(Home_SharedContent19_Source,$INFO[ListItem(19).Property(sourceTitle)])</onunload>
+	<!--<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,19)">Skin.SetString(Home_SharedContent19_Thumb,$INFO[ListItem(19).CompositeImage(width=720;height=720;cols=2;rows=2)])</onunload>-->
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + IntegerGreaterThan(Container.NumItems,19)">Skin.SetString(Home_SharedContent19_Thumb,logo-myplex.png)</onunload>
+
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,19)">Skin.Reset(Home_SharedContent19_Label)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,19)">Skin.Reset(Home_SharedContent19_Path)</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,19)">Skin.SetString(Home_SharedContent19_Source,$INFO[ListItem(19).Property(sourceTitle)])</onunload>
+	<onunload condition="Skin.HasSetting(SharedContent_Update) + !IntegerGreaterThan(Container.NumItems,19)">Skin.SetString(Home_SharedContent19_Thumb,logo-myplex.png)</onunload>
+<onunload condition="Skin.HasSetting(SharedContent_Update)">Skin.Reset(SharedContent_Update)</onunload>
+	</include>
+	<include name="PLEX_Home_SharedContent_Settings">
+	<control type="radiobutton" id="3210">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent0_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent0_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent0_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent0_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent0_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3211">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent1_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent1_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent1_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent1_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent1_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3212">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent2_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent2_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent2_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent2_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent2_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3213">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent3_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent3_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent3_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent3_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent3_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3214">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent4_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent4_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent4_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent4_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent4_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3215">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent5_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent5_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent5_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent5_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent5_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3216">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent6_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent6_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent6_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent6_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent6_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3217">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent7_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent7_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent7_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent7_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent7_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3218">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent8_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent8_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent8_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent8_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent8_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3219">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent9_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent9_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent9_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent9_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent9_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3220">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent10_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent10_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent10_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent10_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent10_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3221">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent11_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent11_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent11_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent11_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent11_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3222">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent12_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent12_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent12_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent12_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent12_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3223">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent13_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent13_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent13_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent13_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent13_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3224">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent14_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent14_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent14_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent14_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent14_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3225">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent15_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent15_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent15_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent15_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent15_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3226">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent16_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent16_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent16_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent16_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent16_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3227">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent17_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent17_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent17_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent17_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent17_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3228">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent18_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent18_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent18_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent18_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent18_Label))</visible>
+	</control>
+
+	<control type="radiobutton" id="3229">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Home_SharedContent19_Source)] [COLOR=mainblue]/[/COLOR] $INFO[Skin.String(Home_SharedContent19_Label)]</label>
+		<onclick>Skin.ToggleSetting(Home_SharedContent19_Enabled)</onclick>
+		<selected>Skin.HasSetting(Home_SharedContent19_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Home_SharedContent19_Label))</visible>
+	</control>
+
+	</include>
+	<include name="PLEX_Favourite_Buttons">
+	<!-- Rename -->
+	<control type="button" id="3150">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite0_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(0) + !isEmpty(Skin.String(Favourite0_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3151">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite0_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite0_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite0_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite0_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite0_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite0_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite0_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite0_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(0) + isEmpty(Skin.String(Favourite0_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3152">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite0_Name,Custom 0)</onclick>
+		<onclick>Skin.SetString(Favourite0_Label,Custom 0)</onclick>
+		<onclick>Skin.SetString(Favourite0_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite0_Path)</onclick>
+		<visible>Container(3101).HasFocus(0) + isEmpty(Skin.String(Favourite0_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3153">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite0_Name,Custom 0)</onclick>
+		<onclick>Skin.SetString(Favourite0_Label,Custom 0)</onclick>
+		<onclick>Skin.SetString(Favourite0_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite0_Path)</onclick>
+		<visible>Container(3101).HasFocus(0) + isEmpty(Skin.String(Favourite0_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3154">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite0_Name)</onclick>
+		<onclick>Skin.Reset(Favourite0_Label)</onclick>
+		<onclick>Skin.Reset(Favourite0_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite0_Target)</onclick>
+		<onclick>Skin.Reset(Favourite0_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite0_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite0_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite0_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(0) + !isEmpty(Skin.String(Favourite0_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3155">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite1_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(1) + !isEmpty(Skin.String(Favourite1_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3156">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite1_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite1_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite1_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite1_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite1_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite1_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite1_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite1_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(1) + isEmpty(Skin.String(Favourite1_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3157">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite1_Name,Custom 1)</onclick>
+		<onclick>Skin.SetString(Favourite1_Label,Custom 1)</onclick>
+		<onclick>Skin.SetString(Favourite1_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite1_Path)</onclick>
+		<visible>Container(3101).HasFocus(1) + isEmpty(Skin.String(Favourite1_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3158">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite1_Name,Custom 1)</onclick>
+		<onclick>Skin.SetString(Favourite1_Label,Custom 1)</onclick>
+		<onclick>Skin.SetString(Favourite1_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite1_Path)</onclick>
+		<visible>Container(3101).HasFocus(1) + isEmpty(Skin.String(Favourite1_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3159">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite1_Name)</onclick>
+		<onclick>Skin.Reset(Favourite1_Label)</onclick>
+		<onclick>Skin.Reset(Favourite1_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite1_Target)</onclick>
+		<onclick>Skin.Reset(Favourite1_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite1_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite1_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite1_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(1) + !isEmpty(Skin.String(Favourite1_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3160">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite2_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(2) + !isEmpty(Skin.String(Favourite2_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3161">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite2_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite2_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite2_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite2_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite2_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite2_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite2_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite2_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(2) + isEmpty(Skin.String(Favourite2_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3162">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite2_Name,Custom 2)</onclick>
+		<onclick>Skin.SetString(Favourite2_Label,Custom 2)</onclick>
+		<onclick>Skin.SetString(Favourite2_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite2_Path)</onclick>
+		<visible>Container(3101).HasFocus(2) + isEmpty(Skin.String(Favourite2_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3163">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite2_Name,Custom 2)</onclick>
+		<onclick>Skin.SetString(Favourite2_Label,Custom 2)</onclick>
+		<onclick>Skin.SetString(Favourite2_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite2_Path)</onclick>
+		<visible>Container(3101).HasFocus(2) + isEmpty(Skin.String(Favourite2_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3164">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite2_Name)</onclick>
+		<onclick>Skin.Reset(Favourite2_Label)</onclick>
+		<onclick>Skin.Reset(Favourite2_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite2_Target)</onclick>
+		<onclick>Skin.Reset(Favourite2_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite2_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite2_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite2_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(2) + !isEmpty(Skin.String(Favourite2_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3165">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite3_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(3) + !isEmpty(Skin.String(Favourite3_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3166">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite3_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite3_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite3_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite3_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite3_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite3_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite3_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite3_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(3) + isEmpty(Skin.String(Favourite3_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3167">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite3_Name,Custom 3)</onclick>
+		<onclick>Skin.SetString(Favourite3_Label,Custom 3)</onclick>
+		<onclick>Skin.SetString(Favourite3_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite3_Path)</onclick>
+		<visible>Container(3101).HasFocus(3) + isEmpty(Skin.String(Favourite3_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3168">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite3_Name,Custom 3)</onclick>
+		<onclick>Skin.SetString(Favourite3_Label,Custom 3)</onclick>
+		<onclick>Skin.SetString(Favourite3_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite3_Path)</onclick>
+		<visible>Container(3101).HasFocus(3) + isEmpty(Skin.String(Favourite3_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3169">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite3_Name)</onclick>
+		<onclick>Skin.Reset(Favourite3_Label)</onclick>
+		<onclick>Skin.Reset(Favourite3_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite3_Target)</onclick>
+		<onclick>Skin.Reset(Favourite3_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite3_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite3_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite3_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(3) + !isEmpty(Skin.String(Favourite3_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3170">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite4_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(4) + !isEmpty(Skin.String(Favourite4_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3171">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite4_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite4_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite4_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite4_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite4_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite4_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite4_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite4_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(4) + isEmpty(Skin.String(Favourite4_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3172">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite4_Name,Custom 4)</onclick>
+		<onclick>Skin.SetString(Favourite4_Label,Custom 4)</onclick>
+		<onclick>Skin.SetString(Favourite4_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite4_Path)</onclick>
+		<visible>Container(3101).HasFocus(4) + isEmpty(Skin.String(Favourite4_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3173">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite4_Name,Custom 4)</onclick>
+		<onclick>Skin.SetString(Favourite4_Label,Custom 4)</onclick>
+		<onclick>Skin.SetString(Favourite4_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite4_Path)</onclick>
+		<visible>Container(3101).HasFocus(4) + isEmpty(Skin.String(Favourite4_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3174">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite4_Name)</onclick>
+		<onclick>Skin.Reset(Favourite4_Label)</onclick>
+		<onclick>Skin.Reset(Favourite4_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite4_Target)</onclick>
+		<onclick>Skin.Reset(Favourite4_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite4_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite4_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite4_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(4) + !isEmpty(Skin.String(Favourite4_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3175">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite5_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(5) + !isEmpty(Skin.String(Favourite5_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3176">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite5_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite5_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite5_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite5_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite5_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite5_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite5_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite5_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(5) + isEmpty(Skin.String(Favourite5_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3177">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite5_Name,Custom 5)</onclick>
+		<onclick>Skin.SetString(Favourite5_Label,Custom 5)</onclick>
+		<onclick>Skin.SetString(Favourite5_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite5_Path)</onclick>
+		<visible>Container(3101).HasFocus(5) + isEmpty(Skin.String(Favourite5_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3178">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite5_Name,Custom 5)</onclick>
+		<onclick>Skin.SetString(Favourite5_Label,Custom 5)</onclick>
+		<onclick>Skin.SetString(Favourite5_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite5_Path)</onclick>
+		<visible>Container(3101).HasFocus(5) + isEmpty(Skin.String(Favourite5_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3179">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite5_Name)</onclick>
+		<onclick>Skin.Reset(Favourite5_Label)</onclick>
+		<onclick>Skin.Reset(Favourite5_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite5_Target)</onclick>
+		<onclick>Skin.Reset(Favourite5_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite5_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite5_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite5_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(5) + !isEmpty(Skin.String(Favourite5_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3180">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite6_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(6) + !isEmpty(Skin.String(Favourite6_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3181">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite6_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite6_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite6_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite6_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite6_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite6_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite6_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite6_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(6) + isEmpty(Skin.String(Favourite6_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3182">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite6_Name,Custom 6)</onclick>
+		<onclick>Skin.SetString(Favourite6_Label,Custom 6)</onclick>
+		<onclick>Skin.SetString(Favourite6_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite6_Path)</onclick>
+		<visible>Container(3101).HasFocus(6) + isEmpty(Skin.String(Favourite6_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3183">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite6_Name,Custom 6)</onclick>
+		<onclick>Skin.SetString(Favourite6_Label,Custom 6)</onclick>
+		<onclick>Skin.SetString(Favourite6_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite6_Path)</onclick>
+		<visible>Container(3101).HasFocus(6) + isEmpty(Skin.String(Favourite6_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3184">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite6_Name)</onclick>
+		<onclick>Skin.Reset(Favourite6_Label)</onclick>
+		<onclick>Skin.Reset(Favourite6_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite6_Target)</onclick>
+		<onclick>Skin.Reset(Favourite6_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite6_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite6_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite6_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(6) + !isEmpty(Skin.String(Favourite6_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3185">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite7_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(7) + !isEmpty(Skin.String(Favourite7_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3186">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite7_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite7_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite7_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite7_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite7_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite7_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite7_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite7_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(7) + isEmpty(Skin.String(Favourite7_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3187">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite7_Name,Custom 7)</onclick>
+		<onclick>Skin.SetString(Favourite7_Label,Custom 7)</onclick>
+		<onclick>Skin.SetString(Favourite7_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite7_Path)</onclick>
+		<visible>Container(3101).HasFocus(7) + isEmpty(Skin.String(Favourite7_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3188">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite7_Name,Custom 7)</onclick>
+		<onclick>Skin.SetString(Favourite7_Label,Custom 7)</onclick>
+		<onclick>Skin.SetString(Favourite7_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite7_Path)</onclick>
+		<visible>Container(3101).HasFocus(7) + isEmpty(Skin.String(Favourite7_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3189">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite7_Name)</onclick>
+		<onclick>Skin.Reset(Favourite7_Label)</onclick>
+		<onclick>Skin.Reset(Favourite7_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite7_Target)</onclick>
+		<onclick>Skin.Reset(Favourite7_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite7_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite7_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite7_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(7) + !isEmpty(Skin.String(Favourite7_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3190">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite8_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(8) + !isEmpty(Skin.String(Favourite8_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3191">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite8_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite8_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite8_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite8_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite8_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite8_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite8_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite8_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(8) + isEmpty(Skin.String(Favourite8_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3192">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite8_Name,Custom 8)</onclick>
+		<onclick>Skin.SetString(Favourite8_Label,Custom 8)</onclick>
+		<onclick>Skin.SetString(Favourite8_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite8_Path)</onclick>
+		<visible>Container(3101).HasFocus(8) + isEmpty(Skin.String(Favourite8_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3193">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite8_Name,Custom 8)</onclick>
+		<onclick>Skin.SetString(Favourite8_Label,Custom 8)</onclick>
+		<onclick>Skin.SetString(Favourite8_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite8_Path)</onclick>
+		<visible>Container(3101).HasFocus(8) + isEmpty(Skin.String(Favourite8_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3194">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite8_Name)</onclick>
+		<onclick>Skin.Reset(Favourite8_Label)</onclick>
+		<onclick>Skin.Reset(Favourite8_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite8_Target)</onclick>
+		<onclick>Skin.Reset(Favourite8_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite8_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite8_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite8_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(8) + !isEmpty(Skin.String(Favourite8_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3195">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite9_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(9) + !isEmpty(Skin.String(Favourite9_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3196">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite9_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite9_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite9_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite9_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite9_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite9_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite9_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite9_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(9) + isEmpty(Skin.String(Favourite9_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3197">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite9_Name,Custom 9)</onclick>
+		<onclick>Skin.SetString(Favourite9_Label,Custom 9)</onclick>
+		<onclick>Skin.SetString(Favourite9_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite9_Path)</onclick>
+		<visible>Container(3101).HasFocus(9) + isEmpty(Skin.String(Favourite9_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3198">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite9_Name,Custom 9)</onclick>
+		<onclick>Skin.SetString(Favourite9_Label,Custom 9)</onclick>
+		<onclick>Skin.SetString(Favourite9_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite9_Path)</onclick>
+		<visible>Container(3101).HasFocus(9) + isEmpty(Skin.String(Favourite9_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3199">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite9_Name)</onclick>
+		<onclick>Skin.Reset(Favourite9_Label)</onclick>
+		<onclick>Skin.Reset(Favourite9_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite9_Target)</onclick>
+		<onclick>Skin.Reset(Favourite9_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite9_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite9_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite9_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(9) + !isEmpty(Skin.String(Favourite9_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3200">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite10_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(10) + !isEmpty(Skin.String(Favourite10_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3201">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite10_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite10_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite10_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite10_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite10_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite10_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite10_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite10_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(10) + isEmpty(Skin.String(Favourite10_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3202">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite10_Name,Custom 10)</onclick>
+		<onclick>Skin.SetString(Favourite10_Label,Custom 10)</onclick>
+		<onclick>Skin.SetString(Favourite10_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite10_Path)</onclick>
+		<visible>Container(3101).HasFocus(10) + isEmpty(Skin.String(Favourite10_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3203">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite10_Name,Custom 10)</onclick>
+		<onclick>Skin.SetString(Favourite10_Label,Custom 10)</onclick>
+		<onclick>Skin.SetString(Favourite10_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite10_Path)</onclick>
+		<visible>Container(3101).HasFocus(10) + isEmpty(Skin.String(Favourite10_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3204">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite10_Name)</onclick>
+		<onclick>Skin.Reset(Favourite10_Label)</onclick>
+		<onclick>Skin.Reset(Favourite10_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite10_Target)</onclick>
+		<onclick>Skin.Reset(Favourite10_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite10_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite10_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite10_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(10) + !isEmpty(Skin.String(Favourite10_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3205">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite11_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(11) + !isEmpty(Skin.String(Favourite11_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3206">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite11_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite11_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite11_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite11_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite11_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite11_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite11_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite11_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(11) + isEmpty(Skin.String(Favourite11_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3207">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite11_Name,Custom 11)</onclick>
+		<onclick>Skin.SetString(Favourite11_Label,Custom 11)</onclick>
+		<onclick>Skin.SetString(Favourite11_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite11_Path)</onclick>
+		<visible>Container(3101).HasFocus(11) + isEmpty(Skin.String(Favourite11_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3208">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite11_Name,Custom 11)</onclick>
+		<onclick>Skin.SetString(Favourite11_Label,Custom 11)</onclick>
+		<onclick>Skin.SetString(Favourite11_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite11_Path)</onclick>
+		<visible>Container(3101).HasFocus(11) + isEmpty(Skin.String(Favourite11_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3209">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite11_Name)</onclick>
+		<onclick>Skin.Reset(Favourite11_Label)</onclick>
+		<onclick>Skin.Reset(Favourite11_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite11_Target)</onclick>
+		<onclick>Skin.Reset(Favourite11_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite11_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite11_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite11_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(11) + !isEmpty(Skin.String(Favourite11_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3210">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite12_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(12) + !isEmpty(Skin.String(Favourite12_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3211">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite12_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite12_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite12_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite12_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite12_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite12_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite12_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite12_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(12) + isEmpty(Skin.String(Favourite12_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3212">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite12_Name,Custom 12)</onclick>
+		<onclick>Skin.SetString(Favourite12_Label,Custom 12)</onclick>
+		<onclick>Skin.SetString(Favourite12_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite12_Path)</onclick>
+		<visible>Container(3101).HasFocus(12) + isEmpty(Skin.String(Favourite12_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3213">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite12_Name,Custom 12)</onclick>
+		<onclick>Skin.SetString(Favourite12_Label,Custom 12)</onclick>
+		<onclick>Skin.SetString(Favourite12_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite12_Path)</onclick>
+		<visible>Container(3101).HasFocus(12) + isEmpty(Skin.String(Favourite12_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3214">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite12_Name)</onclick>
+		<onclick>Skin.Reset(Favourite12_Label)</onclick>
+		<onclick>Skin.Reset(Favourite12_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite12_Target)</onclick>
+		<onclick>Skin.Reset(Favourite12_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite12_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite12_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite12_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(12) + !isEmpty(Skin.String(Favourite12_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3215">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite13_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(13) + !isEmpty(Skin.String(Favourite13_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3216">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite13_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite13_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite13_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite13_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite13_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite13_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite13_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite13_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(13) + isEmpty(Skin.String(Favourite13_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3217">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite13_Name,Custom 13)</onclick>
+		<onclick>Skin.SetString(Favourite13_Label,Custom 13)</onclick>
+		<onclick>Skin.SetString(Favourite13_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite13_Path)</onclick>
+		<visible>Container(3101).HasFocus(13) + isEmpty(Skin.String(Favourite13_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3218">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite13_Name,Custom 13)</onclick>
+		<onclick>Skin.SetString(Favourite13_Label,Custom 13)</onclick>
+		<onclick>Skin.SetString(Favourite13_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite13_Path)</onclick>
+		<visible>Container(3101).HasFocus(13) + isEmpty(Skin.String(Favourite13_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3219">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite13_Name)</onclick>
+		<onclick>Skin.Reset(Favourite13_Label)</onclick>
+		<onclick>Skin.Reset(Favourite13_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite13_Target)</onclick>
+		<onclick>Skin.Reset(Favourite13_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite13_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite13_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite13_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(13) + !isEmpty(Skin.String(Favourite13_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3220">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite14_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(14) + !isEmpty(Skin.String(Favourite14_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3221">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite14_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite14_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite14_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite14_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite14_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite14_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite14_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite14_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(14) + isEmpty(Skin.String(Favourite14_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3222">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite14_Name,Custom 14)</onclick>
+		<onclick>Skin.SetString(Favourite14_Label,Custom 14)</onclick>
+		<onclick>Skin.SetString(Favourite14_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite14_Path)</onclick>
+		<visible>Container(3101).HasFocus(14) + isEmpty(Skin.String(Favourite14_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3223">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite14_Name,Custom 14)</onclick>
+		<onclick>Skin.SetString(Favourite14_Label,Custom 14)</onclick>
+		<onclick>Skin.SetString(Favourite14_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite14_Path)</onclick>
+		<visible>Container(3101).HasFocus(14) + isEmpty(Skin.String(Favourite14_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3224">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite14_Name)</onclick>
+		<onclick>Skin.Reset(Favourite14_Label)</onclick>
+		<onclick>Skin.Reset(Favourite14_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite14_Target)</onclick>
+		<onclick>Skin.Reset(Favourite14_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite14_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite14_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite14_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(14) + !isEmpty(Skin.String(Favourite14_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3225">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite15_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(15) + !isEmpty(Skin.String(Favourite15_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3226">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite15_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite15_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite15_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite15_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite15_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite15_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite15_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite15_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(15) + isEmpty(Skin.String(Favourite15_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3227">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite15_Name,Custom 15)</onclick>
+		<onclick>Skin.SetString(Favourite15_Label,Custom 15)</onclick>
+		<onclick>Skin.SetString(Favourite15_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite15_Path)</onclick>
+		<visible>Container(3101).HasFocus(15) + isEmpty(Skin.String(Favourite15_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3228">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite15_Name,Custom 15)</onclick>
+		<onclick>Skin.SetString(Favourite15_Label,Custom 15)</onclick>
+		<onclick>Skin.SetString(Favourite15_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite15_Path)</onclick>
+		<visible>Container(3101).HasFocus(15) + isEmpty(Skin.String(Favourite15_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3229">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite15_Name)</onclick>
+		<onclick>Skin.Reset(Favourite15_Label)</onclick>
+		<onclick>Skin.Reset(Favourite15_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite15_Target)</onclick>
+		<onclick>Skin.Reset(Favourite15_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite15_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite15_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite15_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(15) + !isEmpty(Skin.String(Favourite15_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3230">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite16_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(16) + !isEmpty(Skin.String(Favourite16_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3231">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite16_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite16_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite16_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite16_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite16_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite16_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite16_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite16_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(16) + isEmpty(Skin.String(Favourite16_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3232">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite16_Name,Custom 16)</onclick>
+		<onclick>Skin.SetString(Favourite16_Label,Custom 16)</onclick>
+		<onclick>Skin.SetString(Favourite16_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite16_Path)</onclick>
+		<visible>Container(3101).HasFocus(16) + isEmpty(Skin.String(Favourite16_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3233">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite16_Name,Custom 16)</onclick>
+		<onclick>Skin.SetString(Favourite16_Label,Custom 16)</onclick>
+		<onclick>Skin.SetString(Favourite16_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite16_Path)</onclick>
+		<visible>Container(3101).HasFocus(16) + isEmpty(Skin.String(Favourite16_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3234">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite16_Name)</onclick>
+		<onclick>Skin.Reset(Favourite16_Label)</onclick>
+		<onclick>Skin.Reset(Favourite16_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite16_Target)</onclick>
+		<onclick>Skin.Reset(Favourite16_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite16_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite16_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite16_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(16) + !isEmpty(Skin.String(Favourite16_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3235">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite17_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(17) + !isEmpty(Skin.String(Favourite17_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3236">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite17_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite17_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite17_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite17_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite17_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite17_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite17_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite17_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(17) + isEmpty(Skin.String(Favourite17_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3237">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite17_Name,Custom 17)</onclick>
+		<onclick>Skin.SetString(Favourite17_Label,Custom 17)</onclick>
+		<onclick>Skin.SetString(Favourite17_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite17_Path)</onclick>
+		<visible>Container(3101).HasFocus(17) + isEmpty(Skin.String(Favourite17_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3238">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite17_Name,Custom 17)</onclick>
+		<onclick>Skin.SetString(Favourite17_Label,Custom 17)</onclick>
+		<onclick>Skin.SetString(Favourite17_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite17_Path)</onclick>
+		<visible>Container(3101).HasFocus(17) + isEmpty(Skin.String(Favourite17_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3239">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite17_Name)</onclick>
+		<onclick>Skin.Reset(Favourite17_Label)</onclick>
+		<onclick>Skin.Reset(Favourite17_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite17_Target)</onclick>
+		<onclick>Skin.Reset(Favourite17_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite17_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite17_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite17_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(17) + !isEmpty(Skin.String(Favourite17_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3240">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite18_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(18) + !isEmpty(Skin.String(Favourite18_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3241">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite18_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite18_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite18_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite18_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite18_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite18_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite18_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite18_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(18) + isEmpty(Skin.String(Favourite18_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3242">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite18_Name,Custom 18)</onclick>
+		<onclick>Skin.SetString(Favourite18_Label,Custom 18)</onclick>
+		<onclick>Skin.SetString(Favourite18_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite18_Path)</onclick>
+		<visible>Container(3101).HasFocus(18) + isEmpty(Skin.String(Favourite18_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3243">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite18_Name,Custom 18)</onclick>
+		<onclick>Skin.SetString(Favourite18_Label,Custom 18)</onclick>
+		<onclick>Skin.SetString(Favourite18_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite18_Path)</onclick>
+		<visible>Container(3101).HasFocus(18) + isEmpty(Skin.String(Favourite18_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3244">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite18_Name)</onclick>
+		<onclick>Skin.Reset(Favourite18_Label)</onclick>
+		<onclick>Skin.Reset(Favourite18_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite18_Target)</onclick>
+		<onclick>Skin.Reset(Favourite18_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite18_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite18_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite18_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(18) + !isEmpty(Skin.String(Favourite18_Path))</visible>
+	</control>
+
+	<!-- Rename -->
+	<control type="button" id="3245">
+		<label>$LOCALIZE[118]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite19_Name)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(19) + !isEmpty(Skin.String(Favourite19_Path))</visible>
+	</control>
+	<!-- Add Favourite -->
+	<control type="button" id="3246">
+		<label>Add Favourite :[CR]$INFO[ListItem.Label]</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<height>80</height>
+		<width>640</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite19_Name,$INFO[ListItem.Label])</onclick>
+		<onclick>Skin.SetString(Favourite19_Label,$INFO[ListItem.Label])</onclick>
+		<onclick condition="ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip)">Skin.SetString(Favourite19_Target,10090)</onclick>
+		<onclick condition="![ ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(clip) ]">Skin.SetString(Favourite19_Target,MyVideoFiles)</onclick>
+		<onclick>Skin.SetString(Favourite19_Thumb,$INFO[ListItem.Icon])</onclick>
+		<onclick condition="Container.Content(channel) + isEmpty(ListItem.Type) + StringCompare(Container.FirstTitle,youtube)">Skin.SetString(Favourite19_Thumb,extensions/350_icon.jpg)</onclick>
+		<onclick>Skin.SetString(Favourite19_Fanart,$INFO[ListItem.Property(Fanart_Image)])</onclick>
+		<onclick>Skin.SetString(Favourite19_Path,$INFO[ListItem.Path])</onclick>
+		<visible>Container(3101).HasFocus(19) + isEmpty(Skin.String(Favourite19_Path)) + !isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom File -->
+	<control type="button" id="3247">
+		<label>Add File</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite19_Name,Custom 19)</onclick>
+		<onclick>Skin.SetString(Favourite19_Label,Custom 19)</onclick>
+		<onclick>Skin.SetString(Favourite19_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetFile(Favourite19_Path)</onclick>
+		<visible>Container(3101).HasFocus(19) + isEmpty(Skin.String(Favourite19_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Custom URL -->
+	<control type="button" id="3248">
+		<label>Add Url</label>
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.SetString(Favourite19_Name,Custom 19)</onclick>
+		<onclick>Skin.SetString(Favourite19_Label,Custom 19)</onclick>
+		<onclick>Skin.SetString(Favourite19_Target,PlayMedia)</onclick>
+		<onclick>Skin.SetString(Favourite19_Path)</onclick>
+		<visible>Container(3101).HasFocus(19) + isEmpty(Skin.String(Favourite19_Path)) + isEmpty(ListItem.Label)</visible>
+	</control>
+	<!-- Delete -->
+	<control type="button" id="3249">
+		<label>$LOCALIZE[117]</label> <!-- Delete -->
+		<font>Font_MenuValue</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+		<width>320</width>
+		<align>center</align>
+		<onclick>Skin.Reset(Favourite19_Name)</onclick>
+		<onclick>Skin.Reset(Favourite19_Label)</onclick>
+		<onclick>Skin.Reset(Favourite19_Label2)</onclick>
+		<onclick>Skin.Reset(Favourite19_Target)</onclick>
+		<onclick>Skin.Reset(Favourite19_Thumb)</onclick>
+		<onclick>Skin.Reset(Favourite19_Fanart)</onclick>
+		<onclick>Skin.Reset(Favourite19_Enabled)</onclick>
+		<onclick>Skin.Reset(Favourite19_Path)</onclick>
+		<onclick>SetFocus(3101)</onclick>
+		<visible>Container(3101).HasFocus(19) + !isEmpty(Skin.String(Favourite19_Path))</visible>
+	</control>
+
+	</include>
+	<include name="PLEX_Home_Favourite_Items">
+	<item id="400">
+		<label>$INFO[Skin.String(Favourite0_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite0_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite0_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite0_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite0_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite0_Target)],$INFO[Skin.String(Favourite0_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite0_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite0_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite0_Enabled) + !isEmpty(Skin.String(Favourite0_Path))</visible> <!--Home-->
+	</item>
+	<item id="401">
+		<label>$INFO[Skin.String(Favourite1_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite1_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite1_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite1_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite1_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite1_Target)],$INFO[Skin.String(Favourite1_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite1_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite1_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite1_Enabled) + !isEmpty(Skin.String(Favourite1_Path))</visible> <!--Home-->
+	</item>
+	<item id="402">
+		<label>$INFO[Skin.String(Favourite2_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite2_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite2_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite2_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite2_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite2_Target)],$INFO[Skin.String(Favourite2_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite2_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite2_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite2_Enabled) + !isEmpty(Skin.String(Favourite2_Path))</visible> <!--Home-->
+	</item>
+	<item id="403">
+		<label>$INFO[Skin.String(Favourite3_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite3_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite3_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite3_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite3_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite3_Target)],$INFO[Skin.String(Favourite3_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite3_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite3_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite3_Enabled) + !isEmpty(Skin.String(Favourite3_Path))</visible> <!--Home-->
+	</item>
+	<item id="404">
+		<label>$INFO[Skin.String(Favourite4_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite4_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite4_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite4_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite4_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite4_Target)],$INFO[Skin.String(Favourite4_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite4_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite4_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite4_Enabled) + !isEmpty(Skin.String(Favourite4_Path))</visible> <!--Home-->
+	</item>
+	<item id="405">
+		<label>$INFO[Skin.String(Favourite5_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite5_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite5_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite5_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite5_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite5_Target)],$INFO[Skin.String(Favourite5_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite5_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite5_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite5_Enabled) + !isEmpty(Skin.String(Favourite5_Path))</visible> <!--Home-->
+	</item>
+	<item id="406">
+		<label>$INFO[Skin.String(Favourite6_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite6_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite6_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite6_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite6_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite6_Target)],$INFO[Skin.String(Favourite6_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite6_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite6_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite6_Enabled) + !isEmpty(Skin.String(Favourite6_Path))</visible> <!--Home-->
+	</item>
+	<item id="407">
+		<label>$INFO[Skin.String(Favourite7_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite7_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite7_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite7_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite7_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite7_Target)],$INFO[Skin.String(Favourite7_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite7_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite7_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite7_Enabled) + !isEmpty(Skin.String(Favourite7_Path))</visible> <!--Home-->
+	</item>
+	<item id="408">
+		<label>$INFO[Skin.String(Favourite8_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite8_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite8_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite8_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite8_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite8_Target)],$INFO[Skin.String(Favourite8_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite8_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite8_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite8_Enabled) + !isEmpty(Skin.String(Favourite8_Path))</visible> <!--Home-->
+	</item>
+	<item id="409">
+		<label>$INFO[Skin.String(Favourite9_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite9_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite9_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite9_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite9_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite9_Target)],$INFO[Skin.String(Favourite9_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite9_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite9_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite9_Enabled) + !isEmpty(Skin.String(Favourite9_Path))</visible> <!--Home-->
+	</item>
+	<item id="410">
+		<label>$INFO[Skin.String(Favourite10_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite10_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite10_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite10_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite10_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite10_Target)],$INFO[Skin.String(Favourite10_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite10_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite10_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite10_Enabled) + !isEmpty(Skin.String(Favourite10_Path))</visible> <!--Home-->
+	</item>
+	<item id="411">
+		<label>$INFO[Skin.String(Favourite11_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite11_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite11_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite11_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite11_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite11_Target)],$INFO[Skin.String(Favourite11_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite11_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite11_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite11_Enabled) + !isEmpty(Skin.String(Favourite11_Path))</visible> <!--Home-->
+	</item>
+	<item id="412">
+		<label>$INFO[Skin.String(Favourite12_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite12_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite12_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite12_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite12_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite12_Target)],$INFO[Skin.String(Favourite12_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite12_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite12_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite12_Enabled) + !isEmpty(Skin.String(Favourite12_Path))</visible> <!--Home-->
+	</item>
+	<item id="413">
+		<label>$INFO[Skin.String(Favourite13_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite13_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite13_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite13_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite13_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite13_Target)],$INFO[Skin.String(Favourite13_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite13_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite13_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite13_Enabled) + !isEmpty(Skin.String(Favourite13_Path))</visible> <!--Home-->
+	</item>
+	<item id="414">
+		<label>$INFO[Skin.String(Favourite14_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite14_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite14_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite14_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite14_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite14_Target)],$INFO[Skin.String(Favourite14_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite14_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite14_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite14_Enabled) + !isEmpty(Skin.String(Favourite14_Path))</visible> <!--Home-->
+	</item>
+	<item id="415">
+		<label>$INFO[Skin.String(Favourite15_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite15_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite15_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite15_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite15_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite15_Target)],$INFO[Skin.String(Favourite15_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite15_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite15_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite15_Enabled) + !isEmpty(Skin.String(Favourite15_Path))</visible> <!--Home-->
+	</item>
+	<item id="416">
+		<label>$INFO[Skin.String(Favourite16_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite16_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite16_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite16_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite16_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite16_Target)],$INFO[Skin.String(Favourite16_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite16_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite16_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite16_Enabled) + !isEmpty(Skin.String(Favourite16_Path))</visible> <!--Home-->
+	</item>
+	<item id="417">
+		<label>$INFO[Skin.String(Favourite17_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite17_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite17_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite17_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite17_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite17_Target)],$INFO[Skin.String(Favourite17_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite17_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite17_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite17_Enabled) + !isEmpty(Skin.String(Favourite17_Path))</visible> <!--Home-->
+	</item>
+	<item id="418">
+		<label>$INFO[Skin.String(Favourite18_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite18_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite18_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite18_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite18_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite18_Target)],$INFO[Skin.String(Favourite18_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite18_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite18_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite18_Enabled) + !isEmpty(Skin.String(Favourite18_Path))</visible> <!--Home-->
+	</item>
+	<item id="419">
+		<label>$INFO[Skin.String(Favourite19_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite19_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite19_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite19_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite19_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite19_Target)],$INFO[Skin.String(Favourite19_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite19_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite19_Path)])</onclick>
+
+		<visible>Skin.HasSetting(Favourite19_Enabled) + !isEmpty(Skin.String(Favourite19_Path))</visible> <!--Home-->
+	</item>
+	</include>
+	<include name="PLEX_Deck_Favourite_Items">
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite0_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite0_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite0_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite0_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite0_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite0_Target)],$INFO[Skin.String(Favourite0_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite0_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite0_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite0_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite1_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite1_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite1_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite1_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite1_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite1_Target)],$INFO[Skin.String(Favourite1_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite1_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite1_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite1_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite2_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite2_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite2_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite2_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite2_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite2_Target)],$INFO[Skin.String(Favourite2_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite2_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite2_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite2_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite3_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite3_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite3_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite3_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite3_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite3_Target)],$INFO[Skin.String(Favourite3_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite3_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite3_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite3_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite4_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite4_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite4_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite4_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite4_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite4_Target)],$INFO[Skin.String(Favourite4_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite4_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite4_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite4_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite5_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite5_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite5_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite5_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite5_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite5_Target)],$INFO[Skin.String(Favourite5_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite5_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite5_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite5_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite6_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite6_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite6_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite6_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite6_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite6_Target)],$INFO[Skin.String(Favourite6_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite6_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite6_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite6_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite7_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite7_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite7_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite7_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite7_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite7_Target)],$INFO[Skin.String(Favourite7_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite7_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite7_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite7_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite8_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite8_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite8_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite8_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite8_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite8_Target)],$INFO[Skin.String(Favourite8_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite8_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite8_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite8_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite9_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite9_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite9_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite9_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite9_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite9_Target)],$INFO[Skin.String(Favourite9_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite9_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite9_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite9_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite10_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite10_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite10_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite10_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite10_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite10_Target)],$INFO[Skin.String(Favourite10_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite10_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite10_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite10_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite11_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite11_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite11_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite11_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite11_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite11_Target)],$INFO[Skin.String(Favourite11_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite11_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite11_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite11_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite12_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite12_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite12_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite12_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite12_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite12_Target)],$INFO[Skin.String(Favourite12_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite12_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite12_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite12_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite13_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite13_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite13_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite13_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite13_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite13_Target)],$INFO[Skin.String(Favourite13_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite13_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite13_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite13_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite14_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite14_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite14_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite14_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite14_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite14_Target)],$INFO[Skin.String(Favourite14_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite14_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite14_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite14_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite15_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite15_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite15_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite15_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite15_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite15_Target)],$INFO[Skin.String(Favourite15_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite15_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite15_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite15_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite16_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite16_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite16_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite16_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite16_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite16_Target)],$INFO[Skin.String(Favourite16_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite16_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite16_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite16_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite17_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite17_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite17_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite17_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite17_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite17_Target)],$INFO[Skin.String(Favourite17_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite17_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite17_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite17_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite18_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite18_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite18_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite18_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite18_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite18_Target)],$INFO[Skin.String(Favourite18_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite18_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite18_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite18_Path))</visible> <!--Deck-->
+	</item>
+	<item id="@ITEMID@">
+		<label>$INFO[Skin.String(Favourite19_Name)]</label>
+		<thumb>$INFO[Skin.String(Favourite19_Thumb)]</thumb>
+		<property name="Type">$INFO[Skin.String(Favourite19_Type)]</property>
+		<property name="Fanart">$INFO[Skin.String(Favourite19_Fanart)]</property>
+
+		<onclick condition="!StringCompare(Skin.String(Favourite19_Target),PlayMedia)">ActivateWindow($INFO[Skin.String(Favourite19_Target)],$INFO[Skin.String(Favourite19_Path)])</onclick>
+		<onclick condition="StringCompare(Skin.String(Favourite19_Target),PlayMedia)">PlayMedia($ESCINFO[Skin.String(Favourite19_Path)])</onclick>
+
+		<visible>!isEmpty(Skin.String(Favourite19_Path))</visible> <!--Deck-->
+	</item>
+	</include>
+	<include name="PLEX_Favourite_Settings">
+	<control type="radiobutton" id="3260">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite0_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite0_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite0_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite0_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3261">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite1_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite1_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite1_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite1_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3262">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite2_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite2_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite2_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite2_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3263">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite3_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite3_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite3_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite3_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3264">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite4_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite4_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite4_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite4_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3265">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite5_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite5_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite5_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite5_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3266">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite6_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite6_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite6_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite6_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3267">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite7_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite7_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite7_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite7_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3268">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite8_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite8_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite8_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite8_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3269">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite9_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite9_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite9_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite9_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3270">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite10_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite10_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite10_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite10_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3271">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite11_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite11_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite11_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite11_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3272">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite12_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite12_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite12_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite12_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3273">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite13_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite13_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite13_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite13_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3274">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite14_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite14_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite14_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite14_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3275">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite15_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite15_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite15_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite15_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3276">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite16_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite16_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite16_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite16_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3277">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite17_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite17_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite17_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite17_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3278">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite18_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite18_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite18_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite18_Path))</visible>
+	</control>
+	<control type="radiobutton" id="3279">
+		<include>skin_settings_labels_half</include>
+		<label>$INFO[Skin.String(Favourite19_Name)]</label>
+		<onclick>Skin.ToggleSetting(Favourite19_Enabled)</onclick>
+		<selected>Skin.HasSetting(Favourite19_Enabled)</selected>
+		<visible>!isEmpty(Skin.String(Favourite19_Path))</visible>
+	</control>
+	</include>
+	<include name="PLEX_Favourite_Dialog">
+	<item id="0">
+		<label fallback="Empty">$INFO[Skin.String(Favourite0_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="1">
+		<label fallback="Empty">$INFO[Skin.String(Favourite1_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="2">
+		<label fallback="Empty">$INFO[Skin.String(Favourite2_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="3">
+		<label fallback="Empty">$INFO[Skin.String(Favourite3_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="4">
+		<label fallback="Empty">$INFO[Skin.String(Favourite4_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="5">
+		<label fallback="Empty">$INFO[Skin.String(Favourite5_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="6">
+		<label fallback="Empty">$INFO[Skin.String(Favourite6_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="7">
+		<label fallback="Empty">$INFO[Skin.String(Favourite7_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="8">
+		<label fallback="Empty">$INFO[Skin.String(Favourite8_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="9">
+		<label fallback="Empty">$INFO[Skin.String(Favourite9_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="10">
+		<label fallback="Empty">$INFO[Skin.String(Favourite10_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="11">
+		<label fallback="Empty">$INFO[Skin.String(Favourite11_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="12">
+		<label fallback="Empty">$INFO[Skin.String(Favourite12_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="13">
+		<label fallback="Empty">$INFO[Skin.String(Favourite13_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="14">
+		<label fallback="Empty">$INFO[Skin.String(Favourite14_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="15">
+		<label fallback="Empty">$INFO[Skin.String(Favourite15_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="16">
+		<label fallback="Empty">$INFO[Skin.String(Favourite16_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="17">
+		<label fallback="Empty">$INFO[Skin.String(Favourite17_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="18">
+		<label fallback="Empty">$INFO[Skin.String(Favourite18_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
+	<item id="19">
+		<label fallback="Empty">$INFO[Skin.String(Favourite19_Name)]</label>
+		<onclick>SetFocus(3104)</onclick>
+		<icon>-</icon>
+	</item>
 	</include>
 	<!-- Background Fanart Slideshow -->
 	<!-- WARNING: This is one of the worst skin workarounds ever but havent found a better solution yet -->

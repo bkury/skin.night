@@ -11,7 +11,7 @@
 			<height>1</height>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<!--<onfocus>PlayMedia(sounds/startup.wav)</onfocus>-->
+			<onfocus>Skin.Reset(Weather_Update)</onfocus>
 			<onfocus>ReplaceWindow(Home)</onfocus>
 		</control>
 	</controls>

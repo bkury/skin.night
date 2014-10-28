@@ -29,6 +29,26 @@
 		<!-- Dialog Scrollbar -->  
 		<include>dialog_scrollbar</include>
 
+		<!-- Arrow -->
+		<control type="image">
+			<posx>-20</posx>
+			<posy>490</posy>
+			<include>navigation_arrow_down</include>
+			<animation effect="slide" end="495,0" time="0" condition="Control.HasFocus(413)">Conditional</animation>
+			<animation effect="slide" end="800,0" time="0" condition="Control.HasFocus(414)">Conditional</animation>
+			<visible>Skin.HasSetting(navigation_arrow)</visible>
+		</control>
+
+		<!-- Circle -->
+		<control type="image">
+			<posx>-20</posx>
+			<posy>488</posy>
+			<include>navigation_circle</include>
+			<animation effect="slide" end="495,0" time="0" condition="Control.HasFocus(413)">Conditional</animation>
+			<animation effect="slide" end="800,0" time="0" condition="Control.HasFocus(414)">Conditional</animation>
+			<visible>Skin.HasSetting(navigation_circle)</visible>
+		</control>
+
 		<!-- Dialog Footer -->
 		<include>dialog_footer</include>
         </control>

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="0">
-	<defaultcontrol always="true">301</defaultcontrol>
+	<defaultcontrol always="true">299</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
   
-	<onload>Skin.Reset(mysharedcontent_helper)</onload>
+	<!-- XBMC OnLoad -->
 	<onload condition="Skin.HasSetting(XBMC)">RunScript(script.favourites)</onload>
 	<onload condition="Skin.HasSetting(XBMC)">SetProperty(SkinWidgets_RandomItems_Update,true)</onload>
-	<onload condition="Skin.HasSetting(XBMC) + System.HasAddon(plugin.video.plexbmc)">RunScript(plugin.video.plexbmc,skin)</onload>
+	<onload condition="Skin.HasSetting(XBMC) + System.HasAddon(plugin.video.plexbmc)">RunScript(plugin.video.plexbmc,amberskin,nocat)</onload>
 
-	<include>Animation_CommonFade_600</include>
+	<!-- PLEX (OpenWeatherMap) -->
+	<onload condition="Skin.HasSetting(Weather_Widget) + Skin.HasSetting(Weather_Update)">XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/openweathermap/current?day=weather&amp;title=OpenWeatherMapUpdate)</onload>
+
+	<include condition="!Skin.HasSetting(Weather_Widget)">Animation_CommonFade_600</include>
+	<include condition="Skin.HasSetting(Weather_Widget)">Animation_CommonFade_600_Weather</include>
 
 	<controls>
 
 	<!-- PHT NoFocus Bug Workaround -->
-	<control type="button" id="301">
+	<control type="button" id="299">
 		<posx>-10</posx>
 		<posy>-10</posy>
 		<width>0</width>
@@ -22,17 +26,15 @@
 		<texturefocus>-</texturefocus>
 		<onfocus>SetFocus(300)</onfocus>
 	</control>
-       
-	<!-- Background Stuff -->
-	<!--<control type="group">-->
 
+	<!-- Background Stuff -->
 		<control type="group">
 			<visible>![ControlGroup(5000).HasFocus | ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus | ControlGroup(7006).HasFocus | ControlGroup(7007).HasFocus | ControlGroup(7008).HasFocus | ControlGroup(7009).HasFocus | ControlGroup(7010).HasFocus ]</visible>
 			<visible>![Container(300).HasFocus(15) + [!isEmpty(Skin.String(Search_Single)) | !isEmpty(Skin.String(Search_Multi))] ]</visible>
 			<visible>![Container(300).hasFocus(17)]</visible>
-			<visible>![Container(300).HasFocus(20) | Container(300).HasFocus(21) | Container(300).HasFocus(22) | Container(300).HasFocus(23) | Container(300).HasFocus(24) | Container(300).HasFocus(25) | Container(300).HasFocus(26) | Container(300).HasFocus(27) | Container(300).HasFocus(28) | Container(300).HasFocus(29) | Container(300).HasFocus(30)]</visible>
+			<visible>![Container(300).hasFocus(400) | Container(300).hasFocus(401) | Container(300).hasFocus(402) | Container(300).hasFocus(403) | Container(300).hasFocus(404) | Container(300).hasFocus(405) | Container(300).hasFocus(406) | Container(300).hasFocus(407) | Container(300).hasFocus(408) | Container(300).hasFocus(409) | Container(300).hasFocus(410) | Container(300).hasFocus(411) | Container(300).hasFocus(412) | Container(300).hasFocus(413) | Container(300).hasFocus(414) | Container(300).hasFocus(415) | Container(300).hasFocus(416) | Container(300).hasFocus(417) | Container(300).hasFocus(418) | Container(300).hasFocus(419) ]</visible>
+			<visible>![Container(300).HasFocus(350) | Container(300).HasFocus(351) | Container(300).HasFocus(352) | Container(300).HasFocus(353) | Container(300).HasFocus(354) | Container(300).HasFocus(355) | Container(300).HasFocus(356) | Container(300).HasFocus(357) | Container(300).HasFocus(358) | Container(300).HasFocus(359)]</visible>
 			<visible>![StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome1.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome2.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome3.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome4.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome5.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome6.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome7.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome8.Label)) | StringCompare(Container(300).ListItem.Label,Skin.String(CustomHome9.Label)) ]</visible>
-
 			<!-- Opacity Option -->
 			<include condition="isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
 			<include condition="!isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
@@ -40,6 +42,7 @@
 			<!-- PLEX Fanart -->
 			<control type="multiimage" id="10101">
 				<include>background_default</include>
+				<texture background="true">-</texture>
 				<!-- Fadetime Option -->
 				<include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
 				<include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
@@ -120,6 +123,30 @@
 			</control>
 		</control>
 
+		<!-- Favourites  -->
+		<control type="group">
+			<include>Home_Opacity_Default</include>
+			<visible>!Skin.HasSetting(XBMC) + [ 
+			Container(300).hasFocus(400) | Container(300).hasFocus(401) | Container(300).hasFocus(402) | Container(300).hasFocus(403) | Container(300).hasFocus(404) |
+			Container(300).hasFocus(405) | Container(300).hasFocus(406) | Container(300).hasFocus(407) | Container(300).hasFocus(408) | Container(300).hasFocus(409) |
+			Container(300).hasFocus(410) | Container(300).hasFocus(411) | Container(300).hasFocus(412) | Container(300).hasFocus(413) | Container(300).hasFocus(414) |
+			Container(300).hasFocus(415) | Container(300).hasFocus(416) | Container(300).hasFocus(417) | Container(300).hasFocus(418) | Container(300).hasFocus(419) ]
+			</visible>
+
+			<control type="image">
+				<include>background_default</include>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+                              	<!-- Fadetime Option -->
+                                <include condition="isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+                                <include condition="!isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+                                <!-- Time per Image Option -->
+                                <include condition="isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
+                                <include condition="!isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
+                                <!-- Kenburns Option -->
+                                <include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+			</control>
+		</control>
+
 		<!-- PLEX -->
 		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom1_Custom</include>
 		<include condition="!Skin.HasSetting(XBMC)">PLEX_Custom2_Custom</include>
@@ -164,7 +191,7 @@
 			<width>16</width>
 			<height>22</height>
 			<aspectratio>scale</aspectratio>
-			<texture>left-menu-indicator-arrow.png</texture>
+			<texture background="true">left-menu-indicator-arrow.png</texture>
 			<include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
 			<colordiffuse>50b8b7b7</colordiffuse>
                         <animation effect="slide" end="17" time="300" condition="Window.IsActive(4998)">conditional</animation>
@@ -172,31 +199,32 @@
 			<visible>!Skin.HasSetting(HomeArrow) + Window.IsActive(4998)</visible>
 			<include>Animation_CommonFade</include>
 		</control>
+		<!-- Navigation Arrow (Home) -->
 		<control type="image">
 			<posy>690</posy>
 			<posx>10</posx>
 			<width>16</width>
 			<height>22</height>
 			<aspectratio>scale</aspectratio>
-			<texture flipx="true">left-menu-indicator-arrow.png</texture>
+			<texture background="true" flipx="true">left-menu-indicator-arrow.png</texture>
 			<include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
 			<colordiffuse>50b8b7b7</colordiffuse>
 			<visible>!Skin.HasSetting(HomeArrow) + !ControlGroup(5000).HasFocus</visible>
 			<include>Animation_CommonFade</include>
 		</control>
-		<control type="image">
+		<!--<control type="image">
 			<posy>690</posy>
 			<posx>1254</posx>
 			<width>16</width>
 			<height>22</height>
 			<aspectratio>scale</aspectratio>
-			<texture>left-menu-indicator-arrow.png</texture>
+			<texture background="true">left-menu-indicator-arrow.png</texture>
 			<include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
 			<colordiffuse>50b8b7b7</colordiffuse>
 			<include>Animation_CommonFade</include>
 			<visible>Skin.HasSetting(Deck_Hide) + ![ControlGroup(5000).HasFocus | Window.IsActive(4998)]</visible>
 			<include>Animation_CommonFade</include>
-		</control>
+		</control>-->
 	</control>
 
 	<control type="group">
@@ -228,15 +256,16 @@
 		</control>
 	</control>
 
+	<!-- Clock -->
+	<include>Global_Time_Home</include>
+	<include>Global_Time_Home_Big</include>
+	<include>Weather_Widget</include>
+
 	<!-- Home Navigation -->
 	<include>Home_Navigation</include>
 
 	<!-- Home Deck -->
 	<include>Home_Deck</include>
-
-	<!-- Clock -->
-	<include>Global_Time_Home</include>
-	<include>Global_Time_Home_Big</include>
 
 	<!-- Now Playing -->
 	<control type="group">
@@ -248,10 +277,61 @@
 			<posy>-100</posy>
 			<width>700</width>
 			<height>220</height>
-			<texture flipy="true">common/library_time_gradient.png</texture>
+			<texture background="true" flipy="true">common/library_time_gradient.png</texture>
 		</control>
 		<include>viewtype_nowplaying_right</include>
 	</control>
+
+	<!-- Mouse Trigger -->
+	<control type="group">
+		<visible>Window.isActive(home) + !ControlGroup(5000).hasFocus</visible>
+		<!-- Submenu (Left Edge) -->
+		<control type="button" id="65010">
+			<posx>10</posx>
+			<posy>0</posy>
+			<height>670</height>
+			<width>10</width>
+			<include>Mouse_Trigger</include>
+		</control>
+		<control type="button" id="65011">
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>670</height>
+			<width>10</width>
+			<onfocus>ActivateWindow(4998)</onfocus>
+			<include>Mouse_Trigger</include>
+			<visible>Control.hasFocus(65010) | Control.hasFocus(65011)</visible>
+		</control>
+		<!-- Submenu (Button) -->
+		<control type="button">
+			<posx>0</posx>
+			<posy>690</posy>
+			<width>80</width>
+			<height>30</height>
+			<onclick>ActivateWindow(4998)</onclick>
+			<include>Mouse_Trigger</include>
+		</control>
+		<!-- Deck (Hide) -->
+		<control type="button">
+			<posx>1260</posx>
+			<posy>0</posy>
+			<width>20</width>
+			<height>720</height>
+			<onfocus>SetFocus(5000)</onfocus>
+			<include>Mouse_Trigger</include>
+			<visible>Skin.HasSetting(Deck_Hide) + !Skin.HasSetting(Deck_Disable)</visible>
+		</control>
+	</control>
+
+	<!-- Mouse Trigger (Deck) -->
+<!--	<control type="button" id="65000">
+		<posx>700</posx>
+		<posy>0</posy>
+		<width>30</width>
+		<height>720</height>
+		<include>Mouse_Trigger</include>
+		<visible>!ControlGroup(5000).hasFocus</visible>
+        </control>-->
 
 	</controls>
 </window>

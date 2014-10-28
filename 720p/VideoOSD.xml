@@ -3,7 +3,8 @@
 	<onload>Skin.Reset(OSD_Hide)</onload>
 	<onunload>Skin.Reset(OSD_Hide)</onunload>
 	<include>Animation_CommonFade_600</include>
-	<defaultcontrol always="true">200</defaultcontrol>
+	<!--<defaultcontrol always="true">200</defaultcontrol>-->
+	<defaultcontrol always="true">712</defaultcontrol>
 	<controls>
 
 	<!-- OSD Hide -->
@@ -14,7 +15,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<include>Animation_CommonFade_600</include>
@@ -23,7 +24,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>mainblue</colordiffuse>
 			<include>Animation_CommonFade_600</include>
@@ -33,7 +34,7 @@
 			<posx>0</posx>
 			<posy>719</posy>
 			<width>1280</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<include>Animation_CommonFade_600</include>
@@ -42,7 +43,7 @@
 			<posx>0</posx>
 			<posy>719</posy>
 			<width>1280</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>mainblue</colordiffuse>
 			<include>Animation_CommonFade_600</include>
@@ -73,13 +74,14 @@
 				<control type="image">
 					<posy>70</posy>
 					<width>1280</width>
-					<height>1</height>
+					<height>0.5</height>
 					<texture>base-rounded.png</texture>
 					<colordiffuse>mainblue</colordiffuse>
 					<!-- Opacity Option -->
                                         <include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
                                         <include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
-					<visible>![StringCompare(Skin.String(osd_mode),Bottom) | StringCompare(Skin.String(osd_mode),Top)]</visible>
+					<animation effect="slide" end="0,-71" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Bottom)">Conditional</animation>
+					<visible>![StringCompare(Skin.String(osd_mode),Top)]</visible>
 				</control>
 			</control>
 

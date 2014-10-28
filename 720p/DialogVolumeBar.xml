@@ -4,10 +4,10 @@
 	<control type="group">
 		<posx>1020</posx>
 		<posy>10</posy>
-		<animation effect="zoom" start="20" center="1125,55" end="100" time="500" tween="back" easing="out">Visible</animation>
-		<animation effect="zoom" start="20" center="1125,55" end="100" time="500" tween="back" easing="out">WindowOpen</animation>
-		<animation effect="zoom" start="100" center="1125,55" end="20" time="500" tween="back" easing="in">Hidden</animation>
-		<animation effect="zoom" start="100" center="1125,55" end="20" time="500" tween="back" easing="in">WindowClose</animation>
+		<!--<animation effect="zoom" start="40" center="1125,55" end="100" time="300" tween="back" easing="out">Visible</animation>
+		<animation effect="zoom" start="40" center="1125,55" end="100" time="300" tween="back" easing="out">WindowOpen</animation>
+		<animation effect="zoom" start="100" center="1125,55" end="40" time="300" tween="back" easing="in">Hidden</animation>
+		<animation effect="zoom" start="100" center="1125,55" end="40" time="300" tween="back" easing="in">WindowClose</animation>-->
 		<visible>!player.passthrough</visible>
 
 		<!-- Background -->

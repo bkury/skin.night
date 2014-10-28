@@ -31,7 +31,7 @@
 			<control type="image">
                                 <posy>0</posy>
                                 <width>1280</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <!-- Opacity Option -->
@@ -70,7 +70,7 @@
 			<control type="image">
                                 <posy>560</posy>
                                 <width>1280</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <!-- Opacity Option -->
@@ -81,7 +81,7 @@
 			<control type="image">
                                 <posy>560</posy>
                                 <width>930</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <!-- Opacity Option -->
@@ -113,26 +113,12 @@
 				<!-- Opacity Option -->
 				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
 				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
-				<!--<visible>Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + !SubString(VideoPlayer.SubtitleStream,None)</visible>-->
 				<visible>Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + !SubString(VideoPlayer.SubtitleStream,$LOCALIZE[231])</visible>
 			</control>
-
-			<!-- Bottom -->
-			<control type="image">
-                                <posy>610</posy>
-                                <width>1280</width>
-                                <height>1</height>
-                                <texture>base-rounded.png</texture>
-                                <colordiffuse>mainblue</colordiffuse>
-                                <!-- Opacity Option -->
-                                <include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
-                                <include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
-				<visible>Skin.String(osd_mode,Bottom)</visible>
-                        </control>
 			<control type="image">
                                 <posy>78</posy>
                                 <width>1280</width>
-                                <height>1</height>
+                                <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <!-- Opacity Option -->
@@ -149,36 +135,61 @@
 			<animation effect="slide" start="0,0" end="0,-610" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Top)">Conditional</animation>
 			<include>Animation_CommonFade_600</include>
 			<visible>!Skin.String(osd_mode,Off)</visible>
+
+			<!-- Progress Background -->
+			<control type="image">
+				<posx>100</posx>
+				<posy>130</posy>
+				<width>1080</width>
+				<height>20</height>
+				<texture>osd_progress_back_normal.png</texture>
+			</control>
+
+			<!-- Progress Bar -->
 			<control type="progress" id="23">
-				<texturebg>osd/osd_progress_back.png</texturebg>
-				<lefttexture>osd/osd_progress_left.png</lefttexture>
-				<midtexture>osd/osd_progress_mid.png</midtexture>
-				<righttexture>osd/osd_progress_right.png</righttexture>
+				<posx>106</posx>
+				<posy>128</posy>
+				<width>1068</width>
+				<height>24</height>
+				<texturebg>osd_progress_back_transparent.png</texturebg>
+				<midtexture border="4">osd_progress_mid_normal.png</midtexture>
 				<info>Player.Progress</info>
+			</control>
+
+			<!-- Progress Cache -->
+			<control type="progress" id="24">
 				<posx>100</posx>
 				<posy>130</posy>
 				<width>1080</width>
 				<height>19</height>
+				<texturebg>osd_progress_back_transparent.png</texturebg>
+				<righttexture>osd_progress_line.png</righttexture>
+				<info>Player.ProgressCache</info>
+				<colordiffuse>mainblue</colordiffuse>
 			</control>
+
+			<!-- Progress Time -->
 			<control type="label">
 				<posx>90</posx>
 				<posy>128</posy>
 				<width>300</width>
-				<height>25</height>
+				<height>20</height>
 				<align>right</align> 
-				<font>Font_ListDetail</font>
+				<aligny>center</aligny>
+				<font>Font_OSD_Time</font>
 				<textcolor>mainblue</textcolor>
-				<label>[B]$INFO[VideoPlayer.Time(h:mm:ss)][/B]</label>
+				<label>$INFO[VideoPlayer.Time(h:mm:ss)]</label>
 				<animation effect="slide" start="0,0" end="-10,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]">Conditional</animation>
 			</control>
 			<control type="label">
 				<posx>1190</posx>
 				<posy>128</posy>
 				<width>300</width>
-				<height>25</height>
-				<font>Font_ListDetail</font>
+				<height>20</height>
+				<aligny>center</aligny>
+				<font>Font_OSD_Time</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B]$INFO[VideoPlayer.Duration(h:mm:ss)][/B]</label>
+				<label>$INFO[VideoPlayer.Duration(h:mm:ss)]</label>
 				<animation effect="slide" start="0,0" end="-304,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]">Conditional</animation>
 			</control>
 		</control>
@@ -263,89 +274,105 @@
 		<control type="group">
 			<include>Animation_CommonFade_600</include>
 			<posx>20</posx>
-			<posy>600</posy>
-			<!--<visible>![ Skin.String(osd_mode,Off) | Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Top) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + !SubString(VideoPlayer.SubtitleStream,None) ]</visible>-->
+			<posy>595</posy>
 			<visible>![ Skin.String(osd_mode,Off) | Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Top) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + !SubString(VideoPlayer.SubtitleStream,$LOCALIZE[231]) ]</visible>
 
 			<!-- TV  -->
 			<control type="label">
-				<posx>-20</posx>
-				<posy>55</posy>
-				<width>1080</width>
-				<height>25</height>
-				<label>[B]$INFO[VideoPlayer.Title][/B]</label>
-				<textcolor>ffffffff</textcolor>
-				<font>Font_Bartowski_Extras_Pause</font>
-				<align>center</align>
-				<visible>VideoPlayer.Content(episodes)</visible>
-			</control>
-			<control type="label">
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>800</width> 
-				<height>25</height> 
+				<posy>-5</posy>
+				<width>940</width> 
+				<height>34</height>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<align>left</align> 
-				<aligny>center</aligny> 
-				<font>Font_Bartowski_Title_Pause</font>
+				<aligny>center</aligny>
+				<font>Font_OSD_Header</font>
 				<textcolor>mainblue</textcolor>
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>
 			<control type="label">
 				<posx>0</posx>
-				<posy>27</posy>
-				<width>800</width> 
-				<height>25</height> 
+				<posy>34</posy>
+				<width>940</width> 
+				<height>24</height> 
 				<label>$LOCALIZE[20373] $INFO[VideoPlayer.season][COLOR=mainblue] / [/COLOR]$LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
-				<align>left</align> 
 				<aligny>center</aligny> 
-				<font>Font_Bartowski_Under_Pause</font>
+				<font>Font_OSD_Sub</font>
 				<textcolor>ffffffff</textcolor>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>55</posy>
+				<width>940</width>
+				<height>24</height>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<textcolor>ffffffff</textcolor>
+				<font>Font_OSD_Sub</font>
+				<align>center</align>
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>
 
 			<!-- Movies -->
 			<control type="label">
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>900</width> 
-				<height>25</height> 
+				<posy>-5</posy>
+				<width>940</width> 
+				<height>34</height> 
 				<label>$INFO[VideoPlayer.Title]</label>
 				<align>left</align> 
 				<aligny>center</aligny> 
-				<font>Font_Bartowski_Title_Pause</font>
+				<font>Font_OSD_Header</font>
 				<textcolor>mainblue</textcolor>
 				<visible>VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="label">
 				<posx>0</posx>
-				<posy>27</posy>
-				<width>812</width> 
-				<height>25</height> 
+				<posy>34</posy>
+				<width>940</width> 
+				<height>24</height> 
 				<label>$INFO[VideoPlayer.Year]</label>
 				<align>left</align> 
 				<aligny>center</aligny> 
-				<font>Font_Bartowski_Under_Pause</font>
+				<font>Font_OSD_Sub</font>
 				<textcolor>ffffffff</textcolor>
 				<visible>VideoPlayer.Content(movies)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>55</posy>
+				<width>940</width>
+				<height>24</height>
+				<label>$LOCALIZE[21396]: $INFO[Player.Chapter] / $INFO[Player.ChapterCount]</label><!-- Chapter -->
+				<textcolor>ffffffff</textcolor>
+				<font>Font_OSD_Sub</font>
+				<align>center</align>
+				<visible>Player.ChapterCount + VideoPlayer.Content(movies)</visible>
 			</control>
 
 			<!-- Other -->
 			<control type="label">
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>900</width> 
-				<height>25</height> 
+				<posy>-5</posy>
+				<width>940</width> 
+				<height>34</height> 
 				<label>$INFO[VideoPlayer.Title]</label>
 				<align>left</align> 
 				<aligny>center</aligny> 
-				<font>Font_Bartowski_Title_Pause</font>
+				<font>Font_OSD_Header</font>
 				<textcolor>mainblue</textcolor>
 				<visible>![ VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) ]</visible>
 			</control>
-
-
-
+			<control type="label">
+				<posx>0</posx>
+				<posy>55</posy>
+				<width>940</width>
+				<height>24</height>
+				<label>$LOCALIZE[21396]: $INFO[Player.Chapter] / $INFO[Player.ChapterCount]</label><!-- Chapter -->
+				<textcolor>ffffffff</textcolor>
+				<font>Font_OSD_Sub</font>
+				<align>center</align>
+				<visible>Player.ChapterCount + ![ VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) ]</visible>
+			</control>
 		</control>
 	</control>
 </include>
@@ -535,28 +562,51 @@
 		</control>
 
 		<!-- BUFFERING -->
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<align>center</align>
-			<label>31084</label><!-- Buffering -->
-			<font>Font_Bartowski_OSD</font>
-			<textcolor>FFCCCCCC</textcolor>
+		<control type="group">
 			<visible>player.caching</visible>
-			<include>Animation_CommonFade_600</include>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<align>center</align>
-			<label>31084</label><!-- Buffering -->
-			<font>Font_Bartowski_OSD</font>
-			<textcolor>mainblue</textcolor>
-			<visible>!Skin.HasSetting(osd_flash) + player.caching</visible>
-			<include>Animation_CommonFade_600</include>
-			<include>Animation_OSD</include>
+			<include>Animation_CommonFade_600_Delay</include>
+
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<align>center</align>
+				<label>$LOCALIZE[31084]</label><!-- Buffering -->
+				<font>Font_Bartowski_OSD</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>170</posy>
+				<width>1280</width>
+				<align>center</align>
+				<label>$INFO[Player.CacheLevel]%</label><!-- Buffering % -->
+				<font>Font_Header1_Large_Aeon_Focus</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<align>center</align>
+				<label>31084</label><!-- Buffering -->
+				<font>Font_Bartowski_OSD</font>
+				<textcolor>mainblue</textcolor>
+				<visible>!Skin.HasSetting(osd_flash)</visible>
+				<include>Animation_OSD</include>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>170</posy>
+				<width>1280</width>
+				<align>center</align>
+				<label>$INFO[Player.CacheLevel]%</label><!-- Buffering % -->
+				<font>Font_Header1_Large_Aeon_Focus</font>
+				<textcolor>mainblue</textcolor>
+				<visible>!Skin.HasSetting(osd_flash)</visible>
+				<include>Animation_OSD</include>
+			</control>
+
 		</control>
 
 		<!-- FFx2 -->

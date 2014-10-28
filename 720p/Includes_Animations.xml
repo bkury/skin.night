@@ -5,6 +5,13 @@
 		<animation effect="fade" start="0" end="100" time="600" delay="4000" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 	</include>
 
+	<include name="Animation_CommonFade_Deck">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>	
+		<!--<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>-->
+		<animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+	</include>
+
 	<include name="Animation_CommonFade">
 		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>	
 		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -24,6 +31,27 @@
 		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
 		<animation effect="fade" start="0" end="100" time="600">Visible</animation>	
 		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_600_Delay">
+		<animation effect="fade" start="0" end="100" delay="1000" time="600">WindowOpen</animation>	
+		<animation effect="fade" start="0" end="100" delay="1000" time="600">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_600_Weather">
+		<animation effect="fade" start="0" end="100" delay="300" time="600">WindowOpen</animation>	
+		<animation effect="fade" start="0" end="100" delay="300" time="600">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_600_Delay2">
+		<animation effect="fade" start="0" end="100" delay="2000" time="300">WindowOpen</animation>	
+		<animation effect="fade" start="0" end="100" delay="2000" time="300">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>		
 	</include>
 
 	<include name="Animation_CommonFade_Deck_400">
@@ -483,6 +511,20 @@
 		<animation type="Conditional" reversible="false" condition="true" loop="true">
 			<effect type="fade" start="0" end="100" time="3000" delay="0" loop="true" reversible="false" />
 			<effect type="fade" start="100" end="0" time="3000" delay="3000" loop="true" reversible="false" />
+		</animation>
+	</include>
+
+	<include name="Animation_OSD_Play">
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<effect type="fade" start="0" end="100" time="2000" delay="0" loop="true" reversible="false" />
+			<effect type="fade" start="100" end="0" time="2000" delay="2000" loop="true" reversible="false" />
+		</animation>
+	</include>
+
+	<include name="Animation_OSD_Selected">
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<effect type="fade" start="50" end="100" time="2000" delay="0" loop="true" reversible="false" />
+			<effect type="fade" start="100" end="50" time="2000" delay="2000" loop="true" reversible="false" />
 		</animation>
 	</include>
 

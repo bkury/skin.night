@@ -8,12 +8,14 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
-	<control type="largeimage">
-		<include>Dimensions_Fullscreen</include>
-		<texture>backdrops/curtains_diffuse.png</texture>
-		<aspectratio>scale</aspectratio>
-		<include>VisibleFadeEffect</include>
+     
+	<!-- Background -->
+	<control type="image">
+		<include>background_default</include>
+		<texture>nav_black.png</texture>
+		<colordiffuse>CC000000</colordiffuse>
 	</control>
+
 	<control type="group">
 	<posx>480</posx>
 	<posy>145</posy>

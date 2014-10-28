@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="3100">
+        <include>Animation_Bartowski_Context_Zoom</include>
+	<defaultcontrol always="true">3101</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<!-- Header -->
+	<include>dialog_header</include>
+
+	<!-- Favourites -->
+	<control type="list" id="3101">
+		<onleft>3104</onleft>
+		<onright>3104</onright>
+		<include>dialog_list</include>
+		<content>
+			<include>PLEX_Favourite_Dialog</include>
+		</content>
+       	</control>
+
+	<!-- Buttons -->
+	<control type="grouplist" id="3104">
+		<posx>320</posx>
+		<posy>515</posy>
+		<width>640</width>
+		<height>80</height>
+		<onup>3101</onup>
+		<ondown>3101</ondown>
+		<itemgap>0</itemgap>
+		<orientation>horizontal</orientation>
+		<include>PLEX_Favourite_Buttons</include>
+	</control>
+
+	</controls>
+</window>

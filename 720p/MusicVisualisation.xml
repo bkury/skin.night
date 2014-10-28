@@ -22,15 +22,9 @@
 	        </control>
 	        <include>NowPlaying_Custom</include>
 
+		<!-- Visualisation -->
 		<control type="visualisation" id="2">
-			<description>visualisation</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>520</height>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<include>Animation_BackdropFade</include>
+			<include>background_default</include>
 		</control>
 
 		<!-- Paused -->
@@ -49,6 +43,8 @@
 
 		<!-- Fullscreen -->
 		<control type="group">
+			<visible>!Skin.HasSetting(NoVisualisationInfo)</visible>
+
 			<posy>630</posy>
 			<animation type="WindowOpen">
 				<effect type="slide" start="0,300" end="0,0" time="600" tween="cubic" easing="out" />
@@ -71,12 +67,14 @@
 		<control type="image">
 			<posy>-80</posy>
 			<height>250</height>
+			<width>1280</width>
 			<texture border="5">base-rounded.png</texture>
 			<colordiffuse>AA000000</colordiffuse>
 		</control>
 		<control type="image">
 			<posy>-80</posy>
-			<height>1</height>
+			<height>0.5</height>
+			<width>1280</width>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>mainblue</colordiffuse>
 		</control>

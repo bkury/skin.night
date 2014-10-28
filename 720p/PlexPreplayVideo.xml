@@ -8,15 +8,38 @@
 <allowoverlay>no</allowoverlay>
 <controls>
 
-	<!-- Preplay Hack -->
-	<control type="button" id="102">
-		<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
-		<visible>!Window.Previous(2005) + Skin.HasSetting(preplay_off)</visible>
+	<!-- PrePlay Hack -->
+	<control type="group">
+		<visible>Window.Previous(home) | Window.Previous(videolibrary) | Window.Previous(51) | Window.Previous(99)</visible>
+		<control type="button" id="102">
+			<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+			<visible>Container.Content(movie) + Skin.HasSetting(preplay_off_movie)</visible>
+		</control>
+		<control type="button" id="102">
+			<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+			<visible>Container.Content(episode) + Skin.HasSetting(preplay_off_episode)</visible>
+		</control>
+		<control type="button" id="102">
+			<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+			<visible>Container.Content(clip) + Skin.HasSetting(preplay_off_clip)</visible>
+		</control>
 	</control>
 
-	<control type="button" id="102">
-		<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
-		<visible>![ Window.Previous(videolibrary) | Window.Previous(home) | Window.Previous(51) | Window.Previous(99) ] + [ Skin.HasSetting(preplay_off) | Skin.HasSetting(preplay_after) ]</visible>
+	<!-- PostPlay Hack -->
+	<control type="group">
+		<visible>![ Window.Previous(home) | Window.Previous(videolibrary) | Window.Previous(51) | Window.Previous(99) ]</visible>
+		<control type="button" id="102">
+			<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+			<visible>Container.Content(movie) + Skin.HasSetting(preplay_after_movie)</visible>
+		</control>
+		<control type="button" id="102">
+			<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+			<visible>Container.Content(episode) + Skin.HasSetting(preplay_after_episode)</visible>
+		</control>
+		<control type="button" id="102">
+			<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+			<visible>Container.Content(clip) + Skin.HasSetting(preplay_after_clip)</visible>
+		</control>
 	</control>
 
 	<!-- Background Fanart -->
@@ -65,7 +88,11 @@
 
 	<!-- Preplay Screen -->
 	<control type="group">
-		<visible>!Skin.HasSetting(preplay_off)</visible>
+		<visible>![ Container.Content(movie) + Skin.HasSetting(preplay_off_movie) |
+			    Container.Content(episode) + Skin.HasSetting(preplay_off_episode) |
+			    Container.Content(clip) + Skin.HasSetting(preplay_off_clip) ]
+		</visible>
+
 		<!-- Header -->
 		<include>dialog_header_preplay</include>
 
@@ -113,7 +140,7 @@
 					<width>255</width>
 					<height>355</height>
 					<aligny>center</aligny>
-					<texture border="0">$INFO[ListItem.grandparentthumb]</texture>
+					<texture background="true">$INFO[ListItem.grandparentthumb]</texture>
 					<bordertexture>confluence/button-nofocus.png</bordertexture>
 					<bordersize>1</bordersize>
 	                                <aspectratio>keep</aspectratio>
@@ -145,7 +172,7 @@
 					<width>255</width>
 					<height>370</height>
 					<aligny>center</aligny>
-					<texture border="0">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture>confluence/button-nofocus.png</bordertexture>
 					<bordersize>1</bordersize>
 	                                <aspectratio>keep</aspectratio>
@@ -155,10 +182,9 @@
 			</control>
 
 			<control type="group">
-			<visible>!Control.HasFocus(3)</visible>
+			<visible>![ Control.HasFocus(3) | Control.hasFocus(20) ]</visible>
 			<animation effect="fade" start="100" end="0" time="300">hidden</animation>
 			<animation effect="fade" start="0" end="100" time="300">visible</animation>
-
 
 			<!-- Background Grid -->
 			<control type="image">
@@ -166,7 +192,7 @@
 				<posx>220</posx>
 				<width>700</width>
 				<height>210</height>
-				<texture>preplay_info.png</texture>
+				<texture background="true">preplay_info.png</texture>
 				<include>Animation_Preplay_Right</include>
 			</control>
 
@@ -224,7 +250,7 @@
 	                                <posy>10</posy>
 					<width>255</width>
 					<height>370</height>
-	                                <texture>$INFO[ListItem.Art(sourceIcon)]</texture>
+	                                <texture background="true">$INFO[ListItem.Art(sourceIcon)]</texture>
 					<bordertexture>confluence/button-nofocus.png</bordertexture>
 					<bordersize>1</bordersize>
 	                                <aspectratio align="right" aligny="center">keep</aspectratio>
@@ -315,7 +341,7 @@
 				<aligny>center</aligny>
                                 <aspectratio>keep</aspectratio>
 				<colordiffuse>77FFFFFF</colordiffuse>
-				<texture fallback="DefaultVideoCover.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
+				<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
 				<visible>Container.Content(episode)</visible>
 			</control>
 			<control type="image">
@@ -327,7 +353,7 @@
 				<aligny>center</aligny>
                                 <aspectratio>keep</aspectratio>
 				<colordiffuse>77FFFFFF</colordiffuse>
-				<texture fallback="DefaultVideoCover.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
+				<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
 				<visible>Container.Content(movie)</visible>
 			</control>
 
@@ -409,6 +435,7 @@
 			<control type="label">
 				<posx>355</posx>
 				<posy>120</posy>
+				<width>380</width>
 				<label fallback="Not Available">$INFO[ListItem.Director]</label>
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>FFCCCCCC</textcolor>
@@ -441,7 +468,7 @@
 				<align>center</align>
 				<itemgap>45</itemgap>
 				<orientation>horizontal</orientation>
-				<include>color_flags</include>
+				<include>Viewmode_Mediaflags</include>
 			</control>
 			<!-- Plot -->
 			<control type="textbox">
@@ -507,141 +534,6 @@
 				<animation effect="slide" end="-1300,0" time="0" condition="![Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110)]">Conditional</animation>
 				<visible>Skin.HasSetting(navigation_circle)</visible>
 			</control>
-		</control>
-
-		<!-- Extras -->
-		<control type="group">
-			<posx>520</posx>
-			<posy>150</posy>
-			<visible>Control.HasFocus(3)</visible>
-
-			<!-- Animations -->
-			<animation effect="slide" end="800,0" time="400" tween="quadratic" easing="in" delay="0" condition="Window.IsActive(106)">Conditional</animation>
-
-			<animation effect="fade" start="100" end="0" time="300">hidden</animation>
-			<animation effect="fade" start="0" end="100" time="300">visible</animation>
-			<animation effect="slide" start="800,0" time="400" tween="quadratic" easing="out" delay="0">WindowOpen</animation>
-			<animation effect="slide" end="800,0" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
-
-			<!-- Extras Panel -->
-			<control type="panel" id="3">
-				<width>520</width>
-				<height>400</height>
-				<scrolltime>200</scrolltime>
-				<onleft>110</onleft>
-				<onright>110</onright>
-				<pagecontrol>-</pagecontrol>
-
-				<itemlayout width="260" height="200">
-
-					<!-- Thumb -->
-					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>220</width>
-						<height>130</height>
-						<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
-						<bordertexture>confluence/button-nofocus.png</bordertexture>
-						<bordersize>2</bordersize>
-						<aspectratio>keep</aspectratio>
-					</control>
-
-					<!-- Extra #1 -->
-					<control type="label">
-						<posx>130</posx>
-						<posy>160</posy>
-						<width>220</width>
-						<height>15</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font_Bartowski_Movies_Plot</font>
-						<textcolor>FFDDDDDD</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-
-					<!-- Extra #2 -->
-					<control type="label">
-						<posx>130</posx>
-						<posy>180</posy>
-						<width>220</width>
-						<height>15</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font_Bartowski_Preplay</font>
-						<textcolor>FFDDDDDD</textcolor>
-						<label>$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.DurationStr]</label>
-					</control>
-
-
-				</itemlayout>
-
-				<focusedlayout width="260" height="200">
-
-					<control type="group">
-						<animation effect="zoom" reversible="false" center="auto" start="100" end="110" time="300" tween="back" easing="out">Focus</animation>
-
-						<!-- Thumb -->
-						<control type="image">
-							<posx>20</posx>
-							<posy>20</posy>
-							<width>220</width>
-							<height>130</height>
-							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
-							<bordertexture>confluence/button-nofocus.png</bordertexture>
-							<bordersize>2</bordersize>
-							<aspectratio>keep</aspectratio>
-						</control>
-
-						<!-- Extra #1 -->
-						<control type="label">
-							<posx>130</posx>
-							<posy>160</posy>
-							<width>220</width>
-							<height>15</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_Bartowski_Movies_Plot</font>
-							<include>navigation_options_accent</include>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-
-						<!-- Extra #2 -->
-						<control type="label">
-							<posx>130</posx>
-							<posy>180</posy>
-							<width>220</width>
-							<height>15</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Font_Bartowski_Preplay</font>
-							<textcolor>FFFFFFFF</textcolor>
-							<label>$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.DurationStr]</label>
-						</control>
-
-						<!-- Play Image -->
-						<control type="image">
-							<posx>20</posx>
-							<posy>20</posy>
-							<width>220</width>
-							<height>130</height>
-							<texture background="true">96-play.png</texture>
-							<aspectratio scalediffuse="false">center</aspectratio>
-						</control>
-						<control type="image">
-							<posx>20</posx>
-							<posy>20</posy>
-							<width>220</width>
-							<height>130</height>
-							<texture background="true">96-play.png</texture>
-							<aspectratio scalediffuse="false">center</aspectratio>
-							<include>Animation_OSD_Play</include>
-							<colordiffuse>mainblue</colordiffuse>
-						</control>
-
-					</control>
-				</focusedlayout>
-			</control>
-
 		</control>
 
 		<!-- Navigation -->
@@ -981,6 +873,150 @@
 				</control>
 			</control>
 		</control>
+
+		<!-- Extras -->
+		<control type="group">
+			<posx>520</posx>
+			<posy>150</posy>
+			<visible>Control.HasFocus(3) | Control.HasFocus(20)</visible>
+
+			<control type="button" id="20">
+				<posx>-420</posx>
+				<posy>-80</posy>
+				<width>1080</width>
+				<height>580</height>
+				<include>Mouse_Trigger</include>
+			</control>
+
+			<!-- Animations -->
+			<animation effect="slide" end="800,0" time="400" tween="quadratic" easing="in" delay="0" condition="Window.IsActive(106)">Conditional</animation>
+
+			<animation effect="fade" start="100" end="0" time="300">hidden</animation>
+			<animation effect="fade" start="0" end="100" time="300">visible</animation>
+			<animation effect="slide" start="800,0" time="400" tween="quadratic" easing="out" delay="0">WindowOpen</animation>
+			<animation effect="slide" end="800,0" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
+
+			<!-- Extras Panel -->
+			<control type="panel" id="3">
+				<width>520</width>
+				<height>400</height>
+				<scrolltime>200</scrolltime>
+				<onleft>110</onleft>
+				<onright>110</onright>
+				<pagecontrol>-</pagecontrol>
+
+				<itemlayout width="260" height="200">
+
+					<!-- Thumb -->
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>220</width>
+						<height>130</height>
+						<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<bordertexture>confluence/button-nofocus.png</bordertexture>
+						<bordersize>2</bordersize>
+						<aspectratio>keep</aspectratio>
+					</control>
+
+					<!-- Extra #1 -->
+					<control type="label">
+						<posx>130</posx>
+						<posy>160</posy>
+						<width>220</width>
+						<height>15</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+
+					<!-- Extra #2 -->
+					<control type="label">
+						<posx>130</posx>
+						<posy>180</posy>
+						<width>220</width>
+						<height>15</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Bartowski_Preplay</font>
+						<textcolor>FFDDDDDD</textcolor>
+						<label>$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.DurationStr]</label>
+					</control>
+
+
+				</itemlayout>
+
+				<focusedlayout width="260" height="200">
+
+					<control type="group">
+						<animation effect="zoom" reversible="false" center="auto" start="100" end="110" time="300" tween="back" easing="out">Focus</animation>
+
+						<!-- Thumb -->
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>220</width>
+							<height>130</height>
+							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture>confluence/button-nofocus.png</bordertexture>
+							<bordersize>2</bordersize>
+							<aspectratio>keep</aspectratio>
+						</control>
+
+						<!-- Extra #1 -->
+						<control type="label">
+							<posx>130</posx>
+							<posy>160</posy>
+							<width>220</width>
+							<height>15</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<include>navigation_options_accent</include>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+
+						<!-- Extra #2 -->
+						<control type="label">
+							<posx>130</posx>
+							<posy>180</posy>
+							<width>220</width>
+							<height>15</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_Preplay</font>
+							<textcolor>FFFFFFFF</textcolor>
+							<label>$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.DurationStr]</label>
+						</control>
+
+						<!-- Play Image -->
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>220</width>
+							<height>130</height>
+							<texture background="true">70-play.png</texture>
+							<aspectratio scalediffuse="false">center</aspectratio>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>20</posy>
+							<width>220</width>
+							<height>130</height>
+							<texture background="true">70-play.png</texture>
+							<aspectratio scalediffuse="false">center</aspectratio>
+							<include>Animation_OSD_Play</include>
+							<colordiffuse>mainblue</colordiffuse>
+						</control>
+
+					</control>
+				</focusedlayout>
+			</control>
+
+		</control>
+
 	</control>
 	<include>viewtype_clock</include>
 </controls>

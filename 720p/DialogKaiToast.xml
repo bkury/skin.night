@@ -8,9 +8,134 @@
             
 	<controls>
 
+		<!-- Now Playing -->
+		<control type="group">
+			<posy>610</posy>
+			<visible>SubString(Control.GetLabel(401),$LOCALIZE[13350]) | StringCompare(Control.GetLabel(401),$LOCALIZE[559]) | StringCompare(Control.GetLabel(401),ITEM QUEUED) | StringCompare(Control.GetLabel(401),$LOCALIZE[52000]) +
+				 ![ Skin.HasSetting(DisableNotificationAll) | Skin.HasSetting(DisableNotificationPlaying) ]
+			</visible>
+
+			<include>Animation_CommonFade_600</include>
+
+			<control type="image">
+				<width>1280</width>
+				<height>110</height>
+				<texture border="10" flipy="true">base-rounded.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+                        </control>
+                        <control type="image">
+                                <posy>0</posy>
+                                <width>1280</width>
+                                <height>0.5</height>
+                                <texture>base-rounded.png</texture>
+                                <colordiffuse>mainblue</colordiffuse>
+                                <include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+                                <include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+                        </control>
+
+			<!-- Play Image -->
+			<control type="image">
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>nav_play.png</texture>
+				<colordiffuse>FFAAAAAA</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>nav_play.png</texture>
+				<include>Animation_OSD_Play</include>
+				<colordiffuse>mainblue</colordiffuse>
+			</control>
+
+
+			<!-- Header -->
+			<control type="label">
+				<posx>130</posx>
+				<posy>30</posy>
+				<width>850</width>
+				<height>22</height>
+				<label>$INFO[Control.GetLabel(401)]</label>
+				<font>Font_Bartowski_Extras_Pause</font>
+				<textcolor>mainblue</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="label">
+				<posx>130</posx>
+				<posy>30</posy>
+				<width>850</width>
+				<height>22</height>
+				<font>Font_Bartowski_Extras_Pause</font>
+				<textcolor>mainblue</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+
+			<!-- Title -->
+			<control type="label">
+				<posx>130</posx>
+				<posy>55</posy>
+				<width>850</width>
+				<height>38</height>
+				<label>$INFO[Control.GetLabel(402)]</label>
+				<font>Font_Bartowski_Title_Pause</font>
+				<textcolor>grey</textcolor>
+				<scrollout>true</scrollout>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+
+			<!-- Duration -->
+			<control type="image">
+				<posx>1100</posx>
+				<posy>5</posy>
+				<width>1</width>
+				<height>105</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+
+			<control type="label">
+				<posx>1100</posx>
+				<posy>5</posy>
+				<width>180</width>
+				<height>110</height>
+				<label>$INFO[VideoPlayer.Duration(h:mm)]</label>
+				<font>Font_Bartowski_Title_Pause</font>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+
+		</control>
+
+		<!-- Notifications -->
 		<control type="group">
 			<posx>340</posx>
 			<posy>530</posy>
+
+			<visible>![ Skin.HasSetting(DisableNotificationAll) | 
+				    Skin.HasSetting(DisableNotificationRemote) + SubString(Control.GetLabel(401),$LOCALIZE[52500]) |
+				    Skin.HasSetting(DisableNotificationRemote) + SubString(Control.GetLabel(401),$LOCALIZE[52501]) |
+				    Skin.HasSetting(DisableNotificationWelcome) + SubString(Control.GetLabel(401),$LOCALIZE[44011]) |
+				    !isEmpty(Skin.String(DisableNotificationCustom1)) + StringCompare(Control.GetLabel(401),Skin.String(DisableNotificationCustom1)) |
+				    !isEmpty(Skin.String(DisableNotificationCustom2)) + StringCompare(Control.GetLabel(401),Skin.String(DisableNotificationCustom2)) |
+				    SubString(Control.GetLabel(401),$LOCALIZE[13350]) | 
+				    StringCompare(Control.GetLabel(401),$LOCALIZE[559]) |
+				    StringCompare(Control.GetLabel(401),$LOCALIZE[52000]) |
+				    StringCompare(Control.GetLabel(401),ITEM QUEUED) |
+				    StringCompare(Control.GetLabel(401),FILTER UNWATCHED) ]
+			</visible>
+
 			<!-- Animations -->
 			<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">Visible</animation>
 			<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">WindowOpen</animation>
@@ -31,7 +156,7 @@
 				<posx>25</posx>
 				<posy>111</posy>
 				<width>550</width>
-				<height>1</height>
+				<height>0.5</height>
 				<texture>base-rounded.png</texture>
 				<colordiffuse>mainblue</colordiffuse>
 			</control>
@@ -82,6 +207,8 @@
 				<aligny>center</aligny>
 				<scrollout>true</scrollout>
 			</control>
+
 		</control>
+
 	</controls>
 </window>

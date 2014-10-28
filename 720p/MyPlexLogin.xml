@@ -24,7 +24,7 @@
 			<posx>320</posx>
 			<posy>485</posy>
 			<width>640</width>
-			<height>1</height>
+			<height>0.5</height>
 			<texture>base-rounded.png</texture>
 			<colordiffuse>mainblue</colordiffuse>
 			<align>center</align>

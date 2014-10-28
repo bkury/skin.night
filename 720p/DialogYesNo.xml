@@ -17,8 +17,9 @@
 		<control type="label" id="2">
 			<description>Line 1</description>
 			<posx>340</posx>
-			<posy>250</posy>
-			<font>Font_Bartowski_Title_TVShow</font>
+			<posy>160</posy>
+			<!--<font>Font_Bartowski_Title_TVShow</font>-->
+			<font>Font_RSS_Big</font>
 			<textcolor>white</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<label>-</label>
@@ -28,10 +29,11 @@
 			<wrapmultiline>true</wrapmultiline>
 		</control>
 		<control type="label" id="3">
-			<description>Line 1</description>
+			<description>Line 2</description>
 			<posx>340</posx>
-			<posy>250</posy>
-			<font>Font_Bartowski_Title_TVShow</font>
+			<posy>225</posy>
+			<!--<font>Font_Bartowski_Title_TVShow</font>-->
+			<font>Font_RSS_Big</font>
 			<textcolor>white</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<label>-</label>
@@ -41,10 +43,11 @@
 			<wrapmultiline>true</wrapmultiline>
 		</control>
 		<control type="label" id="4">
-			<description>Line 1</description>
+			<description>Line 3</description>
 			<posx>340</posx>
-			<posy>250</posy>
-			<font>Font_Bartowski_Title_TVShow</font>
+			<posy>290</posy>
+			<!--<font>Font_Bartowski_Title_TVShow</font>-->
+			<font>Font_RSS_Big</font>
 			<textcolor>white</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<label>-</label>
@@ -52,6 +55,26 @@
 			<align>center</align>
 			<aligny>middle</aligny>
 			<wrapmultiline>true</wrapmultiline>
+		</control>
+
+		<!-- Arrow -->
+		<control type="image">
+			<posx>-20</posx>
+			<posy>490</posy>
+			<include>navigation_arrow_down</include>
+			<animation effect="slide" end="500,0" time="0" condition="Control.HasFocus(10)">Conditional</animation>
+			<animation effect="slide" end="800,0" time="0" condition="Control.HasFocus(11)">Conditional</animation>
+			<visible>Skin.HasSetting(navigation_arrow)</visible>
+		</control>
+
+		<!-- Circle -->
+		<control type="image">
+			<posx>-20</posx>
+			<posy>488</posy>
+			<include>navigation_circle</include>
+			<animation effect="slide" end="500,0" time="0" condition="Control.HasFocus(10)">Conditional</animation>
+			<animation effect="slide" end="800,0" time="0" condition="Control.HasFocus(11)">Conditional</animation>
+			<visible>Skin.HasSetting(navigation_circle)</visible>
 		</control>
 
 		<!-- Dialog Footer -->

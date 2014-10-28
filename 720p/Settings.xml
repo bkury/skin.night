@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1111">
+	<onunload condition="Skin.HasSetting(Home_Horizontal)">Skin.Reset(Deck_Images_Large)</onunload>
+	<onunload condition="Skin.HasSetting(Home_Horizontal)">Skin.Reset(Deck_Images_xLarge)</onunload>
+	<onunload condition="Skin.HasSetting(Home_Horizontal)">Skin.Reset(Deck_Images_Small)</onunload>
 	<defaultcontrol always="true">100</defaultcontrol>
         <include>XBMC_Detect</include>
 	<controls>
@@ -13,12 +16,13 @@
 
 			<!-- Logo -->
 			<control type="image">
-				<posx>-10</posx>
-				<posy>10</posy>
+				<posx>-20</posx>
+				<posy>5</posy>
 				<width>180</width>
 				<height>50</height>
 				<aspectratio>scale</aspectratio>
 				<texture>confluence/bartowski2.png</texture>
+				<animation effect="fade" end="70" condition="true">Conditional</animation>
 			</control>
 
 			<!-- Main Menu -->
@@ -175,10 +179,26 @@
 				<visible>Player.HasAudio</visible>
 			</control>
 
+			<!-- Navigation Arrow -->
+			<control type="image">
+				<posx>716</posx>
+				<posy>650</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>nav_arrow.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<include>Animation_CommonFade</include>
+				<animation effect="rotate" center="auto" end="180" time="300" condition="ControlGroup(1000).HasFocus(1248)">Conditional</animation>
+				<animation effect="rotate" center="auto" end="180" time="300" condition="ControlGroup(2000).HasFocus(2260)">Conditional</animation>
+				<visible>Container(100).Hasfocus(110)</visible>
+			</control>
+
+
 			<control type="group" id="101">
 
 			<!-- General Settings -->
 			<control type="grouplist" id="1000">
+				<height>578</height>
 				<include>Settings_Section</include>
 				<visible>Container(100).Hasfocus(110)</visible>
 
@@ -207,19 +227,19 @@
 					<onclick>Skin.ToggleSetting(NoHomeClock)</onclick>
 					<selected>Skin.HasSetting(NoHomeClock)</selected>
 				</control>
-				<control type="radiobutton" id="1045">
-					<description>Aeon Home Font</description>
-					<include>skin_settings_labels</include>
-					<label>Enable Aeon Font</label>
-					<onclick>Skin.ToggleSetting(AeonHomeMenu)</onclick>
-					<selected>Skin.HasSetting(AeonHomeMenu)</selected>
-				</control>
 				<control type="radiobutton" id="1050">
 					<include>skin_settings_labels</include>
-					<label>Kiosk Mode</label>
+					<label>Enable Kiosk Mode</label>
 					<onclick>Skin.ToggleSetting(LockViews)</onclick>
 					<selected>Skin.HasSetting(LockViews)</selected>
 				</control>
+				<control type="radiobutton" id="1055">
+					<include>skin_settings_labels</include>
+					<label>Enable Raspberry Mode</label>
+					<onclick>Skin.ToggleSetting(Deck_NoAnimation)</onclick>
+					<selected>Skin.HasSetting(Deck_NoAnimation)</selected>
+				</control>
+
 				<!-- Preplay -->
 				<control type="label" id="1060">
 					<width>860</width>
@@ -236,7 +256,7 @@
 					<include>settings_separator</include>
 					<visible>!Skin.HasSetting(XBMC)</visible>
 				</control>
-				<control type="radiobutton" id="1080">
+				<!--<control type="radiobutton" id="1080">
 					<include>skin_settings_labels</include>
 					<label>Disable PrePlay Screen</label>
 					<onclick>Skin.ToggleSetting(preplay_off)</onclick>
@@ -244,18 +264,69 @@
 					<onclick>Skin.Reset(preplay_after)</onclick>
 					<selected>Skin.HasSetting(preplay_off)</selected>
 					<visible>!Skin.HasSetting(XBMC)</visible>
-				</control>
-				<control type="radiobutton" id="1090">
+				</control>-->
+				<control type="radiobutton" id="1080">
 					<include>skin_settings_labels</include>
-					<label>Disable PostPlay Screen</label>
-					<onclick>Skin.ToggleSetting(preplay_after)</onclick>
-					<onclick>Skin.Reset(preplay_off)</onclick>
-					<onclick>Skin.Reset(preplay_before)</onclick>
-					<selected>Skin.HasSetting(preplay_after)</selected>
+					<label>Disable for Movies</label>
+					<onclick>Skin.ToggleSetting(preplay_off_movie)</onclick>
+					<selected>Skin.HasSetting(preplay_off_movie)</selected>
 					<visible>!Skin.HasSetting(XBMC)</visible>
 				</control>
+				<control type="radiobutton" id="1082">
+					<include>skin_settings_labels</include>
+					<label>Disable for Episodes</label>
+					<onclick>Skin.ToggleSetting(preplay_off_episode)</onclick>
+					<selected>Skin.HasSetting(preplay_off_episode)</selected>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+				<control type="radiobutton" id="1084">
+					<include>skin_settings_labels</include>
+					<label>Disable for Clips</label>
+					<onclick>Skin.ToggleSetting(preplay_off_clip)</onclick>
+					<selected>Skin.HasSetting(preplay_off_clip)</selected>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+
+				<!-- PostPlay -->
+				<control type="label" id="1085">
+					<width>860</width>
+					<height>45</height>
+					<font>font13caps</font>
+					<label>Postplay Screen</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+				<control type="image" id="1086">
+					<include>settings_separator</include>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+				<control type="radiobutton" id="1087">
+					<include>skin_settings_labels</include>
+					<label>Disable for Movies</label>
+					<onclick>Skin.ToggleSetting(preplay_after_movie)</onclick>
+					<selected>Skin.HasSetting(preplay_after_movie)</selected>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+				<control type="radiobutton" id="1088">
+					<include>skin_settings_labels</include>
+					<label>Disable for Episodes</label>
+					<onclick>Skin.ToggleSetting(preplay_after_episode)</onclick>
+					<selected>Skin.HasSetting(preplay_after_episode)</selected>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+				<control type="radiobutton" id="1089">
+					<include>skin_settings_labels</include>
+					<label>Disable for Clips</label>
+					<onclick>Skin.ToggleSetting(preplay_after_clip)</onclick>
+					<selected>Skin.HasSetting(preplay_after_clip)</selected>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+
 				<!-- PleXBMC -->
-				<control type="label" id="1091">
+				<control type="label" id="1095">
 					<width>860</width>
 					<height>45</height>
 					<font>font13caps</font>
@@ -266,11 +337,11 @@
 					<aligny>center</aligny>
 					<visible>Skin.HasSetting(XBMC)</visible>
 				</control>
-				<control type="image" id="1092">
+				<control type="image" id="1096">
 					<include>settings_separator</include>
 					<visible>Skin.HasSetting(XBMC)</visible>
 				</control>
-				<control type="radiobutton" id="1093">
+				<control type="radiobutton" id="1097">
 					<include>skin_settings_labels</include>
 					<label>Deck Mode</label>
 					<onclick>Skin.Reset(XBMC_Plex_Home_Hybrid)</onclick>
@@ -278,7 +349,7 @@
 					<selected>!Skin.HasSetting(XBMC_Plex_Home_Hybrid) + !Skin.HasSetting(XBMC_Plex_Home_Full)</selected>
 					<visible>Skin.HasSetting(XBMC)</visible>
 				</control>
-				<control type="radiobutton" id="1094">
+				<control type="radiobutton" id="1098">
 					<include>skin_settings_labels</include>
 					<label>Hybrid Mode</label>
 					<onclick>Skin.Reset(XBMC_Plex_Home_Full)</onclick>
@@ -286,7 +357,7 @@
 					<selected>Skin.HasSetting(XBMC_Plex_Home_Hybrid)</selected>
 					<visible>Skin.HasSetting(XBMC)</visible>
 				</control>
-				<control type="radiobutton" id="1095">
+				<control type="radiobutton" id="1099">
 					<include>skin_settings_labels</include>
 					<label>Full Mode</label>
 					<onclick>Skin.Reset(XBMC_Plex_Home_Hybrid)</onclick>
@@ -360,8 +431,83 @@
 					<onclick>Skin.ToggleSetting(SharedPageId)</onclick>
 					<selected>Skin.HasSetting(SharedPageId)</selected>
 				</control>
-
+				<!-- Music Visualisation-->
+				<control type="label" id="1201">
+					<width>860</width>
+					<height>35</height>
+					<font>font13caps</font>
+					<label>Music Visualization</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="image" id="1202">
+					<include>settings_separator</include>
+				</control>
+				<control type="radiobutton" id="1203">
+					<include>skin_settings_labels</include>
+					<label>Enable Fullscreen Mode</label>
+					<onclick>Skin.ToggleSetting(NoVisualisationInfo)</onclick>
+					<selected>Skin.HasSetting(NoVisualisationInfo)</selected>
+				</control>
+				<!-- Notifications -->
+				<control type="label" id="1210">
+					<width>860</width>
+					<height>35</height>
+					<font>font13caps</font>
+					<label>Notifications</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="image" id="1220">
+					<include>settings_separator</include>
+				</control>
+				<control type="radiobutton" id="1230">
+					<include>skin_settings_labels</include>
+					<label>Disable All</label>
+					<onclick>Skin.ToggleSetting(DisableNotificationAll)</onclick>
+					<selected>Skin.HasSetting(DisableNotificationAll)</selected>
+				</control>
+				<control type="radiobutton" id="1240">
+					<include>skin_settings_labels</include>
+					<label>Disable Now Playing</label>
+					<onclick>Skin.ToggleSetting(DisableNotificationPlaying)</onclick>
+					<selected>Skin.HasSetting(DisableNotificationPlaying)</selected>
+					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+				</control>
+				<control type="radiobutton" id="1242">
+					<include>skin_settings_labels</include>
+					<label>Disable Remote Connected</label>
+					<onclick>Skin.ToggleSetting(DisableNotificationRemote)</onclick>
+					<selected>Skin.HasSetting(DisableNotificationRemote)</selected>
+					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+				</control>
+				<control type="radiobutton" id="1244">
+					<include>skin_settings_labels</include>
+					<label>Disable Signed In</label>
+					<onclick>Skin.ToggleSetting(DisableNotificationWelcome)</onclick>
+					<selected>Skin.HasSetting(DisableNotificationWelcome)</selected>
+					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+				</control>
+				<control type="radiobutton" id="1246">
+					<include>skin_settings_labels</include>
+					<label>Disable Custom 1 [COLOR=mainblue]$INFO[Skin.String(DisableNotificationCustom1)][/COLOR]</label>
+					<onclick>Skin.SetString(DisableNotificationCustom1)</onclick>
+					<selected>!isEmpty(Skin.String(DisableNotificationCustom1))</selected>
+					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+				</control>
+				<control type="radiobutton" id="1248">
+					<include>skin_settings_labels</include>
+					<label>Disable Custom 2 [COLOR=mainblue]$INFO[Skin.String(DisableNotificationCustom2)][/COLOR]</label>
+					<onclick>Skin.SetString(DisableNotificationCustom2)</onclick>
+					<selected>!isEmpty(Skin.String(DisableNotificationCustom2))</selected>
+					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+				</control>
 			</control>
+
 
 				<!-- Navigation Preview -->
 				<control type="group" id="666">
@@ -407,7 +553,7 @@
 						<posy>490</posy>
 				                        <control type="image">
 				                                <width>250</width>
-				                                <height>1</height>
+				                                <height>0.5</height>
 				                                <texture>base-rounded.png</texture>
 				                                <colordiffuse>mainblue</colordiffuse>
 				                        </control>
@@ -515,6 +661,7 @@
 
 				<!-- Home Screen -->
 				<control type="grouplist" id="2000">
+					<height>590</height>
 					<include>Settings_Section</include>
 					<visible>Container(100).Hasfocus(120)</visible>
 
@@ -553,13 +700,6 @@
 						<onclick>Skin.ToggleSetting(HomeArrow)</onclick>
 						<selected>Skin.HasSetting(HomeArrow)</selected>
 					</control>
-					<control type="radiobutton" id="2060">
-						<description>Disable Update Available</description>
-						<include>skin_settings_labels</include>
-						<label>Disable UpdateAvailable Notification</label>
-						<onclick>Skin.ToggleSetting(Home_Update)</onclick>
-						<selected>Skin.HasSetting(Home_Update)</selected>
-					</control>
 
 					<!-- Home Style -->
 					<control type="label" id="2070">
@@ -592,64 +732,12 @@
 						<onclick>Skin.Reset(Home_Simple)</onclick>
 						<selected>Skin.HasSetting(Home_Horizontal)</selected>
 					</control>
-					<control type="radiobutton" id="2110">
-						<textoffsetx>40</textoffsetx>
-						<include>skin_settings_labels</include>
-						<description>Horizontal Home</description>
-						<label>Bottom Navigation Bar</label>
-						<onclick>Skin.ToggleSetting(Home_Horizontal_Bottom)</onclick>
-						<selected>Skin.HasSetting(Home_Horizontal_Bottom)</selected>
-						<visible>Skin.HasSetting(Home_Horizontal)</visible>
-					</control>
 					<control type="radiobutton" id="2120">
-						<description>Panelo Home</description>
 						<include>skin_settings_labels</include>
-						<label>Panel Home Menu (Concept)</label>
+						<label>Compact Home Menu (Under Construction)</label>
 						<onclick>Skin.ToggleSetting(Home_Panel)</onclick>
 						<onclick>Skin.Reset(Home_Horizontal)</onclick>
 						<selected>Skin.HasSetting(Home_Panel)</selected>
-					</control>
-
-					<!-- Home Menu Font -->
-					<control type="label" id="2121">
-						<width>860</width>
-						<height>35</height>
-						<font>font13caps</font>
-						<label>Home Menu Font Size</label>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="image" id="2122">
-						<include>settings_separator</include>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-
-					<control type="radiobutton" id="2125">
-						<include>skin_settings_labels</include>
-						<label>Large (Default)</label>
-						<onclick>Skin.Reset(Home_Font_Medium)</onclick>
-						<onclick>Skin.Reset(Home_Font_Small)</onclick>
-						<selected>!Skin.HasSetting(Home_Font_Medium) + !Skin.HasSetting(Home_Font_Small)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="radiobutton" id="2126">
-						<include>skin_settings_labels</include>
-						<label>Medium</label>
-						<onclick>Skin.Reset(Home_Font_Small)</onclick>
-						<onclick>Skin.ToggleSetting(Home_Font_Medium)</onclick>
-						<selected>Skin.HasSetting(Home_Font_Medium)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="radiobutton" id="2127">
-						<include>skin_settings_labels</include>
-						<label>Small</label>
-						<onclick>Skin.Reset(Home_Font_Medium)</onclick>
-						<onclick>Skin.ToggleSetting(Home_Font_Small)</onclick>
-						<selected>Skin.HasSetting(Home_Font_Small)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 
 					<!-- Home Menu Settings -->
@@ -662,108 +750,170 @@
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+						<!--<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>-->
 					</control>
 					<control type="image" id="2140">
 						<include>settings_separator</include>
+						<!--<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>-->
+					</control>
+
+					<!-- Home Menu Type -->
+					<control type="radiobutton" id="2300">
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
+						<include>skin_settings_labels</include>
+						<label>Menu Type</label>
+						<onclick condition="!Skin.HasSetting(Home_Simple) + !Skin.HasSetting(Home_Fixed)">Skin.SetBool(Home_Fixed)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Fixed)">Skin.Reset(Home_Fixed)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Fixed)">Skin.SetBool(Home_Simple)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Simple)">Skin.Reset(Home_Fixed)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Simple)">Skin.Reset(Home_Simple)</onclick>
 						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
-					<control type="radiobutton" id="2150">
-						<include>skin_settings_labels</include>
-						<label>Enable $VAR[Home_9Items_Number] Menu Items (Default)</label>
-						<onclick>Skin.Reset(HomeExtended)</onclick>
-						<onclick>Skin.Reset(HomeExtendedMore)</onclick>
-						<selected>!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="radiobutton" id="2160">
-						<include>skin_settings_labels</include>
-						<label>Enable $VAR[Home_7Items_Number] Items Home</label>
-						<onclick>Skin.Reset(HomeExtendedMore)</onclick>
-						<onclick>Skin.Reset(Home_Simple)</onclick>
-						<onclick>Skin.ToggleSetting(HomeExtended)</onclick>
-						<selected>Skin.HasSetting(HomeExtended)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="radiobutton" id="2170">
-						<include>skin_settings_labels</include>
-						<label>Enable $VAR[Home_5Items_Number] Items Home</label>
-						<onclick>Skin.Reset(HomeExtended)</onclick>
-						<onclick>Skin.Reset(Home_Simple)</onclick>
-						<onclick>Skin.ToggleSetting(HomeExtendedMore)</onclick>
-						<selected>Skin.HasSetting(HomeExtendedMore)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="radiobutton" id="2180">
-						<description>Wrap List</description>
-						<include>skin_settings_labels</include>
-						<label>Enable Wrap List (Default)</label>
-						<onclick>Skin.Reset(Home_Fixed)</onclick>
-						<onclick>Skin.Reset(Home_Simple)</onclick>
-						<selected>!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="radiobutton" id="2190">
-						<description>Fixed List</description>
-						<include>skin_settings_labels</include>
-						<label>Enable Fixed List</label>
-						<onclick>Skin.Reset(Home_Simple)</onclick>
-						<onclick>Skin.ToggleSetting(Home_Fixed)</onclick>
-						<selected>Skin.HasSetting(Home_Fixed)</selected>
-						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
-					</control>
-					<control type="radiobutton" id="2200">
-						<description>Simple List</description>
-						<include>skin_settings_labels</include>
-						<label>Enable Simple List</label>
-						<onclick>Skin.Reset(Home_Fixed)</onclick>
-						<onclick>Skin.Reset(HomeExtended)</onclick>
-						<onclick>Skin.Reset(HomeExtendedMore)</onclick>
-						<onclick>Skin.ToggleSetting(Home_Simple)</onclick>
-						<selected>Skin.HasSetting(Home_Simple)</selected>
+					<control type="label" id="2310">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Home_Type]</label>
+						<include>navigation_options</include>
 						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
 
-					<!-- Accent Color Settings -->
-					<control type="label" id="2220">
-						<width>860</width>
-						<height>35</height>
-						<font>font13caps</font>
-						<label>Accent Color Options</label>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="image" id="2230">
-						<include>settings_separator</include>
-					</control>
-					<control type="radiobutton" id="2240">
-						<description>Disable Accent Home Menu</description>
+					<!-- Home Menu Items -->
+					<control type="radiobutton" id="2320">
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
 						<include>skin_settings_labels</include>
-						<label>Disable Accent Color for Home Menu</label>
-						<onclick>Skin.ToggleSetting(HomeNoAccent)</onclick>
-						<selected>Skin.HasSetting(HomeNoAccent)</selected>
+						<label>Menu Items</label>
+						<onclick condition="!Skin.HasSetting(HomeExtended) + !Skin.HasSetting(HomeExtendedMore)">Skin.SetBool(HomeExtended)</onclick>
+						<onclick condition="Skin.HasSetting(HomeExtended)">Skin.Reset(HomeExtended)</onclick>
+						<onclick condition="Skin.HasSetting(HomeExtended)">Skin.SetBool(HomeExtendedMore)</onclick>
+						<onclick condition="Skin.HasSetting(HomeExtendedMore)">Skin.Reset(HomeExtended)</onclick>
+						<onclick condition="Skin.HasSetting(HomeExtendedMore)">Skin.Reset(HomeExtendedMore)</onclick>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
-					<control type="radiobutton" id="2250">
-						<description>Disable Accent Color for Big Clock</description>
+					<control type="label" id="2330">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Home_Items]</label>
+						<include>navigation_options</include>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+					</control>
+
+					<!-- Font Size -->
+					<control type="radiobutton" id="2340">
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
 						<include>skin_settings_labels</include>
-						<label>Disable Accent Color for Clock</label>
-						<onclick>Skin.ToggleSetting(NoAccentClock)</onclick>
-						<selected>Skin.HasSetting(NoAccentClock)</selected>
+						<label>Font Size</label>
+						<onclick condition="!Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Medium)">Skin.SetBool(Home_Font_Small)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Small)">Skin.Reset(Home_Font_Small)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Small)">Skin.SetBool(Home_Font_Medium)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Medium)">Skin.Reset(Home_Font_Medium)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Medium)">Skin.Reset(Home_Font_Small)</onclick>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
 					</control>
-					<control type="radiobutton" id="2260">
-						<description>Disable Accent Color for Arrow</description>
+					<control type="label" id="2350">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Font_Size]</label>
+						<include>navigation_options</include>
+						<visible>![Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel)]</visible>
+					</control>
+
+					<!-- Font Style -->
+					<control type="radiobutton" id="2360">
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
 						<include>skin_settings_labels</include>
-						<label>Disable Accent Color for Navigation Arrow</label>
-						<onclick>Skin.ToggleSetting(NoAccentArrow)</onclick>
-						<selected>Skin.HasSetting(NoAccentArrow)</selected>
+						<label>Font Style</label>
+						<onclick condition="!Skin.HasSetting(Home_Font_Thin) + !Skin.HasSetting(Home_Font_Regular) + !Skin.HasSetting(Home_Font_Aeon)">Skin.SetBool(Home_Font_Regular)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Regular)">Skin.Reset(Home_Font_Regular)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Regular)">Skin.SetBool(Home_Font_Thin)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Thin)">Skin.Reset(Home_Font_Thin)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Thin)">Skin.SetBool(Home_Font_Aeon)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Aeon)">Skin.Reset(Home_Font_Aeon)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Aeon)">Skin.Reset(Home_Font_Thin)</onclick>
+						<onclick condition="Skin.HasSetting(Home_Font_Aeon)">Skin.Reset(Home_Font_Regular)</onclick>
 					</control>
+					<control type="label" id="2370">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Font_Style]</label>
+						<include>navigation_options</include>
+					</control>
+
+					<!-- Horizontal Home -->
+					<control type="radiobutton" id="2380">
+						<include>skin_settings_labels</include>
+						<label>Bottom Navigation Bar</label>
+						<onclick>Skin.ToggleSetting(Home_Horizontal_Bottom)</onclick>
+						<selected>Skin.HasSetting(Home_Horizontal_Bottom)</selected>
+						<visible>Skin.HasSetting(Home_Horizontal)</visible>
+					</control>
+
+					<!-- Panel Home -->
+					<control type="radiobutton" id="2390">
+						<include>skin_settings_labels</include>
+						<label>Hide Header</label>
+						<onclick>Skin.ToggleSetting(Home_Compact_NoHeader)</onclick>
+						<selected>Skin.HasSetting(Home_Compact_NoHeader)</selected>
+						<visible>Skin.HasSetting(Home_Panel)</visible>
+					</control>
+					<control type="radiobutton" id="2391">
+						<include>skin_settings_labels</include>
+						<label>Hide Shared Content</label>
+						<onclick>Skin.ToggleSetting(Home_Compact_NoShared)</onclick>
+						<selected>Skin.HasSetting(Home_Compact_NoShared)</selected>
+						<visible>Skin.HasSetting(Home_Panel)</visible>
+					</control>
+					<control type="radiobutton" id="2392">
+						<include>skin_settings_labels</include>
+						<label>Hide Channels</label>
+						<onclick>Skin.ToggleSetting(Home_Compact_NoChannels)</onclick>
+						<selected>Skin.HasSetting(Home_Compact_NoChannels)</selected>
+						<visible>Skin.HasSetting(Home_Panel)</visible>
+					</control>
+					<control type="radiobutton" id="2393">
+						<include>skin_settings_labels</include>
+						<label>Hide Favourites</label>
+						<onclick>Skin.ToggleSetting(Home_Compact_NoFavourites)</onclick>
+						<selected>Skin.HasSetting(Home_Compact_NoFavourites)</selected>
+						<visible>Skin.HasSetting(Home_Panel)</visible>
+					</control>
+					<control type="radiobutton" id="2394">
+						<include>skin_settings_labels</include>
+						<label>Hide Submenu</label>
+						<onclick>Skin.ToggleSetting(Home_Compact_NoSubmenu)</onclick>
+						<selected>Skin.HasSetting(Home_Compact_NoSubmenu)</selected>
+						<visible>Skin.HasSetting(Home_Panel)</visible>
+					</control>
+
+
+
+
+
 				</control>
 
 				<!-- Home Menu / Extensions -->
 				<control type="grouplist" id="3000">
 					<onright>3001</onright>
+					<height>590</height>
 					<include>Settings_Section_HalfLeft</include>
 					<visible>Container(100).Hasfocus(130)</visible>
 
@@ -855,12 +1005,12 @@
 						<visible>Skin.HasSetting(XBMC)</visible>
 					</control>
 
-					<!-- Move to Submenu Settings -->
+					<!-- Main Menu -->
 					<control type="label" id="3100">
 						<width>860</width>
 						<height>35</height>
 						<font>font13caps</font>
-						<label>Move to Submenu</label>
+						<label>MainMenu</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -869,19 +1019,37 @@
 					<control type="image" id="3110">
 						<include>settings_separator</include>
 					</control>
-					<control type="radiobutton" id="3120">
-						<description>Move Search Button</description>
+					<control type="radiobutton" id="3112">
 						<include>skin_settings_labels_half</include>
-						<label>Search</label>
+						<label>Enable Category Headers</label>
+						<onclick>Skin.ToggleSetting(Home_Menu_Section)</onclick>
+						<selected>Skin.HasSetting(Home_Menu_Section)</selected>
+					</control>
+					<control type="radiobutton" id="3113">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[208] $LOCALIZE[561]</label> <!-- Play File -->
+						<onclick>Skin.ToggleSetting(PLEX_Home_PlayFile)</onclick>
+						<selected>!Skin.HasSetting(PLEX_Home_PlayFile)</selected>
+					</control>
+					<control type="radiobutton" id="3114">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[31003]</label> <!-- Search -->
 						<onclick>Skin.ToggleSetting(HomeMenuNoSearchButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoSearchButton)</selected>
 					</control>
-					<!-- Hide Submenu Settings -->
+					<control type="radiobutton" id="3116">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[1036]</label> <!-- Favourites -->
+						<onclick>Skin.ToggleSetting(PLEX_Home_NoFavourites)</onclick>
+						<selected>Skin.HasSetting(PLEX_Home_NoFavourites)</selected>
+					</control>
+
+					<!-- Submenu Settings -->
 					<control type="label" id="3130">
 						<width>860</width>
 						<height>35</height>
 						<font>font13caps</font>
-						<label>Submenu Options</label>
+						<label>SubMenu</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -889,6 +1057,13 @@
 					</control>
 					<control type="image" id="3140">
 						<include>settings_separator</include>
+					</control>
+					<control type="radiobutton" id="3145">
+						<description>Quit</description>
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[19040]</label>
+						<onclick>Skin.ToggleSetting(Hide_Timer)</onclick>
+						<selected>Skin.HasSetting(Hide_Timer)</selected>
 					</control>
 					<control type="radiobutton" id="3150">
 						<description>Quit</description>
@@ -926,7 +1101,58 @@
 						<selected>Skin.HasSetting(Hide_ChannelDirectory)</selected>
 						<visible>!Skin.HasSetting(XBMC)</visible>
 					</control>
+
+					<!-- Shared Content -->
+					<control type="label" id="3200">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Shared Content</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="image" id="3202">
+						<include>settings_separator</include>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="button" id="3204">
+						<include>skin_settings_labels_half</include>
+						<label>Refresh Shared Content</label>
+						<onclick>Skin.SetBool(SharedContent_Update)</onclick>
+						<onclick>XBMC.ActivateWindow(MySharedContent,plexserver://shared)</onclick>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<include condition="!Skin.HasSetting(XBMC)">PLEX_Home_SharedContent_Settings</include>
+
+					<!-- Favourites -->
+					<control type="label" id="3250">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>$LOCALIZE[1036]</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="image" id="3252">
+						<include>settings_separator</include>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<control type="button" id="3254">
+						<include>skin_settings_labels_half</include>
+						<label>Manage $LOCALIZE[1036]</label>
+						<onclick>ActivateWindow(3100)</onclick>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
+					<include condition="!Skin.HasSetting(XBMC)">PLEX_Favourite_Settings</include>
+
 				</control>
+
 
 				<control type="grouplist" id="3001">
 					<onleft>3000</onleft>
@@ -991,6 +1217,16 @@
 
 					<!-- PLEX Custom Addons -->
 					<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Settings</include> <!-- 3300 -->
+        
+					<!-- PLEX Weather Widget -->
+					<control type="radiobutton" id="3499">
+						<include>skin_settings_labels_half</include>
+						<label>Weather Widget (!!! BETA !!!)</label>
+						<onclick>Skin.ToggleSetting(Weather_Widget)</onclick>
+						<onclick>Skin.SetBool(Weather_Update)</onclick>
+						<selected>Skin.HasSetting(Weather_Widget)</selected>
+						<visible>!Skin.HasSetting(XBMC)</visible>
+					</control>
 
 					<!-- XBMC Custom Home -->
 					<include condition="Skin.HasSetting(XBMC)">XBMC_Home_Custom_Settings</include> <!-- 3500 -->
@@ -1016,34 +1252,144 @@
 					<control type="image" id="4020">
 						<include>settings_separator</include>
 					</control>
+
+
+					<!-- Deck Mode -->
 					<control type="radiobutton" id="4030">
-						<description>Disable Deck</description>
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[24021]</label> <!-- Disable Deck -->
-						<onclick>Skin.ToggleSetting(Deck_Disable)</onclick>
-						<selected>Skin.HasSetting(Deck_Disable)</selected>
+						<label>Deck Mode</label>
+						<onclick condition="!Skin.HasSetting(Deck_Disable) + !Skin.HasSetting(Deck_Hide) + !Skin.HasSetting(Deck_Short)">Skin.SetBool(Deck_Short)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Short)">Skin.Reset(Deck_Short)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Short)">Skin.SetBool(Deck_Hide)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Hide)">Skin.Reset(Deck_Hide)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Hide)">Skin.SetBool(Deck_Disable)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Disable)">Skin.Reset(Deck_Disable)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Disable)">Skin.Reset(Deck_Hide)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Disable)">Skin.Reset(Deck_Short)</onclick>
 					</control>
-					<control type="radiobutton" id="4040">
-						<description>Hide Deck</description>
+					<control type="label" id="4040">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Deck_Mode]</label>
+						<include>navigation_options</include>
+					</control>
+
+					<!-- Deck Image Size -->
+					<control type="radiobutton" id="4050">
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
 						<include>skin_settings_labels</include>
-						<label>Hide</label>
-						<onclick>Skin.ToggleSetting(Deck_Hide)</onclick>
-						<onclick>Skin.Reset(Deck_Short)</onclick>
-						<selected>Skin.HasSetting(Deck_Hide)</selected>
+						<label>Image Size</label>
+						<onclick condition="!Skin.HasSetting(Deck_Images_Small) + !Skin.HasSetting(Deck_Images_xLarge)">Skin.SetBool(Deck_Images_xLarge)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Images_xLarge)">Skin.Reset(Deck_Images_xLarge)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Images_xLarge)">Skin.SetBool(Deck_Images_Small)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Images_Small)">Skin.Reset(Deck_Images_Small)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Images_Small)">Skin.Reset(Deck_Images_Large)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Images_Small)">Skin.Reset(Deck_Images_xLarge)</onclick>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
-					<control type="radiobutton" id="4050">
-						<description>Short Deck</description>
+					<control type="label" id="4060">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Deck_Image]</label>
+						<include>navigation_options</include>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+
+					<!-- Deck Focus Animation -->
+					<control type="radiobutton" id="4070">
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
 						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31034]</label> <!-- Minimal -->
-						<onclick>Skin.ToggleSetting(Deck_Short)</onclick>
-						<onclick>Skin.Reset(Deck_Hide)</onclick>
-						<selected>Skin.HasSetting(Deck_Short)</selected>
+						<label>Focus Animation</label>
+						<onclick condition="!Skin.HasSetting(Deck_Focus_Zoom) + !Skin.HasSetting(Deck_Focus_Drop)">Skin.SetBool(Deck_Focus_Zoom)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Focus_Zoom)">Skin.Reset(Deck_Focus_Zoom)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Focus_Zoom)">Skin.SetBool(Deck_Focus_Drop)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Focus_Drop)">Skin.Reset(Deck_Focus_Drop)</onclick>
+						<onclick condition="Skin.HasSetting(Deck_Focus_Drop)">Skin.Reset(Deck_Focus_Zoom)</onclick>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="label" id="4080">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Deck_Focus]</label>
+						<include>navigation_options</include>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+
+					<control type="radiobutton" id="4090">
+						<include>skin_settings_labels</include>
+						<label>Use Episode Thumbs</label>
+						<onclick>Skin.ToggleSetting(Deck_Images_EpisodeThumb)</onclick>
+						<selected>Skin.HasSetting(Deck_Images_EpisodeThumb)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+
+					<!-- Deck Labels -->
+					<control type="label" id="4120">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Labels</label> <!-- Labels -->
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="image" id="4130">
+						<include>settings_separator</include>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="4140">
+						<include>skin_settings_labels</include>
+						<label>Disable for Movies</label>
+						<onclick>Skin.ToggleSetting(Deck_Images_Label_NoMovies)</onclick>
+						<selected>Skin.HasSetting(Deck_Images_Label_NoMovies)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="4150">
+						<include>skin_settings_labels</include>
+						<label>Disable for TV Shows</label>
+						<onclick>Skin.ToggleSetting(Deck_Images_Label_NoTvShows)</onclick>
+						<selected>Skin.HasSetting(Deck_Images_Label_NoTvShows)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+
+
+					<control type="radiobutton" id="4160">
+						<description>Hide Labels</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] Deck Name</label> <!-- Disable Labels -->
+						<onclick>Skin.ToggleSetting(Deck_NoLabels)</onclick>
+						<selected>Skin.HasSetting(Deck_NoLabels)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="4170">
+						<description>Disable Deck Info</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $LOCALIZE[31049]</label> <!-- Disable Plot -->
+						<onclick>Skin.ToggleSetting(deck_moreinfo)</onclick>
+						<selected>Skin.HasSetting(deck_moreinfo)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 
 					<!-- Disable Section -->
-					<control type="label" id="4060">
+					<control type="label" id="4300">
 						<width>860</width>
 						<height>35</height>
 						<font>font13caps</font>
@@ -1054,11 +1400,11 @@
 						<aligny>center</aligny>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
-					<control type="image" id="4070">
+					<control type="image" id="4310">
 						<include>settings_separator</include>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
-					<control type="radiobutton" id="4080">
+					<control type="radiobutton" id="4320">
 						<description>Disable On Deck</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[24021] $LOCALIZE[31051]</label> <!-- Disable On Deck -->
@@ -1066,7 +1412,7 @@
 						<selected>Skin.HasSetting(Deck_NoOnDeck)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
-					<control type="radiobutton" id="4090">
+					<control type="radiobutton" id="4330">
 						<description>Disable Recently Added</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[24021] $LOCALIZE[31052]</label> <!-- Disable Recently Added -->
@@ -1074,7 +1420,7 @@
 						<selected>Skin.HasSetting(Deck_NoRecently)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
-					<control type="radiobutton" id="4100">
+					<control type="radiobutton" id="4340">
 						<description>Disable Recently Used</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[24021] $LOCALIZE[31053]</label> <!-- Disable Recently Used -->
@@ -1082,7 +1428,7 @@
 						<selected>Skin.HasSetting(Deck_NoUsed)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
-					<control type="radiobutton" id="4110">
+					<control type="radiobutton" id="4350">
 						<description>Disable Queue</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[24021] $LOCALIZE[31054]</label> <!-- Disable Queue -->
@@ -1090,7 +1436,7 @@
 						<selected>Skin.HasSetting(Deck_NoQueue)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>	
 					</control>
-					<control type="radiobutton" id="4115">
+					<control type="radiobutton" id="4360">
 						<description>Disable Play Queue</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[24021] Play Queue</label> <!-- Disable Play Queue --> <!-- LOC -->
@@ -1098,7 +1444,7 @@
 						<selected>Skin.HasSetting(Deck_NoPlayQueue)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>	
 					</control>
-					<control type="radiobutton" id="4120">
+					<control type="radiobutton" id="4370">
 						<description>Disable Shared Content</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[24021] $LOCALIZE[31055]</label> <!-- Disable Shared -->
@@ -1107,54 +1453,6 @@
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 
-					<!-- Deck Other -->
-					<control type="label" id="4130">
-						<width>860</width>
-						<height>35</height>
-						<font>font13caps</font>
-						<label>33029</label> <!-- Details -->
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="image" id="4140">
-						<include>settings_separator</include>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="4145">
-						<description>Hide Labels</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[24021] $LOCALIZE[31064]</label> <!-- Disable Labels -->
-						<onclick>Skin.ToggleSetting(Deck_NoLabels)</onclick>
-						<selected>Skin.HasSetting(Deck_NoLabels)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="4150">
-						<description>Disable Deck Info</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[24021] $LOCALIZE[31049]</label> <!-- Disable Plot -->
-						<onclick>Skin.ToggleSetting(deck_moreinfo)</onclick>
-						<selected>Skin.HasSetting(deck_moreinfo)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="4160">
-						<description>Disable Accent Color</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[24021] $LOCALIZE[31079]</label> <!-- Disable Accent Color -->
-						<onclick>Skin.ToggleSetting(HomeNoAccentDeck)</onclick>
-						<selected>Skin.HasSetting(HomeNoAccentDeck)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
-					<control type="radiobutton" id="4170">
-						<description>Disable Accent Color</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[24021] $LOCALIZE[31071]</label> <!-- Disable Animation -->
-						<onclick>Skin.ToggleSetting(Deck_NoAnimation)</onclick>
-						<selected>Skin.HasSetting(Deck_NoAnimation)</selected>
-						<visible>!Skin.HasSetting(Deck_Disable)</visible>
-					</control>
 				</control>
 
 				<!-- Background Customizer -->
@@ -1332,21 +1630,57 @@
 					</control>
 					<control type="radiobutton" id="6030">
 						<include>skin_settings_labels</include>
+						<label>Context Menu (OLD Version)</label>
+						<onclick>Skin.ToggleSetting(Context_NoQuick)</onclick>
+						<selected>Skin.HasSetting(Context_NoQuick)</selected>
+					</control>
+					<control type="radiobutton" id="6035">
+						<include>skin_settings_labels</include>
 						<label>Scroll Plot</label>
 						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 						<selected>Skin.HasSetting(autoscroll)</selected>
 					</control>
+					<!-- Studio -->
 					<control type="radiobutton" id="6040">
+						<textureradiofocus>scroll_down.png</textureradiofocus>
+						<textureradionofocus>scroll_down.png</textureradionofocus>
+						<include>skin_settings_labels</include>
+						<label>Studio Info</label>
+						<onclick condition="!Skin.HasSetting(NoStudioLogo) + !Skin.HasSetting(StudioLogoImages)">Skin.SetBool(StudioLogoImages)</onclick>
+						<onclick condition="Skin.HasSetting(StudioLogoImages)">Skin.SetBool(NoStudioLogo)</onclick>
+						<onclick condition="Skin.HasSetting(StudioLogoImages)">Skin.Reset(StudioLogoImages)</onclick>
+						<onclick condition="Skin.HasSetting(NoStudioLogo)">Skin.Reset(StudioLogoImages)</onclick>
+						<onclick condition="Skin.HasSetting(NoStudioLogo)">Skin.Reset(NoStudioLogo)</onclick>
+					</control>
+					<control type="label" id="6045">
+						<width>780</width>
+						<height>0</height>
+						<textoffsety>-30</textoffsety>
+						<font>font16caps</font>
+						<align>right</align>
+						<textcolor>FFCCCCCC</textcolor>
+						<label>$VAR[Var_Studio_Settings]</label>
+						<include>navigation_options</include>
+					</control>
+
+
+					<!--<control type="radiobutton" id="6038">
+						<include>skin_settings_labels</include>
+						<label>Enable Studio Images</label>
+						<onclick>Skin.ToggleSetting(StudioLogoImages)</onclick>
+						<selected>Skin.HasSetting(StudioLogoImages)</selected>
+					</control>
+					<control type="radiobutton" id="6040">
+						<include>skin_settings_labels</include>
+						<label>Disable Studio Info</label>
+						<onclick>Skin.ToggleSetting(NoStudioLogo)</onclick>
+						<selected>Skin.HasSetting(NoStudioLogo)</selected>
+					</control>-->
+					<control type="radiobutton" id="6050">
 						<include>skin_settings_labels</include>
 						<label>Disable Media Flags</label>
 						<onclick>Skin.ToggleSetting(NoMediaFlags)</onclick>
 						<selected>Skin.HasSetting(NoMediaFlags)</selected>
-					</control>
-					<control type="radiobutton" id="6050">
-						<include>skin_settings_labels</include>
-						<label>Disable Studio Logo</label>
-						<onclick>Skin.ToggleSetting(NoStudioLogo)</onclick>
-						<selected>Skin.HasSetting(NoStudioLogo)</selected>
 					</control>
 					<control type="radiobutton" id="6060">
 						<include>skin_settings_labels</include>
@@ -1424,7 +1758,13 @@
 						<onclick>Skin.ToggleSetting(overlay_count)</onclick>
 						<selected>Skin.HasSetting(overlay_count)</selected>
 					</control>
-
+					<control type="radiobutton" id="6170">
+						<description>Disable Navigation Overlays</description>
+						<include>skin_settings_labels</include>
+						<label>Disable Navigation Overlays</label>
+						<onclick>Skin.ToggleSetting(overlay_navigation)</onclick>
+						<selected>Skin.HasSetting(overlay_navigation)</selected>
+					</control>
 				</control>
 
 				<!-- XBMC Settings -->
@@ -1622,6 +1962,16 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
+					<control type="label">
+						<width>300</width>
+						<height>45</height>
+						<font>Font_MenuValue</font>
+						<label>#8 indigo</label>
+						<textcolor>FF6A00FF</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
 				</control>
 
 				<!-- Second Column -->
@@ -1637,16 +1987,6 @@
 					<onup>9009</onup>
 					<ondown>9009</ondown>
 
-					<control type="label">
-						<width>300</width>
-						<height>45</height>
-						<font>Font_MenuValue</font>
-						<label>#8 indigo</label>
-						<textcolor>FF6A00FF</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
 					<control type="label">
 						<width>300</width>
 						<height>45</height>
@@ -1707,19 +2047,6 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-				</control>
-				<!-- 3rd Column -->
-				<control type="grouplist">
-					<posx>940</posx>
-					<posy>160</posy>
-					<width>860</width>
-					<height>600</height>
-					<itemgap>20</itemgap>
-					<pagecontrol>61</pagecontrol>
-					<onleft>9000</onleft>
-					<onright>61</onright>
-					<onup>9009</onup>
-					<ondown>9009</ondown>
 					<control type="label">
 						<width>300</width>
 						<height>45</height>
@@ -1740,6 +2067,19 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
+				</control>
+				<!-- 3rd Column -->
+				<control type="grouplist">
+					<posx>940</posx>
+					<posy>160</posy>
+					<width>860</width>
+					<height>600</height>
+					<itemgap>20</itemgap>
+					<pagecontrol>61</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>61</onright>
+					<onup>9009</onup>
+					<ondown>9009</ondown>
 					<control type="label">
 						<width>300</width>
 						<height>45</height>
@@ -1784,7 +2124,17 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#21 yellow</label>
+						<label>#21 white</label>
+						<textcolor>FFFFFFFF</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label">
+						<width>300</width>
+						<height>45</height>
+						<font>Font_MenuValue</font>
+						<label>#22 yellow</label>
 						<textcolor>FFD8C100</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>

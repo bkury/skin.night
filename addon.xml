@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.night.git"
-	version="1.7.3"
+	version="1.8-rc"
 	name="Night (Git)"
 	provider-name="bkury">
 	<requires>

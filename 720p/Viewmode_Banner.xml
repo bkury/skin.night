@@ -7,12 +7,12 @@
 		<!-- Banner #1 (400/Info) -->
 		<control type="panel" id="400">
 			<posx>430</posx>
-			<posy>40</posy>
-			<width>900</width>
-			<height>640</height>
+			<posy>12</posy>
+			<width>840</width>
+			<height>696</height>
 			<onleft>7000</onleft>
+			<onright>7001</onright>
 			<orientation>vertical</orientation>
-			<preloaditems>2</preloaditems>
 			<viewtype label="Banner #1">panel</viewtype>
 
 			<!-- Position Size -->
@@ -33,17 +33,14 @@
 
 		<!-- Banner #2 (410/Full) -->
 		<control type="panel" id="410">
-			<posx>0</posx>
-			<posy>40</posy>
-			<width>1280</width>
-			<height>640</height>
+			<posx>10</posx>
+			<posy>12</posy>
+			<width>1260</width>
+			<height>696</height>
 			<onleft>7000</onleft>
+			<onright>7001</onright>
 			<orientation>vertical</orientation>
-			<preloaditems>2</preloaditems>
 			<viewtype label="Banner #2">panel</viewtype>
-
-			<animation effect="slide" end="60,0" time="0" condition="Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
-			<animation effect="slide" end="60,0" time="0" condition="!Skin.HasSetting(Banner2_Images_Clearart) + !Skin.HasSetting(Banner2_Images_Small) + !Skin.HasSetting(Banner2_Images_Large)">Conditional</animation>
 
 			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
 			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner2_3D_1)">Conditional</animation>
@@ -59,20 +56,19 @@
 
 		<!-- Banner #3 (420/Deck) -->
 		<control type="panel" id="420">
-			<posx>60</posx>
-			<posy>130</posy>
-                        <width>900</width>
-                        <height>340</height>
+			<posx>10</posx>
+			<posy>140</posy>
+			<width>1260</width>
+			<height>432</height>
 			<onleft>7000</onleft>
+			<onright>7001</onright>
 			<orientation>vertical</orientation>
-			<preloaditems>2</preloaditems>
 			<viewtype label="Banner #3">panel</viewtype>
-			<animation effect="zoom" end="140" condition="true">Conditional</animation>
 
 			<!-- Position Size -->
-			<animation effect="slide" end="15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Small)">Conditional</animation>
+			<!--<animation effect="slide" end="15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Small)">Conditional</animation>
 			<animation effect="slide" end="-15,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_Images_Large)">Conditional</animation>
-
+-->
 			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>
 			<animation effect="slide" end="20" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner3_3D_1)">Conditional</animation>

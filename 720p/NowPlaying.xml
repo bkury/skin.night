@@ -133,26 +133,25 @@
             <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
             <include>NowPlayingCurrentInfo</include>
           </control>
-          
-          <control type="progress" id="21">
-            <description>Progress control</description>
-            <posx>120</posx>
-            <posy>140</posy><!-- 162 -->
-            <aligny>center</aligny>
-            <width>320</width> <!-- 372 -->
-            <info>Player.Progress</info>
-            <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-            <visible>Player.HasMusicPlaylist</visible>
-        		<height>14</height>
-				<texturebg>list/progress_back.png</texturebg>
-				<lefttexture>list/blueprogress_left.png</lefttexture>
-				<midtexture>list/blueprogress_mid.png</midtexture>
-				<righttexture>list/blueprogress_right.png</righttexture>
-				<overlaytexture>-</overlaytexture>
 
-          </control>
-	
+	<!-- Progress Bar -->
+       	<control type="image">
+		<posx>120</posx>
+		<posy>136</posy>
+		<width>320</width>
+		<height>20</height>
+		<texture>osd_progress_back_small.png</texture>
+	</control>
+	<control type="progress" id="23">
+		<posx>126</posx> <!-- +6 -->
+		<posy>134</posy> <!-- -2 -->
+		<width>308</width>
+		<height>24</height>
+		<texturebg>osd_progress_back_transparent.png</texturebg>
+		<midtexture border="4">osd_progress_mid_normal.png</midtexture>
+		<info>Player.Progress</info>
+	</control>
+
 	<control type="group">
 		<posx>115</posx>
 		<posy>135</posy>
@@ -292,24 +291,24 @@
             <include>NowPlayingCurrentInfoFlipped</include>
           </control>
           
-          <control type="progress" id="23">
-            <description>Progress control</description>
-            <posx>60</posx>
-            <posy>140</posy>
-            <aligny>center</aligny>
-            <width>320</width>
-            <info>Player.Progress</info>
-            <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-            <visible>Player.HasMusicPlaylist</visible>
-                    		<height>14</height>
-				<texturebg>list/progress_back.png</texturebg>
-				<lefttexture>list/blueprogress_left.png</lefttexture>
-				<midtexture>list/blueprogress_mid.png</midtexture>
-				<righttexture>list/blueprogress_right.png</righttexture>
-				<overlaytexture>-</overlaytexture>
-          </control>
-          
+	<!-- Progress Bar -->
+       	<control type="image">
+		<posx>60</posx>
+		<posy>136</posy>
+		<width>320</width>
+		<height>20</height>
+		<texture>osd_progress_back_small.png</texture>
+	</control>
+	<control type="progress" id="23">
+		<posx>66</posx> <!-- +6 -->
+		<posy>134</posy> <!-- -2 -->
+		<width>308</width>
+		<height>24</height>
+		<texturebg>osd_progress_back_transparent.png</texturebg>
+		<midtexture border="4">osd_progress_mid_normal.png</midtexture>
+		<info>Player.Progress</info>
+	</control>
+
 	<control type="group">
 		<posx>55</posx><!-- 115 -->
 		<posy>135</posy>
@@ -662,7 +661,7 @@
 					<width>125</width>
 					<height>25</height>
 					<label>[COLOR FF79ba6c]$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
-					<aspectratio align="right">keep</aspectratio>
+					<!--<aspectratio align="right">keep</aspectratio>-->
 				</control>
 				<control type="label">
 					<description>Track Number</description>
@@ -671,7 +670,7 @@
 					<width>125</width>
 					<height>20</height>
 					<label>[COLOR FFc2c4c3]Track: $INFO[MusicPlayer.TrackNumber][/COLOR]</label>
-					<aspectratio align="right">keep</aspectratio>
+					<!--<aspectratio align="right">keep</aspectratio>-->
 				</control>
 				
 
@@ -720,7 +719,7 @@
 					<height>500</height>
 					<font>Font_bigtime</font>
 					<label>[COLOR 40FFFFFF]$INFO[MusicPlayer.Time][/COLOR]</label>
-					<aspectratio align="right">keep</aspectratio>
+					<!--<aspectratio align="right">keep</aspectratio>-->
 				</control>
 				
 			<control type="label">
@@ -732,7 +731,7 @@
 					<height>500</height>
 					<font>Font_bigtimeLCDOverlay</font> 
 					<!--<label>[COLOR 15FFFFFF]$INFO[MusicPlayer.Time][/COLOR]</label>-->
-					<aspectratio align="right">keep</aspectratio>
+					<!--<aspectratio align="right">keep</aspectratio>-->
 				</control>
 				
 	
