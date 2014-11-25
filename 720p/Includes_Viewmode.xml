@@ -21,7 +21,8 @@
 	<controls>
 
 		<control type="group">
-			<visible>!isEmpty(ListItem.Label)</visible>
+			<!--<visible>!isEmpty(ListItem.Label)</visible>-->
+			<animation effect="fade" start="100" end="0" time="0" condition="isEmpty(ListItem.Label)">Conditional</animation>
 
 	   		<!-- Default Background -->
 			<control type="group">
@@ -90,7 +91,7 @@
 		<!-- No Content -->
 		<control type="group">
 			<visible>isEmpty(ListItem.Label) + !Skin.HasSetting(XBMC)</visible>
-			<include>Animation_CommonFade_600</include>
+			<include>Animation_CommonFade_600_Delay</include>
 
 			<control type="image">
 				<include>background_default</include>
@@ -922,24 +923,24 @@
 		<control type="label">
 			<posy>0</posy>
 			<height>70</height>
+			<width>1000</width>
 			<align>left</align>
 			<label>$VAR[Viewmode_Horizontal_Info_1]</label>
 			<include>Font_Main_Header</include>
 			<scroll>false</scroll>
 			<textcolor>mainblue</textcolor>
 			<wrapmultiline>false</wrapmultiline>
-			<width min="1" max="1000">auto</width>
 		</control>
 		<control type="label">
 			<posy>80</posy>
 			<height>60</height>
+			<width>1000</width>
 			<align>left</align>
 			<label>$VAR[Viewmode_Horizontal_Info_2]</label>
 			<include>Font_Sub_Header</include>
 			<scroll>true</scroll>
 			<textcolor>white</textcolor>
 			<wrapmultiline>false</wrapmultiline>
-			<width min="1" max="1000">auto</width>
 		</control>
 	</control>
 </include>
@@ -1200,6 +1201,11 @@
 </include>
 
 <!-- Viewmode Border Colour -->
+<include name="Viewmode_Border_NoColor">
+	<bordertexture>confluence/button-nofocus.png</bordertexture>
+	<bordersize>2</bordersize>
+</include>
+
 <include name="Viewmode_Border_Color">
 	<include condition="StringCompare(Skin.CurrentColourTheme,Amber.xml)">Viewmode_Border_Color_Amber</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Brown.xml)">Viewmode_Border_Color_Brown</include>
@@ -1291,5 +1297,76 @@
 <include name="Viewmode_Border_Color_Yellow">
 	<bordertexture>border/border_yellow.png</bordertexture>
 </include>
+
+<include name="WatchedOpacityNF0">
+	<animation effect="fade" start="100" end="0" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF10">
+	<animation effect="fade" start="100" end="10" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF20">
+	<animation effect="fade" start="100" end="20" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF30">
+	<animation effect="fade" start="100" end="30" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF40">
+	<animation effect="fade" start="100" end="40" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF50">
+	<animation effect="fade" start="100" end="50" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF60">
+	<animation effect="fade" start="100" end="60" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF70">
+	<animation effect="fade" start="100" end="70" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF80">
+	<animation effect="fade" start="100" end="80" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF90">
+	<animation effect="fade" start="100" end="90" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+
+<include name="WatchedOpacityF0">
+	<animation effect="fade" start="0" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF10">
+	<animation effect="fade" start="10" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF20">
+	<animation effect="fade" start="20" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF30">
+	<animation effect="fade" start="30" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF40">
+	<animation effect="fade" start="40" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF50">
+	<animation effect="fade" start="50" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF60">
+	<animation effect="fade" start="60" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF70">
+	<animation effect="fade" start="70" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF80">
+	<animation effect="fade" start="80" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF90">
+	<animation effect="fade" start="90" end="100" time="600" delay="1500" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+
+<include name="FocusEffectZoom">
+	<animation effect="zoom" reversible="false" center="auto" start="100" end="110" time="400" tween="back" easing="out">Focus</animation>
+</include>
+
+<include name="FocusEffectDrop">
+	<animation effect="zoom" reversible="false" center="auto" start="400" end="100" time="800" tween="cubic" easing="out">Focus</animation>
+</include>
+
 
 </includes>

@@ -8,7 +8,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.1.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.1.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
 
@@ -30,7 +30,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.1.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.1.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.1.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.1.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
@@ -53,7 +53,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.1.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.1.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.1.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.1.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.1.Title))</visible>
@@ -64,7 +64,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.2.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.2.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.2.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
 
@@ -86,7 +86,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.2.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.2.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.2.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.2.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
@@ -109,7 +109,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.2.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.2.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.2.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.2.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.2.Title))</visible>
@@ -120,7 +120,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.3.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.3.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.3.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</property>
 
@@ -142,7 +142,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.3.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.3.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.3.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.3.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
@@ -165,7 +165,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.3.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.3.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.3.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.3.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.3.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.3.Title))</visible>
@@ -176,7 +176,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.4.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.4.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.4.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</property>
 
@@ -198,7 +198,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.4.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.4.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.4.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.4.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
@@ -221,7 +221,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.4.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.4.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.4.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.4.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.4.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.4.Title))</visible>
@@ -232,7 +232,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.5.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.5.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.5.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</property>
 
@@ -254,7 +254,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.5.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.5.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.5.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.5.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
@@ -277,7 +277,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.5.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.5.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.5.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.5.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.5.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.5.Title))</visible>
@@ -288,7 +288,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.6.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.6.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.6.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</property>
 
@@ -310,7 +310,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.6.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.6.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.6.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.6.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
@@ -333,7 +333,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.6.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.6.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.6.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.6.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.6.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.6.Title))</visible>
@@ -344,7 +344,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.7.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.7.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.7.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</property>
 
@@ -366,7 +366,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.7.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.7.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.7.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.7.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
@@ -389,7 +389,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.7.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.7.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.7.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.7.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.7.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.7.Title))</visible>
@@ -400,7 +400,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.8.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.8.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.8.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</property>
 
@@ -422,7 +422,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.8.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.8.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.8.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.8.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
@@ -445,7 +445,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.8.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.8.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.8.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.8.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.8.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.8.Title))</visible>
@@ -456,7 +456,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.9.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.9.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.9.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</property>
 
@@ -478,7 +478,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.9.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.9.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.9.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.9.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.fanart))]</property>
@@ -501,7 +501,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.9.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.9.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.9.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.9.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.9.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.9.Title))</visible>
@@ -512,7 +512,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.10.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.10.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.10.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</property>
 
@@ -534,7 +534,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.10.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.10.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.10.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.10.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.fanart))]</property>
@@ -557,7 +557,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.10.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.10.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.10.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.10.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.10.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.10.Title))</visible>
@@ -568,7 +568,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.11.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.11.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.11.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.11.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.11.Art(fanart))]</property>
 
@@ -590,7 +590,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.11.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.11.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.11.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.11.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.11.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.11.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.11.Art(tvshow.fanart))]</property>
@@ -613,7 +613,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.11.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.11.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.11.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.11.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.11.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.11.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.11.Title))</visible>
@@ -624,7 +624,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.12.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.12.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.12.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.12.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.12.Art(fanart))]</property>
 
@@ -646,7 +646,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.12.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.12.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.12.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.12.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.12.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.12.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.12.Art(tvshow.fanart))]</property>
@@ -669,7 +669,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.12.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.12.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.12.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.12.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.12.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.12.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.12.Title))</visible>
@@ -680,7 +680,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.13.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.13.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.13.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.13.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.13.Art(fanart))]</property>
 
@@ -702,7 +702,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.13.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.13.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.13.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.13.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.13.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.13.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.13.Art(tvshow.fanart))]</property>
@@ -725,7 +725,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.13.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.13.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.13.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.13.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.13.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.13.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.13.Title))</visible>
@@ -736,7 +736,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.14.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.14.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.14.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.14.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.14.Art(fanart))]</property>
 
@@ -758,7 +758,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.14.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.14.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.14.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.14.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.14.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.14.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.14.Art(tvshow.fanart))]</property>
@@ -781,7 +781,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.14.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.14.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.14.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.14.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.14.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.14.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.14.Title))</visible>
@@ -792,7 +792,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.15.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.15.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.15.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.15.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.15.Art(fanart))]</property>
 
@@ -814,7 +814,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.15.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.15.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.15.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.15.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.15.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.15.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.15.Art(tvshow.fanart))]</property>
@@ -837,7 +837,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.15.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.15.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.15.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.15.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.15.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.15.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.15.Title))</visible>
@@ -848,7 +848,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.16.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.16.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.16.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.16.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.16.Art(fanart))]</property>
 
@@ -870,7 +870,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.16.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.16.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.16.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.16.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.16.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.16.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.16.Art(tvshow.fanart))]</property>
@@ -893,7 +893,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.16.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.16.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.16.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.16.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.16.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.16.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.16.Title))</visible>
@@ -904,7 +904,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.17.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.17.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.17.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.17.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.17.Art(fanart))]</property>
 
@@ -926,7 +926,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.17.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.17.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.17.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.17.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.17.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.17.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.17.Art(tvshow.fanart))]</property>
@@ -949,7 +949,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.17.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.17.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.17.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.17.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.17.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.17.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.17.Title))</visible>
@@ -960,7 +960,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.18.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.18.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.18.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.18.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.18.Art(fanart))]</property>
 
@@ -982,7 +982,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.18.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.18.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.18.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.18.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.18.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.18.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.18.Art(tvshow.fanart))]</property>
@@ -1005,7 +1005,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.18.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.18.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.18.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.18.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.18.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.18.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.18.Title))</visible>
@@ -1016,7 +1016,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.19.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.19.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.19.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.19.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.19.Art(fanart))]</property>
 
@@ -1038,7 +1038,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.19.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.19.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.19.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.19.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.19.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.19.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.19.Art(tvshow.fanart))]</property>
@@ -1061,7 +1061,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.19.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.19.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.19.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.19.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.19.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.19.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.19.Title))</visible>
@@ -1072,7 +1072,7 @@
 				<label2>$INFO[Window(Home).Property(RecentMovie.20.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentMovie.20.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentMovie.20.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.20.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentMovie.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentMovie.20.Art(fanart))]</property>
 
@@ -1094,7 +1094,7 @@
 				<label2>$INFO[Window(Home).Property(RecentEpisode.20.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentEpisode.20.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecentEpisode.20.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentEpisode.20.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecentEpisode.20.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecentEpisode.20.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.20.Art(tvshow.fanart))]</property>
@@ -1117,7 +1117,7 @@
 				<label2>$INFO[Window(Home).Property(RecentAlbum.20.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecentAlbum.20.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecentAlbum.20.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecentAlbum.20.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecentAlbum.20.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.20.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecentAlbum.20.Title))</visible>
@@ -1132,7 +1132,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.1.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.1.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</property>
 
@@ -1154,7 +1154,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.1.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.1.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
@@ -1177,7 +1177,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.1.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.1.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.1.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.1.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.1.Title))</visible>
@@ -1188,7 +1188,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.2.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.2.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.2.Art(fanart))]</property>
 
@@ -1210,7 +1210,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.2.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.2.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.2.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
@@ -1233,7 +1233,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.2.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.2.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.2.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.2.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.2.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.2.Title))</visible>
@@ -1244,7 +1244,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.3.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.3.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.3.Art(fanart))]</property>
 
@@ -1266,7 +1266,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.3.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.3.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.3.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
@@ -1289,7 +1289,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.3.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.3.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.3.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.3.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.3.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.3.Title))</visible>
@@ -1300,7 +1300,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.4.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.4.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.4.Art(fanart))]</property>
 
@@ -1322,7 +1322,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.4.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.4.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.4.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
@@ -1345,7 +1345,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.4.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.4.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.4.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.4.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.4.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.4.Title))</visible>
@@ -1356,7 +1356,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.5.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.5.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.5.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.5.Art(fanart))]</property>
 
@@ -1378,7 +1378,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.5.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.5.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.5.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
@@ -1401,7 +1401,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.5.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.5.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.5.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.5.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.5.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.5.Title))</visible>
@@ -1412,7 +1412,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.6.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.6.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.6.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.6.Art(fanart))]</property>
 
@@ -1434,7 +1434,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.6.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.6.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.6.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
@@ -1457,7 +1457,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.6.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.6.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.6.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.6.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.6.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.6.Title))</visible>
@@ -1468,7 +1468,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.7.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.7.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.7.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.7.Art(fanart))]</property>
 
@@ -1490,7 +1490,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.7.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.7.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
@@ -1513,7 +1513,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.7.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.7.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.7.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.7.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.7.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.7.Title))</visible>
@@ -1524,7 +1524,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.8.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.8.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.8.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.8.Art(fanart))]</property>
 
@@ -1546,7 +1546,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.8.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.8.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.8.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
@@ -1569,7 +1569,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.8.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.8.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.8.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.8.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.8.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.8.Title))</visible>
@@ -1580,7 +1580,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.9.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.9.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.9.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.9.Art(fanart))]</property>
 
@@ -1602,7 +1602,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.9.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.9.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.9.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.9.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
@@ -1625,7 +1625,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.9.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.9.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.9.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.9.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.9.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.9.Title))</visible>
@@ -1636,7 +1636,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.10.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.10.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.10.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.10.Art(fanart))]</property>
 
@@ -1658,7 +1658,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.10.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.10.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.10.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.10.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
@@ -1681,7 +1681,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.10.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.10.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.10.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.10.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.10.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.10.Title))</visible>
@@ -1692,7 +1692,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.11.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.11.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.11.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.11.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.11.Art(fanart))]</property>
 
@@ -1714,7 +1714,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.11.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.11.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.11.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.11.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.11.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.11.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.fanart))]</property>
@@ -1737,7 +1737,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.11.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.11.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.11.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.11.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.11.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.11.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.11.Title))</visible>
@@ -1748,7 +1748,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.12.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.12.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.12.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.12.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.12.Art(fanart))]</property>
 
@@ -1770,7 +1770,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.12.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.12.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.12.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.12.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.12.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.12.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.fanart))]</property>
@@ -1793,7 +1793,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.12.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.12.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.12.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.12.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.12.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.12.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.12.Title))</visible>
@@ -1804,7 +1804,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.13.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.13.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.13.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.13.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.13.Art(fanart))]</property>
 
@@ -1826,7 +1826,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.13.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.13.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.13.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.13.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.13.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.13.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.fanart))]</property>
@@ -1849,7 +1849,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.13.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.13.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.13.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.13.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.13.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.13.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.13.Title))</visible>
@@ -1860,7 +1860,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.14.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.14.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.14.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.14.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.14.Art(fanart))]</property>
 
@@ -1882,7 +1882,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.14.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.14.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.14.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.14.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.14.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.14.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.fanart))]</property>
@@ -1905,7 +1905,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.14.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.14.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.14.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.14.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.14.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.14.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.14.Title))</visible>
@@ -1916,7 +1916,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.15.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.15.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.15.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.15.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.15.Art(fanart))]</property>
 
@@ -1938,7 +1938,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.15.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.15.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.15.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.15.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.15.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.15.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.fanart))]</property>
@@ -1961,7 +1961,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.15.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.15.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.15.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.15.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.15.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.15.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.15.Title))</visible>
@@ -1972,7 +1972,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.16.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.16.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.16.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.16.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.16.Art(fanart))]</property>
 
@@ -1994,7 +1994,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.16.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.16.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.16.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.16.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.16.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.16.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.fanart))]</property>
@@ -2017,7 +2017,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.16.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.16.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.16.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.16.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.16.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.16.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.16.Title))</visible>
@@ -2028,7 +2028,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.17.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.17.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.17.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.17.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.17.Art(fanart))]</property>
 
@@ -2050,7 +2050,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.17.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.17.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.17.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.17.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.17.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.17.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.fanart))]</property>
@@ -2073,7 +2073,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.17.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.17.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.17.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.17.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.17.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.17.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.17.Title))</visible>
@@ -2084,7 +2084,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.18.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.18.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.18.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.18.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.18.Art(fanart))]</property>
 
@@ -2106,7 +2106,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.18.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.18.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.18.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.18.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.18.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.18.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.fanart))]</property>
@@ -2129,7 +2129,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.18.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.18.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.18.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.18.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.18.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.18.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.18.Title))</visible>
@@ -2140,7 +2140,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.19.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.19.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.19.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.19.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.19.Art(fanart))]</property>
 
@@ -2162,7 +2162,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.19.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.19.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.19.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.19.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.19.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.19.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.fanart))]</property>
@@ -2185,7 +2185,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.19.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.19.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.19.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.19.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.19.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.19.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.19.Title))</visible>
@@ -2196,7 +2196,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.20.Year)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedMovie.20.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedMovie.20.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.20.Art(poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedMovie.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.20.Art(fanart))]</property>
 
@@ -2218,7 +2218,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedEpisode.20.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedEpisode.20.Runtime)]min</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.20.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.poster))]</icon>
-				<property name="Type">cover</property>
+				<property name="Type">Cover</property>
 				<property name="Number">S$INFO[Window(Home).Property(RecommendedEpisode.20.Season)][COLOR=mainblue] / [/COLOR]E$INFO[Window(Home).Property(RecommendedEpisode.20.Episode)]</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.20.Plot)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.fanart))]</property>
@@ -2241,7 +2241,7 @@
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.20.Title)][COLOR=mainblue] / [/COLOR]$INFO[Window(Home).Property(RecommendedAlbum.20.Year)]</label2>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.20.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.20.Thumb)]</icon>
-				<property name="Type">square</property>
+				<property name="Type">Square</property>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedAlbum.20.Description)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.20.Fanart)]</property>
 				<visible>Container(300).hasFocus(5) + !isEmpty(Window(Home).Property(RecommendedAlbum.20.Title))</visible>

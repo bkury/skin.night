@@ -1,8 +1,7 @@
-Night Skin for PLEX & XBMC
+Night Skin for PLEX & KODI
 ==========================
 
-Night is a beautiful, clean and Fanart focused Skin for PHT v1.2+ and XBMC Gotham.
-Based on Night Skin by mcborzu, PHC port by maverick214, Rewritten for PHT/XBMC by bkury
+Night is a beautiful, clean and Fanart focused Skin for PHT v1.3+ and KODI (Helix). Based on Night Skin by mcborzu, PHC port by maverick214, Rewritten for PHT/KODI by bkury
 
 Support Forum: https://forums.plex.tv/index.php/topic/76918-night-skin-for-pht/
 

@@ -2,10 +2,27 @@
 <includes>
 
 	<variable name="Var_Viewmode_Image">
-		<value condition="Control.isVisible(11000) + Container(11000).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_EpisodeThumb)">$INFO[ListItem.GrandparentThumb]</value>
-		<value condition="Control.isVisible(11001) + Container(11001).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_EpisodeThumb)">$INFO[ListItem.GrandparentThumb]</value>
 		<value condition="!isEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>placeholder.png</value>
+	</variable>
+
+	<variable name="Var_Deck_Image">
+		<value condition="!Skin.HasSetting(XBMC) + [ ListItem.Type(videoplaylist) | ListItem.Type(videoplayqueue) | ListItem.Type(musicplaylist) | ListItem.Type(musicplayqueue) ]">$INFO[ListItem.CompositeImage(width=720;height=720;cols=2;rows=2)]</value>
+		<value condition="!Skin.HasSetting(XBMC) + [ ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_EpisodeThumb) ]">$INFO[ListItem.GrandparentThumb]</value>
+		<value condition="!isEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
+		<value>placeholder.png</value>
+	</variable>
+
+	<variable name="Var_Banner_Image">
+		<value condition="!Skin.HasSetting(XBMC) + Container.Content(tvshows)">$INFO[ListItem.Banner]</value>
+		<value condition="Skin.HasSetting(XBMC) + Container.Content(tvshows)">$INFO[ListItem.Art(banner)]</value>
+		<value>$INFO[ListItem.Property(Fanart_Image)]</value>
+	</variable>
+
+	<variable name="Var_Clearart_Image">
+		<value condition="!Skin.HasSetting(XBMC) + Container.Content(tvshows)">tvlogos/$INFO[ListItem.Title].png</value>
+		<value condition="Skin.HasSetting(XBMC) + Container.Content(tvshows)">$INFO[ListItem.Art(clearlogo)]</value>
+		<value>$INFO[ListItem.Property(Fanart_Image)]</value>
 	</variable>
 
 	<variable name="Var_Viewmode_Label">
@@ -19,6 +36,8 @@
 		<value condition="!isEmpty(Container.Property(primaryFilterActivated)) + Container.Content(episodes)">S$INFO[ListItem.Season]E$INFO[ListItem.Episode] [COLOR=mainblue]/[/COLOR] $INFO[ListItem.TVShowTitle]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Episode]. $INFO[ListItem.Title]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber]. $INFO[ListItem.Title]</value>
+
+		<value condition="Skin.HasSetting(OriginalTitle) + !isEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle]</value>
 		<value condition="!isEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
@@ -39,7 +58,7 @@
 		<value condition="!isEmpty(Control.GetLabel(1))">$INFO[Control.GetLabel(1)]</value>
 		<value condition="!isEmpty(Skin.String(selector1)) + !isEmpty(Skin.String(selector2))">$INFO[Skin.String(selector1)] $INFO[Skin.String(selector2)]</value>
 		<value condition="!isEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
-		<value>Unknown</value>
+		<!--<value>Unknown</value>-->
 	</variable>
 
 	<!-- Title -->
@@ -392,7 +411,7 @@
 		<value condition="Skin.HasSetting(Deck_Disable)">Disabled</value>
 	</variable>
 
-	<variable name="Var_Deck_Image">
+	<variable name="Var_Deck_Image_Setting">
 		<value condition="!Skin.HasSetting(Deck_Images_Small) + !Skin.HasSetting(Deck_Images_xLarge) + !Skin.HasSetting(Deck_Images_Large)">Medium (Default)</value>
 		<value condition="Skin.HasSetting(Deck_Images_Small)">Small</value>
 		<value condition="Skin.HasSetting(Deck_Images_xLarge)">Large</value>
@@ -463,6 +482,28 @@
 		<value condition="!Skin.HasSetting(NoStudioLogo) + !Skin.HasSetting(StudioLogoImages)">Text (Default)</value>
 		<value condition="Skin.HasSetting(StudioLogoImages)">Logo</value>
 		<value condition="Skin.HasSetting(NoStudioLogo)">Disabled</value>
+	</variable>
+
+	<!-- Overlay -->
+	<variable name="Var_Overlay_Image">
+		<value condition="!Skin.HasSetting(overlay_count) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(tvshows) | Container.Content(seasons) ]">OverlayCount.png</value>
+		<value condition="Container.Content(movies) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(homemovies) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(tvshows) + !Skin.HasSetting(overlay_tvshows">$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(seasons) + !Skin.HasSetting(overlay_seasons)">$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(episodes) + !Skin.HasSetting(overlay_episodes)">$INFO[ListItem.Overlay]</value>
+		<value condition="ListItem.Type(clip)">$INFO[ListItem.Overlay]</value>
+	</variable>
+	<variable name="Var_Overlay_Label">
+		<value condition="[ Container.Content(tvshows) | Container.Content(seasons) ] + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(overlay_count)">$INFO[ListItem.Property(UnwatchedEpisodes)]</value>
+	</variable>
+
+	<!-- Overlay (Rating) -->
+	<variable name="Var_Overlay_Rating_Label">
+		<value condition="Skin.hasSetting(Deck_Images_Rating) + !isEmpty(ListItem.StarRating) + [ ListItem.Type(movie) | ListItem.Type(episode) ]">$INFO[ListItem.Rating]</value>
+	</variable>
+	<variable name="Var_Overlay_Rating_Image">
+		<value condition="Skin.HasSetting(Deck_Images_Rating) + !isEmpty(ListItem.StarRating) + [ ListItem.Type(movie) | ListItem.Type(episode) ]">OverlayCount.png</value>
 	</variable>
 
 </includes>

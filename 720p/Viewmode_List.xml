@@ -2,7 +2,12 @@
 
 <includes>
 	<include name="Viewmode_List">
+		<include>Viewmode_List_1</include>
+		<include>Viewmode_List_2</include>
+		<include>Viewmode_List_3</include>
+	</include>
 
+	<include name="Viewmode_List_1">
 		<!-- List #1 -->
 		<control type="group">
 			<visible>Control.IsVisible(100)</visible>
@@ -16,7 +21,34 @@
 			</control>
 
 		</control>
+		<!-- List #1 (100/Info) -->
+		<control type="fixedlist" id="100">
+			<posx>430</posx>
+			<posy>0</posy>
+			<height>720</height>
+			<width>860</width>
+			<onleft>7000</onleft>
+			<onright>7001</onright>
+			<viewtype label="List #1">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>5</focusposition>
+			<movement>5</movement>
 
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
+        
+			<animation effect="zoom" end="85" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-60" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
+
+			<include>Viewmode_List1_General</include>
+			<include>Viewmode_List1_Itemlayout</include>
+
+		</control>		
+	</include>
+
+	<include name="Viewmode_List_2">
 		<!-- List #2 -->
 		<control type="group">
 			<visible>Control.IsVisible(110)</visible>
@@ -28,7 +60,33 @@
 				<include>Animation_ZoomOutZoomIn</include>
 			</control>
 		</control>
+		<!-- List #2 (110/Full) -->
+		<control type="fixedlist" id="110">
+			<posx>10</posx>
+			<posy>0</posy>
+			<height>720</height>
+			<width>1280</width>
+			<onleft>7000</onleft>
+			<onright>7001</onright>
+			<viewtype label="List #2">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>8</focusposition>
+			<movement>8</movement>
 
+			<animation effect="zoom" end="104" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
+        
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="4" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
+
+			<include>Viewmode_List2_General_NoSidebar</include>
+			<include>Viewmode_List2_Itemlayout</include>
+		</control>		
+	</include>
+
+	<include name="Viewmode_List_3">
 		<!-- List #3 -->
 		<control type="group">
 			<visible>Control.IsVisible(120)</visible>
@@ -85,57 +143,6 @@
 			</control>
 		</control>
 
-		<!-- List #1 (100/Info) -->
-		<control type="fixedlist" id="100">
-			<posx>430</posx>
-			<posy>0</posy>
-			<height>720</height>
-			<width>860</width>
-			<onleft>7000</onleft>
-			<onright>7001</onright>
-			<viewtype label="List #1">list</viewtype>
-			<orientation>vertical</orientation>
-			<focusposition>5</focusposition>
-			<movement>5</movement>
-
-			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
-			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
-			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_1)">Conditional</animation>
-        
-			<animation effect="zoom" end="85" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-			<animation effect="slide" end="-60" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_3D_2)">Conditional</animation>
-
-			<include>Viewmode_List1_General</include>
-			<include>Viewmode_List1_Itemlayout</include>
-
-		</control>		
-
-		<!-- List #2 (110/Full) -->
-		<control type="fixedlist" id="110">
-			<posx>10</posx>
-			<posy>0</posy>
-			<height>720</height>
-			<width>1280</width>
-			<onleft>7000</onleft>
-			<onright>7001</onright>
-			<viewtype label="List #2">list</viewtype>
-			<orientation>vertical</orientation>
-			<focusposition>8</focusposition>
-			<movement>8</movement>
-
-			<animation effect="zoom" end="104" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
-			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
-			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_1)">Conditional</animation>
-        
-			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
-			<animation effect="rotatey" end="4" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
-			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List2_3D_2)">Conditional</animation>
-
-			<include>Viewmode_List2_General_NoSidebar</include>
-			<include>Viewmode_List2_Itemlayout</include>
-		</control>		
-
 		<!-- List #3 (120/Low) -->
 		<control type="fixedlist" id="120">
 			<posx>280</posx>
@@ -161,5 +168,6 @@
 			<include>Viewmode_List2_General_NoSidebar</include>
 			<include>Viewmode_List3_Itemlayout</include>
 		</control>		
-</include>
+	</include>
+
 </includes>

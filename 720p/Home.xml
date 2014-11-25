@@ -227,39 +227,27 @@
 		</control>-->
 	</control>
 
-	<control type="group">
-		<!-- Show Server Name -->
-		<control type="label">		
-			<posy>684</posy>
-			<posx>35</posx>
-			<width>300</width>
-			<height>22</height>
-			<textcolor>FFCCCCCC</textcolor>
-			<label>$INFO[Container(300).ListItem.Label2]</label>
-			<visible>Control.hasFocus(300) + Skin.HasSetting(Home_Servername) + ![ Window.IsActive(4998) ]</visible>
-                        <include>Animation_CommonFade</include>
-		</control>
-		<!-- New Year Notification-->
-		<control type="label">		
-			<posy>680</posy>
-			<posx>0</posx>
-			<width>1280</width>
-			<height>22</height>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<label>Happy New Year!</label>
-			<animation type="Conditional" reversible="false" condition="true" loop="true">
-				<effect type="fade" start="0" end="100" time="4000" delay="0" loop="true" reversible="false" />
-				<effect type="fade" start="100" end="0" time="4000" delay="4000" loop="true" reversible="false" />
-			</animation>
-			<visible>SubString(System.Date(ddmm),0101) + ![ Skin.HasSetting(Home_Servername) ]</visible>
-		</control>
+	<!-- Show Server Name -->
+	<control type="label">		
+		<posy>684</posy>
+		<posx>35</posx>
+		<width>300</width>
+		<height>22</height>
+		<textcolor>FFCCCCCC</textcolor>
+		<label>$INFO[Container(300).ListItem.Label2]</label>
+		<include>Animation_CommonFade</include>
+		<visible>Control.hasFocus(300) + Skin.HasSetting(Home_Servername) + ![ Window.IsActive(4998) ]</visible>
 	</control>
 
 	<!-- Clock -->
 	<include>Global_Time_Home</include>
 	<include>Global_Time_Home_Big</include>
+
+	<!-- Weather -->
 	<include>Weather_Widget</include>
+
+	<!-- Current User -->
+	<include condition="!Skin.HasSetting(NoUserAvatar)">CurrentAvatar</include>
 
 	<!-- Home Navigation -->
 	<include>Home_Navigation</include>
@@ -269,6 +257,9 @@
 
 	<!-- Now Playing -->
 	<control type="group">
+		<animation effect="zoom" end="90" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom)">Conditional</animation>
+		<animation effect="slide" end="50,20" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom)">Conditional</animation>
+
 		<visible>Player.HasVideo | Player.HasAudio</visible>
 		<posx>860</posx>
 		<posy>640</posy>
@@ -278,6 +269,7 @@
 			<width>700</width>
 			<height>220</height>
 			<texture background="true" flipy="true">common/library_time_gradient.png</texture>
+			<visible>![Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom)]</visible>
 		</control>
 		<include>viewtype_nowplaying_right</include>
 	</control>

@@ -724,6 +724,28 @@
 			<size>20</size>
 		</font>
 
+		<!-- Overlays -->
+		<font>
+			<name>Font_Unwatched_Small</name>
+			<filename>Roboto-Condensed.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>Font_Unwatched_Medium</name>
+			<filename>Roboto-Condensed.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Font_Unwatched_Large</name>
+			<filename>Roboto-Condensed.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Font_Unwatched_xLarge</name>
+			<filename>Roboto-Condensed.ttf</filename>
+			<size>24</size>
+		</font>
+
 
 	</fontset>
 </fonts>

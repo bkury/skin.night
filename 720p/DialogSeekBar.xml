@@ -7,7 +7,7 @@
 		<!-- PLEX -->
 		<control type="group">
 			<include>Animation_CommonFade_600</include>
-			<visible>!Skin.HasSetting(XBMC) + [ Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Buffering ]</visible>
+			<visible>!Skin.HasSetting(XBMC) + [ Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching ]</visible>
 			<control type="group">
 				<posy>-100</posy>
 				<include>OSD_Labels</include>
@@ -18,7 +18,7 @@
 		<!-- XBMC -->
 		<control type="group">
 			<include>Animation_CommonFade_600</include>
-			<visible>Skin.HasSetting(XBMC) + [ Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Buffering | Player.Paused ]</visible>
+			<visible>Skin.HasSetting(XBMC) + [ Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused ]</visible>
 			<control type="group">
 				<posy>-100</posy>
 				<include>OSD_Labels</include>

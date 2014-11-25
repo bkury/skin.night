@@ -4,6 +4,13 @@
 	<allowoverlay>no</allowoverlay>
 	<include>XBMC_Detect</include>
 	<controls>
+		<control type="image">
+			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+			<include>background_default</include>
+			<texture>no_content_bg.jpg</texture>
+			<visible>Skin.HasSetting(SignInStartup)</visible>
+		</control>
 		<control type="button" id="11">
 			<posx>-20</posx>
 			<posy>-20</posy>
@@ -12,6 +19,7 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<onfocus>Skin.Reset(Weather_Update)</onfocus>
+			<onfocus condition="Skin.HasSetting(SignInStartup)">XBMC.ActivateWindow(selectuser)</onfocus>
 			<onfocus>ReplaceWindow(Home)</onfocus>
 		</control>
 	</controls>

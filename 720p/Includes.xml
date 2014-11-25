@@ -32,20 +32,8 @@
 	-->
 
 	<!-- Debug -->
-	<include file="Debug.xml" />
+	<!--<include file="Debug.xml" />-->
 
-	<include name="dialogConfirmButton">	
-		<width>120</width>
-		<height>42</height>
-		<font>Font_Bartowski_Smaller_MenuTitle</font>
-		<align>center</align>
-		<aligny>-</aligny>
-		<textoffsety>10</textoffsety>
-		<texturefocus border="5">confluence/button-focus.png</texturefocus>
-		<textcolor>ff000000</textcolor>
-		<focusedcolor>ffffffff</focusedcolor>
-		<pulseonselect>false</pulseonselect>
-	</include>
 	<include name="skin_settings_labels">
 		<width>860</width>
 		<height>34</height>
@@ -71,9 +59,6 @@
 		<font>font16caps</font>
 		<textcolor>grey2</textcolor>
 		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-
-		<!--<focusedcolor>white</focusedcolor>
-		<texturefocus>confluence/MenuItemFO1.png</texturefocus>-->
 		<include>navigation_options</include>
 	</include>
 	<include name="skin_settings_button">
@@ -83,8 +68,6 @@
 		<font>font16caps</font>
 		<textcolor>grey2</textcolor>
 		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-		<!--<focusedcolor>white</focusedcolor>
-		<texturefocus>confluence/MenuItemFO1.png</texturefocus>-->
 		<include>navigation_options</include>
 	</include>
 	
@@ -116,15 +99,6 @@
 		<posy>0</posy>
 		<width>1280</width>
 		<height>720</height>
-	</include>
-	<include name="7000_has_focus">
-		<control type="image">
-			<visible>!Skin.HasSetting(LockViews) + [ControlGroup(7000).HasFocus | Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu)]</visible>
-			<include>Dimensions_Fullscreen</include>
-			<texture>common/7000_focus.png</texture>
-			<animation effect="fade" start="0" end="0" time="600">Visible</animation>
-			<animation effect="fade" start="0" end="0" time="600">Hidden</animation>
-		</control>
 	</include>
 
 	<include name="Global_Time_Home_Big">
@@ -638,7 +612,7 @@
 
 	<include name="Global_Time_Home">
 		<control type="group">
-                        <visible>[Control.IsVisible(300) + !Skin.HasSetting(home_bigclock) + !Skin.HasSetting(NoHomeClock)]</visible>
+                        <visible>Control.IsVisible(300) + ![ Skin.HasSetting(home_bigclock) | Skin.HasSetting(NoHomeClock) | Skin.HasSetting(Home_Panel) ]</visible>
 			<posx>1270</posx>
 			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
@@ -1796,157 +1770,242 @@
 	<include name="NoAccentArrow">
 		<colordiffuse>mainblue</colordiffuse>
 	</include>
-	<!-- Viewtype Option Normal/Transparent -->
-	<include name="viewtype_watched_nofocus">
-		<animation effect="fade" start="100" end="10" time="400" delay="0" condition="[ Container.Content(movies) | Container.Content(episodes) ] + StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
-		<animation effect="fade" start="100" end="10" time="400" delay="0" condition="[ Container.Content(tvshows) | Container.Content(seasons) ] + !IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)">Conditional</animation>
+
+	<!-- Overlays (Viewmode) -->
+	<include name="viewtype_overlay_Small">
+		<control type="image">
+			<posx>-45</posx>
+			<posy>-45</posy>
+			<width>40</width>
+			<height>40</height>
+			<include>viewtype_overlay_image</include>
+		</control>
+		<control type="label">
+			<posx>-25</posx>
+			<posy>-45</posy>
+			<width>40</width>
+			<height>40</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_label</include>
+		</control>
 	</include>
-	<include name="viewtype_watched_focused">
-		<animation effect="fade" start="20" end="20" time="0" delay="0" condition="[ Container.Content(movies) | Container.Content(episodes) ] + Skin.HasSetting(viewtype_watched) + StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
-		<animation effect="fade" start="20" end="20" time="0" delay="0" condition="[ Container.Content(tvshows) | Container.Content(seasons) ] + Skin.HasSetting(viewtype_watched) + !IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)">Conditional</animation>
+	<include name="viewtype_overlay_Medium">
+		<control type="image">
+			<posx>-45</posx>
+			<posy>-45</posy>
+			<width>40</width>
+			<height>40</height>
+			<include>viewtype_overlay_image</include>
+		</control>
+		<control type="label">
+			<posx>-25</posx>
+			<posy>-45</posy>
+			<width>40</width>
+			<height>40</height>
+			<font>Font_Unwatched_Medium</font>
+			<include>viewtype_overlay_label</include>
+		</control>
+	</include>
+	<include name="viewtype_overlay_Large">
+		<control type="image">
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<include>viewtype_overlay_image</include>
+		</control>
+		<control type="label">
+			<posx>-30</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Large</font>
+			<include>viewtype_overlay_label</include>
+		</control>
+	</include>
+	<include name="viewtype_overlay_xLarge">
+		<control type="image">
+			<posx>-70</posx>
+			<posy>-70</posy>
+			<width>60</width>
+			<height>60</height>
+			<include>viewtype_overlay_image</include>
+		</control>
+		<control type="label">
+			<posx>-40</posx>
+			<posy>-70</posy>
+			<width>60</width>
+			<height>60</height>
+			<font>Font_Unwatched_xLarge</font>
+			<include>viewtype_overlay_label</include>
+		</control>
 	</include>
 
-	<!-- Movie/TV Overlays -->
-	<include name="viewtype_overlays">
-		<!-- Movie Overlays -->
+	<!-- Overlays (Viewmode) -->
+	<include name="viewtype_overlay_pos_Small">
 		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>34</width>
-			<height>34</height>
-			<!--<info>ListItem.Overlay</info>-->
-			<texture background="true">$INFO[ListItem.Overlay]</texture>
-			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
-			<colordiffuse>FFCCCCCC</colordiffuse>
-			<visible>[!Skin.HasSetting(overlay_movies) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)]</visible>
+			<width>28</width>
+			<height>28</height>
+			<include>viewtype_overlay_image</include>
 		</control>
-		<!-- Homemovies Overlays -->
+		<control type="label">
+			<posx>14</posx>
+			<width>28</width>
+			<height>28</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_label</include>
+		</control>
+	</include>
+	<include name="viewtype_overlay_pos_Medium">
 		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>34</width>
-			<height>34</height>
-			<texture background="true">$INFO[ListItem.Overlay]</texture>
-			<!--<info>ListItem.Overlay</info>-->
-			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
-			<colordiffuse>FFCCCCCC</colordiffuse>
-			<visible>[!Skin.HasSetting(overlay_movies) + !IsEmpty(ListItem.Overlay) + Container.Content(homemovies)]</visible>
+			<width>38</width>
+			<height>38</height>
+			<include>viewtype_overlay_image</include>
 		</control>
-		<!-- Episodes Overlays -->
+		<control type="label">
+			<posx>19</posx>
+			<width>38</width>
+			<height>38</height>
+			<font>Font_Unwatched_Medium</font>
+			<include>viewtype_overlay_label</include>
+		</control>
+	</include>
+	<include name="viewtype_overlay_pos_Large">
 		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>34</width>
-			<height>34</height>
-			<texture background="true">$INFO[ListItem.Overlay]</texture>
-			<!--<info>ListItem.Overlay</info>-->
-			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
-			<colordiffuse>FFCCCCCC</colordiffuse>
-			<visible>[!Skin.HasSetting(overlay_episodes) + !IsEmpty(ListItem.Overlay) + Container.Content(episodes)]</visible>
+			<posx>-3</posx>
+			<width>46</width>
+			<height>46</height>
+			<include>viewtype_overlay_image</include>
 		</control>
-		<!-- TV Show Overlays -->
+		<control type="label">
+			<posx>20</posx>
+			<width>46</width>
+			<height>46</height>
+			<font>Font_Unwatched_Large</font>
+			<include>viewtype_overlay_label</include>
+		</control>
+	</include>
+	<include name="viewtype_overlay_pos_xLarge">
 		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>34</width>
-			<height>34</height>
-			<texture background="true">OverlayUnwatched.png</texture>
-			<!--<texture>OverlayUnwatched.png</texture>-->
-			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
-			<colordiffuse>FFCCCCCC</colordiffuse>
-			<visible>Skin.HasSetting(overlay_count) + !Skin.HasSetting(overlay_tvshows) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(tvshows) ]</visible>
+			<posx>-3</posx>
+			<posy>4</posy>
+			<width>46</width>
+			<height>46</height>
+			<include>viewtype_overlay_image</include>
 		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>4</posy>
+			<width>46</width>
+			<height>46</height>
+			<font>Font_Unwatched_xLarge</font>
+			<include>viewtype_overlay_label</include>
+		</control>
+	</include>
 
-		<!-- TV Show Overlay + Count -->
-		<control type="group">
-			<visible>!Skin.HasSetting(overlay_count) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(tvshows) ]</visible>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<texture background="true">OverlayUnwatched.png</texture>
-				<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
-				<colordiffuse>FFCCCCCC</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<texture background="true">OverlayUnwatched.png</texture>
-				<colordiffuse>FF222222</colordiffuse>
-			</control>
-			<control type="label">
-				<posx>22.5</posx>
-				<posy>5</posy>
-				<align>center</align>
-				<aligny>center</aligny>
-				<width>35</width>
-				<height>35</height>
-				<font>Font_Bartowski_Unwatched</font>
-				<textcolor>white</textcolor>
-				<label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
-			</control>
-		</control>
-
-		<!-- TV Season Overlays / No Unwatched Count-->
+	<!-- Overlay (Ratings) -->
+	<include name="viewtype_overlay_rating_Small">
 		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>34</width>
-			<height>34</height>
-			<texture background="true">OverlayUnwatched.png</texture>
-			<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
-			<colordiffuse>FFCCCCCC</colordiffuse>
-			<visible>Skin.HasSetting(overlay_count) + !Skin.HasSetting(overlay_seasons) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(seasons) ]</visible>
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<include>viewtype_overlay_rating_image</include>
 		</control>
+		<control type="label">
+			<posx>-30</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_rating_label</include>
+		</control>
+	</include>
+	<include name="viewtype_overlay_rating_Medium">
+		<control type="image">
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<include>viewtype_overlay_rating_image</include>
+		</control>
+		<control type="label">
+			<posx>-30</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_rating_label</include>
+		</control>
+	</include>
 
-		<!-- TV Season Overlays / Unwatched Count -->
-		<control type="group">
-			<visible>!Skin.HasSetting(overlay_count) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(seasons) ]</visible>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<texture background="true">OverlayUnwatched.png</texture>
-				<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
-				<colordiffuse>FFCCCCCC</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<texture background="true">OverlayUnwatched.png</texture>
-				<colordiffuse>FF222222</colordiffuse>
-			</control>
-			<control type="label">
-				<posx>22.5</posx>
-				<posy>5</posy>
-				<align>center</align>
-				<aligny>center</aligny>
-				<width>35</width>
-				<height>35</height>
-				<font>Font_Bartowski_Unwatched</font>
-				<textcolor>white</textcolor>
-				<label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
-			</control>
+	<include name="viewtype_overlay_rating_Large">
+		<control type="image">
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<include>viewtype_overlay_rating_image</include>
 		</control>
+		<control type="label">
+			<posx>-30</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_rating_label</include>
+		</control>
+	</include>
+	<include name="viewtype_overlay_rating_xLarge">
+		<control type="image">
+			<posx>-70</posx>
+			<posy>-70</posy>
+			<width>60</width>
+			<height>60</height>
+			<include>viewtype_overlay_rating_image</include>
+		</control>
+		<control type="label">
+			<posx>-40</posx>
+			<posy>-70</posy>
+			<width>60</width>
+			<height>60</height>
+			<font>Font_Unwatched_Medium</font>
+			<include>viewtype_overlay_rating_label</include>
+		</control>
+	</include>
+
+	<include name="viewtype_overlay_image">
+		<texture background="true">$VAR[Var_Overlay_Image]</texture>
+		<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
+		<colordiffuse>FFCCCCCC</colordiffuse>
+		<!--<visible>Container.Content(movies) + !Skin.HasSetting(overlay_movies) | Container.Content(homemovies) + !Skin.HasSetting(overlay_movies) | Container.Content(tvshows) + !Skin.HasSetting(overlay_tvshows) | Container.Content(seasons) + !Skin.HasSetting(overlay_seasons) | Container.Content(episodes) + !Skin.HasSetting(overlay_episodes)</visible>-->
+	</include>
+
+	<include name="viewtype_overlay_label">
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>FFCCCCCC</textcolor>
+		<label>$VAR[Var_Overlay_Label]</label>
+		<!--<label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>-->
+		<!--<visible>[ Container.Content(tvshows) | Container.Content(seasons) ] + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(overlay_count)</visible>-->
+	</include>
+
+	<include name="viewtype_overlay_rating_image">
+		<texture background="true">$VAR[Var_Overlay_Rating_Image]</texture>
+		<include condition="!Skin.HasSetting(overlay_color)">OverlayNoAccent</include>
+		<colordiffuse>FFCCCCCC</colordiffuse>
+	</include>
+
+	<include name="viewtype_overlay_rating_label">
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>FFCCCCCC</textcolor>
+		<label>$VAR[Var_Overlay_Rating_Label]</label>
 	</include>
 
 	<!-- DIALOG HEADER VIEWTYPE OPTIONS -->
 	<include name="dialog_header_viewtype_options">
 		<!-- Background -->
-		<!--<control type="image">
-			<posx>300</posx>
-			<posy>170</posy>
-			<width>680</width>
-			<height>488</height>
-			<texture border="6">base-rounded.png</texture>
-			<colordiffuse>DD000000</colordiffuse>
-		</control>-->
 		<control type="image">
 			<posx>300</posx>
 			<posy>170</posy>
@@ -1981,31 +2040,12 @@
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
                         </control>
-			<!-- 2nd SEPERATOR LINE -->
-                        <!--<control type="image">
-				<posx>320</posx>
-                                <posy>425</posy>
-				<width>640</width>
-                                <height>1</height>
-                                <texture>base-rounded.png</texture>
-                                <colordiffuse>mainblue</colordiffuse>
-                                <align>center</align>
-				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(126) | Window.IsVisible(100)</visible>
-                        </control>-->
 		</control>
 	</include>
 
 	<!-- DIALOG HEADER VIEWTYPE -->
 	<include name="dialog_header_viewtype">
 		<!-- Background -->
-		<!--<control type="image">
-			<posx>300</posx>
-			<posy>230</posy>
-			<width>680</width>
-			<height>428</height>
-			<texture border="6">base-rounded.png</texture>
-			<colordiffuse>DD000000</colordiffuse>
-		</control>-->
 		<control type="image">
 			<posx>300</posx>
 			<posy>230</posy>
@@ -2040,31 +2080,12 @@
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
                         </control>
-			<!-- 2nd SEPERATOR LINE -->
-                        <!--<control type="image">
-				<posx>320</posx>
-                                <posy>425</posy>
-				<width>640</width>
-                                <height>1</height>
-                                <texture>base-rounded.png</texture>
-                                <colordiffuse>mainblue</colordiffuse>
-                                <align>center</align>
-				<visible>Control.IsVisible(61) | Control.IsVisible(6) | Window.IsVisible(126) | Window.IsVisible(100)</visible>
-                        </control>-->
 		</control>
 	</include>
 
 	<!-- DIALOG HEADER VIEWTYPE -->
 	<include name="dialog_header_viewmode">
 		<!-- Background -->
-		<!--<control type="image">
-			<posx>300</posx>
-			<posy>230</posy>
-			<width>680</width>
-			<height>428</height>
-			<texture border="6">base-rounded.png</texture>
-			<colordiffuse>DD000000</colordiffuse>
-		</control>-->
 		<control type="image">
 			<posx>300</posx>
 			<posy>230</posy>
@@ -2494,19 +2515,19 @@
 		</control>
 		<!-- File Browser Buttons -->
 		<control type="grouplist" id="7001">
-			<visible>Window.IsVisible(126)</visible>
-			<posx>320</posx>
+			<visible>Window.IsVisible(126) + !Skin.HasSetting(PlayFileDialog)</visible>
+			<posx>0</posx>
 			<posy>515</posy>
-			<width>640</width>
+			<width>1280</width>
 			<height>40</height>
 			<onup>666</onup>
 			<ondown>666</ondown>
 			<itemgap>0</itemgap>
+			<align>center</align>
                         <orientation>horizontal</orientation>
 
 			<control type="button" id="413">
-                                <description>Ok</description>
-                                <label>$LOCALIZE[186]</label>
+                                <label>$LOCALIZE[186]</label> <!-- Ok -->
 				<font>Font_MenuValue</font>
 				<textcolor>white</textcolor>
 				<focusedcolor>mainblue</focusedcolor>
@@ -2515,8 +2536,7 @@
                         </control>
 
                         <control type="button" id="414">
-                                <description>Cancel</description>
-                                <label>$LOCALIZE[222]</label>
+                                <label>$LOCALIZE[222]</label> <!-- Cancel -->
 				<font>Font_MenuValue</font>
 				<textcolor>white</textcolor>
 				<focusedcolor>mainblue</focusedcolor>
@@ -2531,6 +2551,88 @@
 				<focusedcolor>mainblue</focusedcolor>
                         </control>-->
 		</control>
+
+		<control type="grouplist" id="7001">
+			<visible>Window.IsVisible(126) + Skin.HasSetting(PlayFileDialog)</visible>
+			<posx>0</posx>
+			<posy>515</posy>
+			<width>1280</width>
+			<height>40</height>
+			<onup>666</onup>
+			<ondown>666</ondown>
+			<itemgap>0</itemgap>
+			<align>center</align>
+                        <orientation>horizontal</orientation>
+
+			<control type="button" id="413">
+                                <label>$LOCALIZE[186]</label> <!-- Ok -->
+				<font>Font_MenuValue</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>mainblue</focusedcolor>
+				<width>260</width>
+				<align>center</align>
+                        </control>
+
+			<control type="button" id="498">
+				<label>Set Path</label> <!-- Path -->
+				<font>Font_MenuValue</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>mainblue</focusedcolor>
+				<width>260</width>
+				<align>center</align>
+				<onclick>Skin.Reset(PlayFileDialog)</onclick>
+				<onclick>Skin.SetPath(PlayFilePath)</onclick>
+				<onclick>Dialog.Close(126)</onclick>
+				<visible>Skin.HasSetting(PlayFileDialog) + isEmpty(Skin.String(PlayFilePath))</visible>
+			</control>
+			<control type="button" id="499">
+				<label>Reset Path</label> <!-- Path -->
+				<font>Font_MenuValue</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>mainblue</focusedcolor>
+				<width>260</width>
+				<align>center</align>
+				<onclick>Skin.Reset(PlayFileDialog)</onclick>
+				<onclick>Skin.Reset(PlayFilePath)</onclick>
+				<onclick>Dialog.Close(126)</onclick>
+				<visible>Skin.HasSetting(PlayFileDialog) + !isEmpty(Skin.String(PlayFilePath))</visible>
+			</control>
+
+                        <control type="button" id="414">
+                                <label>$LOCALIZE[222]</label> <!-- Cancel -->
+				<font>Font_MenuValue</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>mainblue</focusedcolor>
+				<width>260</width>
+				<align>center</align>
+                        </control>
+		</control>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<!-- Dialog Ok -->
 		<control type="group">
@@ -2954,7 +3056,6 @@
 		</control>				
 	</include>
 
-
 	<!-- XBMC -->
 	<include name="Context_Sort_Visible">
 		<visible>Skin.HasSetting(XBMC)</visible>
@@ -2983,6 +3084,100 @@
 
 	<include name="Keyboard_Width">
 		<width>640</width>
+	</include>
+
+	<!-- User avatar -->
+	<include name="CurrentAvatar">
+		<control type="group">
+			<posx>1220</posx>
+			<posy>660</posy>
+			<visible>![ Player.HasAudio | Player.HasVideo ]</visible>
+
+			<control type="image">
+				<width>50</width>
+				<height>50</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="round.png" background="true">round.png</texture>
+				<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>40</width>
+				<height>40</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="round.png" background="true" fallback="default-square-small.png">$INFO[System.CurrentUserThumb]</texture>
+			</control>
+			<control type="label">
+				<posx>-5</posx>
+				<width>200</width>
+				<height>50</height>
+				<label>$INFO[System.CurrentUser]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>Font_Date</font>
+				<textcolor>white</textcolor>
+			</control>
+		</control>
+        
+	</include>
+
+	<include name="Avatar">
+		<control type="group">
+			<posx>10</posx>
+			<posy>10</posy>
+			<control type="image">
+				<width>60</width>
+				<height>60</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="round.png" background="true">round.png</texture>
+				<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posy>5</posy>
+				<posx>5</posx>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="round.png" background="true" fallback="default-square-small.png">$INFO[ListItem.Art(thumb)]</texture>
+			</control>
+		</control>
+	</include>
+	<include name="AvatarIcons">
+		<control type="image">
+			<posx>30</posx>
+			<width>50</width>
+			<height>20</height>
+			<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+			<texture>icon-admin.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<visible>!IsEmpty(ListItem.Property(admin))</visible>
+		</control>
+		<control type="image">
+			<width>20</width>
+			<height>20</height>
+			<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+			<texture>icon-pin.png</texture>
+			<colordiffuse>TextDisabled</colordiffuse>
+			<visible>!IsEmpty(ListItem.Property(protected))</visible>
+		</control>
+		<control type="image">
+			<width>20</width>
+			<height>20</height>
+			<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+			<texture>icon-pinless.png</texture>
+			<colordiffuse>FF5CB85C</colordiffuse>
+			<visible>IsEmpty(ListItem.Property(protected))</visible>
+		</control>
+	</include>
+	<include name="DialogUserLabel">
+		<width>330</width>
+		<height>40</height>
+		<textcolor>FFCCCCCC</textcolor>
+		<selectedcolor>FFCCCCCC</selectedcolor>
+		<aligny>center</aligny>
+		<font>font16caps</font>
 	</include>
 
 </includes>

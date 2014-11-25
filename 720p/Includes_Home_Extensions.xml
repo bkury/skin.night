@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Mon Oct 27 13:07:00 CET 2014 -->
+<!-- Tue Nov 25 16:23:01 CET 2014 -->
 <includes>
 
 <!-- Home Menu Extension -->
@@ -108,14 +108,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(350) + !isEmpty(Container(8850).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8850)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>Youtube</label>
 		</control>
+		<include>Deck_Placeholder_8850</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>
@@ -164,14 +161,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(351) + !isEmpty(Container(8851).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8851)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>Vimeo</label>
 		</control>
+		<include>Deck_Placeholder_8851</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>
@@ -236,14 +230,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(352) + !isEmpty(Container(8852).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8852)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>AppleTrailers</label>
 		</control>
+		<include>Deck_Placeholder_8852</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>
@@ -300,14 +291,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(353) + !isEmpty(Container(8853).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8853)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>Shoutcast</label>
 		</control>
+		<include>Deck_Placeholder_8853</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>
@@ -340,14 +328,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(354) + !isEmpty(Container(8854).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8854)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>Revision3</label>
 		</control>
+		<include>Deck_Placeholder_8854</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>
@@ -396,14 +381,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(355) + !isEmpty(Container(8855).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8855)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>LetMeWatchThis</label>
 		</control>
+		<include>Deck_Placeholder_8855</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>
@@ -484,14 +466,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(356) + !isEmpty(Container(8856).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8856)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>iTunes</label>
 		</control>
+		<include>Deck_Placeholder_8856</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>
@@ -612,14 +591,11 @@
 	<control type="group">
 		<include>Animation_CommonFade_Deck</include>
 		<visible>Container(300).HasFocus(357) + !isEmpty(Container(8857).ListItem(0).Label)</visible>
-		<control type="button">
-			<onfocus>SetFocus(8857)</onfocus>
-		</control>
-		<include>Deck_Placeholder</include>
 		<control type="label">
 			<include>Deck_Name</include>
 			<label>OpenWeatherMap</label>
 		</control>
+		<include>Deck_Placeholder_8857</include>
 	</control>
 	<control type="group">
 		<include>Animation_CommonFade</include>

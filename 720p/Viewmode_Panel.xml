@@ -1,75 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-<include name="Viewmode_Panel">
+	<include name="Viewmode_Panel">
+		<include>Viewmode_Panel_1</include>
+		<include>Viewmode_Panel_2</include>
+		<include>Viewmode_Panel_3</include>
+	</include>
 
-	<!-- Panel #1 (300/Info) -->
-	<control type="panel" id="300">
-		<posx>430</posx>
-		<posy>12</posy>
-		<width>840</width>
-		<height>696</height>
-		<onleft>7000</onleft>
-		<onright>7001</onright>
-		<orientation>vertical</orientation>
-		<viewtype label="Panel #1">panel</viewtype>
+	<include name="Viewmode_Panel_1">
+		<!-- Panel #1 (300/Info) -->
+		<control type="panel" id="300">
+			<posx>430</posx>
+			<posy>12</posy>
+			<width>840</width>
+			<height>696</height>
+			<onleft>7000</onleft>
+			<onright>7001</onright>
+			<orientation>vertical</orientation>
+			<viewtype label="Panel #1">panel</viewtype>
 
-		<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-		<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
-		<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_1)">Conditional</animation>
 
-		<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-		<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
-		<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_3D_2)">Conditional</animation>
 
-		<include>Viewmode_Panel1_General</include>
-		<include>Viewmode_Panel1_Itemlayout</include>
-	</control>
+			<include>Viewmode_Panel1_General</include>
+			<include>Viewmode_Panel1_Itemlayout</include>
+		</control>
+	</include>
 
-	<!-- Panel #2 (310/Full) -->
-	<control type="panel" id="310">
-		<posx>10</posx>
-		<posy>12</posy>
-		<width>1260</width>
-		<height>696</height>
-		<onleft>7000</onleft>
-		<onright>7001</onright>
-		<orientation>vertical</orientation>
-		<viewtype label="Panel #2">panel</viewtype>
+	<include name="Viewmode_Panel_2">
+		<!-- Panel #2 (310/Full) -->
+		<control type="panel" id="310">
+			<posx>10</posx>
+			<posy>12</posy>
+			<width>1260</width>
+			<height>696</height>
+			<onleft>7000</onleft>
+			<onright>7001</onright>
+			<orientation>vertical</orientation>
+			<viewtype label="Panel #2">panel</viewtype>
 
-		<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
-		<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
-		<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_1)">Conditional</animation>
 
-		<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
-		<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
-		<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel2_3D_2)">Conditional</animation>
 
-		<include>Viewmode_Panel2_General_NoSidebar</include>
-		<include>Viewmode_Panel2_Itemlayout</include>
-	</control>
+			<include>Viewmode_Panel2_General_NoSidebar</include>
+			<include>Viewmode_Panel2_Itemlayout</include>
+		</control>
+	</include>
 
-	<!-- Panel #3 (320/Deck) -->
-	<control type="panel" id="320">
-		<posx>10</posx>
-		<posy>150</posy>
-		<width>1260</width>
-		<height>432</height>
-		<onleft>7000</onleft>
-		<onright>7001</onright>
-		<orientation>vertical</orientation>
-		<viewtype label="Panel #3">panel</viewtype>
-		<!--<animation effect="zoom" end="62" condition="true">Conditional</animation>-->
+	<include name="Viewmode_Panel_3">
+		<!-- Panel #3 (320/Deck) -->
+		<control type="panel" id="320">
+			<posx>10</posx>
+			<posy>150</posy>
+			<width>1260</width>
+			<height>432</height>
+			<onleft>7000</onleft>
+			<onright>7001</onright>
+			<orientation>vertical</orientation>
+			<viewtype label="Panel #3">panel</viewtype>
 
-		<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
-		<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
-		<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+			<animation effect="zoom" end="110" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+			<animation effect="rotatey" end="-6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
+			<animation effect="slide" end="50" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_1)">Conditional</animation>
 
-		<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
-		<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
-		<animation effect="slide" end="-80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+			<animation effect="zoom" end="90" center="auto" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+			<animation effect="rotatey" end="6" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
+			<animation effect="slide" end="-80" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel3_3D_2)">Conditional</animation>
 
-		<include>Viewmode_Panel3_General_NoSidebar</include>
-		<include>Viewmode_Panel3_Itemlayout</include>
-	</control>
-</include>
+			<include>Viewmode_Panel3_General_NoSidebar</include>
+			<include>Viewmode_Panel3_Itemlayout</include>
+		</control>
+	</include>
+
 </includes>

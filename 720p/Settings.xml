@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1111">
-	<onunload condition="Skin.HasSetting(Home_Horizontal)">Skin.Reset(Deck_Images_Large)</onunload>
-	<onunload condition="Skin.HasSetting(Home_Horizontal)">Skin.Reset(Deck_Images_xLarge)</onunload>
-	<onunload condition="Skin.HasSetting(Home_Horizontal)">Skin.Reset(Deck_Images_Small)</onunload>
+	<onunload condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom)">Skin.Reset(Deck_Images_xLarge)</onunload>
+	<onunload condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom) + Skin.HasSetting(Deck_Images_xLarge)">Skin.Reset(home_bigclock)</onunload>
 	<defaultcontrol always="true">100</defaultcontrol>
         <include>XBMC_Detect</include>
 	<controls>
@@ -182,7 +181,7 @@
 			<!-- Navigation Arrow -->
 			<control type="image">
 				<posx>716</posx>
-				<posy>650</posy>
+				<posy>655</posy>
 				<width>32</width>
 				<height>32</height>
 				<texture>nav_arrow.png</texture>
@@ -193,6 +192,19 @@
 				<visible>Container(100).Hasfocus(110)</visible>
 			</control>
 
+			<!-- Navigation Arrow -->
+			<control type="image">
+				<posx>716</posx>
+				<posy>655</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>nav_arrow.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<include>Animation_CommonFade</include>
+				<animation effect="rotate" center="auto" end="180" time="300" condition="ControlGroup(4000).HasFocus(4420)">Conditional</animation>
+				<animation effect="rotate" center="auto" end="180" time="300" condition="ControlGroup(4000).HasFocus(4430)">Conditional</animation>
+				<visible>Container(100).Hasfocus(140)</visible>
+			</control>
 
 			<control type="group" id="101">
 
@@ -221,17 +233,17 @@
 					<onclick>Skin.ToggleSetting(NoGlobalClock)</onclick>
 					<selected>Skin.HasSetting(NoGlobalClock)</selected>
 				</control>
-				<control type="radiobutton" id="1040">
-					<include>skin_settings_labels</include>
-					<label>Disable Home Clock</label>
-					<onclick>Skin.ToggleSetting(NoHomeClock)</onclick>
-					<selected>Skin.HasSetting(NoHomeClock)</selected>
-				</control>
 				<control type="radiobutton" id="1050">
 					<include>skin_settings_labels</include>
 					<label>Enable Kiosk Mode</label>
 					<onclick>Skin.ToggleSetting(LockViews)</onclick>
 					<selected>Skin.HasSetting(LockViews)</selected>
+				</control>
+				<control type="radiobutton" id="1052">
+					<include>skin_settings_labels</include>
+					<label>Enable Sign In on Startup</label>
+					<onclick>Skin.ToggleSetting(SignInStartup)</onclick>
+					<selected>Skin.HasSetting(SignInStartup)</selected>
 				</control>
 				<control type="radiobutton" id="1055">
 					<include>skin_settings_labels</include>
@@ -679,6 +691,12 @@
 					<control type="image" id="2020">
 						<include>settings_separator</include>
 					</control>
+					<control type="radiobutton" id="2025">
+						<include>skin_settings_labels</include>
+						<label>Disable Home Clock</label>
+						<onclick>Skin.ToggleSetting(NoHomeClock)</onclick>
+						<selected>Skin.HasSetting(NoHomeClock)</selected>
+					</control>
 					<control type="radiobutton" id="2030">
 						<description>Home Big Clock</description>
 						<include>skin_settings_labels</include>
@@ -692,6 +710,12 @@
 						<label>Enable Server Name</label>
 						<onclick>Skin.ToggleSetting(Home_Servername)</onclick>
 						<selected>Skin.HasSetting(Home_Servername)</selected>
+					</control>
+					<control type="radiobutton" id="2045">
+						<include>skin_settings_labels</include>
+						<label>Disable User Avatar</label>
+						<onclick>Skin.ToggleSetting(NoUserAvatar)</onclick>
+						<selected>Skin.HasSetting(NoUserAvatar)</selected>
 					</control>
 					<control type="radiobutton" id="2050">
 						<description>Disable Submenu Navigation Arrow</description>
@@ -734,7 +758,7 @@
 					</control>
 					<control type="radiobutton" id="2120">
 						<include>skin_settings_labels</include>
-						<label>Compact Home Menu (Under Construction)</label>
+						<label>Compact Home Menu (Work in Progress)</label>
 						<onclick>Skin.ToggleSetting(Home_Panel)</onclick>
 						<onclick>Skin.Reset(Home_Horizontal)</onclick>
 						<selected>Skin.HasSetting(Home_Panel)</selected>
@@ -1235,6 +1259,7 @@
 
 				<!-- Deck -->
 				<control type="grouplist" id="4000">
+					<height>590</height>
 					<include>Settings_Section</include>
 					<visible>Container(100).Hasfocus(140)</visible>
 
@@ -1301,7 +1326,7 @@
 						<font>font16caps</font>
 						<align>right</align>
 						<textcolor>FFCCCCCC</textcolor>
-						<label>$VAR[Var_Deck_Image]</label>
+						<label>$VAR[Var_Deck_Image_Setting]</label>
 						<include>navigation_options</include>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
@@ -1333,9 +1358,16 @@
 
 					<control type="radiobutton" id="4090">
 						<include>skin_settings_labels</include>
-						<label>Use Episode Thumbs</label>
+						<label>Enable Episode Thumbs</label>
 						<onclick>Skin.ToggleSetting(Deck_Images_EpisodeThumb)</onclick>
 						<selected>Skin.HasSetting(Deck_Images_EpisodeThumb)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="4095">
+						<include>skin_settings_labels</include>
+						<label>Enable Ratings</label>
+						<onclick>Skin.ToggleSetting(Deck_Images_Rating)</onclick>
+						<selected>Skin.HasSetting(Deck_Images_Rating)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 
@@ -1451,6 +1483,54 @@
 						<onclick>Skin.ToggleSetting(Deck_NoShared)</onclick>
 						<selected>Skin.HasSetting(Deck_NoShared)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+
+					<!-- Custom 1 -->
+					<control type="radiobutton" id="4380">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] Custom 1</label> <!-- Disable Custom 1 -->
+						<onclick>Skin.SetString(Deck_NoCustom1)</onclick>
+						<selected>Skin.HasSetting(Deck_NoCustom1)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable) + isEmpty(Skin.String(Deck_NoCustom1))</visible>
+					</control>
+					<control type="radiobutton" id="4390">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $INFO[Skin.String(Deck_NoCustom1)]</label> <!-- Disable Custom 1 -->
+						<onclick>Skin.Reset(Deck_NoCustom1)</onclick>
+						<selected>!isEmpty(Skin.String(Deck_NoCustom1))</selected>
+						<visible>!Skin.HasSetting(Deck_Disable) + !isEmpty(Skin.String(Deck_NoCustom1))</visible>
+					</control>
+
+					<!-- Custom 2 -->
+					<control type="radiobutton" id="4400">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] Custom 2</label> <!-- Disable Custom 2 -->
+						<onclick>Skin.SetString(Deck_NoCustom2)</onclick>
+						<selected>Skin.HasSetting(Deck_NoCustom2)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable) + isEmpty(Skin.String(Deck_NoCustom2))</visible>
+					</control>
+					<control type="radiobutton" id="4410">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $INFO[Skin.String(Deck_NoCustom2)]</label> <!-- Disable Custom 2 -->
+						<onclick>Skin.Reset(Deck_NoCustom2)</onclick>
+						<selected>!isEmpty(Skin.String(Deck_NoCustom2))</selected>
+						<visible>!Skin.HasSetting(Deck_Disable) + !isEmpty(Skin.String(Deck_NoCustom2))</visible>
+					</control>
+
+					<!-- Custom 3 -->
+					<control type="radiobutton" id="4420">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] Custom 3</label> <!-- Disable Custom 3 -->
+						<onclick>Skin.SetString(Deck_NoCustom3)</onclick>
+						<selected>Skin.HasSetting(Deck_NoCustom3)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable) + isEmpty(Skin.String(Deck_NoCustom3))</visible>
+					</control>
+					<control type="radiobutton" id="4430">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[24021] $INFO[Skin.String(Deck_NoCustom3)]</label> <!-- Disable Custom 3 -->
+						<onclick>Skin.Reset(Deck_NoCustom3)</onclick>
+						<selected>!isEmpty(Skin.String(Deck_NoCustom3))</selected>
+						<visible>!Skin.HasSetting(Deck_Disable) + !isEmpty(Skin.String(Deck_NoCustom3))</visible>
 					</control>
 
 				</control>
@@ -1628,6 +1708,12 @@
 					<control type="image" id="6020">
 						<include>settings_separator</include>
 					</control>
+					<control type="radiobutton" id="6025">
+						<include>skin_settings_labels</include>
+						<label>Enable Original Titles</label>
+						<onclick>Skin.ToggleSetting(OriginalTitle)</onclick>
+						<selected>Skin.HasSetting(OriginalTitle)</selected>
+					</control>
 					<control type="radiobutton" id="6030">
 						<include>skin_settings_labels</include>
 						<label>Context Menu (OLD Version)</label>
@@ -1640,6 +1726,7 @@
 						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 						<selected>Skin.HasSetting(autoscroll)</selected>
 					</control>
+
 					<!-- Studio -->
 					<control type="radiobutton" id="6040">
 						<textureradiofocus>scroll_down.png</textureradiofocus>
@@ -1663,19 +1750,6 @@
 						<include>navigation_options</include>
 					</control>
 
-
-					<!--<control type="radiobutton" id="6038">
-						<include>skin_settings_labels</include>
-						<label>Enable Studio Images</label>
-						<onclick>Skin.ToggleSetting(StudioLogoImages)</onclick>
-						<selected>Skin.HasSetting(StudioLogoImages)</selected>
-					</control>
-					<control type="radiobutton" id="6040">
-						<include>skin_settings_labels</include>
-						<label>Disable Studio Info</label>
-						<onclick>Skin.ToggleSetting(NoStudioLogo)</onclick>
-						<selected>Skin.HasSetting(NoStudioLogo)</selected>
-					</control>-->
 					<control type="radiobutton" id="6050">
 						<include>skin_settings_labels</include>
 						<label>Disable Media Flags</label>

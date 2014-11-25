@@ -539,7 +539,7 @@
 						<texture>b-video.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="410">
+					<control type="button" id="411">
 	                                        <width>29</width>
 	                                        <height>24</height>
 						<texturefocus>b-video.png</texturefocus>
@@ -550,7 +550,7 @@
 						<onup>900</onup>
 						<ondown>900</ondown>
 						<onclick>Container.SetViewmode(100)</onclick>
-						<visible allowhiddenfocus="true">Control.HasFocus(410)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(411)</visible>
 	                                </control>
 					<control type="label">
 						<posx>40</posx>
@@ -573,18 +573,18 @@
 						<texture>b-video.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="411">
+					<control type="button" id="412">
 	                                        <width>29</width>
 	                                        <height>24</height>
 						<texturefocus>b-video.png</texturefocus>
 						<texturenofocus>b-video.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
-						<onleft>410</onleft>
-						<onright>412</onright>
+						<onleft>411</onleft>
+						<onright>413</onright>
 						<ondown>900</ondown>
 	                                        <onup>900</onup>
 						<onclick>Container.SetViewmode(901)</onclick>
-						<visible allowhiddenfocus="true">Control.HasFocus(411)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(412)</visible>
 	                                </control>
 					<control type="label">
 						<posx>40</posx>
@@ -607,18 +607,18 @@
 						<texture>b-video.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="412">
+					<control type="button" id="413">
 	                                        <width>29</width>
 	                                        <height>24</height>
 						<texturefocus>b-video.png</texturefocus>
 						<texturenofocus>b-video.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
-						<onleft>411</onleft>
-						<onright>413</onright>
+						<onleft>412</onleft>
+						<onright>414</onright>
 						<ondown>900</ondown>
 	                                        <onup>900</onup>
 						<onclick>Container.SetViewmode(902)</onclick>
-						<visible allowhiddenfocus="true">Control.HasFocus(412)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(413)</visible>
 	                                </control>
 					<control type="label">
 						<posx>40</posx>
@@ -640,7 +640,7 @@
 						<texture>b-pp-system.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="413">
+					<control type="button" id="414">
 	                                        <width>26</width>
 	                                        <height>26</height>
 						<texturefocus>b-pp-system.png</texturefocus>
@@ -649,11 +649,11 @@
 						<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 						<onclick>Skin.SetString(selector2,Options)</onclick>
 	                                        <onclick>Control.SetFocus(9999)</onclick>
-						<onleft>412</onleft>
-						<onright>414</onright>
+						<onleft>413</onleft>
+						<onright>415</onright>
 						<ondown>900</ondown>
 						<onup>900</onup>
-						<visible allowhiddenfocus="true">Control.HasFocus(413)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(414)</visible>
 	                                </control>
 					<control type="label">
 						<posx>30</posx>
@@ -675,18 +675,18 @@
 						<texture>b-pp-search.png</texture>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="414">
+					<control type="button" id="415">
 	                                        <width>29</width>
 	                                        <height>24</height>
 						<texturefocus>b-pp-search.png</texturefocus>
 						<texturenofocus>b-pp-search.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 	                                        <onclick>ActivateWindow(51)</onclick>
-						<onleft>413</onleft>
-						<onright>410</onright>
+						<onleft>414</onleft>
+						<onright>411</onright>
 						<ondown>900</ondown>
 						<onup>900</onup>
-						<visible allowhiddenfocus="true">Control.HasFocus(414)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(415)</visible>
 	                                </control>
 					<control type="label">
 						<posx>35</posx>

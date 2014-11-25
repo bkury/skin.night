@@ -1,5 +1,5 @@
 <!-- NOTE: Generated Config (DO NOT EDIT!) -->
-<!-- Mon Oct 27 18:20:39 CET 2014 -->
+<!-- Mon Nov 24 19:17:14 CET 2014 -->
 
 <includes>
 <include name="Background_Viewtypes">
@@ -5465,16 +5465,13 @@
         <control type="radiobutton" id="3008">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,List1/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(List1/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(100)</visible>
         </control>
@@ -5493,6 +5490,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(List1_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(List1_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(100)</visible>
@@ -5502,6 +5500,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(List1_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(List1_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(List1_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(100)</visible>
@@ -5511,6 +5510,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(List1_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(List1_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(List1_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(100)</visible>
@@ -5626,16 +5626,13 @@
         <control type="radiobutton" id="3032">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,List2/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(List2/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(110)</visible>
         </control>
@@ -5654,6 +5651,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(List2_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(List2_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(110)</visible>
@@ -5663,6 +5661,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(List2_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(List2_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(List2_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(110)</visible>
@@ -5672,6 +5671,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(List2_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(List2_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(List2_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(110)</visible>
@@ -5787,16 +5787,13 @@
         <control type="radiobutton" id="3056">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,List3/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(List3/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(120)</visible>
         </control>
@@ -5815,6 +5812,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(List3_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(List3_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(120)</visible>
@@ -5824,6 +5822,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(List3_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(List3_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(List3_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(120)</visible>
@@ -5833,6 +5832,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(List3_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(List3_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(List3_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(120)</visible>
@@ -5948,16 +5948,13 @@
         <control type="radiobutton" id="3080">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Poster1/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Poster1/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(200)</visible>
         </control>
@@ -5976,6 +5973,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Poster1_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Poster1_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(200)</visible>
@@ -5985,6 +5983,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Poster1_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Poster1_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Poster1_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(200)</visible>
@@ -5994,6 +5993,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Poster1_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Poster1_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Poster1_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(200)</visible>
@@ -6109,16 +6109,13 @@
         <control type="radiobutton" id="3104">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Poster2/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Poster2/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(210)</visible>
         </control>
@@ -6137,6 +6134,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Poster2_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Poster2_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
@@ -6146,6 +6144,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Poster2_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Poster2_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Poster2_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
@@ -6155,6 +6154,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Poster2_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Poster2_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Poster2_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(210)</visible>
@@ -6270,16 +6270,13 @@
         <control type="radiobutton" id="3128">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Poster3/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Poster3/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(220)</visible>
         </control>
@@ -6298,6 +6295,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Poster3_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Poster3_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(220)</visible>
@@ -6307,6 +6305,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Poster3_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Poster3_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Poster3_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(220)</visible>
@@ -6316,6 +6315,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Poster3_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Poster3_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Poster3_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(220)</visible>
@@ -6431,16 +6431,13 @@
         <control type="radiobutton" id="3152">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Panel1/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Panel1/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(300)</visible>
         </control>
@@ -6459,6 +6456,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Panel1_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Panel1_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
@@ -6468,6 +6466,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Panel1_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Panel1_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Panel1_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
@@ -6477,6 +6476,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Panel1_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Panel1_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Panel1_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(300)</visible>
@@ -6592,16 +6592,13 @@
         <control type="radiobutton" id="3176">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Panel2/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Panel2/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(310)</visible>
         </control>
@@ -6620,6 +6617,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Panel2_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Panel2_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
@@ -6629,6 +6627,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Panel2_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Panel2_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Panel2_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
@@ -6638,6 +6637,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Panel2_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Panel2_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Panel2_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(310)</visible>
@@ -6753,16 +6753,13 @@
         <control type="radiobutton" id="3200">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Panel3/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Panel3/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(320)</visible>
         </control>
@@ -6781,6 +6778,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Panel3_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Panel3_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
@@ -6790,6 +6788,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Panel3_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Panel3_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Panel3_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
@@ -6799,6 +6798,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Panel3_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Panel3_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Panel3_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(320)</visible>
@@ -6914,16 +6914,13 @@
         <control type="radiobutton" id="3224">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Banner1/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Banner1/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(400)</visible>
         </control>
@@ -6942,6 +6939,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Banner1_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Banner1_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(400)</visible>
@@ -6951,6 +6949,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Banner1_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Banner1_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Banner1_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(400)</visible>
@@ -6960,6 +6959,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Banner1_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Banner1_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Banner1_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(400)</visible>
@@ -7075,16 +7075,13 @@
         <control type="radiobutton" id="3248">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Banner2/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Banner2/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(410)</visible>
         </control>
@@ -7103,6 +7100,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Banner2_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Banner2_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(410)</visible>
@@ -7112,6 +7110,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Banner2_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Banner2_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Banner2_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(410)</visible>
@@ -7121,6 +7120,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Banner2_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Banner2_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Banner2_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(410)</visible>
@@ -7236,16 +7236,13 @@
         <control type="radiobutton" id="3272">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Banner3/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Banner3/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(420)</visible>
         </control>
@@ -7264,6 +7261,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Banner3_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Banner3_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(420)</visible>
@@ -7273,6 +7271,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Banner3_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Banner3_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Banner3_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(420)</visible>
@@ -7282,6 +7281,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Banner3_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Banner3_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Banner3_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(420)</visible>
@@ -7397,16 +7397,13 @@
         <control type="radiobutton" id="3296">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Custom1/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Custom1/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(500)</visible>
         </control>
@@ -7425,6 +7422,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Custom1_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Custom1_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(500)</visible>
@@ -7434,6 +7432,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Custom1_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Custom1_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Custom1_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(500)</visible>
@@ -7443,6 +7442,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Custom1_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Custom1_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Custom1_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(500)</visible>
@@ -7558,16 +7558,13 @@
         <control type="radiobutton" id="3320">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Channel1/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Channel1/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(900)</visible>
         </control>
@@ -7586,6 +7583,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Channel1_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Channel1_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(900)</visible>
@@ -7595,6 +7593,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Channel1_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Channel1_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Channel1_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(900)</visible>
@@ -7604,6 +7603,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Channel1_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Channel1_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Channel1_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(900)</visible>
@@ -7719,16 +7719,13 @@
         <control type="radiobutton" id="3344">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Channel2/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Channel2/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(901)</visible>
         </control>
@@ -7747,6 +7744,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Channel2_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Channel2_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(901)</visible>
@@ -7756,6 +7754,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Channel2_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Channel2_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Channel2_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(901)</visible>
@@ -7765,6 +7764,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Channel2_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Channel2_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Channel2_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(901)</visible>
@@ -7880,16 +7880,13 @@
         <control type="radiobutton" id="3368">
                 <width>190</width>
                 <label>$LOCALIZE[31073]</label> <!-- Opacity -->
-
 		<onclick>Skin.SetString(selector1,Channel3/Watched)</onclick>
 		<onclick>Skin.SetString(selector2,Opacity)</onclick>
 		<onclick>ActivateWindow(1120)</onclick>
-
 		<onclick>Skin.SetString(selector1,$INFO[Container.Viewmode])</onclick>
 		<onclick>Skin.SetString(selector2,$LOCALIZE[31023])</onclick>
-
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!isEmpty(Skin.String(Channel3/Watched_Opacity))</selected>
-
                 <include>radiobutton_circle</include>
                 <visible>Control.IsVisible(902)</visible>
         </control>
@@ -7908,6 +7905,7 @@
 		<width>190</width>
 		<label>Border</label> <!-- Border -->
 		<onclick>Skin.ToggleSetting(Channel3_Focus_NoBorder)</onclick>
+                <onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>!Skin.HasSetting(Channel3_Focus_NoBorder)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(902)</visible>
@@ -7917,6 +7915,7 @@
 		<label>Zoom</label>
                 <onclick>Skin.Reset(Channel3_Focus_Drop)</onclick>
                 <onclick>Skin.ToggleSetting(Channel3_Focus_Zoom)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Channel3_Focus_Zoom)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(902)</visible>
@@ -7926,6 +7925,7 @@
                 <label>Drop</label>
                 <onclick>Skin.Reset(Channel3_Focus_Zoom)</onclick>
 		<onclick>Skin.ToggleSetting(Channel3_Focus_Drop)</onclick>
+		<onclick>ReplaceWindow(videolibrary)</onclick>
 		<selected>Skin.HasSetting(Channel3_Focus_Drop)</selected>
 		<include>radiobutton_circle</include>
 		<visible>Control.IsVisible(902)</visible>

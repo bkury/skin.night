@@ -177,22 +177,13 @@
 			<label>$LOCALIZE[208] $LOCALIZE[561]</label> <!-- Play File -->
 			<icon>-</icon>
 			<onclick>Skin.Reset(PlayFile)</onclick>
-			<onclick>Skin.SetFile(PlayFile)</onclick>
+			<onclick>Skin.SetBool(PlayFileDialog)</onclick>
+			<onclick condition="!isEmpty(Skin.String(PlayFilePath))">Skin.SetFile(PlayFile,,$INFO[Skin.String(PlayFilePath)] )</onclick>
+			<onclick condition="isEmpty(Skin.String(PlayFilePath))">Skin.SetFile(PlayFile)</onclick>
+			<onclick>Skin.Reset(PlayFileDialog)</onclick>
 			<onclick condition="!isEmpty(Skin.String(PlayFile))">PlayMedia($ESCINFO[Skin.String(PlayFile)])</onclick>
-			<onclick>Skin.Reset(PlayFile)</onclick>
 			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(PLEX_Home_PlayFile)</visible>
 		</item>
-
-		<!--<item>
-			<label>Update Weather</label>
-			<icon>-</icon>
-			<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/openweathermap/current?day=weather&amp;title=OpenWeatherUpdate)</onclick>
-			<onclick>Skin.SetString(Weather_Location,$INFO[ListItem(0).Label])</onclick>
-			<onclick>Skin.SetString(Weather_Icon,$INFO[ListItem(0).Icon])</onclick>
-			<onclick>Skin.SetString(Weather_Condition,$INFO[ListItem(1).Label])</onclick>
-			<onclick>Skin.SetString(Weather_Temperature,$INFO[ListItem(2).Label])</onclick>
-			<onclick>ActivateWindow(home)</onclick>
-		</item>-->
 	</content>
 </include>
 
@@ -250,11 +241,38 @@
 </include>
 <include name="Submenu_Navigation_Content">
 	<content>
+		<!-- User (PLEX) -->
+		<item>
+			<label>Switch User</label> <!-- Switch User -->
+			<onclick>XBMC.ActivateWindow(selectuser)</onclick>
+			<onclick>Dialog.Close(4998)</onclick>
+			<visible>!Skin.HasSetting(XBMC) + System.IsSignedIn + System.UserIsInHome</visible>
+		</item>
+		<item>
+			<label>Sign in</label> <!-- Sign In -->
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>Plex.ActivateWindow(plexlogin)</onclick>
+			<visible>!Skin.HasSetting(XBMC) + !System.IsSignedIn</visible>
+		</item>
+		<!-- Preferences -->
 		<item>
 			<label>31000</label> <!-- Preferences -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>XBMC.ActivateWindow(settings)</onclick>
 		</item>
+		<item>
+			<label> $LOCALIZE[41000] </label><!-- Openelc Settings -->
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>RunAddon(service.openelec.settings)</onclick>
+			<visible>!Skin.HasSetting(XBMC) + System.isSystem(openelec) + !System.UserIsRestricted</visible>
+		</item>
+		<item>
+			<label> $LOCALIZE[41001] </label> <!-- Rasplex Settings -->
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>XBMC.ActivateWindow(10208)</onclick>
+			<visible>!Skin.HasSetting(XBMC) + System.isSystem(rasplex) + !System.UserIsRestricted</visible>
+		</item>
+		<!-- Other -->
 		<item>
 			<label>19040</label> <!-- Timer -->
 			<onclick>ActivateWindow(3098)</onclick>
@@ -266,11 +284,11 @@
 			<visible>System.HasAlarm(alarm)</visible>
 		</item>
                 <item>
-                        <label>24001</label><!-- Addons -->
+			<label>24001</label><!-- Addons -->
 			<onclick>Dialog.Close(4998)</onclick>
-                        <onclick condition="!System.Platform.Android">ActivateWindow(AddonBrowser,return)</onclick>
-                        <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
-                        <visible>Skin.HasSetting(XBMC) + !Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+			<onclick condition="!System.Platform.Android">ActivateWindow(AddonBrowser,return)</onclick>
+			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+			<visible>Skin.HasSetting(XBMC) + !Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
                 </item>
 		<item>
 			<label>31003</label> <!-- Search -->
@@ -852,11 +870,11 @@
 </include>
 
 <include name="Home_Horizontal_Bottom_Background">
-	<posy>540</posy>
+	<posy>580</posy>
 </include>
 
 <include name="Home_Horizontal_Bottom">
-	<posy>550</posy>
+	<posy>590</posy>
 </include>
 
 </includes>
