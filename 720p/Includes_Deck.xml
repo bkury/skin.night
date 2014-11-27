@@ -166,6 +166,23 @@
 		</control>
 	</include>
 
+	<!-- Addons (Mouse) -->
+	<include name="Deck_Addons_Fixed">
+		<control type="fixedlist" id="11013">
+			<include>Deck_Content</include>
+			<content>
+				<include>Deck_Addons_Items</include>
+			</content>
+		</control>
+	</include>
+	<include name="Deck_Addons_List">
+		<control type="list" id="11013">
+			<include>Deck_Content</include>
+			<content>
+				<include>Deck_Addons_Items</include>
+			</content>
+		</control>
+	</include>
 
 <!-- END Mouse Support -->
 
@@ -182,16 +199,14 @@
         <animation effect="slide" end="0,216" condition="[ Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel) ] + !Skin.HasSetting(Deck_Images_Small) + !Skin.HasSetting(Deck_Images_Large) + !Skin.HasSetting(Deck_Images_xLarge)">Conditional</animation>
 
 	<!-- Horizontal Home -->
-	<animation effect="slide" end="10,-140" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom) + !Skin.HasSetting(Deck_Hide)">Conditional</animation>
-	<animation effect="slide" end="10,130" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom) + !Skin.HasSetting(Deck_Hide)">Conditional</animation>
+	<animation effect="slide" end="10,-140" condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom)">Conditional</animation>
+	<animation effect="slide" end="10,130" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom)">Conditional</animation>
+	<animation effect="slide" end="0,-720" condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Deck_Hide) + !ControlGroup(5000).hasFocus">Conditional</animation>
 
 	<!-- Compact Home -->
-	<animation effect="slide" end="10,280" condition="Skin.HasSetting(Home_Panel) + !Skin.HasSetting(Deck_Hide)">Conditional</animation>
-	<animation effect="slide" end="10,720" condition="Skin.HasSetting(Home_Panel) + Skin.HasSetting(Deck_Hide)">Conditional</animation>
-
+	<animation effect="slide" end="10,280" condition="Skin.HasSetting(Home_Panel)">Conditional</animation>
+	<animation effect="slide" end="0,720" condition="Skin.HasSetting(Home_Panel) + Skin.HasSetting(Deck_Hide) + !ControlGroup(5000).hasFocus">Conditional</animation>
 </include>
-
-
 
 <!-- Home Deck (CONTENT) -->
 <include name="Deck_OnDeck_Content">
@@ -272,6 +287,10 @@
 
 <include name="Deck_FavouritesPlex_Content">
 	<visible>!Skin.HasSetting(XBMC) + Container(300).hasFocus(18)</visible>
+</include>
+
+<include name="Deck_Addons_Content">
+	<visible>System.isOpenPHT + Container(300).hasFocus(14)</visible>
 </include>
 
 <!-- Home Deck -->
@@ -556,6 +575,26 @@
 			<!-- List -->
 			<include condition="system.getbool(input.enablemouse)">Deck_FavouritesPlex_List</include>
 			<include condition="!system.getbool(input.enablemouse)">Deck_FavouritesPlex_Fixed</include>
+		</control>
+
+		<!-- Addons (OpenPHT/XBMC) -->
+		<control type="group">
+			<include>Deck_Addons_Content</include>
+			<include>Animation_CommonFade_Deck</include>
+
+			<control type="label">
+				<include>Deck_Name</include>
+				<label>$LOCALIZE[24001]</label><!-- Addons -->
+			</control>
+			<include>Deck_Placeholder_11013</include>
+		</control>
+		<control type="group">
+			<include>Deck_Addons_Content</include>
+			<include>Animation_CommonFade</include>
+
+			<!-- List -->
+			<include condition="system.getbool(input.enablemouse)">Deck_Addons_List</include>
+			<include condition="!system.getbool(input.enablemouse)">Deck_Addons_Fixed</include>
 		</control>
 
 		<!-- Live TV (Next Aired) -->
@@ -1244,14 +1283,41 @@
 
 <!-- Deck Refresh Workaround -->
 <include name="Refresh_Workaround">
+	<include condition="Skin.HasSetting(Deck_Images_Overlay)">Refresh_Workaround_Foobar</include>
+	<include condition="Skin.HasSetting(Deck_Images_Rating)">Refresh_Workaround_Foobar</include>
 	<include condition="Skin.HasSetting(Deck_Images_Small)">Refresh_Workaround_Foobar</include>
 	<include condition="Skin.HasSetting(Deck_Images_xLarge)">Refresh_Workaround_Foobar</include>
 	<include condition="!Skin.HasSetting(Deck_Images_Small) + !Skin.HasSetting(Deck_Images_xLarge)">Refresh_Workaround_Foobar</include>
 </include>
 
 <include name="Refresh_Workaround_Foobar">
-	<description>Workaround</description>
+	<description>Force Refresh Workaround</description>
+</include>
+
+<include name="Deck_Addons_Items">
+	<item>
+		<label>157</label>
+		<icon>-</icon>
+		<!--<onclick>ActivateWindow(Videos,Addons,return)</onclick>-->
+		<onclick>ActivateWindow(VideoFiles,Addons,return)</onclick>
+	</item>
+	<item>
+		<label>2</label>
+		<icon>-</icon>
+		<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+	</item>
+	<item>
+		<label>1</label>
+		<icon>-</icon>
+		<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+	</item>
+	<item>
+		<label>0</label>
+		<icon>-</icon>
+		<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+	</item>
 </include>
 
 </includes>
+
 

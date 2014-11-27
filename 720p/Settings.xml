@@ -99,16 +99,9 @@
 				</focusedlayout>
 				<content>
 					<item id="105">
-						<label>XBMC</label> <!-- XBMC Settings -->
+						<label>$VAR[Var_Client]</label> <!-- XBMC/PLEX/OPENPHT -->
 						<label2>5</label2>
 						<onclick>-</onclick>
-						<visible>Skin.HasSetting(XBMC)</visible>
-					</item>
-					<item id="106">
-						<label>PLEX</label> <!-- PLEX Settings -->
-						<label2>5</label2>
-						<onclick>-</onclick>
-						<visible>!Skin.HasSetting(XBMC)</visible>
 					</item>
 					<item id="110">
 						<label>128</label> <!-- General -->
@@ -1365,7 +1358,16 @@
 					</control>
 					<control type="radiobutton" id="4095">
 						<include>skin_settings_labels</include>
+						<label>Enable Overlays</label>
+						<onclick>Skin.Reset(Deck_Images_Rating)</onclick>
+						<onclick>Skin.ToggleSetting(Deck_Images_Overlay)</onclick>
+						<selected>Skin.HasSetting(Deck_Images_Overlay)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="4098">
+						<include>skin_settings_labels</include>
 						<label>Enable Ratings</label>
+						<onclick>Skin.Reset(Deck_Images_Overlay)</onclick>
 						<onclick>Skin.ToggleSetting(Deck_Images_Rating)</onclick>
 						<selected>Skin.HasSetting(Deck_Images_Rating)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
@@ -1862,7 +1864,7 @@
 						<textcolor>white</textcolor>
 						<texturenofocus>-</texturenofocus>
 						<include>skin_settings_labels</include>
-						<visible>Skin.HasSetting(XBMC)</visible>
+						<visible>Skin.HasSetting(XBMC) | System.isOpenPHT</visible>
 					</control>
 					<control type="button" id="8040">
 						<label>Video</label>
@@ -1898,7 +1900,7 @@
 						<textcolor>white</textcolor>
 						<texturenofocus>-</texturenofocus>
 						<include>skin_settings_labels</include>
-						<visible>Skin.HasSetting(XBMC)</visible>
+						<visible>Skin.HasSetting(XBMC) | System.isOpenPHT</visible>
 					</control>
 					<control type="button" id="8080">
 						<label>24001</label>
@@ -1907,7 +1909,7 @@
 						<textcolor>white</textcolor>
 						<texturenofocus>-</texturenofocus>
 						<include>skin_settings_labels</include>
-						<visible>Skin.HasSetting(XBMC)</visible>
+						<visible>Skin.HasSetting(XBMC) | System.isOpenPHT</visible>
 					</control>
 					<control type="button" id="8090">
 						<label>14036</label>

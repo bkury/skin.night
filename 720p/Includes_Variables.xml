@@ -488,10 +488,13 @@
 	<variable name="Var_Overlay_Image">
 		<value condition="!Skin.HasSetting(overlay_count) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + [ Container.Content(tvshows) | Container.Content(seasons) ]">OverlayCount.png</value>
 		<value condition="Container.Content(movies) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
+		<value condition="ListItem.Type(movie) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(homemovies) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
+		<value condition="ListItem.Type(homemovie) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(tvshows) + !Skin.HasSetting(overlay_tvshows">$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(seasons) + !Skin.HasSetting(overlay_seasons)">$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(episodes) + !Skin.HasSetting(overlay_episodes)">$INFO[ListItem.Overlay]</value>
+		<value condition="ListItem.Type(episode) + !Skin.HasSetting(overlay_episodes)">$INFO[ListItem.Overlay]</value>
 		<value condition="ListItem.Type(clip)">$INFO[ListItem.Overlay]</value>
 	</variable>
 	<variable name="Var_Overlay_Label">
@@ -500,11 +503,16 @@
 
 	<!-- Overlay (Rating) -->
 	<variable name="Var_Overlay_Rating_Label">
-		<value condition="Skin.hasSetting(Deck_Images_Rating) + !isEmpty(ListItem.StarRating) + [ ListItem.Type(movie) | ListItem.Type(episode) ]">$INFO[ListItem.Rating]</value>
+		<value condition="!isEmpty(ListItem.Rating) + !isEmpty(ListItem.StarRating) + [ ListItem.Type(movie) | ListItem.Type(episode) ]">$INFO[ListItem.Rating]</value>
 	</variable>
 	<variable name="Var_Overlay_Rating_Image">
-		<value condition="Skin.HasSetting(Deck_Images_Rating) + !isEmpty(ListItem.StarRating) + [ ListItem.Type(movie) | ListItem.Type(episode) ]">OverlayCount.png</value>
+		<value condition="!isEmpty(ListItem.Rating) + !isEmpty(ListItem.StarRating) + [ ListItem.Type(movie) | ListItem.Type(episode) ]">OverlayCount.png</value>
 	</variable>
 
+	<variable name="Var_Client">
+		<value condition="System.isOpenPHT">OpenPHT</value>
+		<value condition="Skin.HasSetting(XBMC)">KODI</value>
+		<value>PLEX</value>
+	</variable>
 </includes>
 

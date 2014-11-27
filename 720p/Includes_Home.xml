@@ -72,7 +72,6 @@
 </include>
 <include name="Home_Navigation_Content">
 	<content>
-   
 		<!-- Shared Content -->
 		<item>
 			<label>[COLOR=mainblue][/COLOR]</label>
@@ -137,6 +136,22 @@
 			<thumb>-</thumb>
 			<property name="HomeMenuSection">Main Menu</property>
 			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal)</visible>
+                </item>
+		<!-- Addons -->
+                <item id="14">
+                        <label>$LOCALIZE[24001]</label>
+                        <onclick>ActivateWindow(addons)</onclick>
+                        <icon>-</icon>
+                        <thumb>-</thumb>
+                        <visible>System.isOpenPHT</visible>
+                </item>
+		<!-- Weather -->
+                <item id="19">
+                        <label>8</label>
+                        <onclick>ActivateWindow(Weather)</onclick>
+                        <icon>-</icon>
+                        <thumb>-</thumb>
+                        <visible>System.isOpenPHT + !IsEmpty(Weather.Plugin)</visible>
                 </item>
 		<!-- Now Playing -->
 		<item id="17">
@@ -261,7 +276,7 @@
 			<onclick>XBMC.ActivateWindow(settings)</onclick>
 		</item>
 		<item>
-			<label> $LOCALIZE[41000] </label><!-- Openelc Settings -->
+			<label> $LOCALIZE[41000] </label><!-- Openelec Settings -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>RunAddon(service.openelec.settings)</onclick>
 			<visible>!Skin.HasSetting(XBMC) + System.isSystem(openelec) + !System.UserIsRestricted</visible>
@@ -283,13 +298,6 @@
 			<onclick>CancelAlarm(Alarm)</onclick>
 			<visible>System.HasAlarm(alarm)</visible>
 		</item>
-                <item>
-			<label>24001</label><!-- Addons -->
-			<onclick>Dialog.Close(4998)</onclick>
-			<onclick condition="!System.Platform.Android">ActivateWindow(AddonBrowser,return)</onclick>
-			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
-			<visible>Skin.HasSetting(XBMC) + !Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-                </item>
 		<item>
 			<label>31003</label> <!-- Search -->
 			<onclick>Dialog.Close(4998)</onclick>
@@ -297,11 +305,24 @@
 			<visible>Skin.HasSetting(HomeMenuNoSearchButton)</visible>
 		</item>
 		<item>
-			<label>31004</label> <!-- Channel Store -->
+			<label>$LOCALIZE[1024] $LOCALIZE[31017]</label> <!-- Browse Channels / Channel Store -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
 			<visible>![Skin.HasSetting(Hide_ChannelDirectory) | Skin.HasSetting(XBMC)]</visible>
 		</item>
+                <item>
+			<label>$LOCALIZE[1024] $LOCALIZE[24001]</label><!-- Browse Addons -->
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>ActivateWindow(AddonBrowser)</onclick>
+			<visible>System.isOpenPHT + !Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+                </item>
+                <item>
+			<label>$LOCALIZE[1024] $LOCALIZE[24001]</label><!-- Browse Addons -->
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick condition="!System.Platform.Android">ActivateWindow(AddonBrowser,return)</onclick>
+			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+			<visible>Skin.HasSetting(XBMC) + !Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+                </item>
 		<item>
 			<label>31005</label> <!-- Quit -->
 			<onclick>Dialog.Close(4998)</onclick>

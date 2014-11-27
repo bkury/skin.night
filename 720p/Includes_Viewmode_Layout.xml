@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Tue Nov 25 17:21:57 CET 2014 -->
+<!-- Thu Nov 27 15:34:41 CET 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -36420,12 +36420,17 @@
 					<wrapmultiline>false</wrapmultiline>
 					<label>$VAR[Var_Viewmode_Label]</label>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>89</posx>
 					<posy>113</posy>
-					<include>viewtype_overlay_rating_Small</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Small</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>89</posx>
+					<posy>113</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Small</include>
 				</control>
 	</control>
 	<control type="group">
@@ -36443,12 +36448,17 @@
 					<aligny>center</aligny>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>94</posx>
 					<posy>133</posy>
-					<include>viewtype_overlay_rating_Small</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Small</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>94</posx>
+					<posy>133</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Small</include>
 				</control>
 	</control>
 	<control type="group">
@@ -36482,10 +36492,9 @@
 				</control>
 				<!-- Overlays (Rating) -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>94</posx>
 					<posy>91</posy>
-					<include>viewtype_overlay_rating_Small</include>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Small</include>
 				</control>
 	</control>
 	</itemlayout>
@@ -36519,12 +36528,17 @@
 					<wrapmultiline>false</wrapmultiline>
 					<label>$VAR[Var_Viewmode_Label]</label>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>139</posx>
 					<posy>184</posy>
-					<include>viewtype_overlay_rating_Medium</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Medium</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>139</posx>
+					<posy>184</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Medium</include>
 				</control>
 	</control>
 	<control type="group">
@@ -36542,12 +36556,17 @@
 					<aligny>center</aligny>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>146</posx>
 					<posy>208</posy>
-					<include>viewtype_overlay_rating_Medium</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Medium</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>146</posx>
+					<posy>208</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Medium</include>
 				</control>
 	</control>
 	<control type="group">
@@ -36581,10 +36600,9 @@
 				</control>
 				<!-- Overlays (Rating) -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>146</posx>
 					<posy>153</posy>
-					<include>viewtype_overlay_rating_Medium</include>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Medium</include>
 				</control>
 	</control>
 	</itemlayout>
@@ -36618,12 +36636,17 @@
 					<wrapmultiline>false</wrapmultiline>
 					<label>$VAR[Var_Viewmode_Label]</label>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>288</posx>
 					<posy>395</posy>
-					<include>viewtype_overlay_rating_xLarge</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_xLarge</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>288</posx>
+					<posy>395</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_xLarge</include>
 				</control>
 	</control>
 	<control type="group">
@@ -36641,12 +36664,17 @@
 					<aligny>center</aligny>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>299</posx>
 					<posy>424</posy>
-					<include>viewtype_overlay_rating_xLarge</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_xLarge</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>299</posx>
+					<posy>424</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_xLarge</include>
 				</control>
 	</control>
 	<control type="group">
@@ -36680,10 +36708,9 @@
 				</control>
 				<!-- Overlays (Rating) -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>299</posx>
 					<posy>335</posy>
-					<include>viewtype_overlay_rating_xLarge</include>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_xLarge</include>
 				</control>
 	</control>
 	</itemlayout>
@@ -36718,12 +36745,17 @@
 					<wrapmultiline>false</wrapmultiline>
 					<label>$VAR[Var_Viewmode_Label]</label>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>89</posx>
 					<posy>113</posy>
-					<include>viewtype_overlay_rating_Small</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Small</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>89</posx>
+					<posy>113</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Small</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -36764,12 +36796,17 @@
 					<aligny>center</aligny>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>94</posx>
 					<posy>133</posy>
-					<include>viewtype_overlay_rating_Small</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Small</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>94</posx>
+					<posy>133</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Small</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -36827,10 +36864,9 @@
 				</control>
 				<!-- Overlays (Rating) -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>94</posx>
 					<posy>91</posy>
-					<include>viewtype_overlay_rating_Small</include>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Small</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -36888,12 +36924,17 @@
 					<wrapmultiline>false</wrapmultiline>
 					<label>$VAR[Var_Viewmode_Label]</label>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>139</posx>
 					<posy>184</posy>
-					<include>viewtype_overlay_rating_Medium</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Medium</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>139</posx>
+					<posy>184</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Medium</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -36934,12 +36975,17 @@
 					<aligny>center</aligny>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>146</posx>
 					<posy>208</posy>
-					<include>viewtype_overlay_rating_Medium</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_Medium</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>146</posx>
+					<posy>208</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Medium</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -36997,10 +37043,9 @@
 				</control>
 				<!-- Overlays (Rating) -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>146</posx>
 					<posy>153</posy>
-					<include>viewtype_overlay_rating_Medium</include>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_Medium</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -37058,12 +37103,17 @@
 					<wrapmultiline>false</wrapmultiline>
 					<label>$VAR[Var_Viewmode_Label]</label>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>288</posx>
 					<posy>395</posy>
-					<include>viewtype_overlay_rating_xLarge</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_xLarge</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>288</posx>
+					<posy>395</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_xLarge</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -37104,12 +37154,17 @@
 					<aligny>center</aligny>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
-				<!-- Overlays (Rating) -->
+				<!-- Overlays -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>299</posx>
 					<posy>424</posy>
-					<include>viewtype_overlay_rating_xLarge</include>
+					<include condition="Skin.HasSetting(Deck_Images_Overlay)">viewtype_overlay_xLarge</include>
+				</control>
+				<!-- Overlays (Rating) -->
+				<control type="group">
+					<posx>299</posx>
+					<posy>424</posy>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_xLarge</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
@@ -37167,10 +37222,9 @@
 				</control>
 				<!-- Overlays (Rating) -->
 				<control type="group">
-					<visible>!isEmpty(ListItem.Rating)</visible>
 					<posx>299</posx>
 					<posy>335</posy>
-					<include>viewtype_overlay_rating_xLarge</include>
+					<include condition="Skin.hasSetting(Deck_Images_Rating)">viewtype_overlay_rating_xLarge</include>
 				</control>
 <!--Focus-->			<!-- Play Overlay -->
 <!--Focus-->			<control type="group">
