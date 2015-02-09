@@ -1788,4 +1788,211 @@
 		</control>
 	</include>
 
+	<include name="UserSwitchLoginKbButton">
+		<font>Viewmode_Font_Large</font>
+		<width>50</width>
+		<height>40</height>
+		<textoffsetx>20</textoffsetx>
+		<textcolor>white</textcolor>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>mask-userswitch-kb-button.png</texturenofocus>
+		<focusedcolor>black</focusedcolor>
+	</include>
+	<include name="UserSwitchLoginKbButtonZero">
+		<font>Viewmode_Font_Large</font>
+		<width>152</width>
+		<height>40</height>
+		<textoffsetx>71</textoffsetx>
+		<textcolor>white</textcolor>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>mask-userswitch-kb-zero.png</texturenofocus>
+		<focusedcolor>black</focusedcolor>
+	
+	</include>
+	<include name="KbPIN">
+		<control type="group">
+			<control type="grouplist" id="500">
+				<!--<visible allowhiddenfocus="true">ControlGroup(500).HasFocus</visible>-->
+				<itemgap>1</itemgap>
+				<width>1280</width>
+				<height>200</height>
+				<onup>3</onup>
+				<orientation>horizontal</orientation>
+				<!-- Column 1 -->
+				<control type="grouplist" id="490">
+					<itemgap>1</itemgap>
+					<width>152</width>
+					<height>163</height>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<!-- Row 1 -->
+					<control type="grouplist" id="491">
+						<itemgap>1</itemgap>
+						<width>152</width>
+						<height>40</height>
+						<onright>23</onright>
+						<onleft>490</onleft>
+						<align>center</align>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="button" id="11">
+							<description>'1' button</description>
+							<onleft>23</onleft>
+							<onright>501</onright>
+							<onup>3</onup>
+							<ondown>14</ondown>
+							<label>$LOCALIZE[12311]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+						<control type="button" id="12">
+							<description>'2' button</description>
+							<onleft>501</onleft>
+							<onright>501</onright>
+							<onup>3</onup>
+							<ondown>15</ondown>
+							<label>$LOCALIZE[12312]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+						<control type="button" id="13">
+							<description>'3' button</description>
+							<onleft>501</onleft>
+							<onright>23</onright>
+							<onup>3</onup>
+							<ondown>16</ondown>
+							<label>$LOCALIZE[12313]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+					</control>
+					<!-- Row 2 -->
+					<control type="grouplist" id="492">
+						<itemgap>1</itemgap>
+						<width>152</width>
+						<height>40</height>
+						<onright>23</onright>
+						<onleft>490</onleft>
+						<align>center</align>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="button" id="14">
+							<description>'4' button</description>
+							<onleft>23</onleft>
+							<onright>15</onright>
+							<onup>11</onup>
+							<ondown>17</ondown>
+							<label>$LOCALIZE[12314]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+						<control type="button" id="15">
+							<description>'5' button</description>
+							<onleft>14</onleft>
+							<onright>16</onright>
+							<onup>12</onup>
+							<ondown>18</ondown>
+							<label>$LOCALIZE[12315]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+						<control type="button" id="16">
+							<description>'6' button</description>
+							<onleft>15</onleft>
+							<onright>23</onright>
+							<onup>13</onup>
+							<ondown>19</ondown>
+							<label>$LOCALIZE[12316]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+					</control>
+					<!-- Row 3 -->
+					<control type="grouplist" id="493">
+						<itemgap>1</itemgap>
+						<width>152</width>
+						<height>40</height>
+						<onright>23</onright>
+						<onleft>490</onleft>
+						<align>center</align>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="button" id="17">
+							<description>'7' button</description>
+							<onleft>23</onleft>
+							<onright>503</onright>
+							<onup>14</onup>
+							<ondown>10</ondown>
+							<label>$LOCALIZE[12317]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+						<control type="button" id="18">
+							<description>'8' button</description>
+							<onleft>503</onleft>
+							<onright>503</onright>
+							<onup>15</onup>
+							<ondown>10</ondown>
+							<label>$LOCALIZE[12318]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+						<control type="button" id="19">
+							<description>'9' button</description>
+							<onleft>503</onleft>
+							<onright>23</onright>
+							<onup>16</onup>
+							<ondown>10</ondown>
+							<label>$LOCALIZE[12319]</label>
+							<include>UserSwitchLoginKbButton</include>
+						</control>
+					</control>
+					<!-- Row 4 -->
+					<control type="grouplist" id="494">
+						<itemgap>1</itemgap>
+						<width>152</width>
+						<height>40</height>
+						<onright>23</onright>
+						<onleft>490</onleft>
+						<align>center</align>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="button" id="10">
+							<description>'0' button</description>
+							<width>152</width>
+							<onleft>19</onleft>
+							<onright>17</onright>
+							<onup>493</onup>
+							<ondown>3</ondown>
+							<label>$LOCALIZE[12310]</label>
+							<include>UserSwitchLoginKbButtonZero</include>
+						</control>
+					</control>
+				</control>
+				
+				<!-- Backspace -->
+				<control type="button" id="23">
+					<width>51</width>
+					<height>163</height>
+					<onleft>490</onleft>
+					<onright>3</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<label>$LOCALIZE[20181]</label>
+					<font>Viewmode_Font_Large</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textwidth>163</textwidth>
+					<angle>270</angle>
+					<textcolor>white</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>mask-userswitch-kb-delete.png</texturenofocus>
+				</control>
+
+			</control>				
+
+			<!-- Edit Text -->
+			<control type="image">
+				<posy>164</posy>
+				<width>204</width>
+				<height>29.5</height>
+				<texture>mask-userswitch-kb-delete.png</texture>
+			</control>
+			
+		</control>
+		
+	</include>
 </includes>
