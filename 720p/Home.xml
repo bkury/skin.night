@@ -8,11 +8,7 @@
 	<onload condition="Skin.HasSetting(XBMC)">SetProperty(SkinWidgets_RandomItems_Update,true)</onload>
 	<onload condition="Skin.HasSetting(XBMC) + System.HasAddon(plugin.video.plexbmc)">RunScript(plugin.video.plexbmc,amberskin,nocat)</onload>
 
-	<!-- PLEX (OpenWeatherMap) -->
-	<onload condition="Skin.HasSetting(Weather_Widget) + Skin.HasSetting(Weather_Update)">XBMC.ActivateWindow(MyVideoFiles,plexserver://best:32400/video/openweathermap/current?day=weather&amp;title=OpenWeatherMapUpdate)</onload>
-
-	<include condition="!Skin.HasSetting(Weather_Widget)">Animation_CommonFade_600</include>
-	<include condition="Skin.HasSetting(Weather_Widget)">Animation_CommonFade_600_Weather</include>
+	<include>Animation_CommonFade_600</include>
 
 	<controls>
 
@@ -97,7 +93,7 @@
 		<!-- Deck Custom Background -->
 		<control type="group">
 			<visible>[!isEmpty(Skin.String(Deck_Single)) | !isEmpty(Skin.String(Deck_Multi))]</visible>
-			<visible>ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus | ControlGroup(7005).HasFocus | ControlGroup(7006).HasFocus | ControlGroup(7007).HasFocus | ControlGroup(7008).HasFocus | ControlGroup(7009).HasFocus</visible>
+			<visible>Control.hasFocus(11000) | Control.hasFocus(11001) | Control.hasFocus(11002) | Control.hasFocus(11003) | Control.hasFocus(11004) | Control.hasFocus(11005) | Control.hasFocus(11006) | Control.hasFocus(11007) | Control.hasFocus(11008) | Control.hasFocus(11009) | Control.hasFocus(11012)</visible>
 			<include>Deck_Custom</include>
 		</control>
 

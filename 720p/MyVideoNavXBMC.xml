@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="4900">
+	<onload condition="Skin.HasSetting(XBMC) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
+	<onload condition="Skin.HasSetting(XBMC) + System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+
+	<include>Viewmode_Navigation</include>
+</window>

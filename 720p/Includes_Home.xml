@@ -128,6 +128,9 @@
 		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_Plexbmc</include>
 		<include condition="Skin.HasSetting(XBMC)">XBMC_HomeMenu_More</include>
 
+		<!-- OpenPHT -->
+		<include condition="System.isOpenPHT">OpenPHT_HomeMenu_Content</include>
+
 		<!-- Main Menu -->
 		<item>
 			<label>[COLOR=mainblue][/COLOR]</label>
@@ -135,23 +138,15 @@
 			<icon>-</icon>
 			<thumb>-</thumb>
 			<property name="HomeMenuSection">Main Menu</property>
-			<visible>!Skin.HasSetting(XBMC) + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal)</visible>
+			<visible>!Skin.HasSetting(XBMC) + !System.isOpenPHT + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal)</visible>
                 </item>
-		<!-- Addons -->
-                <item id="14">
-                        <label>$LOCALIZE[24001]</label>
-                        <onclick>ActivateWindow(addons)</onclick>
-                        <icon>-</icon>
-                        <thumb>-</thumb>
-                        <visible>System.isOpenPHT</visible>
-                </item>
-		<!-- Weather -->
-                <item id="19">
-                        <label>8</label>
-                        <onclick>ActivateWindow(Weather)</onclick>
-                        <icon>-</icon>
-                        <thumb>-</thumb>
-                        <visible>System.isOpenPHT + !IsEmpty(Weather.Plugin)</visible>
+		<item>
+			<label>[COLOR=mainblue][/COLOR]</label>
+			<onclick>noop</onclick>
+			<icon>-</icon>
+			<thumb>-</thumb>
+			<property name="HomeMenuSection">PLEX</property>
+			<visible>System.isOpenPHT + Skin.HasSetting(Home_Menu_Section) + !Skin.HasSetting(Home_Horizontal)</visible>
                 </item>
 		<!-- Now Playing -->
 		<item id="17">
@@ -276,13 +271,13 @@
 			<onclick>XBMC.ActivateWindow(settings)</onclick>
 		</item>
 		<item>
-			<label> $LOCALIZE[41000] </label><!-- Openelec Settings -->
+			<label>OpenELEC</label><!-- Openelec Settings -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>RunAddon(service.openelec.settings)</onclick>
 			<visible>!Skin.HasSetting(XBMC) + System.isSystem(openelec) + !System.UserIsRestricted</visible>
 		</item>
 		<item>
-			<label> $LOCALIZE[41001] </label> <!-- Rasplex Settings -->
+			<label>Precaching</label> <!-- Rasplex Settings -->
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>XBMC.ActivateWindow(10208)</onclick>
 			<visible>!Skin.HasSetting(XBMC) + System.isSystem(rasplex) + !System.UserIsRestricted</visible>
@@ -322,6 +317,12 @@
 			<onclick condition="!System.Platform.Android">ActivateWindow(AddonBrowser,return)</onclick>
 			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
 			<visible>Skin.HasSetting(XBMC) + !Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+                </item>
+                <item>
+			<label>$LOCALIZE[7]</label><!-- Filemanager -->
+			<onclick>Dialog.Close(4998)</onclick>
+			<onclick>ActivateWindow(filemanager)</onclick>
+			<visible>Skin.HasSetting(XBMC) | System.isOpenPHT</visible>
                 </item>
 		<item>
 			<label>31005</label> <!-- Quit -->

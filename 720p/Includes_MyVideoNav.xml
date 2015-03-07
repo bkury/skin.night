@@ -1401,7 +1401,7 @@
 			<control type="button" id="3500">
 				<posy>-10</posy>
 				<width>600</width>
-				<label>31025</label><!-- Next Viewmode -->
+				<label>$LOCALIZE[31025]</label><!-- Next Viewmode -->
 				<textoffsetx>0</textoffsetx>
 				<align>center</align>
 				<font>font16caps</font>
@@ -1412,7 +1412,7 @@
 				<onright>3540</onright>
 				<include>skin_settings_dialog</include>
 			</control>
-    
+
 			<!-- List -->
 			<control type="grouplist" id="3510">
 				<posx>0</posx>

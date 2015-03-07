@@ -575,6 +575,7 @@
 	</include>
 
 	<include name="Weather_Widget">
+
 		<control type="group">
 			<visible>Skin.HasSetting(Weather_Widget) + ![ Player.hasAudio | Player.hasVideo ]</visible>
 			<posx>1190</posx>
@@ -583,29 +584,32 @@
 			<control type="image">
 				<width>80</width>
 				<height>80</height>
-				<texture>$INFO[Skin.String(Weather_Icon)]</texture>
+				<texture>$INFO[Weather.Conditions]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="label">
-				<posx>-10</posx>
-				<posy>14</posy>
-				<width>300</width>
-				<height>40</height>
-				<align>right</align>
-				<font>Font_Time_Global</font>
-				<textcolor>FFCCCCCC</textcolor>
-				<label>$INFO[Skin.String(Weather_Condition)]</label>
-			</control>
-			<control type="label">
-				<posx>-10</posx>
-				<posy>44</posy>
-				<width>300</width>
-				<height>40</height>
-				<align>right</align>
-				<font>Font_Date</font>
-				<textcolor>FFCCCCCC</textcolor>
-				<label>$INFO[Skin.String(Weather_Temperature)]</label>
+			<control type="group">
+				<visible>!isEmpty(Window(Weather).Property(Current.Condition))</visible>
+				<control type="label">
+					<posx>-10</posx>
+					<posy>14</posy>
+					<width>300</width>
+					<height>40</height>
+					<align>right</align>
+					<font>Font_Time_Global</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+				</control>
+				<control type="label">
+					<posx>-10</posx>
+					<posy>44</posy>
+					<width>300</width>
+					<height>40</height>
+					<align>right</align>
+					<font>Font_Date</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -3091,7 +3095,7 @@
 		<control type="group">
 			<posx>1220</posx>
 			<posy>660</posy>
-			<visible>![ Player.HasAudio | Player.HasVideo ]</visible>
+			<animation effect="slide" end="-600,0" condition="Skin.HasSetting(Weather_Widget) | Player.HasAudio | Player.HasVideo">Conditional</animation>
 
 			<control type="image">
 				<width>50</width>
@@ -3118,6 +3122,7 @@
 				<aligny>center</aligny>
 				<font>Font_Date</font>
 				<textcolor>white</textcolor>
+				<visible>![ Skin.HasSetting(Weather_Widget) | Player.HasAudio | Player.HasVideo ]</visible>
 			</control>
 		</control>
         

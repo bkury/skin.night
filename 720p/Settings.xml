@@ -684,18 +684,19 @@
 					<control type="image" id="2020">
 						<include>settings_separator</include>
 					</control>
-					<control type="radiobutton" id="2025">
-						<include>skin_settings_labels</include>
-						<label>Disable Home Clock</label>
-						<onclick>Skin.ToggleSetting(NoHomeClock)</onclick>
-						<selected>Skin.HasSetting(NoHomeClock)</selected>
-					</control>
 					<control type="radiobutton" id="2030">
 						<description>Home Big Clock</description>
 						<include>skin_settings_labels</include>
 						<label>Enable Big Clock</label>
 						<onclick>Skin.ToggleSetting(home_bigclock)</onclick>
 						<selected>Skin.HasSetting(home_bigclock)</selected>
+					</control>
+					<control type="radiobutton" id="2035">
+						<include>skin_settings_labels</include>
+						<label>Enable Weather Widget</label>
+						<onclick>Skin.ToggleSetting(Weather_Widget)</onclick>
+						<selected>Skin.HasSetting(Weather_Widget)</selected>
+						<visible>Skin.HasSetting(XBMC) | System.isOpenPHT</visible>
 					</control>
 					<control type="radiobutton" id="2040">
 						<description>Servername</description>
@@ -706,11 +707,17 @@
 					</control>
 					<control type="radiobutton" id="2045">
 						<include>skin_settings_labels</include>
+						<label>Disable Home Clock</label>
+						<onclick>Skin.ToggleSetting(NoHomeClock)</onclick>
+						<selected>Skin.HasSetting(NoHomeClock)</selected>
+					</control>
+					<control type="radiobutton" id="2050">
+						<include>skin_settings_labels</include>
 						<label>Disable User Avatar</label>
 						<onclick>Skin.ToggleSetting(NoUserAvatar)</onclick>
 						<selected>Skin.HasSetting(NoUserAvatar)</selected>
 					</control>
-					<control type="radiobutton" id="2050">
+					<control type="radiobutton" id="2055">
 						<description>Disable Submenu Navigation Arrow</description>
 						<include>skin_settings_labels</include>
 						<label>Disable Submenu Arrow</label>
@@ -1036,6 +1043,17 @@
 					<control type="image" id="3110">
 						<include>settings_separator</include>
 					</control>
+
+					<!-- OpenPHT -->
+					<control type="radiobutton" id="3111">
+						<include>skin_settings_labels_half</include>
+						<label>Enable XBMC Libraries (BETA)</label>
+						<onclick>Skin.ToggleSetting(XBMC_Library)</onclick>
+						<selected>Skin.HasSetting(XBMC_Library)</selected>
+						<visible>System.isOpenPHT</visible>
+					</control>
+
+					<!-- PHT -->
 					<control type="radiobutton" id="3112">
 						<include>skin_settings_labels_half</include>
 						<label>Enable Category Headers</label>
@@ -1060,6 +1078,51 @@
 						<onclick>Skin.ToggleSetting(PLEX_Home_NoFavourites)</onclick>
 						<selected>Skin.HasSetting(PLEX_Home_NoFavourites)</selected>
 					</control>
+
+					<!-- OpenPHT -->
+					<control type="radiobutton" id="3121">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[3]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoVideos)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoVideos)</selected>
+						<visible>System.isOpenPHT + Skin.HasSetting(XBMC_Library)</visible>
+					</control>
+					<control type="radiobutton" id="3122">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[31009]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoMovies)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoMovies)</selected>
+						<visible>System.isOpenPHT + Skin.HasSetting(XBMC_Library)</visible>
+					</control>
+					<control type="radiobutton" id="3123">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[31010]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoTvShows)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoTvShows)</selected>
+						<visible>System.isOpenPHT + Skin.HasSetting(XBMC_Library)</visible>
+					</control>
+					<control type="radiobutton" id="3124">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[2]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoMusic)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoMusic)</selected>
+						<visible>System.isOpenPHT + Skin.HasSetting(XBMC_Library)</visible>
+					</control>
+					<control type="radiobutton" id="3125">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[1]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoPictures)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoPictures)</selected>
+						<visible>System.isOpenPHT + Skin.HasSetting(XBMC_Library)</visible>
+					</control>
+					<control type="radiobutton" id="3126">
+						<include>skin_settings_labels_half</include>
+						<label>Hide $LOCALIZE[24001]</label>
+						<onclick>Skin.ToggleSetting(XBMC_Home_NoAddons)</onclick>
+						<selected>Skin.HasSetting(XBMC_Home_NoAddons)</selected>
+						<visible>System.isOpenPHT</visible>
+					</control>
+
 
 					<!-- Submenu Settings -->
 					<control type="label" id="3130">
@@ -1235,16 +1298,6 @@
 					<!-- PLEX Custom Addons -->
 					<include condition="!Skin.HasSetting(XBMC)">Home_Extension_Settings</include> <!-- 3300 -->
         
-					<!-- PLEX Weather Widget -->
-					<control type="radiobutton" id="3499">
-						<include>skin_settings_labels_half</include>
-						<label>Weather Widget (!!! BETA !!!)</label>
-						<onclick>Skin.ToggleSetting(Weather_Widget)</onclick>
-						<onclick>Skin.SetBool(Weather_Update)</onclick>
-						<selected>Skin.HasSetting(Weather_Widget)</selected>
-						<visible>!Skin.HasSetting(XBMC)</visible>
-					</control>
-
 					<!-- XBMC Custom Home -->
 					<include condition="Skin.HasSetting(XBMC)">XBMC_Home_Custom_Settings</include> <!-- 3500 -->
 

@@ -88,10 +88,11 @@
 
 	<!-- Preplay Screen -->
 	<control type="group">
-		<visible>![ Container.Content(movie) + Skin.HasSetting(preplay_off_movie) |
-			    Container.Content(episode) + Skin.HasSetting(preplay_off_episode) |
-			    Container.Content(clip) + Skin.HasSetting(preplay_off_clip) ]
-		</visible>
+
+		<visible>![
+		[ [ Window.Previous(home) | Window.Previous(videolibrary) | Window.Previous(51) | Window.Previous(99) ] + [ Container.Content(movie) + Skin.HasSetting(preplay_off_movie) | Container.Content(episode) + Skin.HasSetting(preplay_off_episode) | Container.Content(clip) + Skin.HasSetting(preplay_off_clip) ] ] |
+		[ ![ Window.Previous(home) | Window.Previous(videolibrary) | Window.Previous(51) | Window.Previous(99) ] + [ Container.Content(movie) + Skin.HasSetting(preplay_after_movie) | Container.Content(episode) + Skin.HasSetting(preplay_after_episode) | Container.Content(clip) + Skin.HasSetting(preplay_after_clip) ] ]
+		]</visible>
 
 		<!-- Header -->
 		<include>dialog_header_preplay</include>

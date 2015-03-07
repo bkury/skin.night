@@ -1,5 +1,5 @@
 <!-- Generated XML File -->
-<!-- Thu Nov 27 15:34:41 CET 2014 -->
+<!-- Mon Dec  1 18:45:11 CET 2014 -->
 <includes>
 <!-- List1 -->
 <include name="Viewmode_List1_Itemlayout">
@@ -9712,6 +9712,68 @@
         <!-- Square -->
         <control type="group">
 		<visible>! [ Container(11012).ListItem.Type(movie) | Container(11012).ListItem.Type(episode) + !Skin.hasSetting(Deck_Images_EpisodeThumb) | StringCompare(Container(11012).ListItem.Property(type),Cover) ]</visible>
+		<include>Placeholder_Square_Label_xLarge</include>
+        </control>
+</include>
+<include name="Deck_Placeholder_11013">
+	<include condition="Skin.HasSetting(Deck_Images_Small)">Deck_Placeholder_11013_Small</include>
+	<include condition="Skin.HasSetting(Deck_Images_xLarge)">Deck_Placeholder_11013_xLarge</include>
+	<include condition="!Skin.HasSetting(Deck_Images_Small) + !Skin.HasSetting(Deck_Images_xLarge)">Deck_Placeholder_11013_Medium</include>
+</include>
+<include name="Deck_Placeholder_11013_Small">
+	<!-- Labels -->
+	<control type="group">
+		<visible>Container(11013).ListItem.Type(movie) + !Skin.HasSetting(Deck_Images_Label_NoMovies) | Container(11013).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_Label_NoTvShows) + !Skin.hasSetting(Deck_Images_EpisodeThumb) | StringCompare(Container(11013).ListItem.Property(type),Cover)</visible>
+		<include>Placeholder_Poster_Label_Small</include>
+	</control>
+
+	<!-- No Labels -->
+	<control type="group">
+		<visible>Container(11013).ListItem.Type(movie) + Skin.HasSetting(Deck_Images_Label_NoMovies) | Container(11013).ListItem.Type(episode) + Skin.HasSetting(Deck_Images_Label_NoTvShows) + !Skin.hasSetting(Deck_Images_EpisodeThumb)</visible>
+		<include>Placeholder_Poster_NoLabel_Small</include>
+	</control>
+
+        <!-- Square -->
+        <control type="group">
+		<visible>! [ Container(11013).ListItem.Type(movie) | Container(11013).ListItem.Type(episode) + !Skin.hasSetting(Deck_Images_EpisodeThumb) | StringCompare(Container(11013).ListItem.Property(type),Cover) ]</visible>
+		<include>Placeholder_Square_Label_Small</include>
+        </control>
+</include>
+<include name="Deck_Placeholder_11013_Medium">
+	<!-- Labels -->
+	<control type="group">
+		<visible>Container(11013).ListItem.Type(movie) + !Skin.HasSetting(Deck_Images_Label_NoMovies) | Container(11013).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_Label_NoTvShows) + !Skin.hasSetting(Deck_Images_EpisodeThumb) | StringCompare(Container(11013).ListItem.Property(type),Cover)</visible>
+		<include>Placeholder_Poster_Label_Medium</include>
+	</control>
+
+	<!-- No Labels -->
+	<control type="group">
+		<visible>Container(11013).ListItem.Type(movie) + Skin.HasSetting(Deck_Images_Label_NoMovies) | Container(11013).ListItem.Type(episode) + Skin.HasSetting(Deck_Images_Label_NoTvShows) + !Skin.hasSetting(Deck_Images_EpisodeThumb)</visible>
+		<include>Placeholder_Poster_NoLabel_Medium</include>
+	</control>
+
+        <!-- Square -->
+        <control type="group">
+		<visible>! [ Container(11013).ListItem.Type(movie) | Container(11013).ListItem.Type(episode) + !Skin.hasSetting(Deck_Images_EpisodeThumb) | StringCompare(Container(11013).ListItem.Property(type),Cover) ]</visible>
+		<include>Placeholder_Square_Label_Medium</include>
+        </control>
+</include>
+<include name="Deck_Placeholder_11013_xLarge">
+	<!-- Labels -->
+	<control type="group">
+		<visible>Container(11013).ListItem.Type(movie) + !Skin.HasSetting(Deck_Images_Label_NoMovies) | Container(11013).ListItem.Type(episode) + !Skin.HasSetting(Deck_Images_Label_NoTvShows) + !Skin.hasSetting(Deck_Images_EpisodeThumb) | StringCompare(Container(11013).ListItem.Property(type),Cover)</visible>
+		<include>Placeholder_Poster_Label_xLarge</include>
+	</control>
+
+	<!-- No Labels -->
+	<control type="group">
+		<visible>Container(11013).ListItem.Type(movie) + Skin.HasSetting(Deck_Images_Label_NoMovies) | Container(11013).ListItem.Type(episode) + Skin.HasSetting(Deck_Images_Label_NoTvShows) + !Skin.hasSetting(Deck_Images_EpisodeThumb)</visible>
+		<include>Placeholder_Poster_NoLabel_xLarge</include>
+	</control>
+
+        <!-- Square -->
+        <control type="group">
+		<visible>! [ Container(11013).ListItem.Type(movie) | Container(11013).ListItem.Type(episode) + !Skin.hasSetting(Deck_Images_EpisodeThumb) | StringCompare(Container(11013).ListItem.Property(type),Cover) ]</visible>
 		<include>Placeholder_Square_Label_xLarge</include>
         </control>
 </include>

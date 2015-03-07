@@ -746,6 +746,11 @@
 			<size>24</size>
 		</font>
 
+		<font>
+			<name>Regular-30</name>
+			<filename>alaska_black.ttf</filename>
+			<size>36</size>
+		</font>
 
 	</fontset>
 </fonts>

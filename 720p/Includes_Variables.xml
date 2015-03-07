@@ -471,6 +471,8 @@
 	</variable>
 
 	<variable name="Var_Viewmode_List_TextMain_2">
+		<value condition="[ Window.isVisible(addonbrowser) | Container.Content(Addons) ] + !IsEmpty(ListItem.Property(Addon.broken))">[COLOR=TextDisabled]$LOCALIZE[24098][/COLOR]</value>
+		<value condition="[ Window.isVisible(addonbrowser) | Container.Content(Addons) ]">$INFO[ListItem.Property(Addon.Status)]</value>
 		<value condition="!isEmtpy(ListItem.Date)">$INFO[ListItem.Date]</value>
 	</variable>
 
@@ -491,7 +493,7 @@
 		<value condition="ListItem.Type(movie) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(homemovies) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
 		<value condition="ListItem.Type(homemovie) + !Skin.HasSetting(overlay_movies)">$INFO[ListItem.Overlay]</value>
-		<value condition="Container.Content(tvshows) + !Skin.HasSetting(overlay_tvshows">$INFO[ListItem.Overlay]</value>
+		<value condition="Container.Content(tvshows) + !Skin.HasSetting(overlay_tvshows)">$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(seasons) + !Skin.HasSetting(overlay_seasons)">$INFO[ListItem.Overlay]</value>
 		<value condition="Container.Content(episodes) + !Skin.HasSetting(overlay_episodes)">$INFO[ListItem.Overlay]</value>
 		<value condition="ListItem.Type(episode) + !Skin.HasSetting(overlay_episodes)">$INFO[ListItem.Overlay]</value>

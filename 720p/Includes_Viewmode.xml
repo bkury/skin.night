@@ -7,14 +7,6 @@
 	<onload>Skin.SetString(selector1,$INFO[Container.ViewMode])</onload>
 	<onunload>Skin.Reset(selector1)</onunload>
 	<onunload>Skin.Reset(selector2)</onunload>
-	<!-- OpenWeatherMap Widget -->
-	<onload condition="Skin.HasSetting(Weather_Widget) + !Skin.HasSetting(Weather_Update)">Skin.SetBool(Weather_Update)</onload>
-	<onload condition="Skin.HasSetting(Weather_Widget) + StringCompare(Container.SecondTitle,OpenWeatherMapUpdate)">Skin.Reset(Weather_Update)</onload>
-        <onload condition="Skin.HasSetting(Weather_Widget) + StringCompare(Container.SecondTitle,OpenWeatherMapUpdate)">ActivateWindow(home)</onload>
-	<onunload condition="Skin.HasSetting(Weather_Widget) + StringCompare(Container.SecondTitle,OpenWeatherMapUpdate)">Skin.SetString(Weather_Location,$INFO[ListItem(0).Label])</onunload>
-	<onunload condition="Skin.HasSetting(Weather_Widget) + StringCompare(Container.SecondTitle,OpenWeatherMapUpdate)">Skin.SetString(Weather_Icon,$INFO[ListItem(0).Icon])</onunload>
-	<onunload condition="Skin.HasSetting(Weather_Widget) + StringCompare(Container.SecondTitle,OpenWeatherMapUpdate)">Skin.SetString(Weather_Condition,$INFO[ListItem(1).Label])</onunload>
-	<onunload condition="Skin.HasSetting(Weather_Widget) + StringCompare(Container.SecondTitle,OpenWeatherMapUpdate)">Skin.SetString(Weather_Temperature,$INFO[ListItem(2).Label])</onunload>
 
 	<views>100,110,120,200,210,220,300,310,320,400,410,420,500,550</views>
 	<include condition="Skin.HasSetting(Deck_NoAnimation)">Animation_CommonFade_600</include>
@@ -22,7 +14,8 @@
 
 		<control type="group">
 			<!--<visible>!isEmpty(ListItem.Label)</visible>-->
-			<animation effect="fade" start="100" end="0" time="0" condition="isEmpty(ListItem.Label)">Conditional</animation>
+			<!--<animation effect="fade" start="100" end="0" time="0" condition="isEmpty(ListItem.Label)">Conditional</animation>-->
+			<animation effect="fade" start="100" end="0" time="0" condition="StringCompare(Container.NumItems,0)">Conditional</animation>
 
 	   		<!-- Default Background -->
 			<control type="group">
@@ -90,7 +83,8 @@
 
 		<!-- No Content -->
 		<control type="group">
-			<visible>isEmpty(ListItem.Label) + !Skin.HasSetting(XBMC)</visible>
+			<!--<visible>isEmpty(ListItem.Label) + !Skin.HasSetting(XBMC)</visible>-->
+			<visible>StringCompare(Container.NumItems,0) + !Skin.HasSetting(XBMC)</visible>
 			<include>Animation_CommonFade_600_Delay</include>
 
 			<control type="image">
@@ -129,13 +123,6 @@
 				<textcolor>FFCCCCCC</textcolor>
 			</control>
 
-		</control>
-
-		<!-- OpenWeatherMap -->
-		<control type="image">
-			<include>background_default</include>
-			<texture>nav_black.png</texture>
-			<visible>StringCompare(Container.SecondTitle,OpenWeatherMapUpdate)</visible>
 		</control>
 
 	</controls>

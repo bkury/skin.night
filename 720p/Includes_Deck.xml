@@ -1297,23 +1297,22 @@
 <include name="Deck_Addons_Items">
 	<item>
 		<label>157</label>
-		<icon>-</icon>
-		<!--<onclick>ActivateWindow(Videos,Addons,return)</onclick>-->
-		<onclick>ActivateWindow(VideoFiles,Addons,return)</onclick>
+		<icon>movies_folder.png</icon>
+		<onclick>ActivateWindow(videolibraryxbmc,Addons,return)</onclick>
 	</item>
 	<item>
 		<label>2</label>
-		<icon>-</icon>
-		<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
+		<icon>music_folder.png</icon>
+		<onclick>ActivateWindow(musicfilesxbmc,Addons,return)</onclick>
 	</item>
 	<item>
 		<label>1</label>
-		<icon>-</icon>
-		<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		<icon>pictures_folder.png</icon>
+		<onclick>ActivateWindow(picturesxbmc,Addons,return)</onclick>
 	</item>
 	<item>
 		<label>0</label>
-		<icon>-</icon>
+		<icon>programs_folder.png</icon>
 		<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 	</item>
 </include>
