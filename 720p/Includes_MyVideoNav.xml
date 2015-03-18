@@ -151,8 +151,7 @@
 
 					<!-- Play All -->
 					<control type="group">
-						<posx>50</posx>
-						<animation effect="slide" end="20" condition="![Player.hasAudio | Player.hasVideo]">Conditional</animation>
+						<posx>55</posx>
 						<control type="image">
 							<width>26</width>
 							<height>26</height>
@@ -178,7 +177,6 @@
 					<!-- Shuffle All -->
 					<control type="group">
 						<posx>100</posx>
-						<animation effect="slide" end="20" condition="![Player.hasAudio | Player.hasVideo]">Conditional</animation>
 						<control type="image">
 							<width>26</width>
 							<height>26</height>
@@ -201,29 +199,23 @@
 		                                </control>
 					</control>
 
-					<!-- Fullscreen -->
+					<!-- ContextMenu (Filter/Sort) -->
 					<control type="group">
-						<visible>Player.hasAudio | Player.hasVideo</visible>
+						<posx>145</posx>
 						<posy>2</posy>
-						<posx>150</posx>
 						<control type="image">
-							<width>22</width>
+							<width>26</width>
 							<height>22</height>
-							<texture>b-fullscreen.png</texture>
+							<texture>nav_context.png</texture>
 							<colordiffuse>FFDDDDDD</colordiffuse>
-							<animation type="Conditional" reversible="false" condition="true" loop="true">
-								<effect type="fade" start="20" end="100" time="1500" delay="0" loop="true" reversible="false" />
-								<effect type="fade" start="100" end="20" time="1500" delay="1500" loop="true" reversible="false" />
-							</animation>
 						</control>
 						<control type="button" id="492">
-		                                        <width>22</width>
+		                                        <width>26</width>
 		                                        <height>22</height>
-							<texturefocus>b-fullscreen.png</texturefocus>
-							<texturenofocus>b-fullscreen.png</texturenofocus>
+							<texturefocus>nav_context.png</texturefocus>
+							<texturenofocus>nav_context.png</texturenofocus>
 							<colordiffuse>mainblue</colordiffuse>
-							<onclick>SetFocus(100)</onclick>
-		                                        <onclick>fullscreen</onclick>
+							<onclick>SetFocus(7001)</onclick>
 							<onleft>491</onleft>
 							<onright>498</onright>
 							<ondown>100</ondown>
