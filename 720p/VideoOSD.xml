@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
+	<onload condition="Skin.HasSetting(OSD_Quick)">SetFocus(800)</onload>
+	<onload condition="Skin.HasSetting(OSD_Quick)">Skin.Reset(OSD_Quick)</onload>
 	<onload>Skin.Reset(OSD_Hide)</onload>
 	<onunload>Skin.Reset(OSD_Hide)</onunload>
-	<include>Animation_CommonFade_600</include>
-	<!--<defaultcontrol always="true">200</defaultcontrol>-->
-	<defaultcontrol always="true">712</defaultcontrol>
+	<!--<include>Animation_CommonFade_600</include>-->
+	<defaultcontrol always="true">742</defaultcontrol>
+
 	<controls>
 
 	<!-- OSD Hide -->
@@ -52,6 +54,8 @@
 	</control>
 
 	<control type="group">
+		<include>Animation_CommonFade_600</include>
+		<visible>![ ControlGroup(800).HasFocus | Skin.HasSetting(OSD_Quick) ]</visible>
 		<animation effect="fade" start="100" end="0" time="600" condition="Skin.HasSetting(OSD_Hide)">Conditional</animation>
 
 		<!-- TOP BAR -->
@@ -133,22 +137,22 @@
                                         <width>78</width>
                                         <height>30</height>
                                         <texture>b-pp-rate.png</texture>
-					<visible>!Control.HasFocus(722)</visible>
+					<visible>!Control.HasFocus(700)</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
                                 </control>
-				<control type="button" id="722">
+				<control type="button" id="700">
 					<posx>-22</posx>
 					<posy>-2</posy>
 					<width>78</width>
 					<height>30</height>
 					<texturefocus>b-pp-rate.png</texturefocus>
 					<texturenofocus>b-pp-rate.png</texturenofocus>
-					<onleft>719</onleft>
-					<onright>720</onright>
+					<onleft>770</onleft>
+					<onright>710</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<ondown>SetFocus(800)</ondown>
 					<onclick>ActivateWindow(125)</onclick>
-					<visible allowhiddenfocus="true">Control.HasFocus(722)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(700)</visible>
 					<colordiffuse>mainblue</colordiffuse>
 				</control>
 				<control type="label">
@@ -160,7 +164,7 @@
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
-					<visible>Control.HasFocus(722) | !Control.HasFocus(722)</visible>
+					<visible>Control.HasFocus(700) | !Control.HasFocus(700)</visible>
 					<align>center</align>
 				</control>
 			</control>
@@ -173,22 +177,22 @@
 					<width>26</width>
 					<height>24</height>
 					<texture>b-audio2.png</texture>
-					<visible>!Control.HasFocus(720)</visible>
+					<visible>!Control.HasFocus(710)</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
 				</control>
-				<control type="button" id="720">
+				<control type="button" id="710">
 					<width>26</width>
 					<height>24</height>
 					<texturefocus>b-audio2.png</texturefocus>
 					<texturenofocus>b-audio2.png</texturenofocus>
-					<onleft>722</onleft>
-					<onright>721</onright>
+					<onleft>700</onleft>
+					<onright>720</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<ondown>SetFocus(800)</ondown>
 					<include condition="Skin.HasSetting(XBMC)">XBMC_Audio_Click</include>
 					<onclick>ActivateWindow(10205)</onclick>
-					<visible allowhiddenfocus="true">Control.HasFocus(720)</visible>
 					<colordiffuse>mainblue</colordiffuse>
+					<visible allowhiddenfocus="true">Control.HasFocus(710)</visible>
 				</control>
 				<control type="label">
 					<posy>25</posy>
@@ -200,12 +204,12 @@
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
-					<visible>Control.HasFocus(720) | !Control.HasFocus(720)</visible>
+					<visible>Control.HasFocus(710) | !Control.HasFocus(710)</visible>
 					<align>center</align>
 				</control>
 			</control>
 
-			<!-- SUBTITLE SELECTION -->
+			<!-- Subtitle (Select) -->
 			<control type="group">
 				<posy>16</posy>
 				<posx>410</posx>
@@ -214,23 +218,25 @@
 					<width>26</width>
 					<height>24</height>
 					<texture>b-subtitles.png</texture>
-					<visible>!Control.HasFocus(721)</visible>
+					<visible>!Control.HasFocus(720)</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
+					<animation effect="slide" end="-20" condition="System.isOpenPHT | Skin.HasSetting(XBMC)">conditional</animation>
 				</control>
-				<control type="button" id="721">
+				<control type="button" id="720">
 					<posy>0</posy>
 					<width>26</width>
 					<height>24</height>
 					<texturefocus>b-subtitles.png</texturefocus>
 					<texturenofocus>b-subtitles.png</texturenofocus>
-					<onleft>720</onleft>
-					<onright>710</onright>
+					<onleft>710</onleft>
+					<onright>730</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<ondown>SetFocus(800)</ondown>
 					<include condition="Skin.HasSetting(XBMC)">XBMC_Subtitle_Click</include>
 					<onclick>ActivateWindow(10204)</onclick>
-					<visible allowhiddenfocus="true">Control.HasFocus(721)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(720)</visible>
 					<colordiffuse>mainblue</colordiffuse>
+					<animation effect="slide" end="-20" condition="System.isOpenPHT | Skin.HasSetting(XBMC)">conditional</animation>
 				</control>
 				<control type="label">
 					<posy>25</posy>
@@ -242,13 +248,43 @@
 					<font>Font_Bartowski_Preplay</font>
 					<textcolor>FFDDDDDD</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
-					<visible>Control.HasFocus(721) | !Control.HasFocus(721)</visible>
+					<visible>Control.HasFocus(720) | !Control.HasFocus(720)</visible>
 					<align>center</align>
 				</control>
 			</control>
 
+			<!-- Subtitle (Download) -->
+			<control type="group">
+				<posy>16</posy>
+				<posx>430</posx>
+				<visible>System.isOpenPHT | Skin.HasSetting(XBMC)</visible>
+
+				<control type="image">
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<texture>nav_download.png</texture>
+					<visible>!Control.HasFocus(730)</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="button" id="730">
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<texturefocus>nav_download.png</texturefocus>
+					<texturenofocus>nav_download.png</texturenofocus>
+					<onleft>720</onleft>
+					<onright>740</onright>
+					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
+					<ondown>SetFocus(800)</ondown>
+					<onclick>RunScript(script.openpht.subtitles)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(730)</visible>
+					<colordiffuse>mainblue</colordiffuse>
+				</control>
+			</control>
+
 			<!-- Controls -->
-			<control type="group" id="200">
+			<control type="group">
 				<posx>270</posx>
 				<posy>5</posy>
 
@@ -259,22 +295,22 @@
 					<width>42</width>
 					<height>22</height>
 					<texture>b-rewind.png</texture>
-					<visible>!Control.HasFocus(710)</visible>
+					<visible>!Control.HasFocus(740)</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
 				</control>
-				<control type="button" id="710">
+				<control type="button" id="740">
 					<posy>13</posy>
 					<posx>280</posx>
 					<width>42</width>
 					<height>22</height>
 					<texturefocus>b-rewind.png</texturefocus>
 					<texturenofocus>b-rewind.png</texturenofocus>
-					<onleft>721</onleft>
-					<onright>711</onright>
+					<onleft>730</onleft>
+					<onright>741</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<ondown>SetFocus(800)</ondown>
 					<onclick>PlayerControl(SmallSkipBackward)</onclick>
-					<visible allowhiddenfocus="true">Control.HasFocus(710)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(740)</visible>
 					<colordiffuse>mainblue</colordiffuse>
 				</control>
 
@@ -285,22 +321,22 @@
 					<width>24</width>
 					<height>24</height>
 					<texture>b-stop2.png</texture>
-					<visible>!Control.HasFocus(711)</visible>
+					<visible>!Control.HasFocus(741)</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
 				</control>
-				<control type="button" id="711">
+				<control type="button" id="741">
 					<posy>12</posy>
 					<posx>340</posx>
 					<width>24</width>
 					<height>24</height>
 					<texturefocus>b-stop2.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<onleft>710</onleft>
-					<onright>712</onright>
+					<onleft>740</onleft>
+					<onright>742</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<ondown>SetFocus(800)</ondown>
 					<onclick>PlayerControl(Stop)</onclick>
-					<visible allowhiddenfocus="true">Control.HasFocus(711)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(741)</visible>
 					<colordiffuse>mainblue</colordiffuse>
 				</control>
 
@@ -311,7 +347,7 @@
 					<width>20</width>
 					<height>22</height>
 					<texture>b-pause2.png</texture>
-					<visible>!Control.HasFocus(712) + !Player.Paused</visible>
+					<visible>!Control.HasFocus(742) + !Player.Paused</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
 				</control>
 				<control type="image">
@@ -320,10 +356,10 @@
 					<width>20</width>
 					<height>22</height>
 					<texture>b-play2.png</texture>
-					<visible>!Control.HasFocus(712) + Player.Paused</visible>
+					<visible>!Control.HasFocus(742) + Player.Paused</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
 				</control>
-				<control type="togglebutton" id="712">
+				<control type="togglebutton" id="742">
 					<posy>13</posy>
 					<posx>375</posx>
 					<width>20</width>
@@ -331,14 +367,12 @@
 					<texturefocus>b-pause2.png</texturefocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<alttexturefocus>b-play2.png</alttexturefocus>
-					<onleft>711</onleft>
-					<onright>713</onright>
-					<!--<onup>200</onup>
-					<ondown>200</ondown>-->
+					<onleft>741</onleft>
+					<onright>743</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<ondown>SetFocus(800)</ondown>
 					<onclick>PlayerControl(Play)</onclick>
-					<visible allowhiddenfocus="true">Control.HasFocus(712)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(742)</visible>
 					<colordiffuse>mainblue</colordiffuse>
 				</control>
 
@@ -349,22 +383,22 @@
 					<width>42</width>
 					<height>22</height>
 					<texture>b-forward.png</texture>
-					<visible>!Control.HasFocus(713)</visible>
+					<visible>!Control.HasFocus(743)</visible>
 					<colordiffuse>FFDDDDDD</colordiffuse>
 				</control>
-				<control type="button" id="713">
+				<control type="button" id="743">
 					<posy>13</posy>
 					<posx>415</posx>
 					<width>42</width>
 					<height>22</height>
 					<texturefocus>b-forward.png</texturefocus>
 					<texturenofocus>b-forward.png</texturenofocus>
-					<onleft>712</onleft>
-					<onright>717</onright>
+					<onleft>742</onleft>
+					<onright>750</onright>
 					<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-					<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+					<ondown>SetFocus(800)</ondown>
 					<onclick>PlayerControl(SmallSkipForward)</onclick>
-					<visible allowhiddenfocus="true">Control.HasFocus(713)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(743)</visible>
 					<colordiffuse>mainblue</colordiffuse>
 				</control>
 
@@ -379,7 +413,7 @@
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
-						<visible>Player.Paused + Control.HasFocus(712)</visible>
+						<visible>Player.Paused + Control.HasFocus(742)</visible>
 						<align>center</align>
 					</control>
 					<control type="label">
@@ -389,7 +423,7 @@
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
-						<visible>!Player.Paused + Control.HasFocus(712)</visible>
+						<visible>!Player.Paused + Control.HasFocus(742)</visible>
 						<align>center</align>
 					</control>
 					<control type="label">
@@ -399,7 +433,7 @@
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
-						<visible>Control.HasFocus(710)</visible>
+						<visible>Control.HasFocus(740)</visible>
 						<align>center</align>
 					</control>
 					<control type="label">
@@ -409,7 +443,7 @@
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
-						<visible>Control.HasFocus(713)</visible>
+						<visible>Control.HasFocus(743)</visible>
 						<align>center</align>
 					</control>
 					<control type="label">
@@ -419,7 +453,7 @@
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
-						<visible>Control.HasFocus(711)</visible>
+						<visible>Control.HasFocus(741)</visible>
 						<align>center</align>
 					</control>
 				</control>
@@ -432,20 +466,20 @@
 						<width>21</width>
 						<height>25</height>
 						<texture>b-audio.png</texture>
-						<visible>!Control.HasFocus(717)</visible>
+						<visible>!Control.HasFocus(750)</visible>
 						<colordiffuse>FFDDDDDD</colordiffuse>
 					</control>
-					<control type="button" id="717">
+					<control type="button" id="750">
 						<width>21</width>
 						<height>25</height>
 						<texturefocus>b-audio.png</texturefocus>
 						<texturenofocus>b-audio.png</texturenofocus>
-						<onleft>713</onleft>
-						<onright>718</onright>
+						<onleft>743</onleft>
+						<onright>760</onright>
 						<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-						<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+						<ondown>SetFocus(800)</ondown>
 						<onclick>ActivateWindow(124)</onclick>
-						<visible allowhiddenfocus="true">Control.HasFocus(717)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(750)</visible>
 						<colordiffuse>mainblue</colordiffuse>
 					</control>
 					<control type="label">
@@ -457,7 +491,7 @@
 						<font>Font_Bartowski_Preplay</font>
 						<textcolor>FFDDDDDD</textcolor>
 						<shadowcolor>FF000000</shadowcolor>
-						<visible>Control.HasFocus(717) | !Control.HasFocus(717)</visible>
+						<visible>Control.HasFocus(750) | !Control.HasFocus(750)</visible>
 						<align>center</align>
 					</control>
 				</control>
@@ -470,20 +504,20 @@
 							<width>29</width>
 							<height>24</height>
 							<texture>b-video.png</texture>
-							<visible>!Control.HasFocus(718)</visible>
+							<visible>!Control.HasFocus(760)</visible>
 							<colordiffuse>FFDDDDDD</colordiffuse>
 						</control>
-						<control type="button" id="718">
+						<control type="button" id="760">
 							<width>29</width>
 							<height>24</height>
 							<texturefocus>b-video.png</texturefocus>
 							<texturenofocus>b-video.png</texturenofocus>
-							<onleft>717</onleft>
-							<onright>719</onright>
+							<onleft>750</onleft>
+							<onright>770</onright>
 							<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-							<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+							<ondown>SetFocus(800)</ondown>
 							<onclick>ActivateWindow(123)</onclick>
-							<visible allowhiddenfocus="true">Control.HasFocus(718)</visible>
+							<visible allowhiddenfocus="true">Control.HasFocus(760)</visible>
 							<colordiffuse>mainblue</colordiffuse>
 						</control>
 						<control type="label">
@@ -491,13 +525,12 @@
 							<posy>25</posy>
 							<width>128</width>
 							<height>24</height>
-							<!--<label>$LOCALIZE[31591]</label>-->
 							<label fallback="$LOCALIZE[31591]">[UPPERCASE]$INFO[VideoPlayer.VideoResolution][/UPPERCASE]p</label>
 							<font>Font_Bartowski_Preplay</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
 							<align>center</align>
-							<visible>Control.HasFocus(718) | !Control.HasFocus(718)</visible>
+							<visible>Control.HasFocus(760) | !Control.HasFocus(760)</visible>
 						</control>
 					</control>
 				</control>
@@ -506,38 +539,31 @@
 					<posy>10</posy>
 					<posx>750</posx>
 					<control type="group">
-						<!--<control type="image">
-							<width>29</width>
-							<height>24</height>
-							<texture>options_osd.png</texture>
-							<visible>!Control.HasFocus(719)</visible>
-							<colordiffuse>FFDDDDDD</colordiffuse>
-						</control>-->
 						<control type="image">
 							<posx>-26</posx>
 							<posy>-2</posy>
 							<width>76</width>
 							<height>28</height>
 							<texture>b-s-system.png</texture>
-							<visible>!Control.HasFocus(719)</visible>
+							<visible>!Control.HasFocus(770)</visible>
 							<colordiffuse>FFDDDDDD</colordiffuse>
 						</control>
-						<control type="button" id="719">
+						<control type="button" id="770">
 							<posx>-26</posx>
 							<posy>-2</posy>
 							<width>76</width>
 							<height>28</height>
 							<texturefocus>b-s-system.png</texturefocus>
 							<texturenofocus>b-s-system.png</texturenofocus>
-							<onleft>718</onleft>
-							<onright>722</onright>
+							<onleft>760</onleft>
+							<onright>700</onright>
 							<onup>Skin.ToggleSetting(OSD_Hide)</onup>
-							<ondown>Skin.ToggleSetting(OSD_Hide)</ondown>
+							<ondown>SetFocus(800)</ondown>
 							<onclick>Skin.SetString(selector1,OSD)</onclick>
 							<onclick>Skin.SetString(selector2,Options)</onclick>
 							<onclick>Skin.SetString(selector3,Default)</onclick>
 							<onclick>ActivateWindow(1120)</onclick>
-							<visible allowhiddenfocus="true">Control.HasFocus(719)</visible>
+							<visible allowhiddenfocus="true">Control.HasFocus(770)</visible>
 							<colordiffuse>mainblue</colordiffuse>
 						</control>
 						<!-- FULL OSD -->
@@ -550,7 +576,7 @@
 							<font>Font_Bartowski_Preplay</font>
 							<textcolor>FFDDDDDD</textcolor>
 							<shadowcolor>FF000000</shadowcolor>
-							<visible>!Control.HasFocus(719) | Control.HasFocus(719)</visible>
+							<visible>!Control.HasFocus(770) | Control.HasFocus(770)</visible>
 							<align>center</align>
 						</control>
 					</control>
@@ -604,8 +630,20 @@
 		<include>OSD_Labels</include>
 	</control>
 
+	<!-- OSD Bottom -->
 	<include>OSD_Bottom</include>
-
+                
 </control>
+
+<!-- Quick Access -->
+<control type="group">
+	<animation effect="fade" start="0" end="100" time="0">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+	<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+	<visible allowhiddenfocus="true">ControlGroup(800).HasFocus</visible>
+	<include>OSD_Quick</include>
+</control>
+
 </controls>
 </window>

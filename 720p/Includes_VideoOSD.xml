@@ -5,14 +5,10 @@
 <include name="OSD_Bottom">
 
 	<control type="group">
-        <!--<visible>![ Skin.String(osd_mode,auto) + !SubString(VideoPlayer.SubtitleStream,None) | Skin.String(osd_mode,minimal) | Skin.String(osd_mode,compact1) | Skin.String(osd_mode,compact2) | Skin.String(osd_mode,off)]</visible>-->
 
 		<!-- Plot -->
 		<control type="group">
 			<include>Animation_CommonFade_600</include>
-
-			<!--TEST-->
-			<!--<visible>!Skin.HasSetting(OSD_Plot) + ![ isEmpty(VideoPlayer.Plot) | Skin.String(osd_mode,Off) | Skin.String(osd_mode,Minimal) | Window.isVisible(125) | Skin.String(osd_mode,Auto) + !SubString(VideoPlayer.SubtitleStream,None) ]</visible>-->
 			<visible>!Skin.HasSetting(OSD_Plot) + ![ isEmpty(VideoPlayer.Plot) | Skin.String(osd_mode,Off) | Skin.String(osd_mode,Minimal) | Window.isVisible(125) | Skin.String(osd_mode,Auto) + !SubString(VideoPlayer.SubtitleStream,$LOCALIZE[231]) ]</visible>
 
                         <animation effect="slide" start="0,0" end="0,160" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Top)">Conditional</animation>
@@ -906,5 +902,310 @@
 	</control>
 </include>
 
+<!-- OSD Quick Access -->
+<include name="OSD_Quick">
+	<control type="group" id="800">
+		<posy>290</posy>
+
+		<!-- Background -->
+		<control type="group">
+			<posy>-25</posy>
+
+			<!-- Opacity Option -->
+			<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Quick_Opacity_Default</include>
+			<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Quick_Opacity</include>
+
+			<control type="image">
+				<posx>-5</posx>
+				<height>200</height>
+				<width>1290</width>
+				<texture border="10" flipy="true">base-rounded.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+			</control>
+			<control type="image">
+				<width>1280</width>
+				<height>0.5</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+			</control>
+			<control type="image">
+				<posy>200</posy>
+				<width>1280</width>
+				<height>0.5</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+			</control>
+		</control>
+
+		<!-- QUICK MENU (BUTTONS) -->
+		<control type="grouplist" id="801">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>100</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>90</itemgap>
+			<onup>100</onup>
+			<ondown>19000</ondown>
+
+			<!-- Aspect Ratio -->
+			<control type="button" id="810">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>nav_aspect_ratio.png</texturefocus>
+				<texturenofocus>nav_aspect_ratio.png</texturenofocus>
+				<colordiffuse>mainblue</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>AspectRatio</onclick>
+				<onclick>Skin.SetBool(OSD_Quick)</onclick>
+				<onclick>ActivateWindow(VideoOSD)</onclick>
+
+				<ondown>Dialog.Close(VideoOSD,true)</ondown>
+				<!--<ondown>AspectRatio</ondown>-->
+				<ondown>ZoomOut</ondown>
+				<ondown>Skin.SetBool(OSD_Quick)</ondown>
+				<ondown>ActivateWindow(VideoOSD)</ondown>
+
+				<onup>Dialog.Close(VideoOSD,true)</onup>
+				<!--<onup>AspectRatio</onup>-->
+				<onup>ZoomIn</onup>
+				<onup>Skin.SetBool(OSD_Quick)</onup>
+				<onup>ActivateWindow(VideoOSD)</onup>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="button" id="811">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>nav_audio_offset.png</texturefocus>
+				<texturenofocus>nav_audio_offset.png</texturenofocus>
+				<colordiffuse>mainblue</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>ActivateWindow(10205)</onclick>
+				<onclick>Skin.SetBool(OSD_Quick)</onclick>
+				<onclick>ActivateWindow(VideoOSD)</onclick>
+
+				<ondown>Dialog.Close(VideoOSD,true)</ondown>
+				<ondown>AudioDelayMinus</ondown>
+				<ondown>Skin.SetBool(OSD_Quick)</ondown>
+				<ondown>ActivateWindow(VideoOSD)</ondown>
+
+				<onup>Dialog.Close(VideoOSD,true)</onup>
+				<onup>AudioDelayPlus</onup>
+				<onup>Skin.SetBool(OSD_Quick)</onup>
+				<onup>ActivateWindow(VideoOSD)</onup>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="button" id="812">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>nav_subtitle_offset.png</texturefocus>
+				<texturenofocus>nav_subtitle_offset.png</texturenofocus>
+				<colordiffuse>mainblue</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>ActivateWindow(10204)</onclick>
+				<onclick>Skin.SetBool(OSD_Quick)</onclick>
+				<onclick>ActivateWindow(VideoOSD)</onclick>
+				<!--NextSubtitle-->
+
+				<ondown>Dialog.Close(VideoOSD,true)</ondown>
+				<ondown>SubtitleDelayMinus</ondown>
+				<ondown>Skin.SetBool(OSD_Quick)</ondown>
+				<ondown>ActivateWindow(VideoOSD)</ondown>
+
+				<onup>Dialog.Close(VideoOSD,true)</onup>
+				<onup>SubtitleDelayPlus</onup>
+				<onup>Skin.SetBool(OSD_Quick)</onup>
+				<onup>ActivateWindow(VideoOSD)</onup>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="button" id="813">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>nav_screenshot.png</texturefocus>
+				<texturenofocus>nav_screenshot.png</texturenofocus>
+				<colordiffuse>mainblue</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>TakeScreenshot</onclick>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="button" id="814">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>nav_info.png</texturefocus>
+				<texturenofocus>nav_info.png</texturenofocus>
+				<colordiffuse>mainblue</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>CodecInfo</onclick>
+				<onclick>Skin.SetBool(OSD_Quick)</onclick>
+				<onclick>ActivateWindow(VideoOSD)</onclick>
+
+				<ondown>Dialog.Close(VideoOSD,true)</ondown>
+				<ondown>DecreasePAR</ondown>
+				<ondown>Skin.SetBool(OSD_Quick)</ondown>
+				<ondown>ActivateWindow(VideoOSD)</ondown>
+
+				<onup>Dialog.Close(VideoOSD,true)</onup>
+				<onup>IncreasePAR</onup>
+				<onup>Skin.SetBool(OSD_Quick)</onup>
+				<onup>ActivateWindow(VideoOSD)</onup>
+			</control>
+
+		</control>
+
+		<!-- QUICK MENU (IMAGES) -->
+		<control type="grouplist" id="802">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>100</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>90</itemgap>
+
+			<!-- Aspect Ratio -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>nav_aspect_ratio.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(810)">Conditional</animation>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>nav_audio_offset.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(811)">Conditional</animation>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>nav_subtitle_offset.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(812)">Conditional</animation>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>nav_screenshot.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(813)">Conditional</animation>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>nav_info.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(814)">Conditional</animation>
+			</control>
+
+		</control>
+
+		<!-- QUICK MENU (LABELS) -->
+		<control type="grouplist" id="803">
+			<posx>0</posx>
+			<posy>96</posy>
+			<width>1280</width>
+			<height>60</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>20</itemgap>
+
+			<!-- Aspect Ratio -->
+			<control type="label">
+				<width>166</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_Filter</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>Aspect Ratio</label>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="label">
+				<width>166</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_Filter</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>$INFO[VideoPlayer.AudioStream]</label>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<width>166</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_Filter</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>$INFO[VideoPlayer.SubtitleStream]</label>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="label">
+				<width>166</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_Filter</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>Screenshot</label>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="label">
+				<width>166</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font_Filter</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>Codec Info</label>
+			</control>
+
+		</control>
+	</control>
+</include>
+
+<include name="OSD_Quick_Opacity_Default">
+        <animation effect="fade" start="0" end="60" time="0" delay="0">WindowOpen</animation>
+        <animation effect="fade" start="60" end="0" time="0" delay="0">WindowClose</animation>
+        <animation effect="fade" start="0" end="60" time="0" delay="0">Visible</animation>
+        <animation effect="fade" start="60" end="0" time="0" delay="0">Hidden</animation>
+</include>
+<include name="OSD_Quick_Opacity">
+        <include condition="Skin.String(OSD_Opacity,0)">background_opacity_0_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,10)">background_opacity_10_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,20)">background_opacity_20_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,30)">background_opacity_30_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,40)">background_opacity_40_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,50)">background_opacity_50_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,60)">background_opacity_60_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,70)">background_opacity_70_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,80)">background_opacity_80_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,90)">background_opacity_90_nodelay</include>
+        <include condition="Skin.String(OSD_Opacity,100)">background_opacity_100_nodelay</include>
+</include>
 
 </includes>

@@ -290,42 +290,42 @@
 				<label>31031</label><!-- Default -->
                                 <onclick>Skin.SetString(osd_mode,Default)</onclick>
 				<selected>Skin.String(osd_mode,Default)</selected>
-				<include>radiobutton_ticked</include>
+				<include>radiobutton_circle</include>
 			</control>
 			<control type="radiobutton" id="402">
 				<width>280</width>
 				<label>31032</label><!-- Top -->
                                 <onclick>Skin.SetString(osd_mode,Top)</onclick>
 				<selected>Skin.String(osd_mode,Top)</selected>
-				<include>radiobutton_ticked</include>
+				<include>radiobutton_circle</include>
 			</control>
 			<control type="radiobutton" id="403">
 				<width>280</width>
 				<label>31033</label><!-- Bottom -->
                                 <onclick>Skin.SetString(osd_mode,Bottom)</onclick>
 				<selected>Skin.String(osd_mode,Bottom)</selected>
-				<include>radiobutton_ticked</include>
+				<include>radiobutton_circle</include>
 			</control>
 			<control type="radiobutton" id="404">
 				<width>280</width>
 				<label>31034</label><!-- Minimal -->
                                 <onclick>Skin.SetString(osd_mode,Minimal)</onclick>
 				<selected>Skin.String(osd_mode,Minimal)</selected>
-				<include>radiobutton_ticked</include>
+				<include>radiobutton_circle</include>
 			</control>
 			<control type="radiobutton" id="405">
 				<width>280</width>
 				<label>31035</label><!-- Auto -->
                                 <onclick>Skin.SetString(osd_mode,Auto)</onclick>
 				<selected>Skin.String(osd_mode,Auto)</selected>
-				<include>radiobutton_ticked</include>
+				<include>radiobutton_circle</include>
 			</control>
 			<control type="radiobutton" id="406">
 				<width>280</width>
 				<label>31036</label><!-- Off -->
                                 <onclick>Skin.SetString(osd_mode,Off)</onclick>
 				<selected>Skin.String(osd_mode,Off)</selected>
-				<include>radiobutton_ticked</include>
+				<include>radiobutton_circle</include>
 			</control>
 
 		</control>

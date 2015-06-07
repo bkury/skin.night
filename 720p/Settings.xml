@@ -470,46 +470,77 @@
 				<control type="image" id="1220">
 					<include>settings_separator</include>
 				</control>
+
+				<!-- Notification (Navigating) -->
 				<control type="radiobutton" id="1230">
+					<textureradiofocus>scroll_down.png</textureradiofocus>
+					<textureradionofocus>scroll_down.png</textureradionofocus>
 					<include>skin_settings_labels</include>
-					<label>Disable All</label>
-					<onclick>Skin.ToggleSetting(DisableNotificationAll)</onclick>
-					<selected>Skin.HasSetting(DisableNotificationAll)</selected>
+					<label>Notification Style (Navigating)</label>
+					<onclick condition="!Skin.HasSetting(Notification_NoMedia_Bottom) + !Skin.HasSetting(Notification_NoMedia_Fullscreen) + !Skin.HasSetting(Notification_NoMedia_Disabled)">Skin.SetBool(Notification_NoMedia_Bottom)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_NoMedia_Bottom)">Skin.Reset(Notification_NoMedia_Bottom)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_NoMedia_Bottom)">Skin.SetBool(Notification_NoMedia_Fullscreen)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_NoMedia_Fullscreen)">Skin.Reset(Notification_NoMedia_Fullscreen)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_NoMedia_Fullscreen)">Skin.SetBool(Notification_NoMedia_Disabled)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_NoMedia_Disabled)">Skin.Reset(Notification_NoMedia_Disabled)</onclick>
 				</control>
-				<control type="radiobutton" id="1240">
+				<control type="label" id="1232">
+					<width>780</width>
+					<height>0</height>
+					<textoffsety>-30</textoffsety>
+					<font>font16caps</font>
+					<align>right</align>
+					<textcolor>FFCCCCCC</textcolor>
+					<label>$VAR[Var_Notification_NoMedia]</label>
+					<include>navigation_options</include>
+				</control>
+
+				<!-- Notification (Watching) -->
+				<control type="radiobutton" id="1234">
+					<textureradiofocus>scroll_down.png</textureradiofocus>
+					<textureradionofocus>scroll_down.png</textureradionofocus>
 					<include>skin_settings_labels</include>
-					<label>Disable Now Playing</label>
-					<onclick>Skin.ToggleSetting(DisableNotificationPlaying)</onclick>
-					<selected>Skin.HasSetting(DisableNotificationPlaying)</selected>
-					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+					<label>Notification Style (Watching)</label>
+					<onclick condition="!Skin.HasSetting(Notification_Media_Popup) + !Skin.HasSetting(Notification_Media_Fullscreen) + !Skin.HasSetting(Notification_Media_Disabled)">Skin.SetBool(Notification_Media_Popup)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_Media_Popup)">Skin.Reset(Notification_Media_Popup)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_Media_Popup)">Skin.SetBool(Notification_Media_Fullscreen)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_Media_Fullscreen)">Skin.Reset(Notification_Media_Fullscreen)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_Media_Fullscreen)">Skin.SetBool(Notification_Media_Disabled)</onclick>
+					<onclick condition="Skin.HasSetting(Notification_Media_Disabled)">Skin.Reset(Notification_Media_Disabled)</onclick>
+				</control>
+				<control type="label" id="1236">
+					<width>780</width>
+					<height>0</height>
+					<textoffsety>-30</textoffsety>
+					<font>font16caps</font>
+					<align>right</align>
+					<textcolor>FFCCCCCC</textcolor>
+					<label>$VAR[Var_Notification_Media]</label>
+					<include>navigation_options</include>
 				</control>
 				<control type="radiobutton" id="1242">
 					<include>skin_settings_labels</include>
 					<label>Disable Remote Connected</label>
-					<onclick>Skin.ToggleSetting(DisableNotificationRemote)</onclick>
-					<selected>Skin.HasSetting(DisableNotificationRemote)</selected>
-					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+					<onclick>Skin.ToggleSetting(Notification_Disable_Remote)</onclick>
+					<selected>Skin.HasSetting(Notification_Disable_Remote)</selected>
 				</control>
 				<control type="radiobutton" id="1244">
 					<include>skin_settings_labels</include>
 					<label>Disable Signed In</label>
-					<onclick>Skin.ToggleSetting(DisableNotificationWelcome)</onclick>
-					<selected>Skin.HasSetting(DisableNotificationWelcome)</selected>
-					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+					<onclick>Skin.ToggleSetting(Notification_Disable_SignIn)</onclick>
+					<selected>Skin.HasSetting(Notification_Disable_SignIn)</selected>
 				</control>
 				<control type="radiobutton" id="1246">
 					<include>skin_settings_labels</include>
-					<label>Disable Custom 1 [COLOR=mainblue]$INFO[Skin.String(DisableNotificationCustom1)][/COLOR]</label>
-					<onclick>Skin.SetString(DisableNotificationCustom1)</onclick>
-					<selected>!isEmpty(Skin.String(DisableNotificationCustom1))</selected>
-					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+					<label>Disable Custom 1 [COLOR=mainblue]$INFO[Skin.String(Notification_Disable_Custom1)][/COLOR]</label>
+					<onclick>Skin.SetString(Notification_Disable_Custom1)</onclick>
+					<selected>!isEmpty(Skin.String(Notification_Disable_Custom1))</selected>
 				</control>
 				<control type="radiobutton" id="1248">
 					<include>skin_settings_labels</include>
-					<label>Disable Custom 2 [COLOR=mainblue]$INFO[Skin.String(DisableNotificationCustom2)][/COLOR]</label>
-					<onclick>Skin.SetString(DisableNotificationCustom2)</onclick>
-					<selected>!isEmpty(Skin.String(DisableNotificationCustom2))</selected>
-					<visible>!Skin.HasSetting(DisableNotificationAll)</visible>
+					<label>Disable Custom 2 [COLOR=mainblue]$INFO[Skin.String(Notification_Disable_Custom2)][/COLOR]</label>
+					<onclick>Skin.SetString(Notification_Disable_Custom2)</onclick>
+					<selected>!isEmpty(Skin.String(Notification_Disable_Custom2))</selected>
 				</control>
 			</control>
 
@@ -1423,6 +1454,14 @@
 						<onclick>Skin.Reset(Deck_Images_Overlay)</onclick>
 						<onclick>Skin.ToggleSetting(Deck_Images_Rating)</onclick>
 						<selected>Skin.HasSetting(Deck_Images_Rating)</selected>
+						<visible>!Skin.HasSetting(Deck_Disable)</visible>
+					</control>
+					<control type="radiobutton" id="4099">
+						<include>skin_settings_labels</include>
+						<label>Disable Placeholder</label>
+						<onclick>Skin.Reset(Deck_Images_Placeholder)</onclick>
+						<onclick>Skin.ToggleSetting(Deck_Images_Placeholder)</onclick>
+						<selected>Skin.HasSetting(Deck_Images_Placeholder)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>
 					</control>
 

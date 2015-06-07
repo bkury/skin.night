@@ -74,16 +74,13 @@
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
 		<selectedcolor>TextFocused</selectedcolor>
-		<!--<selectedcolor>mainblue</selectedcolor>-->
 		<disabledcolor>TextDisabled</disabledcolor>
 
 		<texturefocus>ButtonFo.png</texturefocus>
 		<texturenofocus>ButtonNF.png</texturenofocus>
-		<textureradiofocus>settings/button_radioF.png</textureradiofocus>
-		<textureradionofocus>settings/button_radioNF.png</textureradionofocus>
-		<!-- Accent Color -->
-		<!--<colordiffuse>ButtonFilterColor</colordiffuse>-->
-		<!--<colordiffuse>mainblue</colordiffuse>-->
+
+		<textureradiofocus>nav_radiobutton_checked.png</textureradiofocus>
+		<textureradionofocus>nav_radiobutton_unchecked.png</textureradionofocus>
 
 		<radioheight>20</radioheight>
 		<radiowidth>20</radiowidth>
@@ -109,7 +106,6 @@
 		<texturedown>scroll_down.png</texturedown>
 		<textureupfocus>settings_arrow_button_up.png</textureupfocus>
 		<texturedownfocus>settings_arrow_button_down.png</texturedownfocus>
-		<!--<colordiffuse>mainblue</colordiffuse>-->
 		<reverse>yes</reverse>
 		<pulseonselect>false</pulseonselect>
 	</default>

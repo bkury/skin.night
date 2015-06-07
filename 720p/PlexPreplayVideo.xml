@@ -183,7 +183,7 @@
 			</control>
 
 			<control type="group">
-			<visible>![ Control.HasFocus(3) | Control.hasFocus(20) ]</visible>
+			<visible>![ Control.HasFocus(30) | Control.hasFocus(20) ]</visible>
 			<animation effect="fade" start="100" end="0" time="300">hidden</animation>
 			<animation effect="fade" start="0" end="100" time="300">visible</animation>
 
@@ -602,7 +602,7 @@
 					<height>32</height>
 					<texturefocus>b-pp-extras.png</texturefocus>
 					<texturenofocus>b-pp-extras.png</texturenofocus>
-					<onclick>SetFocus(3)</onclick>
+					<onclick>SetFocus(30)</onclick>
 					<onleft>102</onleft>
 					<onright>103</onright>
 					<ondown>XBMC.NextItem</ondown>
@@ -879,7 +879,7 @@
 		<control type="group">
 			<posx>520</posx>
 			<posy>150</posy>
-			<visible>Control.HasFocus(3) | Control.HasFocus(20)</visible>
+			<visible>Control.HasFocus(30) | Control.HasFocus(20)</visible>
 
 			<control type="button" id="20">
 				<posx>-420</posx>
@@ -898,7 +898,7 @@
 			<animation effect="slide" end="800,0" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
 
 			<!-- Extras Panel -->
-			<control type="panel" id="3">
+			<control type="panel" id="30">
 				<width>520</width>
 				<height>400</height>
 				<scrolltime>200</scrolltime>

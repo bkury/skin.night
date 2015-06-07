@@ -8,207 +8,65 @@
             
 	<controls>
 
-		<!-- Now Playing -->
+	<!-- Notification Workaround -->
+	<control type="group">
+		<visible>false</visible>
+		<control type="label" id="401"></control>
+		<control type="label" id="402"></control>
+	</control>
+
+	<!-- Notification (Remote,SignIn,Custom) -->
+	<control type="group">
+		<visible>![ Skin.HasSetting(Notification_Disable_Remote) + SubString(Control.GetLabel(401),$LOCALIZE[52500]) | Skin.HasSetting(Notification_Disable_Remote) + SubString(Control.GetLabel(401),$LOCALIZE[52501]) | Skin.HasSetting(Notification_Disable_SignIn) + SubString(Control.GetLabel(401),$LOCALIZE[44011]) | !isEmpty(Skin.String(Notification_Disable_Custom1)) + StringCompare(Control.GetLabel(401),Skin.String(Notification_Disable_Custom1)) | !isEmpty(Skin.String(Notification_Disable_Custom2)) + StringCompare(Control.GetLabel(401),Skin.String(Notification_Disable_Custom2)) ]</visible>
+
+		<!-- Notification (Navigating)-->
 		<control type="group">
-			<posy>610</posy>
-			<visible>SubString(Control.GetLabel(401),$LOCALIZE[13350]) | StringCompare(Control.GetLabel(401),$LOCALIZE[559]) | StringCompare(Control.GetLabel(401),ITEM QUEUED) | StringCompare(Control.GetLabel(401),$LOCALIZE[52000]) +
-				 ![ Skin.HasSetting(DisableNotificationAll) | Skin.HasSetting(DisableNotificationPlaying) ]
-			</visible>
+			<visible>!Player.HasMedia</visible>
 
-			<include>Animation_CommonFade_600</include>
-
-			<control type="image">
-				<width>1280</width>
-				<height>110</height>
-				<texture border="10" flipy="true">base-rounded.png</texture>
-				<colordiffuse>FF000000</colordiffuse>
-				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
-				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
-                        </control>
-                        <control type="image">
-                                <posy>0</posy>
-                                <width>1280</width>
-                                <height>0.5</height>
-                                <texture>base-rounded.png</texture>
-                                <colordiffuse>mainblue</colordiffuse>
-                                <include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
-                                <include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
-                        </control>
-
-			<!-- Play Image -->
-			<control type="image">
-				<posx>30</posx>
-				<posy>25</posy>
-				<width>70</width>
-				<height>70</height>
-				<texture>nav_play.png</texture>
-				<colordiffuse>FFAAAAAA</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>30</posx>
-				<posy>25</posy>
-				<width>70</width>
-				<height>70</height>
-				<texture>nav_play.png</texture>
-				<include>Animation_OSD_Play</include>
-				<colordiffuse>mainblue</colordiffuse>
+			<!-- Popup -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Notification_NoMedia_Bottom) + !Skin.HasSetting(Notification_NoMedia_Fullscreen) + !Skin.HasSetting(Notification_NoMedia_Disabled)</visible>
+				<include>Notification_Style_Popup</include>
 			</control>
 
-
-			<!-- Header -->
-			<control type="label">
-				<posx>130</posx>
-				<posy>30</posy>
-				<width>850</width>
-				<height>22</height>
-				<label>$INFO[Control.GetLabel(401)]</label>
-				<font>Font_Bartowski_Extras_Pause</font>
-				<textcolor>mainblue</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<visible>!VideoPlayer.Content(episodes)</visible>
-			</control>
-			<control type="label">
-				<posx>130</posx>
-				<posy>30</posy>
-				<width>850</width>
-				<height>22</height>
-				<font>Font_Bartowski_Extras_Pause</font>
-				<textcolor>mainblue</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<visible>VideoPlayer.Content(episodes)</visible>
+			<!-- Bottom -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_NoMedia_Bottom)</visible>
+				<include>Notification_Style_Bottom</include>
 			</control>
 
-			<!-- Title -->
-			<control type="label">
-				<posx>130</posx>
-				<posy>55</posy>
-				<width>850</width>
-				<height>38</height>
-				<label>$INFO[Control.GetLabel(402)]</label>
-				<font>Font_Bartowski_Title_Pause</font>
-				<textcolor>grey</textcolor>
-				<scrollout>true</scrollout>
-				<align>left</align>
-				<aligny>center</aligny>
-			</control>
-
-			<!-- Duration -->
-			<control type="image">
-				<posx>1100</posx>
-				<posy>5</posy>
-				<width>1</width>
-				<height>105</height>
-				<texture>confluence/separator-hz.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-			</control>
-
-			<control type="label">
-				<posx>1100</posx>
-				<posy>5</posy>
-				<width>180</width>
-				<height>110</height>
-				<label>$INFO[VideoPlayer.Duration(h:mm)]</label>
-				<font>Font_Bartowski_Title_Pause</font>
-				<align>center</align>
-				<aligny>center</aligny>
+			<!-- Fullscreen -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_NoMedia_Fullscreen)</visible>
+				<include>Notification_Style_Fullscreen</include>
 			</control>
 
 		</control>
 
-		<!-- Notifications -->
+		<!-- Notifications (Playing) -->
 		<control type="group">
-			<posx>340</posx>
-			<posy>530</posy>
+			<visible>Player.HasMedia</visible>
 
-			<visible>![ Skin.HasSetting(DisableNotificationAll) | 
-				    Skin.HasSetting(DisableNotificationRemote) + SubString(Control.GetLabel(401),$LOCALIZE[52500]) |
-				    Skin.HasSetting(DisableNotificationRemote) + SubString(Control.GetLabel(401),$LOCALIZE[52501]) |
-				    Skin.HasSetting(DisableNotificationWelcome) + SubString(Control.GetLabel(401),$LOCALIZE[44011]) |
-				    !isEmpty(Skin.String(DisableNotificationCustom1)) + StringCompare(Control.GetLabel(401),Skin.String(DisableNotificationCustom1)) |
-				    !isEmpty(Skin.String(DisableNotificationCustom2)) + StringCompare(Control.GetLabel(401),Skin.String(DisableNotificationCustom2)) |
-				    SubString(Control.GetLabel(401),$LOCALIZE[13350]) | 
-				    StringCompare(Control.GetLabel(401),$LOCALIZE[559]) |
-				    StringCompare(Control.GetLabel(401),$LOCALIZE[52000]) |
-				    StringCompare(Control.GetLabel(401),ITEM QUEUED) |
-				    StringCompare(Control.GetLabel(401),FILTER UNWATCHED) ]
-			</visible>
+			<!-- Bottom -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Notification_Media_Popup) + !Skin.HasSetting(Notification_Media_Fullscreen) + !Skin.HasSetting(Notification_Media_Disabled)</visible>
+				<include>Notification_Style_Bottom</include>
+			</control>
 
-			<!-- Animations -->
-			<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">Visible</animation>
-			<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">WindowOpen</animation>
-			<animation effect="zoom" start="100" center="640,620" end="20" time="600" tween="back" easing="in">Hidden</animation>
-			<animation effect="zoom" start="100" center="640,620" end="20" time="600" tween="back" easing="in">WindowClose</animation>
+			<!-- Popup -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_Media_Popup)</visible>
+				<include>Notification_Style_Popup</include>
+			</control>
 
-			<!-- Background -->
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>600</width>
-				<height>180</height>
-				<texture>kaitoast-bg.png</texture>
-				<colordiffuse>DD666666</colordiffuse>
-			</control>
-			<!-- Separator -->
-			<control type="image">
-				<posx>25</posx>
-				<posy>111</posy>
-				<width>550</width>
-				<height>0.5</height>
-				<texture>base-rounded.png</texture>
-				<colordiffuse>mainblue</colordiffuse>
-			</control>
-			<!-- Header -->
-			<control type="label">
-				<posy>15</posy>
-				<width>600</width>
-				<height>18</height>
-				<font>Font_Time_Global</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<label>$VAR[KaiToast_Header]</label>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>45</posy>
-				<width>600</width>
-				<height>6</height>
-				<aligny>center</aligny>
-				<aspectratio>stretch</aspectratio>
-				<texture>confluence/separator.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-			</control>
-			<!-- Label 1 -->
-			<control type="label" id="401">
-				<description>Line 1 Label</description>
-				<posx>40</posx>
-				<posy>70</posy>
-				<width>550</width>
-				<height>18</height>
-				<font>Font_TVShow</font>
-				<textcolor>FFCCCCCC</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-			</control>
-			<!-- Label 2 -->
-			<control type="label" id="402">
-				<description>Line 2 Label</description>
-				<posx>40</posx>
-				<posy>130</posy>
-				<width>550</width>
-				<height>20</height>
-				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>grey</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scrollout>true</scrollout>
+			<!-- Fullscreen -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_Media_Fullscreen)</visible>
+				<include>Notification_Style_Fullscreen</include>
 			</control>
 
 		</control>
+	</control>
 
 	</controls>
 </window>

@@ -16,7 +16,7 @@
 
 	<!-- ContextMenu (NEW) -->
 	<onload condition="!Skin.HasSetting(Context_NoQuick) + !Skin.HasSetting(Context_Enabled) + !StringCompare(ListItem.Overlay,OverlayInProgress.png) + [ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) ]">Dialog.Close(106)</onload>
-	<onload condition="!Skin.HasSetting(Context_NoQuick) + !Skin.HasSetting(Context_Enabled) + !StringCompare(ListItem.Overlay,OverlayInProgress.png) + [ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) ]">SetFocus(7001)</onload>-->
+	<onload condition="!Skin.HasSetting(Context_NoQuick) + !Skin.HasSetting(Context_Enabled) + !StringCompare(ListItem.Overlay,OverlayInProgress.png) + [ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) ]">SetFocus(7001)</onload>
 	<onload condition="!Skin.HasSetting(Context_NoQuick) + Skin.HasSetting(Context_Enabled)">Skin.Reset(Context_Enabled)</onload>
 
 	<controls>

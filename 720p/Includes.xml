@@ -32,7 +32,7 @@
 	-->
 
 	<!-- Debug -->
-	<!--<include file="Debug.xml" />-->
+	<include file="Debug.xml" />
 
 	<include name="skin_settings_labels">
 		<width>860</width>
@@ -1402,6 +1402,74 @@
 		<animation effect="fade" start="100" end="0" time="600" delay="0">Hidden</animation>
 	</include>
 
+	<!-- Opacity (No Delay) -->
+	<include name="background_opacity_0_nodelay">
+		<animation effect="fade" start="0" end="0" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="0" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="0" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="0" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_10_nodelay">
+		<animation effect="fade" start="0" end="10" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="10" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="10" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="10" end="0" time="00" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_20_nodelay">
+		<animation effect="fade" start="0" end="20" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="20" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="20" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="20" end="0" time="00" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_30_nodelay">
+		<animation effect="fade" start="0" end="30" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="30" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="30" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="30" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_40_nodelay">
+		<animation effect="fade" start="0" end="40" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="40" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="40" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="40" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_50_nodelay">
+		<animation effect="fade" start="0" end="50" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="50" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="50" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="50" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_60_nodelay">
+		<animation effect="fade" start="0" end="60" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="60" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="60" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="60" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_70_nodelay">
+		<animation effect="fade" start="0" end="70" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="70" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="70" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="70" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_80_nodelay">
+		<animation effect="fade" start="0" end="80" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="80" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="80" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="80" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_90_nodelay">
+		<animation effect="fade" start="0" end="90" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="90" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="90" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="90" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+	<include name="background_opacity_100_nodelay">
+		<animation effect="fade" start="0" end="100" time="0" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="0" delay="0">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="0" delay="0">Hidden</animation>
+	</include>
+
 	<!-- Settings Separator -->
 	<include name="settings_separator">
 		<width>860</width>
@@ -1791,6 +1859,16 @@
 			<height>40</height>
 			<font>Font_Unwatched_Small</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-45</posx>
+			<posy>-45</posy>
+			<width>40</width>
+			<height>40</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_Medium">
@@ -1808,6 +1886,16 @@
 			<height>40</height>
 			<font>Font_Unwatched_Medium</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-45</posx>
+			<posy>-45</posy>
+			<width>40</width>
+			<height>40</height>
+			<font>Font_Unwatched_Medium</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_Large">
@@ -1825,6 +1913,16 @@
 			<height>50</height>
 			<font>Font_Unwatched_Large</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Large</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_xLarge">
@@ -1842,6 +1940,16 @@
 			<height>60</height>
 			<font>Font_Unwatched_xLarge</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-70</posx>
+			<posy>-70</posy>
+			<width>60</width>
+			<height>60</height>
+			<font>Font_Unwatched_xLarge</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 
@@ -1858,6 +1966,14 @@
 			<height>28</height>
 			<font>Font_Unwatched_Small</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<width>28</width>
+			<height>28</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_pos_Medium">
@@ -1872,6 +1988,14 @@
 			<height>38</height>
 			<font>Font_Unwatched_Medium</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<width>38</width>
+			<height>38</height>
+			<font>Font_Unwatched_Medium</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_pos_Large">
@@ -1887,6 +2011,14 @@
 			<height>46</height>
 			<font>Font_Unwatched_Large</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<width>46</width>
+			<height>46</height>
+			<font>Font_Unwatched_Large</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_pos_xLarge">
@@ -1904,6 +2036,14 @@
 			<height>46</height>
 			<font>Font_Unwatched_xLarge</font>
 			<include>viewtype_overlay_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<width>46</width>
+			<height>46</height>
+			<font>Font_Unwatched_xLarge</font>
+			<include>viewtype_overlay_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 
@@ -1923,6 +2063,16 @@
 			<height>50</height>
 			<font>Font_Unwatched_Small</font>
 			<include>viewtype_overlay_rating_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_rating_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_rating_Medium">
@@ -1940,6 +2090,16 @@
 			<height>50</height>
 			<font>Font_Unwatched_Small</font>
 			<include>viewtype_overlay_rating_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_rating_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 
@@ -1958,6 +2118,16 @@
 			<height>50</height>
 			<font>Font_Unwatched_Small</font>
 			<include>viewtype_overlay_rating_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-55</posx>
+			<posy>-55</posy>
+			<width>50</width>
+			<height>50</height>
+			<font>Font_Unwatched_Small</font>
+			<include>viewtype_overlay_rating_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 	<include name="viewtype_overlay_rating_xLarge">
@@ -1975,6 +2145,16 @@
 			<height>60</height>
 			<font>Font_Unwatched_Medium</font>
 			<include>viewtype_overlay_rating_label</include>
+			<visible>!Skin.HasSetting(XBMC)</visible>
+		</control>
+		<control type="label">
+			<posx>-70</posx>
+			<posy>-70</posy>
+			<width>60</width>
+			<height>60</height>
+			<font>Font_Unwatched_Medium</font>
+			<include>viewtype_overlay_rating_label</include>
+			<visible>Skin.HasSetting(XBMC)</visible>
 		</control>
 	</include>
 
@@ -2159,7 +2339,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                                 <align>center</align>
                                 <textcolor>white</textcolor>
-				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + !Control.HasFocus(3)</visible>
+				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + !Control.HasFocus(30)</visible>
                         </control>
 			<!-- Extras -->
 			<control type="label">
@@ -2169,11 +2349,11 @@
                                 <width>720</width>
                                 <height>30</height>
                                 <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$INFO[ListItem.Label][COLOR=mainblue] / [/COLOR]Extras ($INFO[Container(3).NumItems])</label>
+                                <label>$INFO[ListItem.Label][COLOR=mainblue] / [/COLOR]Extras ($INFO[Container(30).NumItems])</label>
                                 <align>center</align>
                                 <textcolor>white</textcolor>
 				<scroll>true</scroll>
-				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + Control.HasFocus(3)</visible>
+				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + Control.HasFocus(30)</visible>
                         </control>
 
 			<control type="label">
@@ -2197,7 +2377,6 @@
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
-				<!--<visible>!Skin.HasSetting(Preplay_NoSeparator)</visible>-->
                         </control>
 			</control>
 
@@ -2211,7 +2390,6 @@
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
 				<include>Animation_Preplay_Down</include>
-				<!--<visible>!Skin.HasSetting(Preplay_NoSeparator)</visible>-->
                         </control>
 		</control>
 	</include>
@@ -2755,8 +2933,10 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<colordiffuse>FFFFFFFF</colordiffuse>
-		<textureradiofocus>settings/button_radioF.png</textureradiofocus>
-		<textureradionofocus>settings/button_radioNF.png</textureradionofocus>
+		<!--<textureradiofocus>settings/button_radioF.png</textureradiofocus>
+		<textureradionofocus>settings/button_radioNF.png</textureradionofocus>-->
+		<textureradiofocus>nav_radiobutton_checked.png</textureradiofocus>
+		<textureradionofocus>nav_radiobutton_unchecked.png</textureradionofocus>
 	</include>
 
 	<!-- Navigation Styles Button -->
@@ -3184,5 +3364,270 @@
 		<aligny>center</aligny>
 		<font>font16caps</font>
 	</include>
+
+
+
+
+
+
+	<!-- Notification (Popup) -->
+	<include name="Notification_Style_Popup">
+
+		<control type="group">
+			<posx>340</posx>
+			<posy>530</posy>
+
+			<!--
+			<visible>![ Skin.HasSetting(DisableNotificationAll) | 
+				    Skin.HasSetting(DisableNotificationRemote) + SubString(Control.GetLabel(401),$LOCALIZE[52500]) |
+				    Skin.HasSetting(DisableNotificationRemote) + SubString(Control.GetLabel(401),$LOCALIZE[52501]) |
+				    Skin.HasSetting(DisableNotificationWelcome) + SubString(Control.GetLabel(401),$LOCALIZE[44011]) |
+				    !isEmpty(Skin.String(DisableNotificationCustom1)) + StringCompare(Control.GetLabel(401),Skin.String(DisableNotificationCustom1)) |
+				    !isEmpty(Skin.String(DisableNotificationCustom2)) + StringCompare(Control.GetLabel(401),Skin.String(DisableNotificationCustom2)) |
+				    SubString(Control.GetLabel(401),$LOCALIZE[13350]) | 
+				    StringCompare(Control.GetLabel(401),$LOCALIZE[559]) |
+				    StringCompare(Control.GetLabel(401),$LOCALIZE[52000]) |
+				    StringCompare(Control.GetLabel(401),ITEM QUEUED) |
+				    StringCompare(Control.GetLabel(401),FILTER UNWATCHED) ]
+			</visible>
+			-->
+
+			<!-- Animations -->
+			<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">Visible</animation>
+			<animation effect="zoom" start="20" center="640,620" end="100" time="600" tween="back" easing="out">WindowOpen</animation>
+			<animation effect="zoom" start="100" center="640,620" end="20" time="600" tween="back" easing="in">Hidden</animation>
+			<animation effect="zoom" start="100" center="640,620" end="20" time="600" tween="back" easing="in">WindowClose</animation>
+
+			<!-- Background -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>600</width>
+				<height>180</height>
+				<texture>kaitoast-bg.png</texture>
+                                <colordiffuse>FF666666</colordiffuse>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+			</control>
+			<!-- Separator -->
+			<control type="image">
+				<posx>25</posx>
+				<posy>111</posy>
+				<width>550</width>
+				<height>0.5</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+			</control>
+			<!-- Header -->
+			<control type="label">
+				<posy>15</posy>
+				<width>600</width>
+				<height>18</height>
+				<font>Font_Time_Global</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<label>$VAR[KaiToast_Header]</label>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>600</width>
+				<height>6</height>
+				<aligny>center</aligny>
+				<aspectratio>stretch</aspectratio>
+				<texture>confluence/separator.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+			<!-- Line 1 -->
+			<control type="label">
+				<posx>40</posx>
+				<posy>70</posy>
+				<width>550</width>
+				<height>18</height>
+				<label>$VAR[Var_Notification_Line_1]</label>
+				<font>Font_TVShow</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+			</control>
+			<!-- Line 2 -->
+			<control type="label">
+				<posx>40</posx>
+				<posy>130</posy>
+				<width>550</width>
+				<height>20</height>
+				<label>$VAR[Var_Notification_Line_2]</label>
+				<font>Font_Bartowski_Movies_Plot</font>
+				<textcolor>grey</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>true</scrollout>
+			</control>
+
+		</control>
+
+	</include>
+
+	<!-- Notification (Bottom) -->
+	<include name="Notification_Style_Bottom">
+
+		<control type="group">
+			<posy>610</posy>
+			<include>Animation_CommonFade_600</include>
+<!--			<visible>SubString(Control.GetLabel(401),$LOCALIZE[13350]) | StringCompare(Control.GetLabel(401),$LOCALIZE[559]) | StringCompare(Control.GetLabel(401),ITEM QUEUED) | StringCompare(Control.GetLabel(401),$LOCALIZE[52000]) +
+				 ![ Skin.HasSetting(DisableNotificationAll) | Skin.HasSetting(DisableNotificationPlaying) ]
+			</visible>
+-->
+
+			<!-- Background -->
+			<control type="image">
+				<width>1280</width>
+				<height>110</height>
+				<texture border="10" flipy="true">base-rounded.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+			</control>
+			<control type="image">
+				<posy>0</posy>
+				<width>1280</width>
+				<height>0.5</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+			</control>
+
+			<!-- Image -->
+			<control type="image">
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>nav_play.png</texture>
+				<colordiffuse>FFAAAAAA</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>nav_play.png</texture>
+				<include>Animation_OSD_Play</include>
+				<colordiffuse>mainblue</colordiffuse>
+			</control>
+
+			<!-- Line 1 -->
+			<control type="label">
+				<posx>130</posx>
+				<posy>30</posy>
+				<width>850</width>
+				<height>22</height>
+				<label>$VAR[Var_Notification_Line_1]</label>
+				<font>Font_Bartowski_Extras_Pause</font>
+				<textcolor>mainblue</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+
+			<!-- Line 2 -->
+			<control type="label">
+				<posx>130</posx>
+				<posy>55</posy>
+				<width>850</width>
+				<height>38</height>
+				<label>$VAR[Var_Notification_Line_2]</label>
+				<font>Font_Bartowski_Title_Pause</font>
+				<textcolor>grey</textcolor>
+				<scrollout>true</scrollout>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+		</control>
+	</include>
+
+	<!-- Notification (Fullscreen) -->
+	<include name="Notification_Style_Fullscreen">
+
+		<control type="group">
+			<include>Animation_CommonFade_600</include>
+
+			<!-- Background -->
+			<control type="image">
+				<width>1280</width>
+				<height>720</height>
+				<texture border="10" flipy="true">base-rounded.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>300</posy>
+				<width>1200</width>
+				<height>0.5</height>
+				<texture>base-rounded.png</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<!-- Opacity Option -->
+				<include condition="isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity_Default</include>
+				<include condition="!isEmpty(Skin.String(OSD_Opacity))">OSD_Opacity</include>
+			</control>
+
+			<!-- Image -->
+<!--			<control type="image">
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>nav_play.png</texture>
+				<colordiffuse>FFAAAAAA</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>nav_play.png</texture>
+				<include>Animation_OSD_Play</include>
+				<colordiffuse>mainblue</colordiffuse>
+			</control>
+-->
+			<!-- Line 1 -->
+			<control type="label">
+				<posx>40</posx>
+				<posy>240</posy>
+				<width>1200</width>
+				<height>22</height>
+				<label>$VAR[Var_Notification_Line_1]</label>
+				<include>Font_Sub_Header</include>
+				<textcolor>mainblue</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+
+			<!-- Line 2 -->
+			<control type="textbox">
+				<posx>40</posx>
+				<posy>310</posy>
+				<width>1200</width>
+				<height>180</height>
+				<label>$VAR[Var_Notification_Line_2]</label>
+				<include>Font_Sub_Header</include>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>center</align>
+			</control>
+		</control>
+	</include>
+
+
 
 </includes>
