@@ -1717,25 +1717,6 @@
 				                <label>Search</label>
 					</control>
 
-					<!-- Custom Home -->
-					<control type="label" id="5015">
-                                               	<width>860</width>
-                                                <height>35</height>
-                                                <font>font13caps</font>
-                                                <label>Custom Home</label>
-                                                <textcolor>white</textcolor>
-                                                <shadowcolor>black</shadowcolor>
-                                                <align>left</align>
-                                                <aligny>center</aligny>
-                                        </control>
-					<control type="image" id="5016">
-						<include>settings_separator</include>
-					</control>
-   
-					<!-- XBMC & PLEX Custom Home Settings -->
-					<include condition="!Skin.HasSetting(XBMC)">PLEX_Home_Custom_Backgrounds_Settings</include>
-					<include condition="Skin.HasSetting(XBMC)">XBMC_Home_Custom_Backgrounds_Settings</include>
-
 					<!-- General -->
 					<control type="label" id="5020">
                                                	<width>860</width>
@@ -1772,6 +1753,26 @@
 				                <label>Default</label>
 						<visible>Skin.HasSetting(XBMC)</visible>
 					</control>
+
+					<!-- Custom Home -->
+					<control type="label" id="5015">
+                                               	<width>860</width>
+                                                <height>35</height>
+                                                <font>font13caps</font>
+                                                <label>Custom Home</label>
+                                                <textcolor>white</textcolor>
+                                                <shadowcolor>black</shadowcolor>
+                                                <align>left</align>
+                                                <aligny>center</aligny>
+                                        </control>
+					<control type="image" id="5016">
+						<include>settings_separator</include>
+					</control>
+   
+					<!-- XBMC & PLEX Custom Home Settings -->
+					<include condition="!Skin.HasSetting(XBMC)">PLEX_Home_Custom_Backgrounds_Settings</include>
+					<include condition="Skin.HasSetting(XBMC)">XBMC_Home_Custom_Backgrounds_Settings</include>
+
 				</control>
 
 				<!-- Background Options -->
@@ -1787,6 +1788,7 @@
 
 				<!-- Movies / TV Settings -->
 				<control type="grouplist" id="6000">
+					<height>590</height>
 					<include>Settings_Section</include>
 					<visible>Container(100).Hasfocus(160)</visible>
 					<control type="label" id="6010">
@@ -1861,6 +1863,39 @@
 						<label>Disable Scroll Letter</label>
 						<onclick>Skin.ToggleSetting(no_scroll_letter)</onclick>
 						<selected>Skin.HasSetting(no_scroll_letter)</selected>
+					</control>
+
+					<!-- Anti-Spoiler -->
+					<control type="label" id="6072">
+						<width>860</width>
+						<height>35</height>
+						<font>font13caps</font>
+						<label>Unwatched Options (Anti-Spoiler)</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="image" id="6073">
+						<include>settings_separator</include>
+					</control>
+					<control type="radiobutton" id="6074">
+						<include>skin_settings_labels</include>
+						<label>Hide Preplay Screen</label>
+						<onclick>Skin.ToggleSetting(Spoiler_Preplay)</onclick>
+						<selected>Skin.HasSetting(Spoiler_Preplay)</selected>
+					</control>
+					<control type="radiobutton" id="6075">
+						<include>skin_settings_labels</include>
+						<label>Hide Preview Image</label>
+						<onclick>Skin.ToggleSetting(Spoiler_Image)</onclick>
+						<selected>Skin.HasSetting(Spoiler_Image)</selected>
+					</control>
+					<control type="radiobutton" id="6076">
+						<include>skin_settings_labels</include>
+						<label>Hide Plot</label>
+						<onclick>Skin.ToggleSetting(Spoiler_Plot)</onclick>
+						<selected>Skin.HasSetting(Spoiler_Plot)</selected>
 					</control>
 
 					<!-- Overlays -->
@@ -2134,8 +2169,8 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#8 indigo</label>
-						<textcolor>FF6A00FF</textcolor>
+						<label>#8 grey</label>
+						<textcolor>FF808080</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -2159,7 +2194,17 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#9 Light Blue</label>
+						<label>#9 indigo</label>
+						<textcolor>FF6A00FF</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label">
+						<width>300</width>
+						<height>45</height>
+						<font>Font_MenuValue</font>
+						<label>#10 Light Blue</label>
 						<textcolor>FF67c7ff</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2169,7 +2214,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#10 lime</label>
+						<label>#11 lime</label>
 						<textcolor>FFA4C400</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2179,7 +2224,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#11 magenta</label>
+						<label>#12 magenta</label>
 						<textcolor>FFD80073</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2189,7 +2234,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#12 mauve</label>
+						<label>#13 mauve</label>
 						<textcolor>FF76608A</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2199,7 +2244,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#13 olive</label>
+						<label>#14 olive</label>
 						<textcolor>FF6D8764</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2209,7 +2254,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#14 orange</label>
+						<label>#15 orange</label>
 						<textcolor>FFFA6800</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2219,18 +2264,8 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#15 pink</label>
+						<label>#16 pink</label>
 						<textcolor>FFF472D0</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="label">
-						<width>300</width>
-						<height>45</height>
-						<font>Font_MenuValue</font>
-						<label>#16 red</label>
-						<textcolor>FFE51400</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -2252,7 +2287,17 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#17 sienna</label>
+						<label>#17 red</label>
+						<textcolor>FFE51400</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label">
+						<width>300</width>
+						<height>45</height>
+						<font>Font_MenuValue</font>
+						<label>#18 sienna</label>
 						<textcolor>FF7A3B3F</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2262,7 +2307,17 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#18 steel</label>
+						<label>#19 silver</label>
+						<textcolor>FFc0c0c0</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label">
+						<width>300</width>
+						<height>45</height>
+						<font>Font_MenuValue</font>
+						<label>#20 steel</label>
 						<textcolor>FF647687</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2272,7 +2327,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#19 teal</label>
+						<label>#21 teal</label>
 						<textcolor>FF00ABA9</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2282,7 +2337,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#20 violet</label>
+						<label>#22 violet</label>
 						<textcolor>FFAA00FF</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2292,7 +2347,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#21 white</label>
+						<label>#23 white</label>
 						<textcolor>FFFFFFFF</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2302,7 +2357,7 @@
 						<width>300</width>
 						<height>45</height>
 						<font>Font_MenuValue</font>
-						<label>#22 yellow</label>
+						<label>#24 yellow</label>
 						<textcolor>FFD8C100</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>

@@ -915,6 +915,12 @@
 	</control>
 </include>
 <variable name="Deck_Label_Plot">
+
+	<!-- Anti-Spoiler -->
+	<value condition="Control.HasFocus(11000) + Skin.HasSetting(Spoiler_Plot) + [ Container(11000).ListItem.Type(movie) | Container(11000).ListItem.Type(episode) ] + !StringCompare(Container(11000).ListItem.Overlay,OverlayWatched.png)">[CR]$LOCALIZE[19022][CR]</value>
+	<value condition="Control.HasFocus(11001) + Skin.HasSetting(Spoiler_Plot) + [ Container(11001).ListItem.Type(movie) | Container(11001).ListItem.Type(episode) ] + !StringCompare(Container(11001).ListItem.Overlay,OverlayWatched.png)">[CR]$LOCALIZE[19022][CR]</value>
+	<value condition="Control.HasFocus(11010) + Skin.HasSetting(Spoiler_Plot) + [ Container(11010).ListItem.Type(movie) | Container(11010).ListItem.Type(episode) ] + !StringCompare(Container(11010).ListItem.Overlay,OverlayWatched.png)">[CR]$LOCALIZE[19022][CR]</value>
+
 	<!-- XBMC -->
         <value condition="Control.HasFocus(11000) + Skin.HasSetting(XBMC)">$INFO[Container(11000).ListItem.Property(Plot)]</value>
         <value condition="Control.HasFocus(11001) + Skin.HasSetting(XBMC)">$INFO[Container(11001).ListItem.Property(Plot)]</value>
@@ -943,7 +949,8 @@
 	<value condition="Control.HasFocus(11007) + !isEmpty(Container(11007).ListItem.Art(mediaTag::contentRating))">$INFO[Container(11007).ListItem.Art(mediaTag::contentRating)]</value>
 
 	<!-- Fallback -->
-	<value condition="!Control.HasFocus(300)">DefaultVideoCover.png</value>
+	<!--<value condition="!Control.HasFocus(300)">DefaultVideoCover.png</value>-->
+	<value condition="!Control.HasFocus(300)">nav_question.png</value>
 </variable>
 <variable name="Deck_Label_StarRating">
 	<!-- Recently Added -->

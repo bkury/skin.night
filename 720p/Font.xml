@@ -397,6 +397,18 @@
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
+			<name>Font_Preplay_Thumb</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>20</size>
+			<linespacing>1.0</linespacing>
+		</font>
+		<font>
+			<name>Font_Preplay_Plot</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>20</size>
+			<linespacing>1.2</linespacing>
+		</font>
+		<font>
 			<name>Font_Bartowski_Preplay</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>15</size>

@@ -208,31 +208,37 @@
 			<visible>!Skin.HasSetting(HomeArrow) + !ControlGroup(5000).HasFocus</visible>
 			<include>Animation_CommonFade</include>
 		</control>
-		<!--<control type="image">
-			<posy>690</posy>
-			<posx>1254</posx>
-			<width>16</width>
-			<height>22</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">left-menu-indicator-arrow.png</texture>
-			<include condition="!Skin.HasSetting(NoAccentArrow)">NoAccentArrow</include>
-			<colordiffuse>50b8b7b7</colordiffuse>
-			<include>Animation_CommonFade</include>
-			<visible>Skin.HasSetting(Deck_Hide) + ![ControlGroup(5000).HasFocus | Window.IsActive(4998)]</visible>
-			<include>Animation_CommonFade</include>
-		</control>-->
 	</control>
 
 	<!-- Show Server Name -->
-	<control type="label">		
-		<posy>684</posy>
+	<control type="grouplist">
 		<posx>35</posx>
-		<width>300</width>
-		<height>22</height>
-		<textcolor>FFCCCCCC</textcolor>
-		<label>$INFO[Container(300).ListItem.Label2]</label>
-		<include>Animation_CommonFade</include>
-		<visible>Control.hasFocus(300) + Skin.HasSetting(Home_Servername) + ![ Window.IsActive(4998) ]</visible>
+		<posy>690</posy>
+		<width>400</width>
+		<height>40</height>
+		<align>left</align>
+		<usecontrolcoords>true</usecontrolcoords>
+		<orientation>horizontal</orientation>
+		<itemgap>4</itemgap>
+		<visible>Control.hasFocus(300) + Skin.HasSetting(Home_Servername) + !isEmpty(Container(300).ListItem.Label2) + ![ Window.IsActive(4998) ]</visible>
+		<!-- Name -->
+		<control type="label">		
+			<width  min="0" max="300">auto</width>
+			<textcolor>FFCCCCCC</textcolor>
+			<label>$INFO[Container(300).ListItem.Label2]</label>
+			<font>Font_Date</font>
+			<include>Animation_CommonFade</include>
+		</control>
+		<!-- Secure Connection -->
+		<control type="image">
+			<posy>3</posy>
+			<width>16</width>
+			<height>16</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>FFCCCCCC</colordiffuse>
+			<texture background="true">nav_lock_close.png</texture>
+			<visible>!IsEmpty(ListItem.Property(isSecure))</visible>
+		</control>
 	</control>
 
 	<!-- Clock -->

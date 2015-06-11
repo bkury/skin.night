@@ -47,7 +47,7 @@
 			<control type="image">
 				<posy>20</posy>
 				<height>40</height>
-				<width>20</width>
+				<width>40</width>
 				<texture>nav_left.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
@@ -61,7 +61,7 @@
 			</control>
 			<control type="image">
 				<height>40</height>
-				<width>20</width>
+				<width>40</width>
 				<texture>nav_right.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>

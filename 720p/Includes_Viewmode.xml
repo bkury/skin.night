@@ -39,6 +39,9 @@
 				<include>Viewmode_Infocard</include>
 			</control>
 			
+			<!-- Extras -->
+			<include condition="!Skin.HasSetting(XBMC)">viewtype_extras</include>
+
 			<!-- Navigation -->
 			<include>viewtype_mode</include>
 			<include>viewtype_filter</include>
@@ -822,7 +825,7 @@
 				<posy>310</posy>
 				<width>380</width>
 				<height>180</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture background="true">$VAR[Var_Viewmode_Thumb]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture>confluence/button-nofocus.png</bordertexture>
 				<bordersize>1</bordersize>
@@ -1200,6 +1203,7 @@
 	<include condition="StringCompare(Skin.CurrentColourTheme,Crimson.xml)">Viewmode_Border_Color_Crimson</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Emerald.xml)">Viewmode_Border_Color_Emerald</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Green.xml)">Viewmode_Border_Color_Green</include>
+	<include condition="StringCompare(Skin.CurrentColourTheme,Grey.xml)">Viewmode_Border_Color_Grey</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Indigo.xml)">Viewmode_Border_Color_Indigo</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,LightBlue.xml)">Viewmode_Border_Color_LightBlue</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Lime.xml)">Viewmode_Border_Color_Lime</include>
@@ -1210,6 +1214,7 @@
 	<include condition="StringCompare(Skin.CurrentColourTheme,Pink.xml)">Viewmode_Border_Color_Pink</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Red.xml)">Viewmode_Border_Color_Red</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Sienna.xml)">Viewmode_Border_Color_Sienna</include>
+	<include condition="StringCompare(Skin.CurrentColourTheme,Silver.xml)">Viewmode_Border_Color_Silver</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Steel.xml)">Viewmode_Border_Color_Steel</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Teal.xml)">Viewmode_Border_Color_Teal</include>
 	<include condition="StringCompare(Skin.CurrentColourTheme,Violet.xml)">Viewmode_Border_Color_Violet</include>
@@ -1238,6 +1243,9 @@
 </include>
 <include name="Viewmode_Border_Color_Green">
 	<bordertexture>border/border_green.png</bordertexture>
+</include>
+<include name="Viewmode_Border_Color_Grey">
+	<bordertexture>border/border_grey.png</bordertexture>
 </include>
 <include name="Viewmode_Border_Color_Indigo">
 	<bordertexture>border/border_indigo.png</bordertexture>
@@ -1268,6 +1276,9 @@
 </include>
 <include name="Viewmode_Border_Color_Sienna">
 	<bordertexture>border/border_sienna.png</bordertexture>
+</include>
+<include name="Viewmode_Border_Color_Silver">
+	<bordertexture>border/border_silver.png</bordertexture>
 </include>
 <include name="Viewmode_Border_Color_Steel">
 	<bordertexture>border/border_steel.png</bordertexture>
@@ -1355,5 +1366,209 @@
 	<animation effect="zoom" reversible="false" center="auto" start="400" end="100" time="800" tween="cubic" easing="out">Focus</animation>
 </include>
 
+<!-- Extras -->
+<include name="viewtype_extras">
+
+	<!-- Black Background -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">nav_black.png</texture>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		<visible>Control.HasFocus(3)</visible>
+	</control>
+
+	<control type="group">
+		<include>Animation_CommonFade_600</include>
+		<visible>Control.HasFocus(3)</visible>
+
+		<!-- Background Fanart -->
+		<control type="image">
+			<include>background_default</include>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<animation effect="fade" start="0" end="30" time="300" delay="0">WindowOpen</animation>
+			<animation effect="fade" start="30" end="0" time="300" delay="0">WindowClose</animation>
+			<animation effect="fade" start="0" end="30" time="300" delay="0">Visible</animation>
+			<animation effect="fade" start="30" end="0" time="300" delay="0">Hidden</animation>
+	                <!-- Kenburns Option -->
+	                <include condition="Skin.HasSetting(Preplay_Kenburns)">background_kenburns</include>
+	                <visible>![!isEmpty(Skin.String(Preplay_Single)) | !isEmpty(Skin.String(Preplay_Multi))]</visible>
+		</control>
+
+		<!-- Custom Fanart -->
+		<include>Preplay_Custom</include>
+
+		<!-- Header -->
+		<include>dialog_header_preplay_noanimation</include>
+
+		<control type="group">
+			<posx>80</posx>
+			<posy>155</posy>
+
+			<!-- Extras Panel -->
+			<control type="panel" id="3">
+				<width>1200</width>
+				<height>450</height>
+				<scrolltime>200</scrolltime>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<pagecontrol>-</pagecontrol>
+
+				<include>Preplay_Extras_Thumb</include>
+			</control>
+		</control>
+	</control>
+</include>
+
+<include name="Preplay_Extras_Thumb">
+	<itemlayout width="280" height="220">
+	<control type="group">
+				<control type="image">
+					<posx>12</posx>
+					<posy>19</posy>
+					<width>256</width>
+					<height>144</height>
+					<texture background="true">$VAR[Var_Viewmode_Image]</texture>
+					<include condition="Skin.HasSetting(Panel1_Focus_NoBorder)">Viewmode_Border_NoColor</include>
+<!--NoFocus-->				<include condition="!Skin.HasSetting(Panel1_Focus_NoBorder)">Viewmode_Border_NoColor</include>
+					<bordersize>2</bordersize>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<!-- Label -->
+<!--NoDeck-->			<control type="image">
+<!--NoDeck-->				<posx>12</posx>
+<!--NoDeck-->				<posy>163</posy>
+<!--NoDeck-->				<height>50</height>
+<!--NoDeck-->				<width>256</width>
+<!--NoDeck-->				<aspectratio scalediffuse="false">scale</aspectratio>
+<!--NoDeck-->				<texture background="true" border="5">base-rounded.png</texture>
+<!--NoDeck-->				<colordiffuse>AA000000</colordiffuse>
+<!--NoDeck-->			</control>
+				<control type="label">
+					<posx>140</posx>
+					<posy>168</posy>
+					<height>40</height>
+					<width>246</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Viewmode_Font_Large</font>
+					<textcolor>FFCCCCCC</textcolor>
+<!--NoFocus-->				<scroll>false</scroll>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$VAR[Var_Extras_Label]</label>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>168</posy>
+					<height>40</height>
+					<width>246</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Viewmode_Font_Large</font>
+					<textcolor>FFCCCCCC</textcolor>
+<!--NoFocus-->				<scroll>false</scroll>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$VAR[Var_Extras_Label]</label>
+					<visible>Skin.HasSetting(XBMC)</visible>
+				</control>
+<!--NoDeck-->			<!-- Overlays -->
+<!--NoDeck-->			<control type="group">
+<!--NoDeck-->				<posx>268</posx>
+<!--NoDeck-->				<posy>163</posy>
+<!--NoDeck-->				<include>viewtype_overlay_Large</include>
+<!--NoDeck-->			</control>
+	</control>
+	</itemlayout>
+	<focusedlayout width="280" height="220">
+	<control type="group">
+<!--Focus-->		<!--<include condition="Skin.HasSetting(Panel1_Focus_Zoom)">FocusEffectZoom</include>-->
+<!--Focus-->		<!--<include condition="Skin.HasSetting(Panel1_Focus_Drop)">FocusEffectDrop</include>-->
+				<control type="image">
+					<posx>12</posx>
+					<posy>19</posy>
+					<width>256</width>
+					<height>144</height>
+					<texture background="true">$VAR[Var_Viewmode_Image]</texture>
+					<include condition="Skin.HasSetting(Panel1_Focus_NoBorder)">Viewmode_Border_NoColor</include>
+<!--Focus-->				<include condition="!Skin.HasSetting(Panel1_Focus_NoBorder)">Viewmode_Border_Color</include>
+					<bordersize>2</bordersize>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<!-- Label -->
+<!--NoDeck-->			<control type="image">
+<!--NoDeck-->				<posx>12</posx>
+<!--NoDeck-->				<posy>163</posy>
+<!--NoDeck-->				<height>50</height>
+<!--NoDeck-->				<width>256</width>
+<!--NoDeck-->				<aspectratio scalediffuse="false">scale</aspectratio>
+<!--NoDeck-->				<texture background="true" border="5">base-rounded.png</texture>
+<!--NoDeck-->				<colordiffuse>AA000000</colordiffuse>
+<!--NoDeck-->			</control>
+				<control type="label">
+					<posx>140</posx>
+					<posy>168</posy>
+					<height>40</height>
+					<width>246</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Viewmode_Font_Large</font>
+					<textcolor>FFCCCCCC</textcolor>
+<!--Focus-->				<scroll>true</scroll>
+<!--Focus-->				<include>navigation_options_accent</include>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$VAR[Var_Extras_Label]</label>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>168</posy>
+					<height>40</height>
+					<width>246</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Viewmode_Font_Large</font>
+					<textcolor>FFCCCCCC</textcolor>
+<!--Focus-->				<scroll>true</scroll>
+<!--Focus-->				<include>navigation_options_accent</include>
+					<wrapmultiline>true</wrapmultiline>
+					<label>$VAR[Var_Extras_Label]</label>
+					<visible>Skin.HasSetting(XBMC)</visible>
+				</control>
+<!--Focus-->			<!-- Play Overlay -->
+<!--Focus-->			<control type="group">
+<!--Focus-->				<visible>!Skin.HasSetting(overlay_navigation) + [ ListItem.Type(movie) | ListItem.Type(homemovie) | ListItem.Type(episode) | ListItem.Type(song) | ListItem.Type(clip) ]</visible>
+<!--Focus-->				<control type="image">
+<!--Focus-->					<posx>12</posx>
+<!--Focus-->					<posy>19</posy>
+<!--Focus-->					<width>256</width>
+<!--Focus-->					<height>144</height>
+<!--Focus-->					<texture background="true">playnow-Large.png</texture>
+<!--Focus-->					<aspectratio scalediffuse="false">center</aspectratio>
+<!--Focus-->				</control>
+<!--Focus-->				<control type="image">
+<!--Focus-->					<posx>12</posx>
+<!--Focus-->					<posy>19</posy>
+<!--Focus-->					<width>256</width>
+<!--Focus-->					<height>144</height>
+<!--Focus-->					<texture background="true">playnow-Large.png</texture>
+<!--Focus-->					<colordiffuse>mainblue</colordiffuse>
+<!--Focus-->					<aspectratio scalediffuse="false">center</aspectratio>
+<!--Focus-->					<include>Animation_OSD_Play</include>
+<!--Focus-->					<visible>!Skin.HasSetting(Deck_NoAnimation)</visible>
+<!--Focus-->				</control>
+<!--Focus-->			</control>
+<!--NoDeck-->			<!-- Overlays -->
+<!--NoDeck-->			<control type="group">
+<!--NoDeck-->				<posx>268</posx>
+<!--NoDeck-->				<posy>163</posy>
+<!--NoDeck-->				<include>viewtype_overlay_Large</include>
+<!--NoDeck-->			</control>
+	</control>
+	</focusedlayout>
+</include>
 
 </includes>

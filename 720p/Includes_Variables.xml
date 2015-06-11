@@ -44,6 +44,11 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
+	<variable name="Var_Viewmode_Thumb">
+		<value condition="Skin.HasSetting(Spoiler_Image) + [ Container.Content(episodes) | ListItem.Type(episode) ] + !StringCompare(ListItem.Overlay,OverlayWatched.png)">no_content_bg.jpg</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+
 	<!-- Dialog Header -->
 	<variable name="Var_Dialog_Header">
 		<!--<value condition="Window.IsVisible(3100) + !isEmpty(ListItem.Label)">$LOCALIZE[1036] [COLOR=mainblue]/[/COLOR] $INFO[ListItem.Label]</value>-->
@@ -161,6 +166,10 @@
 		<value condition="!isEmpty(Listitem.Property(mediaTag-contentRating))">$INFO[Listitem.Property(mediaTag-contentRating)]</value>
 		<value>N/A</value>
 	</variable>
+	<variable name="Var_Info_ContentRating_Image">
+		<value condition="!isEmpty(Listitem.Art(mediaTag::contentRating))">$INFO[Listitem.Art(mediaTag::contentRating)]</value>
+		<value>nav_question.png</value>
+	</variable>
 
 	<!-- Pic Resolution -->
 	<variable name="Var_Info_PictureResolution">
@@ -194,6 +203,7 @@
 
 	<!-- Plot -->
 	<variable name="Var_Info_Plot">
+		<value condition="Skin.HasSetting(Spoiler_Plot) + [ Container.Content(movies) | Container.Content(episodes) | ListItem.Type(movie) | ListItem.Type(episode) ] + !StringCompare(ListItem.Overlay,OverlayWatched.png)">$LOCALIZE[19022]</value>
 		<value condition="!isEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
 		<value condition="!isEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="!isEmpty(ListItem.PictureDesc)">ListItem.PictureDesc</value>
@@ -260,82 +270,82 @@
 	<!-- SIDEBAR (Line 1) -->
 	<variable name="Var_Text_Sidebar_Line_1">
 		<!-- Type -->
-		<value condition="Container.Content(addons)">$LOCALIZE[467]</value>
+		<value condition="Container.Content(addons) | ListItem.Type(addon)">$LOCALIZE[467]</value>
 		<!-- Director -->
-		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$LOCALIZE[31040]</value>
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip) | ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(homemovie)">$LOCALIZE[31040]</value>
 		<!-- Albums (Genre) -->
-		<value condition="Container.Content(albums) | Container.Content(songs)">$LOCALIZE[515]</value>
+		<value condition="Container.Content(albums) | Container.Content(songs) | ListItem.Type(album) | ListItem.Type(song)">$LOCALIZE[515]</value>
 		<!-- Photo (Mode) -->
-		<value condition="Container.Content(photos)">Mode</value>
+		<value condition="Container.Content(photos) | ListItem.Type(photo)">Mode</value>
 		<!-- TvShows (Airdate) -->
-		<value condition="Container.Content(tvshows)">$LOCALIZE[31043]</value>
+		<value condition="Container.Content(tvshows) | ListItem.Type(tvshow)">$LOCALIZE[31043]</value>
 	</variable>
 
 	<variable name="Var_Info_Sidebar_Line_1">
 		<!-- Type -->
-		<value condition="Container.Content(addons)">$VAR[Var_Info_Addon_Type]</value>
+		<value condition="Container.Content(addons) | ListItem.Type(addon)">$VAR[Var_Info_Addon_Type]</value>
 		<!-- Director -->
-		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$VAR[Var_Info_Director]</value>
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip) | ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(homemovie)">$VAR[Var_Info_Director]</value>
 		<!-- Albums (Genre) -->
-		<value condition="Container.Content(albums) | Container.Content(songs)">$VAR[Var_Info_Genre]</value>
+		<value condition="Container.Content(albums) | Container.Content(songs)  | ListItem.Type(album) | ListItem.Type(song)">$VAR[Var_Info_Genre]</value>
 		<!-- Photo (Mode) -->
-		<value condition="Container.Content(photos)">$VAR[Var_Info_PictureMode]</value>
+		<value condition="Container.Content(photos) | ListItem.Type(photo)">$VAR[Var_Info_PictureMode]</value>
 		<!-- TvShows (Airdate) -->
-		<value condition="Container.Content(tvshows)">$VAR[Var_Info_Date]</value>
+		<value condition="Container.Content(tvshows) | ListItem.Type(tvshow)">$VAR[Var_Info_Date]</value>
 	</variable>
 
 	<!-- SIDEBAR (Line 2) -->
 	<variable name="Var_Text_Sidebar_Line_2">
 		<!-- Creator -->
-		<value condition="Container.Content(addons)">Creator</value><!-- LOC -->
+		<value condition="Container.Content(addons) | ListItem.Type(addon)">Creator</value><!-- LOC -->
 		<!-- Writer -->
-		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$LOCALIZE[31041]</value>
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip) | ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(homemovie)">$LOCALIZE[31041]</value>
 		<!-- Songs (Artist) -->
-		<value condition="Container.Content(songs)">$LOCALIZE[557]</value>
+		<value condition="Container.Content(songs) | ListItem.Type(song)">$LOCALIZE[557]</value>
 		<!-- Photo (Model) -->
-		<value condition="Container.Content(photos)">Camera</value>
+		<value condition="Container.Content(photos) | ListItem.Type(photo)">Camera</value>
 		<!-- Episodes -->
-		<value condition="Container.Content(tvshows)">$LOCALIZE[31013]</value>
+		<value condition="Container.Content(tvshows) | ListItem.Type(tvshow)">$LOCALIZE[31013]</value>
 	</variable>
 
 	<variable name="Var_Info_Sidebar_Line_2">
 		<!-- Creator -->
-		<value condition="Container.Content(addons)">$VAR[Var_Info_Addon_Creator]</value>
+		<value condition="Container.Content(addons) | ListItem.Type(addon)">$VAR[Var_Info_Addon_Creator]</value>
 		<!-- Writer -->
-		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip)">$VAR[Var_Info_Writer]</value>
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | ListItem.Type(clip) | ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(homemovie)">$VAR[Var_Info_Writer]</value>
 		<!-- Songs (Artist) -->
-		<value condition="Container.Content(songs)">$VAR[Var_Info_Artist]</value>
+		<value condition="Container.Content(songs) | ListItem.Type(song)">$VAR[Var_Info_Artist]</value>
 		<!-- Photos (Model) -->
-		<value condition="Container.Content(photos)">$VAR[Var_Info_PictureModel]</value>
+		<value condition="Container.Content(photos) | ListItem.Type(photo)">$VAR[Var_Info_PictureModel]</value>
 		<!-- TV Shows -->
-		<value condition="Container.Content(tvshows)">$VAR[Var_Info_Episodes_Total] $LOCALIZE[20161] [COLOR=mainblue]/[/COLOR] $VAR[Var_Info_Episodes_Unwatched] $LOCALIZE[16101]</value>
+		<value condition="Container.Content(tvshows) | ListItem.Type(tvshow)">$VAR[Var_Info_Episodes_Total] $LOCALIZE[20161] [COLOR=mainblue]/[/COLOR] $VAR[Var_Info_Episodes_Unwatched] $LOCALIZE[16101]</value>
 	</variable>
 
 	<!-- SIDEBAR (Line 3) -->
 	<variable name="Var_Text_Sidebar_Line_3">
 		<!-- Version -->
-		<value condition="Container.Content(addons)">$LOCALIZE[19114]</value>
+		<value condition="Container.Content(addons) | ListItem.Type(addon)">$LOCALIZE[19114]</value>
 		<!-- Cast -->
-		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | Container.Content(tvshows)">$LOCALIZE[31045]</value>
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | Container.Content(tvshows) | ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(homemovie) |  ListItem.Type(tvshow)">$LOCALIZE[31045]</value>
 		<!-- Clips (Airdate) -->
 		<value condition="ListItem.Type(clip)">$LOCALIZE[31043]</value>
 		<!-- Songs (Total) -->
-		<value condition="Container.Content(songs)">Total</value>
+		<value condition="Container.Content(songs) | ListItem.Type(song)">Total</value>
 		<!-- Photos (Date) -->
-		<value condition="Container.Content(photos)">$LOCALIZE[31042]</value>
+		<value condition="Container.Content(photos) | ListItem.Type(photo)">$LOCALIZE[31042]</value>
 	</variable>
 
 	<variable name="Var_Info_Sidebar_Line_3">
 		<!-- Version -->
-		<value condition="Container.Content(addons)">$VAR[Var_Info_Addon_Version]</value>
+		<value condition="Container.Content(addons) | ListItem.Type(addon)">$VAR[Var_Info_Addon_Version]</value>
 		<!-- Cast -->
-		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | Container.Content(tvshows)">$VAR[Var_Info_Cast]</value>
+		<value condition="Container.Content(movies) | Container.Content(episodes) | Container.Content(homemovies) | Container.Content(tvshows) | ListItem.Type(movie) | ListItem.Type(episode) | ListItem.Type(homemovie) |  ListItem.Type(tvshow)">$VAR[Var_Info_Cast]</value>
 		<!-- Date -->
 		<value condition="ListItem.Type(clip)">$VAR[Var_Info_Date]</value>
 		<!-- Songs (Artist) -->
-		<value condition="Container.Content(songs)">$VAR[Var_Info_TotalTime]</value>
+		<value condition="Container.Content(songs) | ListItem.Type(song)">$VAR[Var_Info_TotalTime]</value>
 		<!-- Photo (Mode) -->
-		<value condition="Container.Content(photos)">$VAR[Var_Info_Date]</value>
+		<value condition="Container.Content(photos) | ListItem.Type(photo)">$VAR[Var_Info_Date]</value>
 		<value>$INFO[ListItem.Property(Addon.Status)]</value>
 	</variable>
 
@@ -525,6 +535,52 @@
 	</variable>
 	<variable name="Var_Overlay_Rating_Image">
 		<value condition="!isEmpty(ListItem.Rating) + !isEmpty(ListItem.StarRating) + [ ListItem.Type(movie) | ListItem.Type(episode) ]">OverlayCount.png</value>
+	</variable>
+
+	<!-- PrePlay Header -->
+	<variable name="Var_Preplay_Header">
+		<value condition="Container.Content(clips) | ListItem.Type(clip)">$INFO[ListItem.Property(sourceTitle)]</value>
+		<value condition="Container.Content(tvshows) | Container.Content(episodes) | ListItem.Type(tvshow) | ListItem.Type(episode)">$INFO[ListItem.tvshowtitle]</value>
+		<value condition="Control.HasFocus(30)">$INFO[ListItem.Label][COLOR=mainblue] / [/COLOR]Extras ($INFO[Container(30).NumItems])</value>
+		<value condition="Control.HasFocus(3) + Container.Content(songs)">$VAR[Var_Info_Artist][COLOR=mainblue] / [/COLOR]Extras ($INFO[Container(3).NumItems])</value>
+		<value condition="Control.HasFocus(3)">$LOCALIZE[2][COLOR=mainblue] / [/COLOR]Extras ($INFO[Container(3).NumItems])</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
+	<!-- PrePlay Title -->
+	<variable name="Var_Preplay_Title">
+		<value condition="Container.Content(movies) | ListItem.Type(movie)">$INFO[ListItem.Genre]</value>
+		<value>$INFO[ListItem.Title]</value>
+	</variable>
+
+	<!-- PrePlay Poster -->
+	<variable name="Var_Preplay_Poster">
+		<value condition="Container.Content(tvshows) | Container.Content(episodes) | ListItem.Type(tvshow) | ListItem.Type(episode)">$INFO[ListItem.grandparentthumb]</value>
+		<value condition="Container.Content(clips) | ListItem.Type(clip)">$INFO[ListItem.Art(sourceIcon)]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+
+	<!-- PrePlay Thumb -->
+	<variable name="Var_Preplay_Thumb">
+		<!--<value condition="Skin.HasSetting(Spoiler_Image) + [ Container.Content(movies) | Container.Content(episodes) | ListItem.Type(movie) | ListItem.Type(episode) ] + !StringCompare(ListItem.Overlay,OverlayWatched.png)">nav_visibility.png</value>-->
+		<value condition="Skin.HasSetting(Spoiler_Image) + [ Container.Content(movies) | Container.Content(episodes) | ListItem.Type(movie) | ListItem.Type(episode) ] + !StringCompare(ListItem.Overlay,OverlayWatched.png)">no_content_bg.jpg</value>
+		<value condition="Container.Content(movies) | ListItem.Type(movie)">$INFO[ListItem.Art(fanart)]</value>
+		<value>$INFO[ListItem.Art(thumb)]</value>
+	</variable>
+
+	<!-- PrePlay Thumb (Label)-->
+	<variable name="Var_Preplay_Thumb_Label">
+		<value condition="[ Container.Content(episodes) | ListItem.Type(episode) ]">$LOCALIZE[20373] $INFO[ListItem.Season][COLOR=mainblue] &#xB7; [/COLOR]$LOCALIZE[20359] $INFO[ListItem.Episode]</value>
+		<value condition="[ Container.Content(movies) | ListItem.Type(movie) ] + !isEmpty(ListItem.Studio)">$INFO[ListItem.Studio]</value>
+		<value condition="[ Container.Content(movies) | ListItem.Type(movie) ] + !isEmpty(Listitem.Property(mediaTag-Studio))">$INFO[Listitem.Property(mediaTag-Studio)]</value>
+	</variable>
+
+	<!-- Extras Label -->
+	<variable name="Var_Extras_Label">
+		<value>$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.Title] ($INFO[ListItem.DurationStr])</value>
+		<!--<value condition="Window.isVisible(10090)">$INFO[ListItem.Property(extraTypeStr)][COLOR=mainblue] / [/COLOR]$INFO[ListItem.Title] ($INFO[ListItem.DurationStr])</value>
+		<value condition="!isEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>-->
 	</variable>
 
 	<!-- Client -->

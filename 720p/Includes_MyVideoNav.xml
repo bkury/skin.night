@@ -724,8 +724,11 @@
 
 			<!-- Quick Navigation -->
 			<control type="group">
-				<posy>120</posy>
+				<posy>115</posy>
 				<animation effect="slide" end="0,60" condition="!Skin.HasSetting(XBMC) + Container.Content(channel)">Conditonal</animation>
+
+				<control type="group">
+					<posx>-30</posx>
 
 				<!-- QUICK MENU (BUTTONS) -->
 				<control type="grouplist" id="18900">
@@ -741,52 +744,69 @@
 
 					<!-- Navigation (UP) -->
 					<control type="button" id="450">
-	                                        <width>64</width>
-	                                        <height>96</height>
+	                                        <width>100</width>
+	                                        <height>100</height>
 						<texturefocus>nav_left.png</texturefocus>
 						<texturenofocus>nav_left.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 	                                        <onclick>PageUp(50)</onclick>
+						<animation effect="zoom" center="50,50" end="160" condition="true">Conditional</animation>
+						<animation effect="slide" end="20,0" condition="true">Conditional</animation>
 	                                </control>
 
 					<!-- Navigation (DOWN) -->
 					<control type="button" id="451">
-	                                        <width>64</width>
-	                                        <height>96</height>
+	                                        <width>100</width>
+	                                        <height>100</height>
 						<texturefocus>nav_right.png</texturefocus>
 						<texturenofocus>nav_right.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
         	                                <onclick>PageDown(50)</onclick>
+						<animation effect="zoom" center="50,50" end="160" condition="true">Conditional</animation>
+						<animation effect="slide" end="20,0" condition="true">Conditional</animation>
+	                                </control>
+
+					<!-- Extras (Music) -->
+					<control type="button" id="461">
+	                                        <width>100</width>
+	                                        <height>100</height>
+						<texturefocus>nav_extras.png</texturefocus>
+						<texturenofocus>nav_extras.png</texturenofocus>
+						<colordiffuse>mainblue</colordiffuse>
+        	                                <onclick>SetFocus(3)</onclick>
+						<include>Context_Extras_Visible</include>
 	                                </control>
 
 					<!-- Unwatched -->
 					<control type="button" id="452">
-	                                        <width>96</width>
-	                                        <height>96</height>
-						<texturefocus>nav_unwatched.png</texturefocus>
-						<texturenofocus>nav_unwatched.png</texturenofocus>
+	                                        <width>100</width>
+	                                        <height>100</height>
+						<texturefocus>nav_visibility_off.png</texturefocus>
+						<texturenofocus>nav_visibility_off.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 						<onclick>ToggleWatched</onclick>
 						<include>Context_Unwatched_Visible</include>
+						<animation effect="zoom" center="50,50" end="105" condition="true">Conditional</animation>
 					</control>
 
 					<!-- Watched -->
 					<control type="button" id="453">
-	                                        <width>96</width>
-	                                        <height>96</height>
-						<texturefocus>nav_circle_checked.png</texturefocus>
-						<texturenofocus>nav_circle_checked.png</texturenofocus>
+	                                        <width>100</width>
+	                                        <height>100</height>
+						<texturefocus>nav_visibility.png</texturefocus>
+						<texturenofocus>nav_visibility.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 						<onclick>ToggleWatched</onclick>
 						<include>Context_Watched_Visible</include>
+						<animation effect="zoom" center="50,50" end="105" condition="true">Conditional</animation>
 	                                </control>
 
 					<!-- Queue -->
 					<control type="button" id="454">
-	                                        <width>96</width>
-	                                        <height>96</height>
-						<texturefocus>nav_add.png</texturefocus>
-						<texturenofocus>nav_add.png</texturenofocus>
+	                                        <width>100</width>
+	                                        <height>100</height>
+						<texturefocus>nav_queue.png</texturefocus>
+						<texturenofocus>nav_queue.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 						<onclick>Queue</onclick>
 						<include>Context_Queue_Visible</include>
@@ -794,8 +814,8 @@
 
 					<!-- Sort -->
 					<control type="button" id="455">
-	                                        <width>96</width>
-	                                        <height>96</height>
+	                                        <width>100</width>
+	                                        <height>100</height>
 						<texturefocus>nav_sort.png</texturefocus>
 						<texturenofocus>nav_sort.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
@@ -806,10 +826,10 @@
 
 					<!-- Favourite -->
 					<control type="button" id="457">
-	                                        <width>96</width>
-	                                        <height>96</height>
-						<texturefocus>nav_star.png</texturefocus>
-						<texturenofocus>nav_star.png</texturenofocus>
+	                                        <width>100</width>
+	                                        <height>100</height>
+						<texturefocus>nav_favourite.png</texturefocus>
+						<texturenofocus>nav_favourite.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
         	                                <onclick>ActivateWindow(3100)</onclick>
 						<include>Context_Favourite_Visible</include>
@@ -817,10 +837,10 @@
 
 					<!-- Context Menu -->
 					<control type="button" id="458">
-	                                        <width>96</width>
-	                                        <height>90</height>
-						<texturefocus>nav_context.png</texturefocus>
-						<texturenofocus>nav_context.png</texturenofocus>
+	                                        <width>100</width>
+	                                        <height>100</height>
+						<texturefocus>nav_context_menu.png</texturefocus>
+						<texturenofocus>nav_context_menu.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
 						<onclick>Skin.SetBool(Context_Enabled)</onclick>
 						<onclick>SetFocus(100)</onclick>
@@ -830,8 +850,8 @@
 
 					<!-- Library (XBMC) -->
 					<control type="button" id="459">
-	                                        <width>96</width>
-	                                        <height>96</height>
+	                                        <width>100</width>
+	                                        <height>100</height>
 						<texturefocus>nav_reload.png</texturefocus>
 						<texturenofocus>nav_reload.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
@@ -841,8 +861,8 @@
 
 					<!-- Search -->
 					<control type="button" id="460">
-	                                        <width>96</width>
-	                                        <height>96</height>
+	                                        <width>100</width>
+	                                        <height>100</height>
 						<texturefocus>nav_search.png</texturefocus>
 						<texturenofocus>nav_search.png</texturenofocus>
 						<colordiffuse>mainblue</colordiffuse>
@@ -865,47 +885,63 @@
 
 					<!-- Navigation -->
 					<control type="image">
-						<width>64</width>
-						<height>96</height>
+						<width>100</width>
+						<height>100</height>
 						<texture>nav_left.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(450)">Conditional</animation>
+						<animation effect="zoom" center="50,50" end="160" condition="true">Conditional</animation>
+						<animation effect="slide" end="20,0" condition="true">Conditional</animation>
 					</control>
 
 					<!-- Navigation -->
 					<control type="image">
-						<width>64</width>
-						<height>96</height>
+						<width>100</width>
+						<height>100</height>
 						<texture>nav_right.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(451)">Conditional</animation>
+						<animation effect="zoom" center="50,50" end="160" condition="true">Conditional</animation>
+						<animation effect="slide" end="20,0" condition="true">Conditional</animation>
+					</control>
+
+					<!-- Extras (Music) -->
+					<control type="image">
+						<width>100</width>
+						<height>100</height>
+						<texture>nav_extras.png</texture>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(461)">Conditional</animation>
+						<include>Context_Extras_Visible</include>
 					</control>
 
 					<!-- Unwatched -->
 					<control type="image">
-						<width>96</width>
-						<height>96</height>
-						<texture>nav_unwatched.png</texture>
+						<width>100</width>
+						<height>100</height>
+						<texture>nav_visibility_off.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(452)">Conditional</animation>
 						<include>Context_Unwatched_Visible</include>
+						<animation effect="zoom" center="50,50" end="105" condition="true">Conditional</animation>
 					</control>
 
 					<!-- Watched -->
 					<control type="image">
-						<width>96</width>
-						<height>96</height>
-						<texture>nav_circle_checked.png</texture>
+						<width>100</width>
+						<height>100</height>
+						<texture>nav_visibility.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(453)">Conditional</animation>
 						<include>Context_Watched_Visible</include>
+						<animation effect="zoom" center="50,50" end="105" condition="true">Conditional</animation>
 					</control>
 
 					<!-- Queue -->
 					<control type="image">
-						<width>96</width>
-						<height>96</height>
-						<texture>nav_add.png</texture>
+						<width>100</width>
+						<height>100</height>
+						<texture>nav_queue.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(454)">Conditional</animation>
 						<include>Context_Queue_Visible</include>
@@ -913,8 +949,8 @@
 
 					<!-- Sort -->
 					<control type="image">
-						<width>96</width>
-						<height>96</height>
+						<width>100</width>
+						<height>100</height>
 						<texture>nav_sort</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(455)">Conditional</animation>
@@ -924,9 +960,9 @@
 
 					<!-- Favourite -->
 					<control type="image">
-						<width>96</width>
-						<height>96</height>
-						<texture>nav_star.png</texture>
+						<width>100</width>
+						<height>100</height>
+						<texture>nav_favourite.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(457)">Conditional</animation>
 						<include>Context_Favourite_Visible</include>
@@ -934,9 +970,9 @@
 
 					<!-- Context Menu -->
 					<control type="image">
-						<width>96</width>
-						<height>90</height>
-						<texture>nav_context.png</texture>
+						<width>100</width>
+						<height>100</height>
+						<texture>nav_context_menu.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(458)">Conditional</animation>
 						<include>Context_Context_Visible</include>
@@ -944,8 +980,8 @@
 
 					<!-- Library -->
 					<control type="image">
-						<width>96</width>
-						<height>96</height>
+						<width>100</width>
+						<height>100</height>
 						<texture>nav_reload.png</texture>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(459)">Conditional</animation>
@@ -954,8 +990,8 @@
 
 					<!-- Search -->
 					<control type="image">
-						<width>96</width>
-						<height>96</height>
+						<width>100</width>
+						<height>100</height>
 						<colordiffuse>FFCCCCCC</colordiffuse>
 						<texture>nav_search.png</texture>
 						<animation effect="fade" start="100" end="0" condition="Control.HasFocus(460)">Conditional</animation>
@@ -975,17 +1011,29 @@
 
 					<!-- Navigation -->
 					<control type="label">
-						<width>228</width>
+						<width>310</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>Font_Filter</font>
 						<label>Page ($INFO[Container.CurrentPage]/$INFO[Container.NumPages])</label>
+						<animation effect="slide" end="30,0" condition="true">Conditional</animation>
+					</control>
+
+					<!-- Extras -->
+					<control type="label">
+						<width>150</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>Extras</label>
+						<include>Context_Extras_Visible</include>
 					</control>
 
 					<!-- Unwatched -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -996,7 +1044,7 @@
 
 					<!-- Watched -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1007,7 +1055,7 @@
 
 					<!-- Queue -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1018,7 +1066,7 @@
 
 					<!-- Sort -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1029,7 +1077,7 @@
 
 					<!-- Favourite -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1039,7 +1087,7 @@
 					</control>
 					<!-- Context Menu -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1049,7 +1097,7 @@
 					</control>
 					<!-- Refresh -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1059,7 +1107,7 @@
 					</control>
 					<!-- Search -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1080,18 +1128,29 @@
 
 					<!-- Navigation -->
 					<control type="label">
-						<!--<width>228</width>-->
-						<width>228</width>
+						<width>310</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>Font_Bartowski_Main_SubMenu</font>
 						<label>$VAR[Var_SortLetter]</label>
+						<animation effect="slide" end="30,0" condition="true">Conditional</animation>
+					</control>
+
+					<!-- Extras -->
+					<control type="label">
+						<width>150</width>
+						<height>96</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_Filter</font>
+						<label>-</label>
+						<include>Context_Extras_Visible</include>
 					</control>
 
 					<!-- Unwatched -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1102,7 +1161,7 @@
 
 					<!-- Watched -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1113,7 +1172,7 @@
 
 					<!-- Queue -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1124,7 +1183,7 @@
 
 					<!-- Sort -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1135,7 +1194,7 @@
 
 					<!-- Favourite -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1145,7 +1204,7 @@
 					</control>
 					<!-- Context Menu -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1155,7 +1214,7 @@
 					</control>
 					<!-- Refresh -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1165,13 +1224,16 @@
 					</control>
 					<!-- Search -->
 					<control type="label">
-						<width>146</width>
+						<width>150</width>
 						<height>96</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>Font_Filter</font>
 						<label>-</label>
 					</control>
+				</control>
+
+
 				</control>
 
 				<!-- Header -->

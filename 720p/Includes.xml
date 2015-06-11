@@ -2309,88 +2309,76 @@
 
 	<!-- Dialog Header Preplay -->
 	<include name="dialog_header_preplay">
-                <control type="group">
-			<!--<include>Animation_Bartowski_Context_Zoom</include>-->
-                        <posx>0</posx>
-                        <posy>60</posy>
-
-			<control type="group">
+		<control type="group">
 			<include>Animation_Preplay_Up</include>
+			<!-- Header -->
 			<control type="label">
-                                <description>header label</description>
-                                <posx>280</posx>
-                                <posy>5</posy>
-                                <width>720</width>
+                                <posx>120</posx>
+                                <posy>50</posy>
+                                <width>1040</width>
                                 <height>30</height>
                                 <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$INFO[ListItem.tvshowtitle]</label>
+                                <label>$VAR[Var_Preplay_Header]</label>
                                 <align>center</align>
                                 <textcolor>white</textcolor>
-				<visible>[Container.Content(tvshows) | Container.Content(episode)]</visible>
-                        </control>
-			<!-- No Extras -->
-			<control type="label">
-                                <description>header label</description>
-                                <posx>280</posx>
-                                <posy>5</posy>
-                                <width>720</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$INFO[ListItem.Label]</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + !Control.HasFocus(30)</visible>
-                        </control>
-			<!-- Extras -->
-			<control type="label">
-                                <description>header label</description>
-                                <posx>280</posx>
-                                <posy>5</posy>
-                                <width>720</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label>$INFO[ListItem.Label][COLOR=mainblue] / [/COLOR]Extras ($INFO[Container(30).NumItems])</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-				<scroll>true</scroll>
-				<visible>![Container.Content(tvshows) | Container.Content(episode) | Container.Content(clip)] + Control.HasFocus(30)</visible>
-                        </control>
-
-			<control type="label">
-                                <description>header label</description>
-                                <posx>280</posx>
-                                <posy>5</posy>
-                                <width>720</width>
-                                <height>30</height>
-                                <font>Font_Bartowski_Main_SubMenu</font>
-                                <label fallback="Unknown">$INFO[ListItem.Property(sourceTitle)]</label>
-                                <align>center</align>
-                                <textcolor>white</textcolor>
-				<visible>Container.Content(clip)</visible>
                         </control>
 			<!-- 1st SEPERATOR LINE -->
                         <control type="image">
-				<posx>230</posx>
-                                <posy>81</posy>
-				<width>820</width>
+				<posx>90</posx>
+                                <posy>125</posy>
+				<width>1100</width>
                                 <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
                         </control>
-			</control>
+		</control>
+		<!-- 2nd SEPERATOR LINE -->
+		<control type="image">
+			<posx>90</posx>
+			<posy>595</posy>
+			<width>1100</width>
+			<height>0.5</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<align>center</align>
+			<include>Animation_Preplay_Down</include>
+		</control>
+	</include>
 
-			<!-- 2nd SEPERATOR LINE -->
+	<include name="dialog_header_preplay_noanimation">
+		<control type="group">
+			<!-- Header -->
+			<control type="label">
+                                <posx>120</posx>
+                                <posy>70</posy>
+                                <width>1040</width>
+                                <height>30</height>
+                                <font>Font_Bartowski_Main_SubMenu</font>
+                                <label>$VAR[Var_Preplay_Header]</label>
+                                <align>center</align>
+                                <textcolor>white</textcolor>
+                        </control>
+			<!-- 1st SEPERATOR LINE -->
                         <control type="image">
-				<posx>230</posx>
-                                <posy>505</posy>
-				<width>820</width>
+				<posx>90</posx>
+                                <posy>145</posy>
+				<width>1100</width>
                                 <height>0.5</height>
                                 <texture>base-rounded.png</texture>
                                 <colordiffuse>mainblue</colordiffuse>
                                 <align>center</align>
-				<include>Animation_Preplay_Down</include>
                         </control>
+		</control>
+		<!-- 2nd SEPERATOR LINE -->
+		<control type="image">
+			<posx>90</posx>
+			<posy>615</posy>
+			<width>1100</width>
+			<height>0.5</height>
+			<texture>base-rounded.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<align>center</align>
 		</control>
 	</include>
 
@@ -3246,6 +3234,10 @@
 	</include>
 
 	<!-- PLEX -->
+	<include name="Context_Extras_Visible">
+		<visible>!IsEmpty(Container.Property(PlexExtras)) + [ Container.PlexContent(Artists) | Container.PlexContent(Albums) | Container.PlexContent(Songs) ]</visible>
+	</include>
+
 	<include name="Context_Queue_Visible">
 		<visible></visible>
 	</include>
@@ -3265,6 +3257,7 @@
 	<include name="Context_Context_Visible">
 		<visible>!Skin.HasSetting(Context_NoQuick)</visible>
 	</include>
+
 
 	<include name="Keyboard_Width">
 		<width>640</width>
@@ -3365,10 +3358,28 @@
 		<font>font16caps</font>
 	</include>
 
-
-
-
-
+	<!-- PrePlay Navigation -->
+	<include name="Preplay_Navigation_Label">
+		<posx>10</posx>
+		<posy>34</posy>
+		<width>130</width>
+		<height>30</height>
+		<font>Font_Bartowski_Preplay</font>
+		<textcolor>FFDDDDDD</textcolor>
+		<shadowcolor>FF000000</shadowcolor>
+		<align>center</align>
+		<wrapmultiline>true</wrapmultiline>
+	</include>
+	<include name="Preplay_Navigation_Separator">
+		<control type="image">
+			<posx>150</posx>
+			<posy>0</posy>
+			<width>1</width>
+			<height>60</height>
+			<texture>confluence/separator-hz.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+		</control>
+	</include>
 
 	<!-- Notification (Popup) -->
 	<include name="Notification_Style_Popup">
