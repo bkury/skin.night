@@ -327,7 +327,6 @@
 				<selected>Skin.String(osd_mode,Off)</selected>
 				<include>radiobutton_circle</include>
 			</control>
-
 		</control>
 
 		<!-- OSD Options -->
@@ -428,6 +427,14 @@
 				<onclick>Control.SetFocus(470)</onclick>
 				<selected>!IsEmpty(Skin.String(OSD_Opacity))</selected>
 				<visible>!IsEmpty(Skin.String(OSD_Opacity))</visible>
+			</control>
+			<control type="radiobutton" id="421">
+				<textoffsetx>10</textoffsetx>
+				<width>280</width>
+				<label>Quick Access (INFO)</label><!-- Quick Info -->
+				<onclick>Skin.ToggleSetting(osd_info_quick)</onclick>
+				<selected>Skin.HasSetting(osd_info_quick)</selected>
+				<include>radiobutton_circle</include>
 			</control>
 		</control>
 	</control>

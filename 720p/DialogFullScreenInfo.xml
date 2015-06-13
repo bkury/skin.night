@@ -2,15 +2,15 @@
 <window id="142">
 	<defaultcontrol>2</defaultcontrol>
 
-	<onload>Skin.SetBool(OSD_Quick)</onload>
-	<onload>Dialog.Close(142)</onload>
-	<onload>ActivateWindow(VideoOSD)</onload>
+	<onload condition="Skin.HasSetting(osd_info_quick)">Skin.SetBool(OSD_Quick)</onload>
+	<onload condition="Skin.HasSetting(osd_info_quick)">Dialog.Close(142)</onload>
+	<onload condition="Skin.HasSetting(osd_info_quick)">ActivateWindow(VideoOSD)</onload>
 
 	<controls>
 
 	<!-- FullScreenInfo -->
 	<control type="group">
-		<visible>false</visible>
+		<visible>!Skin.HasSetting(osd_info_quick)</visible>
 		<include>Animation_CommonFade_600</include>
 
 		<!-- PLEX -->

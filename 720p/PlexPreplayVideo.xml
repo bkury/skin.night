@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="10090">
-<onload condition="Window.Previous(home)">Skin.SetString(preplay_helper,home)</onload>
 <onload condition="Window.Previous(videolibrary)">Skin.SetString(preplay_helper,videolibrary)</onload>
+<onload condition="Window.Previous(home)">Skin.SetString(preplay_helper,home)</onload>
 <onload condition="Window.Previous(51)">Skin.SetString(preplay_helper,51)</onload>
 <onload condition="Window.Previous(99)">Skin.SetString(preplay_helper,99)</onload>
+<onload condition="Skin.HasSetting(preplay_after_episode_auto) + Window.Previous(fullscreenvideo) + ListItem.Type(episode) + ListItem.Status(watched)">XBMC.NextItem</onload>
 <defaultcontrol always="true">102</defaultcontrol>
 <allowoverlay>no</allowoverlay>
 <controls>
@@ -376,15 +377,15 @@
 				<include>navigation_arrow_down</include>
 				<!-- Position -->
 				<animation effect="slide" end="65,0" time="0" condition="Control.HasFocus(102)">Conditional</animation>
-				<animation effect="slide" end="215,0" time="0" condition="Control.HasFocus(103)">Conditional</animation>
-				<animation effect="slide" end="365,0" time="0" condition="Control.HasFocus(104)">Conditional</animation>
-				<animation effect="slide" end="515,0" time="0" condition="Control.HasFocus(105)">Conditional</animation>
-				<animation effect="slide" end="665,0" time="0" condition="Control.HasFocus(106)">Conditional</animation>
+				<animation effect="slide" end="215,0" time="0" condition="Control.HasFocus(110)">Conditional</animation>
+				<animation effect="slide" end="365,0" time="0" condition="Control.HasFocus(103)">Conditional</animation>
+				<animation effect="slide" end="515,0" time="0" condition="Control.HasFocus(104)">Conditional</animation>
+				<animation effect="slide" end="665,0" time="0" condition="Control.HasFocus(105)">Conditional</animation>
 				<animation effect="slide" end="815,0" time="0" condition="Control.HasFocus(107)">Conditional</animation>
 				<animation effect="slide" end="944,0" time="0" condition="Control.HasFocus(108)">Conditional</animation>
 				<animation effect="slide" end="984,0" time="0" condition="Control.HasFocus(109)">Conditional</animation>
 				<!-- Hide -->
-				<animation effect="slide" end="-1300,0" time="0" condition="![Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110)]">Conditional</animation>
+				<animation effect="slide" end="-1300,0" time="0" condition="![Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110)]">Conditional</animation>
 				<visible>Skin.HasSetting(navigation_arrow)</visible>
 			</control>
 			<control type="image">
@@ -393,15 +394,15 @@
 				<include>navigation_circle</include>
 				<!-- Position -->
 				<animation effect="slide" end="65,0" time="0" condition="Control.HasFocus(102)">Conditional</animation>
-				<animation effect="slide" end="215,0" time="0" condition="Control.HasFocus(103)">Conditional</animation>
-				<animation effect="slide" end="365,0" time="0" condition="Control.HasFocus(104)">Conditional</animation>
-				<animation effect="slide" end="515,0" time="0" condition="Control.HasFocus(105)">Conditional</animation>
-				<animation effect="slide" end="665,0" time="0" condition="Control.HasFocus(106)">Conditional</animation>
+				<animation effect="slide" end="215,0" time="0" condition="Control.HasFocus(110)">Conditional</animation>
+				<animation effect="slide" end="365,0" time="0" condition="Control.HasFocus(103)">Conditional</animation>
+				<animation effect="slide" end="515,0" time="0" condition="Control.HasFocus(104)">Conditional</animation>
+				<animation effect="slide" end="665,0" time="0" condition="Control.HasFocus(105)">Conditional</animation>
 				<animation effect="slide" end="815,0" time="0" condition="Control.HasFocus(107)">Conditional</animation>
 				<animation effect="slide" end="944,0" time="0" condition="Control.HasFocus(108)">Conditional</animation>
 				<animation effect="slide" end="984,0" time="0" condition="Control.HasFocus(109)">Conditional</animation>
 				<!-- Hide -->
-				<animation effect="slide" end="-1300,0" time="0" condition="![Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110)]">Conditional</animation>
+				<animation effect="slide" end="-1300,0" time="0" condition="![Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110)]">Conditional</animation>
 				<visible>Skin.HasSetting(navigation_circle)</visible>
 			</control>
 		</control>
@@ -429,7 +430,7 @@
 					<texturenofocus>b-pp-play.png</texturenofocus>
 					<onclick>Plex.PlayWith(VideoDefaultPlayer)</onclick>
 					<onleft>109</onleft>
-					<onright>103</onright>
+					<onright>110</onright>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
@@ -473,7 +474,7 @@
 					<height>32</height>
 					<texture>b-pp-extras.png</texture>
 				</control>
-				<control type="button" id="103">
+				<control type="button" id="110">
 					<posx>59</posx>
 					<width>32</width>
 					<height>32</height>
@@ -481,11 +482,11 @@
 					<texturenofocus>b-pp-extras.png</texturenofocus>
 					<onclick>SetFocus(30)</onclick>
 					<onleft>102</onleft>
-					<onright>104</onright>
+					<onright>103</onright>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
-					<visible allowhiddenfocus="true">Control.HasFocus(103)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(110)</visible>
 				</control>
 				<control type="label">
 					<label>Extras</label><!-- Extras -->
@@ -503,19 +504,19 @@
 					<height>30</height>
 					<texture>b-pp-audio2.png</texture>
 				</control>
-				<control type="button" id="104">
+				<control type="button" id="103">
 					<posx>37</posx>
 					<width>76</width>
 					<height>30</height>
 					<texturefocus>b-pp-audio2.png</texturefocus>
 					<texturenofocus>b-pp-audio2.png</texturenofocus>
 					<onclick>ActivateWindow(10205)</onclick>
-					<onright>105</onright>
-					<onleft>103</onleft>
+					<onleft>110</onleft>
+					<onright>104</onright>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
-					<visible allowhiddenfocus="true">Control.HasFocus(104)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(103)</visible>
 				</control>
 				<control type="label">
 					<label>$INFO[ListItem.Property(SelectedAudioStream)]</label>
@@ -533,19 +534,19 @@
 					<height>30</height>
 					<texture>b-pp-subtitles.png</texture>
 				</control>
-				<control type="button" id="105">
+				<control type="button" id="104">
 					<posx>37</posx>
 					<width>76</width>
 					<height>30</height>
 					<texturefocus>b-pp-subtitles.png</texturefocus>
 					<texturenofocus>b-pp-subtitles.png</texturenofocus>
 					<onclick>ActivateWindow(10204)</onclick>
-					<onleft>104</onleft>
-					<onright>106</onright>
+					<onleft>103</onleft>
+					<onright>105</onright>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
-					<visible allowhiddenfocus="true">Control.HasFocus(105)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(104)</visible>
 				</control>
 				<control type="label">
 					<label>$INFO[ListItem.Property(SelectedSubtitleStream)]</label>
@@ -563,19 +564,19 @@
 					<height>30</height>
 					<texture>b-pp-rate.png</texture>
 				</control>
-				<control type="button" id="106">
+				<control type="button" id="105">
 					<posx>37</posx>
 					<width>76</width>
 					<height>30</height>
 					<texturefocus>b-pp-rate.png</texturefocus>
 					<texturenofocus>b-pp-rate.png</texturenofocus>
 					<onclick>ActivateWindow(10200,$INFO[ListItem(0).Path])</onclick>
-					<onleft>105</onleft>
+					<onleft>104</onleft>
 					<onright>107</onright>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
 					<colordiffuse>mainblue</colordiffuse>
-					<visible allowhiddenfocus="true">Control.HasFocus(106)</visible>
+					<visible allowhiddenfocus="true">Control.HasFocus(105)</visible>
 				</control>
 				<control type="label">
 					<label>31037</label><!-- Rate -->
@@ -583,6 +584,8 @@
 				</control>
 				<include>Preplay_Navigation_Separator</include>
 			</control>
+
+			<!-- Recommend (106) -->
 
 			<!-- Share -->
 			<control type="group">
@@ -618,7 +621,7 @@
 					<texturefocus>b-pp-share.png</texturefocus>
 					<texturenofocus>b-pp-share.png</texturenofocus>
 					<onclick>-</onclick>
-					<onleft>106</onleft>
+					<onleft>105</onleft>
 					<onright>108</onright>
 					<ondown>XBMC.NextItem</ondown>
 					<onup>XBMC.PrevItem</onup>
@@ -689,11 +692,12 @@
                         <posy>135</posy>
 			<visible>Control.HasFocus(30) | Control.HasFocus(20)</visible>
 
+			<!-- Mouse -->
 			<control type="button" id="20">
-				<posx>-420</posx>
-				<posy>-80</posy>
-				<width>1080</width>
-				<height>580</height>
+				<posx>-80</posx>
+				<posy>-70</posy>
+				<width>1280</width>
+				<height>600</height>
 				<include>Mouse_Trigger</include>
 			</control>
 
@@ -705,118 +709,14 @@
 				<width>1200</width>
 				<height>450</height>
 				<scrolltime>200</scrolltime>
-				<onleft>102</onleft>
-				<onright>102</onright>
+				<onleft>110</onleft>
+				<onright>110</onright>
 				<pagecontrol>-</pagecontrol>
 
 				<include>Preplay_Extras_Thumb</include>
 
-				<!--<content>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-				<item>
-					<label>My First Item</label>
-					<label2>Label 2</label2>
-					<icon>nav_visibility.png</icon>
-    					<thumb>nav_visibility.png</thumb>
-    					<onclick>ActivateWindow(Home)</onclick>
-					<property name="extraTypeStr">Some1stValueHere</property>
-				</item>
-
-				</content>-->
-
 			</control>
 		</control>
-
-
-
-
 
 	</control>
 	<include>viewtype_clock</include>

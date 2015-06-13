@@ -329,6 +329,13 @@
 					<selected>Skin.HasSetting(preplay_after_clip)</selected>
 					<visible>!Skin.HasSetting(XBMC)</visible>
 				</control>
+				<control type="radiobutton" id="1090">
+					<include>skin_settings_labels</include>
+					<label>Enable Auto-Advance for Episodes</label>
+					<onclick>Skin.ToggleSetting(preplay_after_episode_auto)</onclick>
+					<selected>Skin.HasSetting(preplay_after_episode_auto)</selected>
+					<visible>!Skin.HasSetting(XBMC)</visible>
+				</control>
 
 				<!-- PleXBMC -->
 				<control type="label" id="1095">
@@ -1459,7 +1466,6 @@
 					<control type="radiobutton" id="4099">
 						<include>skin_settings_labels</include>
 						<label>Disable Placeholder</label>
-						<onclick>Skin.Reset(Deck_Images_Placeholder)</onclick>
 						<onclick>Skin.ToggleSetting(Deck_Images_Placeholder)</onclick>
 						<selected>Skin.HasSetting(Deck_Images_Placeholder)</selected>
 						<visible>!Skin.HasSetting(Deck_Disable)</visible>

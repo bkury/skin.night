@@ -3051,8 +3051,6 @@
 		<font>-</font>
 		<!--<texturenofocus>dot.png</texturenofocus>
 		<texturefocus>dot.png</texturefocus>-->
-		<!--<texturenofocus>-</texturenofocus>
-		<texturefocus>-</texturefocus>-->
 		<onfocus>-</onfocus>
 		<onclick>-</onclick>
 		<texturenofocus>-</texturenofocus>
