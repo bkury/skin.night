@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+
+	<!-- Zoom Animation -->
+	<animation type="WindowOpen" condition="![ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml) ]">
+		<effect type="fade" time="300" start="0" end="100" />
+		<effect type="zoom" time="400" center="auto" start="200" end="100" tween="cubic" easing="out" />
+	</animation>
+	<animation type="WindowClose" condition="!Control.hasFocus(2010) + ![ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml) ]">
+		<effect type="fade" time="300" start="100" end="0" />
+		<effect type="zoom" time="400" center="auto" start="100" end="200" tween="cubic" easing="in" />
+	</animation>
+
+	<!-- Fade Animation -->
+	<animation type="WindowOpen" condition="[ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml)]">
+		<effect type="fade" time="300" start="0" end="100" reversible="false" />
+	</animation>
+
+	<controls>
+
+	<!-- Background -->
+	<control type="group">
+		<visible>![ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml) | Window.isVisible(MyGames.xml) ]</visible>
+	        <include>Dialog_Background</include>
+	</control>
+
+	<!-- KODI -->
+	<control type="grouplist">
+		<top>340</top>
+		<left>680</left>
+		<width>1200</width>
+		<include>AspectRatio_Both</include>
+		<itemgap>8</itemgap>
+		<animation effect="slide" start="0,0" end="0,-100" condition="[ Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml) ]">Conditional</animation>
+
+		<include content="ContextMenu_Header"><param name="id">900</param><param name="label">$LOCALIZE[31533]</param></include>
+
+		<control type="grouplist" id="996">
+			<height max="1010">auto</height>
+			<itemgap>4</itemgap>
+		</control>
+
+		<include content="ContextMenu_Separator"><param name="id">2000</param></include>
+		<include content="ContextMenu_Header"><param name="id">2005</param><param name="label">$LOCALIZE[31301]</param></include>
+		<include content="ContextMenu_Button_Custom"><param name="id">2010</param><param name="dialog">contextmenu</param></include>
+
+	</control>
+
+	<control type="button" id="1000">
+		<include>ContextMenu_Button_Content</include>
+		<label></label>
+		<onleft condition="Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml)">Dialog.Close(106)</onleft>
+		<onleft condition="Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml)">SetFocus(7001)</onleft>
+		<onright condition="Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml)">Dialog.Close(106)</onright>
+		<onright condition="Window.isVisible(2) | Window.isVisible(25) | Window.isVisible(501) | Window.isVisible(502) | Window.isVisible(addonbrowser) | Window.isVisible(MyPVRChannels.xml) | Window.isVisible(MyPVRRecordings.xml)">SetFocus(7003)</onright>
+	</control>
+
+	</controls>
+</window>

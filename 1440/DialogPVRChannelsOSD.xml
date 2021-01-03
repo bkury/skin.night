@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+        <defaultcontrol always="true">11</defaultcontrol>
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+
+		<!-- Background -->
+		<control type="image">
+			<texture>bg_black.png</texture>
+			<include>background_default</include>
+			<colordiffuse>AA000000</colordiffuse>
+		</control>
+
+		<!-- Header -->
+		<control type="label">
+			<top>10</top>
+			<left>10</left>
+			<width>680</width>
+			<height>100</height>
+			<label>$LOCALIZE[31341]</label>
+			<font>Lato_Thin_40</font>
+			<wrapmultiline>false</wrapmultiline>
+		</control>
+
+		<!-- Clock -->                
+		<control type="group">
+			<include>Clock_Right_Pos_BG</include>
+			<include>Clock_Right</include>
+		</control>
+
+		<!-- Separator -->
+		<control type="image">
+			<top>130</top>
+			<include>SeparatorH</include>
+		</control>
+
+		<!-- PVR (Groups) -->
+		<control type="label">
+			<label>$INFO[VideoPlayer.ChannelGroup]</label>
+			<font>Lato_Black_20</font>
+			<height>130</height>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+
+		<!-- Channels -->
+		<control type="panel" id="11">
+			<top>160</top>
+			<left>20</left>
+			<width>2520</width>
+			<height>900</height>
+
+			<itemlayout width="840" height="180">
+				<control type="image">
+					<left>20</left>
+					<top>20</top>
+					<height>140</height>
+					<width>800</width>
+					<texture>bg_black.png</texture>
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<include>Viewmode_Border_NoColor</include>
+				</control>
+                                
+				<control type="image">
+					<top>20</top>
+					<left>160</left>
+					<width>4</width>
+					<height>140</height>
+					<texture>confluence/separator-hz.png</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<top>20</top>
+					<left>300</left>
+					<width>4</width>
+					<height>140</height>
+					<texture>confluence/separator-hz.png</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+				</control>
+
+				<control type="label">
+					<top>40</top>
+					<left>40</left>
+					<!--<label>222$INFO[ListItem.ChannelNumberLabel]</label>-->
+					<label>BBB</label>
+					<font>Roboto_Condensed_30</font>
+					<height>100</height>
+					<width>100</width>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="image">
+					<top>40</top>
+					<left>180</left>
+					<height>100</height>
+					<width>100</width>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<top>40</top>
+					<left>320</left>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Lato_Regular_20</font>
+					<height>50</height>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<top>90</top>
+					<left>320</left>
+					<label>$INFO[ListItem.Title]</label>
+					<font>Lato_Light_20</font>
+					<height>50</height>
+					<aligny>center</aligny>
+				</control>
+			</itemlayout>
+			<focusedlayout width="840" height="180">
+				<control type="image">
+					<top>10</top>
+					<height>80</height>
+					<texture>bg_black.png</texture>
+					<colordiffuse>88FFFFFF</colordiffuse>
+				</control>
+			</focusedlayout>
+
+		</control>
+
+</controls>
+</window>

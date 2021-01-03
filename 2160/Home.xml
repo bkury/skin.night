@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<!-- Addons -->
+	<onload condition="System.hasAddon(script.favourites)">RunScript(script.favourites)</onload>
+
+	<!-- Animation -->
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+
+	<!-- Home Screen -->
+	<control type="group">
+		<include condition="Skin.HasSetting(Dashboard_Enabled)">Dashboard_Hidden</include>
+
+		<!-- Background (Home) -->
+		<include condition="!Skin.hasSetting(Home_Panel)">Home_Background</include>
+
+		<!-- Background (Widget) -->
+		<include condition="!Skin.hasSetting(Home_Panel)" content="Background_Custom">
+			<param name="visible">ControlGroup(5000).hasFocus</param>
+			<param name="id_home">11</param>
+			<param name="id_fade">13011</param>
+			<param name="image">$VAR[Var_Background_Widget]</param>
+		</include>
+
+		<!-- Vertical Home (Vignette) -->
+		<include condition="![ Skin.HasSetting(Home_Horizontal) | Skin.HasSetting(Home_Panel) ]">Home_Vignette</include>
+
+		<!-- Home Menu -->
+		<control type="group">
+			<include>AspectRatio_PosY</include>
+			<include>Home_Navigation</include>
+		</control>
+
+		<!-- Weather (Vertical) -->
+		<include condition="!Skin.HasSetting(Home_Hide_WeatherWidget) + !Skin.hasSetting(Home_Horizontal) + !Skin.hasSetting(Home_Panel)">Weather_Widget</include>
+
+		<!-- Clock (Vertical) -->
+		<control type="group">
+			<include condition="!Skin.HasSetting(Home_Hide_Clock) + !Skin.hasSetting(Home_Horizontal) + !Skin.hasSetting(Home_Panel)">Clock_Right_Pos_BG</include>
+			<include>Video_Preview</include>
+		</control>
+		<control type="group">
+			<animation effect="slide" end="-429,0" condition="Player.hasVideo">Conditional</animation>
+			<include condition="!Skin.HasSetting(Home_Hide_Clock) + !Skin.hasSetting(Home_Horizontal) + !Skin.hasSetting(Home_Panel)">Clock_Right_Pos</include>
+			<include condition="!Skin.HasSetting(Home_Hide_Clock) + !Skin.hasSetting(Home_Horizontal) + !Skin.hasSetting(Home_Panel)">Clock_Right</include>
+		</control>
+
+		<!-- Clock / Weather (Horizontal) -->
+		<include condition="Skin.hasSetting(Home_Horizontal)">Clock_Weather_Horizontal</include>
+
+	</control>
+
+	<!-- Dashboard -->
+	<include>Dashboard</include>
+
+	<!-- Mouse Warning (WIP) -->
+	<include condition="!Skin.hasSetting(Home_Panel)">Mouse_Warning</include>
+
+	</controls>
+</window>

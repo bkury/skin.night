@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1101">
+	<defaultcontrol always="true">2</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	<include>Animation_Window_Dialog</include>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+        <onunload>Skin.Reset(selectorname)</onunload>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+	        <!-- Dialog Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">49</param>
+			<param name="header_label">$LOCALIZE[31135]</param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">1</param>
+			<param name="scroll_onright">52</param>
+		</include>
+
+		<!-- Category -->
+		<control type="grouplist" id="2">
+			<onright>1</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_Grouplist_Category</include>
+
+			<control type="button" id="10">
+				<label>$LOCALIZE[31070]</label> <!-- General -->
+				<include>Dialog_General_Button_Category</include>
+			</control>
+			<control type="button" id="12">
+				<label>$LOCALIZE[31024]</label> <!-- Favourites -->
+				<include>Dialog_General_Button_Category</include>
+			</control>
+			<control type="button" id="14">
+				<label>$LOCALIZE[31217]</label> <!-- Metadata -->
+				<include>Dialog_General_Button_Category</include>
+			</control>
+		</control>
+
+		<!-- Content -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>2</onleft>
+			<include>Dialog_General_List</include>
+
+			<content>
+
+				<!-- Reset -->
+				<item>
+					<label>$LOCALIZE[31193]</label>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.Reset(Home_$INFO[Skin.String(selector3)]_Name)</onclick>
+					<include>CustomHome_Clear_OnClick</include>
+					<onclick>Dialog.Close(1101)</onclick>
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+
+				<!-- Add file -->
+				<item>
+					<label>$LOCALIZE[31220]</label>
+					<onclick>Skin.SetFile(PlayFile)</onclick>
+
+					<include>CustomHome_Clear_OnClick</include>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Label,$LOCALIZE[31006])</onclick>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.SetString(Home_$INFO[Skin.String(selector3)]_Name,$LOCALIZE[31006])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Icon,DefaultFile.png)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Action,playmedia)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Path,$INFO[Skin.String(PlayFile)])</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+
+					<property name="separator">true</property>
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+
+				<!-- Add Program -->
+				<item>
+					<label>$LOCALIZE[31223]</label>
+					<onclick>Skin.SetFile(PlayFile,,)</onclick>
+
+					<include>CustomHome_Clear_OnClick</include>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Label,$LOCALIZE[31030])</onclick>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.SetString(Home_$INFO[Skin.String(selector3)]_Name,$LOCALIZE[31030])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Icon,DefaultProgram.png)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Action,execute)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Path,$INFO[Skin.String(PlayFile)])</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+
+				<!-- Add URL -->
+				<item>
+					<label>$LOCALIZE[31222]</label>
+					<onclick>Skin.Reset(PlayFile)</onclick>
+					<onclick>Skin.SetString(PlayFile)</onclick>
+
+					<include>CustomHome_Clear_OnClick</include>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Label,$LOCALIZE[31364])</onclick>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.SetString(Home_$INFO[Skin.String(selector3)]_Name,$LOCALIZE[31364])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Icon,DefaultNetwork.png)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Action,playmedia)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Path,$INFO[Skin.String(PlayFile)])</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+
+				<!-- Add Playlist -->
+				<item>
+					<label>$LOCALIZE[31224]</label>
+					<onclick>Skin.SetFile(PlayFile,.xsp,special://skin/playlists/)</onclick>
+
+					<include>CustomHome_Clear_OnClick</include>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Label,$LOCALIZE[31118])</onclick>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.SetString(Home_$INFO[Skin.String(selector3)]_Name,$LOCALIZE[31118])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Icon,DefaultPlaylist.png)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Path,$INFO[Skin.String(PlayFile)])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].FolderPath,$INFO[Skin.String(PlayFile)])</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+
+				<!-- GENERAL -->
+				<item>
+					<label>$LOCALIZE[31000]</label> <!-- Live TV -->
+					<include>CustomHome_Clear_OnClick</include>
+
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Label,$LOCALIZE[31000])</onclick>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.SetString(Home_$INFO[Skin.String(selector3)]_Name,$LOCALIZE[31000])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Icon,icons/home/livetv.png)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Window,tvchannels)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].FolderPath,pvr://channels/tv/All)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+
+					<property name="separator">true</property>
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[31009]</label>
+					<include>CustomHome_Clear_OnClick</include>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Label,$LOCALIZE[31009])</onclick>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.SetString(Home_$INFO[Skin.String(selector3)]_Name,$LOCALIZE[31009])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Icon,icons/home/movies.png)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Window,videos)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].FolderPath,videodb://movies/titles/)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[31011]</label>
+					<include>CustomHome_Clear_OnClick</include>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Label,$LOCALIZE[31011])</onclick>
+					<onclick condition="!String.isEmpty(Skin.String(selector3))">Skin.SetString(Home_$INFO[Skin.String(selector3)]_Name,$LOCALIZE[31011])</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Icon,icons/home/tv.png)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].Window,videos)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector2)].FolderPath,videodb://tvshows/titles/)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+					<visible>ControlGroup(2).hasFocus(10)</visible>
+				</item>
+
+				<!-- Favourites -->
+				<item>
+					<label>Addon Required (script.favourites)</label>
+					<onclick>InstallAddon(script.favourites)</onclick>
+					<visible>ControlGroup(2).hasFocus(12) + !System.hasAddon(script.favourites)</visible>
+				</item>
+				<include>CustomHome_Favourites</include>
+
+				<!-- Metadata -->
+				<include>CustomHome_Metadata</include>
+
+			</content>
+		</control>
+
+		<!-- Footer -->
+		<include content="Dialog_General_Footer_Button_OKCANCEL"> <!-- 50 / 52 -->
+			<param name="id_left">2</param>
+			<param name="id_right">1</param>
+			<param name="dialog">1101</param>
+		</include>
+		<control type="radiobutton" id="51">
+			<label>[UPPERCASE]Remove[/UPPERCASE]</label>
+			<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">dialog_button_center.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="FFAAAAAA">dialog_button_center.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">dialog_button_center.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="FFAAAAAA">dialog_button_center.png</textureradiooffnofocus>
+			<textureradiooffdisabled colordiffuse="TextDisabled">dialog_button_center.png</textureradiooffdisabled>
+			<textureradioondisabled colordiffuse="TextDisabled">dialog_button_center.png</textureradioondisabled>
+					
+			<include>CustomHome_Clear_OnClick</include>
+			<onclick>Dialog.Close(1101)</onclick>
+
+			<onup>1</onup>
+			<onleft>50</onleft>
+			<onright>52</onright>
+			<include>Dialog_General_Footer_Center</include>
+			<include>Dialog_General_Footer_Default</include>
+		</control>
+
+	</control>
+
+	</controls>
+</window>

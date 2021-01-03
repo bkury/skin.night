@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="7">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>Animation_Window_Fade</include>
+	<controls>
+
+		<!-- Background -->
+                <include condition="!Skin.hasSetting(Home_Panel)" content="Background_Custom">
+                        <param name="id_home">20</param>
+                        <param name="id_fade">13020</param>
+                        <param name="opacity">30</param>
+                        <param name="image">$VAR[Var_Background_Default_Image]</param>
+                </include>
+
+		<control type="group">
+			<include>AspectRatio_PosY</include>
+
+		<!-- Clock -->
+		<control type="group">
+			<animation effect="slide" end="-30,0" condition="true">Conditional</animation>
+			<include>Clock_Right_Pos</include>
+			<include>Clock_Right</include>
+		</control>
+
+		<!-- Logo -->
+		<control type="image">
+			<left>15</left>
+			<top>30</top>
+			<width>360</width>
+			<height>150</height>
+			<aspectratio>keep</aspectratio>
+			<texture>night_logo.png</texture>
+			<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+		</control>
+
+		<!-- Separator -->
+		<control type="image">
+			<left>60</left>
+			<top>210</top>
+			<include>AspectRatio_Width_1240</include>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<left>60</left>
+			<top>150r</top>
+			<include>AspectRatio_Width_1240</include>
+			<include>SeparatorH</include>
+		</control>
+
+		<!-- Header -->
+		<control type="textbox">
+			<top>30</top>
+			<include>AspectRatio_Width</include>
+			<font>Font_Settings_Header</font>
+			<label>$LOCALIZE[130] - $INFO[Control.GetLabel(40)]</label>
+			<align>center</align>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+
+		<control type="group">
+			<include>AspectRatio_PosX</include>
+			<left>60</left>
+
+			<control type="image">
+				<top>210</top>
+				<width>780</width>
+				<height>1800</height>
+				<texture>bg_white.png</texture>
+				<colordiffuse>04FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>780</left>
+				<top>210</top>
+				<width>2940</width>
+				<height>1800</height>
+				<texture>bg_white.png</texture>
+				<colordiffuse>22000000</colordiffuse>
+			</control>
+			<control type="image">
+				<left>780</left>
+				<top>210</top>
+				<height>1800</height>
+				<colordiffuse>11FFFFFF</colordiffuse>
+				<include>SeparatorV</include>
+			</control>
+
+                        <!-- Menu (NEW) -->
+			<control type="grouplist" id="100">
+				<left>0</left>
+				<top>240</top>
+				<orientation>vertical</orientation>
+				<itemgap>-6</itemgap>
+				<onright>Skin.SetString(Settings_Helper,$INFO[System.CurrentControl])</onright>
+				<onright>101</onright>
+				<width>780</width>
+				<height>2100</height>
+
+				<control type="button" id="95">
+					<label>20037</label>
+					<include>skin_settings_menu</include>
+				</control>
+				<control type="button" id="94">
+					<label>13277</label>
+					<include>skin_settings_menu</include>
+				</control>
+				<control type="button" id="92">
+					<label>13275</label>
+					<include>skin_settings_menu</include>
+					<visible>System.Platform.Xbox</visible>
+				</control>
+				<control type="button" id="93">
+					<label>13276</label>
+					<include>skin_settings_menu</include>
+					<visible>System.Platform.Xbox</visible>
+				</control>
+				<control type="button" id="96">
+					<label>13279</label>
+					<include>skin_settings_menu</include>
+				</control>
+				<control type="button" id="97">
+					<label>13280</label>
+					<include>skin_settings_menu</include>
+				</control>
+				<control type="button" id="98">
+					<label>13281</label>
+					<include>skin_settings_menu</include>
+				</control>
+			</control>
+
+		<control type="group">
+			<left>960</left>
+			<top>270</top>
+			<control type="label" id="2">
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="3">
+				<top>108</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="4">
+				<top>216</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="5">
+				<top>324</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="6">
+				<top>438</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="7">
+				<top>546</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="8">
+				<top>654</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="9">
+				<top>762</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="10">
+				<top>870</top>
+				<include>skin_settings_labels</include>
+			</control>
+			<control type="label" id="11">
+				<top>978</top>
+				<include>skin_settings_labels</include>
+			</control>
+		</control>
+	</control>
+
+	</control>
+
+	<control type="label">
+		<top>120r</top>
+		<label>[UPPERCASE]$INFO[System.FriendlyName][/UPPERCASE] running $INFO[System.BuildVersion] (XML: 2160 / $INFO[Skin.AspectRatio])</label><!-- ConvertScriptXML -->
+		<include>skin_settings_labels</include>
+	</control>
+		
+	<control type="label" id="52">
+		<visible>false</visible>
+		<top>120r</top>
+		<include>skin_settings_labels</include>
+	</control>
+
+	<control type="label" id="40">
+		<visible>false</visible>
+	</control>
+
+	</controls>
+</window>

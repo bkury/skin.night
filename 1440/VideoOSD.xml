@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2901">
+	<defaultcontrol always="true">742</defaultcontrol>
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+
+	<!-- OSD Hide -->
+	<control type="group" id="1001">
+		<visible allowhiddenfocus="true">ControlGroup(1001).hasFocus</visible>
+
+                <animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="1500" />
+                        <effect type="fade" start="100" end="0" time="1500" delay="1500" />
+                </animation>
+
+                <control type="button">
+                        <top>480</top>
+                        <include>AspectRatio_Width</include>
+                        <label>OSD Hidden</label>
+                        <font>Lato_Light_90</font>
+                        <align>center</align>
+                        <textcolor>FFCCCCCC</textcolor>
+                        <onclick>SetFocus(1000)</onclick>
+                        <onleft>SetFocus(1000)</onleft>
+                        <onright>SetFocus(1000)</onright>
+                        <onup>SetFocus(1000)</onup>
+                        <ondown>SetFocus(1000)</ondown>
+			<onback>SetFocus(1000)</onback>
+                </control>
+                <control type="label">
+                        <top>680</top>
+                        <label>Press any key to return ...</label>
+                        <include>AspectRatio_Width</include>
+                        <font>Lato_Light_40</font>
+                        <align>center</align>
+                        <textcolor>FFCCCCCC</textcolor>
+                </control>
+
+	</control>
+
+	<control type="group" id="1000">
+		<visible allowhiddenfocus="true">![ Window.isVisible(1140) | Window.isVisible(125) | ControlGroup(1001).hasFocus ]</visible> <!-- QuickOSD / Bookmarks -->
+
+		<!-- TOP BAR -->
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,80" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Top)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,1200" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Bottom)">Conditional</animation>
+			<left>0</left>
+			<top>0</top>
+
+			<!-- Background -->
+			<control type="group">
+				<control type="image">
+					<include>AspectRatio_Width</include>
+					<height>140</height>
+					<include>Background</include>
+					<colordiffuse>FF000000</colordiffuse>
+                                
+					<!-- Opacity -->
+					<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+				</control>
+				<control type="image">
+					<top>140</top>
+					<include>SeparatorH</include>
+
+					<!-- Opacity -->
+					<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+					<animation effect="slide" end="0,-142" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Bottom)">Conditional</animation>
+					<visible>![String.isEqual(Skin.String(osd_mode),Top)]</visible>
+				</control>
+			</control>
+
+			<!-- Clock -->
+			<control type="group">
+				<include>Clock_Right_Pos</include>
+				<include>Clock_Right</include>
+			</control>
+
+			<!-- OSD -->
+			<control type="grouplist">
+				<top>20</top>
+				<left>0</left>
+				<include>AspectRatio_Width_1290</include>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+
+				<!-- Mediaflags -->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+
+					<control type="label">
+						<left>20</left>
+						<height>50</height>
+						<aligny>center</aligny>
+						<width>280</width>
+						<font>Lato_Black_25</font>
+						<label>$VAR[Var_VideoOSD_Info]</label>
+						<textcolor>$VAR[Var_Color_ContentRating_Hex]</textcolor>
+					</control>
+
+					<control type="grouplist">
+						<left>20</left>
+						<top>60</top>
+						<width>300</width>
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+	
+						<control type="label">
+							<width min="0" max="140">auto</width>
+							<label>[UPPERCASE]$INFO[VideoPlayer.VideoResolution][/UPPERCASE]</label>
+							<font>Lato_Light_20</font>
+							<height>40</height>
+							<aligny>center</aligny>
+							<textcolor>$VAR[Var_Color_VideoResolution_Hex]</textcolor>
+						</control>
+						<control type="label">
+							<width>20</width>
+							<label>[COLOR=$VAR[Var_Color_Clock_Hex]]&#xB7;[/COLOR]</label>
+							<align>center</align>
+							<height>40</height>
+							<aligny>center</aligny>
+							<font>Lato_Light_20</font>
+							<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+							<visible>!String.isEmpty(VideoPlayer.VideoResolution) + !String.isEmpty(VideoPlayer.AudioCodec)</visible>
+						</control>
+						<control type="label">
+							<width min="0" max="140">auto</width>
+							<label>[UPPERCASE]$INFO[VideoPlayer.AudioCodec][/UPPERCASE]</label>
+							<height>40</height>
+							<aligny>center</aligny>
+							<font>Lato_Light_20</font>
+							<textcolor>$VAR[Var_Color_AudioCodec_Hex]</textcolor>
+						</control>
+					</control>
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- Bookmarks-->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+					<control type="image">
+						<include>AspectRatio_OSD_PosX_135</include>
+	                                        <width>60</width>
+	                                        <height>60</height>
+	                                        <texture>icon_star.png</texture>
+						<visible>!Control.HasFocus(700)</visible>
+						<colordiffuse>FFCCCCCC</colordiffuse>
+	                                </control>
+					<control type="button" id="700">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texturefocus>icon_star.png</texturefocus>
+						<texturenofocus>icon_star.png</texturenofocus>
+						<onleft>770</onleft>
+						<onright>710</onright>
+
+						<onup>1001</onup>
+						<ondown>ActivateWindow(1140)</ondown>
+						<onclick>ActivateWindow(125)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(700)</visible>
+						<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31408]</label><!-- Bookmarks -->
+						<include>VideoOSD_Label</include>
+						<visible>!Control.HasFocus(700)</visible>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31408]</label><!-- Bookmarks -->
+						<include>VideoOSD_Label_Focus</include>
+						<visible>Control.HasFocus(700)</visible>
+					</control>
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- AUDIO SELECTION -->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+					<control type="image">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texture>icon_audio.png</texture>
+						<visible>!Control.HasFocus(710)</visible>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="710">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texturefocus>icon_audio.png</texturefocus>
+						<texturenofocus>icon_audio.png</texturenofocus>
+						<onleft>700</onleft>
+						<onright>720</onright>
+						<onup>1001</onup>
+						<ondown>ActivateWindow(1140)</ondown>
+						<onclick>AudioNextLanguage</onclick>
+						<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						<visible allowhiddenfocus="true">Control.HasFocus(710)</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[Var_Player_Audio]</label><!-- AudioStream -->
+						<include>VideoOSD_Label</include>
+						<visible>!Control.HasFocus(710)</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[Var_Player_Audio]</label><!-- AudioStream -->
+						<include>VideoOSD_Label_Focus</include>
+						<visible>Control.HasFocus(710)</visible>
+					</control>
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- Subtitle (Select) -->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+					<control type="image">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texture>icon_subtitle.png</texture>
+						<visible>!Control.HasFocus(720)</visible>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+						<animation effect="slide" end="-30" condition="true">conditional</animation>
+					</control>
+					<control type="button" id="720">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texturefocus>icon_subtitle.png</texturefocus>
+						<texturenofocus>icon_subtitle.png</texturenofocus>
+						<onleft>710</onleft>
+						<onright>730</onright>
+						<onup>1001</onup>
+						<ondown>ActivateWindow(1140)</ondown>
+						<!--<onclick>NextSubtitle</onclick>-->
+						<onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(720)</visible>
+						<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						<animation effect="slide" end="-30" condition="true">conditional</animation>
+					</control>
+					<control type="label">
+						<label>$VAR[Var_Player_Subtitle]</label><!-- SubtitleStream -->
+						<include>VideoOSD_Label</include>
+						<visible>![ Control.HasFocus(720) | Control.HasFocus(730) ]</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[Var_Player_Subtitle]</label><!-- SubtitleStream -->
+						<include>VideoOSD_Label_Focus</include>
+						<visible>Control.HasFocus(720) | Control.HasFocus(730)</visible>
+					</control>
+
+					<!-- Subtitle (Download) -->
+					<control type="image">
+						<top>4</top>
+						<left>136</left>
+						<width>60</width>
+						<height>52</height>
+						<texture>icon_download.png</texture>
+						<visible>!Control.HasFocus(730)</visible>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="730">
+						<top>4</top>
+						<left>136</left>
+						<width>60</width>
+						<height>52</height>
+						<texturefocus>icon_download.png</texturefocus>
+						<texturenofocus>icon_download.png</texturenofocus>
+						<onleft>720</onleft>
+						<onright>740</onright>
+						<onup>1001</onup>
+						<ondown>ActivateWindow(1140)</ondown>
+						<onclick>ActivateWindow(SubtitleSearch)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(730)</visible>
+						<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+					</control>
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- Controls -->
+				<control type="group">
+					<width>400</width>
+
+					<control type="group">
+						<left>20</left>
+
+						<!-- previous -->
+						<control type="image">
+							<left>0</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>icon_skipprevious.png</texture>
+							<visible>!Control.HasFocus(740)</visible>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="740">
+							<left>0</left>
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>icon_skipprevious.png</texturefocus>
+							<texturenofocus>icon_skipprevious.png</texturenofocus>
+							<onleft>730</onleft>
+							<onright>741</onright>
+							<onup>1001</onup>
+							<ondown>ActivateWindow(1140)</ondown>
+							<onclick>PlayerControl(Previous)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(740)</visible>
+							<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						</control>
+
+						<!-- rewind -->
+						<control type="image">
+							<left>60</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>icon_rewind.png</texture>
+							<visible>!Control.HasFocus(741)</visible>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="741">
+							<left>60</left>
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>icon_rewind.png</texturefocus>
+							<texturenofocus>icon_rewind.png</texturenofocus>
+							<onleft>740</onleft>
+							<onright>742</onright>
+							<onup>1001</onup>
+							<ondown>ActivateWindow(1140)</ondown>
+							<onclick>PlayerControl(SmallSkipBackward)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(741)</visible>
+							<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						</control>
+
+						<!-- stop -->
+						<control type="image">
+							<left>124</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>icon_stop.png</texture>
+							<visible>!Control.HasFocus(742)</visible>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="742">
+							<left>124</left>
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>icon_stop.png</texturefocus>
+							<texturenofocus></texturenofocus>
+							<onleft>741</onleft>
+							<onright>743</onright>
+							<onup>1001</onup>
+							<ondown>ActivateWindow(1140)</ondown>
+							<onclick>PlayerControl(Stop)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(742)</visible>
+							<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						</control>
+
+						<!-- Play / Pause -->
+						<control type="image">
+							<left>176</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>icon_pause.png</texture>
+							<visible>!Control.HasFocus(743) + !Player.Paused</visible>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="image">
+							<left>176</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>icon_play.png</texture>
+							<visible>!Control.HasFocus(743) + Player.Paused</visible>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="togglebutton" id="743">
+							<left>176</left>
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>icon_pause.png</texturefocus>
+							<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+							<alttexturefocus>icon_play.png</alttexturefocus>
+							<onleft>742</onleft>
+							<onright>744</onright>
+							<onup>1001</onup>
+							<ondown>ActivateWindow(1140)</ondown>
+							<onclick>PlayerControl(Play)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(743)</visible>
+							<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						</control>
+
+						<!-- forward -->
+						<control type="image">
+							<left>240</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>icon_fastforward.png</texture>
+							<visible>!Control.HasFocus(744)</visible>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="744">
+							<left>240</left>
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>icon_fastforward.png</texturefocus>
+							<texturenofocus>icon_fastforward.png</texturenofocus>
+							<onleft>743</onleft>
+							<onright>745</onright>
+							<onup>1001</onup>
+							<ondown>ActivateWindow(1140)</ondown>
+							<onclick>PlayerControl(SmallSkipForward)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(744)</visible>
+							<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						</control>
+
+						<!-- next -->
+						<control type="image">
+							<left>300</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>icon_skipnext.png</texture>
+							<visible>!Control.HasFocus(745)</visible>
+							<colordiffuse>FFDDDDDD</colordiffuse>
+						</control>
+						<control type="button" id="745">
+							<left>300</left>
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>icon_skipnext.png</texturefocus>
+							<texturenofocus>icon_skipnext.png</texturenofocus>
+							<onleft>744</onleft>
+							<onright>750</onright>
+							<onup>1001</onup>
+							<ondown>ActivateWindow(1140)</ondown>
+							<onclick>PlayerControl(Next)</onclick>
+							<visible allowhiddenfocus="true">Control.HasFocus(745)</visible>
+							<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+						</control>
+					</control>
+
+					<control type="label">
+						<width>352</width>
+						<label>$VAR[Var_Player_Label]</label><!-- Controls -->
+						<include>VideoOSD_Label</include>
+						<visible>![ Control.HasFocus(740) | Control.HasFocus(741) | Control.HasFocus(742) | Control.HasFocus(743) | Control.HasFocus(744) | Control.HasFocus(745) ]</visible>
+					</control>
+					<control type="label">
+						<width>352</width>
+						<label>$VAR[Var_Player_Label]</label><!-- Controls -->
+						<include>VideoOSD_Label_Focus</include>
+						<visible>Control.HasFocus(740) | Control.HasFocus(741) | Control.HasFocus(742) | Control.HasFocus(743) | Control.HasFocus(744) | Control.HasFocus(745)</visible>
+					</control>
+
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- audio settings -->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+					<control type="image">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texture>icon_music.png</texture>
+						<visible>!Control.HasFocus(750)</visible>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="750">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texturefocus>icon_music.png</texturefocus>
+						<texturenofocus>icon_music.png</texturenofocus>
+						<onleft>745</onleft>
+						<onright>760</onright>
+						<onup>1001</onup>
+						<ondown>ActivateWindow(1140)</ondown>
+						<!--<onclick>ActivateWindow(124)</onclick>-->
+						<onclick>ActivateWindow(osdaudiosettings)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(750)</visible>
+						<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31415]</label><!-- Audio Settings -->
+						<include>VideoOSD_Label</include>
+						<visible>!Control.HasFocus(750)</visible>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31415]</label><!-- Audio Settings -->
+						<include>VideoOSD_Label_Focus</include>
+						<visible>Control.HasFocus(750)</visible>
+					</control>
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- video settings -->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+					<control type="image">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texture>icon_monitor.png</texture>
+						<visible>!Control.HasFocus(760)</visible>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="760">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texturefocus>icon_monitor.png</texturefocus>
+						<texturenofocus>icon_monitor.png</texturenofocus>
+						<onleft>750</onleft>
+						<onright>770</onright>
+						<onup>1001</onup>
+						<ondown>ActivateWindow(1140)</ondown>
+						<!--<onclick>ActivateWindow(123)</onclick>-->
+						<onclick>ActivateWindow(osdvideosettings)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(760)</visible>
+						<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31004]</label><!-- Video Settings -->
+						<include>VideoOSD_Label</include>
+						<visible>!Control.HasFocus(760)</visible>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31004]</label><!-- Video Settings -->
+						<include>VideoOSD_Label_Focus</include>
+						<visible>Control.HasFocus(760)</visible>
+					</control>
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- OSD Options -->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+					<control type="image">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texture>icon_options.png</texture>
+						<visible>!Control.HasFocus(770)</visible>
+						<colordiffuse>FFDDDDDD</colordiffuse>
+					</control>
+					<control type="button" id="770">
+						<include>AspectRatio_OSD_PosX_135</include>
+						<width>60</width>
+						<height>60</height>
+						<texturefocus>icon_options.png</texturefocus>
+						<texturenofocus>icon_options.png</texturenofocus>
+						<onleft>760</onleft>
+						<onright>700</onright>
+						<onup>1001</onup>
+						<ondown>ActivateWindow(1140)</ondown>
+						<onclick>Skin.SetString(selectorname,$LOCALIZE[31422])</onclick>
+						<onclick>Skin.SetString(selector1,OSD)</onclick>
+						<onclick>Skin.SetString(selector2,Options)</onclick>
+						<onclick>Skin.SetString(selector3,Default)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<visible allowhiddenfocus="true">Control.HasFocus(770)</visible>
+						<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+					</control>
+					<!-- FULL OSD -->
+					<control type="label">
+						<label>$LOCALIZE[31072]</label> <!-- OSD Settings -->
+						<include>VideoOSD_Label</include>
+						<visible>!Control.HasFocus(770)</visible>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31072]</label> <!-- OSD Settings -->
+						<include>VideoOSD_Label_Focus</include>
+						<visible>Control.HasFocus(770)</visible>
+					</control>
+				</control>
+
+				<include>Preplay_Navigation_Separator</include>
+
+				<!-- Placeholder (Clock) -->
+				<control type="group">
+					<include>AspectRatio_OSD_Width_135</include>
+				</control>
+
+			</control>
+		</control>
+
+		<!-- OSD Bottom -->
+		<include>OSD_Bottom</include>
+                
+</control>
+
+<!-- Quick Access -->
+<control type="group">
+	<animation effect="fade" start="0" end="100" time="0">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+	<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+	<visible allowhiddenfocus="true">ControlGroup(800).HasFocus</visible>
+	<include>OSD_Quick</include>
+</control>
+
+
+</controls>
+</window>

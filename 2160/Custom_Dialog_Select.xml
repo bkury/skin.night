@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1120">
+	<defaultcontrol always="true">1</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+        <onunload>Skin.Reset(selector4)</onunload>
+        <onunload>Skin.Reset(selector5)</onunload>
+        <onunload>Skin.Reset(selectorname)</onunload>
+
+        <onunload>Skin.Reset(Color_Opacity_10)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_20)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_30)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_40)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_50)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_60)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_70)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_80)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_90)</onunload>
+
+	<include>Animation_Window_Dialog</include>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">99</param>
+			<param name="header_label">$INFO[Skin.String(selectorname)]</param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">1</param>
+			<param name="scroll_onright">52</param>
+		</include>
+
+		<!-- Category -->
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+			<include content="Dialog_General_Grouplist_Category_Image">
+				<param name="icon">$INFO[Container(1).ListItem.Icon]</param>
+				<param name="fallback">dialog/icon_settings.png</param>
+				<param name="visible">true</param>
+			</include>
+		</control>
+
+		<!-- Fadetime -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_List</include>
+			<visible>Skin.String(selector2,Fadetime)</visible>
+                
+			<content>
+			<item>
+				<onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>$LOCALIZE[31194]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],200)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.2 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],400)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.4 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],600)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.6 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],800)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>0.8 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.0 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1200)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.2 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1400)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.4 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1600)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.6 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],1800)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1.8 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],2000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>2.0 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],2500)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>2.5 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],3000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>3.0 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],3500)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>3.5 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],4000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>4.0 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],4500)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>4.5 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],5000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<label>5.0 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],0)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>$LOCALIZE[31184]</label>
+			</item>
+			</content>
+
+		</control>
+
+		<!-- Time per Image -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_List</include>
+			<visible>Skin.String(selector2,TimePerImage)</visible>
+                
+			<content>
+			<item>
+				<onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>$LOCALIZE[31194]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,1000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>1 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,2000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>2 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,3000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>3 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,4000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>4 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,5000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>5 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,6000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>6 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,7000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>7 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,8000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>8 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,9000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>9 $LOCALIZE[31203]</label>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_TimePerImage,10000)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>10 $LOCALIZE[31203]</label>
+			</item>
+			</content>
+		</control>
+
+		<!-- Opacity -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_List</include>
+			<visible>Skin.String(selector2,Opacity)</visible>
+                
+			<content>
+			<item>
+				<onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>$LOCALIZE[31194]</label>
+			</item>
+
+			<!-- 0% -->
+			<item>
+				<label>0%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,0)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<visible>!Skin.String(selector1,Keyboard)</visible>
+			</item>
+			<item>
+				<label>[COLOR=TextDisabled]0%[/COLOR]</label>
+				<onclick>noop</onclick>
+				<visible>Skin.String(selector1,Keyboard)</visible>
+			</item>
+
+			<!-- 10% -->
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,10)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>10%</label>
+				<property name="color">[COLOR=15CCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+				<visible>!Skin.String(selector1,Keyboard)</visible>
+			</item>
+			<item>
+				<label>[COLOR=TextDisabled]10%[/COLOR]</label>
+				<onclick>noop</onclick>
+				<visible>Skin.String(selector1,Keyboard)</visible>
+			</item>
+	
+			<!-- 20% -->
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,20)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>20%</label>
+				<property name="color">[COLOR=30CCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+				<visible>!Skin.String(selector1,Keyboard)</visible>
+			</item>
+			<item>
+				<label>[COLOR=TextDisabled]20%[/COLOR]</label>
+				<onclick>noop</onclick>
+				<visible>Skin.String(selector1,Keyboard)</visible>
+			</item>
+
+			<!-- 30% -->
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,30)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>30%</label>
+				<property name="color">[COLOR=35CCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,40)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>40%</label>
+				<property name="color">[COLOR=50CCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,50)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>50%</label>
+				<property name="color">[COLOR=65CCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,60)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>60%</label>
+				<property name="color">[COLOR=80CCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,70)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>70%</label>
+				<property name="color">[COLOR=95CCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,80)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>80%</label>
+				<property name="color">[COLOR=BBCCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,90)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>90%</label>
+				<property name="color">[COLOR=DDCCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			<item>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_Opacity,100)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+				<label>100%</label>
+				<property name="color">[COLOR=FFCCCCCC]&#x2588;&#x2588;&#x2588;&#x2588;[/COLOR]</property>
+			</item>
+			</content>
+		</control>
+
+		<!-- Custom URL -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_List</include>
+			<visible>Skin.String(selector2,Url) | Skin.String(selector2,Path)</visible>
+                
+			<content>
+
+			<item>
+				<label>$LOCALIZE[31333]</label>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+			</item>
+			<item>
+				<label>$LOCALIZE[31514] - Bing</label>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],https://repo.openht.org/background/bing.jpg)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+			</item>
+			<item>
+				<label>$LOCALIZE[31514] - National Geographic</label>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],https://repo.openht.org/background/geographic.jpg)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+			</item>
+			<item>
+				<label>$LOCALIZE[31514] - Reddit</label>
+				<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)],https://repo.openht.org/background/reddit.jpg)</onclick>
+				<onclick>Dialog.Close(1120)</onclick>
+			</item>
+
+
+			</content>
+		</control>
+
+		<!-- On-Screen Display -->
+		<control type="grouplist" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_Grouplist</include>
+			<visible>Skin.String(selector1,OSD)</visible>
+			<visible>Skin.String(selector2,Options)</visible>
+
+			<control type="label" id="405">
+				<label>[UPPERCASE]$LOCALIZE[31304][/UPPERCASE]</label><!-- Appearance -->
+				<include>skin_dialog_header</include>
+			</control>
+
+			<control type="radiobutton" id="410">
+				<label>$LOCALIZE[31194]</label><!-- Default -->
+                                <onclick>Skin.SetString(osd_mode,Default)</onclick>
+				<selected>Skin.String(osd_mode,Default)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="412">
+				<label>$LOCALIZE[31417]</label><!-- Top -->
+                                <onclick>Skin.SetString(osd_mode,Top)</onclick>
+				<selected>Skin.String(osd_mode,Top)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="414">
+				<label>$LOCALIZE[31416]</label><!-- Bottom -->
+                                <onclick>Skin.SetString(osd_mode,Bottom)</onclick>
+				<selected>Skin.String(osd_mode,Bottom)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="416">
+				<label>$LOCALIZE[31418]</label><!-- Minimal -->
+                                <onclick>Skin.SetString(osd_mode,Minimal)</onclick>
+				<selected>Skin.String(osd_mode,Minimal)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="418">
+				<label>$LOCALIZE[31419]</label><!-- Auto -->
+                                <onclick>Skin.SetString(osd_mode,Auto)</onclick>
+				<selected>Skin.String(osd_mode,Auto)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="420">
+				<label>$LOCALIZE[31197]</label><!-- Off -->
+                                <onclick>Skin.SetString(osd_mode,Off)</onclick>
+				<selected>Skin.String(osd_mode,Off)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+
+			<control type="label" id="422">
+				<label>[UPPERCASE]$LOCALIZE[31072][/UPPERCASE]</label>				
+				<include>skin_dialog_header</include>
+			</control>
+
+			<control type="radiobutton" id="424">
+				<label>$LOCALIZE[31421]</label> <!-- Permanent Clock -->
+				<onclick>Skin.ToggleSetting(OSD_Clock)</onclick>
+				<selected>Skin.HasSetting(OSD_Clock)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="426">
+				<label>$LOCALIZE[31420]</label> <!-- Show Plot -->
+				<onclick>Skin.ToggleSetting(OSD_Plot)</onclick>
+				<selected>!Skin.HasSetting(OSD_Plot)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="428">
+				<label>$LOCALIZE[31353]</label> <!-- Preview Image -->
+				<onclick>Skin.ToggleSetting(OSD_Cover)</onclick>
+				<selected>!Skin.HasSetting(OSD_Cover)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="430">
+				<label>Clearart</label> <!-- Clearart -->
+				<onclick>Skin.ToggleSetting(OSD_Clearart)</onclick>
+				<selected>Skin.HasSetting(OSD_Clearart)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+				<visible>!Skin.HasSetting(OSD_Cover)</visible>
+			</control>
+			<control type="radiobutton" id="432">
+				<label>$LOCALIZE[31327]</label> <!-- Opacity -->
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+				<onclick>Skin.SetString(selector1,OSD)</onclick>
+				<onclick>Skin.SetString(selector2,Opacity)</onclick>
+				<onclick>Control.SetFocus(470)</onclick>
+				<selected>!String.isEmpty(Skin.String(OSD_Opacity))</selected>
+				<visible>String.isEmpty(Skin.String(OSD_Opacity))</visible>
+			</control>
+			<control type="radiobutton" id="434">
+				<label>$LOCALIZE[31327] ($INFO[Skin.String(OSD_Opacity)]%)</label> <!-- Opacity -->
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+				<onclick>Skin.SetString(selector1,OSD)</onclick>
+				<onclick>Skin.SetString(selector2,Opacity)</onclick>
+				<onclick>Control.SetFocus(470)</onclick>
+				<selected>!String.isEmpty(Skin.String(OSD_Opacity))</selected>
+				<visible>!String.isEmpty(Skin.String(OSD_Opacity))</visible>
+			</control>
+
+			<control type="label" id="436">
+				<label>[UPPERCASE]$LOCALIZE[31422][/UPPERCASE]</label>				
+				<include>skin_dialog_header</include>
+			</control>
+
+			<control type="radiobutton" id="438">
+				<label>$LOCALIZE[31411], $LOCALIZE[31402], ..</label> <!-- OSD (Paused) -->
+				<onclick>Skin.ToggleSetting(OSD_Hide_Status)</onclick>
+				<selected>!Skin.HasSetting(OSD_Hide_Status)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+			<control type="radiobutton" id="440">
+				<label>$LOCALIZE[31413], $LOCALIZE[31414], ..</label> <!-- OSD (Time) -->
+				<onclick>Skin.ToggleSetting(OSD_Hide_Time)</onclick>
+				<selected>!Skin.HasSetting(OSD_Hide_Time)</selected>
+				<include>skin_dialog_button</include>
+				<include>radiobutton_circle</include>
+			</control>
+
+		</control>
+
+		<!-- Overlay -->
+		<control type="grouplist" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_Grouplist</include>
+			<visible>Skin.String(selector3,Overlay)</visible>
+
+			<include>Viewmode_Overlay_Settings</include>
+		</control>
+
+		<!-- Footer -->
+                <include content="Dialog_General_Footer_Button_CLOSE">
+                        <param name="id">50</param>
+                        <param name="onup">1</param>
+                        <param name="onleft">1</param>
+                        <param name="onright">1</param>
+                        <param name="position">Right</param>
+			<param name="dialog">1120</param>
+                </include>
+
+<!--
+		<include content="Dialog_General_Footer_Button_OKCANCEL"> 
+			<param name="id_left">1</param>
+			<param name="id_right">1</param>
+			<param name="dialog">1120</param>
+		</include>
+-->
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1150">
+        <allowoverlay>yes</allowoverlay>
+	<include>Notification_Widget_Clear</include>
+	<onload>Dialog.Close(1150)</onload>
+</window>
+

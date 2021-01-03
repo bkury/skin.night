@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="129">
+	<defaultcontrol always="true">22</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<include>Animation_Window_Dialog</include>
+
+	<controls>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+		</control>
+		<control type="group">
+			<left>480</left>
+			<top>90</top>
+			<visible>!Window.IsVisible(smartplaylistrule)</visible>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1600</width>
+				<height>1260</height>
+				<texture>common/view_option_back.png</texture>
+			</control>
+			<control type="label" id="2">
+				<description>header label</description>
+				<left>40</left>
+				<top>48</top>
+				<width>1520</width>
+				<height>60</height>
+				<font>Font_Bartowski_Smaller_MenuValue</font>
+				<label>[B]$LOCALIZE[21432][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+			</control>
+			<control type="image">
+				<left>100</left>
+				<top>112</top>
+				<width>1480</width>
+				<height>8</height>
+				<texture>confluence/separator.png</texture>
+			</control>
+			<control type="spincontrolex" id="22">
+				<description>Set Playlist type</description>
+				<left>40</left>
+				<top>140</top>
+				<width>1520</width>
+				<height>80</height>
+				<label>467</label>
+				<textoffsetx>20</textoffsetx>
+				<font>Font_KeyboardTitle</font>
+				<textcolor>black</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>confluence/button-focus-big.png</texturefocus>
+				<onright>22</onright>
+				<onleft>22</onleft>
+				<onup>9001</onup>
+				<ondown>12</ondown>
+			</control>
+			<control type="label">
+				<description>Name Label</description>
+				<left>40</left>
+				<top>250</top>
+				<width>1480</width>
+				<label>21433</label>
+				<font>font16caps</font>
+				<textcolor>black</textcolor>
+			</control>
+			<control type="image">
+				<description>textbox image</description>
+				<left>24</left>
+				<top>300</top>
+				<width>1520</width>
+				<height>100</height>
+				<texture>common/textbox.png</texture>
+				<visible>!Control.HasFocus(12)</visible>
+			</control>
+			<control type="edit" id="12">
+				<description>Name Button</description>
+				<left>40</left>
+				<top>320</top>
+				<width>1520</width>
+				<height>80</height>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>20</textoffsety>
+				<textwidth>750</textwidth>
+				<font>Font_KeyboardEdit</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<aligny>bottom</aligny>
+				<texturefocus>confluence/button-focus-big.png</texturefocus>
+				<label></label>
+				<onup>22</onup>
+				<onleft>12</onleft>
+				<onright>12</onright>
+				<ondown>10</ondown>
+			</control>
+			<control type="label">
+				<description>rules label</description>
+				<left>40</left>
+				<top>420</top>
+				<width>1480</width>
+				<align>left</align>
+				<label>21434</label>
+				<font>font16caps</font>
+				<textcolor>black</textcolor>
+			</control>
+			<control type="list" id="10">
+				<description>Rules List Control</description>
+				<left>60</left>
+				<top>490</top>
+				<width>1120</width>
+				<height>242</height>
+				<onup>12</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>16</ondown>
+				<itemlayout width="1120" height="80">
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<width>1090</width>
+						<height>80</height>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<textcolor>black</textcolor>
+						<font>Font_KeyboardTitle</font>
+						<visible>!Control.HasFocus(10)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1120" height="80">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1120</width>
+						<height>82</height>
+						<texture>confluence/button-focus-big.png</texture>
+						<visible>Control.HasFocus(10)</visible>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<width>1080</width>
+						<height>80</height>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<textcolor>white</textcolor>
+						<font>Font_KeyboardTitle</font>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group" id="9000">
+				<control type="button" id="13">
+					<description>Add Rule Button</description>
+					<left>1200</left>
+					<top>490</top>
+					<width>360</width>
+					<height>82</height>
+					<label>15019</label>
+					<font>font13caps_title</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>black</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>confluence/button-focus-big.png</texturefocus>
+					<onup>17</onup>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<ondown>14</ondown>
+				</control>
+				<control type="button" id="14">
+					<description>Remove Rule Button</description>
+					<left>1200</left>
+					<top>570</top>
+					<height>82</height>
+					<width>360</width>
+					<label>1210</label>
+					<font>font13caps_title</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>black</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>confluence/button-focus-big.png</texturefocus>
+					<onup>13</onup>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<ondown>15</ondown>
+				</control>
+				<control type="button" id="15">
+					<description>Edit Rule Button</description>
+					<left>1200</left>
+					<top>650</top>
+					<height>82</height>
+					<width>360</width>
+					<label>21435</label>
+					<font>font13caps_title</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>black</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>confluence/button-focus-big.png</texturefocus>
+					<onup>14</onup>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<ondown>16</ondown>
+				</control>
+			</control>
+
+			<control type="image">
+				<left>100</left>
+				<top>740</top>
+				<width>1480</width>
+				<height>8</height>
+				<texture>confluence/separator.png</texture>
+			</control>
+			
+			<control type="label">
+				<description>Name Label</description>
+				<left>40</left>
+				<top>760</top>
+				<width>1480</width>
+				<label>31325</label>
+				<font>font16caps</font>
+				<textcolor>black</textcolor>
+			</control>
+			<control type="spincontrolex" id="16">
+				<left>60</left>
+				<top>830</top>
+				<width>1520</width>
+				<height>82</height>
+				<label>21424</label>
+				<textoffsetx>20</textoffsetx>
+				<textcolor>black</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<font>Font_KeyboardTitle</font>
+				<texturefocus>confluence/button-focus-big.png</texturefocus>
+				<onright>16</onright>
+				<onleft>16</onleft>
+				<onup>10</onup>
+				<ondown>17</ondown>
+			</control>
+
+			<control type="spincontrolex" id="17">
+				<left>60</left>
+				<top>910</top>
+				<width>1520</width>
+				<height>82</height>
+				<label>21427</label>
+				<textoffsetx>20</textoffsetx>
+				<textcolor>black</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<font>Font_KeyboardTitle</font>
+				<texturefocus>confluence/button-focus-big.png</texturefocus>
+				<onright>17</onright>
+				<onleft>17</onleft>
+				<onup>16</onup>
+				<ondown>18</ondown>
+			</control>
+
+			<control type="spincontrolex" id="18">
+				<left>60</left>
+				<top>990</top>
+				<width>1120</width>
+				<height>82</height>
+				<label>21429</label>
+				<textoffsetx>20</textoffsetx>
+				<textcolor>black</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<font>Font_KeyboardTitle</font>
+				<texturefocus>confluence/button-focus-big.png</texturefocus>
+				<onright>19</onright>
+				<onleft>19</onleft>
+				<onup>17</onup>
+				<ondown>9001</ondown>
+			</control>
+
+			<control type="togglebutton" id="19">
+				<left>1200</left>
+				<top>990</top>
+				<width>360</width>
+				<height>80</height>
+				<font>Font_KeyboardTitle</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">confluence/button-focus.png</texturefocus>
+				<alttexturefocus border="5">confluence/button-focus.png</alttexturefocus>
+				<label>21431</label>
+				<altlabel>21430</altlabel>
+				<onright>18</onright>
+				<onleft>18</onleft>
+				<onup>17</onup>
+				<ondown>9001</ondown>
+			</control>
+			
+			<control type="image">
+				<left>100</left>
+				<top>1100</top>
+				<width>1480</width>
+				<height>8</height>
+				<texture>confluence/separator.png</texture>
+			</control>
+			
+			<control type="group" id="9001">
+				<control type="button" id="20">
+					<description>Ok Button</description>
+					<left>390</left>
+					<top>1120</top>
+					<width>400</width>
+					<height>80</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>black</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>confluence/button-focus-big.png</texturefocus>
+					<label>186</label>
+					<font>font16caps</font>
+					<onup>18</onup>
+					<onleft>21</onleft>
+					<onright>21</onright>
+					<ondown>22</ondown>
+				</control>
+				<control type="button" id="21">
+					<description>Cancel Button</description>
+					<left>810</left>
+					<top>1120</top>
+					<width>400</width>
+					<height>80</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>black</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>confluence/button-focus-big.png</texturefocus>
+					<label>222</label>
+					<font>font16caps</font>
+					<onup>18</onup>
+					<onleft>20</onleft>
+					<onright>20</onright>
+					<ondown>22</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

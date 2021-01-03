@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="136">
+	<include>Animation_Window_Fade_Delay</include>
+        <controls>
+		<!-- Dim Background -->
+		<control type="image">
+			<include>background_default</include>
+                        <colordiffuse>AA000000</colordiffuse>
+                        <texture background="true">bg_black.png</texture>
+                </control>
+		<!-- Spinner -->
+		<control type="image">
+			<left>1710</left>
+			<top>660</top>
+			<width>420</width>
+			<height>420</height>
+			<texture>busy.png</texture>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<animation effect="rotate" start="0" end="-360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+			<include>AspectRatio_Both</include>
+		</control>
+        </controls>
+</window>

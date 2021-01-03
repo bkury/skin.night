@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<include>Animation_Window_Dialog</include>
+
+	<controls>
+
+		<control type="image">
+			<include>background_default</include>
+			<texture>no_content_bg.jpg</texture>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+		</control>
+
+		<control type="image">
+			<top>210</top>
+			<left>22</left>
+			<width>1875</width>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<top>900</top>
+			<left>22</left>
+			<width>1875</width>
+			<include>SeparatorH</include>
+		</control>
+
+
+		<!-- 101 / 102 -->
+
+		<control type="group">
+			<include>AspectRatio_Both</include>
+
+			<!-- Left -->
+			<control type="label" id="101">
+				<top>930</top>
+				<left>22</left>
+				<width>930</width>
+				<align>center</align>
+				<font>Lato_Black_30</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+			<control type="list" id="20">
+				<left>22</left>
+				<onleft>21</onleft>
+				<onright>21</onright>
+				<include>dialog_list</include>
+			</control>
+
+			<!-- Right -->
+			<control type="label" id="102">
+				<top>930</top>
+				<left>967</left>
+				<width>930</width>
+				<align>center</align>
+				<font>Lato_Black_30</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+			<control type="list" id="21">
+				<left>967</left>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<include>dialog_list</include>
+			</control>
+
+		</control>
+
+
+	</controls>
+</window>

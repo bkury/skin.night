@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="147">
+	<defaultcontrol>61</defaultcontrol>
+	<include>Animation_Window_Dialog</include>
+	<controls>
+		<control type="group">
+			<left>480</left>
+			<top>165</top>
+			<control type="image">
+				<left>-480</left>
+				<top>-165</top>
+				<include>Dimensions_Fullscreen</include>
+				<texture>common/7000_focus.png</texture>
+				<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="600">Windowclose</animation>
+			</control>
+			<control type="group">
+				<animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<control type="image">
+					<description>background image</description>
+					<left>0</left>
+					<top>0</top>
+					<width>2880</width>
+					<height>1830</height>
+					<texture border="40">confluence/DialogBack1.png</texture>
+				</control>
+				<control type="image">
+					<description>separator image</description>
+					<left>180</left>
+					<top>180</top>
+					<width>2700</width>
+					<height>3</height>
+					<texture>confluence/separator.png</texture>
+				</control>
+				<control type="label" id="1">
+					<description>header label</description>
+					<left>1140</left>
+					<top>60</top>
+					<width>1920</width>
+					<height>90</height>
+					<font>font24caps_title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>black</textcolor>
+				</control>
+				<!--<control type="label" id="20">
+					<description>header label</description>
+					<left>1020</left>
+					<top>60</top>
+					<width>1920</width>
+					<height>90</height>
+					<font>font24caps_title</font>
+					<label></label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>black</textcolor>
+				</control>-->
+				<control type="textbox" id="5">
+					<description>textarea</description>
+					<left>180</left>
+					<top>270</top>
+					<width>2400</width>
+					<height>1500</height>
+					<label></label>
+					<font>font13</font>
+					<align>justify</align>
+					<textcolor>black</textcolor>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>3645</left>
+					<top>270</top>
+					<width>75</width>
+					<height>1800</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>61</onleft>
+					<onright>61</onright>
+					<ondown>61</ondown>
+					<onup>61</onup>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+			</control>
+		</control>
+		
+	</controls>
+</window>

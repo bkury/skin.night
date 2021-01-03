@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+        <defaultcontrol always="true">10</defaultcontrol>
+	<include>Animation_Window_Fade</include>
+
+	<!-- Notification Center -->
+	<include>Notification_Dialog_Onload</include>
+	<onload condition="$EXP[Notification]">Skin.SetString(Notification1_Label,$INFO[Window(notification).Property(line1)])</onload>
+	<onload condition="$EXP[Notification]">Skin.SetString(Notification1_Label2,$INFO[Window(notification).Property(line2)])</onload>
+	<onload condition="$EXP[Notification]">Skin.SetString(Notification1_Icon,$INFO[Window(notification).Property(icon)])</onload>
+	<onload condition="$EXP[Notification]">Skin.SetString(Notification1_Date,$INFO[System.Date])</onload>
+	<onload condition="$EXP[Notification]">Skin.SetString(Notification1_Time,$INFO[System.Time])</onload>
+	<onload condition="$EXP[Notification] + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger1))">Skin.SetString(Notification1_Icon,icon_call.png)</onload>
+	<onload condition="$EXP[Notification] + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger2))">Skin.SetString(Notification1_Icon,icon_message.png)</onload>
+	<onload condition="$EXP[Notification] + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger3))">Skin.SetString(Notification1_Icon,icon_email.png)</onload>
+	<onload condition="$EXP[Notification] + !System.ScreenSaverActive">ActivateWindow(1152)</onload>
+
+	<controls>
+
+	<!-- Notification Workaround -->
+	<control type="group">
+		<visible>false</visible>
+		<!--<control type="label" id="400"></control>-->
+		<control type="label" id="401"></control>
+		<control type="label" id="402"></control>
+	</control>
+
+	<!-- Notification -->
+	<control type="group">
+		<visible>!Window.isVisible(1152)</visible>
+
+		<!-- Notification (Navigating)-->
+		<control type="group">
+			<visible>!Player.HasMedia</visible>
+
+			<!-- Popup -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Notification_NoMedia_Bottom) + !Skin.HasSetting(Notification_NoMedia_Fullscreen) + !Skin.HasSetting(Notification_NoMedia_Disabled)</visible>
+				<include>Notification_Style_Popup</include>
+			</control>
+
+			<!-- Bottom -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_NoMedia_Bottom)</visible>
+				<include>Notification_Style_Bottom</include>
+			</control>
+
+			<!-- Fullscreen -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_NoMedia_Fullscreen)</visible>
+				<include>Notification_Style_Fullscreen</include>
+			</control>
+
+		</control>
+
+		<!-- Notifications (Media) -->
+		<control type="group">
+			<visible>Player.HasMedia</visible>
+
+			<!-- Bottom -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Notification_Media_Popup) + !Skin.HasSetting(Notification_Media_Fullscreen) + !Skin.HasSetting(Notification_Media_Disabled)</visible>
+				<include>Notification_Style_Bottom</include>
+			</control>
+
+			<!-- Popup -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_Media_Popup)</visible>
+				<include>Notification_Style_Popup</include>
+			</control>
+
+			<!-- Fullscreen -->
+			<control type="group">
+				<visible>Skin.HasSetting(Notification_Media_Fullscreen)</visible>
+				<include>Notification_Style_Fullscreen</include>
+			</control>
+
+		</control>
+	</control>
+
+	</controls>
+</window>

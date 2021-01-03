@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Viewmode_Fanart">
+		<include>Viewmode_Fanart_1</include>
+		<include>Viewmode_Fanart_2</include>
+	</include>
+
+	<!-- Fanart #1 (600/Info) -->
+	<include name="Viewmode_Fanart_1">
+
+		<control type="panel" id="820">
+			<left>1260</left>
+			<include>AspectRatio_PosY</include>
+			<include>AspectRatio_Width_860</include>
+			<height>2160</height>
+			<onleft>7001</onleft>
+			<onright>605</onright>
+			<pagecontrol>605</pagecontrol>
+			<orientation>vertical</orientation>
+			<viewtype label="Fanart #1">panel</viewtype>
+
+			<include>Viewmode_Fanart1_General</include>
+			<include>Viewmode_Fanart1_Itemlayout</include>
+		</control>
+                        
+		<control type="group">
+			<visible>String.isEqual(Container.Viewmode,Fanart #1)</visible>
+
+			<!-- Sortbar -->
+			<include>Viewmode_Sortbar</include>
+
+			<!-- Scrollbar -->
+			<control type="group" id="50">
+				<control type="scrollbar" id="605">
+					<top>60</top>
+					<height>2040</height>
+					<onleft>800</onleft>
+					<onright>7003</onright>
+                                        <include>vscrollbar</include>
+					<animation effect="slide" end="-1260,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Fanart1_Sidebar_Right)">Conditional</animation>
+					<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(605)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+
+	</include>
+
+	<!-- Fanart #2 (610/Full) -->
+	<include name="Viewmode_Fanart_2">
+
+		<control type="panel" id="821">
+			<include>AspectRatio_PosY</include>
+			<include>AspectRatio_Width_1280</include>
+			<height>2160</height>
+			<onleft>7001</onleft>
+			<onright>615</onright>
+			<pagecontrol>615</pagecontrol>
+			<orientation>vertical</orientation>
+			<viewtype label="Fanart #2">panel</viewtype>
+
+			<include>Viewmode_Fanart2_General_NoSidebar</include>
+			<include>Viewmode_Fanart2_Itemlayout</include>
+		</control>
+
+		<control type="group">
+			<visible>String.isEqual(Container.Viewmode,Fanart #2)</visible>
+
+			<!-- Sortbar -->
+			<include>Viewmode_Sortbar</include>
+
+			<!-- Scrollbar -->
+			<control type="group" id="50">
+				<control type="scrollbar" id="615">
+					<top>60</top>
+					<height>2040</height>
+					<onleft>800</onleft>
+					<onright>7003</onright>
+					<include>vscrollbar</include>
+					<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(615)">Conditional</animation>
+				</control>
+			</control>
+
+		</control>
+	</include>
+
+</includes>

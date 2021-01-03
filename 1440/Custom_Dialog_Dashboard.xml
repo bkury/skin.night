@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1135">
+	<defaultcontrol always="true">2</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	<include>Animation_Window_Dialog</include>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+        <onunload>Skin.Reset(selectorname)</onunload>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+	        <!-- Dialog Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">49</param>
+			<param name="header_label">$LOCALIZE[31135]</param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">1</param>
+			<param name="scroll_onright">52</param>
+		</include>
+
+		<!-- Category -->
+		<control type="grouplist" id="2">
+			<onright>1</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_Grouplist_Category</include>
+
+			<control type="button" id="10">
+				<label>1x1</label>
+				<enable>!String.Contains(Skin.String(selector2),Widget0)</enable>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+			<control type="button" id="11">
+				<label>2x1</label>
+				<enable>!String.Contains(Skin.String(selector2),Widget0) + !String.Contains(Skin.String(selector2),_4)</enable>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+			<control type="button" id="12">
+				<label>4x1</label>
+				<enable>String.Contains(Skin.String(selector2),_1) | String.Contains(Skin.String(selector2),Widget0)</enable>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+		</control>
+
+		<!-- Content -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>2</onleft>
+			<include>Dialog_General_List</include>
+
+			<content>
+
+				<item>
+					<onclick>Skin.Reset(Dashboard_$INFO[Skin.String(selector2)])</onclick>
+					<onclick>Dialog.Close(1135)</onclick>
+					<label>$LOCALIZE[31184]</label>
+				</item>
+
+				<include>Dashboard_Select</include>
+			</content>
+
+		</control>
+
+		<!-- Footer -->
+		<include content="Dialog_General_Footer_Button_OKCANCEL"> <!-- 50 / 52 -->
+			<param name="id_left">2</param>
+			<param name="id_right">1</param>
+			<param name="dialog">1101</param>
+		</include>
+		<control type="radiobutton" id="51">
+			<label>[UPPERCASE]Remove[/UPPERCASE]</label>
+			<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">dialog_button_center.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="FFAAAAAA">dialog_button_center.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">dialog_button_center.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="FFAAAAAA">dialog_button_center.png</textureradiooffnofocus>
+			<textureradiooffdisabled colordiffuse="TextDisabled">dialog_button_center.png</textureradiooffdisabled>
+			<textureradioondisabled colordiffuse="TextDisabled">dialog_button_center.png</textureradioondisabled>
+					
+			<include>CustomHome_Clear_OnClick</include>
+			<onclick>Dialog.Close(1101)</onclick>
+
+			<onup>1</onup>
+			<onleft>50</onleft>
+			<onright>52</onright>
+			<include>Dialog_General_Footer_Center</include>
+			<include>Dialog_General_Footer_Default</include>
+		</control>
+
+	</control>
+
+	</controls>
+</window>

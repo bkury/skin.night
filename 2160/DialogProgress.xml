@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="136">
+	<coordinates>
+		<system>1</system>
+		<left>3000</left>
+		<top>1830</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+<!--			<visible>![Window.IsVisible(InfoDialog) | Window.IsVisible(SliderDialog) | Window.IsVisible(VolumeBar)]</visible> -->
+			<control type="image">
+				<left>-60</left>
+				<top>-180</top>
+				<width>1014</width>
+				<height>984</height>
+				<texture>common/busy_back.png</texture>
+			</control>
+			<control type="multiimage">
+				<description>Busy animation</description>
+				<left>555</left>
+				<top>60</top>
+				<width>240</width>
+				<height>240</height>
+				<imagepath>busy</imagepath>
+				<timeperimage>100</timeperimage>
+				<fadetime>0</fadetime>
+			</control>
+		</control>
+	</controls>
+</window>

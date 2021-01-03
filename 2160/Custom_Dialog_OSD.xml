@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1140">
+	<defaultcontrol always="true">801</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+        
+	<!-- Background -->
+	<include>Dialog_Background</include>
+
+	<control type="group" id="800">
+		<include>AspectRatio_Both</include>
+		<top>720</top>
+
+		<!-- Background -->
+		<control type="group">
+
+			<!-- Opacity -->
+			<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+			<control type="image">
+				<left>225</left>
+				<height>600</height>
+				<width>3390</width>
+				<texture background="true">bg_quickmenu.png</texture>
+				<colordiffuse>$VAR[Var_Color_Dialog_Hex]</colordiffuse>
+			</control>
+
+<!--			<control type="image">
+				<left>225</left>
+				<width>3390</width>
+				<include>SeparatorH</include>
+			</control>
+-->
+			<control type="image">
+				<top>90</top>
+				<left>270</left>
+				<width>3300</width>
+				<include>SeparatorH</include>
+			</control>
+			<control type="image">
+				<top>510</top>
+				<left>270</left>
+				<width>3300</width>
+				<include>SeparatorH</include>
+			</control>
+
+<!--			<control type="image">
+				<top>90</top>
+				<left>225</left>
+				<width>3390</width>
+				<include>SeparatorH</include>
+			</control>
+			<control type="image">
+				<top>510</top>
+				<left>225</left>
+				<width>3390</width>
+				<include>SeparatorH</include>
+			</control>
+-->
+<!--			<control type="image">
+				<top>600</top>
+				<left>225</left>
+				<width>3390</width>
+				<include>SeparatorH</include>
+			</control>
+-->
+		</control>
+
+		<!-- QUICK MENU (BUTTONS) -->
+		<control type="grouplist" id="800">
+			<left>225</left>
+			<top>90</top>
+			<width>3390</width>
+			<height>300</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>30</itemgap>
+			<onup>100</onup>
+			<ondown>19000</ondown>
+
+			<!-- Aspect Ratio -->
+			<control type="group">
+				<width>540</width>
+			
+				<control type="button" id="801">
+					<left>120</left>
+					<width>300</width>
+					<height>300</height>
+					<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_monitor.png</texturefocus>
+					<texturenofocus colordiffuse="FFCCCCCC">icon_monitor.png</texturenofocus>
+
+					<onleft>806</onleft>
+					<onright>802</onright>
+
+					<onclick>AspectRatio</onclick>
+					<ondown>ZoomOut</ondown>
+					<onup>ZoomIn</onup>
+				</control>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="group">
+				<width>540</width>
+
+				<control type="button" id="802">
+					<left>120</left>
+					<width>300</width>
+					<height>300</height>
+					<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_audio.png</texturefocus>
+					<texturenofocus colordiffuse="FFCCCCCC">icon_audio.png</texturenofocus>
+
+					<onleft>801</onleft>
+					<onright>803</onright>
+
+					<onclick>AudioNextLanguage</onclick>
+					<ondown>AudioDelayMinus</ondown>
+					<onup>AudioDelayPlus</onup>
+				</control>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="group">
+				<width>540</width>
+
+				<control type="button" id="803">
+					<left>120</left>
+					<width>300</width>
+					<height>300</height>
+					<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_subtitle.png</texturefocus>
+					<texturenofocus colordiffuse="FFCCCCCC">icon_subtitle.png</texturenofocus>
+
+					<onleft>802</onleft>
+					<onright>804</onright>
+
+					<onclick>NextSubtitle</onclick>
+					<ondown>SubtitleDelayMinus</ondown>
+					<onup>SubtitleDelayPlus</onup>
+				</control>
+			</control>
+
+			<!-- Subtitle Shift -->
+			<control type="group">
+				<width>540</width>
+
+				<control type="button" id="804">
+					<left>120</left>
+					<width>300</width>
+					<height>300</height>
+					<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_subtitle.png</texturefocus>
+					<texturenofocus colordiffuse="FFCCCCCC">icon_subtitle.png</texturenofocus>
+
+					<onleft>803</onleft>
+					<onright>805</onright>
+
+					<ondown>SubtitleShiftDown</ondown>
+					<onup>SubtitleShiftUp</onup>
+					<onclick>SubtitleAlign</onclick>
+
+				</control>
+			</control>
+
+			<!-- Bookmark -->
+			<control type="group">
+				<width>540</width>
+
+				<control type="button" id="805">
+					<top>15</top>
+					<left>135</left>
+					<width>270</width>
+					<height>270</height>
+					<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_star.png</texturefocus>
+					<texturenofocus colordiffuse="FFCCCCCC">icon_star.png</texturenofocus>
+
+					<onleft>804</onleft>
+					<onright>806</onright>
+
+					<onup>Dialog.Close(1140)</onup>
+					<onup>TakeScreenshot</onup>
+					<ondown>CreateBookmark</ondown>
+					<onclick>Dialog.Close(1140)</onclick>
+					<onclick>ActivateWindow(125)</onclick>
+				</control>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="group">
+				<width>540</width>
+
+				<control type="button" id="806">
+					<top>15</top>
+					<left>135</left>
+					<width>270</width>
+					<height>270</height>
+					<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">nav_info.png</texturefocus>
+					<texturenofocus colordiffuse="FFCCCCCC">nav_info.png</texturenofocus>
+
+					<onleft>805</onleft>
+					<onright>801</onright>
+
+					<onclick>CodecInfo</onclick>
+					<ondown>DecreasePAR</ondown>
+					<onup>IncreasePAR</onup>
+				</control>
+			</control>
+
+		</control>
+
+		<!-- QUICK MENU (LABELS) -->
+		<control type="grouplist">
+			<left>225</left>
+			<width>3390</width>
+			<height>90</height>
+			<align>center</align>
+			<itemgap>30</itemgap>
+			<orientation>horizontal</orientation>
+
+			<!-- Aspect Ratio -->
+			<control type="label">
+				<label>Zoom+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="label">
+				<label>Audio Offset+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<label>Subtitle Offset+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Subtitle Shift -->
+			<control type="label">
+				<label>Subtitle Shift+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Bookmark -->
+			<control type="label">
+				<label>Screenshot</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="label">
+				<label>Pixel Ratio+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+		</control>
+
+		<control type="grouplist">
+			<top>510</top>
+			<left>225</left>
+			<width>3390</width>
+			<height>90</height>
+			<align>center</align>
+			<itemgap>30</itemgap>
+			<orientation>horizontal</orientation>
+
+			<!-- Aspect Ratio -->
+			<control type="label">
+				<label>Zoom-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="label">
+				<label>Audio Offset-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<label>Subtitle Offset-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<label>Subtitle Shift-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Bookmark -->
+			<control type="label">
+				<label>Add Bookmark</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="label">
+				<label>Pixel Ratio-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<left>225</left>
+			<top>315</top>
+			<width>3390</width>
+			<height>180</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>30</itemgap>
+
+			<!-- Aspect Ratio -->
+			<control type="label">
+				<label>$VAR[Var_QuickOSD_1]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="label">
+				<label>$VAR[Var_QuickOSD_2]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<label>$VAR[Var_QuickOSD_3]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Subtitle Align  -->
+			<control type="label">
+				<label>$VAR[Var_QuickOSD_4]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Bookmark -->
+			<control type="label">
+				<label>$VAR[Var_QuickOSD_5]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="label">
+				<label>$VAR[Var_QuickOSD_6]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+		</control>
+
+
+
+
+	</control>
+
+</controls>
+</window>

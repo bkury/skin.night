@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>5</defaultcontrol>
+	<include>Animation_Window_Dialog</include>
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">2</param>
+			<param name="header_label"></param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">5</param>
+			<param name="scroll_onright">29</param>
+		</include>
+
+		<!-- Content -->
+		<control type="grouplist" id="5">
+			<onleft>28</onleft>
+			<include>Dialog_General_Grouplist</include>
+		</control>
+
+		<!-- Category -->
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+
+			<include content="Dialog_General_Grouplist_Category_Image">
+				<param name="icon">$VAR[Var_Dialog_Settings_Image]</param>
+				<param name="visible">true</param>
+			</include>
+
+		</control>
+
+		<!-- Footer -->
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">28</param>
+			<param name="label"></param>
+			<param name="icon">nav_circle_check.png</param>
+			<param name="onup">5</param>
+			<param name="onleft">29</param>
+			<param name="onright">30</param>
+			<param name="position">Left</param>
+		</include>
+	        
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">30</param>
+			<param name="label"></param>
+			<param name="icon">dialog_button_center.png</param>
+			<param name="onup">5</param>
+			<param name="onleft">28</param>
+			<param name="onright">29</param>
+			<param name="position">Center</param>
+		</include>
+        	
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">29</param>
+			<param name="label"></param>
+			<param name="icon">nav_circle_cancel.png</param>
+			<param name="onup">5</param>
+			<param name="onleft">30</param>
+			<param name="onright">28</param>
+			<param name="position">Right</param>
+		</include>
+
+	</control>
+
+        <!-- Buttons -->
+        <control type="button" id="7">
+                <include>Dialog_General_Button_Default</include>
+        </control>
+        <control type="radiobutton" id="8">
+		<include>Dialog_General_Button_Default</include>	<!-- Radio -->
+        </control>
+        <control type="spincontrolex" id="9">
+		<include>Dialog_General_Button_Default</include>	<!-- Spin -->
+        </control>
+        <control type="image" id="11">
+		<include>Dialog_General_Button_Separator</include>	<!-- Separator -->
+        </control>
+        <control type="edit" id="12">
+		<include>Dialog_General_Button_Default</include>	<!-- Edit -->
+        </control>
+        <control type="sliderex" id="13">
+		<include>Dialog_General_Button_Default</include>	<!-- Slider -->
+        </control>
+        <control type="label" id="14">
+		<include>Dialog_General_Button_Header</include>		<!-- Header -->
+        </control>
+
+</controls>
+</window>

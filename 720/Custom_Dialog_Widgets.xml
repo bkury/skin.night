@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1125">
+	<defaultcontrol always="true">10</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+        <onunload>Skin.Reset(selectorname)</onunload>
+
+	<include>Animation_Window_Dialog</include>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">9</param>
+			<param name="header_label">$INFO[Skin.String(selectorname)]</param>
+			<param name="separator">false</param>
+			<param name="scroll_onleft">noop</param>
+			<param name="scroll_onright">noop</param>
+		</include>
+
+		<!-- List -->                       
+		<control type="list" id="10">
+			<top>200</top>
+			<left>170</left>
+			<ondown>20</ondown>
+			<include content="Settings_Container"><param name="id">10</param></include>
+			<content><include>Widget_Settings_Detail</include></content>
+		</control>
+
+	</control>
+              
+	<!-- Footer -->
+	<include content="Dialog_General_Footer_Button_CLOSE">
+		<param name="id">20</param>
+		<param name="onup">10</param>
+		<param name="onleft">20</param>
+		<param name="onright">20</param>
+		<param name="position">Right</param>
+		<param name="dialog">1125</param>
+	</include>
+
+	</controls>
+</window>

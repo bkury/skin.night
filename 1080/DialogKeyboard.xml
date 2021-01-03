@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="103">
+	<defaultcontrol always="true">32</defaultcontrol>
+	<zorder>5</zorder>
+	<include>Animation_Window_Fade</include>
+	<controls>
+              
+	<!-- Background -->
+	<control type="image">
+		<include>background_default</include>
+		<texture>bg_black.png</texture>
+		<colordiffuse>88000000</colordiffuse>
+	</control>
+
+	<!-- Keyboard -->
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Opacity -->
+		<include condition="String.isEmpty(Skin.String(Keyboard_Opacity))">Keyboard_Opacity_Default</include>
+		<include condition="!String.isEmpty(Skin.String(Keyboard_Opacity))">Keyboard_Opacity</include>
+
+		<!--<include>Keyboard_KODI</include>-->
+
+		<!-- Keyboard (Chars) -->
+		<control type="group">
+			<!--<visible>![ Window.isVisible(109) | Window.isActive(25) | Window.isActive(2) | Window.isActive(501) | Window.isActive(20) ]</visible>-->
+
+			<!-- Keyboard Position -->
+			<animation effect="slide" end="0,270" condition="Skin.HasSetting(Keyboard_Pos_1) + ![ Skin.HasSetting(Keyboard_Size_1) + Skin.HasSetting(Keyboard_Size_2) + Skin.HasSetting(Keyboard_Size_3) ]">conditional</animation>
+			<animation effect="slide" end="0,-52" condition="Skin.HasSetting(Keyboard_Pos_1) + Skin.HasSetting(Keyboard_Size_1)">conditional</animation>
+			<animation effect="slide" end="0,-105" condition="Skin.HasSetting(Keyboard_Pos_1) + Skin.HasSetting(Keyboard_Size_2)">conditional</animation>
+			<animation effect="slide" end="0,-150" condition="Skin.HasSetting(Keyboard_Pos_1) + Skin.HasSetting(Keyboard_Size_3)">conditional</animation>
+
+			<animation effect="slide" end="0,-270" condition="Skin.HasSetting(Keyboard_Pos_2) + ![ Skin.HasSetting(Keyboard_Size_1) + Skin.HasSetting(Keyboard_Size_2) + Skin.HasSetting(Keyboard_Size_3) ]">conditional</animation>
+			<animation effect="slide" end="0,52" condition="Skin.HasSetting(Keyboard_Pos_2) + Skin.HasSetting(Keyboard_Size_1)">conditional</animation>
+			<animation effect="slide" end="0,105" condition="Skin.HasSetting(Keyboard_Pos_2) + Skin.HasSetting(Keyboard_Size_2)">conditional</animation>
+			<animation effect="slide" end="0,150" condition="Skin.HasSetting(Keyboard_Pos_2) + Skin.HasSetting(Keyboard_Size_3)">conditional</animation>
+
+			<!-- Keyboard Size -->
+			<animation effect="zoom" end="120" center="auto" condition="Skin.HasSetting(Keyboard_Size_1)">conditional</animation>
+			<animation effect="zoom" end="140" center="auto" condition="Skin.HasSetting(Keyboard_Size_2)">conditional</animation>
+			<animation effect="zoom" end="160" center="auto" condition="Skin.HasSetting(Keyboard_Size_3)">conditional</animation>
+
+			<!-- Textfield -->
+			<control type="grouplist">
+				<top>300</top>
+				<itemgap>0</itemgap>
+				<width>1920</width>
+				<height>75</height>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<width>1357</width>
+					<height>75</height>
+					<texture>KeyboardTextfield14.png</texture>
+					<colordiffuse>$VAR[Var_Color_Keyboard_Hex]</colordiffuse>
+				</control>
+			</control>
+
+			<control type="edit" id="312">
+				<top>297</top>
+				<width>1920</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Lato_Regular_30</font>
+				<include>KeyboardButtonSmall</include>
+			</control>
+
+			<!-- Row 1 --> 
+			<control type="group">
+				<top>382</top>
+
+				<control type="grouplist">
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+
+					<!-- 1 -->
+					<control type="image">
+						<width>57</width>
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(600)</visible>
+					</control>
+					<control type="image">
+						<width>57</width>
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(600)</visible>
+					</control>
+					<!-- 2 -->
+					<control type="image">
+						<width>58</width>
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(601)</visible>
+					</control>
+					<control type="image">
+						<width>58</width>
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(601)</visible>
+					</control>
+					<!-- 3 -->
+					<control type="image">
+						<width>57</width>
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(602)</visible>
+					</control>
+					<control type="image">
+						<width>57</width>
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(602)</visible>
+					</control>
+
+					<!-- 3 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(100)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(100)</visible>
+					</control>
+					<!-- 4 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(101)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(101)</visible>
+					</control>
+					<!-- 5 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(102)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(102)</visible>
+					</control>
+					<!-- 6 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(103)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(103)</visible>
+					</control>
+					<!-- 7 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(104)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(104)</visible>
+					</control>
+					<!-- 8 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(105)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(105)</visible>
+					</control>
+					<!-- 9 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(106)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(106)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(107)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(107)</visible>
+					</control>
+					<!-- 11 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(108)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(108)</visible>
+					</control>
+					<!-- 12 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(109)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(109)</visible>
+					</control>
+					<!-- 13 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(110)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(110)</visible>
+					</control>
+					<!-- 14 -->
+					<control type="image">
+						<include>KeyboardImageNumericSmall</include>
+						<visible>!Control.hasFocus(111)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageNumericSmallFocus</include>
+						<visible>Control.hasFocus(111)</visible>
+					</control>
+
+				</control>
+
+				<!-- Row 1 -->
+				<control type="grouplist" id="501">
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<control type="button" id="600">
+						<width>57</width>
+						<description>'Size' button</description>
+						<onup>300</onup>
+						<ondown>307</ondown>
+						<label>&#x2195;</label><!-- Size -->
+						<font>Font_Keyboard_Button_Symbol</font>
+						<onclick condition="!Skin.HasSetting(Keyboard_Size_1) + !Skin.HasSetting(Keyboard_Size_2) + !Skin.HasSetting(Keyboard_Size_3)">Skin.SetBool(Keyboard_Size_1)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Size_1)">Skin.Reset(Keyboard_Size_1)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Size_1)">Skin.SetBool(Keyboard_Size_2)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Size_2)">Skin.Reset(Keyboard_Size_2)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Size_2)">Skin.SetBool(Keyboard_Size_3)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Size_3)">Skin.Reset(Keyboard_Size_3)</onclick>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="601">
+						<width>58</width>
+						<description>'Size' button</description>
+						<onup>300</onup>
+						<ondown>307</ondown>
+						<label>&#x21C5;</label><!-- Pos -->
+						<font>Font_Keyboard_Button_Symbol</font>
+						<onclick condition="!Skin.HasSetting(Keyboard_Pos_1) + !Skin.HasSetting(Keyboard_Pos_2)">Skin.SetBool(Keyboard_Pos_1)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Pos_1)">Skin.Reset(Keyboard_Pos_1)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Pos_1)">Skin.SetBool(Keyboard_Pos_2)</onclick>
+						<onclick condition="Skin.HasSetting(Keyboard_Pos_2)">Skin.Reset(Keyboard_Pos_2)</onclick>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="602">
+						<width>57</width>
+						<description>'Opacity' button</description>
+						<onup>300</onup>
+						<ondown>304</ondown>
+						<label>&#x2750;</label><!-- Opacity -->
+						<font>Font_Keyboard_Button_Symbol</font>
+						<onclick>Dialog.Close(103)</onclick>
+						<onclick>Skin.SetString(selectorname,Select opacity)</onclick>
+						<onclick>Skin.SetString(selector1,Keyboard)</onclick>
+						<onclick>Skin.SetString(selector2,Opacity)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="100">
+						<onup>32</onup>
+						<ondown>120</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="101">
+						<onup>32</onup>
+						<ondown>121</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="102">
+						<onup>32</onup>
+						<ondown>122</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="103">
+						<onup>32</onup>
+						<ondown>123</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="104">
+						<onup>32</onup>
+						<ondown>124</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="105">
+						<onup>32</onup>
+						<ondown>125</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="106">
+						<onup>32</onup>
+						<ondown>126</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+
+					<control type="button" id="107">
+						<onup>32</onup>
+						<ondown>127</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1107">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(107)</visible>
+					</control>
+
+					<control type="button" id="108">
+						<onup>8</onup>
+						<ondown>128</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1108">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(108)</visible>
+					</control>
+
+					<control type="button" id="109">
+						<onup>8</onup>
+						<ondown>129</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1109">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(109)</visible>
+					</control>
+
+					<control type="button" id="110">
+						<onup>8</onup>
+						<ondown>130</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1110">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(110)</visible>
+					</control>
+
+					<control type="button" id="111">
+						<onup>8</onup>
+						<ondown>131</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1111">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(111)</visible>
+					</control>
+
+
+				</control>
+
+				<!-- Row 2 -->
+				<control type="grouplist">
+					<top>82</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+
+					<!-- 1 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(307)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(307)</visible>
+					</control>
+					<!-- 2 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(304)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(304)</visible>
+					</control>
+					<!-- 3 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(120)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(120)</visible>
+					</control>
+					<!-- 4 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(121)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(121)</visible>
+					</control>
+					<!-- 5 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(122)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(122)</visible>
+					</control>
+					<!-- 6 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(123)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(123)</visible>
+					</control>
+					<!-- 7 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(124)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(124)</visible>
+					</control>
+					<!-- 8 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(125)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(125)</visible>
+					</control>
+					<!-- 9 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(126)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(126)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(127)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(127)</visible>
+					</control>
+					<!-- 9 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(128)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(128)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(129)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(129)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(130)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(130)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(131)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(131)</visible>
+					</control>
+				</control>
+
+				<!-- Row 2 -->
+				<control type="grouplist" id="502">
+					<top>82</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<control type="button" id="307">
+						<description>'IP' button</description>
+						<onup>600</onup>
+						<ondown>309</ondown>
+						<label>IP</label>
+						<font>Font_Keyboard_Button_Big</font>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="304">
+						<description>'Symbol' button</description>
+						<onup>602</onup>
+						<ondown>309</ondown>
+						<label>{~}</label>
+						<font>Font_Keyboard_Button_Big</font>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="120">
+						<onup>100</onup>
+						<ondown>140</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="121">
+						<onup>101</onup>
+						<ondown>141</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="122">
+						<onup>102</onup>
+						<ondown>142</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="123">
+						<onup>103</onup>
+						<ondown>143</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="124">
+						<onup>104</onup>
+						<ondown>144</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="125">
+						<onup>105</onup>
+						<ondown>145</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="126">
+						<onup>106</onup>
+						<ondown>146</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+
+					<control type="button" id="127">
+						<onup>107</onup>
+						<ondown>147</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1127">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(127)</visible>
+					</control>
+
+					<control type="button" id="128">
+						<onup>108</onup>
+						<ondown>148</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1128">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(128)</visible>
+					</control>
+
+					<control type="button" id="129">
+						<onup>109</onup>
+						<ondown>149</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1129">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(129)</visible>
+					</control>
+
+					<control type="button" id="130">
+						<onup>110</onup>
+						<ondown>150</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1130">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(130)</visible>
+					</control>
+
+					<control type="button" id="131">
+						<onup>111</onup>
+						<ondown>151</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1131">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(131)</visible>
+					</control>
+
+				</control>
+
+				<!-- Row 3 -->
+				<control type="grouplist">
+					<top>165</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+
+					<!-- 0 -->
+					<control type="image">
+						<include>KeyboardImageBig</include>
+						<visible>!Control.hasFocus(309)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageBigFocus</include>
+						<visible>Control.hasFocus(309)</visible>
+					</control>
+					<!-- 1 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(140)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(140)</visible>
+					</control>
+					<!-- 2 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(141)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(141)</visible>
+					</control>
+					<!-- 3 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(142)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(142)</visible>
+					</control>
+					<!-- 4 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(143)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(143)</visible>
+					</control>
+					<!-- 5 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(144)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(144)</visible>
+					</control>
+					<!-- 6 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(145)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(145)</visible>
+					</control>
+					<!-- 7 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(146)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(146)</visible>
+					</control>
+					<!-- 8 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(147)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(147)</visible>
+					</control>
+					<!-- 9 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(148)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(148)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(149)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(149)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(150)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(150)</visible>
+					</control>
+					<!-- 10 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(151)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(151)</visible>
+					</control>
+				</control>
+
+				<!-- Row 3 -->
+				<control type="grouplist" id="503">
+					<top>165</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+
+					<control type="button" id="309">
+						<onup>307</onup>
+						<ondown>303</ondown>
+						<font>Font_Keyboard_Button_Layout</font>
+						<include>KeyboardButtonBig</include>
+					</control>
+					<control type="button" id="140">
+						<onup>120</onup>
+						<ondown>160</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="141">
+						<onup>121</onup>
+						<ondown>161</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="142">
+						<onup>122</onup>
+						<ondown>162</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="143">
+						<onup>123</onup>
+						<ondown>163</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="144">
+						<onup>124</onup>
+						<ondown>164</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="145">
+						<onup>125</onup>
+						<ondown>165</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="146">
+						<onup>126</onup>
+						<ondown>166</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+
+					<control type="button" id="147">
+						<onup>127</onup>
+						<ondown>167</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1147">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(147)</visible>
+					</control>
+
+					<control type="button" id="148">
+						<onup>128</onup>
+						<ondown>168</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1148">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(148)</visible>
+					</control>
+
+					<control type="button" id="149">
+						<onup>129</onup>
+						<ondown>169</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1149">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(149)</visible>
+					</control>
+
+					<control type="button" id="150">
+						<onup>130</onup>
+						<ondown>170</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1150">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(150)</visible>
+					</control>
+
+
+					<control type="button" id="151">
+						<onup>131</onup>
+						<ondown>171</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1151">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(151)</visible>
+					</control>
+
+				</control>
+
+				<!-- Row 4 -->
+				<control type="grouplist">
+					<top>247</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+
+					<!-- 0 -->
+					<control type="image">
+						<include>KeyboardImageBig</include>
+						<visible>!Control.hasFocus(303)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageBigFocus</include>
+						<visible>Control.hasFocus(303)</visible>
+					</control>
+					<!-- 1 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(160)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(160)</visible>
+					</control>
+					<!-- 2 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(161)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(161)</visible>
+					</control>
+					<!-- 3 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(162)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(162)</visible>
+					</control>
+					<!-- 4 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(163)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(163)</visible>
+					</control>
+					<!-- 5 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(164)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(164)</visible>
+					</control>
+					<!-- 6 -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(165)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(165)</visible>
+					</control>
+
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(166)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(166)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(167)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(167)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(168)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(168)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(169)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(169)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(170)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(170)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(171)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(171)</visible>
+					</control>
+
+
+
+
+				</control>
+
+				<!-- Row 4 -->
+				<control type="grouplist" id="504">
+					<top>247</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<control type="togglebutton" id="303">
+						<onup>309</onup>
+						<ondown>300</ondown>
+						<include>KeyboardButtonBig</include>
+						<label>&#x21e7;$LOCALIZE[20179]</label>
+						<altlabel>&#x21e7;[UPPERCASE]$LOCALIZE[20179][/UPPERCASE]</altlabel>
+					</control>
+					<control type="button" id="160">
+						<description>'U' button</description>
+						<onup>140</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="161">
+						<description>'V' button</description>
+						<onup>141</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="162">
+						<description>'W' button</description>
+						<onup>142</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="163">
+						<description>'X' button</description>
+						<onup>143</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="164">
+						<description>'Y' button</description>
+						<onup>144</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="165">
+						<description>'Z' button</description>
+						<onup>145</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="button" id="166">
+						<onup>146</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+
+					<control type="button" id="167">
+						<onup>147</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1167">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(167)</visible>
+					</control>
+
+					<control type="button" id="168">
+						<onup>148</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1168">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(168)</visible>
+					</control>
+
+					<control type="button" id="169">
+						<onup>149</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1169">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(169)</visible>
+					</control>
+
+					<control type="button" id="170">
+						<onup>150</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1170">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(170)</visible>
+					</control>
+
+					<control type="button" id="171">
+						<onup>151</onup>
+						<ondown>32</ondown>
+						<include>KeyboardButtonSmall</include>
+					</control>
+					<control type="image" id="1171">
+						<include>KeyboardPlaceholder60</include>
+						<visible>!Control.isVisible(171)</visible>
+					</control>
+				</control>
+
+				<!-- Row 5 -->
+				<control type="grouplist">
+					<top>330</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>75</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+
+					<!-- 1 -->
+					<control type="image">
+						<include>KeyboardImageBig</include>
+						<visible>!Control.hasFocus(300)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageBigFocus</include>
+						<visible>Control.hasFocus(300)</visible>
+					</control>
+					<!-- 2 -->
+					<control type="image">
+						<include>KeyboardImageSpace8</include>
+						<visible>!Control.hasFocus(32)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSpace8Focus</include>
+						<visible>Control.hasFocus(32)</visible>
+					</control>
+					<!-- Left -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(305)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(305)</visible>
+					</control>
+					<!-- Right -->
+					<control type="image">
+						<include>KeyboardImageSmall</include>
+						<visible>!Control.hasFocus(306)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageSmallFocus</include>
+						<visible>Control.hasFocus(306)</visible>
+					</control>
+					<!-- 3 -->
+					<control type="image">
+						<include>KeyboardImageBig</include>
+						<visible>!Control.hasFocus(8)</visible>
+					</control>
+					<control type="image">
+						<include>KeyboardImageBigFocus</include>
+						<visible>Control.hasFocus(8)</visible>
+					</control>
+				</control>
+
+				<!-- Row 5 -->
+				<control type="grouplist" id="505">
+					<top>330</top>
+					<itemgap>7</itemgap>
+					<width>1920</width>
+					<height>90</height>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<!-- 1 -->
+					<control type="button" id="300">
+						<description>'Done' button</description>
+						<onup>303</onup>
+						<ondown>601</ondown>
+						<label>&#x2713;$LOCALIZE[20177]</label>
+						<include>KeyboardButtonBig</include>
+					</control>
+					<!-- 2 -->
+					<control type="button" id="32">
+						<description>SPACE button</description>
+						<onup>163</onup>
+						<ondown>52</ondown>
+						<include>KeyboardButtonSpace8</include>
+						<label>$LOCALIZE[20182]</label>
+					</control>
+					<control type="button" id="305">
+						<description>'LEFT' button</description>
+						<onup>168</onup>
+						<ondown>8</ondown>
+						<include>KeyboardButtonSmall</include>
+						<label>&#x2190;</label>
+					</control>
+					<control type="button" id="306">
+						<description>'RIGHT' button</description>
+						<onup>169</onup>
+						<ondown>8</ondown>
+						<include>KeyboardButtonSmall</include>
+						<label>&#x2192;</label>
+					</control>
+					<!-- 3 -->
+					<control type="button" id="8">
+						<description>'Backspace' button</description>
+						<onup>170</onup>
+						<ondown>48</ondown>
+						<label>&#x232b;</label>
+						<include>KeyboardButtonBig</include>
+					</control>
+				</control>
+
+			</control>
+		</control>
+
+	</control>
+
+	</controls>
+</window>

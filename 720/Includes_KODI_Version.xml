@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- KODI Version -->
+	<include name="KODI_Version">
+		<onload condition="String.StartsWith(System.BuildVersion,19.) | System.Platform.OpenHT">Skin.SetBool(KODIv19)</onload>
+		<onload condition="!String.StartsWith(System.BuildVersion,19.) + !System.Platform.OpenHT">Skin.Reset(KODIv19)</onload>
+	</include>
+
+	<!-- KODI Expression -->
+	<expression name="KODIv19">Skin.hasSetting(KODIv19)</expression>
+
+	<expression name="Addon_Plex_Enabled">[ [!Skin.hasSetting(KODIv19) + System.HasAddon(plugin.video.plexkodiconnect)] | [Skin.hasSetting(KODIv19) + System.AddonIsEnabled(plugin.video.plexkodiconnect)] ]</expression>
+	<expression name="Addon_Emby_Enabled">[ [!Skin.hasSetting(KODIv19) + System.HasAddon(plugin.video.emby)] | [Skin.hasSetting(KODIv19) + System.AddonIsEnabled(plugin.video.emby)] ]</expression>
+	<expression name="Addon_Embycon_Enabled">[ [!Skin.hasSetting(KODIv19) + System.HasAddon(plugin.video.embycon)] | [Skin.hasSetting(KODIv19) + System.AddonIsEnabled(plugin.video.embycon)] ]</expression>
+	<expression name="Addon_Youtube_Enabled">[ [!Skin.hasSetting(KODIv19) + System.HasAddon(plugin.video.youtube)] | [Skin.hasSetting(KODIv19) + System.AddonIsEnabled(plugin.video.youtube)] ]</expression>
+	<expression name="Addon_Twitch_Enabled">[ [!Skin.hasSetting(KODIv19) + System.HasAddon(plugin.video.twitch)] | [Skin.hasSetting(KODIv19) + System.AddonIsEnabled(plugin.video.twitch)] ]</expression>
+
+	<!-- KODI (v19 - Matrix) -->
+	<include name="Seekbar_Ranges">
+
+		<!-- Cutlist -->
+		<control type="ranges">
+			<left>106</left>
+			<top>0</top>
+			<width>1068</width>
+			<height>24</height>
+			<texturebg>osd_progress_back_transparent.png</texturebg>
+			<midtexture border="4">osd_progress_mid_normal.png</midtexture>
+			<info>Player.Cutlist</info>
+			<colordiffuse>TextDisabled</colordiffuse>
+		</control>
+			
+		<!-- Chapters -->
+		<control type="ranges">
+			<left>100</left>
+			<top>4</top>
+			<include>AspectRatio_Width_1080</include>
+			<height>15</height>
+			<texturebg>osd_progress_back_transparent.png</texturebg>
+			<righttexture>osd_progress_line.png</righttexture>
+			<info>Player.Chapters</info>
+			<colordiffuse>AACCCCCC</colordiffuse>
+		</control>
+
+	</include>
+
+	<!-- Addon (hasAddon / AddonIsEnabled -->
+	<include name="Addon_Enabled">
+		<include condition="!$EXP[KODIv19]" content="Addon_Enabled_1">
+			<param name="addon">$PARAM[addon]</param>
+		</include>
+		<include condition="$EXP[KODIv19]" content="Addon_Enabled_2">
+			<param name="addon">$PARAM[addon]</param>
+		</include>
+	</include>
+	<include name="Addon_Enabled_1">
+		<visible>System.HasAddon($PARAM[addon])</visible>
+	</include>
+	<include name="Addon_Enabled_2">
+		<visible>System.AddonIsEnabled($PARAM[addon])</visible>
+	</include>
+
+	<!-- OpenHT (FirstRun) -->
+	<include name="OpenHT_FirstRun_Button">
+		<control type="button" id="10">
+                	<onfocus>ReplaceWindow(1115)</onfocus>
+		</control>
+	</include>
+
+</includes>

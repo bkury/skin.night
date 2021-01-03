@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="100">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<include>Animation_Window_Dialog</include>
+	<include>KODI_Version</include>
+
+	<controls>
+
+	<!-- Background -->
+	<include>Dialog_Background</include>
+
+	<control type="group">
+		<top>120</top>
+		<include>AspectRatio_Both</include>
+
+		<!-- Header -->
+		<include content="Dialog_General_Header">
+			<param name="bg_image">confirm</param>
+			<param name="bg_height">600</param>
+			<param name="header_id">1234</param>
+			<param name="header_label"></param>
+			<param name="separator">false</param>
+			<param name="separator2">true</param>
+			<param name="scroll_onleft">noop</param>
+			<param name="scroll_onright">noop</param>
+		</include>
+
+                <!-- Header -->
+                <control type="label" id="1">
+                        <top>150</top>
+                        <left>285</left>
+                        <width>1350</width>
+                        <height>120</height>
+                        <font>Lato_Light_50</font>
+			<label></label>
+                        <align>center</align>
+			<aligny>center</aligny>
+                        <textcolor>white</textcolor>
+                        <scroll>yes</scroll>
+			<visible>!String.isEqual(Control.GetLabel(1),$LOCALIZE[13123])</visible>
+                </control>
+
+		<!-- Night -->
+		<control type="group">
+			<visible>String.isEqual(Control.GetLabel(1),$LOCALIZE[13123])</visible>
+	                <control type="label">
+	                        <top>157</top>
+	                        <left>285</left>
+	                        <width>1350</width>
+	                        <height>120</height>
+	                        <font>Lato_Light_50</font>
+				<label>Welcome to Night!</label>
+	                        <align>center</align>
+	                        <textcolor>white</textcolor>
+	                        <scroll>yes</scroll>
+	                </control>
+			<control type="label">
+				<top>292</top>
+				<left>660</left>
+				<width>600</width>
+				<label>$LOCALIZE[13123]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Lato_Light_30</font>
+			</control>
+		</control>
+
+		<!-- Category -->
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+			<control type="image">
+				<top>30</top>
+				<left>30</left>
+				<width>180</width>
+				<height>180</height>
+				<texture>$VAR[Var_Dialog_Confirm_Image]</texture>
+			</control>
+		</control>
+
+		<!-- Content -->
+		<control type="textbox" id="9">
+			<left>585</left>
+			<top>285</top>
+			<height>270</height>
+			<width>1020</width>
+			<font>Lato_Light_25</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>!String.isEqual(Control.GetLabel(1),$LOCALIZE[13123])</visible>
+		</control>
+
+		<!-- Night -->
+		<control type="group">
+			<visible>String.isEqual(Control.GetLabel(1),$LOCALIZE[13123])</visible>
+			<left>585</left>
+			<top>285</top>
+
+			<control type="group">
+				<top>-7</top>
+				<control type="label">
+					<label>Resolution / Aspect ratio</label>
+					<font>Lato_Black_15</font>
+					<width>495</width>
+				</control>
+				<control type="label">
+					<top>30</top>
+					<label>Native support for 720p up to 4K, Aspect ratios 16:9, 16:10, 18:9 and 21:9</label>
+					<font>Lato_Light_15</font>
+					<width>495</width>
+					<height>45</height>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
+					<left>510</left>
+					<label>Backend support</label>
+					<font>Lato_Black_15</font>
+					<width>495</width>
+				</control>
+				<control type="label">
+					<left>510</left>
+					<top>30</top>
+					<label>Built-in support for EMBY, EmbyCON and PlexKodiConnect</label>
+					<font>Lato_Light_15</font>
+					<width>495</width>
+					<height>45</height>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+			</control>
+
+			<control type="group">
+				<top>90</top>
+				<control type="label">
+					<label>Dashboard (Widget)</label>
+					<font>Lato_Black_15</font>
+					<width>495</width>
+				</control>
+				<control type="label">
+					<top>30</top>
+					<label>Shows an overview of your media library in a single widget (fully customizable)</label>
+					<font>Lato_Light_15</font>
+					<width>495</width>
+					<height>45</height>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
+					<left>510</left>
+					<label>Dashboard (Screensaver)</label>
+					<font>Lato_Black_15</font>
+					<width>495</width>
+				</control>
+				<control type="label">
+					<left>510</left>
+					<top>30</top>
+					<label>Shows important information while your screensaver is active (fully customizable)</label>
+					<font>Lato_Light_15</font>
+					<width>495</width>
+					<height>45</height>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+			</control>
+
+			<control type="group">
+				<top>187</top>
+				<control type="label">
+					<label>Custom viewmode</label>
+					<font>Lato_Black_15</font>
+					<width>495</width>
+				</control>
+				<control type="label">
+					<top>30</top>
+					<label>Create your own viewmode without skinning experience and share it with other users</label>
+					<font>Lato_Light_15</font>
+					<width>495</width>
+					<height>45</height>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
+					<left>510</left>
+					<label>Library Tunes</label>
+					<font>Lato_Black_15</font>
+					<width>495</width>
+				</control>
+				<control type="label">
+					<left>510</left>
+					<top>30</top>
+					<label>Plays Movie, TV, Artist theme files when browsing your library, widgets or guide</label>
+					<font>Lato_Light_15</font>
+					<width>495</width>
+					<height>45</height>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+			</control>
+			
+		</control>
+
+		<control type="progress" id="20">
+			<visible>false</visible>
+		</control>
+
+		<control type="group">
+			<top>-240</top>
+
+			<!-- Footer -->
+			<include content="Dialog_General_Footer_Button">
+				<param name="id">11</param>
+				<param name="label"></param>
+				<param name="icon">nav_circle_check.png</param>
+				<param name="onup">noop</param>
+				<param name="onleft">10</param>
+				<param name="onright">12</param>
+				<param name="position">Left</param>
+			</include>
+	        
+			<include content="Dialog_General_Footer_Button">
+				<param name="id">12</param>
+				<param name="label"></param>
+				<param name="icon">dialog_button_center.png</param>
+				<param name="onup">noop</param>
+				<param name="onleft">11</param>
+				<param name="onright">10</param>
+				<param name="position">Center</param>
+			</include>
+
+			<include content="Dialog_General_Footer_Button">
+				<param name="id">10</param>
+				<param name="label"></param>
+				<param name="icon">nav_circle_cancel.png</param>
+				<param name="onup">noop</param>
+				<param name="onleft">12</param>
+				<param name="onright">11</param>
+				<param name="position">Right</param>
+			</include>
+
+		</control>
+
+
+	</control>
+	</controls>
+</window>

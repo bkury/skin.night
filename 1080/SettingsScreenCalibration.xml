@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="11">
+	<defaultcontrol>8</defaultcontrol>
+	<controls>
+		<control type="group">
+			<visible>!Player.HasVideo</visible>
+			<include>CommonSettingsBackground</include>
+		</control>
+		<control type="image">
+			<description>Overlay</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>confluence/black-back.png</texture>
+			<include>dialogeffect</include>
+		</control>
+		<control type="mover" id="8">
+			<description>top left mover</description>
+			<left>0</left>
+			<top>0</top>
+			<width>192</width>
+			<height>192</height>
+			<texturefocus>calibrate/CalibrateTopLeft.png</texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="mover" id="9">
+			<description>right bottom mover</description>
+			<left>1050</left>
+			<top>750</top>
+			<width>192</width>
+			<height>192</height>
+			<texturefocus>calibrate/CalibrateBottomRight.png</texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="mover" id="10">
+			<description>subtitle position mover</description>
+			<left>300</left>
+			<top>750</top>
+			<width>768</width>
+			<height>192</height>
+			<texturefocus>calibrate/CalibrateSubtitles.png</texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="resize" id="11">
+			<description>pixel aspect ratio box</description>
+			<left>0</left>
+			<top>348</top>
+			<width>384</width>
+			<height>384</height>
+			<texturefocus>calibrate/CalibratePixelRatio.png</texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="group">
+			<left>360</left>
+			<top>120</top>
+			<control type="label" id="2">
+				<description>coordinates label</description>
+				<left>30</left>
+				<top>15</top>
+				<width>1125</width>
+				<label></label>
+				<align>center</align>
+				<font>font13caps</font>
+			</control>
+			<control type="label" id="3">
+				<description>help information</description>
+				<left>30</left>
+				<top>60</top>
+				<width>1125</width>
+				<label></label>
+				<align>center</align>
+				<font>font13caps</font>
+			</control>
+		</control>
+	</controls>
+</window>

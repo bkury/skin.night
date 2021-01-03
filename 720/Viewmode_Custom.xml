@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Viewmode_Custom">
+		<include>Viewmode_Custom_1</include>
+		<include>Viewmode_Custom_2</include>
+		<include>Viewmode_Custom_3</include>
+	</include>
+</includes>

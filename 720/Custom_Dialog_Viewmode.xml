@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1130">
+	<defaultcontrol always="true">1000</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+        <onunload>Skin.Reset(selector4)</onunload>
+        <onunload>Skin.Reset(selector5)</onunload>
+        <onunload>Skin.Reset(selectorname)</onunload>
+	<onunload>Skin.SetBool(ApplyChanges)</onunload>
+	<include>Animation_Window_Fade</include>
+	<controls>
+
+	<!-- Preview -->
+	<control type="group">
+		<visible>Skin.String(selector3,PosX) | Skin.String(selector3,Width)</visible>
+		<include>AspectRatio_Viewmode_ZoomDialog</include>
+		<control type="image">
+			<top>-118</top>
+			<width>2</width>
+			<include>SeparatorV</include>
+			<include>Custom_Dialog_Position_Preview_PosX</include>
+		</control>
+		<control type="image">
+			<top>-118</top>
+			<width>2</width>
+			<include>SeparatorV</include>
+			<visible>Skin.String(selector3,Width)</visible>
+		</control>
+	</control>
+	<control type="group">
+		<visible>Skin.String(selector3,PosY) | Skin.String(selector3,Height)</visible>
+		<include>AspectRatio_Viewmode_ZoomDialog</include>
+		<control type="image">
+			<top>-118</top>
+			<height>2</height>
+			<include>SeparatorH</include>
+			<include>Custom_Dialog_Position_Preview_PosY</include>
+		</control>
+		<control type="image">
+			<top>-118</top>
+			<height>2</height>
+			<include>SeparatorH</include>
+			<visible>Skin.String(selector3,Height)</visible>
+		</control>
+	</control>
+
+	<!-- Dialog List-->
+	<control type="group">
+		<include>Animation_Custom_Dialog</include>
+		<include>AspectRatio_PosX</include>
+
+		<control type="group" id="1000">
+
+			<control type="fixedlist" id="460">
+	               		<left>330</left>
+				<top>465</top>
+				<height>240</height>
+				<width>620</width>
+				<focusposition>2</focusposition>
+				<movement>2</movement>
+				<onright>1001</onright>
+				<onleft>1002</onleft>
+				<pagecontrol>1001</pagecontrol>
+				<include>dialog_list_content</include>
+				<content>
+
+				<!-- Reset Option -->
+				<include>Custom_Dialog_ObjectReset</include>
+
+				<!-- Viewmode / Align -->
+				<include>Custom_Dialog_General</include>
+
+				<!-- PosX/PosY/Width/Height -->
+				<include>Custom_Dialog_Position</include>
+
+				<!-- Label (Content) -->
+				<include>Custom_Dialog_ContentLabel</include>
+
+				<!-- Image (Content) -->
+				<include>Custom_Dialog_ContentImage</include>
+
+				<!-- Label (Font) -->
+				<include>Custom_Dialog_Font</include>
+
+				<!-- Label (FontSize) -->
+				<include>Custom_Dialog_FontSize</include>
+
+				<!-- Opacity -->
+				<include>Custom_Dialog_Opacity</include>
+
+				<!-- Rotate -->
+				<include>Custom_Dialog_Rotate</include>
+
+				<!-- Color -->
+				<include>Custom_Dialog_Color</include>
+                                <item>
+					<label>Custom</label>
+					<icon>circle.png</icon>
+					<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)]_$INFO[Skin.String(selector3)],Custom)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)]_$INFO[Skin.String(selector3)]_Cat)</onclick>
+					<onclick>Dialog.Close(1130)</onclick>
+					<property name="color"></property>
+					<property name="hex">$VAR[Var_Color_Opacity_Hex]FFFFFF</property>
+					<visible>Skin.String(selector3,Color)</visible>
+				</item>
+
+				<!-- Reset -->
+				<include>Custom_Dialog_Reset</include>
+
+				</content>
+	        	</control>
+		</control>
+
+		<!-- Scrollbar -->
+		<include>dialog_scrollbar_custom</include>
+	</control>
+
+</controls>
+
+</window>

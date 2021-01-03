@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<default type="label">
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+		<invalidcolor>TextDisabled</invalidcolor>
+		<scrollspeed>40</scrollspeed>
+	</default>
+
+	<default type="button">
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+		<invalidcolor>TextDisabled</invalidcolor>
+		<disabledcolor>TextDisabled</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="radiobutton">
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+		<disabledcolor>TextDisabled</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="togglebutton">
+		<textcolor>FFCCCCCC</textcolor>
+		<disabledcolor>TextDisabled</disabledcolor>
+	</default>
+
+	<default type="spincontrolex">
+		<left>0</left>
+		<top>0</top>
+		<width>300</width>
+		<height>60</height>
+		<label></label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Font_Settings</font>
+		<textcolor>Text</textcolor>
+		<focusedcolor>TextFocused</focusedcolor>
+		<selectedcolor>TextFocused</selectedcolor>
+		<disabledcolor>TextDisabled</disabledcolor>
+		<texturenofocus>ButtonNF.png</texturenofocus>
+		<texturefocus>ButtonFo.png</texturefocus>
+		<textureup>scroll_up.png</textureup>
+		<texturedown>scroll_down.png</texturedown>
+		<textureupfocus>settings_arrow_button_up.png</textureupfocus>
+		<texturedownfocus>settings_arrow_button_down.png</texturedownfocus>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="spincontrol">
+		<left>0</left>
+		<top>0</top>
+		<height>30</height>
+		<width>30</width>
+		<textureup>ArrowUpNF.png</textureup>
+		<texturedown>ArrowDownNF.png</texturedown>
+		<textureupfocus>ArrowUpFo.png</textureupfocus>
+		<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Font_Settings</font>
+		<textcolor>Text</textcolor>
+		<focusedcolor>TextFocused</focusedcolor>
+		<selectedcolor>TextFocused</selectedcolor>
+		<disabledcolor>TextDisabled</disabledcolor>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="sliderex">
+		<left>0</left>
+		<top>0</top>
+		<height>60</height>
+		<width>300</width>
+		<texturefocus>ButtonInputFo.png</texturefocus>
+		<texturenofocus>ButtonInputNF.png</texturenofocus>
+		<sliderwidth>100</sliderwidth>
+		<sliderheight>15</sliderheight>
+		<texturesliderbar>OSDSliderBack.png</texturesliderbar>
+		<textureslidernib>OSDSliderNibNF.png</textureslidernib>
+		<textureslidernibfocus>OSDSliderNibFO.png</textureslidernibfocus>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>Font_Settings</font>
+		<textcolor>Text</textcolor>
+		<focusedcolor>TextFocused</focusedcolor>
+		<selectedcolor>TextFocused</selectedcolor>
+		<disabledcolor>TextDisabled</disabledcolor>
+	</default>
+
+	<default type="slider">
+		<left>0</left>
+		<top>0</top>
+		<texturesliderbar>ProgressBack.png</texturesliderbar>
+		<textureslidernib>SeekBarSlider.png</textureslidernib>
+		<textureslidernibfocus>SeekBarSlider.png</textureslidernibfocus>
+                <sliderwidth>280</sliderwidth>
+                <sliderheight>15</sliderheight>
+		<orientation>horizontal</orientation>
+	</default>
+
+</includes>

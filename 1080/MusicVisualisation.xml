@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2006">
+	<allowoverlay>yes</allowoverlay>
+	<defaultcontrol always="true">743</defaultcontrol>
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+     
+        <!-- Background -->
+	<include content="Background_Custom">
+		<param name="id_home">15</param>
+		<param name="id_fade">13015</param>
+		<param name="opacity">30</param>
+		<param name="image">$VAR[Var_Background_NowPlaying]</param>
+	</include>
+
+	<!-- Visualisation -->
+	<control type="visualisation" id="2">
+		<include>background_default</include>
+	</control>
+
+	<!-- OSD (HIDE) -->
+	<control type="group" id="1001">
+		<visible>false</visible>
+
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="1500" />
+			<effect type="fade" start="100" end="0" time="1500" delay="1500" />
+		</animation>
+
+		<control type="button">
+			<top>360</top>
+			<include>AspectRatio_Width</include>
+			<label>OSD Hidden</label>
+			<font>Lato_Light_90</font>
+			<align>center</align>
+			<textcolor>FFCCCCCC</textcolor>
+			<onclick>SetFocus(1000)</onclick>
+			<onleft>SetFocus(1000)</onleft>
+			<onright>SetFocus(1000)</onright>
+			<onup>SetFocus(1000)</onup>
+			<ondown>SetFocus(1000)</ondown>
+		</control>
+		<control type="label">
+			<top>510</top>
+			<label>Press any key to return ...</label>
+			<include>AspectRatio_Width</include>
+			<font>Lato_Light_40</font>
+			<align>center</align>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+	</control>
+
+	<control type="group">
+		<visible>Player.ShowInfo</visible>
+
+		<!-- Seekbar Background -->
+		<control type="group">
+			<control type="image">
+				<top>825</top>
+				<include>AspectRatio_Width</include>
+				<height>270</height>
+				<texture>bg_black.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+			</control>
+			<control type="image">
+                                <top>825</top>
+				<include>SeparatorH</include>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+                        </control>
+
+		</control>
+
+		<!-- Seekbar -->
+		<control type="group">
+			<top>832</top>
+
+			<!-- Progress Background -->
+			<control type="image">
+				<left>150</left>
+				<top>195</top>
+				<width>1620</width>
+				<height>30</height>
+				<texture>osd_progress_back_normal.png</texture>
+			</control>
+
+			<!-- Progress Bar -->
+			<control type="progress" id="23">
+				<left>159</left>
+				<top>192</top>
+				<width>1602</width>
+				<height>36</height>
+				<texturebg>osd_progress_back_transparent.png</texturebg>
+				<midtexture border="4">osd_progress_mid_normal.png</midtexture>
+				<info>Player.Progress</info>
+				<colordiffuse>$VAR[Var_Color_Progressbar_Hex]</colordiffuse>
+			</control>
+
+			<!-- Progress Cache -->
+			<control type="progress" id="24">
+				<left>150</left>
+				<top>195</top>
+				<width>1620</width>
+				<height>28</height>
+				<texturebg>osd_progress_back_transparent.png</texturebg>
+				<righttexture>osd_progress_line.png</righttexture>
+				<info>Player.ProgressCache</info>
+                                <colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+			</control>
+
+			<!-- Progress Time -->
+			<control type="label">
+				<left>30</left>
+				<top>192</top>
+				<width>150</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<font>Font_OSD_Time</font>
+				<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+				<label>$INFO[VideoPlayer.Time(h:mm:ss)]</label>
+				<animation effect="slide" start="0,0" end="-15,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![String.isEmpty(Control.GetLabel(7657)) + String.isEmpty(Control.GetLabel(7658))]">Conditional</animation>
+			</control>
+			<control type="label">
+				<left>180r</left>
+				<top>192</top>
+				<width>150</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Font_OSD_Time</font>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[VideoPlayer.Duration(h:mm:ss)]</label>
+				<animation effect="slide" start="0,0" end="-456,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![String.isEmpty(Control.GetLabel(7657)) + String.isEmpty(Control.GetLabel(7658))]">Conditional</animation>
+			</control>
+
+		</control>
+
+		<!-- Music Cover -->
+		<control type="group">
+			<left>390r</left>
+			<top>645</top>
+
+			<control type="image"> 
+				<left>0</left>     
+				<top>0</top>    
+				<width>360</width>
+				<height>360</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[MusicPlayer.Cover]</texture>
+                                <bordertexture>confluence/button-nofocus.png</bordertexture>
+                                <bordersize>3</bordersize>
+			</control>
+
+		</control>
+
+		<!-- Seekbar Infos -->
+		<control type="group">
+			<left>30</left>
+			<top>847</top>
+
+			<control type="group">
+				<visible>!String.isEmpty(MusicPlayer.Offset(1).Title)</visible>
+				<!-- Label 1 -->
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>960</width> 
+					<label>$VAR[Var_MusicOSD_Label_1]</label>
+					<font>Font_OSD_Header</font>
+					<textcolor>$VAR[Var_Color_Header_Hex]</textcolor>
+					<animation effect="slide" end="75,0" condition="!String.isEmpty(MusicPlayer.TrackNumber)">Conditonal</animation>
+				</control>
+				<!-- Label 2 -->
+				<control type="label">
+					<left>0</left>
+					<top>67</top>
+					<width>960</width> 
+					<label>$VAR[Var_MusicOSD_Label_2]</label>
+					<textcolor>FFCCCCCC</textcolor>
+					<font>Font_OSD_Sub</font>
+					<animation effect="slide" end="75,0" condition="!String.isEmpty(MusicPlayer.TrackNumber)">Conditonal</animation>
+				</control>
+				<!-- Label 3 -->
+				<control type="label">
+					<left>0</left>
+					<top>112</top>
+					<width>960</width>
+					<textcolor>FFCCCCCC</textcolor>
+					<label>$VAR[Var_MusicOSD_Label_3]</label>
+					<font>Font_OSD_Sub</font>
+					<animation effect="slide" end="75,0" condition="!String.isEmpty(MusicPlayer.TrackNumber)">Conditonal</animation>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>String.isEmpty(MusicPlayer.Offset(1).Title)</visible>
+				<!-- Label 1 -->
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>1410</width> 
+					<label>$VAR[Var_MusicOSD_Label_1]</label>
+					<font>Font_OSD_Header</font>
+					<textcolor>$VAR[Var_Color_Header_Hex]</textcolor>
+					<animation effect="slide" end="75,0" condition="!String.isEmpty(MusicPlayer.TrackNumber)">Conditonal</animation>
+				</control>
+				<!-- Label 2 -->
+				<control type="label">
+					<left>0</left>
+					<top>67</top>
+					<width>1410</width> 
+					<label>$VAR[Var_MusicOSD_Label_2]</label>
+					<textcolor>FFCCCCCC</textcolor>
+					<font>Font_OSD_Sub</font>
+					<animation effect="slide" end="75,0" condition="!String.isEmpty(MusicPlayer.TrackNumber)">Conditonal</animation>
+				</control>
+				<!-- Label 3 -->
+				<control type="label">
+					<left>0</left>
+					<top>112</top>
+					<width>1410</width>
+					<textcolor>FFCCCCCC</textcolor>
+					<label>$VAR[Var_MusicOSD_Label_3]</label>
+					<font>Font_OSD_Sub</font>
+					<animation effect="slide" end="75,0" condition="!String.isEmpty(MusicPlayer.TrackNumber)">Conditonal</animation>
+				</control>
+			</control>
+
+
+			<!-- Tracknumber -->
+			<control type="label">
+				<left>0</left>
+				<top>67</top>
+				<width>75</width>
+				<height>90</height>
+				<aligny>center</aligny>
+				<label>$INFO[MusicPlayer.TrackNumber]</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<font>Font_OSD_Tracknumber_Big</font>
+			</control>
+
+		</control>
+
+		<!-- Playlist -->
+		<control type="group">
+			<top>847</top>
+
+			<!-- Next -->
+			<control type="label">
+				<left>855r</left>
+				<top>7</top>
+				<width>390</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+				<animation effect="slide" end="45,0" condition="String.isEmpty(MusicPlayer.Offset(1).TrackNumber)">Conditional</animation>
+			</control>
+			<control type="label">
+				<left>480r</left>
+				<top>7</top>
+				<width>60</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(1).TrackNumber]</label>
+			</control>
+
+			<control type="label">
+				<left>855r</left>
+				<top>45</top>
+				<width>390</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(2).Title]</label>
+				<animation effect="slide" end="45,0" condition="String.isEmpty(MusicPlayer.Offset(2).TrackNumber)">Conditional</animation>
+			</control>
+			<control type="label">
+				<left>480r</left>
+				<top>45</top>
+				<width>60</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(2).TrackNumber]</label>
+			</control>
+
+			<control type="label">
+				<left>855r</left>
+				<top>82</top>
+				<width>390</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(3).Title]</label>
+				<animation effect="slide" end="45,0" condition="String.isEmpty(MusicPlayer.Offset(3).TrackNumber)">Conditional</animation>
+			</control>
+			<control type="label">
+				<left>480r</left>
+				<top>82</top>
+				<width>60</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(3).TrackNumber]</label>
+			</control>
+
+			<control type="label">
+				<left>855r</left>
+				<top>120</top>
+				<width>390</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(4).Title]</label>
+				<animation effect="slide" end="45,0" condition="String.isEmpty(MusicPlayer.Offset(4).TrackNumber)">Conditional</animation>
+			</control>
+			<control type="label">
+				<left>480r</left>
+				<top>120</top>
+				<width>60</width>
+				<textcolor>FFCCCCCC</textcolor>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<label>$INFO[MusicPlayer.Offset(4).TrackNumber]</label>
+			</control>
+		</control>
+	</control>
+
+	<!-- Controls -->
+	<control type="group" id="1000">
+		<visible>Player.ShowInfo</visible>
+
+		<!-- Seekbar Background -->
+		<control type="group">
+			<control type="image">
+				<top>0</top>
+				<include>AspectRatio_Width</include>
+				<height>75</height>
+				<texture>bg_black.png</texture>
+				<colordiffuse>FF000000</colordiffuse>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+			</control>
+			<control type="image">
+                                <top>75</top>
+				<include>SeparatorH</include>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+                        </control>
+
+		</control>
+
+		<!-- Codec -->
+		<control type="label">
+			<left>30</left>
+			<top>0</top>
+			<width>300</width>
+			<height>75</height>
+			<aligny>center</aligny>
+			<font>Font_Time_Global</font>
+			<label>[UPPERCASE]$INFO[MusicPlayer.Codec][/UPPERCASE]</label>
+			<textcolor>$VAR[Var_Color_AudioCodec_Hex]</textcolor>
+		</control>
+
+		<!-- Clock -->
+                <control type="label">
+			<left>330r</left>
+			<top>0</top>
+                        <textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+                        <width>300</width>
+			<height>75</height>
+			<aligny>center</aligny>
+                        <align>right</align>
+                        <font>Font_Time_Global</font>
+                        <info>System.Time(hh:mm xx)</info>
+                </control>
+
+	</control>
+
+	<!-- Videoplayer Status -->
+	<control type="group">
+		<visible>Player.Paused | Player.DisplayAfterSeek</visible>
+		<control type="group">
+			<left>750</left>
+			<top>300</top>
+
+			<!-- Player Status -->
+			<control type="group">
+				<visible>![ Player.Paused + Player.Caching + !Player.Seeking ]</visible>
+
+				<!-- Icon -->
+				<control type="image">
+					<left>105</left>
+					<top>0</top>
+					<width>210</width>
+					<height>210</height>
+					<aspectratio>scale</aspectratio>
+					<texture>$VAR[Var_Videoplayer_Icon]</texture>
+					<include>Animation_CommonFade_600</include>
+				</control>
+				<control type="image">
+					<left>105</left>
+					<top>0</top>
+					<width>210</width>
+					<height>210</height>
+					<aspectratio>scale</aspectratio>
+					<texture>$VAR[Var_Videoplayer_Icon]</texture>
+					<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+				</control>
+			</control>
+	
+			<!-- Busy -->
+			<control type="group">
+				<visible>Player.Paused + Player.Caching + !Player.Seeking</visible>
+
+				<control type="image">
+					<left>142</left>
+					<top>37</top>
+					<width>135</width>
+					<height>135</height>
+					<aspectratio>scale</aspectratio>
+					<texture>busy.png</texture>
+					<include>Animation_CommonFade_600</include>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+				</control>
+				<control type="image">
+					<left>142</left>
+					<top>37</top>
+					<width>135</width>
+					<height>135</height>
+					<aspectratio>scale</aspectratio>
+					<texture>busy.png</texture>
+					<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+					<animation effect="rotate" start="0" end="-360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+				</control>
+			</control>
+
+			<!-- Labels -->
+			<control type="label">
+				<top>180</top>
+				<width>420</width>
+				<align>center</align>
+				<label>$VAR[Var_Videoplayer_Text]</label>
+				<font>Font_Time_Global</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<include>Animation_CommonFade_600</include>
+			</control>
+			<control type="label">
+				<top>180</top>
+				<width>420</width>
+				<align>center</align>
+				<label>$VAR[Var_Videoplayer_Text]</label>
+				<font>Font_Time_Global</font>
+				<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+				<include>Animation_CommonFade_600</include>
+				<include>Animation_OSD</include>
+			</control>
+		</control>
+
+	</control>
+
+	</controls>
+</window>

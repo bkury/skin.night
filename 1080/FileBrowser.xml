@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+        <include>Animation_Window_Dialog</include>
+	<controls>
+
+        <control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">411</param>
+			<param name="header_label"></param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">450</param>
+			<param name="scroll_onright">414</param>
+		</include>
+
+		<!-- Content -->
+		<control type="list" id="450">
+			<onleft>413</onleft>
+			<include>Dialog_General_List</include>
+		</control>
+		<control type="list" id="451">
+			<onleft>413</onleft>
+			<include>Dialog_General_List</include>
+		</control>
+
+		<!-- Category -->
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+			<include content="Dialog_General_Grouplist_Category_Content">
+				<param name="id">450</param>
+				<param name="label1_head">Size</param>
+				<param name="label1_info">ListItem.Size</param>
+				<param name="label2_head">Date</param>
+				<param name="label2_info">ListItem.Date</param>
+			</include>
+		</control>
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+			<include content="Dialog_General_Grouplist_Category_Content">
+				<param name="id">451</param>
+				<param name="label1_head">Size</param>
+				<param name="label1_info">ListItem.Size</param>
+				<param name="label2_head">Date</param>
+				<param name="label2_info">ListItem.Date</param>
+			</include>
+		</control>
+
+		<!-- Footer -->
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">413</param>
+			<param name="label">$LOCALIZE[186]</param>
+			<param name="icon">nav_circle_check.png</param>
+			<param name="onup">450</param>
+			<param name="onleft">414</param>
+			<param name="onright">415</param>
+			<param name="position">Left</param>
+		</include>
+	        
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">415</param>
+			<param name="label">$LOCALIZE[119]</param>
+			<param name="icon">dialog_button_center.png</param>
+			<param name="onup">450</param>
+			<param name="onleft">413</param>
+			<param name="onright">414</param>
+			<param name="position">Center</param>
+		</include>
+        	
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">414</param>
+			<param name="label">$LOCALIZE[222]</param>
+			<param name="icon">nav_circle_cancel.png</param>
+			<param name="onup">450</param>
+			<param name="onleft">415</param>
+			<param name="onright">413</param>
+			<param name="position">Right</param>
+		</include>
+
+        </control>
+</controls>
+</window>

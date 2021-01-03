@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<!-- Dialog Info (Addon) -->
+<include name="DialogInfo_Addon_KODI">
+
+	<!-- Navigation -->
+	<control type="grouplist" id="1000">
+		<include>DialogInfo_Grouplist</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">12</param>
+		<param name="label">$LOCALIZE[518]</param>
+		<param name="icon">icon_launch.png</param>
+	</include>
+	<include content="DialogInfo_Separator">
+		<param name="id">1001</param>
+	</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">9</param>
+		<param name="label">$LOCALIZE[24020]</param>
+		<param name="icon">icon_options.png</param>
+	</include>
+	<include content="DialogInfo_Separator">
+		<param name="id">1002</param>
+	</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">8</param>
+		<param name="label">$LOCALIZE[24069]</param>
+		<param name="icon">icon_update.png</param>
+	</include>
+	<include content="DialogInfo_Separator">
+		<param name="id">1003</param>
+	</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">13</param>
+		<param name="icon">icon_ok.png</param>
+		<param name="icon2">icon_cancel.png</param>
+		<param name="selected">!Control.isEnabled(13)</param>
+	</include>
+	<include content="DialogInfo_Separator">
+		<param name="id">1004</param>
+	</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">10</param>
+		<param name="label">$LOCALIZE[39024]</param>
+		<param name="icon">icon_info.png</param>
+	</include>
+	<include content="DialogInfo_Separator">
+		<param name="id">1005</param>
+	</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">7</param>
+		<param name="label"></param>
+		<param name="icon">icon_ok.png</param>
+		<param name="icon2">icon_cancel.png</param>
+		<param name="selected">!String.StartsWith(Control.GetLabel(7),$LOCALIZE[24022])</param>
+	</include>
+	<include content="DialogInfo_Separator">
+		<param name="id">1006</param>
+	</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">6</param>
+		<param name="label"></param>
+		<param name="icon">icon_uninstall.png</param>
+		<param name="icon2">icon_install.png</param>
+		<param name="selected">!ListItem.Property(addon.isinstalled)</param>
+	</include>
+
+	</control>
+</include>
+
+
+<!-- Dialog Info (Addon) -->
+<include name="DialogInfo_Video_KODI">
+
+	<control type="grouplist" id="1000">
+		<include>DialogInfo_Grouplist</include>
+
+	<include content="DialogInfo_Button_7">
+		<param name="id">8</param>
+		<param name="label">$LOCALIZE[208]</param>
+		<param name="icon">icon_play.png</param>
+	</include>
+
+	<!-- Trailer -->
+	<include content="DialogInfo_Button_7">
+		<param name="id">11</param>
+		<param name="label">$LOCALIZE[20410]</param>
+		<param name="icon">icon_plus.png</param>
+		<param name="visible">!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]</param>
+	</include>
+	<include content="DialogInfo_Button_7">
+		<param name="id">440</param>
+		<param name="label">$LOCALIZE[31090]</param>
+		<param name="icon">icon_search.png</param>
+		<param name="onclick">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])</param>
+		<param name="visible">System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)</param>
+	</include>
+
+	<!-- Cinema Vision -->
+	<include content="DialogInfo_Button_7">
+		<param name="id">441</param>
+		<param name="label">$LOCALIZE[31003]</param>
+		<param name="icon">icon_plus.png</param>
+		<param name="onclick">RunScript(script.cinemavision,experience)</param>
+		<param name="visible">System.HasAddon(script.cinemavision) + [ String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) ]</param>
+	</include>
+
+	<!-- Extended Info -->
+	<include content="DialogInfo_Button_7">
+		<param name="id">101</param>
+		<param name="label">$LOCALIZE[31034]</param>
+		<param name="icon">icon_plus.png</param>
+		<param name="onclick">RunScript(script.extendedinfo,info=openinfodialog)</param>
+		<param name="visible">System.hasAddon(script.extendedinfo) + [ String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) ]</param>
+	</include>
+
+	<!-- Director -->
+	<include content="DialogInfo_Button_7">
+		<param name="id">13</param>
+		<param name="label">$LOCALIZE[31123]</param>
+		<param name="icon">icon_info.png</param>
+		<param name="visible">!String.IsEmpty(ListItem.Director)</param>
+	</include>
+
+	<!-- Image -->
+	<include content="DialogInfo_Button_7">
+		<param name="id">10</param>
+		<param name="label">$LOCALIZE[13511]</param>
+		<param name="icon">icon_info.png</param>
+	</include>
+
+	<!-- Update -->
+	<include content="DialogInfo_Button_7">
+		<param name="id">6</param>
+		<param name="label">$LOCALIZE[184]</param>
+		<param name="icon">icon_update.png</param>
+		<param name="visible">Control.IsEnabled(6)</param>
+	</include>
+
+	</control>
+
+</include>
+
+<include name="DialogInfo_Separator">
+	<param name="id"></param>
+	<param name="visible">true</param>
+	<definition>
+	<control type="image" id="$PARAM[id]">
+		<width>4</width>
+		<height>160</height>
+		<texture>confluence/separator-hz.png</texture>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<visible>$PARAM[visible]</visible>
+	</control>
+	</definition>
+</include>
+
+<include name="DialogInfo_Grouplist">
+	<top>1200</top>
+	<left>160</left>
+	<width>2240</width>
+	<itemgap>8</itemgap>
+	<orientation>horizontal</orientation>
+	<align>center</align>
+	<ondown>NextItem</ondown>
+	<onup>PrevItem</onup>
+	<include>Animation_Preplay_Down</include>
+</include>
+
+<include name="DialogInfo_Grouplist_Separator">
+	<align>left</align>
+	<usecontrolcoords>true</usecontrolcoords>
+	<include>DialogInfo_Grouplist</include>
+</include>
+
+<variable name="Var_DialogInfo_UnWatched">
+	<value condition="String.isEqual(ListItem.Overlay,OverlayUnwatched.png)">$LOCALIZE[16101]</value><!-- Unwatched -->
+	<value condition="String.isEqual(ListItem.Overlay,OverlayInProgress.png)">$LOCALIZE[575]</value><!-- In Progress -->
+	<value>$LOCALIZE[16102]</value><!-- Watched -->
+</variable>
+
+</includes>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="115">
+	<visible>Window.IsActive(fullscreenvideo)</visible>
+	<controls>
+
+		<control type="group">
+			<include condition="Skin.HasSetting(Dashboard_Enabled)">Dashboard_Hidden</include>
+
+			<!-- KODI -->
+			<control type="group">
+				<include>Animation_CommonFade_300</include>
+				<visible>[ Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching | Player.Paused | Player.ShowInfo | Player.ShowTime | Window.IsActive(playerprocessinfo) ]</visible>
+				<include>OSD_Labels</include>
+				<include>OSD_Bottom</include>
+			</control>
+
+			<!-- Permanent Clock -->
+			<control type="group">
+				<visible>Skin.HasSetting(OSD_Clock) + !Window.isVisible(2901)</visible><!-- Hide VideoOSD -->
+				<include>Clock_Right_Pos</include>
+				<include>Clock_Right</include>
+			</control>
+
+		</control>
+
+		<!-- Dashboard -->
+		<include>Dashboard</include>
+
+	</controls>
+
+</window>

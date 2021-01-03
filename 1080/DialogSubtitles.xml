@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+        <!-- Dialog Header -->
+	<include content="Dialog_General_Header">
+		<param name="header_id">2</param>
+		<param name="header_label">$LOCALIZE[31423]</param>
+		<param name="separator">true</param>
+		<param name="separator_footer">true</param>
+		<param name="scroll_onleft">5</param>
+		<param name="scroll_onright">29</param>
+	</include>
+
+	<!-- Category -->
+	<control type="grouplist" id="3">
+		<onright>5</onright>
+		<onleft>28</onleft>
+		<include>Dialog_General_Grouplist_Category</include>
+	</control>
+
+	<!-- Content -->
+	<control type="list" id="120">
+		<onleft>3</onleft>
+		<include>Dialog_General_List</include>
+	</control>
+
+
+	<!-- Footer -->
+	<!-- $LOCALIZE[186] OK -->
+	<!-- $LOCALIZE[222] CANCEL -->
+	<include content="Dialog_General_Footer_Button">
+		<param name="id">28</param>
+		<param name="label"></param>
+		<param name="icon">nav_circle_check.png</param>
+		<param name="onup">3</param>
+		<param name="onleft">29</param>
+		<param name="onright">30</param>
+		<param name="position">Left</param>
+	</include>
+	<include content="Dialog_General_Footer_Button">
+		<param name="id">30</param>
+		<param name="label"></param>
+		<param name="icon">dialog_button_center.png</param>
+		<param name="onup">5</param>
+		<param name="onleft">28</param>
+		<param name="onright">29</param>
+		<param name="position">Center</param>
+	</include>
+	<include content="Dialog_General_Footer_Button">
+		<param name="id">29</param>
+		<param name="label"></param>
+		<param name="icon">nav_circle_cancel.png</param>
+		<param name="onup">5</param>
+		<param name="onleft">30</param>
+		<param name="onright">28</param>
+		<param name="position">Right</param>
+	</include>
+
+	</control>
+
+	</controls>
+</window>

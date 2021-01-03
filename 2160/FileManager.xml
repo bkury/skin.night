@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<include>Animation_Window_Dialog</include>
+
+	<controls>
+
+		<control type="image">
+			<include>background_default</include>
+			<texture>no_content_bg.jpg</texture>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+		</control>
+
+		<control type="image">
+			<top>420</top>
+			<left>45</left>
+			<width>3750</width>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<top>1800</top>
+			<left>45</left>
+			<width>3750</width>
+			<include>SeparatorH</include>
+		</control>
+
+
+		<!-- 101 / 102 -->
+
+		<control type="group">
+			<include>AspectRatio_Both</include>
+
+			<!-- Left -->
+			<control type="label" id="101">
+				<top>1860</top>
+				<left>45</left>
+				<width>1860</width>
+				<align>center</align>
+				<font>Lato_Black_30</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+			<control type="list" id="20">
+				<left>45</left>
+				<onleft>21</onleft>
+				<onright>21</onright>
+				<include>dialog_list</include>
+			</control>
+
+			<!-- Right -->
+			<control type="label" id="102">
+				<top>1860</top>
+				<left>1935</left>
+				<width>1860</width>
+				<align>center</align>
+				<font>Lato_Black_30</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+			<control type="list" id="21">
+				<left>1935</left>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<include>dialog_list</include>
+			</control>
+
+		</control>
+
+
+	</controls>
+</window>

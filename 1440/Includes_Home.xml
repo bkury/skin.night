@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<!-- Homemenu -->
+<include name="Home_Navigation">
+
+	<!-- Vertical -->
+	<include condition="!Skin.HasSetting(Home_Horizontal) + !Skin.hasSetting(Home_Panel)">Home_Menu_Vertical</include>
+
+	<!-- Horizontal -->
+	<include condition="Skin.HasSetting(Home_Horizontal)">Home_Menu_Horizontal</include>
+
+	<!-- Panel -->
+	<include condition="Skin.HasSetting(Home_Panel)">Home_Menu_Panel</include>
+
+</include>
+
+<!-- Vertical -->
+<include name="Home_Menu_Vertical">
+
+	<!-- Menu -->
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Home_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed)">Home_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple)">Home_Simplelist</include>
+
+	<!-- Widgets -->
+	<include condition="!Skin.hasSetting(Home_Panel)">Home_Deck</include>
+
+	<!-- Filter -->
+	<include condition="!Skin.hasSetting(Home_Hide_Filter)">Home_Filter</include>
+
+	<!-- Submenu -->
+	<include>Home_Submenu</include>
+
+</include>
+
+<!-- Horizontal -->
+<include name="Home_Menu_Horizontal">
+
+	<!-- Header -->
+	<include>Navigation_Horizontal_Header</include>
+
+	<!-- Menu -->
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Home_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed)">Home_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple)">Home_Simplelist</include>
+
+	<!-- Widgets -->
+	<include condition="!Skin.hasSetting(Home_Panel)">Home_Deck</include>
+
+	<!-- Filter -->
+	<include condition="!Skin.hasSetting(Home_Hide_Filter)">Home_Filter_Horizontal</include>
+
+	<!-- Submenu -->
+	<include>Home_Submenu</include>
+
+</include>
+
+<!-- Panel -->
+<include name="Home_Menu_Panel">
+	<include>Home_Panel</include>
+</include>
+
+<!-- Vertical Home -->
+<include name="Home_Navigation_Vertical">
+	<visible allowhiddenfocus="true">Control.hasFocus(300) | Control.hasFocus(99999)</visible>
+	<include>Animation_Home_Vertical</include>
+
+	<!-- Filter (Onleft) -->
+	<onleft condition="!String.isEmpty(Container(300).ListItem.Property(filter))">301</onleft>
+	<onleft condition="String.isEmpty(Container(300).ListItem.Property(filter))">SetFocus(302,1,absolute)</onleft>
+
+	<!-- Widget / Dashboard -->
+	<onright condition="!Container(300).HasFocus(65)">5000</onright>
+	<onright condition="Container(300).HasFocus(65)">5001</onright>
+
+	<!-- Onback -->
+	<onback>ActivateWindow(shutdownmenu)</onback>
+
+	<!-- Content -->
+	<include>Navigation_Vertical</include>
+</include>
+
+<!-- Horizontal Home -->
+<include name="Home_Navigation_Horizontal">
+	<visible allowhiddenfocus="true">Control.hasFocus(300)</visible>
+	<include>Animation_Home_Horizontal</include>
+
+	<!-- Filter (Ondown) -->
+	<ondown condition="!String.isEmpty(Container(300).ListItem.Property(filter))">301</ondown>
+	<ondown condition="String.isEmpty(Container(300).ListItem.Property(filter))">SetFocus(302,1,absolute)</ondown>
+
+	<!-- Widget / Dashboard -->
+	<onup condition="!Container(300).HasFocus(65)">5000</onup>
+	<onup condition="Container(300).HasFocus(65)">5001</onup>
+
+	<!-- Onback -->
+	<onback>ActivateWindow(shutdownmenu)</onback>
+
+	<!-- Content -->
+	<include>Navigation_Horizontal</include>
+</include>
+
+<!-- Vertical Home -->
+<include name="Home_Wraplist">
+	<control type="wraplist" id="300">
+		<include condition="Skin.HasSetting(Home_Horizontal)">Home_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Home_Navigation_Vertical</include>
+		<include>Home_Navigation_Content</include>
+	</control>
+</include>
+<include name="Home_Fixedlist">
+	<control type="fixedlist" id="300">
+		<include condition="Skin.HasSetting(Home_Horizontal)">Home_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Home_Navigation_Vertical</include>
+		<include>Home_Navigation_Content</include>
+	</control>
+</include>
+<include name="Home_Simplelist">
+	<control type="list" id="300">
+		<include condition="Skin.HasSetting(Home_Horizontal)">Home_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Home_Navigation_Vertical</include>
+		<include>Home_Navigation_Content</include>
+	</control>
+</include>
+
+<!-- Home Navigation Content -->
+<include name="Home_Navigation_Content">
+	<content>
+		<!-- KODI -->
+        	<include>Home_Menu</include>
+	</content>
+</include>
+
+<!-- Submenu -->
+<include name="Home_Submenu">
+	<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)">Submenu_Wraplist</include>
+	<include condition="Skin.HasSetting(Home_Fixed)">Submenu_Fixedlist</include>
+	<include condition="Skin.HasSetting(Home_Simple)">Submenu_Simplelist</include>
+</include>
+<include name="Submenu_Navigation_Vertical">
+	<include>Animation_Home_Vertical</include>
+	<onright>300</onright>
+	<include>Navigation_Vertical</include>
+</include>
+<include name="Submenu_Navigation_Horizontal">
+	<include>Animation_Home_Horizontal</include>
+	<onup>300</onup>
+	<ondown>300</ondown>
+	<include>Navigation_Horizontal</include>
+</include>
+
+
+<!-- Submenu -->
+<include name="Submenu_Wraplist">
+	<control type="wraplist" id="302">
+		<visible allowhiddenfocus="true">Control.hasFocus(302)</visible>
+		<onback>300</onback>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Vertical</include>
+		<include>Submenu_Navigation_Content</include>
+	</control>
+</include>
+<include name="Submenu_Fixedlist">
+	<control type="fixedlist" id="302">
+		<visible allowhiddenfocus="true">Control.hasFocus(302)</visible>
+		<onback>300</onback>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Vertical</include>
+		<include>Submenu_Navigation_Content</include>
+	</control>
+</include>
+<include name="Submenu_Simplelist">
+	<control type="list" id="302">
+		<visible allowhiddenfocus="true">Control.hasFocus(302)</visible>
+		<onback>300</onback>
+		<include condition="Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Horizontal</include>
+		<include condition="!Skin.HasSetting(Home_Horizontal)">Submenu_Navigation_Vertical</include>
+		<include>Submenu_Navigation_Content</include>
+	</control>
+</include>
+<include name="Submenu_Navigation_Content">
+	<content>
+		<include>Home_Menu_Submenu</include>
+	</content>
+</include>
+
+<!-- ########## NAVIGATION (VERTICAL) ########## -->
+
+<include name="Navigation_Vertical">
+	<!-- Menu Items -->
+	<include>Home_Menu_List</include>
+        <preloaditems>2</preloaditems>
+
+	<include condition="!Skin.HasSetting(Global_Hide_Animation)">ScrollTime_200</include>
+	<include condition="Skin.HasSetting(Global_Hide_Animation)">ScrollTime_300</include>
+
+	<!-- Animation -->
+	<include condition="!Skin.HasSetting(Global_Hide_Animation)">Animation_ZoomOutZoomIn</include>
+
+	<!-- Font Size -->
+	<include condition="!Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Medium)">Navigation_Vertical_Large</include>
+	<include condition="Skin.HasSetting(Home_Font_Medium)">Navigation_Vertical_Medium</include>
+	<include condition="Skin.HasSetting(Home_Font_Small)">Navigation_Vertical_Small</include>
+</include>
+
+<include name="Navigation_Vertical_Large">
+	<itemlayout width="1400" height="152">
+		<include>Navigation_Vertical_Layout</include>
+	</itemlayout>
+	<focusedlayout width="1400" height="152">
+		<include>Navigation_Vertical_Layout_Focus</include>
+	</focusedlayout>
+</include>
+
+<include name="Navigation_Vertical_Medium">
+	<itemlayout width="1400" height="124">
+		<include>Navigation_Vertical_Layout</include>
+	</itemlayout>
+	<focusedlayout width="1400" height="124">
+		<include>Navigation_Vertical_Layout_Focus</include>
+	</focusedlayout>
+</include>
+
+<include name="Navigation_Vertical_Small">
+	<itemlayout width="1400" height="104">
+		<include>Navigation_Vertical_Layout</include>
+	</itemlayout>
+	<focusedlayout width="1400" height="104">
+		<include>Navigation_Vertical_Layout_Focus</include>
+	</focusedlayout>
+</include>
+
+<!-- Home Label 2 -->
+<include name="Navigation_Vertical_Label2">
+	<include condition="Skin.HasSetting(Home_Font_Small)">Navigation_Vertical_Small_Label2</include>
+	<include condition="Skin.HasSetting(Home_Font_Medium)">Navigation_Vertical_Medium_Label2</include>
+	<include condition="!Skin.HasSetting(Home_Font_Small) + !Skin.HasSetting(Home_Font_Medium)">Navigation_Vertical_Large_Label2</include>
+</include>
+
+<include name="Navigation_Vertical_Small_Label2">
+	<left>4</left>
+	<top>70</top>
+</include>
+<include name="Navigation_Vertical_Medium_Label2">
+	<left>8</left>
+	<top>90</top>
+</include>
+<include name="Navigation_Vertical_Large_Label2">
+	<left>12</left>
+	<top>120</top>
+</include>
+
+<include name="Navigation_Vertical_Layout_Icon">
+	<!-- Icon -->
+	<control type="image">
+		<include>Home_Menu_Icon_Image</include>
+		<colordiffuse>FFAAAAAA</colordiffuse>
+	</control>
+</include>
+
+<include name="Navigation_Vertical_Layout">
+
+	<!-- Icon -->
+	<include condition="Skin.hasSetting(Home_Menu_Icons)">Navigation_Vertical_Layout_Icon</include>
+
+	<!-- Label -->
+	<control type="label">
+		<include>Home_Menu_Label_NoFocus</include>
+		<textcolor>50b8b7b7</textcolor>
+		<label>$INFO[ListItem.Label]</label>
+		<include condition="Skin.hasSetting(Home_Menu_Icons)">Home_Menu_Icon_Animation</include>
+	</control>
+
+	<!-- Section Type -->
+	<include>Home_Section_NoFocus</include>
+
+</include>
+
+<include name="Navigation_Vertical_Layout_Focus">
+
+	<!-- Icon -->
+	<include condition="Skin.hasSetting(Home_Menu_Icons)">Navigation_Vertical_Layout_Icon</include>
+
+	<!-- Label -->
+	<control type="label">
+		<include>Home_Menu_Label_NoFocus</include>
+		<include content="Colordiffuse_Text"><param name="object">Home</param><param name="color">Selected</param></include>
+		<label>$INFO[ListItem.Label]</label>
+		<include condition="Skin.hasSetting(Home_Menu_Icons)">Home_Menu_Icon_Animation</include>
+		<animation effect="slide" end="0,-20" condition="Skin.HasSetting(Home_Menu_More) + !String.isEmpty(ListItem.Label2)">Conditional</animation>
+	</control>
+
+	<!-- Label 2 -->
+	<include condition="Skin.HasSetting(Home_Menu_More)">Navigation_Vertical_Layout_Focus_Label2</include>
+
+	<!-- Section Type -->
+	<include>Home_Section_Focus</include>
+
+</include>
+
+<include name="Navigation_Vertical_Layout_Focus_Label2">
+	<control type="label">
+		<label>$VAR[Var_Home_Label2]</label>
+		<include content="Colordiffuse_Text"><param name="object">Text</param><param name="color">Selected</param></include>
+		<font>Font_Home_Label2</font>
+		<include>Navigation_Vertical_Label2</include>
+		<include condition="Skin.hasSetting(Home_Menu_Icons)">Home_Menu_Icon_Animation</include>
+		<visible>!String.isEmpty(ListItem.Label2)</visible>
+	</control>
+</include>
+
+<!-- ########## NAVIGATION (HORIZONTAL) ########## -->
+<include name="Navigation_Horizontal_Header">
+	<control type="group">
+		<visible>Control.hasFocus(300)</visible>
+		<include>Animation_Home_Horizontal</include>
+		<top>310r</top>
+
+		<!-- Background -->
+		<control type="image">
+                        <height>140</height>
+			<include>AspectRatio_Width</include>
+                        <texture>bg_black.png</texture>
+                        <colordiffuse>CC000000</colordiffuse>
+                </control>
+
+		<!-- Separator -->
+		<control type="image">
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<top>140</top>
+			<include>SeparatorH</include>
+		</control>
+	</control>
+	<control type="group">
+		<visible>Control.hasFocus(302)</visible>
+		<include>Animation_Home_Horizontal</include>
+		<top>310r</top>
+
+		<!-- Background -->
+		<control type="image">
+                        <height>140</height>
+			<include>AspectRatio_Width</include>
+                        <texture>bg_black.png</texture>
+                        <colordiffuse>CC000000</colordiffuse>
+                </control>
+
+		<!-- Separator -->
+		<control type="image">
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<top>140</top>
+			<include>SeparatorH</include>
+		</control>
+	</control>
+</include>
+
+<include name="Navigation_Horizontal_Filter_Header">
+	<control type="group">
+		<top>310r</top>
+
+		<!-- Background -->
+		<control type="image">
+                        <height>140</height>
+			<include>AspectRatio_Width</include>
+                        <texture>bg_black.png</texture>
+                        <colordiffuse>CC000000</colordiffuse>
+                </control>
+
+		<!-- Separator -->
+		<control type="image">
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<top>140</top>
+			<include>SeparatorH</include>
+		</control>
+	</control>
+</include>
+
+<include name="Navigation_Horizontal">
+	<top>300r</top>
+	<height>120</height>
+	<include>AspectRatio_Width</include>
+	<orientation>horizontal</orientation>
+	<scrolltime>200</scrolltime>
+	<focusposition>2</focusposition>
+	<preloaditems>2</preloaditems>
+
+	<itemlayout width="512" height="120">
+
+		<control type="label">
+			<width>512</width>
+			<height>120</height>
+			<include>Font_Main_SubHeader</include>
+			<textcolor>FFAAAAAA</textcolor>
+			<label>$INFO[ListItem.Label]$INFO[ListItem.Property(HomeMenuSection)]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>String.isEmpty(ListItem.Property(HomeMenuSection))</visible>
+		</control>			
+
+		<control type="image">
+			<width>512</width>
+			<height>120</height>
+			<texture>block.png</texture>
+			<colordiffuse>15FFFFFF</colordiffuse>
+			<visible>!String.isEmpty(ListItem.Property(HomeMenuSection))</visible>
+		</control>			
+		<control type="label">
+			<width>512</width>
+			<height>120</height>
+			<font>Lato_Black_35</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<label>[UPPERCASE]$INFO[ListItem.Property(HomeMenuSection)][/UPPERCASE]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>!String.isEmpty(ListItem.Property(HomeMenuSection))</visible>
+		</control>			
+
+	</itemlayout>
+	<focusedlayout width="512" height="120">
+
+		<control type="label">
+			<width>512</width>
+			<height>120</height>
+			<include>Font_Main_SubHeader</include>
+			<textcolor>$VAR[Var_Color_Home_Hex]</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>			
+
+		<control type="image">
+			<width>512</width>
+			<height>120</height>
+			<texture>block.png</texture>
+			<colordiffuse>15FFFFFF</colordiffuse>
+			<visible>!String.isEmpty(ListItem.Property(HomeMenuSection))</visible>
+		</control>			
+		<control type="label">
+			<width>512</width>
+			<height>120</height>
+			<font>Lato_Black_35</font>
+			<textcolor>$VAR[Var_Color_Home_Hex]</textcolor>
+			<label>[UPPERCASE]$INFO[ListItem.Property(HomeMenuSection)][/UPPERCASE]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>!String.isEmpty(ListItem.Property(HomeMenuSection))</visible>
+		</control>			
+
+	</focusedlayout>
+</include>
+
+<include name="Home_Navigation_Filter_Content_BOTH">
+
+	<!-- Custom Home -->
+	<item>
+		<label>$LOCALIZE[31302]</label>
+		<icon></icon>
+		<onclick>ActivateWindow(settings)</onclick>
+		<onclick>SetFocus(180)</onclick>
+		<onclick>Right</onclick>
+		<onclick>SetFocus(3502)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),customhome1)</visible>
+	</item>
+
+	<item>
+		<label>$LOCALIZE[31302]</label>
+		<icon></icon>
+		<onclick>ActivateWindow(settings)</onclick>
+		<onclick>SetFocus(180)</onclick>
+		<onclick>Right</onclick>
+		<onclick>SetFocus(3523)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),customhome2)</visible>
+	</item>
+
+	<item>
+		<label>$LOCALIZE[31302]</label>
+		<icon></icon>
+		<onclick>ActivateWindow(settings)</onclick>
+		<onclick>SetFocus(180)</onclick>
+		<onclick>Right</onclick>
+		<onclick>SetFocus(3544)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),customhome3)</visible>
+	</item>
+
+	<!-- Favourites -->
+	<item>
+		<label>$LOCALIZE[31302]</label>
+		<icon></icon>
+		<onclick>ActivateWindow(settings)</onclick>
+		<onclick>SetFocus(180)</onclick>
+		<onclick>Right</onclick>
+		<onclick>SetFocus(3254)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),favourites)</visible>
+	</item>
+
+	<!-- Dashboard -->
+	<item>
+		<label>$LOCALIZE[31302]</label>
+		<icon></icon>
+		<onclick>ActivateWindow(settings)</onclick>
+		<onclick>SetFocus(190)</onclick>
+		<onclick>Right</onclick>
+		<onclick>SetFocus(9030)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),dashboard)</visible>
+	</item>
+
+	<!-- PlayFile -->
+	<item>
+		<label>$LOCALIZE[31427]</label>
+		<icon></icon>
+		<onclick>Skin.SetPath(PlayFilePath)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),playfile) + String.isEmpty(Skin.String(PlayFilePath))</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31427] ($LOCALIZE[31193])</label>
+		<icon></icon>
+		<onclick>Skin.Reset(PlayFilePath)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),playfile) + !String.isEmpty(Skin.String(PlayFilePath))</visible>
+	</item>
+
+	<!-- PVR -->
+	<item>
+		<label>$LOCALIZE[31341]</label>
+		<icon>icons/pvr/channels.png</icon>
+		<onclick>ActivateWindow(TVChannels)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),pvr)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31001]</label>
+		<icon>icons/pvr/guide.png</icon>
+		<onclick>ActivateWindow(TVGuide)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),pvr)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31340]</label>
+		<icon>icons/pvr/recordings.png</icon>
+		<onclick>ActivateWindow(TVRecordings)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),pvr)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31052]</label>
+		<icon>icons/pvr/timers.png</icon>
+		<onclick>ActivateWindow(TVTimers)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),pvr)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31342]</label>
+		<icon>icons/pvr/timer-rules.png</icon>
+		<onclick>ActivateWindow(TVTimerRules)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),pvr)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31026]</label>
+		<icon>icons/pvr/tv-search.png</icon>
+		<onclick>ActivateWindow(TVSearch)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),pvr)</visible>
+	</item>
+
+	<!-- Guide -->
+	<item>
+		<label>$LOCALIZE[31001] - Kodi</label>
+		<icon></icon>
+		<onclick>ActivateWindow(TVGuide)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),guide)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31001] - NextAired</label>
+		<icon></icon>
+		<onclick>RunScript(script.tv.show.next.aired)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),guide)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31194]: Kodi</label>
+		<icon></icon>
+		<onclick>Skin.SetBool(Home_Guide_NextAired)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),guide) + !Skin.HasSetting(Home_Guide_NextAired)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31194]: NextAired</label>
+		<icon></icon>
+		<onclick>Skin.Reset(Home_Guide_NextAired)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),guide) + Skin.HasSetting(Home_Guide_NextAired)</visible>
+	</item>
+
+
+	<!-- Notifications -->
+	<item>
+		<label>Clear all</label>
+		<icon></icon>
+		<onclick>ActivateWindow(1150)</onclick>
+		<onclick>SetFocus(300)</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),notification)</visible>
+	</item>
+
+	<!-- Play DVD -->
+	<item>
+		<label>$LOCALIZE[31062]</label>
+		<icon></icon>
+		<onclick>EjectTray()</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),playdisc)</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[600]</label>
+		<icon></icon>
+		<onclick>RipCD</onclick>
+		<visible>String.IsEqual(Container(300).ListItem.Property(filter),playdisc)</visible>
+	</item>
+
+</include>
+
+
+<!-- Background Dashboard -->
+<include name="Home_Background_Dashboard">
+
+        <control type="group">
+		<visible>Container(300).hasFocus(30)</visible>
+		<include>Animation_CommonFade</include>
+
+                <control type="fadelabel" id="13200">
+                        <visible>true</visible>
+                        <width>10000</width>
+                        <scrollout>false</scrollout>
+                        <pauseatend>8000</pauseatend>
+                        <font>Font_Date</font>
+                        <label>$VAR[Var_Deck_Dashboard_Background_1]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_2]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_3]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_4]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_5]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_6]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_7]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_8]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_9]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_10]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_11]</label>
+                        <label>$VAR[Var_Deck_Dashboard_Background_12]</label>
+                        <textcolor>00FFFFFF</textcolor>
+                </control>
+
+                <!-- Fanart (Dynamic) -->
+                <control type="multiimage">
+                        <include>background_default</include>
+                        <imagepath background="true">$INFO[Control.GetLabel(13200)]</imagepath>
+			<!-- Opacity Option -->
+			<include condition="String.isEmpty(Skin.String(Home_Opacity))">Home_Opacity_Default</include>
+			<include condition="!String.isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+                        <!-- Fadetime Option -->
+                        <include condition="String.isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+                        <include condition="!String.isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+                        <!-- Time per Image Option -->
+                        <include condition="String.isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
+                        <include condition="!String.isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
+                        <!-- Kenburns Option -->
+                        <include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+                </control>
+
+		</control>
+
+	</include>
+
+<!-- Background Panel -->
+<include name="Home_Background_Panel">
+
+        <control type="group">
+		<include>Animation_CommonFade</include>
+
+                <control type="fadelabel" id="13200">
+                        <visible>true</visible>
+                        <width>10000</width>
+                        <scrollout>false</scrollout>
+                        <pauseatend>8000</pauseatend>
+                        <font>Font_Date</font>
+                        <label>$VAR[Var_Background_Panel_1]</label>
+                        <label>$VAR[Var_Background_Panel_2]</label>
+                        <label>$VAR[Var_Background_Panel_3]</label>
+                        <label>$VAR[Var_Background_Panel_4]</label>
+                        <label>$VAR[Var_Background_Panel_5]</label>
+                        <label>$VAR[Var_Background_Panel_6]</label>
+                        <label>$VAR[Var_Background_Panel_7]</label>
+                        <label>$VAR[Var_Background_Panel_8]</label>
+                        <label>$VAR[Var_Background_Panel_9]</label>
+                        <textcolor>00FFFFFF</textcolor>
+                </control>
+
+                <!-- Fanart (Dynamic) -->
+                <control type="multiimage">
+                        <include>background_default</include>
+                        <imagepath background="true">$INFO[Control.GetLabel(13200)]</imagepath>
+			<!-- Opacity Option -->
+			<include condition="String.isEmpty(Skin.String(Home_Opacity))">Home_Panel_Opacity_Default</include>
+			<include condition="!String.isEmpty(Skin.String(Home_Opacity))">Home_Opacity</include>
+                        <!-- Fadetime Option -->
+                        <include condition="String.isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime_Default</include>
+                        <include condition="!String.isEmpty(Skin.String(Home_Fadetime))">Home_Fadetime</include>
+                        <!-- Time per Image Option -->
+                        <include condition="String.isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage_Default</include>
+                        <include condition="!String.isEmpty(Skin.String(Home_TimePerImage))">Home_TimePerImage</include>
+                        <!-- Kenburns Option -->
+                        <include condition="Skin.HasSetting(Home_Kenburns)">background_kenburns</include>
+                </control>
+
+		</control>
+
+	</include>
+
+	<include name="Home_Section_OnClick">
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,1)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,2)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,3)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,4)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,5)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,6)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,7)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,8)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,9)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,10)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,11)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,12)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(13).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,13)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(14).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(13).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,14)</onclick>
+		<onclick condition="Control.hasFocus(300) + !String.isEmpty(Container(300).ListItem(15).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(14).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(13).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(300).ListItem(1).Property(HomeMenuSection))">Control.Move(300,15)</onclick>
+
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,1)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,2)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,3)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,4)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,5)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,6)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,7)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,8)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,9)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,10)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,11)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,12)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(13).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,13)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(14).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(13).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,14)</onclick>
+		<onclick condition="Control.hasFocus(302) + !String.isEmpty(Container(302).ListItem(15).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(14).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(13).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(12).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(11).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(10).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(9).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(8).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(7).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(6).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(5).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(4).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(3).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(2).Property(HomeMenuSection)) + String.isEmpty(Container(302).ListItem(1).Property(HomeMenuSection))">Control.Move(302,15)</onclick>
+	</include>
+
+	<!-- PANEL HOME -->
+	<include name="Home_Panel_Item_Grouplist">
+		<control type="grouplist" id="$PARAM[id_content]">
+			<width>2440</width>
+			<height>400</height>
+			<usecontrolcoords>true</usecontrolcoords>
+			<itemgap>20</itemgap>
+			<orientation>horizontal</orientation>
+			<pagecontrol>1001</pagecontrol>
+			<include>Home_Panel_$PARAM[section]</include>
+		</control>
+	</include>
+
+	<include name="Home_Panel_Item_Section">
+		<param name="visible">true</param>
+		<param name="pageup">false</param>
+
+		<definition>
+		<control type="group">
+			<height>50</height>
+			<!--<visible>$PARAM[visible]</visible>-->
+
+			<control type="image">
+				<width>2440</width>
+				<height>50</height>
+				<texture>block.png</texture>
+				<colordiffuse>33FFFFFF</colordiffuse>
+			</control>
+			<control type="button" id="$PARAM[id]">
+				<left>20</left>
+				<width>2000</width>
+				<height>50</height>
+				<font>Lato_Black_20</font>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
+				<onfocus>SetFocus($PARAM[id_content])</onfocus>
+				<!--<visible>$PARAM[visible]</visible>-->
+			</control>
+
+			<control type="button">
+				<left>2300</left>
+				<width>50</width>
+				<height>50</height>
+				<onclick>pageup($PARAM[id_scroll])</onclick>
+				<texturenofocus colordiffuse="66FFFFFF">icon_circled_left.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Home_Hex]">icon_circled_left.png</texturefocus>
+			</control>
+			<control type="button">
+				<left>2360</left>
+				<width>50</width>
+				<height>50</height>
+				<onclick>pagedown($PARAM[id_scroll])</onclick>
+				<texturenofocus colordiffuse="66FFFFFF">icon_circled_right.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Home_Hex]">icon_circled_right.png</texturefocus>
+			</control>
+			<control type="scrollbar" id="$PARAM[id_scroll]">
+				<left>100</left>
+				<width>2240</width>
+				<height>50</height>
+			</control>
+
+		</control>
+		</definition>
+	</include>
+
+				<!--<texturenofocus colordiffuse="44FFFFFF">home_panel_background.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Home_Hex]">home_panel_background_focus.png</texturefocus>
+				<aspectratio>scale</aspectratio>-->
+				<!--<top>-64</top>-->
+                                <!--<height>400</height>-->
+<!--				<texturenofocus colordiffuse="44FFFFFF">home_panel_background.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Home_Hex]">home_panel_background_focus.png</texturefocus>-->
+
+	<include name="Home_Panel_Item">
+		<param name="onclick1_cond">true</param>
+		<param name="onclick2_cond">true</param>
+		<param name="onclick3_cond">true</param>
+		<param name="onclick4_cond">true</param>
+		<param name="visible">true</param>
+		<param name="condition">true</param>
+
+		<definition>
+		<control type="group">
+			<width>800</width>
+			<height>400</height>
+			<visible>$PARAM[visible]</visible>
+
+                        <control type="button" id="$PARAM[id_select]">
+                                <width>800</width>
+                                <height>400</height>
+				<onright>$PARAM[onright]</onright>
+				<onleft>$PARAM[onleft]</onleft>
+
+				<ondown condition="Control.isVisible($PARAM[ondown])">$PARAM[ondown]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown2]) + !Control.isVisible($PARAM[ondown1])">$PARAM[ondown2]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown3]) + !Control.isVisible($PARAM[ondown1]) + !Control.isVisible($PARAM[ondown2])">$PARAM[ondown3]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown4]) + !Control.isVisible($PARAM[ondown1]) + !Control.isVisible($PARAM[ondown2]) + !Control.isVisible($PARAM[ondown3])">$PARAM[ondown4]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown5]) + !Control.isVisible($PARAM[ondown1]) + !Control.isVisible($PARAM[ondown2]) + !Control.isVisible($PARAM[ondown3]) + !Control.isVisible($PARAM[ondown4])">$PARAM[ondown5]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown6]) + !Control.isVisible($PARAM[ondown1]) + !Control.isVisible($PARAM[ondown2]) + !Control.isVisible($PARAM[ondown3]) + !Control.isVisible($PARAM[ondown4]) + !Control.isVisible($PARAM[ondown5])">$PARAM[ondown6]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown7]) + !Control.isVisible($PARAM[ondown1]) + !Control.isVisible($PARAM[ondown2]) + !Control.isVisible($PARAM[ondown3]) + !Control.isVisible($PARAM[ondown4]) + !Control.isVisible($PARAM[ondown5]) + !Control.isVisible($PARAM[ondown6])">$PARAM[ondown7]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown8]) + !Control.isVisible($PARAM[ondown1]) + !Control.isVisible($PARAM[ondown2]) + !Control.isVisible($PARAM[ondown3]) + !Control.isVisible($PARAM[ondown4]) + !Control.isVisible($PARAM[ondown5]) + !Control.isVisible($PARAM[ondown6]) + !Control.isVisible($PARAM[ondown7])">$PARAM[ondown8]</ondown>
+				<ondown condition="Control.isVisible($PARAM[ondown9]) + !Control.isVisible($PARAM[ondown1]) + !Control.isVisible($PARAM[ondown2]) + !Control.isVisible($PARAM[ondown3]) + !Control.isVisible($PARAM[ondown4]) + !Control.isVisible($PARAM[ondown5]) + !Control.isVisible($PARAM[ondown6]) + !Control.isVisible($PARAM[ondown7]) + !Control.isVisible($PARAM[ondown8])">$PARAM[ondown9]</ondown>
+
+				<onup condition="Control.isVisible($PARAM[onup])">$PARAM[onup]</onup>
+				<onup condition="Control.isVisible($PARAM[onup2]) + !Control.isVisible($PARAM[onup1])">$PARAM[onup2]</onup>
+				<onup condition="Control.isVisible($PARAM[onup3]) + !Control.isVisible($PARAM[onup1]) + !Control.isVisible($PARAM[onup2])">$PARAM[onup3]</onup>
+				<onup condition="Control.isVisible($PARAM[onup4]) + !Control.isVisible($PARAM[onup1]) + !Control.isVisible($PARAM[onup2]) + !Control.isVisible($PARAM[onup3]">$PARAM[onup4]</onup>
+				<onup condition="Control.isVisible($PARAM[onup5]) + !Control.isVisible($PARAM[onup1]) + !Control.isVisible($PARAM[onup2]) + !Control.isVisible($PARAM[onup3] + !Control.isVisible($PARAM[onup4]">$PARAM[onup5]</onup>
+				<onup condition="Control.isVisible($PARAM[onup6]) + !Control.isVisible($PARAM[onup1]) + !Control.isVisible($PARAM[onup2]) + !Control.isVisible($PARAM[onup3] + !Control.isVisible($PARAM[onup4] + !Control.isVisible($PARAM[onup5]">$PARAM[onup6]</onup>
+				<onup condition="Control.isVisible($PARAM[onup7]) + !Control.isVisible($PARAM[onup1]) + !Control.isVisible($PARAM[onup2]) + !Control.isVisible($PARAM[onup3] + !Control.isVisible($PARAM[onup4] + !Control.isVisible($PARAM[onup5] + !Control.isVisible($PARAM[onup6]">$PARAM[onup7]</onup>
+				<onup condition="Control.isVisible($PARAM[onup8]) + !Control.isVisible($PARAM[onup1]) + !Control.isVisible($PARAM[onup2]) + !Control.isVisible($PARAM[onup3] + !Control.isVisible($PARAM[onup4] + !Control.isVisible($PARAM[onup5] + !Control.isVisible($PARAM[onup6] + !Control.isVisible($PARAM[onup7]">$PARAM[onup8]</onup>
+				<onup condition="Control.isVisible($PARAM[onup9]) + !Control.isVisible($PARAM[onup1]) + !Control.isVisible($PARAM[onup2]) + !Control.isVisible($PARAM[onup3] + !Control.isVisible($PARAM[onup4] + !Control.isVisible($PARAM[onup5] + !Control.isVisible($PARAM[onup6] + !Control.isVisible($PARAM[onup7] + !Control.isVisible($PARAM[onup8]">$PARAM[onup9]</onup>
+
+				<onclick>SetFocus($PARAM[id_item])</onclick>
+				<texturenofocus colordiffuse="FFFFFFFF">home_panel_background.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">home_panel_background_focus.png</texturefocus>
+				<aspectratio>scale</aspectratio>
+                        </control>
+			<control type="image">
+				<width>800</width>
+				<height>400</height>
+				<texture>home_panel_background.png</texture>
+				<colordiffuse>44FFFFFF</colordiffuse>
+				<visible>!Control.hasFocus($PARAM[id_select])</visible>
+                                <aspectratio>keep</aspectratio>
+				<visible>false</visible>
+			</control>
+			<control type="image">
+				<width>800</width>
+				<height>400</height>
+				<texture>home_panel_background_focus.png</texture>
+				<colordiffuse>$VAR[Var_Color_Home_Hex]</colordiffuse>
+				<visible>Control.hasFocus($PARAM[id_select])</visible>
+                                <aspectratio>keep</aspectratio>
+				<visible>false</visible>
+			</control>
+
+                        <control type="button" id="$PARAM[id_item]">
+				<left>20</left>
+				<width>760</width>
+                                <height>60</height>
+                                <aligny>center</aligny>
+                                <label>$PARAM[label]</label>
+                                <font>Lato_Regular_25</font>
+                                <include>navigation_options</include>
+                                <width>760</width>
+                                <onup>$PARAM[id_select]</onup>
+                                <onleft>$PARAM[id_select]</onleft>
+                                <onright>$PARAM[id_select]</onright>
+                                <onback>$PARAM[id_select]</onback>
+				<ondown>$PARAM[id_widget1]</ondown>
+				<onclick condition="$PARAM[onclick1_cond]">$PARAM[onclick1]</onclick>
+				<onclick condition="$PARAM[onclick2_cond]">$PARAM[onclick2]</onclick>
+				<onclick condition="$PARAM[onclick3_cond]">$PARAM[onclick3]</onclick>
+				<onclick condition="$PARAM[onclick4_cond]">$PARAM[onclick4]</onclick>
+                        </control>
+
+			<!-- Widget 1 -->
+			<include content="Home_Panel_Widget_Name">
+				<param name="top">60</param>
+				<param name="label">$PARAM[widget1_name]</param>
+				<param name="id_widget">$PARAM[id_widget1]</param>
+			</include>
+			<include content="Home_Panel_Widget_Image">
+				<param name="top">100</param>
+				<param name="id_widget">$PARAM[id_widget1]</param>
+			</include>
+			<include content="Home_Panel_Widget_NoData">
+				<param name="top">100</param>
+				<param name="id_widget">$PARAM[id_widget1]</param>
+			</include>
+			<control type="list" id="$PARAM[id_widget1]">
+				<top>100</top>
+				<left>180</left>
+				<height>120</height>
+				<onup>$PARAM[id_item]</onup>
+				<ondown>$PARAM[id_widget2]</ondown>
+				<include>Home_Panel_Itemlayout</include>
+				<include content="Widget_$PARAM[id_widget1]_Content">
+					<param name="widget_limit">3</param>
+				</include>
+			</control>
+			
+			<!-- Widget 2 -->
+			<include content="Home_Panel_Widget_Name">
+				<param name="top">230</param>
+				<param name="label">$PARAM[widget2_name]</param>
+				<param name="id_widget">$PARAM[id_widget2]</param>
+			</include>
+			<include content="Home_Panel_Widget_Image">
+				<param name="top">270</param>
+				<param name="id_widget">$PARAM[id_widget2]</param>
+			</include>
+			<include content="Home_Panel_Widget_NoData">
+				<param name="top">270</param>
+				<param name="id_widget">$PARAM[id_widget2]</param>
+			</include>
+			<control type="list" id="$PARAM[id_widget2]">
+				<top>270</top>
+				<left>180</left>
+				<height>120</height>
+				<onup>$PARAM[id_widget1]</onup>
+				<include>Home_Panel_Itemlayout</include>
+				<include content="Widget_$PARAM[id_widget2]_Content">
+					<param name="widget_limit">3</param>
+				</include>
+			</control>
+		</control>
+
+		</definition>
+	</include>
+
+	<include name="Home_Panel_Widget_NoData">
+		<control type="label">
+			<label>NO DATA</label>
+			<left>180</left>
+			<width>580</width>
+			<height>120</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<top>$PARAM[top]</top>
+			<font>Lato_Thin_35</font>
+			<visible>String.isEqual(Container($PARAM[id_widget]).NumItems,0)</visible>
+		</control>
+	</include>
+	<include name="Home_Panel_Widget_Name">
+
+		<control type="image">
+			<top>$PARAM[top]</top>
+			<width>780</width>
+			<height>40</height>
+			<texture flipx="true">bg_section.png</texture>
+			<colordiffuse>30FFFFFF</colordiffuse>
+		</control>
+		<control type="label">
+			<left>20</left>
+			<top>$PARAM[top]</top>
+			<width>760</width>
+			<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
+			<font>Lato_Black_15</font>
+			<textcolor>$VAR[Var_Color_WidgetName_Hex]</textcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<height>40</height>
+		</control>
+	</include>
+
+	<include name="Home_Panel_Widget_Image">
+		<control type="image">
+			<left>10</left>
+			<top>$PARAM[top]</top>
+			<width>160</width>
+			<height>120</height>
+			<texture>$INFO[Container($PARAM[id_widget]).ListItemAbsolute(0).Icon]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+
+	<!-- Home Panel -->
+	<include name="Home_Panel">
+
+		<!-- Panel -->
+		<control type="grouplist" id="300">
+			<left>10</left>
+			<top>10</top>
+			<width>2520</width>
+			<height>1420</height>
+                        <orientation>vertical</orientation>
+			<itemgap>14</itemgap>
+                        <usecontrolcoords>true</usecontrolcoords>
+			<pagecontrol>299</pagecontrol>
+
+			<include>Home_Panel_Content</include>
+		</control>
+
+		<!-- Scrollbar (Right) -->
+		<control type="group">
+			<left>2480</left>
+
+			<control type="scrollbar" id="299">
+				<top>10</top>
+				<height>1420</height>
+				<width>90</width>
+			</control>
+
+			<control type="image" id="301">
+				<top>10</top>
+				<height>1420</height>
+				<width>60</width>
+				<texture>block.png</texture>
+				<colordiffuse>33FFFFFF</colordiffuse>
+			</control>
+			<control type="button">
+				<top>40</top>
+				<width>60</width>
+				<height>60</height>
+				<onclick>pageup(299)</onclick>
+				<texturenofocus colordiffuse="66FFFFFF">icon_circled_up.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Home_Hex]">icon_circled_up.png</texturefocus>
+			</control>
+			<control type="button">
+				<top>1340</top>
+				<width>60</width>
+				<height>60</height>
+				<onclick>pagedown(299)</onclick>
+				<texturenofocus colordiffuse="66FFFFFF">icon_circled_down.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Home_Hex]">icon_circled_down.png</texturefocus>
+			</control>
+
+		</control>
+
+	</include>
+
+	<!-- Panel Itemlayout -->
+	<include name="Home_Panel_Itemlayout">
+		<itemlayout width="600" height="40">
+			<control type="label">
+				<width>600</width>
+				<height>40</height>
+				<label>$INFO[ListItem.Label]</label>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Lato_Light_15</font>
+			</control>
+		</itemlayout>
+		<focusedlayout width="600" height="40">
+			<control type="label">
+				<width>600</width>
+				<height>40</height>
+				<label>$INFO[ListItem.Label]</label>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Lato_Light_15</font>
+			</control>
+		</focusedlayout>
+
+	</include>
+
+	<!-- Panel (Grouplist) -->
+	<include name="Home_Panel_Content_Grouplist">
+		<left>20</left>
+		<orientation>horizontal</orientation>
+		<width>2520</width>
+		<height>400</height>
+		<itemgap>30</itemgap>
+		<usecontrolcoords>true</usecontrolcoords>
+	</include>
+
+	<!-- Panel (Header) -->
+	<include name="Home_Panel_Header">
+		<control type="group" id="$PARAM[id1]">
+			<left>20</left>
+			<height>76</height>
+
+			<control type="image" id="$PARAM[id2]">
+				<top>8</top>
+				<width>2520</width>
+				<height>60</height>
+				<texture>block.png</texture>
+				<texture>testme.png</texture>
+				<texture>bg_section.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+
+			<control type="label" id="$PARAM[id3]">
+				<width>2520</width>
+				<height>76</height>
+				<font>Lato_Black_25</font>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
+				<textoffsetx>20</textoffsetx>
+			</control>
+
+			<!-- Scrollbar -->
+			<control type="scrollbar" id="$PARAM[scrollbar]"></control>
+
+			<control type="button" id="$PARAM[id4]">
+				<top>8</top>
+				<left>2370</left>
+				<width>60</width>
+				<height>60</height>
+				<onclick>pageup($PARAM[scrollbar])</onclick>
+				<texturenofocus>icon_circled_left.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_circled_left.png</texturefocus>
+			</control>
+
+			<control type="button" id="$PARAM[id5]">
+				<top>8</top>
+				<left>2440</left>
+				<width>60</width>
+				<height>60</height>
+				<onclick>pagedown($PARAM[scrollbar])</onclick>
+				<texturenofocus>icon_circled_right.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_circled_right.png</texturefocus>
+			</control>
+		</control>
+	</include>
+
+	<!-- Panel (Placeholder) -->
+	<include name="Home_Panel_Content_Placeholder">
+		<control type="image">
+			<width>820</width>
+			<height>400</height>
+			<texture>home_panel_background.png</texture>
+			<colordiffuse>44FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<width>820</width>
+			<height>400</height>
+			<texture>home_panel_background.png</texture>
+			<colordiffuse>44FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<width>820</width>
+			<height>400</height>
+			<texture>home_panel_background.png</texture>
+			<colordiffuse>44FFFFFF</colordiffuse>
+		</control>
+	</include>
+
+	<include name="Home_Panel_Opacity_Default">
+		<animation effect="fade" end="20" condition="true">Conditional</animation>
+	</include>
+
+	<!-- Home Items -->
+	<include name="Home_Item">
+		<param name="onclick_cond">true</param>
+		<param name="onclick2_cond">true</param>
+		<param name="onclick3_cond">true</param>
+		<param name="onclick4_cond">true</param>
+		<param name="filter"></param>
+		<param name="path"></param>
+		<param name="visible">true</param>
+
+		<definition>
+
+			<include condition="String.isEmpty(Skin.String(Home_$PARAM[id]_Name))" content="Home_Item_Content">
+				<param name="id">$PARAM[id]</param>
+				<param name="label">$PARAM[label]</param>
+				<param name="icon">$PARAM[icon]</param>
+				<param name="onclick1">$PARAM[onclick1]</param>
+				<param name="onclick1_cond">$PARAM[onclick1_cond]</param>
+				<param name="onclick2">$PARAM[onclick2]</param>
+				<param name="onclick2_cond">$PARAM[onclick2_cond]</param>
+				<param name="onclick3">$PARAM[onclick3]</param>
+				<param name="onclick3_cond">$PARAM[onclick3_cond]</param>
+				<param name="onclick4">$PARAM[onclick4]</param>
+				<param name="onclick4_cond">$PARAM[onclick4_cond]</param>
+				<param name="fanart">$PARAM[fanart]</param>
+				<param name="filter">$PARAM[filter]</param>
+				<param name="path">$PARAM[path]</param>
+				<param name="visible">$PARAM[visible]</param>
+			</include>
+			<include condition="!String.isEmpty(Skin.String(Home_$PARAM[id]_Name))" content="Home_Item_Content">
+				<param name="id">$PARAM[id]</param>
+				<param name="label">$INFO[Skin.String(Home_$PARAM[id]_Name)]</param>
+				<param name="icon">$PARAM[icon]</param>
+				<param name="onclick1">$PARAM[onclick1]</param>
+				<param name="onclick1_cond">$PARAM[onclick1_cond]</param>
+				<param name="onclick2">$PARAM[onclick2]</param>
+				<param name="onclick2_cond">$PARAM[onclick2_cond]</param>
+				<param name="onclick3">$PARAM[onclick3]</param>
+				<param name="onclick3_cond">$PARAM[onclick3_cond]</param>
+				<param name="onclick4">$PARAM[onclick4]</param>
+				<param name="onclick4_cond">$PARAM[onclick4_cond]</param>
+				<param name="fanart">$PARAM[fanart]</param>
+				<param name="filter">$PARAM[filter]</param>
+				<param name="path">$PARAM[path]</param>
+				<param name="visible">$PARAM[visible]</param>
+			</include>
+
+		</definition>
+	</include>
+
+
+	<include name="Home_Item_Content">
+		<item id="$PARAM[id]">
+			<label>$PARAM[label]</label>
+			<icon>$PARAM[icon]</icon>
+			<onclick condition="$PARAM[onclick1_cond]">$PARAM[onclick1]</onclick>
+			<onclick condition="$PARAM[onclick2_cond]">$PARAM[onclick2]</onclick>
+			<onclick condition="$PARAM[onclick3_cond]">$PARAM[onclick3]</onclick>
+			<onclick condition="$PARAM[onclick4_cond]">$PARAM[onclick4]</onclick>
+			<property name="fanart">$PARAM[fanart]</property>
+			<property name="filter">$PARAM[filter]</property>
+			<property name="path">$PARAM[path]</property>
+			<visible>$PARAM[visible]</visible>
+		</item>
+	</include>
+	<include name="Home_Item_Pulse">
+		<item id="$PARAM[id]">
+			<label>$PARAM[label]</label>
+			<icon>$PARAM[icon]</icon>
+			<onclick>$PARAM[onclick]</onclick>
+			<property name="fanart">$PARAM[fanart]</property>
+			<property name="filter">$PARAM[filter]</property>
+			<property name="HomeMenuPulse">true</property>
+			<visible>$PARAM[visible]</visible>
+		</item>
+	</include>
+	<include name="Home_Item_Section">
+		<include condition="String.isEmpty(Skin.String(Home_$PARAM[id]_Name))" content="Home_Item_Section_Content">
+			<param name="id">$PARAM[id]</param>
+			<param name="label">$PARAM[label]</param>
+		</include>
+		<include condition="!String.isEmpty(Skin.String(Home_$PARAM[id]_Name))" content="Home_Item_Section_Content">
+			<param name="id">$PARAM[id]</param>
+			<param name="label">$INFO[Skin.String(Home_$PARAM[id]_Name)]</param>
+		</include>
+	</include>
+	<include name="Home_Item_Section_Content">
+		<item id="$PARAM[id]">
+			<label></label>
+			<include>Home_Section_OnClick</include>
+			<property name="HomeMenuSection">$PARAM[label]</property>
+			<property name="fanart">$VAR[Var_Background_Image_Default]</property>
+		</item>
+	</include>
+
+	<!-- Hub Items -->
+	<include name="Home_Item_Hub">
+		<item id="$PARAM[id]">
+			<label>$INFO[Skin.String(Hub$PARAM[hubid].Label)]</label>
+			<icon>$INFO[Skin.String(Hub$PARAM[hubid].Icon)]</icon>
+			<property name="fanart">$INFO[Skin.String(Hub$PARAM[hubid].Fanart)]</property>
+			<onclick>$INFO[Skin.String(Hub$PARAM[hubid].Path)]</onclick>
+		</item>
+	</include>
+
+	<!-- Custom Items -->
+	<include name="Home_Item_Custom">
+		<item id="$PARAM[id]">
+			<include condition="!String.isEmpty(Skin.String(Home_$PARAM[id]_Name))" content="Home_Item_Custom_Name"><param name="id">$PARAM[id]</param></include>
+			<include condition="String.isEmpty(Skin.String(Home_$PARAM[id]_Name))" content="Home_Item_Custom_NoName"><param name="id">$PARAM[customid]</param></include>
+
+			<icon>$INFO[Skin.String(CustomHome$PARAM[customid].Icon)]</icon>
+
+			<include content="CustomHome_OnClick">
+				<param name="customid">$PARAM[customid]</param>
+			</include>
+
+			<property name="filter">customhome$PARAM[customid]</property>
+			<property name="fanart">$INFO[Skin.String(CustomHome$PARAM[customid].Fanart)]</property>
+		</item>
+	</include>
+	<include name="Home_Item_Custom_Name">
+		<label>$INFO[Skin.String(Home_$PARAM[id]_Name)]</label>
+	</include>
+	<include name="Home_Item_Custom_NoName">
+		<label>$LOCALIZE[31519] #$PARAM[customid]</label>
+	</include>
+
+	<!-- Home Filter Item -->
+	<include name="Filter_Item">
+		<include condition="!Skin.HasSetting(Home_Fixed) + !Skin.HasSetting(Home_Simple)" content="Home_Filter_Wraplist">
+			<param name="id_home">$PARAM[id_home]</param>
+			<param name="id_filter">$PARAM[id_filter]</param>
+		</include>
+		<include condition="Skin.HasSetting(Home_Fixed)" content="Home_Filter_Fixedlist">
+			<param name="id_home">$PARAM[id_home]</param>
+			<param name="id_filter">$PARAM[id_filter]</param>
+		</include>
+		<include condition="Skin.HasSetting(Home_Simple)" content="Home_Filter_Simplelist">
+			<param name="id_home">$PARAM[id_home]</param>
+			<param name="id_filter">$PARAM[id_filter]</param>
+		</include>
+	</include>
+
+	<include name="Home_Filter_Wraplist">
+		<control type="wraplist" id="$PARAM[id_filter]">
+			<onback>300</onback>
+			<visible>Container(300).hasFocus($PARAM[id_home])</visible>
+
+			<!-- Vertical -->
+			<onleft condition="!Skin.HasSetting(Home_Horizontal)">SetFocus(302,1,absolute)</onleft>
+			<onright condition="!Skin.HasSetting(Home_Horizontal)">300</onright>
+			<include condition="!Skin.HasSetting(Home_Horizontal)">Navigation_Vertical</include>
+
+			<!-- Horizontal -->
+			<ondown condition="Skin.HasSetting(Home_Horizontal)">SetFocus(302,1,absolute)</ondown>
+			<onup condition="Skin.HasSetting(Home_Horizontal)">300</onup>
+			<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal</include>
+
+
+			<content>
+				<include content="Home_Item_Section">
+					<param name="id">1</param>
+					<param name="label">$INFO[Container(300).ListItem.Label]</param>
+				</include>
+				<include content="Home_Item">
+					<param name="id">2</param>
+					<param name="label">$LOCALIZE[31080]</param>
+					<param name="visible">Container($PARAM[id_filter]).isUpdating</param>
+				</include>
+			</content>
+
+			<include>Filter_$PARAM[id_home]_Content</include>
+		</control>
+	</include>
+	<include name="Home_Filter_Fixedlist">
+		<control type="fixedlist" id="$PARAM[id_filter]">
+			<onback>300</onback>
+			<visible>Container(300).hasFocus($PARAM[id_home])</visible>
+
+			<!-- Vertical -->
+			<onleft condition="!Skin.HasSetting(Home_Horizontal)">SetFocus(302,1,absolute)</onleft>
+			<onright condition="!Skin.HasSetting(Home_Horizontal)">300</onright>
+			<include condition="!Skin.HasSetting(Home_Horizontal)">Navigation_Vertical</include>
+
+			<!-- Horizontal -->
+			<ondown condition="Skin.HasSetting(Home_Horizontal)">SetFocus(302,1,absolute)</ondown>
+			<onup condition="Skin.HasSetting(Home_Horizontal)">300</onup>
+			<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal</include>
+
+			<content>
+				<include content="Home_Item_Section">
+					<param name="id">1</param>
+					<param name="label">$INFO[Container(300).ListItem.Label]</param>
+				</include>
+				<include content="Home_Item">
+					<param name="id">2</param>
+					<param name="label">$LOCALIZE[31080]</param>
+					<param name="visible">Container($PARAM[id_filter]).isUpdating</param>
+				</include>
+			</content>
+
+			<include>Filter_$PARAM[id_home]_Content</include>
+		</control>
+	</include>
+	<include name="Home_Filter_Simplelist">
+		<control type="list" id="$PARAM[id_filter]">
+			<onback>300</onback>
+			<visible>Container(300).hasFocus($PARAM[id_home])</visible>
+
+			<!-- Vertical -->
+			<onleft condition="!Skin.HasSetting(Home_Horizontal)">SetFocus(302,1,absolute)</onleft>
+			<onright condition="!Skin.HasSetting(Home_Horizontal)">300</onright>
+			<include condition="!Skin.HasSetting(Home_Horizontal)">Navigation_Vertical</include>
+
+			<!-- Horizontal -->
+			<ondown condition="Skin.HasSetting(Home_Horizontal)">SetFocus(302,1,absolute)</ondown>
+			<onup condition="Skin.HasSetting(Home_Horizontal)">300</onup>
+			<include condition="Skin.HasSetting(Home_Horizontal)">Navigation_Horizontal</include>
+
+			<content>
+				<include content="Home_Item_Section">
+					<param name="id">1</param>
+					<param name="label">$INFO[Container(300).ListItem.Label]</param>
+				</include>
+				<include content="Home_Item">
+					<param name="id">2</param>
+					<param name="label">$LOCALIZE[31080]</param>
+					<param name="visible">Container($PARAM[id_filter]).isUpdating</param>
+				</include>
+			</content>
+
+			<include>Filter_$PARAM[id_home]_Content</include>
+		</control>
+	</include>
+
+	<!-- Vignette -->
+	<include name="Home_Vignette">
+		<control type="image">
+			<width>1440</width>
+			<include>AspectRatio_Height</include>
+			<texture>bg_home_vignette.png</texture>
+			<colordiffuse>FF000000</colordiffuse>
+		</control>
+	</include>
+
+	<!-- Filter -->
+	<include name="Home_Filter_Plex_Content">
+		<content>
+			<item>
+				<label>Categories</label>
+				<onclick>ActivateWindow(videos,$INFO[Window(Home).Property(Plex.nodes.$PARAM[id].index)],return)</onclick>
+			</item>
+		</content>
+	</include>
+	<include name="Home_Filter_Emby_Content">
+		<content>
+			<item>
+				<label>Categories</label>
+				<onclick>ActivateWindow(videos,$INFO[Window(Home).Property(Emby.nodes.$PARAM[id].index)],return)</onclick>
+			</item>
+		</content>
+	</include>
+
+	<!-- Mouse -->
+	<include name="Mouse_Warning">
+		<control type="button" id="99999">
+	                <width>6000</width>
+	                <height>6000</height>
+	                <onup>SetFocus(300)</onup>
+	                <ondown>SetFocus(300)</ondown>
+	                <onleft>SetFocus(300)</onleft>
+	                <onright>SetFocus(300)</onright>
+	                <onback>SetFocus(300)</onback>
+	                <onfocus>SetFocus(300)</onfocus>
+	                <onclick>SetFocus(300)</onclick>
+	                <include>Mouse_Trigger</include>
+	        </control>
+	        <control type="label">
+	                <top>400</top>
+	                <include>AspectRatio_Width</include>
+	                <label>Sorry, no mouse support yet ...</label>
+	                <align>center</align>
+	                <font>Lato_Regular_70</font>
+	                <include>Mouse_Trigger</include>
+	                <visible>Control.hasFocus(99999)</visible>
+	                <include>Animation_CommonFade_300</include>
+	        </control>
+	</include>
+
+</includes>
+

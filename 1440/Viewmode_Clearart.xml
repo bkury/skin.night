@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Viewmode_Clearart">
+		<include>Viewmode_Clearart_1</include>
+		<include>Viewmode_Clearart_2</include>
+	</include>
+
+	<!-- Clearart #1 (700/Info) -->
+	<include name="Viewmode_Clearart_1">
+
+		<control type="panel" id="830">
+			<left>840</left>
+			<include>AspectRatio_PosY</include>
+			<include>AspectRatio_Width_860</include>
+			<height>1440</height>
+			<onleft>7001</onleft>
+			<onright>705</onright>
+			<pagecontrol>705</pagecontrol>
+			<orientation>vertical</orientation>
+			<viewtype label="Clearart #1">panel</viewtype>
+
+			<include>Viewmode_Clearart1_General</include>
+			<include>Viewmode_Clearart1_Itemlayout</include>
+		</control>
+                        
+		<control type="group">
+			<visible>String.isEqual(Container.Viewmode,Clearart #1)</visible>
+
+			<!-- Sortbar -->
+			<include>Viewmode_Sortbar</include>
+
+			<!-- Scrollbar -->
+			<control type="group" id="50">
+				<control type="scrollbar" id="705">
+					<top>40</top>
+					<height>1360</height>
+					<onleft>800</onleft>
+					<onright>7003</onright>
+                                        <include>vscrollbar</include>
+					<animation effect="slide" end="-840,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(Clearart1_Sidebar_Right)">Conditional</animation>
+					<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(705)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+
+	</include>
+
+	<!-- Clearart #2 (710/Full) -->
+	<include name="Viewmode_Clearart_2">
+
+		<control type="panel" id="831">
+			<include>AspectRatio_PosY</include>
+			<include>AspectRatio_Width_1280</include>
+			<height>1440</height>
+			<onleft>7001</onleft>
+			<onright>715</onright>
+			<pagecontrol>715</pagecontrol>
+			<orientation>vertical</orientation>
+			<viewtype label="Clearart #2">panel</viewtype>
+
+			<include>Viewmode_Clearart2_General_NoSidebar</include>
+			<include>Viewmode_Clearart2_Itemlayout</include>
+		</control>
+
+		<control type="group">
+			<visible>String.isEqual(Container.Viewmode,Clearart #2)</visible>
+
+			<!-- Sortbar -->
+			<include>Viewmode_Sortbar</include>
+
+			<!-- Scrollbar -->
+			<control type="group" id="50">
+				<control type="scrollbar" id="715">
+					<top>40</top>
+					<height>1360</height>
+					<onleft>800</onleft>
+					<onright>7003</onright>
+					<include>vscrollbar</include>
+					<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(715)">Conditional</animation>
+				</control>
+			</control>
+
+		</control>
+	</include>
+
+</includes>

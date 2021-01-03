@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="129">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<include>Animation_Window_Dialog</include>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+	        <!-- Dialog Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">2</param>
+			<param name="header_label"></param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">10</param>
+			<param name="scroll_onright">19</param>
+		</include>
+
+		<!-- Category -->
+		<control type="grouplist" id="49">
+			<onright>10</onright>
+			<onleft>18</onleft>
+			<include>Dialog_General_Grouplist_Category</include>
+
+			<control type="button" id="11">
+				<label>$LOCALIZE[1024]</label>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+			<control type="button" id="13">
+				<label>$LOCALIZE[15019]</label>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+			<control type="button" id="14">
+				<label>$LOCALIZE[1210]</label>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+
+		</control>
+
+		<!-- Content -->
+		<control type="list" id="10">
+			<onright condition="!Control.isVisible(100)">19</onright>
+			<ondown>12</ondown>
+			<onleft>49</onleft>
+			<include>Dialog_General_List</include>
+		</control>
+
+		<!-- Name -->    
+		<control type="image">
+			<top>1260</top>
+			<left>1290</left>
+			<width>1860</width>
+			<include>Dialog_General_Button_Separator</include>
+		</control>
+		<control type="label">
+			<top>1260</top>
+			<left>1290</left>
+			<width>1860</width>
+			<label>$LOCALIZE[1022]</label>
+			<textoffsetx>0</textoffsetx>
+			<include>Dialog_General_Button_Header</include>
+		</control>
+		<control type="image">
+			<top>1380</top>
+			<left>1290</left>
+			<width>1860</width>
+			<include>Dialog_General_Button_Default</include>
+			<texture>block.png</texture>
+			<colordiffuse>11FFFFFF</colordiffuse>
+		</control>
+		<control type="edit" id="12">
+			<top>1380</top>
+			<left>1290</left>
+			<width>1860</width>
+			<onup>10</onup>
+			<ondown>18</ondown>
+			<textoffsetx>0</textoffsetx>
+			<include>Dialog_General_Button_Default</include>
+		</control>
+
+		<!-- Footer -->
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">18</param>
+			<param name="label">$LOCALIZE[186]</param>
+			<param name="icon">nav_circle_check.png</param>
+			<param name="onup">12</param>
+			<param name="onleft">19</param>
+			<param name="onright">19</param>
+			<param name="position">Left</param>
+		</include>
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">19</param>
+			<param name="label">$LOCALIZE[222]</param>
+			<param name="icon">nav_circle_cancel.png</param>
+			<param name="onup">12</param>
+			<param name="onleft">18</param>
+			<param name="onright">18</param>
+			<param name="position">Right</param>
+		</include>
+
+	</control>
+
+	</controls>
+</window>

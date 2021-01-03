@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1131">
+	<defaultcontrol always="true">100</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+        <onunload>Skin.Reset(selector4)</onunload>
+        <onunload>Skin.Reset(selectorname)</onunload>
+        <include>Animation_Window_Dialog</include>
+
+	<controls>
+
+	<control type="image">
+		<texture>bg_black.png</texture>
+		<include>background_default</include>
+		<animation effect="fade" end="80" condition="true">conditional</animation>
+	</control>
+
+	<!-- Share -->
+	<control type="group" id="100">
+		<visible>String.isEqual(Skin.String(selector1),share)</visible>
+
+		<!-- Message -->
+		<control type="button">
+			<include>AspectRatio_Width</include>
+			<include>AspectRatio_Height</include>
+			<label>$INFO[Container.Viewmode] configuration sent ...[CR]Thanks for sharing!</label>
+			<font>Lato_Thin_60</font>
+			<onup>Dialog.Close(1131)</onup>
+			<ondown>Dialog.Close(1131)</ondown>
+			<onleft>Dialog.Close(1131)</onleft>
+			<onright>Dialog.Close(1131)</onright>
+			<onclick>Dialog.Close(1131)</onclick>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+
+		<!-- Submit Data -->
+		<control type="image">
+			<include>Custom_Share_Texture1</include>
+			<visible>String.isEqual(Container.Viewmode,Custom #1)</visible>
+		</control>
+		<control type="image">
+			<include>Custom_Share_Texture2</include>
+			<visible>String.isEqual(Container.Viewmode,Custom #2)</visible>
+		</control>
+		<control type="image">
+			<include>Custom_Share_Texture3</include>
+			<visible>String.isEqual(Container.Viewmode,Custom #3)</visible>
+		</control>
+
+	</control>
+
+	<!-- Share (Color) -->
+	<control type="group" id="100">
+		<visible>String.isEqual(Skin.String(selector1),sharecolor)</visible>
+
+		<!-- Message -->
+		<control type="button">
+			<include>AspectRatio_Width</include>
+			<include>AspectRatio_Height</include>
+			<label>Color configuration sent ...[CR]Thanks for sharing!</label>
+			<font>Lato_Thin_60</font>
+			<onup>Dialog.Close(1131)</onup>
+			<ondown>Dialog.Close(1131)</ondown>
+			<onleft>Dialog.Close(1131)</onleft>
+			<onright>Dialog.Close(1131)</onright>
+			<onclick>Dialog.Close(1131)</onclick>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+
+		<!-- Submit Data -->
+		<control type="image">
+			<include>Custom_ShareColor_Texture</include>
+		</control>
+
+	</control>
+
+	<!-- Browse -->
+	<control type="group" id="100">
+		<visible>String.isEqual(Skin.String(selector1),browse) | String.isEqual(Skin.String(selector1),browsecolor)</visible>
+
+                <!-- Frame -->
+		<control type="image">
+			<left>45</left>
+			<top>45</top>
+			<width>1830</width>
+			<height>990</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>$VAR[Var_Color_Dialog_Hex]</colordiffuse>
+			<texture background="true">bg_preplay_frame.png</texture>
+		</control>
+
+                <!-- Header -->
+		<control type="label">
+			<left>180</left>
+			<top>45</top>
+			<width>1560</width>
+			<height>127</height>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<label>$LOCALIZE[31136]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<visible>String.isEqual(Skin.String(selector1),browse)</visible>
+		</control>
+		<control type="label">
+			<left>180</left>
+			<top>45</top>
+			<width>1560</width>
+			<height>127</height>
+			<font>Font_Bartowski_Main_SubMenu</font>
+			<label>$LOCALIZE[31130]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<visible>String.isEqual(Skin.String(selector1),browsecolor)</visible>
+		</control>
+		<control type="image">
+			<left>120</left>
+			<top>172</top>
+			<width>1680</width>
+			<colordiffuse>$VAR[Var_Color_Separator_Hex]</colordiffuse>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<left>120</left>
+			<top>877</top>
+			<width>1680</width>
+			<include>SeparatorH</include>
+		</control>
+
+		<!-- Preview -->
+		<control type="image">
+			<left>135</left>
+			<top>225</top>
+			<width>960</width>
+			<height>540</height>
+			<texture>$INFO[Container(101).ListItem.Icon]</texture>
+			<texture>bg_white.png</texture>
+		</control>
+
+		<control type="group">
+			<top>345</top>
+			<left>180</left>
+			<visible>String.isEqual(Skin.String(selector1),browsecolor)</visible>
+			
+			<control type="image">
+				<width>270</width>
+				<height>270</height>
+				<texture>circle.png</texture>
+				<colordiffuse>$INFO[ListItem.Property(color1)]</colordiffuse>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>300</left>
+				<width>270</width>
+				<height>270</height>
+				<texture>circle.png</texture>
+				<colordiffuse>$INFO[ListItem.Property(color2)]</colordiffuse>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>600</left>
+				<width>270</width>
+				<height>270</height>
+				<texture>circle.png</texture>
+				<colordiffuse>$INFO[ListItem.Property(color3)]</colordiffuse>
+				<aspectratio>scale</aspectratio>
+			</control>
+		</control>
+
+		<!-- List -->
+		<control type="group">
+			<top>210</top>
+			<left>1140</left>
+
+				<control type="label">
+					<label>[UPPERCASE]Name[/UPPERCASE]</label>
+					<width>225</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Black_15</font>
+					<textoffsetx>15</textoffsetx>
+				</control>
+				<control type="label">
+					<left>270</left>
+					<label>[UPPERCASE]Creator[/UPPERCASE]</label>
+					<width>180</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Black_15</font>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<left>465</left>
+					<label>[UPPERCASE]Date[/UPPERCASE]</label>
+					<width>180</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Black_15</font>
+					<align>right</align>
+				</control>
+
+		</control>
+
+		<!-- List -->
+		<control type="list" id="101">
+			<left>1140</left>
+			<top>255</top>
+			<width>870</width>
+			<height>750</height>
+
+			<itemlayout width="870" height="60">
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<width>270</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Light_20</font>
+					<textoffsetx>15</textoffsetx>
+				</control>
+				<control type="label">
+					<left>270</left>
+					<label>$INFO[ListItem.Property(author)]</label>
+					<width>180</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Light_20</font>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<left>465</left>
+					<label>$INFO[ListItem.Property(date)]</label>
+					<width>180</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Light_20</font>
+					<align>right</align>
+				</control>
+			</itemlayout>
+			<focusedlayout width="870" height="60">
+
+	                        <!-- Navbar -->
+				<control type="image">
+					<width>652</width>
+					<height>60</height>
+					<aspectratio>scale</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="30" end="90" time="300" />
+					</animation>
+					<include>navigation_options_image</include>
+					<visible>Control.hasFocus(101)</visible>
+				</control>
+
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<width>270</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Light_20</font>
+					<textoffsetx>15</textoffsetx>
+				</control>
+				<control type="label">
+					<left>270</left>
+					<label>$INFO[ListItem.Property(author)]</label>
+					<width>180</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Light_20</font>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<left>465</left>
+					<label>$INFO[ListItem.Property(date)]</label>
+					<width>180</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Lato_Light_20</font>
+					<align>right</align>
+				</control>
+			</focusedlayout>			
+
+			<content>
+				<include>Custom_Dialog_Browse_Content</include>
+			</content>
+
+		</control>
+
+
+		<control type="label">
+			<top>922</top>
+			<height>60</height>
+			<label>Use the share option to submit your own!</label>
+			<font>Lato_Light_40</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<width>1920</width>			
+			<visible>Control.hasFocus(101)</visible>
+			<include>Animation_CommonFade</include>
+		</control>
+
+
+		<include>Custom_Dialog_Browse_Data</include>
+
+	</control>
+
+	</controls>
+</window>

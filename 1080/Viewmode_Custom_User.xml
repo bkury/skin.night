@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- Custom 1 -->
+	<variable name="Custom1_Label1"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label2"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label3"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label4"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label5"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label6"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label7"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label8"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Label9"><value>[EDIT HERE]</value></variable>
+
+	<variable name="Custom1_Image1"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image2"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image3"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image4"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image5"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image6"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image7"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image8"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom1_Image9"><value>[EDIT HERE]</value></variable>
+
+	<!-- Custom 2 -->
+	<variable name="Custom2_Label1"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label2"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label3"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label4"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label5"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label6"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label7"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label8"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Label9"><value>[EDIT HERE]</value></variable>
+
+	<variable name="Custom2_Image1"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image2"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image3"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image4"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image5"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image6"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image7"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image8"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom2_Image9"><value>[EDIT HERE]</value></variable>
+
+	<!-- Custom 3 -->
+	<variable name="Custom3_Label1"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label2"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label3"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label4"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label5"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label6"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label7"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label8"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Label9"><value>[EDIT HERE]</value></variable>
+
+	<variable name="Custom3_Image1"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image2"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image3"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image4"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image5"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image6"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image7"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image8"><value>[EDIT HERE]</value></variable>
+	<variable name="Custom3_Image9"><value>[EDIT HERE]</value></variable>
+
+</includes>

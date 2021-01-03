@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1111">
+	<onunload condition="Skin.HasSetting(Home_Horizontal) + !Skin.HasSetting(Home_Horizontal_Bottom)">Skin.Reset(Deck_Images_xLarge)</onunload>
+	<onunload condition="Skin.HasSetting(Home_Horizontal) + Skin.HasSetting(Home_Horizontal_Bottom) + Skin.HasSetting(Deck_Images_xLarge)">Skin.Reset(home_bigclock)</onunload>
+	<defaultcontrol always="true">100</defaultcontrol>
+	<onload>Skin.Reset(Settings_Helper)</onload>
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+
+		<!-- Background -->
+		<include content="Background_Custom">
+			<param name="id_home">20</param>
+			<param name="id_fade">13020</param>
+			<param name="opacity">30</param>
+			<param name="image">$VAR[Var_Background_Default_Image]</param>
+		</include>
+        
+		<control type="group">
+			<include>AspectRatio_PosY</include>
+
+		<!-- Clock -->
+		<control type="group">
+			<animation effect="slide" end="-20,0" condition="true">Conditional</animation>
+			<include>Clock_Right_Pos</include>
+			<include>Clock_Right</include>
+		</control>
+
+		<!-- Logo -->
+		<control type="image">
+			<left>10</left>
+			<top>20</top>
+			<width>240</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>night_logo.png</texture>
+			<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+		</control>
+		<control type="label">
+			<top>84</top>
+			<left>150</left>
+			<height>40</height>
+			<label>v2.5.2</label>
+			<font>Lato_Regular_10</font>
+			<aligny>center</aligny>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+		<!-- Separator -->
+		<control type="image">
+			<left>40</left>
+			<top>140</top>
+			<include>AspectRatio_Width_1240</include>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<left>40</left>
+			<top>100r</top>
+			<include>AspectRatio_Width_1240</include>
+			<include>SeparatorH</include>
+		</control>
+
+		<!-- Header -->
+		<control type="label">
+			<height>140</height>
+			<include>AspectRatio_Width</include>
+			<font>Font_Settings_Header</font>
+			<label>$VAR[Var_Settings_Section][COLOR=$VAR[Var_Color_Clock_Hex]] &#xB7; [/COLOR]$LOCALIZE[31051]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+
+		<control type="group">
+			<include>AspectRatio_PosX</include>
+			<left>40</left><!-- 40 -->
+
+			<control type="image">
+				<top>144</top>
+				<width>520</width>
+				<height>1192</height>
+				<texture>bg_white.png</texture>
+				<colordiffuse>04FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>520</left>
+				<top>144</top>
+				<width>1960</width>
+				<height>1192</height>
+				<texture>bg_white.png</texture>
+				<colordiffuse>22000000</colordiffuse>
+			</control>
+			<control type="image">
+				<left>520</left>
+				<top>140</top>
+				<height>1200</height>
+				<colordiffuse>11FFFFFF</colordiffuse>
+				<include>SeparatorV</include>
+			</control>
+
+                        <!-- Menu (NEW) -->
+			<control type="grouplist" id="100">
+				<left>0</left>
+				<top>160</top>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<onright>Skin.SetString(Settings_Helper,$INFO[System.CurrentControl])</onright>
+				<onright>101</onright>
+				<width>520</width>
+				<height>1400</height>
+
+				<control type="button" id="105">
+					<label>$VAR[Var_System_Platform]</label>				<!-- XBMC/PLEX/OPENPHT -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="110">
+					<label>$LOCALIZE[31070]</label>			<!-- General -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="120">
+					<label>$LOCALIZE[31500]</label>			<!-- Home Screen -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="130">
+					<label>$LOCALIZE[31501]</label>			<!-- Home Menu --> <!-- LOC -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="190">
+					<label>$LOCALIZE[31020]</label>			<!-- Dashboard -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="191">
+					<label>$LOCALIZE[31022]</label>			<!-- Notifications -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="140">
+					<label>$LOCALIZE[31505]</label>			<!-- Widget -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="160">
+					<label>$LOCALIZE[31300]</label>			<!-- Viewmode -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="150">
+					<onright>Skin.SetString(Settings_Helper,$INFO[System.CurrentControl])</onright>
+					<onright>SetFocus(5000,1,absolute)</onright>
+					<label>$LOCALIZE[31330]</label>			<!-- Background -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="170">
+					<label>$LOCALIZE[31507]</label>			<!-- Accent Color -->
+					<include>skin_settings_menu_night</include>
+				</control>
+				<control type="button" id="195">
+					<label>$LOCALIZE[31029]</label>			<!-- Addons -->
+					<include>skin_settings_menu_night</include>
+				</control>
+
+
+			</control>
+
+			<control type="group" id="101">
+
+				<control type="list" id="8000">
+					<top>160</top>
+					<onright>8001</onright>
+					<include content="Settings_Container_Half_Left"><param name="id">8000</param></include>
+					<visible>ControlGroup(100).Hasfocus(105)</visible>
+
+					<content>
+						<include content="Settings_Header"><param name="label">$LOCALIZE[31070]</param><param name="id">8000</param></include>
+
+					<!-- KODI -->
+                                        <item>
+                                                <label>$LOCALIZE[14206]</label>
+                                                <onclick>ActivateWindow(InterfaceSettings)</onclick>
+                                                <icon>icons/settings/interface.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+                                        <item>
+                                                <label>$LOCALIZE[14036]</label>
+                                                <onclick>ActivateWindow(ServiceSettings)</onclick>
+                                                <icon>icons/settings/network.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+                                        <item>
+                                                <label>$LOCALIZE[13000]</label>
+                                                <onclick>ActivateWindow(SystemSettings)</onclick>
+                                                <icon>icons/settings/system.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+                                        <item>
+                                                <label>$LOCALIZE[14200]</label>
+                                                <onclick>ActivateWindow(PlayerSettings)</onclick>
+                                                <icon>icons/settings/player.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+                                        <item>
+                                                <label>$LOCALIZE[14211]</label>
+                                                <onclick>ActivateWindow(MediaSettings)</onclick>
+                                                <icon>icons/settings/media.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+                                        <item>
+                                                <label>$LOCALIZE[14204]</label>
+                                                <onclick>ActivateWindow(PVRSettings)</onclick>
+                                                <icon>icons/settings/livetv.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+                                        <item>
+                                                <label>$LOCALIZE[15016]</label>
+                                                <visible>System.GetBool(gamesgeneral.enable)</visible>
+                                                <onclick>ActivateWindow(GameSettings)</onclick>
+                                                <icon>icons/settings/games.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+                                        <item>
+                                                <label>$LOCALIZE[13200]</label>
+                                                <onclick>ActivateWindow(Profiles)</onclick>
+                                                <icon>icons/settings/profiles.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+
+                                        <item>
+                                                <label>LibreELEC</label>
+                                                <onclick>RunAddon(service.libreelec.settings)</onclick>
+                                                <icon>icons/settings/libreelec.png</icon>
+                                                <visible>System.HasAddon(service.libreelec.settings)</visible>
+						<property name="kodi">true</property>
+                                        </item>
+
+                                        <item>
+                                                <label>Sysinfo</label>
+                                                <onclick>ActivateWindow(systeminfo)</onclick>
+                                                <icon>icons/settings/sysinfo.png</icon>
+						<property name="kodi">true</property>
+                                        </item>
+
+					</content>
+				</control>
+
+				<!-- Addons -->
+				<control type="list" id="8001">
+					<left>1520</left>
+					<height>884</height>
+					<visible>ControlGroup(100).Hasfocus(105)</visible>
+					<onleft>8000</onleft>
+					<onclick>ContextMenu</onclick>
+					<include content="Settings_Container_Half_Right"><param name="id">8001</param></include>
+
+					<content><include content="Settings_Header"><param name="label">$LOCALIZE[31029]</param><param name="id">8001</param></include></content>
+					<content>addons://user/xbmc.addon.video</content>
+					<content>addons://user/xbmc.addon.executable</content>
+				</control>
+
+				<!-- Support Links -->
+				<control type="list" id="8002">
+					<top>980</top>
+					<visible>ControlGroup(100).Hasfocus(105)</visible>
+					<include content="Settings_Container"><param name="id">8002</param></include>
+
+					<content>
+						<include content="Settings_Header"><param name="label">$LOCALIZE[31508]</param><param name="id">8002</param></include>
+						<item>
+							<label>$LOCALIZE[31509]</label>
+							<label2>https://bit.ly/night4kodi</label2>
+							<icon>icon_forum.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[31510]</label>
+							<label2>https://bit.ly/translatenight</label2>
+							<icon>icon_translate.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[31511]</label>
+							<label2>https://paypal.me/bkury</label2>
+							<icon>icon_favorite.png</icon>
+						</item>
+						<item>
+							<label>Patreon</label>
+							<label2>https://patreon.com/OpenHT</label2>
+							<icon>icon_favorite.png</icon>
+							<visible>System.Platform.OpenHT</visible>
+						</item>
+					</content>
+				</control>
+
+
+			<!-- GENERAL -->
+			<control type="list" id="1000">
+				<visible>ControlGroup(100).Hasfocus(110)</visible>
+				<include content="Settings_Container"><param name="id">1000</param></include>
+
+				<content>
+					<!-- STARTUP -->
+					<include content="Settings_Header"><param name="label">Startup</param><param name="id">1000</param></include>
+					<item>
+						<label>$LOCALIZE[31322]</label>
+						<include>Settings_Container_Item_OFF</include>
+						<onclick>Skin.Reset(Startup_Video)</onclick>
+						<onclick>Skin.Reset(Startup_Image)</onclick>
+						<onclick>Skin.SetImage(Startup_Image)</onclick>
+						<visible>String.isEmpty(Skin.String(Startup_Image))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31322]</label>
+						<include>Settings_Container_Item_ON</include>
+						<onclick>Skin.Reset(Startup_Video)</onclick>
+						<onclick>Skin.Reset(Startup_Image)</onclick>
+						<visible>!String.isEmpty(Skin.String(Startup_Image))</visible>
+					</item>
+					<item>
+						<label>Custom Video</label>
+						<include>Settings_Container_Item_OFF</include>
+						<onclick>Skin.Reset(Startup_Video)</onclick>
+						<onclick>Skin.Reset(Startup_Image)</onclick>
+						<onclick>Skin.SetFile(Startup_Video)</onclick>
+						<visible>String.isEmpty(Skin.String(Startup_Video))</visible>
+					</item>
+					<item>
+						<label>Custom Video</label>
+						<include>Settings_Container_Item_ON</include>
+						<onclick>Skin.Reset(Startup_Video)</onclick>
+						<onclick>Skin.Reset(Startup_Image)</onclick>
+						<visible>!String.isEmpty(Skin.String(Startup_Video))</visible>
+					</item>
+
+					<!-- Duration -->
+					<item>
+						<label>$LOCALIZE[31349]</label>
+						<label2>3 $LOCALIZE[31203]</label2>
+						<icon>scroll_down.png</icon>
+						<onclick>Skin.Reset(Startup_Duration)</onclick>
+						<onclick>Skin.SetString(Startup_Duration,00:05)</onclick>
+						<visible>String.isEmpty(Skin.String(Startup_Duration))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31349]</label>
+						<label2>5 $LOCALIZE[31203]</label2>
+						<icon>scroll_down.png</icon>
+						<onclick>Skin.Reset(Startup_Duration)</onclick>
+						<onclick>Skin.SetString(Startup_Duration,00:10)</onclick>
+						<visible>String.isEqual(Skin.String(Startup_Duration),00:05)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31349]</label>
+						<label2>10 $LOCALIZE[31203]</label2>
+						<icon>scroll_down.png</icon>
+						<onclick>Skin.Reset(Startup_Duration)</onclick>
+						<onclick>Skin.SetString(Startup_Duration,00:15)</onclick>
+						<visible>String.isEqual(Skin.String(Startup_Duration),00:10)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31349]</label>
+						<label2>15 $LOCALIZE[31203]</label2>
+						<icon>scroll_down.png</icon>
+						<onclick>Skin.Reset(Startup_Duration)</onclick>
+						<visible>String.isEqual(Skin.String(Startup_Duration),00:15)</visible>
+					</item>
+
+					<!-- GENERAL OPTIONS -->
+					<include content="Settings_Header"><param name="label">General</param><param name="id">1000</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Optimize for Low-End Hardware</param><param name="id">Global_Hide_Animation</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Optimize for simple Remotes (Stop on Back)</param><param name="id">Global_Stop_Back</param></include>
+
+				</content>
+
+			</control>
+
+
+			<!-- Home Menu -->
+			<control type="list" id="1300">
+				<onleft>100</onleft>
+				<onright>1310</onright>
+				<visible>ControlGroup(100).Hasfocus(130)</visible>
+				<include content="Settings_Container_HomeMenu_Half_Left"><param name="id">1300</param></include>
+
+				<content>
+
+					<!-- SECTIONS  -->
+					<include content="Settings_Header"><param name="label">Home menu</param><param name="id">1300</param></include>
+
+						<!-- General -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">$LOCALIZE[31070]</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">50</param>
+						</include>
+
+						<!-- Pvr -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">PVR</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">150</param>
+							<param name="visible">System.HasPVRAddon</param>
+						</include>
+
+						<!-- Hub -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">$LOCALIZE[31532]</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">500</param>
+							<param name="visible">System.Platform.OpenHT</param>
+						</include>
+
+						<!-- Custom -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">$LOCALIZE[31503]</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">400</param>
+						</include>
+
+					<!-- BACKEND  -->
+					<include content="Settings_Header"><param name="label">Backends</param><param name="id">1300</param></include>
+
+						<!-- Kodi -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">Kodi</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">200</param>
+						</include>
+
+						<!-- Plex -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">Plex</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">300</param>
+							<param name="visible">$EXP[Addon_Plex_Enabled]</param>
+						</include>
+
+						<!-- Emby -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">Emby</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">330</param>
+							<param name="visible">$EXP[Addon_Emby_Enabled]</param>
+						</include>
+
+
+					<!-- SUBMENU -->
+					<include content="Settings_Header"><param name="label">Sub menu</param><param name="id">1300</param></include>
+
+						<!-- SubMenu -->
+						<include content="Settings_SubMenu_Section">
+							<param name="label">$LOCALIZE[31502]</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">900</param>
+						</include>
+
+						<!-- PowerMenu -->
+						<include content="Settings_SubMenu_Section">
+							<param name="label">$LOCALIZE[31531]</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">930</param>
+						</include>
+
+						<!-- Plex -->
+						<include content="Settings_SubMenu_Section">
+							<param name="label">Plex</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">960</param>
+							<param name="visible">$EXP[Addon_Plex_Enabled]</param>
+						</include>
+
+						<!-- Emby -->
+						<include content="Settings_SubMenu_Section">
+							<param name="label">Emby</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">980</param>
+							<param name="visible">$EXP[Addon_Emby_Enabled]</param>
+						</include>
+
+					<!-- ADDONS -->
+					<include content="Settings_Header"><param name="label">$LOCALIZE[31029]</param><param name="id">1300</param></include>
+
+
+						<!-- Youtube -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">Youtube</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">600</param>
+							<param name="visible">$EXP[Addon_Youtube_Enabled]</param>
+						</include>
+						<include content="Settings_HomeMenu_Section_Disabled">
+							<param name="label">Youtube</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="visible">!$EXP[Addon_Youtube_Enabled]</param>
+						</include>
+
+						<!-- Twitch -->
+						<include content="Settings_HomeMenu_Section">
+							<param name="label">Twitch</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="id_home">620</param>
+							<param name="visible">$EXP[Addon_Twitch_Enabled]</param>
+						</include>
+						<include content="Settings_HomeMenu_Section_Disabled">
+							<param name="label">Twitch</param>
+							<param name="label2">[COLOR][/COLOR]</param>
+							<param name="visible">!$EXP[Addon_Twitch_Enabled]</param>
+						</include>
+
+				</content>
+
+			</control>
+
+			<control type="list" id="1310">
+				<onleft>1300</onleft>
+				<visible>ControlGroup(100).Hasfocus(130)</visible>
+				<include content="Settings_Container_HomeMenu"><param name="id">1310</param></include>
+
+				<content>
+					<include>Home_Settings</include>
+				</content>
+			</control>
+
+
+			<!-- HOMESCREEN -->
+			<control type="list" id="2000">
+				<visible>ControlGroup(100).Hasfocus(120)</visible>
+				<include content="Settings_Container"><param name="id">2000</param></include>
+
+				<content>
+
+					<!-- General -->
+					<include content="Settings_Header"><param name="label">$LOCALIZE[31070]</param><param name="id">2000</param></include>
+					<include content="Settings_Toggle_ONOFF"><param name="label">$LOCALIZE[31421]</param><param name="id">Home_Hide_Clock</param></include>
+					<include content="Settings_Toggle_ONOFF"><param name="label">$LOCALIZE[31027]</param><param name="id">Home_Hide_WeatherWidget</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">$LOCALIZE[31361]</param><param name="id">Home_Hide_Profile</param></include>
+
+					<!-- Home Menu -->
+					<include content="Settings_Header"><param name="label">$LOCALIZE[31501]</param><param name="id">2000</param></include>
+					<include content="Settings_Toggle_CUSTOM3">
+						<param name="label">Style</param>
+						<param name="option1">Vertical</param>
+						<param name="option2">Horizontal</param>
+						<param name="option3">Panel</param>
+						<param name="id1">Home_Horizontal</param>
+						<param name="id2">Home_Panel</param>
+						<param name="visible">true</param>
+					</include>
+
+					<include content="Settings_Toggle_CUSTOM3">
+						<param name="label">Type</param>
+						<param name="option1">Wraplist</param>
+						<param name="option2">Fixedlist</param>
+						<param name="option3">Simplelist</param>
+						<param name="id1">Home_Fixed</param>
+						<param name="id2">Home_Simple</param>
+						<param name="visible">![ Skin.hasSetting(Home_Horizontal) | Skin.hasSetting(Home_Panel) ]</param>
+					</include>
+
+					<include content="Settings_Toggle_CUSTOM3">
+						<param name="label">Items</param>
+						<param name="option1">$VAR[Var_Home_Items]</param>
+						<param name="option2">$VAR[Var_Home_Items]</param>
+						<param name="option3">$VAR[Var_Home_Items]</param>
+						<param name="id1">HomeExtended</param>
+						<param name="id2">HomeExtendedMore</param>
+						<param name="visible">![ Skin.hasSetting(Home_Horizontal) | Skin.hasSetting(Home_Panel) ]</param>
+					</include>
+
+					<include content="Settings_Toggle_CUSTOM3">
+						<param name="label">Font Size</param>
+						<param name="option1">Large</param>
+						<param name="option2">Small</param>
+						<param name="option3">Medium</param>
+						<param name="id1">Home_Font_Small</param>
+						<param name="id2">Home_Font_Medium</param>
+						<param name="visible">![ Skin.hasSetting(Home_Horizontal) | Skin.hasSetting(Home_Panel) ]</param>
+					</include>
+
+					<!-- Font Type -->
+					<include content="Settings_Toggle_CUSTOM4">
+						<param name="label">Font Type</param>
+						<param name="option1">Thin</param>
+						<param name="option2">Light</param>
+						<param name="option3">Regular</param>
+						<param name="option4">Aeon</param>
+						<param name="id1">Home_Font_Light</param>
+						<param name="id2">Home_Font_Regular</param>
+						<param name="id3">Home_Font_Aeon</param>
+					</include>
+
+					<!-- Options -->
+					<include content="Settings_Header"><param name="label">Options</param><param name="id">2000</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Icons (WIP)</param><param name="id">Home_Menu_Icons</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Infos (WIP)</param><param name="id">Home_Menu_More</param></include>
+
+					<include content="Settings_Toggle_CUSTOM2">
+						<param name="label">Back Button</param> <!-- Back Button -->
+						<param name="option1">Next Page</param> <!-- Next Page -->
+						<param name="option2">$LOCALIZE[31020]</param> <!-- Dashboard -->
+						<param name="id1">Home_Back_Dashboard</param>
+					</include>
+
+				</content>
+			</control>
+				
+			<!-- DECK -->
+			<control type="list" id="4000">
+				<visible>ControlGroup(100).Hasfocus(140)</visible>
+				<include content="Settings_Container"><param name="id">4000</param></include>
+
+				<content>
+
+					<!-- Deck Mode -->
+					<include content="Settings_Header"><param name="label">Widget</param><param name="id">4000</param></include>
+
+					<include content="Settings_Toggle_CUSTOM4">
+						<param name="label">Widget Mode</param>
+						<param name="option1">Normal</param>
+						<param name="option2">Short</param>
+						<param name="option3">Hidden</param>
+						<param name="option4">[UPPERCASE][COLOR=FFE50000]OFF[/COLOR][/UPPERCASE]</param>
+						<param name="id1">Deck_Short</param>
+						<param name="id2">Deck_Hide</param>
+						<param name="id3">Deck_Disable</param>
+					</include>
+
+					<include content="Settings_Toggle_CUSTOM3">
+						<param name="label">Focus Animation</param>
+						<param name="option1">None</param>
+						<param name="option2">Zoom</param>
+						<param name="option3">Drop</param>
+						<param name="id1">Deck_Focus_Zoom</param>
+						<param name="id2">Deck_Focus_Drop</param>
+					</include>
+
+					<!-- Placeholder -->
+					<include content="Settings_Toggle_ONOFF"><param name="label">Placeholder</param><param name="id">Widget_Placeholder_Hide</param></include>
+
+					<item>
+						<label>$LOCALIZE[31327]</label>
+						<label2>$LOCALIZE[31194]</label2>
+						<onclick>Skin.SetString(selectorname,$LOCALIZE[31132])</onclick>
+						<onclick>Skin.SetString(selector1,Widget_Placeholder)</onclick>
+						<onclick>Skin.SetString(selector2,Opacity)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<property name="optional">true</property>
+						<include>Settings_Container_Item_OFF</include>
+						<visible>String.isEmpty(Skin.String(Widget_Placeholder_Opacity)) + !Skin.hasSetting(Widget_Placeholder_Hide)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31327]</label>
+						<label2>$INFO[Skin.String(Widget_Placeholder_Opacity),,%]</label2>
+						<onclick>Skin.Reset(Widget_Placeholder_Opacity)</onclick>
+						<property name="optional">true</property>
+						<include>Settings_Container_Item_ON</include>
+						<visible>!String.isEmpty(Skin.String(Widget_Placeholder_Opacity)) + !Skin.hasSetting(Widget_Placeholder_Hide)</visible>
+					</item>
+
+					<!-- Overlays -->
+					<include content="Settings_Header"><param name="label">Overlays</param><param name="id">4000</param></include>
+
+					<item>
+						<label>Overlay #1</label>
+						<onclick>Skin.SetString(selectorname,Overlay #1)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay1)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_OFF</include>
+						<visible>String.isEmpty(Skin.String(Deck_Overlay1))</visible>
+					</item>
+					<item>
+						<label>Overlay #1</label>
+						<onclick>Skin.SetString(selectorname,Overlay #1)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay1)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_ON</include>
+						<visible>!String.isEmpty(Skin.String(Deck_Overlay1))</visible>
+					</item>
+
+					<item>
+						<label>Overlay #2</label>
+						<onclick>Skin.SetString(selectorname,Overlay #2)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay2)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_OFF</include>
+						<visible>String.isEmpty(Skin.String(Deck_Overlay2))</visible>
+					</item>
+					<item>
+						<label>Overlay #2</label>
+						<onclick>Skin.SetString(selectorname,Overlay #2)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay2)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_ON</include>
+						<visible>!String.isEmpty(Skin.String(Deck_Overlay2))</visible>
+					</item>
+
+					<item>
+						<label>Overlay #3</label>
+						<onclick>Skin.SetString(selectorname,Overlay #3)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay3)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_OFF</include>
+						<visible>String.isEmpty(Skin.String(Deck_Overlay3))</visible>
+					</item>
+					<item>
+						<label>Overlay #3</label>
+						<onclick>Skin.SetString(selectorname,Overlay #3)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay3)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_ON</include>
+						<visible>!String.isEmpty(Skin.String(Deck_Overlay3))</visible>
+					</item>
+
+					<item>
+						<label>Overlay #4</label>
+						<onclick>Skin.SetString(selectorname,Overlay #4)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay4)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_OFF</include>
+						<visible>String.isEmpty(Skin.String(Deck_Overlay4))</visible>
+					</item>
+					<item>
+						<label>Overlay #4</label>
+						<onclick>Skin.SetString(selectorname,Overlay #4)</onclick>
+						<onclick>Skin.SetString(selector1,Deck)</onclick>
+						<onclick>Skin.SetString(selector2,Overlay4)</onclick>
+						<onclick>Skin.SetString(selector3,Overlay)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<include>Settings_Container_Item_ON</include>
+						<visible>!String.isEmpty(Skin.String(Deck_Overlay4))</visible>
+					</item>
+
+				</content>
+
+			</control>
+
+			<!-- Background Customizer -->
+			<control type="list" id="5000">
+				<visible>ControlGroup(100).Hasfocus(150)</visible>
+				<include content="Settings_Container"><param name="id">5000</param></include>
+
+				<content>
+					<include content="Settings_Header"><param name="label">$LOCALIZE[31070]</param><param name="id">5000</param></include>
+
+					<include content="Settings_Background_Item">
+						<param name="id_home">10</param>
+						<param name="label">Fallback</param>
+					</include>
+
+					<include content="Settings_Background_Item">
+						<param name="id_home">11</param>
+						<param name="label">Widget</param>
+					</include>
+
+					<include content="Settings_Background_Item">
+						<param name="id_home">15</param>
+						<param name="label">Now Playing</param>
+					</include>
+
+					<include content="Settings_Background_Item">
+						<param name="id_home">16</param>
+						<param name="label">Dialoginfo</param>
+					</include>
+
+					<include content="Settings_Background_Item">
+						<param name="id_home">13</param>
+						<param name="label">Login</param>
+					</include>
+
+					<include content="Settings_Background_Item">
+						<param name="id_home">20</param>
+						<param name="label">Settings</param>
+					</include>
+				</content>
+			</control>
+
+			<!-- VIEWMODE -->
+			<control type="list" id="6000">
+				<visible>ControlGroup(100).Hasfocus(160)</visible>
+				<include content="Settings_Container"><param name="id">6000</param></include>
+
+				<content>
+
+					<!-- Kiosk Mode -->
+					<include content="Settings_Header"><param name="label">Kiosk Mode</param><param name="id">6000</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Lock Viewmode</param><param name="id">LockViews</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Lock Options</param><param name="id">LockOptions</param></include>
+
+					<!-- General -->
+					<include content="Settings_Header"><param name="label">General</param><param name="id">6000</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Original Titles</param><param name="id">OriginalTitle</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Scroll Plot</param><param name="id">autoscroll</param></include>
+
+					<include content="Settings_Toggle_CUSTOM2">
+						<param name="label">Studio</param>
+						<param name="option1">Text</param>
+						<param name="option2">Logo</param>
+						<param name="id1">StudioLogo_Image</param>
+					</include>
+
+					<include content="Settings_Toggle_CUSTOM2">
+						<param name="label">Mediaflags</param>
+						<param name="option1">Text</param>
+						<param name="option2">Images</param>
+						<param name="id1">Mediaflags_Image</param>
+					</include>
+
+					<include content="Settings_Toggle_ONOFF"><param name="label">Scroll Letter</param><param name="id">Viewmode_Hide_ScrollLetter</param></include>
+
+					<!-- Anti-Spoler -->
+					<include content="Settings_Header"><param name="label">Unwatched (Anti-Spoiler)</param><param name="id">6000</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Thumb</param><param name="id">Spoiler_Image</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Plot</param><param name="id">Spoiler_Plot</param></include>
+
+					<!-- Overlay -->
+					<include content="Settings_Header"><param name="label">Overlay</param><param name="id">6000</param></include>
+					<include content="Settings_Toggle_OFFON"><param name="label">Watched Overlay</param><param name="id">Overlay_Watched</param></include>
+					<include content="Settings_Toggle_ONOFF"><param name="label">PlayNow Overlay</param><param name="id">Overlay_PlayIcon</param></include>
+
+				</content>
+			</control>
+
+			<!-- Accent Colors -->
+			<control type="group" id="7000">
+				<visible>ControlGroup(100).Hasfocus(170)</visible>
+
+				<control type="list" id="7100">
+					<include content="Settings_Container"><param name="id">7100</param></include>
+
+					<content>
+
+						<!-- General -->
+						<include content="Settings_Header"><param name="label">General</param><param name="id">7100</param></include>
+
+						<item>
+							<label>Accent Color</label>
+							<label2>$VAR[Var_Color_Accent_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Accent_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+
+							<include>Color_Reset_OnClick</include>
+
+							<onclick>Skin.SetString(selector1,Accent)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+
+							<onclick>Skin.SetString(Color_Icon_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Icon_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_Border_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Border_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_Separator_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Separator_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_Watched_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Watched_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_Unwatched_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Unwatched_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_InProgress_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_InProgress_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_StarRating_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_StarRating_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_Header_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Header_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_Clock_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Clock_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+							<onclick>Skin.SetString(Color_Home_Name,$INFO[Skin.String(Color_Accent_Name)])</onclick>
+							<onclick>Skin.SetString(Color_Home_Hex,$INFO[Skin.String(Color_Accent_Hex)])</onclick>
+						</item>
+
+						<item>
+							<label>User Themes</label>
+							<icon>icon_edit.png</icon>
+							<include>Color_Reset_OnClick</include>
+							<onclick>Skin.SetString(selector1,browsecolor)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
+							<visible>String.isEmpty(Skin.String(Color_User_Theme))</visible>
+						</item>
+
+
+						<item>
+							<label>[COLOR=TextDisabled]$LOCALIZE[12377]![/COLOR]</label>
+							<visible>String.isEqual(Skin.String(Color_Accent_Name),$LOCALIZE[636])</visible>
+						</item>
+
+						<!-- Selected Item -->
+						<include content="Settings_Header"><param name="label">Selected Item</param><param name="id">7100</param></include>
+
+						<item>
+							<label>Text</label>
+							<label2>$VAR[Var_Color_Text_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Text_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<property name="hex">$VAR[Var_Color_Text_Hex]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Text)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Icon</label>
+							<label2>$VAR[Var_Color_Icon_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Icon_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Icon)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Frame</label>
+							<label2>$VAR[Var_Color_Border_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Border_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Border)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Navbar</label>
+							<label2>$VAR[Var_Color_Bar_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Bar_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Bar)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Home</label>
+							<label2>$VAR[Var_Color_Home_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Home_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Home)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+
+						<!-- GUI -->
+						<include content="Settings_Header"><param name="label">User Interface</param><param name="id">7100</param></include>
+
+						<item>
+							<label>Clock</label>
+							<label2>$VAR[Var_Color_Clock_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Clock_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Clock)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Separator</label>
+							<label2>$VAR[Var_Color_Separator_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Separator_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Separator)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Scrollbar</label>
+							<label2>$VAR[Var_Color_Scrollbar_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Scrollbar_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Scrollbar)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Progressbar</label>
+							<label2>$VAR[Var_Color_Progressbar_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Progressbar_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Progressbar)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Dialog (Border)</label>
+							<label2>$VAR[Var_Color_Dialog_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Dialog_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Dialog)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Dialog (Shadow)</label>
+							<label2>$VAR[Var_Color_DialogShadow_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_DialogShadow_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,DialogShadow)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Keyboard</label>
+							<label2>$VAR[Var_Color_Keyboard_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Keyboard_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Keyboard)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+
+						<!-- GUI -->
+						<include content="Settings_Header"><param name="label">Content</param><param name="id">7100</param></include>
+						<item>
+							<label>Headers</label>
+							<label2>$VAR[Var_Color_Header_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Header_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Header)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Subheaders</label>
+							<label2>$VAR[Var_Color_Subheader_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Subheader_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Subheader)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Home Section</label>
+							<label2>$VAR[Var_Color_HomeHeader_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_HomeHeader_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,HomeHeader)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Plot</label>
+							<label2>$VAR[Var_Color_Plot_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Plot_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Plot)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+
+						<!-- Overlay -->
+						<include content="Settings_Header"><param name="label">Overlay</param><param name="id">7100</param></include>
+
+						<item>
+							<label>Watched</label>
+							<label2>$VAR[Var_Color_Watched_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Watched_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Watched)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>InProgress</label>
+							<label2>$VAR[Var_Color_InProgress_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_InProgress_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,InProgress)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Unwatched</label>
+							<label2>$VAR[Var_Color_Unwatched_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Unwatched_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Unwatched)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Label</label>
+							<label2>$VAR[Var_Color_Count_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_Count_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,Count)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+
+						<!-- Viewtype -->
+						<include content="Settings_Header"><param name="label">Viewtype</param><param name="id">7100</param></include>
+						<item>
+							<label>Frame</label>
+							<label2>$VAR[Var_Color_ViewmodeFrame_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_ViewmodeFrame_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,ViewmodeFrame)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Label</label>
+							<label2>$VAR[Var_Color_ViewmodeLabel_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_ViewmodeLabel_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,ViewmodeLabel)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+
+						<!-- Widget -->
+						<include content="Settings_Header"><param name="label">Widget</param><param name="id">7100</param></include>
+						<item>
+							<label>Frame</label>
+							<label2>$VAR[Var_Color_WidgetFrame_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_WidgetFrame_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,WidgetFrame)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Label</label>
+							<label2>$VAR[Var_Color_WidgetLabel_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_WidgetLabel_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,WidgetLabel)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>Name</label>
+							<label2>$VAR[Var_Color_WidgetName_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_WidgetName_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,WidgetName)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+
+						<!-- Mediaflags -->
+						<include content="Settings_Header"><param name="label">Mediaflags</param><param name="id">7100</param></include>
+
+						<item>
+							<label>VideoResolution</label>
+							<label2>$VAR[Var_Color_VideoResolution_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_VideoResolution_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,VideoResolution)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>VideoCodec</label>
+							<label2>$VAR[Var_Color_VideoCodec_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_VideoCodec_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,VideoCodec)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>AudioCodec</label>
+							<label2>$VAR[Var_Color_AudioCodec_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_AudioCodec_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,AudioCodec)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>AudioChannels</label>
+							<label2>$VAR[Var_Color_AudioChannels_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_AudioChannels_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,AudioChannels)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>AspectRatio</label>
+							<label2>$VAR[Var_Color_AspectRatio_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_AspectRatio_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,AspectRatio)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>FrameRate</label>
+							<label2>$VAR[Var_Color_FrameRate_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_FrameRate_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,FrameRate)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>ContentRating</label>
+							<label2>$VAR[Var_Color_ContentRating_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_ContentRating_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,ContentRating)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>ContentRatingMature</label>
+							<label2>$VAR[Var_Color_ContentRatingMature_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_ContentRatingMature_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,ContentRatingMature)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+						<item>
+							<label>StarRating</label>
+							<label2>$VAR[Var_Color_StarRating_Name]</label2>
+							<property name="color">[COLOR=$VAR[Var_Color_StarRating_Hex]]&#x2588;&#x2588;[/COLOR]</property>
+							<include>Settings_Color_Custom</include>
+							<onclick>Skin.SetString(selector1,StarRating)</onclick>
+							<onclick>Skin.SetString(selector2,Settings)</onclick>
+							<onclick>ActivateWindow(1121)</onclick>
+						</item>
+
+						<!-- Share -->
+						<include content="Settings_Header"><param name="label">Share</param><param name="id">7100</param></include>
+
+						<item>
+							<label>User</label>
+							<label2>$LOCALIZE[31182]</label2>
+							<include>Settings_Container_Item_OFF</include>
+							<onclick>Skin.SetString(Custom_Share_User)</onclick>
+							<visible>String.isEmpty(Skin.String(Custom_Share_User))</visible>
+						</item>
+						<item>
+							<label>User</label>
+							<label2>$INFO[Skin.String(Custom_Share_User)]</label2>
+							<include>Settings_Container_Item_ON</include>
+							<onclick>Skin.SetString(Custom_Share_User)</onclick>
+							<visible>!String.isEmpty(Skin.String(Custom_Share_User))</visible>
+						</item>
+						<item>
+							<label>PIN (4-digit)</label>
+							<label2>$LOCALIZE[31182]</label2>
+							<include>Settings_Container_Item_OFF</include>
+							<onclick>Skin.SetString(Custom_Share_Pin)</onclick>
+							<visible>String.isEmpty(Skin.String(Custom_Share_Pin))</visible>
+						</item>
+						<item>
+							<label>PIN (4-digit)</label>
+							<label2>$INFO[Skin.String(Custom_Share_Pin)]</label2>
+							<include>Settings_Container_Item_ON</include>
+							<onclick>Skin.SetString(Custom_Share_Pin)</onclick>
+							<visible>!String.isEmpty(Skin.String(Custom_Share_Pin))</visible>
+						</item>
+
+						<item>
+							<label>Name (optional)</label>
+							<label2>$LOCALIZE[31182]</label2>
+							<include>Settings_Container_Item_OFF</include>
+							<onclick>Skin.SetString(Custom_Share_Color_Name)</onclick>
+							<visible>String.isEmpty(Skin.String(Custom_Share_Color_Name))</visible>
+						</item>
+						<item>
+							<label>Name (optional)</label>
+							<label2>$INFO[Skin.String(Custom_Share_Color_Name)]</label2>
+							<include>Settings_Container_Item_ON</include>
+							<onclick>Skin.SetString(Custom_Share_Color_Name)</onclick>
+							<visible>!String.isEmpty(Skin.String(Custom_Share_Color_Name))</visible>
+						</item>
+
+						<item>
+							<label>Submit</label>
+							<icon>icon_upload.png</icon>
+							<onclick>Skin.SetString(selector1,sharecolor)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
+						</item>
+
+					</content>
+				</control>
+
+
+			</control>
+
+			<!-- Addons -->
+			<control type="list" id="7600">
+				<visible>ControlGroup(100).Hasfocus(195)</visible>
+				<include content="Settings_Container"><param name="id">7600</param></include>
+
+				<content>
+
+					<!-- Backup -->
+					<include content="Settings_Header"><param name="label">$LOCALIZE[31428] / $LOCALIZE[31429]</param><param name="id">7600</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">$LOCALIZE[31028]</param><param name="addon">script.skin.helper.skinbackup</param></include>
+
+					<include content="Settings_Toggle_Optional">
+						<param name="label">$LOCALIZE[31427]</param><!-- Set path -->
+						<param name="label2"></param>
+						<param name="icon"></param>
+						<param name="onclick">Addon.OpenSettings(script.skin.helper.skinbackup)</param>
+						<param name="visible">System.HasAddon(script.skin.helper.skinbackup)</param>
+					</include>
+					<include content="Settings_Toggle_Optional">
+						<param name="label">$LOCALIZE[31428]</param><!-- Backup -->
+						<param name="label2"></param>
+						<param name="icon"></param>
+						<param name="onclick">RunScript(script.skin.helper.skinbackup,action=backup)</param>
+						<param name="visible">System.HasAddon(script.skin.helper.skinbackup)</param>
+					</include>
+					<include content="Settings_Toggle_Optional">
+						<param name="label">$LOCALIZE[31429]</param><!-- Restore -->
+						<param name="label2"></param>
+						<param name="icon"></param>
+						<param name="onclick">RunScript(script.skin.helper.skinbackup,action=restore)</param>
+						<param name="visible">System.HasAddon(script.skin.helper.skinbackup)</param>
+					</include>
+					<include content="Settings_Toggle_Optional">
+						<param name="label">$LOCALIZE[31193]</param><!-- Reset -->
+						<param name="label2"></param>
+						<param name="icon"></param>
+						<param name="onclick">RunScript(script.skin.helper.skinbackup,action=reset)</param>
+						<param name="visible">System.HasAddon(script.skin.helper.skinbackup)</param>
+					</include>
+
+					<!-- Backend -->
+					<include content="Settings_Header"><param name="label">Backends</param><param name="id">7600</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">PlexKodiConnect</param><param name="addon">plugin.video.plexkodiconnect</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">Emby</param><param name="addon">plugin.video.emby</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">EmbyCon</param><param name="addon">plugin.video.embycon</param></include>
+
+					<!-- Addons -->
+					<include content="Settings_Header"><param name="label">Supported addons</param><param name="id">7600</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">Global Search</param><param name="addon">script.globalsearch</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">Next Aired</param><param name="addon">script.tv.show.next.aired</param></include>
+
+<!--					<include content="Settings_Toggle_INSTALLED"><param name="label">Cinema Experience</param><param name="addon">script.cinema.experience</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">Extended Info</param><param name="addon">script.extendedinfo</param></include>
+-->
+					<!-- UI Addons -->
+					<include content="Settings_Header"><param name="label">GUI Addons</param><param name="id">7600</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">Genre Images</param><param name="addon">resource.images.moviegenreicons.filmstrip</param></include>
+					<include content="Settings_Toggle_INSTALLED"><param name="label">Studio Images</param><param name="addon">resource.images.studios.white</param></include>
+
+				</content>
+
+			</control>
+
+			<!-- Dashboard -->
+			<control type="list" id="9000">
+				<visible>ControlGroup(100).Hasfocus(190)</visible>
+				<ondown>9001</ondown>
+				<include content="Settings_Container"><param name="id">9000</param></include>
+
+				<content>
+					<item>
+						<label>Screensaver</label>
+						<include>Settings_Container_Item_OFF</include>
+						<onclick>Skin.SetBool(Dashboard_Enabled)</onclick>
+						<visible>!Skin.HasSetting(Dashboard_Enabled)</visible>
+					</item>
+					<item>
+						<label>Screensaver</label>
+						<include>Settings_Container_Item_ON</include>
+						<onclick>Skin.Reset(Dashboard_Enabled)</onclick>
+						<visible>Skin.HasSetting(Dashboard_Enabled)</visible>
+					</item>
+					<item>
+						<label>Configuration Mode</label>
+						<label2>Screensaver</label2>				
+						<icon>scroll_down.png</icon>
+						<onclick>Skin.SetBool(Dashboard_Configuration_Widget)</onclick>
+						<visible>!Skin.HasSetting(Dashboard_Configuration_Widget)</visible>
+					</item>
+					<item>
+						<label>Configuration Mode</label>
+						<label2>Widget</label2>
+						<icon>scroll_down.png</icon>
+						<onclick>Skin.Reset(Dashboard_Configuration_Widget)</onclick>
+						<visible>Skin.HasSetting(Dashboard_Configuration_Widget)</visible>
+					</item>
+				</content>
+			</control>
+
+			<control type="group" id="9001">
+
+				<control type="group">
+					<left>620</left>
+					<top>300</top>
+					<visible>ControlGroup(100).Hasfocus(190) + !Skin.HasSetting(Dashboard_Configuration_Widget)</visible>
+					<animation effect="zoom" end="70" condition="true">Conditional</animation>
+					<include>Dashboard_Settings</include>
+				</control>
+
+				<control type="group">
+					<left>590</left>
+					<top>360</top>
+					<visible>ControlGroup(100).Hasfocus(190) + Skin.HasSetting(Dashboard_Configuration_Widget)</visible>
+					<animation effect="zoom" end="80" condition="true">Conditional</animation>
+					<include>Dashboard_Widget_Settings</include>			
+				</control>
+			</control>
+
+
+			<!-- Notifications -->
+			<control type="list" id="9100">
+				<visible>ControlGroup(100).Hasfocus(191)</visible>
+				<include content="Settings_Container"><param name="id">9100</param></include>
+
+				<content>
+
+					<!-- NOTIFICATIONS -->
+					<include content="Settings_Header"><param name="label">Notifications</param><param name="id">9100</param></include>
+
+					<!-- Style (Navigating) -->
+					<include content="Settings_Toggle_CUSTOM4">
+						<param name="label">Style (Navigating)</param>
+						<param name="option1">Panel</param>
+						<param name="option2">Bottom</param>
+						<param name="option3">Fullscreen</param>
+						<param name="option4">[UPPERCASE][COLOR=FFE50000]OFF[/COLOR][/UPPERCASE]</param>
+						<param name="id1">Notification_NoMedia_Bottom</param>
+						<param name="id2">Notification_NoMedia_Fullscreen</param>
+						<param name="id3">Notification_NoMedia_Disabled</param>
+					</include>
+
+					<!-- Style (Watching) -->
+					<include content="Settings_Toggle_CUSTOM4">
+						<param name="label">Style (NowPlaying)</param>
+						<param name="option1">Panel</param>
+						<param name="option2">Bottom</param>
+						<param name="option3">Fullscreen</param>
+						<param name="option4">[UPPERCASE][COLOR=FFE50000]OFF[/COLOR][/UPPERCASE]</param>
+						<param name="id1">Notification_Media_Bottom</param>
+						<param name="id2">Notification_Media_Fullscreen</param>
+						<param name="id3">Notification_Media_Disabled</param>
+					</include>
+<!--					<onclick>Notification(Notification Header,Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.,200,DefaultIconInfo.png)</onclick>-->
+
+					<include content="Settings_Toggle_ONOFF"><param name="label">Extended Progress Dialog</param><param name="id">Notification_Extended</param></include>
+
+					<!-- Notification Center -->
+					<include content="Settings_Header"><param name="label">Notification Center</param><param name="id">9100</param></include>
+
+						<item>
+							<label>Preview</label>
+
+							<onclick>Skin.SetString(Notification1_Label,Notification Center is now enabled)</onclick>
+							<onclick>Skin.SetString(Notification1_Label2,Proof of concept)</onclick>
+							<onclick>Skin.SetString(Notification1_Icon,icon_email.png)</onclick>
+							<onclick>Skin.SetString(Notification1_Time,$INFO[System.Time])</onclick>
+							<onclick>Skin.SetString(Notification1_Date,$INFO[System.Date])</onclick>
+
+							<onclick>Skin.SetString(Notification2_Label,You have a new email)</onclick>
+							<onclick>Skin.SetString(Notification2_Label2,Subject: Night Skin Email Notification)</onclick>
+							<onclick>Skin.SetString(Notification2_Icon,icon_email.png)</onclick>
+							<onclick>Skin.SetString(Notification2_Time,$INFO[System.Time])</onclick>
+							<onclick>Skin.SetString(Notification2_Date,$INFO[System.Date])</onclick>
+	
+							<onclick>Skin.SetString(Notification3_Label,You have a missed call)</onclick>
+							<onclick>Skin.SetString(Notification3_Label2,Caller: Night Skin Call Notification)</onclick>
+							<onclick>Skin.SetString(Notification3_Icon,icon_call.png)</onclick>
+							<onclick>Skin.SetString(Notification3_Time,$INFO[System.Time])</onclick>
+							<onclick>Skin.SetString(Notification3_Date,$INFO[System.Date])</onclick>
+
+							<onclick>ActivateWindow(1152)</onclick>
+						</item>
+
+						<!-- General -->
+						<include content="Settings_Toggle_OFFON">
+							<param name="label">Notification Center</param>
+							<param name="id">Notification_Center_Enabled</param>
+							<param name="visible">System.Platform.OpenHT</param>
+						</include>
+						<include content="Settings_Toggle_OFFON_Optional">
+							<param name="label">Auto-close</param>
+							<param name="id">Notification_Center_Close</param>
+							<param name="visible">System.Platform.OpenHT + Skin.hasSetting(Notification_Center_Enabled)</param>
+						</include>
+						<include content="Settings_Toggle_OFFON_Optional">
+							<param name="label">Pause media</param>
+							<param name="id">Notification_Center_Pause</param>
+							<param name="visible">System.Platform.OpenHT + Skin.hasSetting(Notification_Center_Enabled)</param>
+						</include>
+
+						<!-- Filter -->
+						<include content="Settings_Toggle_OFFON">
+							<param name="label">Filter</param>
+							<param name="id">Notification_Center_Filter</param>
+							<param name="visible">System.Platform.OpenHT + Skin.hasSetting(Notification_Center_Enabled)</param>
+						</include>
+
+						<include content="Settings_Toggle_Trigger">
+							<param name="id">1</param>
+							<param name="label">Filter Word (Call)</param>
+						</include>
+						<include content="Settings_Toggle_Trigger">
+							<param name="id">2</param>
+							<param name="label">Filter Word (Message)</param>
+						</include>
+						<include content="Settings_Toggle_Trigger">
+							<param name="id">3</param>
+							<param name="label">Filter Word (Mail)</param>
+						</include>
+						<include content="Settings_Toggle_Trigger">
+							<param name="id">4</param>
+							<param name="label">Filter Word #1</param>
+						</include>
+						<include content="Settings_Toggle_Trigger">
+							<param name="id">5</param>
+							<param name="label">Filter Word #2</param>
+						</include>
+						<include content="Settings_Toggle_Trigger">
+							<param name="id">6</param>
+							<param name="label">Filter Word #3</param>
+						</include>
+
+				</content>
+			</control>
+
+		<!-- END -->
+		</control>
+
+		<!-- Description -->
+		<control type="textbox" id="6">
+			<!--<visible>false</visible>-->
+			<top>80r</top>
+			<include>AspectRatio_Width_1240</include>
+			<font>Font_Settings_Desc</font>
+			<textcolor>88CCCCCC</textcolor>
+			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			<label>Description [WIP]</label>
+			<align>left</align>
+		</control>
+
+	</control>
+
+</control>
+
+</controls>
+</window>

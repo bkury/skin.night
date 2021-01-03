@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1115">
+	<defaultcontrol always="true">10</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	
+	<include>Animation_Window_Fade_Delay</include>
+
+	<!-- Login Screen -->
+	<onload>Skin.SetString(Background_13_Type,Url)</onload>
+	<onload>Skin.SetString(Background_13_Path,https://repo.openht.org/background/bing.jpg)</onload>
+
+	<!-- Dashboard -->
+	<onload>Skin.SetBool(Dashboard_Enabled)</onload>
+
+	<onload>Skin.SetString(Background_65_Type,Url)</onload>
+	<onload>Skin.SetString(Background_65_Path,https://repo.openht.org/background/bing.jpg)</onload>
+
+	<onload>Skin.SetString(Dashboard_Widget1_2,Clock_2x1)</onload>
+	<onload>Skin.SetString(Dashboard_Widget1_2_Name,$LOCALIZE[31421])</onload>
+
+	<onload>Skin.SetString(Dashboard_Widget2_2,Notifications_2x1)</onload>
+	<onload>Skin.SetString(Dashboard_Widget2_2_Name,$LOCALIZE[31022])</onload>
+
+	<onload>Skin.SetString(Dashboard_Widget2_1,Added_Movies_1x1)</onload>
+	<onload>Skin.SetString(Dashboard_Widget2_1_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Text)</onload>
+
+	<onload>Skin.SetString(Dashboard_Widget3_1,Added_Movies_Poster_1x1)</onload>
+	<onload>Skin.SetString(Dashboard_Widget3_1_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Poster)</onload>
+
+	<onload>Skin.SetString(Dashboard_Widget2_4,Added_Episodes_1x1)</onload>
+	<onload>Skin.SetString(Dashboard_Widget2_4_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Text)</onload>
+
+	<onload>Skin.SetString(Dashboard_Widget3_4,Added_Episodes_Poster_1x1)</onload>
+	<onload>Skin.SetString(Dashboard_Widget3_4_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Poster)</onload>
+
+	<onload>Skin.SetString(Dashboard_Widget3_2,Weather_Hour_2x1)</onload>
+	<onload>Skin.SetString(Dashboard_Widget3_2_Name,$LOCALIZE[31027] / $LOCALIZE[31906])</onload>
+
+	<!-- Overlays -->
+	<onload>Skin.SetString(List1_Overlay1,Auto_Overlay1)</onload>
+	<onload>Skin.SetString(List1_Overlay2,Auto_Overlay2)</onload>
+	<onload>Skin.SetString(List2_Overlay1,Auto_Overlay1)</onload>
+	<onload>Skin.SetString(List2_Overlay2,Auto_Overlay2)</onload>
+
+	<!-- Notification Center -->
+	<onload>Skin.SetBool(Notification_Center_Enabled)</onload>
+	<onload>Skin.SetBool(Notification_Center_Filter)</onload>
+	<onload>Skin.SetString(Notification_Center_Trigger1,Call)</onload>
+	<onload>Skin.SetString(Notification_Center_Trigger2,Message)</onload>
+	<onload>Skin.SetString(Notification_Center_Trigger3,Mail)</onload>
+
+	<controls>
+
+		<!-- Background -->
+		<control type="image">
+			<include>background_default</include>
+			<texture>bg_black.png</texture>
+		</control>
+		<control type="image">
+			<include>background_default</include>
+			<texture>background/livetv.jpg</texture>
+			<animation effect="fade" end="30" condition="true">Conditional</animation>
+		</control>
+
+		<control type="grouplist" id="10">
+			<top>10</top>
+			<left>150</left>
+			<orientation>vertical</orientation>
+			<itemgap>10</itemgap>
+			<usecontrolcoords>true</usecontrolcoords>
+			<onback>10</onback>
+			
+			<!-- Welcome -->
+	                <control type="label">
+				<width>980</width>
+	                        <label>$LOCALIZE[31600]</label> <!-- Welcome -->
+	                        <font>Lato_Thin_60</font>
+				<height>70</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>FFFFFFFF</textcolor>
+	                </control>
+
+			<!-- General -->
+			<include content="Startup_Header">
+				<param name="label">$LOCALIZE[31070]</param> <!-- General -->
+			</include>
+
+			<control type="list" id="11">
+				<height>60</height>				
+				<onback>10</onback>
+				<itemlayout width="980" height="30">
+					<include content="Startup_List_Itemlayout">
+						<param name="id">11</param>
+						<param name="align">left</param>
+					</include>
+				</itemlayout>
+				<focusedlayout width="980" height="30">
+					<include content="Startup_List_Focusedlayout">
+						<param name="id">11</param>
+						<param name="align">left</param>
+					</include>
+				</focusedlayout>
+
+				<content>
+					<item>
+						<label>$LOCALIZE[31601]</label> <!-- Language -->
+						<label2>$LOCALIZE[31700]</label2>
+						<property name="desc">[COLOR=FFe5e500][WIP][/COLOR]</property>
+						<icon>icons/country/$LOCALIZE[31700].png</icon>
+						<!--<onclick>ActivateWindow(1116)</onclick>-->
+					</item>
+
+					<item>
+						<label>$LOCALIZE[31602]</label>
+						<label2>[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31197][/COLOR][/UPPERCASE]</label2>
+						<property name="desc">[COLOR=FFe5e500][WIP][/COLOR]</property>
+						<icon>nav_radiobutton_unchecked.png</icon>
+						<onclick>Skin.SetBool(TTS_Enabled)</onclick>
+						<visible>!Skin.hasSetting(TTS_Enabled)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31602]</label>
+						<label2>[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31196][/COLOR][/UPPERCASE]</label2>
+						<property name="desc">[COLOR=FFe5e500][WIP][/COLOR]</property>
+						<icon>nav_radiobutton_checked.png</icon>
+						<onclick>Skin.Reset(TTS_Enabled)</onclick>
+						<visible>Skin.hasSetting(TTS_Enabled)</visible>
+					</item>
+				</content>
+
+			</control>
+
+			<include content="Startup_Header">
+				<param name="id">12</param>
+				<param name="label">$LOCALIZE[31501]</param> <!-- Home menu -->
+			</include>
+
+			<control type="list" id="13">
+				<height>120</height>				
+				<onback>10</onback>
+				<itemlayout width="980" height="30">
+					<include content="Startup_List_Itemlayout">
+						<param name="id">13</param>
+						<param name="align">left</param>
+					</include>
+				</itemlayout>
+				<focusedlayout width="980" height="30">
+					<include content="Startup_List_Focusedlayout">
+						<param name="id">13</param>
+						<param name="align">left</param>
+					</include>
+				</focusedlayout>
+
+				<content>
+
+				<item>
+					<label>Vertical</label>
+					<property name="desc">Remote / Keyboard</property>
+					<icon>nav_radiobutton_checked.png</icon>
+					<onclick></onclick>
+					<property name="sublabel">[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31209][/COLOR][/UPPERCASE]</property> <!-- Enabled -->
+					<visible>!Skin.hasSetting(Home_Horizontal) + !Skin.hasSetting(Home_Panel)</visible>
+				</item>
+				<item>
+					<label>Vertical</label>
+					<property name="desc">Remote / Keyboard</property>
+					<icon>nav_radiobutton_unchecked.png</icon>
+					<onclick>Skin.Reset(Home_Horizontal)</onclick>
+					<onclick>Skin.Reset(Home_Panel)</onclick>
+					<property name="sublabel">[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31210][/COLOR][/UPPERCASE]</property> <!-- Disabled -->
+					<visible>Skin.hasSetting(Home_Horizontal) | Skin.hasSetting(Home_Panel)</visible>
+				</item>
+
+				<item>
+					<label>Horizontal</label>
+					<icon>nav_radiobutton_checked.png</icon>
+					<property name="desc">Remote / Keyboard</property>
+					<property name="sublabel">[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31209][/COLOR][/UPPERCASE]</property> <!-- Enabled -->
+					<visible>Skin.hasSetting(Home_Horizontal)</visible>
+				</item>
+				<item>
+					<label>Horizontal</label>
+					<icon>nav_radiobutton_unchecked.png</icon>
+					<property name="desc">Remote / Keyboard</property>
+					<onclick>Skin.Reset(Home_Panel)</onclick>
+					<onclick>Skin.SetBool(Home_Horizontal)</onclick>
+					<property name="sublabel">[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31210][/COLOR][/UPPERCASE]</property> <!-- Disabled -->
+					<visible>!Skin.hasSetting(Home_Horizontal)</visible>
+				</item>
+                
+				<item>
+					<label>Panel</label>
+					<property name="desc">Mouse / Touch [COLOR=FFe5e500][WIP][/COLOR]</property>
+					<icon>nav_radiobutton_checked.png</icon>
+					<property name="sublabel">[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31209][/COLOR][/UPPERCASE]</property> <!-- Enabled -->
+					<visible>Skin.hasSetting(Home_Panel)</visible>
+				</item>
+				<item>
+					<label>Panel</label>
+					<property name="desc">Mouse / Touch [COLOR=FFe5e500][WIP][/COLOR]</property>
+					<icon>nav_radiobutton_unchecked.png</icon>
+					<!--<onclick>Skin.Reset(Home_Horizontal)</onclick>
+					<onclick>Skin.SetBool(Home_Panel)</onclick>-->
+					<property name="sublabel">[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31210][/COLOR][/UPPERCASE]</property> <!-- Disabled -->
+					<visible>!Skin.hasSetting(Home_Panel)</visible>
+				</item>
+
+				<item>
+					<label>Vertical</label>
+					<property name="desc">Mouse / Touch [COLOR=FFe5e500][WIP][/COLOR]</property>
+					<icon>nav_radiobutton_checked.png</icon>
+					<visible>Skin.hasSetting(Home_Vertical)</visible>
+				</item>
+				<item>
+					<label>Vertical</label>
+					<property name="desc">Mouse / Touch [COLOR=FFe5e500][WIP][/COLOR]</property>
+					<icon>nav_radiobutton_unchecked.png</icon>
+					<visible>!Skin.hasSetting(Home_Vertical)</visible>
+				</item>
+
+				</content>
+        
+			</control>
+
+			<!-- Hub -->
+			<include content="Startup_Header">
+				<param name="id">14</param>
+				<param name="label">Hub</param>
+			</include>
+
+			<!-- Panel -->
+			<control type="list" id="15">
+				<height>90</height>				
+				<onback>10</onback>
+				<itemlayout width="980" height="30">
+					<include content="Startup_List_Itemlayout">
+						<param name="id">15</param>
+						<param name="align">left</param>
+					</include>
+				</itemlayout>
+				<focusedlayout width="980" height="30">
+					<include content="Startup_List_Focusedlayout">
+						<param name="id">15</param>
+						<param name="align">left</param>
+					</include>
+				</focusedlayout>
+
+				<content>
+
+				<item>
+					<label>$LOCALIZE[31532] #1</label>
+					<property name="desc">$INFO[Skin.String(Hub0.Widget1.Name)]</property>
+					<label2>[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31197][/COLOR][/UPPERCASE]</label2>
+					<icon>nav_radiobutton_unchecked.png</icon>
+					<onclick>Skin.SetString(selector1,0)</onclick>
+					<onclick>Skin.SetString(selector2,1)</onclick>
+					<onclick>Skin.SetString(Widget_11505_Type,TextFull)</onclick>
+					<onclick>ActivateWindow(1161)</onclick>
+					<visible>String.isEmpty(Skin.String(Hub0.Widget1.Content))</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[31532] #1</label>
+					<property name="desc">$INFO[Skin.String(Hub0.Widget1.Name)]</property>
+					<label2>[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31196][/COLOR][/UPPERCASE]</label2>
+					<icon>nav_radiobutton_checked.png</icon>
+					<onclick>Skin.Reset(Widget_11505_Type)</onclick>
+		                        <onclick>Skin.Reset(Hub0.Widget1.Name)</onclick>
+		                        <onclick>Skin.Reset(Hub0.Widget1.Content)</onclick>
+					<visible>!String.isEmpty(Skin.String(Hub0.Widget1.Content))</visible>
+				</item>
+
+				<item>
+					<label>$LOCALIZE[31532] #2</label>
+					<property name="desc">$INFO[Skin.String(Hub1.Widget1.Name)]</property>
+					<label2>[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31197][/COLOR][/UPPERCASE]</label2>
+					<icon>nav_radiobutton_unchecked.png</icon>
+					<onclick>Skin.SetString(selector1,1)</onclick>
+					<onclick>Skin.SetString(selector2,1)</onclick>
+					<onclick>Skin.SetString(Widget_11506_Type,TextFull)</onclick>
+					<onclick>ActivateWindow(1161)</onclick>
+					<visible>String.isEmpty(Skin.String(Hub1.Widget1.Content))</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[31532] #2</label>
+					<property name="desc">$INFO[Skin.String(Hub1.Widget1.Name)]</property>
+					<label2>[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31196][/COLOR][/UPPERCASE]</label2>
+					<icon>nav_radiobutton_checked.png</icon>
+					<onclick>Skin.Reset(Widget_11506_Type)</onclick>
+		                        <onclick>Skin.Reset(Hub1.Widget1.Name)</onclick>
+		                        <onclick>Skin.Reset(Hub1.Widget1.Content)</onclick>
+					<visible>!String.isEmpty(Skin.String(Hub1.Widget1.Content))</visible>
+				</item>
+
+				<item>
+					<label>$LOCALIZE[31532] #3</label>
+					<property name="desc">$INFO[Skin.String(Hub2.Widget1.Name)]</property>
+					<label2>[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31197][/COLOR][/UPPERCASE]</label2>
+					<icon>nav_radiobutton_unchecked.png</icon>
+					<onclick>Skin.SetString(selector1,2)</onclick>
+					<onclick>Skin.SetString(selector2,1)</onclick>
+					<onclick>Skin.SetString(Widget_11507_Type,TextFull)</onclick>
+					<onclick>ActivateWindow(1161)</onclick>
+					<visible>String.isEmpty(Skin.String(Hub2.Widget1.Content))</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[31532] #3</label>
+					<property name="desc">$INFO[Skin.String(Hub2.Widget1.Name)]</property>
+					<label2>[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31196][/COLOR][/UPPERCASE]</label2>
+					<icon>nav_radiobutton_checked.png</icon>
+					<onclick>Skin.Reset(Widget_11507_Type)</onclick>
+		                        <onclick>Skin.Reset(Hub2.Widget1.Name)</onclick>
+		                        <onclick>Skin.Reset(Hub2.Widget1.Content)</onclick>
+					<visible>!String.isEmpty(Skin.String(Hub2.Widget1.Content))</visible>
+				</item>
+
+				</content>
+        
+			</control>
+
+			<!-- Backend -->
+			<include content="Startup_Header">
+				<param name="id">16</param>
+				<param name="label">Backend</param>
+			</include>
+
+			<!-- Panel -->
+			<control type="list" id="17">
+				<height>90</height>				
+				<onback>10</onback>
+				<itemlayout width="980" height="30">
+					<include content="Startup_List_Itemlayout">
+						<param name="id">17</param>
+						<param name="align">left</param>
+					</include>
+				</itemlayout>
+				<focusedlayout width="980" height="30">
+					<include content="Startup_List_Focusedlayout">
+						<param name="id">17</param>
+						<param name="align">left</param>
+					</include>
+				</focusedlayout>
+
+				<content>
+
+				<item>
+					<label>KODI</label>
+					<label2>[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31196][/COLOR][/UPPERCASE]</label2> <!-- ON -->
+					<property name="desc">Library Backend</property>
+					<icon>icon_kodi.png</icon>
+					<onclick>Skin.SetBool(Home_200_Hide)</onclick>
+					<visible>!Skin.HasSetting(Home_200_Hide)</visible>
+				</item>
+				<item>
+					<label>KODI</label>
+					<label2>[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31197][/COLOR][/UPPERCASE]</label2> <!-- OFF -->
+					<property name="desc">Library Backend</property>
+					<icon>icon_kodi.png</icon>
+					<onclick>Skin.Reset(Home_200_Hide)</onclick>
+					<visible>Skin.HasSetting(Home_200_Hide)</visible>
+				</item>
+
+				<item>
+					<label>PLEX</label>
+					<property name="desc">PlexKodiConnect Add-on</property>
+					<label2>[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31196][/COLOR][/UPPERCASE]</label2> <!-- ON -->
+					<icon>icon_plex.png</icon>
+					<onclick>Skin.Reset(FirstRun_Plex)</onclick>
+					<visible>Skin.hasSetting(FirstRun_Plex)</visible>
+				</item>
+				<item>
+					<label>PLEX</label>
+					<property name="desc">PlexKodiConnect Add-on</property>
+					<label2>[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31197][/COLOR][/UPPERCASE]</label2> <!-- OFF -->
+					<icon>icon_plex.png</icon>
+					<onclick>Skin.Reset(FirstRun_Emby)</onclick>
+					<onclick>Skin.SetBool(FirstRun_Plex)</onclick>
+					<visible>!Skin.hasSetting(FirstRun_Plex)</visible>
+				</item>
+
+				<item>
+					<label>EMBY</label>
+					<property name="desc">Emby for Kodi Add-on</property>
+					<label2>[UPPERCASE][COLOR=FF00e500]$LOCALIZE[31196][/COLOR][/UPPERCASE]</label2> <!-- ON -->
+					<icon>icon_emby.png</icon>
+					<onclick>Skin.Reset(FirstRun_Emby)</onclick>
+					<visible>Skin.hasSetting(FirstRun_Emby)</visible>
+				</item>
+				<item>
+					<label>EMBY</label>
+					<property name="desc">Emby for Kodi Add-on</property>
+					<label2>[UPPERCASE][COLOR=FFE50000]$LOCALIZE[31197][/COLOR][/UPPERCASE]</label2> <!-- OFF -->
+					<icon>icon_emby.png</icon>
+					<onclick>Skin.Reset(FirstRun_Plex)</onclick>
+					<onclick>Skin.SetBool(FirstRun_Emby)</onclick>
+					<visible>!Skin.hasSetting(FirstRun_Emby)</visible>
+				</item>
+
+				</content>
+        
+			</control>
+
+			<!-- Next -->
+			<control type="list" id="18">
+				<top>10</top>
+				<height>30</height>				
+				<onback>10</onback>
+				<itemlayout width="980" height="30">
+					<include content="Startup_List_Itemlayout">
+						<param name="id">18</param>
+						<param name="align">center</param>
+					</include>
+				</itemlayout>
+				<focusedlayout width="980" height="30">
+					<include content="Startup_List_Focusedlayout">
+						<param name="id">18</param>
+						<param name="align">center</param>
+					</include>
+				</focusedlayout>
+
+				<content>
+					<item>
+						<label>$VAR[Var_FirstRun_Backend]</label> <!-- Next -->
+						<property name="center">true</property>
+						<onclick>Skin.SetBool(FirstRun)</onclick>
+						<onclick condition="Skin.hasSetting(FirstRun_Plex)">EnableAddon(plugin.video.plexkodiconnect)</onclick>
+						<onclick condition="Skin.hasSetting(FirstRun_Emby)">EnableAddon(plugin.video.emby)</onclick>
+						<onclick>Dialog.Close(1115)</onclick>
+						<onclick>ReplaceWindow(home)</onclick>
+					</item>
+				</content>
+			</control>
+
+		</control>
+
+		<control type="group">
+
+		<control type="image">
+			<top>130</top>
+			<left>150</left>
+			<width>980</width>
+			<height>60</height>
+			<texture>firstrun_line_2.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image">
+			<top>240</top>
+			<left>150</left>
+			<width>980</width>
+			<height>120</height>
+			<texture>firstrun_line_4.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<aspectratio>scale</aspectratio>
+		</control>
+
+		<control type="image">
+			<top>410</top>
+			<left>150</left>
+			<width>980</width>
+			<height>90</height>
+			<texture>firstrun_line_3.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image">
+			<top>550</top>
+			<left>150</left>
+			<width>980</width>
+			<height>90</height>
+			<texture>firstrun_line_3.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image">
+			<top>660</top>
+			<left>150</left>
+			<width>980</width>
+			<height>30</height>
+			<texture>firstrun_line_1.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<aspectratio>scale</aspectratio>
+		</control>
+
+		<control type="image">
+			<top>245</top>
+			<left>880</left>
+			<texture>special://skin/resources/screenshot-01.jpg</texture>
+			<width>200</width>
+			<height>110</height>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<visible>!Skin.hasSetting(Home_Horizontal) + !Skin.hasSetting(Home_Panel)</visible>
+		</control>
+		<control type="image">
+			<top>245</top>
+			<left>880</left>
+			<texture>special://skin/resources/screenshot-02.jpg</texture>
+			<width>200</width>
+			<height>110</height>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<visible>Skin.hasSetting(Home_Horizontal)</visible>
+		</control>
+
+		</control>
+
+	</controls>
+
+
+	<!-- Language -->
+
+	<!--
+
+			<control type="list" id="11">
+				<height>150</height>				
+				<onback>Dialog.Close(1116)</onback>
+				<itemlayout width="980" height="30">
+					<include content="Startup_List_Itemlayout">
+						<param name="id">11</param>
+						<param name="align">left</param>
+					</include>
+				</itemlayout>
+				<focusedlayout width="980" height="30">
+					<include content="Startup_List_Focusedlayout">
+						<param name="id">11</param>
+						<param name="align">left</param>
+					</include>
+				</focusedlayout>
+
+				<content>
+					<item>
+						<label>English</label>
+						<icon>icons/country/uk.png</icon>
+						<onclick>SetGUILanguage(resource.language.en_gb)</onclick>
+						<onclick>Dialog.Close(1116)</onclick>
+					</item>
+					<item>
+						<label>French</label>
+						<icon>icons/country/fr.png</icon>
+						<onclick>SetGUILanguage(resource.language.fr_fr)</onclick>
+						<onclick>Dialog.Close(1116)</onclick>
+					</item>
+					<item>
+						<label>German</label>
+						<icon>icons/country/de.png</icon>
+						<onclick>SetGUILanguage(resource.language.de_de)</onclick>
+						<onclick>Dialog.Close(1116)</onclick>
+					</item>
+					<item>
+						<label>Polish</label>
+						<icon>icons/country/pl.png</icon>
+						<onclick>SetGUILanguage(resource.language.pl_pl)</onclick>
+						<onclick>Dialog.Close(1116)</onclick>
+					</item>
+					<item>
+						<label>Russian</label>
+						<icon>icons/country/ru.png</icon>
+						<onclick>SetGUILanguage(resource.language.ru_ru)</onclick>
+						<onclick>Dialog.Close(1116)</onclick>
+					</item>
+				</content>
+
+			</control>
+
+		</control>
+
+	-->
+
+</window>

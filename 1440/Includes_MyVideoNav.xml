@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<!-- Viewmode Menu -->
+<include name="Viewmode_Navigation_Options">
+
+	<control type="group" id="7000">
+		<include>Animation_CommonFade_300</include>
+		<visible allowhiddenfocus="true">Window.IsVisible(106) | ControlGroup(7000).hasFocus</visible> <!-- Context Menu -->
+
+		<!-- Background (DIM) -->
+		<control type="image">
+			<include>background_default</include>
+                        <texture>bg_black.png</texture>
+			<colordiffuse>AA000000</colordiffuse>
+                </control>
+
+		<!-- Background (Viewmode) -->
+		<control type="group">
+			<visible>!Window.IsVisible(106)</visible>
+                                      
+			<!-- Custom Viewmode (Edit) / Keyboard / Filter-->
+			<animation effect="slide" end="0,-140" time="400" tween="cubic" easing="inout" condition="ControlGroup(7006).hasFocus | Window.isVisible(103) | Window.isVisible(10202)">Conditional</animation>
+
+			<control type="image">
+				<left>500</left>
+				<top>176</top>
+				<include>AspectRatio_Width_780</include>
+				<include>AspectRatio_Height_440</include>
+				<include>AspectRatio_Navigation_Background</include>
+				<colordiffuse>55FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>500</left>
+				<top>176</top>
+				<include>AspectRatio_Width_780</include>
+				<include>AspectRatio_Height_440</include>
+				<include>AspectRatio_Navigation_Background</include>
+				<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				<visible>Control.hasFocus(7002) | Control.hasFocus(7007) | Control.hasFocus(7520)</visible>
+			</control>
+		</control>
+
+		<!-- Header -->
+		<control type="group">
+			<top>20</top>
+
+			<control type="grouplist">
+				<include>AspectRatio_Width</include>
+				<height>200</height>
+				<align>center</align>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<itemgap>30</itemgap>
+				<visible>![ ControlGroup(7006).hasFocus | Window.isVisible(103) | Window.isVisible(10202) ]</visible> <!-- Edit / Keyboard / Filter -->
+
+				<!-- Label -->
+				<control type="label">
+					<width min="60" max="1480">auto</width>
+					<label>$VAR[Var_QuickMenu_Header]</label>
+					<font>Font_Bartowski_Main_SubMenu</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<scroll>true</scroll>
+				</control>
+
+				<!-- Overlay -->
+				<control type="group">
+					<top>20</top>
+					<width>80</width>
+					<orientation>horizontal</orientation>
+					<itemgap>0</itemgap>
+					<include>Viewmode_Overlay_Watched_Medium</include>
+					<visible>ListItem.Overlay</visible>
+				</control>
+			</control>
+
+			<!-- Separator -->
+			<control type="image">
+				<left>500</left>
+				<top>160</top>
+				<include>AspectRatio_Width_780</include>
+				<include>SeparatorH</include>
+				<visible>Window.isVisible(106)</visible><!-- Context Menu -->
+			</control>
+
+		</control>
+
+		<!-- MENU -->
+		<control type="group">
+			<visible allowhiddenfocus="true">![ ControlGroup(7005).hasFocus | ControlGroup(7006).hasFocus ]</visible>
+
+			<control type="group" id="7001">
+				<left>0</left>
+				<top>40</top>
+
+				<control type="grouplist">
+					<width>500</width>
+					<height>1360</height>
+					<orientation>vertical</orientation>
+					<itemgap>4</itemgap>
+					<!--<onleft>800</onleft>-->
+					<onright>SetFocus(7002)</onright>
+					<onback>800</onback>
+
+					<!-- Viewmode -->
+					<control type="label" id="7100">
+						<label>$LOCALIZE[31300]</label><!-- Viewtype -->
+						<include>QuickMenu_Header</include>
+					</control>
+					<!--<control type="image" id="7101">
+						<include>QuickMenu_Header_Separator</include>
+					</control>
+-->
+					<control type="radiobutton" id="7102">
+						<label>$VAR[Var_QuickMenu_Viewmode]</label><!-- Viewmode -->
+						<onclick condition="!Skin.HasSetting(LockViews)">SetFocus(7410)</onclick>
+						<textureradiofocus>icon_monitor.png</textureradiofocus>
+						<textureradionofocus>icon_monitor.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+					<!-- Next Viewmode -->
+					<control type="radiobutton" id="7103">
+						<label>$LOCALIZE[31515]</label>
+						<onclick condition="!Skin.HasSetting(LockViews)">Container.NextViewmode</onclick>
+						<textureradiofocus>icon_monitor.png</textureradiofocus>
+						<textureradionofocus>icon_monitor.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+					<control type="label" id="7105">
+						<include>QuickMenu_Placeholder</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+
+					<!-- PVR -->
+					<control type="label" id="7106">
+						<label>PVR</label>
+						<include>QuickMenu_Header</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+					<control type="radiobutton" id="7107">
+						<label>$LOCALIZEE[31341]</label><!-- Channels -->
+						<onclick>ActivateWindow(TVChannels)</onclick>
+						<textureradiofocus>icons/pvr/channels.png</textureradiofocus>
+						<textureradionofocus>icons/pvr/channels.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+					<control type="radiobutton" id="7108">
+						<label>$LOCALIZE[31001]</label><!-- Guide -->
+						<onclick>ActivateWindow(TVGuide)</onclick>
+						<textureradiofocus>icons/pvr/guide.png</textureradiofocus>
+						<textureradionofocus>icons/pvr/guide.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+					<control type="radiobutton" id="7109">
+						<label>$LOCALIZE[31340]</label><!-- Recordings -->
+						<onclick>ActivateWindow(TVRecordings)</onclick>
+						<textureradiofocus>icons/pvr/recordings.png</textureradiofocus>
+						<textureradionofocus>icons/pvr/recordings.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+					<control type="radiobutton" id="7110">
+						<label>$LOCALIZE[31052]</label><!-- Timer -->
+						<onclick>ActivateWindow(TVTimers)</onclick>
+						<textureradiofocus>icons/pvr/timers.png</textureradiofocus>
+						<textureradionofocus>icons/pvr/timers.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+					<control type="radiobutton" id="7111">
+						<label>$LOCALIZE[31342]</label><!-- Timer Rules -->
+						<onclick>ActivateWindow(TVTimerRules)</onclick>
+						<textureradiofocus>icons/pvr/timer-rules.png</textureradiofocus>
+						<textureradionofocus>icons/pvr/timer-rules.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+					<control type="radiobutton" id="7112">
+						<label>$LOCALIZE[31026]</label><!-- Search -->
+						<onclick>ActivateWindow(TVSearch)</onclick>
+						<textureradiofocus>icons/pvr/tv-search.png</textureradiofocus>
+						<textureradionofocus>icons/pvr/tv-search.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>Window.isVisible(MyPVRChannels.xml)</visible>
+					</control>
+
+					<control type="label" id="7115">
+						<include>QuickMenu_Placeholder</include>
+					</control>
+
+					<!-- Custom Viewmode (Edit/Browse) -->
+					<control type="label" id="7125">
+						<label>$LOCALIZE[31301]</label>
+						<include>QuickMenu_Header</include>
+						<visible>String.StartsWith(Container.Viewmode,Custom)</visible>
+					</control>
+					<control type="radiobutton" id="7126">
+						<label>$LOCALIZE[31302]</label><!-- Edit -->
+						<textureradiofocus>icon_edit.png</textureradiofocus>
+						<textureradionofocus>icon_edit.png</textureradionofocus>
+						<onclick condition="!Skin.HasSetting(LockOptions)">SetFocus(7610)</onclick>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>String.StartsWith(Container.Viewmode,Custom)</visible>
+					</control>
+					<control type="radiobutton" id="7127">
+						<label>$LOCALIZE[31303]</label><!-- Browse -->
+						<textureradiofocus>icon_update.png</textureradiofocus>
+						<textureradionofocus>icon_update.png</textureradionofocus>
+						<onclick>Skin.SetString(selector1,Browse)</onclick>
+						<onclick>ActivateWindow(1131)</onclick>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>String.StartsWith(Container.Viewmode,Custom)</visible>
+					</control>
+					<control type="label" id="7128">
+						<include>QuickMenu_Placeholder</include>
+						<visible>String.StartsWith(Container.Viewmode,Custom)</visible>
+					</control>
+
+					<!-- Appearance -->
+					<control type="label" id="7116">
+						<label>$LOCALIZE[31304]</label>
+						<include>QuickMenu_Header</include>
+					</control>
+<!--					<control type="image" id="7117">
+						<include>QuickMenu_Header_Separator</include>
+					</control>
+-->
+					<control type="radiobutton" id="7118">
+						<label>$VAR[Var_QuickMenu_Options]</label><!-- Options -->
+						<onclick condition="!Skin.HasSetting(LockOptions)">SetFocus(7510)</onclick>
+						<textureradiofocus>icon_options.png</textureradiofocus>
+						<textureradionofocus>icon_options.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+
+					<!-- Media -->
+					<control type="label" id="7119">
+						<include>QuickMenu_Placeholder</include>
+						<visible>Container.Content(MusicVideos)</visible>
+					</control>
+					<control type="label" id="7120">
+						<label>Media</label>
+						<include>QuickMenu_Header</include>
+						<visible>Container.Content(MusicVideos)</visible>
+					</control>
+<!--					<control type="image" id="7121">
+						<include>QuickMenu_Header_Separator</include>
+						<visible>Container.Content(MusicVideos)</visible>
+					</control>
+-->
+					<control type="radiobutton" id="16">
+						<label>$LOCALIZE[31343]</label> <!-- Partymode -->
+						<include>QuickMenu_Radiobutton</include>
+						<visible>Container.Content(MusicVideos)</visible>
+					</control>
+
+					<!-- Merk As -->
+					<control type="label" id="7135">
+						<include>QuickMenu_Placeholder</include>
+					</control>
+					<control type="label" id="7140">
+						<label>$LOCALIZE[31305]</label>
+						<include>QuickMenu_Header</include>
+					</control>
+<!--					<control type="image" id="7141">
+						<include>QuickMenu_Header_Separator</include>
+					</control>
+-->
+					<control type="radiobutton" id="7145">
+						<label>$LOCALIZE[31306]</label>
+						<onclick>markaswatched</onclick>
+						<textureradiofocus>OverlayWatched.png</textureradiofocus>
+						<textureradionofocus>OverlayWatched.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7150">
+						<label>$LOCALIZE[31307]</label>
+						<onclick>markasunwatched</onclick>
+						<textureradiofocus>OverlayUnwatched.png</textureradiofocus>
+						<textureradionofocus>OverlayUnwatched.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+
+					<!-- Add to -->
+					<control type="label" id="7155">
+						<include>QuickMenu_Placeholder</include>
+					</control>
+					<control type="label" id="7160">
+						<include>QuickMenu_Header</include>
+						<label>$LOCALIZE[31308]</label>
+					</control>
+<!--					<control type="image" id="7161">
+						<include>QuickMenu_Header_Separator</include>
+					</control>
+-->
+					<control type="radiobutton" id="7165">
+						<label>$LOCALIZE[31503]</label>
+						<onclick>SetFocus(800)</onclick>
+						<include>CustomHome_Add_Context</include>
+						<textureradiofocus>icon_star.png</textureradiofocus>
+						<textureradionofocus>icon_star.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7170">
+						<label>$LOCALIZE[31309]</label>
+						<onclick>Queue</onclick>
+						<textureradiofocus>icon_queue.png</textureradiofocus>
+						<textureradionofocus>icon_queue.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+
+					<!-- Actions -->
+					<control type="label" id="7175">
+						<include>QuickMenu_Placeholder</include>
+					</control>
+					<control type="label" id="7180">
+						<include>QuickMenu_Header</include>
+						<label>$LOCALIZE[31301]</label>
+					</control>
+<!--					<control type="image" id="7181">
+						<include>QuickMenu_Header_Separator</include>
+					</control>
+-->
+					<control type="radiobutton" id="8">
+						<label>$LOCALIZE[31026]</label> <!-- Search (KODI) -->
+						<textureradiofocus>icon_search.png</textureradiofocus>
+						<textureradionofocus>icon_search.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="11">
+						<label>20336</label> <!-- Unlock Shares -->
+						<onclick>mastermode</onclick>
+						<selected>system.ismaster</selected>
+						<textureradiofocus>icon_unlock.png</textureradiofocus>
+						<textureradionofocus>icon_unlock.png</textureradionofocus>
+						<include>QuickMenu_Radiobutton</include>
+						<visible>system.haslocks</visible>
+					</control>
+					<control type="radiobutton" id="20">
+						<label>653</label> <!-- Update Library -->
+						<altlabel>13353</altlabel>
+						<onclick>Search</onclick>
+						<textureradiofocus>nav_refresh.png</textureradiofocus>
+						<textureradionofocus>nav_refresh.png</textureradionofocus>
+						<selected>library.isscanningvideo</selected>
+						<include>QuickMenu_Radiobutton</include>
+					</control>
+				</control>
+			</control>
+
+			<!-- Apply Changes / Back -->
+			<control type="group">
+				<visible>![ Window.isVisible(106) | ControlGroup(7004).HasFocus | Window.isVisible(10202) ]</visible><!-- Context Menu / Filter -->
+				<animation effect="slide" end="0,100" condition="true">Conditional</animation>
+				<include>AspectRatio_PosY_Full</include>
+
+				<control type="button" id="7002">
+					<include>QuickMenu_ApplyChanges_Button</include>
+					<onleft>SetFocus(7001)</onleft>
+					<onright>SetFocus(7003)</onright>
+					<include>QuickMenu_ApplyChanges_OnClick</include>
+					<label>$VAR[Var_QuickMenu_ApplyLabel]</label>
+				</control>
+			</control>
+
+			<!-- KODI/PLEX FILTER -->
+			<control type="group" id="7003">
+				<left>500r</left>
+		                <top>40</top>
+	
+				<!-- FILTER (KODI) -->
+				<control type="group">
+
+					<!-- Menu -->
+					<control type="grouplist" id="7300">
+						<left>0</left>
+						<width>500</width>
+						<height>1400</height>
+						<orientation>vertical</orientation>
+						<itemgap>6</itemgap>
+						<onleft>7002</onleft>
+						<!--<onright>100</onright>-->
+						<onback>800</onback>
+
+						<!-- Type -->
+						<control type="label" id="7305">
+							<label>$VAR[Viewmode_Container_Type]</label>
+							<include>QuickMenu_Header</include>
+						</control>
+
+						<!-- Search -->
+						<control type="radiobutton" id="19">
+							<label>$LOCALIZE[31332]</label><!-- Find -->
+							<textureradiofocus>icon_search.png</textureradiofocus>
+							<textureradionofocus>icon_search.png</textureradionofocus>
+							<onfocus>Skin.SetBool(Keyboard_Search)</onfocus>
+							<onunfocus>Skin.Reset(Keyboard_Search)</onunfocus>
+							<include>QuickMenu_Radiobutton</include>
+						</control>
+
+						<control type="radiobutton" id="14">
+							<label>$LOCALIZE[31312]</label> <!-- Hide Watched -->
+							<include>QuickMenu_Radiobutton</include>
+						</control>
+
+						<!-- Filter -->
+						<control type="label" id="7307">
+							<include>QuickMenu_Placeholder</include>
+						</control>
+						<control type="label" id="7308">
+							<label>$LOCALIZE[31071]</label>
+							<include>QuickMenu_Header</include>
+						</control>
+						<control type="radiobutton" id="98">
+							<label>$LOCALIZE[31313]</label>
+							<include>QuickMenu_Radiobutton</include>
+							<onclick>Filter</onclick>
+							<selected>Container.Filtered</selected>
+							<!--<visible>Container.CanFilterAdvanced</visible>-->
+						</control>
+
+						<!-- Sort -->
+						<control type="label" id="7310">
+							<include>QuickMenu_Placeholder</include>
+						</control>
+						<control type="label" id="60">
+							<label>$LOCALIZE[31314]</label>
+							<include>QuickMenu_Header</include>
+						</control>
+						<control type="radiobutton" id="7340">
+							<label>$LOCALIZE[31345]</label><!-- Title -->
+							<onclick>Container.SetSortMethod(29)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[556])</selected>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						</control>
+						<control type="radiobutton" id="7341">
+							<label>$LOCALIZE[31102]</label><!-- Episode -->
+							<onclick>Container.SetSortMethod(23)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[20359])</selected>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+
+						<control type="radiobutton" id="7342">
+							<label>$LOCALIZE[31344]</label><!-- Date Added -->
+							<onclick>Container.SetSortMethod(40)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[570])</selected>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						</control>
+						<control type="radiobutton" id="7343">
+							<label>$LOCALIZE[31150]</label><!-- Date -->
+							<onclick>Container.SetSortMethod(2)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[552])</selected>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+
+
+						<control type="radiobutton" id="7344">
+							<label>$LOCALIZE[31103]</label><!-- Episodes -->
+							<onclick>Container.SetSortMethod(25)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[20360])</selected>
+							<visible>Container.Content(tvshows)</visible>
+						</control>
+						<control type="radiobutton" id="7345">
+							<label>$LOCALIZE[31346]</label><!-- Last Played -->
+							<onclick>Container.SetSortMethod(41)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[568])</selected>
+							<visible>Container.Content(tvshows)</visible>
+						</control>
+						<control type="radiobutton" id="7346">
+							<label>$LOCALIZE[31114]</label><!-- Year -->
+							<onclick>Container.SetSortMethod(16)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[562])</selected>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						</control>
+						<control type="radiobutton" id="7347">
+							<label>$LOCALIZE[31347]</label><!-- Rating -->
+							<onclick>Container.SetSortMethod(17)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[563])</selected>
+							<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+						</control>
+						<control type="radiobutton" id="7348">
+							<label>$LOCALIZE[31348]</label><!-- My Rating -->
+							<onclick>Container.SetSortMethod(18)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[38018])</selected>
+							<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
+						</control>
+						<control type="radiobutton" id="7349">
+							<label>$LOCALIZE[31163]</label><!-- MPAA Rating -->
+							<onclick>Container.SetSortMethod(31)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[20074])</selected>
+							<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+						</control>
+						<!--<control type="radiobutton" id="7350">
+							<label>20368</label>
+							<onclick>Container.SetSortMethod(30)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[20368])</selected>
+							<visible>Container.Content(episodes)</visible> 
+							Production code
+						</control>-->
+						<control type="radiobutton" id="7351">
+							<label>$LOCALIZE[31349]</label><!-- Duration -->
+							<onclick>Container.SetSortMethod(9)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[180])</selected>
+							<visible>Container.Content(movies)</visible>
+						</control>
+						<control type="radiobutton" id="7352">
+							<label>$LOCALIZE[31350]</label><!-- Play Count -->
+							<onclick>Container.SetSortMethod(42)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[567])</selected>
+							<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+						</control>
+						<control type="radiobutton" id="7353">
+							<label>$LOCALIZE[31351]</label><!-- Name -->
+							<onclick>Container.SetSortMethod(1)</onclick>
+							<include>QuickMenu_Radiobutton</include>
+							<selected>String.isEqual(Container.SortMethod,$LOCALIZE[551])</selected>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+
+						<!-- Sort Button -->
+						<control type="label" id="7360">
+							<include>QuickMenu_Placeholder</include>
+							<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
+						</control>
+						<control type="radiobutton" id="3">
+							<label>103</label>
+							<include>QuickMenu_Radiobutton</include>
+						</control>
+						<control type="radiobutton" id="4">
+							<label>$INFO[Container.SortOrder]</label>
+							<include>QuickMenu_Radiobutton</include>
+						</control>
+
+
+					</control>
+				</control>
+			</control>
+
+			<!-- Viewmode -->
+		        <control type="group" id="7004">
+				<left>530</left>
+				<top>1120</top>
+				<visible>ControlGroup(7004).HasFocus</visible>
+				<include>AspectRatio_PosX</include>
+				<include>AspectRatio_PosY_Full</include>
+				<include>Animation_Custom_Dialog_Visible</include>
+
+
+				<control type="image">
+					<top>190</top>
+					<width>1500</width>
+					<colordiffuse>66FFFFFF</colordiffuse>
+					<include>SeparatorH</include>
+				</control>
+
+				<!-- List -->
+				<control type="grouplist" id="7410">
+					<width>300</width>
+					<height>530</height>
+					<onup>SetFocus(7002)</onup>
+					<onright>7420</onright>
+					<onleft>7001</onleft>
+					<onback>7001</onback>
+
+					<control type="label" id="7411">
+						<label>List</label>
+						<include>QuickMenu_Small_Header</include>
+					</control>
+					<control type="radiobutton" id="7412">
+						<label>$LOCALIZE[31164]</label>
+						<onclick>Container.SetViewMode(800)</onclick>
+						<selected>String.isEqual(Container.Viewmode,List #1)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7413">
+						<label>$LOCALIZE[31518]</label>
+						<onclick>Container.SetViewMode(801)</onclick>
+						<selected>String.isEqual(Container.Viewmode,List #2)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7414">
+						<animation effect="slide" end="0,30" condition="true">conditional</animation>
+						<label>$LOCALIZE[31519] #1</label>
+						<onclick>Container.SetViewMode(850)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Custom #1)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+				</control>
+
+				<!-- Panel -->
+				<control type="grouplist" id="7420">
+					<left>300</left>
+					<width>300</width>
+					<height>530</height>
+					<onup>SetFocus(7002)</onup>
+					<onright>7430</onright>
+					<onleft>7410</onleft>
+					<onback>7001</onback>
+
+					<control type="label" id="7421">
+						<label>Panel</label>
+						<include>QuickMenu_Small_Header</include>
+					</control>
+					<control type="radiobutton" id="7422">
+						<label>$LOCALIZE[31164]</label>
+						<onclick>Container.SetViewMode(810)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Panel #1)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7423">
+						<label>$LOCALIZE[31518]</label>
+						<onclick>Container.SetViewMode(811)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Panel #2)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7424">
+						<label>$LOCALIZE[31519] #2</label>
+						<onclick>Container.SetViewMode(851)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Custom #2)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+						<animation effect="slide" end="0,30" condition="true">conditional</animation>
+					</control>
+				</control>
+
+				<!-- Fanart -->
+				<control type="grouplist" id="7430">
+					<left>600</left>
+					<width>300</width>
+					<height>530</height>
+					<onup>SetFocus(7002)</onup>
+					<onright>7440</onright>
+					<onleft>7420</onleft>
+					<onback>7001</onback>
+
+					<control type="label" id="7431">
+						<label>Fanart</label>
+						<include>QuickMenu_Small_Header</include>
+					</control>
+					<control type="radiobutton" id="7432">
+						<label>$LOCALIZE[31164]</label>
+						<onclick>Container.SetViewMode(820)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Fanart #1)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7433">
+						<label>$LOCALIZE[31518]</label>
+						<onclick>Container.SetViewMode(821)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Fanart #2)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7434">
+						<label>$LOCALIZE[31519] #3</label>
+						<onclick>Container.SetViewMode(852)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Custom #3)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+						<animation effect="slide" end="0,30" condition="true">conditional</animation>
+					</control>
+				</control>
+
+				<!-- Clearart -->
+				<control type="grouplist" id="7440">
+					<left>900</left>
+					<width>300</width>
+					<height>530</height>
+					<onup>SetFocus(7002)</onup>
+					<onright>7450</onright>
+					<onleft>7430</onleft>
+					<onback>7001</onback>
+
+					<control type="label" id="7441">
+						<label>Clearart</label>
+						<include>QuickMenu_Small_Header</include>
+					</control>
+					<control type="radiobutton" id="7442">
+						<label>$LOCALIZE[31164]</label>
+						<onclick>Container.SetViewMode(830)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Clearart #1)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7443">
+						<label>$LOCALIZE[31518]</label>
+						<onclick>Container.SetViewMode(831)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Clearart #2)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7444">
+						<label>[COLOR=TextDisabled]$LOCALIZE[31519] #4[/COLOR]</label>
+						<!--<onclick>Container.SetViewMode(853)</onclick>-->
+						<selected>String.isEqual(Container.Viewmode,Custom #4)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+						<animation effect="slide" end="0,30" condition="true">conditional</animation>
+					</control>
+				</control>
+
+				<!-- Banner -->
+				<control type="grouplist" id="7450">
+					<left>1200</left>
+					<width>300</width>
+					<height>530</height>
+					<onup>SetFocus(7002)</onup>
+					<onright>7410</onright>
+					<onleft>7440</onleft>
+					<onback>7001</onback>
+
+					<control type="label" id="7451">
+						<label>Banner</label>
+						<include>QuickMenu_Small_Header</include>
+					</control>
+					<control type="radiobutton" id="7452">
+						<label>$LOCALIZE[31164]</label>
+						<onclick>Container.SetViewMode(840)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Banner #1)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7453">
+						<label>$LOCALIZE[31518]</label>
+						<onclick>Container.SetViewMode(841)</onclick>
+						<selected>String.isEqual(Container.Viewmode,Banner #2)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+					</control>
+					<control type="radiobutton" id="7454">
+						<label>[COLOR=TextDisabled]$LOCALIZE[31519] #5[/COLOR]</label>
+						<!--<onclick>Container.SetViewMode(854)</onclick>-->
+						<selected>String.isEqual(Container.Viewmode,Custom #5)</selected>
+						<include>QuickMenu_Small_Radiobutton</include>
+						<animation effect="slide" end="0,30" condition="true">conditional</animation>
+					</control>
+				</control>
+
+			</control>
+
+		</control>
+
+		<!-- Viewmode (Options) -->
+		<control type="group" id="7005">
+			<left>0</left>
+			<top>40</top>
+			<include>Animation_CommonFade</include>
+			<visible>ControlGroup(7005).HasFocus</visible>
+
+			<!-- Left -->
+			<control type="grouplist" id="7510">
+				<width>500</width>
+				<height>1360</height>
+				<onright>7520</onright>
+				<onback>7001</onback>
+
+				<include>Background_Settings_Viewmodes_1</include>
+			</control>
+
+			<!-- Apply Changes / Back -->
+			<control type="group">
+				<top>60</top>
+				<include>AspectRatio_PosY_Full</include>
+
+				<control type="button" id="7520">
+					<include>QuickMenu_ApplyChanges_Button</include>
+					<onback>7001</onback>
+					<onleft>SetFocus(7510)</onleft>
+					<onright>SetFocus(7530)</onright>
+					<include>QuickMenu_ApplyChanges_OnClick</include>
+					<label>$VAR[Var_QuickMenu_ApplyLabel]</label>
+				</control>
+			</control>
+
+			<!-- Right -->
+			<control type="grouplist" id="7530">
+				<left>500r</left>
+				<width>500</width>
+				<height>1360</height>
+				<onleft>7520</onleft>
+				<onback>7001</onback>
+
+				<include>Background_Settings_Viewmodes_2</include>
+			</control>
+
+		</control>
+
+		<!-- Viewmode (Custom / Edit) -->
+		<control type="group" id="7006">
+			<left>0</left>
+			<top>40</top>
+			<include>Animation_CommonFade</include>
+			<visible>ControlGroup(7006).HasFocus</visible>
+
+			<control type="grouplist" id="7610">
+				<width>500</width>
+				<height>1320</height>
+				<onleft>7001</onleft>
+				<onright>7007</onright>
+				<onback>7001</onback>
+				<include>Custom_Viewmode_Settings_1</include>
+			</control>
+
+			<control type="group">
+				<top>60</top>
+				<visible>!Window.isVisible(1130)</visible>
+
+				<!-- Custom Viewmode (Edit) -->
+				<animation effect="slide" end="0,-140" time="400" tween="cubic" easing="inout" condition="ControlGroup(7006).hasFocus">Conditional</animation>
+
+				<control type="button" id="7007">
+					<include>QuickMenu_ApplyChanges_Button</include>
+					<onback>7001</onback>
+					<onleft>SetFocus(7610)</onleft>
+					<onright>SetFocus(7680)</onright>
+					<include>QuickMenu_ApplyChanges_OnClick</include>
+                                        <label>$VAR[Var_QuickMenu_ApplyLabel]</label>
+				</control>
+			</control>
+
+			<control type="grouplist" id="7680">
+				<left>500r</left>
+				<width>500</width>
+				<height>1360</height>
+				<onleft>7007</onleft>
+				<onright>7001</onright>
+				<onback>7001</onback>
+				<include>Custom_Viewmode_Settings_2</include>
+			</control>
+		</control>
+
+	</control>
+	</include>
+
+	<!-- Container Scrolling -->
+	<include name="Viewmode_Scrolling">
+
+		<control type="group">
+			<visible>!Skin.HasSetting(Viewmode_Hide_ScrollLetter) + [ Container.Scrolling | ControlGroup(50).hasFocus ] + !ControlGroup(7000).hasFocus</visible>
+			<include>Animation_CommonFade_Sortbar</include>
+			<include>AspectRatio_Both</include>
+
+			<control type="group">
+
+				<!-- Position -->
+				<animation effect="slide" end="400" condition="Control.isVisible(100) + !Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
+				<animation effect="slide" end="-400" condition="Control.isVisible(100) + Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
+				<animation effect="slide" end="400" condition="Control.isVisible(300) + !Skin.HasSetting(Panel1_Sidebar_Right)">Conditional</animation>
+				<animation effect="slide" end="-400" condition="Control.isVisible(300) + Skin.HasSetting(Panel1_Sidebar_Right)">Conditional</animation>
+				<animation effect="slide" end="400" condition="Control.isVisible(400) + !Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
+				<animation effect="slide" end="-400" condition="Control.isVisible(400) + Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
+
+				<control type="image">
+					<left>1030</left>
+					<top>470</top>
+					<width>500</width>
+					<height>500</height>					
+					<texture>bg_sortletter.png</texture>
+					<colordiffuse>FF000000</colordiffuse>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<!-- Sortletter -->
+				<control type="label">
+					<width>2560</width>
+					<height>1380</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$VAR[Var_SortLetter]</label>
+					<font>Font_Sortletter</font>
+					<textcolor>$VAR[Var_Color_Scrollbar_Hex]</textcolor>
+	                        </control>
+				<control type="label">
+					<width>2560</width>
+					<height>1380</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$VAR[Var_SortLetter_Filter]</label>
+					<font>Font_Sortletter</font>
+					<textcolor>$VAR[Var_Color_Scrollbar_Hex]</textcolor>
+					<visible>false</visible>
+	                        </control>
+
+				<!-- Page Number -->
+				<control type="label">
+					<top>150</top>
+					<width>2560</width>
+					<height>1440</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$VAR[Var_SortLetter_Page]</label>
+					<font>Font_NowPlaying_Global</font>
+					<textcolor>FFCCCCCC</textcolor>
+	                        </control>
+
+			</control>
+			</control>
+		</include>
+
+		<include name="Viewmode_Sortbar">
+
+			<!-- Sortletter Bar -->
+			<control type="group">
+				<visible>!Skin.HasSetting(Viewmode_Hide_ScrollLetter) + [ Container.Scrolling | ControlGroup(50).hasFocus ] + 
+					[ Container.Content(movies) | Container.Content(tvshows) | Container.Content(albums) | Container.Content(artists) ]
+				</visible>
+
+				<include>Animation_CommonFade_Sortbar</include>
+
+				<control type="image">
+					<left>200r</left>
+					<texture>gradient_sortletter.png</texture>
+					<width>200</width>
+					<include>AspectRatio_Height</include>
+					<colordiffuse>FF000000</colordiffuse>
+				</control>
+	
+				<control type="list">
+					<left>100r</left>
+					<top>18</top>
+					<width>100</width>
+					<height>1404</height>
+					<orientation>vertical</orientation>
+
+					<itemlayout width="100" height="54">
+						<control type="label">
+							<left>0</left>
+							<width>100</width>
+							<height>54</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Lato_Black_15</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<visible>!String.isEqual(ListItem.Property(color),true)</visible>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<width>100</width>
+							<height>54</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Lato_Black_30</font>
+							<textcolor>$VAR[Var_Color_Icon_Hex]</textcolor>
+							<visible>String.isEqual(ListItem.Property(color),true)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="100" height="54">
+						<control type="label">
+							<left>0</left>
+							<width>100</width>
+							<height>54</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Lato_Black_15</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<visible>!String.isEqual(ListItem.Property(color),true)</visible>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<width>100</width>
+							<height>54</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Lato_Black_30</font>
+							<textcolor>$VAR[Var_Color_Icon_Hex]</textcolor>
+							<visible>String.isEqual(ListItem.Property(color),true)</visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<include>viewtype_scrolling_sortletter</include>
+					</content>
+				</control>
+
+			</control>
+
+	</include>
+
+	<variable name="Viewmode_Container_Type">
+		<value condition="Container.Content(movies)">$LOCALIZE[31009]</value>
+		<value condition="Container.Content(tvshows)">$LOCALIZE[31011]</value>
+		<value condition="Container.Content(seasons)">$LOCALIZE[31101]</value>
+		<value condition="Container.Content(episodes)">$LOCALIZE[31103]</value>
+		<value condition="Container.Content(albums)">$LOCALIZE[31105]</value>
+		<value condition="Container.Content(artists)">$LOCALIZE[31109]</value>
+		<value condition="Container.Content(songs)">$LOCALIZE[31107]</value>
+		<value condition="Container.Content(photos)">$LOCALIZE[31111]</value>
+		<value condition="Container.Content(games)">$LOCALIZE[31018]</value>
+		<value>$LOCALIZE[31360]</value>
+	</variable>
+
+</includes>
+

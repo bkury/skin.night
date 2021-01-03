@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="2000">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<include>Animation_Window_Dialog</include>
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">1</param>
+			<param name="header_label"></param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">3</param>
+			<param name="scroll_onright">7</param>
+		</include>
+
+		<!-- Content -->
+		<control type="list" id="3">
+			<onright condition="!Control.isVisible(100)">7</onright>
+			<onleft>5</onleft>
+			<include>Dialog_General_List</include>
+		</control>
+		<control type="list" id="6">
+			<onright condition="!Control.isVisible(100)">7</onright>
+			<onleft>5</onleft>
+			<include>Dialog_General_List</include>
+		</control>
+
+		<!-- Category -->
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+			<include content="Dialog_General_Grouplist_Category_Content">
+				<param name="id">3</param>
+				<param name="label1_head">Creator</param>
+				<param name="label1_info">ListItem.AddonCreator</param>
+				<param name="label2_head">Summary</param>
+				<param name="label2_info">ListItem.AddonSummary</param>
+			</include>
+		</control>
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+			<include content="Dialog_General_Grouplist_Category_Content">
+				<param name="id">6</param>
+				<param name="label1_head">Creator</param>
+				<param name="label1_info">ListItem.AddonCreator</param>
+				<param name="label2_head">Summary</param>
+				<param name="label2_info">ListItem.AddonSummary</param>
+			</include>
+		</control>
+
+		<!-- Footer -->
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">5</param>
+			<param name="label"></param>
+			<param name="icon">nav_circle_check.png</param>
+			<param name="onup">3</param>
+			<param name="onleft">7</param>
+			<param name="onright">7</param>
+			<param name="position">Left</param>
+		</include>
+        	
+		<include content="Dialog_General_Footer_Button">
+			<param name="id">7</param>
+			<param name="label"></param>
+			<param name="icon">nav_circle_cancel.png</param>
+			<param name="onup">3</param>
+			<param name="onleft">5</param>
+			<param name="onright">5</param>
+			<param name="position">Right</param>
+		</include>
+
+	</control>
+	</controls>
+</window>

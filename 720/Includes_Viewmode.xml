@@ -1,0 +1,2071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<include name="Viewmode_Navigation">
+	<defaultcontrol always="true">800</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<onload>Skin.SetString(Window,$INFO[System.CurrentWindow])</onload>
+
+	<onload condition="String.isEqual(Skin.String(ApplyChangesViewmode),850)">Container.SetViewmode(850)</onload>
+	<onload condition="String.isEqual(Skin.String(ApplyChangesViewmode),851)">Container.SetViewmode(851)</onload>
+	<onload condition="String.isEqual(Skin.String(ApplyChangesViewmode),852)">Container.SetViewmode(852)</onload>
+	<onload condition="String.isEqual(Skin.String(ApplyChangesViewmode),853)">Container.SetViewmode(853)</onload>
+	<onload condition="String.isEqual(Skin.String(ApplyChangesViewmode),854)">Container.SetViewmode(854)</onload>
+
+	<onload>Skin.Reset(ApplyChangesViewmode)</onload>
+	<onload>Skin.Reset(ApplyChanges)</onload>
+
+	<views>800,801,810,811,820,821,830,831,840,841,850,851,852</views>
+
+	<!-- Animation -->
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+
+		<control type="group">
+
+			<!-- Dashboard -->
+			<control type="group">
+				<include condition="Skin.HasSetting(Dashboard_Enabled)">Dashboard_Hidden</include>
+
+				<!-- Fanart Background -->
+				<include>Background_Viewtype</include>
+
+				<!-- Navigation -->
+				<include>Viewmode_Navigation_Options</include>
+
+				<!-- Views -->
+				<control type="group">
+
+					<!-- Custom Viewmode (Edit) / Keyboard / Filter -->
+					<animation effect="slide" end="0,-70" time="400" tween="cubic" easing="inout" condition="ControlGroup(7006).hasFocus | Window.isVisible(103) | Window.isVisible(10202)">Conditional</animation>
+
+					<!-- Quick Menu -->
+					<animation effect="fade" start="100" end="0" time="600" condition="Window.isVisible(106)">conditional</animation> <!-- Context Menu -->
+
+					<!-- Settings (ZOOM) -->
+					<include>AspectRatio_Viewmode_Zoom</include>
+
+					<!-- Viewmodes -->
+					<control type="group">
+						<include condition="!Skin.hasSetting(Global_Hide_Animation)">Animation_Viewmode_Zoom</include>
+
+						<include>Viewmode_List</include>        <!-- 800/801 -->
+						<include>Viewmode_Panel</include>       <!-- 810/811 -->
+						<include>Viewmode_Fanart</include>	<!-- 820/821 -->
+						<include>Viewmode_Clearart</include>	<!-- 830/831 -->
+						<include>Viewmode_Banner</include>	<!-- 840/841 -->
+						<include>Viewmode_Custom</include>      <!-- 850/851/852 -->
+					</control>
+
+					<include>Viewmode_Sidebar</include>	<!-- Sidebar -->
+
+					<!-- Scrolling -->
+					<include>Viewmode_Scrolling</include>
+
+				</control>
+
+				<!-- Debug -->
+				<!--<include>debugInfos</include>-->
+
+                        	<!-- Video Preview -->
+				<include>Video_Preview</include>
+
+			</control>
+
+			<!-- Dashboard -->
+			<include>Dashboard</include>
+
+		</control>
+
+	</controls>
+
+</include>
+
+<include name="Viewmode_Visible_Unknown">
+	<visible>Container.Content(files)</visible>
+</include>
+
+<include name="Viewmode_Visible_Cover">
+	<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
+</include>
+
+<include name="Viewmode_Visible_Thumb">
+	<visible>Container.Content(episodes)</visible>
+</include>
+
+<include name="Viewmode_Visible_Square">
+	<visible>Container.Content(photoAlbums) | Container.Content(photos) | Container.Content(albums) | Container.Content(Songs) | Container.Content(Artists) | Container.Content(addons) | Window.isVisible(1)</visible>
+</include>
+
+<!-- Sidebar -->
+<include name="Viewmode_Sidebar">
+
+	<!-- Viewmode List #1 (100/Info) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,List #1)</visible>
+		<animation effect="slide" end="860,0" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(List1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(List1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(List1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(List1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Sidebar -->
+		<include>Sidebar</include>
+	</control>
+
+	<!-- Viewmode List #2 (110/Full) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,List #2)</visible>
+
+		<!-- Clock -->
+		<control type="group">
+			<include>Clock_Right_Pos_BG</include>
+			<include>Clock_Right</include>
+		</control>
+
+	</control>
+	
+	<!-- Viewmode Panel #1 (300/Info) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Panel #1)</visible>
+
+		<animation effect="slide" end="860,0" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(Panel1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Panel1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Panel1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Panel1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Panel1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Sidebar -->
+		<include>Sidebar</include>
+
+	</control>
+
+	<!-- Viewmode Panel #2 (310/Full) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Panel #2)</visible>
+
+		<!-- Clock -->
+		<control type="group">
+			<include>Clock_Right_Pos_BG</include>
+			<include>Clock_Right</include>
+		</control>
+
+	</control>
+
+	<!-- Viewmode Fanart #1 (600/Info) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Fanart #1)</visible>
+
+		<animation effect="slide" end="860,0" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(Fanart1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Fanart1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Fanart1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Fanart1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Fanart1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Sidebar -->
+		<include>Sidebar</include>
+
+	</control>
+
+	<!-- Viewmode Fanart #2 (610/Full) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Fanart #2)</visible>
+
+		<!-- Clock -->
+		<control type="group">
+			<include>Clock_Right_Pos_BG</include>
+			<include>Clock_Right</include>
+		</control>
+
+	</control>
+
+	<!-- Viewmode Clearart #1 (700/Info) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Clearart #1)</visible>
+
+		<animation effect="slide" end="860,0" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(Clearart1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Clearart1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Clearart1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Clearart1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Clearart1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Sidebar -->
+		<include>Sidebar</include>
+
+	</control>
+
+	<!-- Viewmode Clearart #2 (710/Full) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Clearart #2)</visible>
+
+		<!-- Clock -->
+		<control type="group">
+			<include>Clock_Right_Pos_BG</include>
+			<include>Clock_Right</include>
+		</control>
+
+	</control>
+
+	<!-- Viewmode Banner #1 (400/Info) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Banner #1)</visible>
+
+		<animation effect="slide" end="860,0" time="0" tween="cubic" easing="inout" condition="Skin.HasSetting(Banner1_Sidebar_Right)">Conditional</animation>
+		<animation effect="slide" start="-500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Banner1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" start="500" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Banner1_Sidebar_Right)">WindowOpen</animation>
+		<animation effect="slide" end="-500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + !Skin.HasSetting(Banner1_Sidebar_Right)">WindowClose</animation>
+		<animation effect="slide" end="500" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(Global_Hide_Animation) + Skin.HasSetting(Banner1_Sidebar_Right)">WindowClose</animation>
+
+		<!-- Sidebar -->
+		<include>Sidebar</include>
+
+	</control>
+
+	<!-- Viewmode Banner #2 (410/Full) -->
+	<control type="group">
+		<visible>String.IsEqual(Container.Viewmode,Banner #2)</visible>
+
+		<!-- Clock -->
+		<control type="group">
+			<include>Clock_Right_Pos_BG</include>
+			<include>Clock_Right</include>
+		</control>
+
+	</control>
+
+</include>
+
+<include name="Sidebar">
+	<include>Sidebar_Background</include>
+	<include>Sidebar_Content</include>
+</include>
+
+<include name="Sidebar_Background">
+	<!-- Backgound -->
+	<control type="image">
+		<left>-1</left>
+		<width>421</width>
+		<include>AspectRatio_Height</include>
+		<colordiffuse>99000000</colordiffuse>
+		<include>Background</include>
+	</control>
+	<control type="image">
+		<left>-1</left>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<animation effect="fade" end="20" condition="true">Conditional</animation>
+		<include>SeparatorV</include>
+	</control>
+	<control type="image">
+		<left>420</left>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<animation effect="fade" end="20" condition="true">Conditional</animation>
+		<include>SeparatorV</include>
+	</control>
+
+</include>
+
+<include name="Sidebar_Content">
+
+	<!-- Content (BACK) -->
+	<control type="group">
+		<visible>String.isEqual(ListItem.Label,..)</visible>
+		<control type="image">
+			<left>100</left>
+			<width>220</width>
+			<include>AspectRatio_Height</include>
+			<texture>icon_circled_left.png</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</control>
+
+	<!-- Content (DATA) -->
+	<control type="group">
+		<left>20</left>
+		<visible>!String.isEqual(ListItem.Label,..)</visible>
+
+		<!-- Header -->
+		<control type="group">
+			<top>20</top>
+			<include>Viewmode_Sidebar_Header</include>
+		</control>
+
+		<!-- Duration -->
+		<control type="group">
+			<top>90</top>
+			<visible>![ Container.Content() | Container.Content(files) | Container.Content(actors) | Container.Content(studios) | Container.Content(directors) | Container.Content(genres) | Container.Content(countries) | Container.Content(artists) | Container.Content(seasons) | Window.isVisible(1) ]</visible>
+			<include>Viewmode_Sidebar_Duration</include>
+		</control>
+
+		<!-- Info -->
+		<control type="group">
+			<top>150</top>
+			<visible>![ Container.Content() | Container.Content(files) | Container.Content(actors) | Container.Content(studios) | Container.Content(directors) | Container.Content(genres) | Container.Content(countries) | Container.Content(artists) | Container.Content(seasons) | Window.isVisible(1) ]</visible>
+			<include>Viewmode_Sidebar_Info</include>
+		</control>
+
+		<!-- Mediaflags -->
+		<control type="group">
+			<top>250</top>
+			<visible>![ Container.Content() | Container.Content(files) | Container.Content(actors) | Container.Content(studios) | Container.Content(directors) | Container.Content(genres) | Container.Content(countries) | Container.Content(artists) | Container.Content(Albums) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(photos) | Window.isVisible(1) ]</visible>
+			<include>Viewmode_Sidebar_Mediaflags</include>
+		</control>
+
+		<!-- Image -->
+		<control type="group">
+			<top>295</top>
+			<animation effect="slide" end="0,-190" condition="Container.Content() | Container.Content(files) | Container.Content(actors) | Container.Content(studios) | Container.Content(directors) | Container.Content(genres) | Container.Content(countries) | Container.Content(artists) | Container.Content(seasons) | Window.isVisible(1)">Conditional</animation>
+			<animation effect="slide" end="0,-30" condition="Container.Content(tvshows) | Container.Content(albums) | Container.Content(photos)">Conditional</animation>
+			<include>Viewmode_Sidebar_Image</include>
+		</control>
+
+		<!-- Plot -->
+		<control type="group">
+			<top>515</top>
+			<animation effect="slide" end="0,-190" condition="Container.Content(files) | Container.Content(artists) | Container.Content(seasons) | Window.isVisible(1)">Conditional</animation>
+			<animation effect="slide" end="0,-30" condition="Container.Content(tvshows) | Container.Content(albums) | Container.Content(photos)">Conditional</animation>
+			<include>Viewmode_Sidebar_Plot</include>
+		</control>
+
+		<!-- Clock -->
+		<control type="group">
+			<top>65r</top>
+			<include>Clock_Left_Sidebar</include>
+		</control>
+
+		<!-- Status -->
+		<control type="group">
+			<left>170</left>
+			<top>65r</top>
+			<include>Viewmode_Sidebar_Status</include>
+		</control>
+
+	</control>
+
+</include>
+
+<!-- Sidebar (Filter Status) -->
+<include name="Viewmode_Sidebar_Status">
+
+	<control type="label">
+		<label>$VAR[Var_Sidebar_Status]</label>
+		<textcolor>FFFFFFFF</textcolor>
+		<font>Lato_Black_25</font>
+		<width>210</width>
+		<align>right</align>
+	</control>
+	<control type="label">
+		<top>32</top>
+		<label>$INFO[Container.NumItems] $VAR[Viewmode_Container_Type]</label>
+		<textcolor>FFCCCCCC</textcolor>
+		<font>Lato_Light_20</font>
+		<width>210</width>
+		<align>right</align>
+	</control>
+
+</include>
+
+<!-- Sidebar (Header) -->
+<include name="Viewmode_Sidebar_Header">
+
+	<!-- 1st Label -->
+	<control type="label">
+		<label>$VAR[Var_Info_Title]</label>
+		<font>Lato_Light_30</font>
+		<!--<font>Font_Bartowski_Main_Preplay</font>-->
+		<textcolor>$VAR[Var_Color_Header_Hex]</textcolor>
+		<width>380</width>
+		<height>30</height>
+		<aligny>center</aligny>
+		<wrapmultiline>false</wrapmultiline>
+		<scroll>true</scroll>
+	</control>
+
+	<!-- 2nd Label -->
+	<control type="label">
+		<top>35</top>
+		<width>380</width>
+		<label>$VAR[Var_Info_Sidebar_2]</label>
+		<font>Lato_Light_20</font>
+		<height>20</height>
+		<aligny>center</aligny>
+		<textcolor>FFCCCCCC</textcolor>
+		<wrapmultiline>false</wrapmultiline>
+	</control>
+
+</include>
+
+<!-- Sidebar (TIME/YEAR/RATING) -->
+<include name="Viewmode_Sidebar_Duration">
+
+	<!-- Grid -->
+	<control type="image">
+		<left>-5</left>
+		<top>0</top>
+		<width>390</width>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorH</include>    
+	</control>
+	<control type="image">
+		<left>-5</left>
+		<top>50</top>
+		<width>390</width>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorH</include>    
+	</control>
+	<control type="image">
+		<left>120</left>
+		<top>5</top>
+		<height>40</height>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorV</include>
+	</control>
+	<control type="image">
+		<left>260</left>
+		<top>5</top>
+		<height>40</height>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorV</include>
+	</control>
+
+	<!-- Duration -->
+	<control type="grouplist">
+		<width>140</width>
+		<height>50</height>
+		<itemgap>2</itemgap>
+		<orientation>horizontal</orientation>
+		<usecontrolcoords>true</usecontrolcoords>
+
+		<control type="label">
+			<width min="0" max="100">auto</width>
+			<label>$VAR[Var_Info_Duration]</label>
+			<font>Lato_Light_30</font>
+			<height>50</height>
+			<aligny>center</aligny>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+		<control type="label">
+			<top>4</top>
+			<height>50</height>
+			<aligny>center</aligny>
+			<width>40</width>
+			<label>$VAR[Var_Info_Duration_Unit]</label>
+			<font>Font_Unit</font>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+	</control>
+
+	<!-- Rating -->
+	<control type="grouplist">
+		<top>4</top>
+		<width>380</width>
+		<align>center</align>
+		<orientation>horizontal</orientation>
+		<itemgap>10</itemgap>
+
+		<include>Viewmode_Sidebar_Rating</include>
+	</control>
+
+	<!-- Year -->
+	<control type="label">
+		<left>240</left>
+		<width>140</width>
+		<height>50</height>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>$VAR[Var_Info_Year]</label>
+		<font>Lato_Light_30</font>
+		<textcolor>FFCCCCCC</textcolor>
+	</control>
+
+</include>
+
+<!-- Sidebar (TIME/YEAR/RATING) -->
+<include name="Viewmode_Sidebar_Duration_Big">
+
+	<!-- Grid -->
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>480</width>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorH</include>    
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>50</top>
+		<width>480</width>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorH</include>    
+	</control>
+	<control type="image">
+		<left>150</left>
+		<top>5</top>
+		<height>40</height>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorV</include>
+	</control>
+	<control type="image">
+		<left>330</left>
+		<top>5</top>
+		<height>40</height>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorV</include>
+	</control>
+
+	<!-- Duration -->
+	<control type="grouplist">
+		<top>5</top>
+		<width>140</width>
+		<height>50</height>
+		<orientation>horizontal</orientation>
+		<usecontrolcoords>true</usecontrolcoords>
+
+		<control type="label">
+			<width min="0" max="100">auto</width>
+			<label>$VAR[Var_Info_Duration]</label>
+			<font>Font_Bartowski_Main_Preplay</font>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+		<control type="label">
+			<left>-4</left>
+			<top>11</top>
+			<width>40</width>
+			<label>$VAR[Var_Info_Duration_Unit]</label>
+			<font>Font_Unit</font>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+	</control>
+
+	<!-- Rating -->
+	<control type="grouplist">
+		<top>4</top>
+		<width>480</width>
+		<align>center</align>
+		<orientation>horizontal</orientation>
+		<itemgap>10</itemgap>
+
+		<include>Viewmode_Sidebar_Rating</include>
+	</control>
+
+	<!-- Year -->
+	<control type="label">
+		<left>340</left>
+		<top>5</top>
+		<width>140</width>
+		<align>right</align>
+		<label>$VAR[Var_Info_Year]</label>
+		<font>Font_Bartowski_Main_Preplay</font>
+		<textcolor>FFCCCCCC</textcolor>
+	</control>
+
+	<!-- Addon -->
+	<control type="label">
+		<left>0</left>
+		<top>5</top>
+		<width>420</width>
+		<align>center</align>
+		<label>$VAR[Var_Info_Addon_Status] [COLOR=TextDisabled]$INFO[ListItem.AddonBroken][/COLOR]</label>
+		<font>Font_Bartowski_Main_Preplay</font>
+		<textcolor>FFCCCCCC</textcolor>
+		<visible>Container.Content(addons)</visible>
+	</control>
+
+</include>
+
+<include name="Viewmode_Sidebar_Rating">
+
+		<!-- Rating -->
+		<control type="group">
+			<width>70</width>
+			<control type="label">
+				<width>70</width>
+				<height>22</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Rating]</label>
+				<font>Font_Bartowski_Preplay</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+			<control type="image">
+				<top>16</top>
+				<width>70</width>
+				<height>30</height>
+				<texture>$VAR[Var_Rating_Image]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$VAR[Var_Color_StarRating_Hex]</colordiffuse>
+			</control>
+		</control>
+
+</include>
+
+<!-- Sidebar (INFO) -->
+<include name="Viewmode_Sidebar_Info">
+
+	<!-- Line 1 -->
+	<control type="group">
+		<top>0</top>
+
+		<control type="label">
+			<height>30</height>
+			<width>90</width>
+			<label>$VAR[Var_Text_Sidebar_Line_1]</label>
+			<font>Lato_Light_20</font>
+			<aligny>center</aligny>
+			<textcolor>FFAAAAAA</textcolor>
+		</control>
+		<control type="label">
+			<left>100</left>
+			<height>30</height>
+			<width>280</width>
+			<label fallback="31180">$VAR[Var_Info_Sidebar_Line_1]</label>
+			<font>Lato_Light_20</font>
+			<aligny>center</aligny>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+	</control>
+	
+	<!-- Line 2 -->
+	<control type="group">
+		<top>30</top>
+
+		<control type="label">
+			<left>0</left>
+			<width>90</width>
+			<height>30</height>
+			<aligny>center</aligny>
+			<label>$VAR[Var_Text_Sidebar_Line_2]</label>
+			<font>Font_Bartowski_Movies_Plot</font>
+			<textcolor>FFAAAAAA</textcolor>
+		</control>
+		<control type="label">
+			<left>100</left>
+			<width>280</width>
+			<height>30</height>
+			<aligny>center</aligny>
+			<label fallback="31180">$VAR[Var_Info_Sidebar_Line_2]</label>
+			<font>Font_Bartowski_Movies_Plot</font>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+	</control>
+
+	<!-- Line 3 -->
+	<control type="group">
+		<top>60</top>
+
+		<control type="label">
+			<label>$VAR[Var_Text_Sidebar_Line_3]</label>
+			<width>90</width>
+			<height>30</height>
+			<aligny>center</aligny>
+			<font>Font_Bartowski_Movies_Plot</font>
+			<textcolor>FFAAAAAA</textcolor>
+		</control>
+		<control type="label">
+			<left>100</left>
+			<width>280</width>
+			<height>30</height>
+			<aligny>center</aligny>
+			<label fallback="31180">$VAR[Var_Info_Sidebar_Line_3]</label>
+			<font>Font_Bartowski_Movies_Plot</font>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+	</control>
+
+	<!-- Separator (TV Shows) -->
+	<control type="image">
+		<top>95</top>
+		<left>-5</left>
+		<width>390</width>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorH</include>
+		<visible>Container.Content(tvshows) + ![ Control.isVisible(120) | Control.isVisible(200) ]</visible>
+	</control>
+
+</include>
+<include name="Viewmode_Sidebar_Mediaflags">
+
+	<!-- Mediaflags -->
+	<control type="image">
+		<top>0</top>
+		<left>-5</left>
+		<width>390</width>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorH</include>
+	</control>
+	<control type="image">
+		<left>-5</left>
+		<top>30</top>
+		<width>390</width>
+		<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+		<include>Viewmode_Sidebar_Separator</include>
+		<include>SeparatorH</include>
+	</control>
+	<control type="grouplist">
+		<height>30</height>
+		<width>380</width>
+		<align>center</align>
+		<itemgap>0</itemgap>
+		<orientation>horizontal</orientation>
+
+		<include content="Viewmode_Mediaflags">
+			<param name="width">76</param>
+			<param name="align">center</param>
+		</include>
+
+		<include>Viewmode_Mediaflags_General</include>
+	</control>
+
+</include>
+
+<include name="Viewmode_Sidebar_Image">
+
+	<!-- Poster -->
+	<control type="image">
+		<width>150</width>
+		<height>210</height>
+		<!--<texture>$INFO[ListItem.Icon]</texture>-->
+		<texture fallback="$INFO[ListItem.Icon]">$INFO[ListItem.Art(poster)]</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<fadetime>Image_Fadetime</fadetime>
+	        <visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows)</visible>
+	</control>
+
+	<!-- Thumb -->
+	<control type="image">
+		<width>380</width>
+		<height>210</height>
+		<texture>$INFO[ListItem.Icon]</texture>
+		<aspectratio aligny="top">scale</aspectratio>
+		<fadetime>Image_Fadetime</fadetime>
+		<visible>Container.Content(episodes) | Container.Content(artists)</visible>
+	</control>
+
+	<!-- Big -->
+	<control type="image">
+		<width>380</width>
+		<height>500</height>
+		<texture>$VAR[Var_Sidebar_Image]</texture>
+		<aspectratio>keep</aspectratio>
+		<fadetime>Image_Fadetime</fadetime>
+		<visible>Container.Content(actors) | Container.Content(studios) | Container.Content(directors) | Container.Content(genres) | Container.Content(countries)</visible>
+	</control>
+
+	<!-- Other -->
+	<control type="image">
+		<width>380</width>
+		<height>210</height>
+		<texture>$INFO[ListItem.Icon]</texture>
+		<aspectratio>keep</aspectratio>
+		<fadetime>Image_Fadetime</fadetime>
+		<visible>![ Container.Content(studios) | Container.Content(actors) | Container.Content(directors) | Container.Content(genres) | Container.Content(countries) | Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(artists) ]</visible>
+	</control>
+
+	<control type="group">
+		<top>20</top>
+		<left>170</left>
+		<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+
+		<!-- Content Rating -->
+		<control type="label">
+			<width>210</width>
+			<height>40</height>
+			<label>$LOCALIZE[31163]</label><!-- Content Rating -->
+			<font>Font_Bartowski_Movies_Plot</font>
+			<textcolor>FF888888</textcolor>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<top>20</top>
+			<width>210</width>
+			<height>40</height>
+			<label>$VAR[Var_Info_ContentRating]</label>
+			<font>Font_Bartowski_Sidebar_Info</font>
+			<align>left</align>
+			<wrapmultiline>false</wrapmultiline>
+			<scroll>true</scroll>
+			<textcolor>$VAR[Var_Color_ContentRating_Hex]</textcolor>
+		</control>
+
+		<control type="group">
+			<top>70</top>
+
+			<!-- Studio (Image) -->
+			<control type="image">
+				<width>210</width>
+				<height>110</height>
+				<texture>$VAR[Var_Info_Studio_Image]</texture>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<visible>Skin.HasSetting(StudioLogoImages)</visible>
+			</control>
+
+			<!-- Studio (Text) -->
+			<control type="label">
+				<width>210</width>
+				<height>40</height>
+				<label>31122</label><!-- Studio -->
+				<font>Font_Bartowski_Movies_Plot</font>
+				<textcolor>FF888888</textcolor>
+				<align>left</align>
+				<visible>!Skin.HasSetting(StudioLogoImages)</visible>
+			</control>
+			<control type="label">
+				<top>20</top>
+				<label>$VAR[Var_Info_Studio]</label>
+				<font>Font_Bartowski_Sidebar_Info</font>
+				<width>210</width>
+				<height>70</height>
+				<align>left</align>
+				<wrapmultiline>true</wrapmultiline>
+				<scroll>false</scroll>
+				<visible>!Skin.HasSetting(StudioLogoImages)</visible>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+
+		</control>
+
+	</control>
+
+</include>
+
+<include name="Viewmode_Sidebar_Plot">
+
+	<!-- Plot -->
+	<control type="textbox">
+		<width>380</width>
+		<include>AspectRatio_Height_320</include>
+		<align>justify</align>
+		<label>$VAR[Var_Info_Plot]</label>
+		<font>Font_Bartowski_Movies_Plot</font>
+		<textcolor>$VAR[Var_Color_Plot_Hex]</textcolor>
+		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		<visible>Container.Content(files) | Container.Content(seasons) | Container.Content(artists)</visible>
+	</control>
+	<control type="textbox">
+		<width>380</width>
+		<include>AspectRatio_Height_150</include>
+		<align>justify</align>
+		<label>$VAR[Var_Info_Plot]</label>
+		<font>Font_Bartowski_Movies_Plot</font>
+		<textcolor>$VAR[Var_Color_Plot_Hex]</textcolor>
+		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		<visible>Container.Content(tvshows) | Container.Content(albums) | Container.Content(photos)</visible>
+	</control>
+
+	<control type="textbox">
+		<width>380</width>
+		<include>AspectRatio_Height_125</include>
+		<align>justify</align>
+		<label>$VAR[Var_Info_Plot]</label>
+		<font>Font_Bartowski_Movies_Plot</font>
+		<textcolor>$VAR[Var_Color_Plot_Hex]</textcolor>
+		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		<visible>![ Container.Content(files) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(photos) ]</visible>
+	</control>
+
+</include>
+
+<include name="Viewmode_Sidebar_Separator">
+	<animation effect="fade" end="60" condition="true">Conditional</animation>
+</include>
+
+<!-- Horizontal Information -->
+<include name="Viewmode_Horizontal_Info">
+	<control type="group">
+		<control type="label">
+			<top>0</top>
+			<width>1000</width>
+			<align>left</align>
+			<label>$VAR[Viewmode_Horizontal_Info_1]</label>
+			<include>Font_Main_Header</include>
+			<scroll>false</scroll>
+			<textcolor>$VAR[Var_Color_Header_Hex]</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+		</control>
+		<control type="label">
+			<top>70</top>
+			<width>1000</width>
+			<align>left</align>
+			<label>$VAR[Viewmode_Horizontal_Info_2]</label>
+			<include>Font_Sub_Header</include>
+			<scroll>true</scroll>
+			<textcolor>$VAR[Var_Color_Subheader_Hex]</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+		</control>
+	</control>
+</include>
+<variable name="Viewmode_Horizontal_Info_1">
+	<value condition="ListItem.Type(episode)">$INFO[ListItem.Title]</value>
+	<value condition="ListItem.Type(album)">$INFO[ListItem.Artist]</value>
+	<value condition="Container.Content(songs)">$INFO[Container.Property(parentTitle)]</value>
+	<value>$INFO[ListItem.Label]</value>
+</variable>
+<variable name="Viewmode_Horizontal_Info_2">
+	<value condition="ListItem.Type(episode)">$INFO[ListItem.Date][COLOR=$VAR[Var_Color_Header_Hex]] / [/COLOR]$INFO[ListItem.Duration]min</value>
+	<value condition="ListItem.type(movie) | Container.Content(tvshows)">$INFO[ListItem.Year][COLOR=$VAR[Var_Color_Header_Hex]] / [/COLOR]$INFO[ListItem.Duration]min</value>
+	<value condition="ListItem.Type(photo)">$INFO[ListItem.Date]</value>
+	<value condition="Container.Content(albums)">$INFO[ListItem.Album]</value>
+	<value condition="Container.Content(artists)">$INFO[ListItem.Genre]</value>
+	<value condition="Container.Content(songs)">$INFO[ListItem.Label][COLOR=$VAR[Var_Color_Header_Hex]] / [/COLOR]$INFO[ListItem.Duration]</value>
+	<value condition="Container.Content(seasons)">$INFO[Container.SecondTitle]</value>
+
+	<value>$INFO[ListItem.Label]</value>
+</variable>
+
+
+<!-- Viewmode Information MORE -->
+<include name="Viewmode_Horizontal_Info_More">
+	<include>Deck_Information_More</include>
+</include>
+
+<!-- Mediaflags -->
+<include name="Viewmode_Mediaflags_Separator">
+	<control type="group">
+		<include>Viewmode_Mediaflags_General</include>
+		<control type="image">
+			<width>380</width>
+			<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+			<include>SeparatorH</include>
+			<animation effect="fade" end="40" condition="true">Conditional</animation>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<top>40</top>
+			<width>380</width>
+			<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+			<include>SeparatorH</include>
+			<animation effect="fade" end="40" condition="true">Conditional</animation>
+			<include>SeparatorH</include>
+		</control>
+	</control>
+</include>
+
+
+<include name="Viewmode_Mediaflags">
+
+	<!-- Video Resolution -->
+	<control type="label">
+		<width>$PARAM[width]</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_VideoResolution]</label>
+		<textcolor>$VAR[Var_Color_VideoResolution_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(VideoResolution)) + String.isEmpty(Listitem.VideoResolution) + String.isEmpty(Container.Listitem.VideoResolution) ]</visible>
+	</control>
+
+	<!-- Video Codec -->
+	<control type="label">
+		<width>$PARAM[width]</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_VideoCodec]</label>
+		<textcolor>$VAR[Var_Color_VideoCodec_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(VideoCodec)) + String.isEmpty(Listitem.VideoCodec) + String.isEmpty(Container.Listitem.VideoCodec) ]</visible>
+	</control>
+
+	<!-- Audio Codec -->
+	<control type="label">
+		<width>$PARAM[width]</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AudioCodec]</label>
+		<textcolor>$VAR[Var_Color_AudioCodec_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(AudioCodec)) + String.isEmpty(Listitem.audioCodec) + String.isEmpty(Container.Listitem.audioCodec) ]</visible>
+	</control>
+
+	<!-- Audio Channels -->
+	<control type="label">
+		<width>$PARAM[width]</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AudioChannels]</label>
+		<textcolor>$VAR[Var_Color_AudioChannels_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(AudioChannels)) + String.isEmpty(Listitem.audioChannels) + String.isEmpty(Container.Listitem.audioChannels) ]</visible>
+	</control>
+
+	<!-- Aspect Ratio -->
+	<control type="label">
+		<width>$PARAM[width]</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AspectRatio]</label>
+		<textcolor>$VAR[Var_Color_AspectRatio_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(AspectRatio)) + String.isEmpty(Listitem.VideoAspect) + String.isEmpty(Container.Listitem.VideoAspect) ]</visible>
+	</control>
+
+</include>
+
+<include name="Viewmode_Mediaflags_80">
+
+	<!-- Video Resolution -->
+	<control type="label">
+		<width>80</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_VideoResolution]</label>
+		<textcolor>$VAR[Var_Color_VideoResolution_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(VideoResolution)) + String.isEmpty(Listitem.VideoResolution) + String.isEmpty(Container.Listitem.VideoResolution) ]</visible>
+	</control>
+
+	<!-- Video Codec -->
+	<control type="label">
+		<width>80</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_VideoCodec]</label>
+		<textcolor>$VAR[Var_Color_VideoCodec_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(VideoCodec)) + String.isEmpty(Listitem.VideoCodec) + String.isEmpty(Container.Listitem.VideoCodec) ]</visible>
+	</control>
+
+	<!-- Audio Codec -->
+	<control type="label">
+		<width>80</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AudioCodec]</label>
+		<textcolor>$VAR[Var_Color_AudioCodec_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(AudioCodec)) + String.isEmpty(Listitem.audioCodec) + String.isEmpty(Container.Listitem.audioCodec) ]</visible>
+	</control>
+
+	<!-- Audio Channels -->
+	<control type="label">
+		<width>80</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AudioChannels]</label>
+		<textcolor>$VAR[Var_Color_AudioChannels_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(AudioChannels)) + String.isEmpty(Listitem.audioChannels) + String.isEmpty(Container.Listitem.audioChannels) ]</visible>
+	</control>
+
+	<!-- Aspect Ratio -->
+	<control type="label">
+		<width>80</width>
+		<align>$PARAM[align]</align>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AspectRatio]</label>
+		<textcolor>$VAR[Var_Color_AspectRatio_Hex]</textcolor>
+		<visible>![ String.isEmpty(Container.Listitem.Property(AspectRatio)) + String.isEmpty(Listitem.VideoAspect) + String.isEmpty(Container.Listitem.VideoAspect) ]</visible>
+	</control>
+
+</include>
+
+<include name="Viewmode_Mediaflags_63">
+
+	<!-- Video Resolution -->
+	<control type="label">
+		<width>63</width>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_VideoResolution]</label>
+		<textcolor>$VAR[Var_Color_VideoResolution_Hex]</textcolor>
+		<visible>![ String.isEmpty(Listitem.VideoResolution) + String.isEmpty(Container.Listitem.VideoResolution) ]</visible>
+	</control>
+
+	<!-- Video Codec -->
+	<control type="label">
+		<width>63</width>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_VideoCodec]</label>
+		<textcolor>$VAR[Var_Color_VideoCodec_Hex]</textcolor>
+		<visible>![ String.isEmpty(Listitem.VideoCodec) + String.isEmpty(Container.Listitem.VideoCodec) ]</visible>
+	</control>
+
+	<!-- Audio Codec -->
+	<control type="label">
+		<width>63</width>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AudioCodec]</label>
+		<textcolor>$VAR[Var_Color_AudioCodec_Hex]</textcolor>
+		<visible>![ String.isEmpty(Listitem.audioCodec) + String.isEmpty(Container.Listitem.audioCodec) ]</visible>
+	</control>
+
+	<!-- Audio Channels -->
+	<control type="label">
+		<width>63</width>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AudioChannels]</label>
+		<textcolor>$VAR[Var_Color_AudioChannels_Hex]</textcolor>
+		<visible>![ String.isEmpty(Listitem.audioChannels) + String.isEmpty(Container.Listitem.audioChannels) ]</visible>
+	</control>
+
+	<!-- Aspect Ratio -->
+	<control type="label">
+		<width>63</width>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_AspectRatio]</label>
+		<textcolor>$VAR[Var_Color_AspectRatio_Hex]</textcolor>
+		<visible>![ String.isEmpty(Listitem.VideoAspect) + String.isEmpty(Container.Listitem.VideoAspect) ]</visible>
+	</control>
+
+	<!-- Framerate -->
+<!--	<control type="label">
+		<width>63</width>
+		<include>Viewmode_Mediaflags_Label</include>
+		<label>$VAR[Var_Info_FrameRate]</label>
+		<textcolor>$VAR[Var_Color_FrameRate_Hex]</textcolor>
+		<visible>![ String.isEmpty(Listitem.Property(mediaTag-videoFrameRate)) + String.isEmpty(Container.Listitem.Property(mediaTag-videoFrameRate)) ]</visible>
+	</control>
+-->
+</include>
+
+<!-- Mediaflag (MPAA) -->
+<include name="Viewmode_Mediaflag_Mpaa">
+	<control type="group">
+		<control type="image">
+			<colordiffuse>$VAR[Var_Color_ContentRating_Hex]</colordiffuse>
+			<include>Viewmode_Mediaflags_Border_Big</include>
+		</control>
+		<control type="label">
+			<include>Viewmode_Mediaflags_Label_Big</include>
+			<label>$VAR[Var_Info_ContentRating]</label>
+			<textcolor>$VAR[Var_Color_ContentRating_Hex]</textcolor>
+		</control>
+	</control>
+</include>
+
+<!-- Mediaflags (Label/Small) -->
+<include name="Viewmode_Mediaflags_Label">
+	<!--<font>Font_Mediaflag_Small</font>-->
+	<font>Lato_Black_15</font>
+	<height>30</height>
+	<align>center</align>
+	<aligny>center</aligny>
+</include>
+
+<!-- Mediaflags (Label/Big) -->
+<include name="Viewmode_Mediaflags_Label_Big">
+	<font>Font_Mediaflag_Big</font>
+</include>
+
+<!-- Mediaflags (Border/Big) -->
+<include name="Viewmode_Mediaflags_Border_Big">
+	<include condition="!Skin.HasSetting(Mediaflags_Borderless) + !Skin.HasSetting(Mediaflags_Rounded)">Viewmode_Mediaflags_Border_Big_Square</include>
+	<include condition="!Skin.HasSetting(Mediaflags_Borderless) + Skin.HasSetting(Mediaflags_Rounded)">Viewmode_Mediaflags_Border_Big_Rounded</include>
+</include>
+<include name="Viewmode_Mediaflags_Border_Big_Rounded">
+	<width>80</width>
+	<height>45</height>
+	<aspectratio>keep</aspectratio>
+	<texture>flag_border_big_rounded.png</texture>
+	<animation effect="fade" end="80" condition="true">Conditional</animation>
+</include>
+<include name="Viewmode_Mediaflags_Border_Big_Square">
+	<width>80</width>
+	<height>45</height>
+	<aspectratio>keep</aspectratio>
+	<texture>flag_border_big_square.png</texture>
+	<animation effect="fade" end="80" condition="true">Conditional</animation>
+</include>
+
+<!-- Mediaflags (General) -->
+<include name="Viewmode_Mediaflags_General">
+	<visible>!Skin.hasSetting(Mediaflags_Disabled)</visible>
+</include>
+
+<!-- Viewmode List Overlay -->                                
+<include name="Viewmode_List_Overlay">
+	<animation effect="slide" end="40" time="0" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">Conditional</animation>
+</include>
+
+<!-- Viewmode Focus -->
+<include name="Viewmode_Focus">
+        <animation type="Focus" reversible="false">
+                <effect type="zoom" center="auto" end="120" time="300" tween="back" easing="out" loop="true" />
+        </animation>
+</include>
+
+<!-- Focusposition -->
+<include name="Viewmode_FocusPosition_0">
+	<focusposition>0</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_1">
+	<focusposition>1</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_2">
+	<focusposition>2</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_3">
+	<focusposition>3</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_4">
+	<focusposition>4</focusposition>
+</include>
+<include name="Viewmode_FocusPosition_5">
+	<focusposition>5</focusposition>
+</include>
+
+<!-- Viewmode Border Colour -->
+<include name="Viewmode_Border_NoColor">
+	<bordertexture colordiffuse="22FFFFFF">block.png</bordertexture>
+	<bordersize>2</bordersize><!-- ConvertScriptIgnore -->
+</include>
+
+<include name="Viewmode_Border_Color">
+	<bordertexture colordiffuse="$VAR[Var_Color_Border_Hex]">block.png</bordertexture>
+	<bordersize>2</bordersize><!-- ConvertScriptIgnore -->
+</include>
+
+<!-- Watched Opacity -->
+<include name="WatchedOpacityNF0">
+	<animation effect="fade" start="100" end="0" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF10">
+	<animation effect="fade" start="100" end="10" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF20">
+	<animation effect="fade" start="100" end="20" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF30">
+	<animation effect="fade" start="100" end="30" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF40">
+	<animation effect="fade" start="100" end="40" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF50">
+	<animation effect="fade" start="100" end="50" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF60">
+	<animation effect="fade" start="100" end="60" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF70">
+	<animation effect="fade" start="100" end="70" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF80">
+	<animation effect="fade" start="100" end="80" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+<include name="WatchedOpacityNF90">
+	<animation effect="fade" start="100" end="90" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+</include>
+
+<include name="WatchedOpacityF0">
+	<animation effect="fade" start="0" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF10">
+	<animation effect="fade" start="10" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF20">
+	<animation effect="fade" start="20" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF30">
+	<animation effect="fade" start="30" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF40">
+	<animation effect="fade" start="40" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF50">
+	<animation effect="fade" start="50" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF60">
+	<animation effect="fade" start="60" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF70">
+	<animation effect="fade" start="70" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF80">
+	<animation effect="fade" start="80" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+<include name="WatchedOpacityF90">
+	<animation effect="fade" start="90" end="100" time="600" delay="1500" condition="String.isEqual(ListItem.Overlay,OverlayWatched.png)">Focus</animation>
+</include>
+
+<include name="FocusEffectZoom">
+	<animation effect="zoom" reversible="false" center="auto" start="100" end="110" time="400" tween="back" easing="out">Focus</animation>
+</include>
+
+<include name="FocusEffectDrop">
+	<animation effect="zoom" reversible="false" center="auto" start="400" end="100" time="800" tween="cubic" easing="out">Focus</animation>
+</include>
+
+<!-- Overlay (Watched/Unwatched) -->
+<include name="Viewmode_Overlay_Watched_Visible"><visible>Skin.hasSetting(Overlay_Watched) + String.isEqual(ListItem.Overlay,OverlayWatched.png)</visible></include>
+<include name="Viewmode_Overlay_Unwatched_Visible"><visible>String.isEqual(ListItem.Overlay,OverlayUnwatched.png)</visible></include>
+<include name="Viewmode_Overlay_InProgress_Visible"><visible>String.isEqual(ListItem.Overlay,OverlayInProgress.png) | ListItem.IsResumable</visible></include>
+<include name="Viewmode_Overlay_Count_Visible"><visible>[ Container.Content(tvshows) | Container.Content(seasons) ] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible></include>
+<include name="Viewmode_Overlay_Count_Hidden"><visible>![ [ Container.Content(tvshows) | Container.Content(seasons) ] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) ]</visible></include>
+
+<include name="Viewmode_Overlay_Watched_Small">
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Hidden</include>
+		<!-- Watched -->
+		<control type="image">
+			<texture>OverlayWatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Watched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Small</include>
+			<include>Viewmode_Overlay_Watched_Visible</include>
+		</control>
+		<!-- UnWatched -->
+		<control type="image">
+			<texture>OverlayUnwatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Unwatched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Small</include>
+			<include>Viewmode_Overlay_Unwatched_Visible</include>
+		</control>
+		<!-- InProgress -->
+		<control type="image">
+			<texture>OverlayInProgress.png</texture>
+			<include content="Colordiffuse"><param name="object">InProgress</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Small</include>
+			<include>Viewmode_Overlay_InProgress_Visible</include>
+		</control>
+	</control>
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Visible</include>
+		<!-- Count -->
+		<control type="image">
+			<texture>OverlayCount.png</texture>
+			<include content="Colordiffuse"><param name="object">Count</param><param name="color">Label</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Small</include>
+			<include>Viewmode_Overlay_Count_Visible</include>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<include>Viewmode_Overlay_TextSize_Small</include>
+		</control>
+	</control>
+</include>
+
+<include name="Viewmode_Overlay_Watched_Medium">
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Hidden</include>
+		<!-- Watched -->
+		<control type="image">
+			<texture>OverlayWatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Watched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Medium</include>
+			<include>Viewmode_Overlay_Watched_Visible</include>
+		</control>
+		<!-- UnWatched -->
+		<control type="image">
+			<texture>OverlayUnwatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Unwatched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Medium</include>
+			<include>Viewmode_Overlay_Unwatched_Visible</include>
+		</control>
+		<!-- InProgress -->
+		<control type="image">
+			<texture>OverlayInProgress.png</texture>
+			<include content="Colordiffuse"><param name="object">InProgress</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Medium</include>
+			<include>Viewmode_Overlay_InProgress_Visible</include>
+		</control>
+	</control>
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Visible</include>
+		<!-- Count -->
+		<control type="image">
+			<texture>OverlayCount.png</texture>
+			<include content="Colordiffuse"><param name="object">Count</param><param name="color">Label</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Medium</include>
+			<include>Viewmode_Overlay_Count_Visible</include>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<include>Viewmode_Overlay_TextSize_Medium</include>
+		</control>
+	</control>
+</include>
+
+<include name="Viewmode_Overlay_Watched_Large">
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Hidden</include>
+		<!-- Watched -->
+		<control type="image">
+			<texture>OverlayWatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Watched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Large</include>
+			<include>Viewmode_Overlay_Watched_Visible</include>
+		</control>
+		<!-- UnWatched -->
+		<control type="image">
+			<texture>OverlayUnwatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Unwatched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Large</include>
+			<include>Viewmode_Overlay_Unwatched_Visible</include>
+		</control>
+		<!-- InProgress -->
+		<control type="image">
+			<texture>OverlayInProgress.png</texture>
+			<include content="Colordiffuse"><param name="object">InProgress</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Large</include>
+			<include>Viewmode_Overlay_InProgress_Visible</include>
+		</control>
+	</control>
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Visible</include>
+		<!-- Count -->
+		<control type="image">
+			<texture>OverlayCount.png</texture>
+			<include content="Colordiffuse"><param name="object">Count</param><param name="color">Label</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_Large</include>
+			<include>Viewmode_Overlay_Count_Visible</include>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<include>Viewmode_Overlay_TextSize_Large</include>
+		</control>
+	</control>
+</include>
+
+<include name="Viewmode_Overlay_Watched_xLarge">
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Hidden</include>
+		<!-- Watched -->
+		<control type="image">
+			<texture>OverlayWatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Watched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_xLarge</include>
+			<include>Viewmode_Overlay_Watched_Visible</include>
+		</control>
+		<!-- UnWatched -->
+		<control type="image">
+			<texture>OverlayUnwatched.png</texture>
+			<include content="Colordiffuse"><param name="object">Unwatched</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_xLarge</include>
+			<include>Viewmode_Overlay_Unwatched_Visible</include>
+		</control>
+		<!-- InProgress -->
+		<control type="image">
+			<texture>OverlayInProgress.png</texture>
+			<include content="Colordiffuse"><param name="object">InProgress</param><param name="color">Selected</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_xLarge</include>
+			<include>Viewmode_Overlay_InProgress_Visible</include>
+		</control>
+	</control>
+	<control type="group">
+		<include>Viewmode_Overlay_Count_Visible</include>
+		<!-- Count -->
+		<control type="image">
+			<texture>OverlayCount.png</texture>
+			<include content="Colordiffuse"><param name="object">Count</param><param name="color">Label</param></include>
+			<include>Viewmode_Overlay_BackgroundSize_xLarge</include>
+			<include>Viewmode_Overlay_Count_Visible</include>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<include>Viewmode_Overlay_TextSize_xLarge</include>
+		</control>
+	</control>
+</include>
+
+
+<!-- Overlay (Background) -->
+<include name="Viewmode_Overlay_Background_Small">
+	<include>Viewmode_Overlay_BackgroundSize_Small</include>
+	<texture>OverlayLabel.png</texture>
+</include>
+<include name="Viewmode_Overlay_Background_Medium">
+	<include>Viewmode_Overlay_BackgroundSize_Medium</include>
+	<texture>OverlayLabel.png</texture>
+</include>
+<include name="Viewmode_Overlay_Background_Large">
+	<include>Viewmode_Overlay_BackgroundSize_Large</include>
+	<texture>OverlayLabel.png</texture>
+</include>
+<include name="Viewmode_Overlay_Background_xLarge">
+	<include>Viewmode_Overlay_BackgroundSize_xLarge</include>
+	<texture>OverlayLabel.png</texture>
+</include>
+
+<!-- Overlay (Background Size) -->
+<include name="Viewmode_Overlay_BackgroundSize_Small">
+	<width>28</width>
+	<height>28</height>
+	<aspectratio>keep</aspectratio>
+</include>
+<include name="Viewmode_Overlay_BackgroundSize_Medium">
+	<width>38</width>
+	<height>38</height>
+	<aspectratio>keep</aspectratio>
+</include>
+<include name="Viewmode_Overlay_BackgroundSize_Large">
+	<width>46</width>
+	<height>46</height>
+	<aspectratio>keep</aspectratio>
+</include>
+<include name="Viewmode_Overlay_BackgroundSize_xLarge">
+	<width>54</width>
+	<height>54</height>
+	<aspectratio>keep</aspectratio>
+</include>
+<include name="Viewmode_Overlay_Color">
+	<colordiffuse>CC000000</colordiffuse>
+</include>
+
+<!-- Overlay (Background #1) -->
+<include name="Viewmode_Overlay_Background1_Small">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_Small</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>FF000000</colordiffuse>
+	</control>
+</include>
+<include name="Viewmode_Overlay_Background1_Medium">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_Medium</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>FF000000</colordiffuse>
+	</control>
+</include>
+<include name="Viewmode_Overlay_Background1_Large">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_Large</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>FF000000</colordiffuse>
+	</control>
+</include>
+<include name="Viewmode_Overlay_Background1_xLarge">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_xLarge</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>FF000000</colordiffuse>
+	</control>
+</include>
+
+<!-- Overlay (Background #2) -->
+<include name="Viewmode_Overlay_Background2_Small">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_Small</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>$VAR[Var_Color_InProgress_Hex]</colordiffuse>
+	</control>
+</include>
+<include name="Viewmode_Overlay_Background2_Medium">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_Medium</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>$VAR[Var_Color_InProgress_Hex]</colordiffuse>
+	</control>
+</include>
+<include name="Viewmode_Overlay_Background2_Large">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_Large</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>$VAR[Var_Color_InProgress_Hex]</colordiffuse>
+	</control>
+</include>
+<include name="Viewmode_Overlay_Background2_xLarge">
+	<control type="image">
+		<include>Viewmode_Overlay_BackgroundSize_xLarge</include>
+		<texture>OverlayLabel.png</texture>
+		<colordiffuse>$VAR[Var_Color_InProgress_Hex]</colordiffuse>
+	</control>
+</include>
+
+<!-- Overlay (Text Size) -->
+<include name="Viewmode_Overlay_TextSize_Small">
+	<width>28</width>
+	<height>28</height>
+	<font>Font_Overlay_Small</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<include>Viewmode_Overlay_TextSize_Include</include>
+</include>
+<include name="Viewmode_Overlay_TextSize_Medium">
+	<width>38</width>
+	<height>38</height>
+	<font>Font_Overlay_Medium</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<include>Viewmode_Overlay_TextSize_Include</include>
+</include>
+<include name="Viewmode_Overlay_TextSize_Large">
+	<width>46</width>
+	<height>46</height>
+	<font>Font_Overlay_Large</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<include>Viewmode_Overlay_TextSize_Include</include>
+</include>
+<include name="Viewmode_Overlay_TextSize_xLarge">
+	<width>54</width>
+	<height>54</height>
+	<font>Font_Overlay_xLarge</font>
+	<textcolor>FFFFFFFF</textcolor>
+	<include>Viewmode_Overlay_TextSize_Include</include>
+</include>
+<include name="Viewmode_Overlay_TextSize_Include">
+	<scroll>false</scroll>
+	<scrollspeed>1</scrollspeed>
+	<align>center</align>
+	<aligny>center</aligny>
+</include>
+
+<!-- Work In Progress -->
+<include name="WorkInProgress">
+	<include>Animation_CommonFade</include>
+        <controls>
+	<control type="image">
+		<include>background_default</include>
+		<texture>bg_black.png</texture>
+	</control>
+	<control type="image">
+		<include>background_default</include>
+		<texture>bg_default.png</texture>
+		<animation effect="fade" end="30" condition="true">Conditional</animation>
+	</control>
+	<control type="image">
+		<left>100</left>
+		<top>250</top>
+		<width>1000</width>
+		<include>SeparatorH</include>
+	</control>
+	<control type="image">
+		<left>100</left>
+		<top>350</top>
+		<width>1000</width>
+		<include>SeparatorH</include>
+	</control>
+	<control type="label">
+		<left>100</left>
+		<top>250</top>
+		<width>1000</width>
+		<height>100</height>
+		<label>Work in progress ...</label>
+		<aligny>center</aligny>
+		<align>center</align>
+		<textcolor>FFFFFFFF</textcolor>
+		<font>Font_Header1_Medium_Thin_NoFocus</font>
+	</control>
+	</controls>
+</include>
+
+<!-- Custom Viewmode (Select) -->
+<include name="Custom_Viewmode_Select_Itemlayout">
+
+	<control type="group">
+		<left>20</left>
+
+		<control type="image">
+			<width>300</width>
+			<height>150</height>
+			<texture colordiffuse="88FFFFFF">custom_panel_background_nofocus.png</texture>
+		</control>
+
+		<control type="image">
+			<top>10</top>
+			<left>10</left>
+			<width>80</width>
+			<height>80</height>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<colordiffuse>AACCCCCC</colordiffuse>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="label">
+			<top>10</top>
+			<left>100</left>
+			<height>80</height>
+			<width>200</width>
+			<aligny>center</aligny>
+			<font>Lato_Regular_40</font>
+			<label>$INFO[ListItem.Label]</label>
+			<textcolor>FFCCCCCC</textcolor>
+			<animation effect="slide" end="0,-15" condition="!String.isEmpty(ListItem.Label2)">Conditional</animation>
+		</control>
+		<control type="label">
+			<top>30</top>
+			<left>100</left>
+			<height>80</height>
+			<width>190</width>
+			<aligny>center</aligny>
+			<font>Lato_Light_15</font>
+			<label>$INFO[ListItem.Label2]</label>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+		<control type="image">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<include>SeparatorH</include>
+			<animation effect="fade" end="40" condition="true">Conditional</animation>
+		</control>
+
+		<control type="label">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<height>50</height>
+			<label>$INFO[ListItem.Property(sublabel)]</label>
+			<font>Lato_Black_20</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<animation effect="fade" end="60" condition="true">Conditional</animation>
+		</control>
+
+	</control>
+
+</include>
+
+<include name="Custom_Viewmode_Select_Focusedlayout">
+
+
+	<control type="group">
+		<left>20</left>
+
+		<control type="image">
+			<width>300</width>
+			<height>150</height>
+			<texture colordiffuse="8867ffff">custom_panel_background_focus.png</texture>
+		</control>
+
+		<control type="image">
+			<top>10</top>
+			<left>10</left>
+			<width>80</width>
+			<height>80</height>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<colordiffuse>AACCCCCC</colordiffuse>
+		</control>
+		<control type="label">
+			<top>10</top>
+			<left>100</left>
+			<height>80</height>
+			<width>200</width>
+			<aligny>center</aligny>
+			<font>Lato_Regular_40</font>
+			<label>$INFO[ListItem.Label]</label>
+			<textcolor>$VAR[Var_Color_Text_Hex]</textcolor>
+			<animation effect="slide" end="0,-15" condition="!String.isEmpty(ListItem.Label2)">Conditional</animation>
+		</control>
+		<control type="label">
+			<top>30</top>
+			<left>100</left>
+			<height>80</height>
+			<width>190</width>
+			<aligny>center</aligny>
+			<font>Lato_Light_15</font>
+			<label>$INFO[ListItem.Label2]</label>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+		<control type="image">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<include>SeparatorH</include>
+			<animation effect="fade" end="40" condition="true">Conditional</animation>
+		</control>
+
+		<control type="label">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<height>50</height>
+			<label>$INFO[ListItem.Property(sublabel)]</label>
+			<font>Lato_Black_20</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<animation effect="fade" end="60" condition="true">Conditional</animation>
+		</control>
+
+	</control>
+
+</include>
+
+
+<!-- Loginscreen -->
+<include name="LoginScreen_Itemlayout">
+
+	<control type="group">
+		<left>20</left>
+
+		<control type="image">
+			<width>300</width>
+			<height>150</height>
+			<texture colordiffuse="88FFFFFF">custom_panel_background_nofocus.png</texture>
+		</control>
+
+		<control type="image">
+			<top>10</top>
+			<left>10</left>
+			<width>80</width>
+			<height>80</height>
+			<texture>$INFO[ListItem.Icon]</texture>
+		</control>
+		<control type="label">
+			<top>10</top>
+			<left>95</left>
+			<height>80</height>
+			<width>200</width>
+			<aligny>center</aligny>
+			<font>Lato_Regular_35</font>
+			<label>$INFO[ListItem.Label]</label>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+		<control type="image">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<include>SeparatorH</include>
+			<animation effect="fade" end="40" condition="true">Conditional</animation>
+		</control>
+
+		<control type="label">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<height>50</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Lato_Light_15</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+	</control>
+
+</include>
+
+<include name="LoginScreen_Focusedlayout">
+
+
+	<control type="group">
+		<left>20</left>
+
+		<control type="image">
+			<width>300</width>
+			<height>150</height>
+			<texture>custom_panel_background_focus.png</texture>
+			<include content="Colordiffuse"><param name="Border">Watched</param><param name="color">Selected</param></include>
+		</control>
+
+		<control type="image">
+			<top>10</top>
+			<left>10</left>
+			<width>80</width>
+			<height>80</height>
+			<texture>$INFO[ListItem.Icon]</texture>
+		</control>
+		<control type="label">
+			<top>10</top>
+			<left>95</left>
+			<height>80</height>
+			<width>200</width>
+			<aligny>center</aligny>
+			<font>Lato_Regular_35</font>
+			<label>$INFO[ListItem.Label]</label>
+			<textcolor>$VAR[Var_Color_Text_Hex]</textcolor>
+			<include content="Colordiffuse_Text"><param name="object">Text</param><param name="color">White</param></include>
+		</control>
+
+		<control type="image">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<include>SeparatorH</include>
+			<animation effect="fade" end="40" condition="true">Conditional</animation>
+		</control>
+
+		<control type="label">
+			<left>10</left>
+			<top>100</top>
+			<width>280</width>
+			<height>50</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Lato_Light_15</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+	</control>
+
+</include>
+
+<!-- Custom Viewmode (Select) -->
+<include name="Custom_Viewmode_Select_Content">
+	<content>
+
+		<item>
+			<label>Create</label>	<!-- Edit -->
+			<label2>Viewtype from scratch</label2>
+			<icon>icon_edit.png</icon>
+			<onclick>SetFocus(7001)</onclick>
+		</item>
+                        
+		<item>
+			<label>$LOCALIZE[31303]</label>	<!-- Browse -->
+			<label2>Viewtypes by other users</label2>
+			<icon>icon_update.png</icon>
+			<onclick>Skin.SetString(selector1,Browse)</onclick>
+			<onclick>ActivateWindow(1131)</onclick>
+		</item>
+                
+	</content>
+</include>
+
+<!-- Custom Browse (Confirm) -->
+<include name="Custom_Dialog_Browse_Confirm">
+
+	<control type="radiobutton" id="$PARAM[id]">
+		<left>70</left>
+		<label>$LOCALIZE[31191]</label>
+		<onright>$PARAM[onright]</onright>
+		<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_cancel.png</textureradioonfocus>
+		<textureradioonnofocus colordiffuse="FFAAAAAA">icon_cancel.png</textureradioonnofocus>
+		<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_cancel.png</textureradioofffocus>
+		<textureradiooffnofocus colordiffuse="FFAAAAAA">icon_cancel.png</textureradiooffnofocus>
+		<textureradiooffdisabled colordiffuse="TextDisabled">icon_cancel.png</textureradiooffdisabled>
+		<textureradioondisabled colordiffuse="TextDisabled">icon_cancel.png</textureradioondisabled>
+		<width>151</width>
+		<radioposx>55</radioposx>
+		<include>DialogInfo_Button_Template</include>
+		<onclick>SetFocus(101)</onclick>
+		<onback>SetFocus(101)</onback>
+	</control>
+		
+	<control type="label">
+		<left>240</left>
+		<width>800</width>
+		<label>Save $INFO[Container(101).ListItem.Label] ($INFO[Container(101).ListItem.Property(author)]) to $INFO[Container.Viewmode]?</label>
+		<font>Lato_Light_40</font>
+		<height>40</height>
+		<aligny>center</aligny>				
+		<align>center</align>
+	</control>
+		
+	<control type="label">
+		<left>240</left>
+		<top>50</top>
+		<width>800</width>
+		<label>[COLOR=FFffae42]Warning:[/COLOR] This will overwrite your existing configuration!</label>
+		<font>Lato_Light_20</font>
+		<height>20</height>
+		<aligny>center</aligny>
+		<align>center</align>
+	</control>
+
+</include>
+
+<include name="Viewmode_Item_Dim">
+	<animation effect="fade" end="40" condition="String.isEmpty(ListItem.Label)">Conditional</animation>
+</include>
+
+<include name="Background_Viewtype">
+                
+
+	<!-- List #1 -->
+	<include content="Background_Custom">
+		<param name="id_home">800</param>
+		<param name="id_fade">13800</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,List #1)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+	<!-- List #2 -->
+	<include content="Background_Custom">
+		<param name="id_home">801</param>
+		<param name="id_fade">13801</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,List #2)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+
+	<!-- Panel #1 -->
+	<include content="Background_Custom">
+		<param name="id_home">810</param>
+		<param name="id_fade">13810</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Panel #1)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+	<!-- Panel #2 -->
+	<include content="Background_Custom">
+		<param name="id_home">811</param>
+		<param name="id_fade">13811</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Panel #2)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+
+	<!-- Fanart #1 -->
+	<include content="Background_Custom">
+		<param name="id_home">820</param>
+		<param name="id_fade">13820</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Fanart #1)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+	<!-- Fanart #2 -->
+	<include content="Background_Custom">
+		<param name="id_home">821</param>
+		<param name="id_fade">13821</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Fanart #2)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+
+	<!-- Clearart #1 -->
+	<include content="Background_Custom">
+		<param name="id_home">830</param>
+		<param name="id_fade">13830</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Clearart #1)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+	<!-- Clearart #2 -->
+	<include content="Background_Custom">
+		<param name="id_home">831</param>
+		<param name="id_fade">13831</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Clearart #2)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+
+	<!-- Banner #1 -->
+	<include content="Background_Custom">
+		<param name="id_home">840</param>
+		<param name="id_fade">13840</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Banner #1)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+	<!-- Banner #2 -->
+	<include content="Background_Custom">
+		<param name="id_home">841</param>
+		<param name="id_fade">13841</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Banner #2)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+
+	<!-- Custom #1 -->
+	<include content="Background_Custom">
+		<param name="id_home">850</param>
+		<param name="id_fade">13850</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Custom #1)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+	<!-- Custom #2 -->
+	<include content="Background_Custom">
+		<param name="id_home">851</param>
+		<param name="id_fade">13851</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Custom #2)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+	<!-- Custom #3 -->
+	<include content="Background_Custom">
+		<param name="id_home">852</param>
+		<param name="id_fade">13852</param>
+		<param name="opacity">30</param>
+		<param name="visible">String.isEqual(Container.Viewmode,Custom #3)</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+
+
+</include>
+
+</includes>

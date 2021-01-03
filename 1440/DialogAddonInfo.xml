@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+
+	<!-- KODI Background -->
+	<control type="image">
+		<include>background_default</include>
+		<texture background="true">bg_black.png</texture>
+	</control>
+
+	<!-- Background -->
+	<include content="Background_Custom">
+		<param name="id_home">16</param>
+		<param name="id_fade">13016</param>
+		<param name="opacity">20</param>
+		<param name="image">$VAR[Var_Background_Viewtype]</param>
+	</include>
+
+	<!-- Preplay Screen -->
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Frame -->
+		<control type="image">
+			<left>60</left>
+			<top>60</top>
+			<width>2440</width>
+			<height>1320</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>$VAR[Var_Color_Dialog_Hex]</colordiffuse>
+			<texture background="true">bg_preplay_frame.png</texture>
+		</control>
+
+		<!-- Header -->
+		<include>dialog_header_preplay</include>
+
+		<!-- Content -->
+		<control type="group">
+			<left>200</left><!-- 110 -->
+			<top>260</top>
+
+			<!-- Poster (Left) -->
+			<control type="group">
+				<include>Animation_Preplay_Left</include>
+
+				<!-- Image -->
+				<control type="image">
+					<width>550</width>
+					<height>880</height>
+					<texture background="false">$VAR[Var_Preplay_Poster]</texture>
+					<bordertexture>confluence/button-nofocus.png</bordertexture>
+					<bordersize>2</bordersize>
+	                                <aspectratio>keep</aspectratio>
+					<fadetime>Image_Fadetime</fadetime>
+				</control>
+
+			</control>
+
+			<!-- Content (Center) -->
+			<control type="group">
+				<animation effect="fade" start="100" end="0" time="300" condition="Control.HasFocus(30) | Control.HasFocus(20)">Conditional</animation>
+				<left>600</left>
+
+				<!-- Title -->
+				<control type="group">
+					<include>Animation_Preplay_Up</include>
+
+					<control type="grouplist">
+						<width>1560</width>
+						<height>80</height>
+						<align>left</align>
+						<usecontrolcoords>true</usecontrolcoords>
+						<orientation>horizontal</orientation>
+						<itemgap>20</itemgap>
+						<!-- First -->
+						<control type="label">
+							<width min="0" max="320">auto</width>
+							<label>$VAR[Var_Preplay_Title_Pre]</label>
+							<font>Font_Bartowski_Main_Preplay</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<scroll>false</scroll>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+						<!-- Title -->
+						<control type="label">
+							<width min="0" max="1120">auto</width>
+							<label>$VAR[Var_Preplay_Title]</label>
+							<font>Font_Bartowski_Main_Preplay</font>
+							<textcolor>FFCCCCCC</textcolor>
+							<scroll>true</scroll>
+						</control>
+						<!-- Overlay -->
+						<control type="group">
+							<include>Viewmode_Overlay_Watched_Medium</include>
+						</control>
+	                                </control>
+
+				</control>
+
+				<!-- Grid -->
+				<control type="group">
+					<left>0</left>
+					<top>100</top>
+					<include>Animation_Preplay_Up</include>
+
+					<!-- Mpaa / Duration / Year / Rating -->
+					<include>Viewmode_Sidebar_Duration_Big</include>
+
+					<control type="group">
+						<top>-8</top>
+
+						<animation effect="fade" start="100" end="0" time="200" condition="Window.isVisible(10200)">true</animation><!-- Dialog StarRating -->
+
+
+					<!-- Line 1 -->
+					<control type="label">
+						<left>0</left>
+						<top>120</top>
+						<width>220</width>
+						<label>$VAR[Var_Text_Sidebar_Line_1]</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFAAAAAA</textcolor>
+					</control>
+					<control type="label">
+						<left>260</left>
+						<top>120</top>
+						<width>700</width>
+						<label fallback="31180">$VAR[Var_Info_Sidebar_Line_1]</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+
+					<!-- Line 2 -->
+					<control type="label">
+						<left>0</left>
+						<top>180</top>
+						<width>220</width>
+						<label>$VAR[Var_Text_Sidebar_Line_2]</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFAAAAAA</textcolor>
+					</control>
+					<control type="label">
+						<left>260</left>
+						<top>180</top>
+						<width>700</width>
+						<label fallback="31180">$VAR[Var_Info_Sidebar_Line_2]</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+
+					<!-- Line 3 -->
+					<control type="label">
+						<top>240</top>
+						<label>$VAR[Var_Text_Preplay_Line_3]</label>
+						<width>220</width>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFAAAAAA</textcolor>
+					</control>
+					<control type="label">
+						<left>260</left>
+						<top>240</top>
+						<width>700</width>
+						<height>60</height>
+						<label fallback="31180">$VAR[Var_Info_Preplay_Line_3]</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+
+					<!-- Line 4 -->
+					<control type="label">
+						<top>300</top>
+						<label>$VAR[Var_Text_Preplay_Line_4]</label>
+						<width>220</width>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFAAAAAA</textcolor>
+					</control>
+					<control type="label">
+						<left>260</left>
+						<top>300</top>
+						<width>700</width>
+						<height>60</height>
+						<label fallback="31180">$VAR[Var_Info_Preplay_Line_4]</label>
+						<font>Font_Bartowski_Movies_Plot</font>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+
+					</control>
+
+				</control>
+
+
+				<!-- Mediaflags / Plot -->
+				<control type="group">
+					<top>460</top>
+					<include>Animation_Preplay_Down</include>
+
+					<control type="image">
+						<top>0</top>
+						<left>0</left>
+						<width>1560</width>
+						<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+						<include>Viewmode_Sidebar_Separator</include>
+						<include>SeparatorH</include>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>60</top><!-- 25 -->
+						<width>1560</width>
+						<colordiffuse>$VAR[Var_Color_Default2_Hex]</colordiffuse>
+						<include>Viewmode_Sidebar_Separator</include>
+						<include>SeparatorH</include>
+					</control>
+
+					<!-- Mediaflags -->
+					<control type="grouplist">
+						<left>0</left>
+						<top>8</top>
+						<width>960</width><!-- 456 -->
+						<align>center</align>
+						<itemgap>0</itemgap>
+						<orientation>horizontal</orientation>
+						<include content="Viewmode_Mediaflags_80"><param name="align">center</param></include>
+						<include>Viewmode_Mediaflags_General</include>
+					</control>
+
+					<!-- Thumb Label / Studio -->
+					<control type="label">
+						<left>980</left>
+						<width>580</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[Var_Preplay_Thumb_Label]</label>
+						<textcolor>FFFFFFFF</textcolor>
+					        <font>Font_Mediaflag_Small</font>
+					</control>
+
+					<!-- Plot -->
+					<control type="textbox">
+						<top>70</top>
+						<width>1560</width>
+						<width>960</width>
+						<height>350</height>
+						<align>justify</align>
+						<label fallback="31180">$VAR[Var_Info_Plot]</label>
+						<font>Font_Preplay_Plot</font>
+						<textcolor>$VAR[Var_Color_Plot_Hex]</textcolor>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<visible>String.isEmpty(ListItem.CastAndRole)</visible>
+					</control>
+					<control type="textbox">
+						<top>70</top>
+						<width>960</width>
+						<height>350</height>
+						<align>justify</align>
+						<label fallback="31180">$VAR[Var_Info_Plot]</label>
+						<font>Font_Preplay_Plot</font>
+						<textcolor>$VAR[Var_Color_Plot_Hex]</textcolor>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<visible>!String.isEmpty(ListItem.CastAndRole)</visible>
+					</control>
+
+					<!-- Cast & Role-->
+					<control type="textbox">
+						<left>1000</left>
+						<top>76</top>
+   						<width>560</width>
+						<height>340</height>
+						<label>$INFO[ListItem.CastAndRole]</label>
+						<align>left</align>
+						<font>Font_PrePlay_Cast</font>
+						<textcolor>FFCCCCCC</textcolor>
+                                                <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<visible>!String.isEmpty(ListItem.CastAndRole)</visible>
+					</control>
+
+				</control>
+
+			</control>
+
+			<!-- Thumb -->
+			<control type="group">
+				<animation effect="fade" start="100" end="0" time="300" condition="Control.HasFocus(30) | Control.HasFocus(20)">Conditional</animation>
+				<left>1600</left>
+				<top>100</top>
+				<include>Animation_Preplay_Right</include>
+
+				<!-- Image -->
+				<control type="image">
+					<top>0</top>
+					<width>540</width>
+					<height>340</height>
+					<texture background="false">$VAR[Var_Preplay_Thumb]</texture>
+					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+					<!--<bordertexture>confluence/button-nofocus.png</bordertexture>
+					<bordersize>2</bordersize>-->
+					<fadetime>Image_Fadetime</fadetime>
+				</control>
+
+			</control>
+		</control>
+
+		<!-- Navigation -->
+		<include>DialogInfo_Addon_KODI</include>
+
+		<!-- Extras -->
+		<control type="group">
+                        <left>780</left>
+                        <top>290</top>
+			<visible>Control.HasFocus(30) | Control.HasFocus(20)</visible>
+
+			<!-- Mouse -->
+			<control type="button" id="20">
+				<left>-160</left>
+				<top>-140</top>
+				<width>2560</width>
+				<height>1200</height>
+				<include>Mouse_Trigger</include>
+			</control>
+
+			<!-- Animations -->
+			<include>Animation_CommonFade</include>
+
+			<!-- Extras Panel -->
+			<control type="panel" id="30">
+				<width>1620</width>
+				<height>840</height>
+				<scrolltime>200</scrolltime>
+				<onleft>1000</onleft>
+				<onright>1000</onright>
+				<onback>1000</onback>
+				<include>Preplay_Extras_Thumb_Small</include>
+			</control>
+		</control>
+
+	</control>
+
+	<!-- Clock -->
+	<control type="group">
+		<include>Clock_Right_Pos</include>
+		<include>Clock_Right</include>
+	</control>
+
+</controls>
+</window>

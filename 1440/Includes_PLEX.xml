@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- KEYBOARD -->
+	<include name="KeyboardFont">
+		<font>Regular-16</font>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="KeyboardPINFont">
+		<font>Bold-42</font>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+
+	<include name="KeyboardButtonFaded">
+		<font>Regular-18</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<width>120</width>
+		<height>100</height>
+		<texturefocus>block.png</texturefocus>
+		<texturenofocus>block.png</texturenofocus>
+	</include>
+	<include name="KeyboardButtonDummy">
+		<width>120</width>
+		<height>100</height>
+	</include>
+	<include name="KeyboardButtonBigFaded">
+		<font>Regular-24</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<width>120</width>
+		<height>100</height>
+		<texturefocus>black.png</texturefocus>
+		<texturenofocus>black.png</texturenofocus>
+	</include>
+	<include name="KeyboardNumericFade">
+		<animation effect="fade" start="100" end="30" time="300" condition="Window.IsActive(109)">Conditional</animation>
+	</include>
+	<include name="KeyboardButtonLighterNumeric">
+		<font>Regular-18</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<width>120</width>
+		<height>100</height>
+		<texturefocus>darkgrey.png</texturefocus>
+		<texturenofocus>darkgrey.png</texturenofocus>
+		<enable>!Window.IsVisible(109)</enable>
+		<animation effect="fade" start="100" end="30" time="300" condition="true">Conditional</animation>
+	</include>
+	<include name="KeyboardTextFieldBG">
+		<control type="image">
+			<width>1290</width>
+			<height>100</height>
+			<include>Black</include>
+		</control>
+	</include>
+
+	<!-- Keyboard Button (BUTTON) -->
+	<include name="KeyboardButtonSmall">
+		<font>Font_Keyboard_Button</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<width>120</width>
+		<height>100</height>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+	</include>
+	<include name="KeyboardButtonBig">
+		<!--<font>Font_Keyboard_Button_Big</font>-->
+		<font>Font_Keyboard_Button_Symbol</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<width>250</width>
+		<height>100</height>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>		
+	</include>
+	<include name="KeyboardButtonSpace8">
+		<!--<font>Font_Keyboard_Button_Big</font>-->
+		<font>Font_Keyboard_Button_Symbol</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<width>1030</width>
+		<height>100</height>
+		<textcolor>FFCCCCCC</textcolor>
+		<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+	</include>
+
+	<!-- Keyboard Button (IMAGES) -->
+	<include name="KeyboardImageSmall">
+                <width>120</width>
+                <height>100</height>
+		<texture>KeyboardButtonSmall.png</texture>
+		<colordiffuse>$VAR[Var_Color_Keyboard_Hex]</colordiffuse>
+	</include>
+	<include name="KeyboardImageSmallFocus">
+                <width>120</width>
+                <height>100</height>
+		<texture>KeyboardButtonSmallFocus.png</texture>
+		<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+	</include>
+	<include name="KeyboardImageNumericSmall">
+                <width>120</width>
+                <height>100</height>
+		<texture>KeyboardButtonSmall.png</texture>
+		<colordiffuse>$VAR[Var_Color_Keyboard_Hex]</colordiffuse>
+	</include>
+	<include name="KeyboardImageNumericSmallFocus">
+                <width>120</width>
+                <height>100</height>
+		<texture>KeyboardButtonSmallFocus.png</texture>
+		<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+	</include>
+	<include name="KeyboardImageBig">
+                <width>250</width>
+                <height>100</height>
+		<texture>KeyboardButtonBig.png</texture>
+		<colordiffuse>$VAR[Var_Color_Keyboard_Hex]</colordiffuse>
+	</include>
+	<include name="KeyboardImageBigFocus">
+                <width>250</width>
+                <height>100</height>
+		<texture>KeyboardButtonBigFocus.png</texture>
+		<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+	</include>
+	<include name="KeyboardImageSpace8">
+                <width>1030</width>
+                <height>100</height>
+		<texture>KeyboardButtonSpace8.png</texture>
+		<colordiffuse>$VAR[Var_Color_Keyboard_Hex]</colordiffuse>
+	</include>
+	<include name="KeyboardImageSpace8Focus">
+                <width>1030</width>
+                <height>100</height>
+		<texture>KeyboardButtonSpace8.png</texture>
+		<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+	</include>
+
+	<!-- Placeholder -->
+	<include name="KeyboardPlaceholder">
+		<control type="image">
+			<texture></texture>
+			<width>120</width>
+		</control>
+	</include>
+	<include name="KeyboardPlaceholder60">
+		<texture></texture>
+		<width>120</width>
+	</include>
+
+	<include name="MusicOSD_Controls">
+
+		<!-- Controls -->
+		<control type="group">
+			<width>364</width>
+
+			<control type="group">
+				<left>2</left>
+
+				<!-- Repeat -->
+				<control type="image">
+					<left>-90</left>
+					<top>8</top>
+					<width>48</width>
+					<height>40</height>
+					<texture>b-repeat2.png</texture>
+					<visible>!Control.HasFocus(739) + !Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="image">
+					<left>-90</left>
+					<top>8</top>
+					<width>48</width>
+					<height>40</height>
+					<texture>b-repeat-one2.png</texture>
+					<visible>!Control.HasFocus(739) + Playlist.IsRepeatOne</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="image">
+					<left>-90</left>
+					<top>8</top>
+					<width>48</width>
+					<height>40</height>
+					<texture>b-repeat-all2.png</texture>
+					<visible>!Control.HasFocus(739) + Playlist.IsRepeat</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+
+				<control type="image">
+					<left>-90</left>
+					<top>8</top>
+					<width>48</width>
+					<height>40</height>
+					<texture>b-repeat2.png</texture>
+					<visible>Control.HasFocus(739) + !Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+				<control type="image">
+					<left>-90</left>
+					<top>8</top>
+					<width>48</width>
+					<height>40</height>
+					<texture>b-repeat-one2.png</texture>
+					<visible>Control.HasFocus(739) + Playlist.IsRepeatOne</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+				<control type="image">
+					<left>-90</left>
+					<top>8</top>
+					<width>48</width>
+					<height>40</height>
+					<texture>b-repeat-all2.png</texture>
+					<visible>Control.HasFocus(739) + Playlist.IsRepeat</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+				<control type="button" id="739">
+					<left>-90</left>
+					<top>8</top>
+					<width>48</width>
+					<height>40</height>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onup>1001</onup>
+					<onleft>751</onleft>
+					<onright>740</onright>
+					<onclick>PlayerControl(Repeat)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(501)</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+	
+				<!-- previous -->
+				<control type="image">
+					<left>0</left>
+					<width>60</width>
+					<height>60</height>
+					<texture>icon_skipprevious.png</texture>
+					<visible>!Control.HasFocus(740)</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="button" id="740">
+					<left>0</left>
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>icon_skipprevious.png</texturefocus>
+					<texturenofocus>icon_skipprevious.png</texturenofocus>
+					<onleft>739</onleft>
+					<onright>741</onright>
+					<onup>1001</onup>
+					<onclick>PlayerControl(Previous)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(740)</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+
+				<!-- rewind -->
+				<control type="image">
+					<left>60</left>
+					<width>60</width>
+					<height>60</height>
+					<texture>icon_rewind.png</texture>
+					<visible>!Control.HasFocus(741)</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="button" id="741">
+					<left>60</left>
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>icon_rewind.png</texturefocus>
+					<texturenofocus>icon_rewind.png</texturenofocus>
+					<onup>1001</onup>
+					<onleft>740</onleft>
+					<onright>742</onright>
+					<onup>1001</onup>
+					<onclick>PlayerControl(SmallSkipBackward)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(741)</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+
+				<!-- stop -->
+				<control type="image">
+					<left>124</left>
+					<width>60</width>
+					<height>60</height>
+					<texture>icon_stop.png</texture>
+					<visible>!Control.HasFocus(742)</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="button" id="742">
+					<left>124</left>
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>icon_stop.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<onup>1001</onup>
+					<onleft>741</onleft>
+					<onright>743</onright>
+					<onup>1001</onup>
+					<onclick>Dialog.Close(1141)</onclick>
+					<onclick>PlayerControl(Stop)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(742)</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+
+				<!-- Play / Pause -->
+				<control type="image">
+					<left>176</left>
+					<width>60</width>
+					<height>60</height>
+					<texture>icon_pause.png</texture>
+					<visible>!Control.HasFocus(743) + !Player.Paused</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="image">
+					<left>176</left>
+					<width>60</width>
+					<height>60</height>
+					<texture>icon_play.png</texture>
+					<visible>!Control.HasFocus(743) + Player.Paused</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="togglebutton" id="743">
+					<left>176</left>
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>icon_pause.png</texturefocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus>icon_play.png</alttexturefocus>
+					<onup>1001</onup>
+					<onleft>742</onleft>
+					<onright>744</onright>
+					<onup>1001</onup>
+					<onclick>PlayerControl(Play)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(743)</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+
+				<!-- forward -->
+				<control type="image">
+					<left>240</left>
+					<width>60</width>
+					<height>60</height>
+					<texture>icon_fastforward.png</texture>
+					<visible>!Control.HasFocus(744)</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="button" id="744">
+					<left>240</left>
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>icon_fastforward.png</texturefocus>
+					<texturenofocus>icon_fastforward.png</texturenofocus>
+					<onup>1001</onup>
+					<onleft>743</onleft>
+					<onright>745</onright>
+					<onup>1001</onup>
+					<onclick>PlayerControl(SmallSkipForward)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(744)</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+
+				<!-- next -->
+				<control type="image">
+					<left>300</left>
+					<width>60</width>
+					<height>60</height>
+					<texture>icon_skipnext.png</texture>
+					<visible>!Control.HasFocus(745)</visible>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+				</control>
+				<control type="button" id="745">
+					<left>300</left>
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>icon_skipnext.png</texturefocus>
+					<texturenofocus>icon_skipnext.png</texturenofocus>
+					<onup>1001</onup>
+					<onleft>744</onleft>
+					<onright>751</onright>
+					<onup>1001</onup>
+					<onclick>PlayerControl(Next)</onclick>
+					<visible allowhiddenfocus="true">Control.HasFocus(745)</visible>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+				</control>
+
+				<!-- Queue -->      
+				<control type="image">
+					<left>400</left>
+					<top>8</top>
+					<width>48</width>
+					<height>44</height>
+					<texture>options_osd.png</texture>
+					<colordiffuse>FFDDDDDD</colordiffuse>
+					<visible>!Control.HasFocus(751)</visible>
+				</control>
+				<control type="button" id="751">
+					<left>400</left>
+					<top>8</top>
+					<width>48</width>
+					<height>44</height>
+					<texturefocus>options_osd.png</texturefocus>
+					<texturenofocus>options_osd.png</texturenofocus>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+					<onclick>ReplaceWindow(10094)</onclick>
+					<onup>1001</onup>
+					<onleft>745</onleft>
+					<onright>739</onright>
+					<visible allowhiddenfocus="true">Control.HasFocus(751)</visible>
+				</control>
+
+				</control>
+
+			</control>
+
+	</include>
+
+</includes>

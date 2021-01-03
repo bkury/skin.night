@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1121">
+	<defaultcontrol always="true">1</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+        <onunload>Skin.Reset(selector4)</onunload>
+
+        <onunload>Skin.Reset(Color_Opacity_10)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_20)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_30)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_40)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_50)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_60)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_70)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_80)</onunload>
+        <onunload>Skin.Reset(Color_Opacity_90)</onunload>
+
+	<include>Animation_Window_Dialog</include>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">99</param>
+			<param name="header_label">$LOCALIZE[31130]</param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">1</param>
+			<param name="scroll_onright">52</param>
+		</include>
+
+		<!-- Content -->
+		<control type="list" id="1">
+			<onleft>50</onleft>
+			<include>Dialog_General_List</include>
+			<visible>Skin.String(selector2,Settings)</visible>
+			<content>
+				<!-- Default -->
+	                        <item>
+				   <label>$LOCALIZE[31194]</label>
+				   <icon>circle.png</icon> 
+				   <onclick>Skin.Reset(Color_Opacity_10)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_20)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_30)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_40)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_50)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_60)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_70)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_80)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_90)</onclick>
+				   <onclick>Skin.Reset(Color_$INFO[Skin.String(selector1)]_Name)</onclick>
+				   <onclick>Skin.Reset(Color_$INFO[Skin.String(selector1)]_Hex)</onclick>
+				   <onclick>Dialog.Close(1121)</onclick>
+				   <property name="color"></property>
+				   <property name="hex">$VAR[Var_Color_Opacity_Hex]FFFFFF</property>
+	                        </item>
+
+				<!-- Colors -->
+				<include>Color_Items</include>
+
+				<!-- Custom -->
+	                        <item>
+				   <label>Custom Color Hex (8 Digits)</label>
+				   <icon>circle.png</icon> 
+				   <onclick>Skin.SetString(Color_$INFO[Skin.String(selector1)]_Name,Custom)</onclick>
+				   <onclick>Skin.SetString(Color_$INFO[Skin.String(selector1)]_Hex)</onclick>
+				   <onclick>Dialog.Close(1121)</onclick>
+				   <property name="color"></property>
+				   <property name="hex">$VAR[Var_Color_Opacity_Hex]FFFFFF</property>
+	                        </item>
+
+			</content>
+		</control>
+		<control type="list" id="1">
+			<onleft>50</onleft>
+			<include>Dialog_General_List</include>
+			<visible>Skin.String(selector2,Color)</visible>
+			<content>
+				<!-- Default -->
+	                        <item>
+				   <label>$LOCALIZE[31194]</label>
+				   <icon>circle.png</icon> 
+				   <onclick>Skin.Reset(Color_Opacity_10)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_20)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_30)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_40)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_50)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_60)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_70)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_80)</onclick>
+				   <onclick>Skin.Reset(Color_Opacity_90)</onclick>
+				   <onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)]Name)</onclick>
+				   <onclick>Skin.Reset($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector1)])</onclick>
+				   <onclick>Dialog.Close(1121)</onclick>
+				   <property name="color"></property>
+				   <property name="hex">$VAR[Var_Color_Opacity_Hex]FFFFFF</property>
+	                        </item>
+
+				<!-- Colors -->
+				<include>Color_Items_Widget</include>
+
+				<!-- Custom -->
+	                        <item>
+				   <label>Custom Color Hex (8 Digits)</label>
+				   <icon>circle.png</icon> 
+				   <onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)]Name,Custom)</onclick>
+				   <onclick>Skin.SetString($INFO[Skin.String(selector1)]_$INFO[Skin.String(selector2)])</onclick>
+				   <onclick>Dialog.Close(1121)</onclick>
+				   <property name="color"></property>
+				   <property name="hex">$VAR[Var_Color_Opacity_Hex]FFFFFF</property>
+	                        </item>
+
+			</content>
+		</control>
+
+		<!-- Category -->
+		<control type="grouplist">
+			<include>Dialog_General_Grouplist_Category</include>
+			<include content="Dialog_General_Grouplist_Category_Content">
+				<param name="id">1</param>
+				<param name="color">$INFO[Container(1).ListItem.Property(hex)]</param>
+				<param name="label1_head">$LOCALIZE[31506]</param>
+				<param name="label1_info">ListItem.Label</param>
+				<param name="label2_head">Hex</param>
+				<param name="label2_info">ListItem.Property(hex)</param>
+			</include>
+		</control>
+
+		<!-- Footer -->
+		<include content="Dialog_General_Footer_Button_OKCANCEL"> <!-- 50 / 52 -->
+			<param name="id_left">1</param>
+			<param name="id_right">1</param>
+			<param name="dialog">1121</param>
+		</include>
+
+		<control type="radiobutton" id="51">
+			<label>[UPPERCASE]$VAR[Var_Color_Opacity_Name]%[/UPPERCASE]</label>
+			<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">dialog_button_center.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="FFAAAAAA">dialog_button_center.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">dialog_button_center.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="FFAAAAAA">dialog_button_center.png</textureradiooffnofocus>
+			<textureradiooffdisabled colordiffuse="TextDisabled">dialog_button_center.png</textureradiooffdisabled>
+			<textureradioondisabled colordiffuse="TextDisabled">dialog_button_center.png</textureradioondisabled>
+
+			<onclick condition="!Skin.HasSetting(Color_Opacity_10) + !Skin.HasSetting(Color_Opacity_20) + !Skin.HasSetting(Color_Opacity_30) + !Skin.HasSetting(Color_Opacity_40) + !Skin.HasSetting(Color_Opacity_50) + !Skin.HasSetting(Color_Opacity_60) + !Skin.HasSetting(Color_Opacity_70) + !Skin.HasSetting(Color_Opacity_80) + !Skin.HasSetting(Color_Opacity_90)">Skin.SetBool(Color_Opacity_10)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_10)">Skin.Reset(Color_Opacity_10)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_10)">Skin.SetBool(Color_Opacity_20)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_20)">Skin.Reset(Color_Opacity_20)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_20)">Skin.SetBool(Color_Opacity_30)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_30)">Skin.Reset(Color_Opacity_30)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_30)">Skin.SetBool(Color_Opacity_40)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_40)">Skin.Reset(Color_Opacity_40)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_40)">Skin.SetBool(Color_Opacity_50)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_50)">Skin.Reset(Color_Opacity_50)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_50)">Skin.SetBool(Color_Opacity_60)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_60)">Skin.Reset(Color_Opacity_60)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_60)">Skin.SetBool(Color_Opacity_70)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_70)">Skin.Reset(Color_Opacity_70)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_70)">Skin.SetBool(Color_Opacity_80)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_80)">Skin.Reset(Color_Opacity_80)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_80)">Skin.SetBool(Color_Opacity_90)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_10)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_20)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_30)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_40)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_50)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_60)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_70)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_80)</onclick>
+			<onclick condition="Skin.HasSetting(Color_Opacity_90)">Skin.Reset(Color_Opacity_90)</onclick>
+
+			<onup>1</onup>
+			<onleft>50</onleft>
+			<onright>52</onright>
+			<include>Dialog_General_Footer_Center</include>
+			<include>Dialog_General_Footer_Default</include>
+		</control>
+
+	</control>
+
+	</controls>
+</window>

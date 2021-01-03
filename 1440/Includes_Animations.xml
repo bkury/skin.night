@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- Window Animation -->
+	<include name="Animation_Window_Dialog">
+		<include condition="Skin.hasSetting(Global_Hide_Animation)">Animation_Window_Fade</include>
+		<include condition="!Skin.hasSetting(Global_Hide_Animation)">Animation_Window_Zoom</include>
+	</include>
+
+	<include name="Animation_Window_Fade">
+		<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+	</include>
+
+	<include name="Animation_Window_Fade_Delay">
+		<animation effect="fade" start="0" end="100" delay="1000" time="300">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+	</include>
+
+	<include name="Animation_Window_Zoom">
+		<include>AspectRatio_Window_Zoom</include>
+	</include>
+
+	<include name="Animation_Viewmode_Zoom">
+		<animation type="WindowOpen">
+			<effect type="fade" time="300" start="0" end="100" />
+			<effect type="zoom" time="400" center="auto" start="200" end="100" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" time="300" start="100" end="0" />
+			<effect type="zoom" time="400" center="auto" start="100" end="200" tween="cubic" easing="in" />
+		</animation>
+	</include>
+
+	<include name="Animation_Window_Startup">
+		<animation effect="fade" start="0" end="100" time="2000">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+	</include>
+
+	<!-- Common Animation -->
+	<include name="Animation_CommonFade_Deck">
+		<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="600" reversible="false">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+	</include>
+
+	<include name="Animation_Dashboard">
+		<animation effect="fade" start="0" end="100" time="1000">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_300">
+		<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_Sortbar">
+		<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="200">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_600">
+		<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="600">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_600_Delay">
+		<animation effect="fade" start="0" end="100" delay="1000" time="600">WindowOpen</animation>	
+		<animation effect="fade" start="0" end="100" delay="1000" time="600">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_600_Weather">
+		<animation effect="fade" start="0" end="100" delay="300" time="600">WindowOpen</animation>	
+		<animation effect="fade" start="0" end="100" delay="300" time="600">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_600_Delay2">
+		<animation effect="fade" start="0" end="100" delay="2000" time="300">WindowOpen</animation>	
+		<animation effect="fade" start="0" end="100" delay="2000" time="300">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>		
+	</include>
+
+	<include name="Animation_CommonFade_Deck_400">
+		<animation effect="fade" start="60" end="100" time="400" delay="400">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="00" time="400">WindowClose</animation>
+		<animation effect="fade" start="60" end="100" time="400" delay="400">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="400">Hidden</animation>		
+	</include>
+	
+	<include name="Animation_CommonFade_300_Visible">
+		<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="300">Visible</animation>	
+		<!--<animation effect="fade" start="100" end="0" time="300">Hidden</animation>-->
+	</include>
+
+	<include name="Animation_BackdropFade">
+		<animation effect="fade" start="0" end="100" time="800">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>	
+		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>		
+	</include>	
+	
+	<include name="Animation_CommonFadeNoHide">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>	
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	</include>	
+
+	<include name="Animation_Bartowski_ZoomOutZoomIn">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="640,360" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="80,920" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="40,460" start="100" end="0" />
+		</animation>	
+	</include>
+
+	<include name="Animation_ZoomOutZoomIn">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="1280,720" start="100" end="180" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+
+	<include name="Animation_ZoomInZoomOut">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,720" start="50" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="1280,720" start="100" end="50" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+	<include name="Animation_Bartowski_Context_Zoom">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="1280,720" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+	<include name="Animation_Bartowski_Context_Zoom_Bottom">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,1320" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="1280,1320" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+	<include name="Animation_Bartowski_Context_Zoom_Slide">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="auto" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="auto" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+	<include name="Animation_ZoomInMenu">
+		<animation type="Visible">
+			<effect delay="200" type="zoom" time="600" center="1280,720" start="50" end="100" tween="cubic" easing="out" />
+			<effect delay="200" type="fade" time="600" start="0" end="100" />			
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" time="200" start="100" end="0" />			
+		</animation>
+		<animation type="WindowOpen">
+			<effect delay="200" type="zoom" time="600" center="1280,720" start="50" end="100" tween="cubic" easing="out" />
+			<effect delay="200" type="fade" time="600" start="0" end="100" />			
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" time="200" start="100" end="0" />			
+		</animation>		
+	</include>
+	
+	<include name="Animation_BartowskiZoomInMenu">
+		<animation type="Visible">
+			<effect type="slide" start="0,600" end="0,0" time="600" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="600" />			
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" time="200" start="100" end="0" />			
+		</animation>
+		<animation type="WindowOpen">
+			<effect delay="200" type="zoom" time="600" center="1280,720" start="50" end="100" tween="cubic" easing="out" />
+			<effect delay="200" type="fade" time="600" start="0" end="100" />			
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" time="200" start="100" end="0" />			
+		</animation>		
+	</include>
+	<include name="Animation_ViewOptions">
+		<animation type="Visible">
+			<effect type="zoom" time="400" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="640,360" start="0" end="100" />			
+		</animation>
+		<animation type="Hidden">
+			<effect type="zoom" time="400" center="1280,1400" start="100" end="380" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="640,700" start="100" end="0" />			
+		</animation>
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="640,360" start="0" end="100" />		
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="1280,1400" start="100" end="380" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="640,700" start="100" end="0" />			
+		</animation>		
+	</include>
+	<include name="Animation_ViewOptions_whitebar">
+		<animation type="Visible">
+			<effect type="zoom" time="200" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="200" center="640,360" start="0" end="100" />			
+		</animation>
+		<animation type="Hidden">
+			<effect type="zoom" time="400" center="1280,1400" start="100" end="380" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="640,700" start="100" end="0" />			
+		</animation>
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="640,360" start="0" end="100" />		
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="1280,1400" start="100" end="380" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="640,700" start="100" end="0" />			
+		</animation>		
+	</include>
+	<include name="Animation_BartowskiPressS">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="1280,720" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="640,360" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="1280,1400" start="100" end="380" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="640,700" start="100" end="0" />
+		</animation>			
+	</include>
+
+	<include name="Animation_SlideUpFadeOut">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="0,200" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="400" />
+		</animation>
+	</include>
+
+	<include name="Animation_SlideDownFadeOut">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="400" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="400" />
+		</animation>
+	</include>
+
+	<include name="Animation_SlideAcrossToRight">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="-400,0" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="400,0" time="400" tween="cubic" easing="in" />
+			<effect type="fade" start="100" end="0" time="400" />
+		</animation>			
+	</include>
+
+	<include name="Animation_SlideAcrossToLeft">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="400,0" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="in" />
+			<effect type="fade" start="100" end="0" time="400" />
+		</animation>			
+	</include>
+
+	<include name="Animation_ZoomInFadeOut">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="600" delay="100" />
+			<effect type="zoom" start="50,50" end="100,100" center="auto" time="500" delay="100" tween="back" asing="out"/>
+		</animation>
+		<animation  type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="400" delay="500" />
+			<effect type="zoom" end="50,50" start="100,100" center="auto" time="500" delay="500" />
+		</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+	</include>
+	<!-- Info dialog animations -->
+
+	<include name="Animation_HiddenByInfo">
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(songinformation)">Conditional</animation>	
+	</include>
+
+	<include name="Animation_HiddenByMusicInfo">
+		<animation type="Conditional" condition="Window.IsActive(2001)">
+			<effect type="zoom" time="400" center="1280,720" start="100" end="20" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>
+	</include>
+
+	
+	<!-- Movie Info Pressing I animations -->
+	
+	
+	
+
+	<!-- Browser animations -->
+
+	<include name="Animation_EpisodeFloat">
+		<animation effect="slide" end="0,20" time="200" condition="Container(51).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,10" time="200" condition="Container(51).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="200" condition="Container(51).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,-10" time="200" condition="Container(51).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,-20" time="200" condition="Container(51).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,-30" time="200" condition="Container(51).Row(5)">Conditional</animation>	
+	</include>
+
+	<include name="Animation_EpisodePlot">
+		<animation effect="slide" end="0,120" time="0" condition="Container(51).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,240" time="0" condition="Container(51).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,360" time="0" condition="Container(51).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,480" time="0" condition="Container(51).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,600" time="0" condition="Container(51).Row(5)">Conditional</animation>
+	</include>
+
+	<include name="Animation_PictureGridFloat">
+		<animation effect="slide" end="0,20" time="400" tween="cubic" easing="inout" condition="Container(50).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="400" tween="cubic" easing="inout" condition="Container(50).Row(1)">Conditional</animation>		
+		<animation effect="slide" end="0,-20" time="400" tween="cubic" easing="inout" condition="Container(50).Row(2)">Conditional</animation>			
+		<animation effect="slide" end="0,-40" time="400" tween="cubic" easing="inout" condition="Container(50).Row(3)">Conditional</animation>			
+	</include>
+
+	<include name="Animation_MusicWallFloat">
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(53).Row(0)">Conditional</animation>
+		<animation effect="slide" end="0,-400" time="300" tween="cubic" easing="inout" condition="Container(53).Row(1)">Conditional</animation>		
+		<animation effect="slide" end="0,-800" time="300" tween="cubic" easing="inout" condition="Container(53).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,-1200" time="300" tween="cubic" easing="inout" condition="Container(53).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,-1600" time="300" tween="cubic" easing="inout" condition="Container(53).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,-2000" time="300" tween="cubic" easing="inout" condition="Container(53).Row(5)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(3)">Conditional</animation>
+		<animation effect="slide" end="-400,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(4)">Conditional</animation>		
+		<animation effect="slide" end="-800,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(5)">Conditional</animation>
+		<animation effect="slide" end="-1200,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(6)">Conditional</animation>
+		<animation effect="slide" end="-1600,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(7)">Conditional</animation>
+		<animation effect="slide" end="-2000,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(8)">Conditional</animation>
+		<animation effect="slide" end="400,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(2)">Conditional</animation>			
+		<animation effect="slide" end="800,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(1)">Conditional</animation>		
+		<animation effect="slide" end="1200,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(0)">Conditional</animation>		
+	</include>	
+
+	<!-- Preplay Exclude Windows -->
+	<include name="Animation_Preplay_Exclude">
+                <visible>![Window.IsActive(10204) | Window.IsActive(10205) | Window.IsActive(2002) | Window.IsActive(106)]</visible>
+	</include>
+	<!-- Preplay Screen -->
+        <include name="Animation_Preplay_Up">
+		<include>Animation_Preplay_Exclude</include>
+                <animation effect="slide" start="0,-1000" time="400" tween="quadratic" easing="out" delay="0">Visible</animation>
+                <animation effect="slide" end="0,-1000" time="400" tween="quadratic" easing="in" delay="0">Hidden</animation>
+                <animation effect="slide" start="0,-1000" time="400" tween="quadratic" easing="out" delay="0">WindowOpen</animation>
+                <animation effect="slide" end="0,-1000" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
+        </include>
+        <include name="Animation_Preplay_Down">
+		<include>Animation_Preplay_Exclude</include>
+                <animation effect="slide" start="0,1000" time="400" tween="quadratic" easing="out" delay="0">Visible</animation>
+                <animation effect="slide" end="0,1000" time="400" tween="quadratic" easing="in" delay="0">Hidden</animation>
+                <animation effect="slide" start="0,1000" time="400" tween="quadratic" easing="out" delay="0">WindowOpen</animation>
+                <animation effect="slide" end="0,1000" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
+        </include>
+        <include name="Animation_Preplay_Left">
+		<include>Animation_Preplay_Exclude</include>
+                <animation effect="slide" start="-1600,0" time="400" tween="quadratic" easing="out" delay="0">Visible</animation>
+                <animation effect="slide" end="-1600,0" time="400" tween="quadratic" easing="in" delay="0">Hidden</animation>
+                <animation effect="slide" start="-1600,0" time="400" tween="quadratic" easing="out" delay="0">WindowOpen</animation>
+                <animation effect="slide" end="-1600,0" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
+        </include>
+        <include name="Animation_Preplay_Right">
+		<include>Animation_Preplay_Exclude</include>
+                <animation effect="slide" start="1600,0" time="400" tween="quadratic" easing="out" delay="0">Visible</animation>
+                <animation effect="slide" end="1600,0" time="400" tween="quadratic" easing="in" delay="0">Hidden</animation>
+                <animation effect="slide" start="1600,0" time="400" tween="quadratic" easing="out" delay="0">WindowOpen</animation>
+                <animation effect="slide" end="1600,0" time="400" tween="quadratic" easing="in" delay="0">WindowClose</animation>
+        </include>
+
+	<!-- OSD Flashing -->
+	<include name="Animation_OSD">
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<effect type="fade" start="0" end="100" time="3000" delay="0" loop="true" reversible="false" />
+			<effect type="fade" start="100" end="0" time="3000" delay="3000" loop="true" reversible="false" />
+		</animation>
+	</include>
+
+	<include name="Animation_OSD_Play">
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<effect type="fade" start="0" end="100" time="2000" delay="0" loop="true" reversible="false" />
+			<effect type="fade" start="100" end="0" time="2000" delay="2000" loop="true" reversible="false" />
+		</animation>
+	</include>
+
+	<include name="Animation_OSD_Selected">
+		<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<effect type="fade" start="50" end="100" time="2000" delay="0" loop="true" reversible="false" />
+			<effect type="fade" start="100" end="50" time="2000" delay="2000" loop="true" reversible="false" />
+		</animation>
+	</include>
+
+	<!-- Custom Dialog -->
+	<include name="Animation_Custom_Dialog">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="0,-200" time="300" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="200" />
+		</animation>
+
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" end="0,-200" time="300" tween="cubic" easing="out" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+
+	</include>
+
+	<include name="Animation_Custom_Dialog_Visible">
+		<animation type="Visible" reversible="false">
+			<effect type="slide" start="0,-200" time="300" tween="cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="200" />
+		</animation>
+
+		<animation type="Hidden" reversible="false">
+			<effect type="slide" end="0,-200" time="300" tween="cubic" easing="out" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+
+	<!-- Home Vertical -->
+	<include name="Animation_Home_Vertical">
+        	<animation effect="slide" start="-2000,0" end="0,0" time="800" tween="cubic" easing="inout">VisibleChange</animation>
+	</include>
+	<include name="Animation_Home_Horizontal">
+        	<animation effect="slide" start="0,800" end="0,0" time="600" tween="cubic" easing="inout">VisibleChange</animation>
+	</include>
+
+</includes>

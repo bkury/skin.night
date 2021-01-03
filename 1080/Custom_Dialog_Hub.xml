@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1161">
+	<defaultcontrol always="true">2</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	<include>Animation_Window_Dialog</include>
+        <onunload>Skin.Reset(selector1)</onunload>
+        <onunload>Skin.Reset(selector2)</onunload>
+        <onunload>Skin.Reset(selector3)</onunload>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+	        <!-- Dialog Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">49</param>
+			<param name="header_label">$LOCALIZE[31135]</param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">2</param>
+			<param name="scroll_onright">52</param>
+		</include>
+
+		<!-- Category -->
+		<control type="grouplist" id="2">
+			<onright>1</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_Grouplist_Category</include>
+
+			<control type="button" id="10">
+				<label>Newsapi</label>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+			<control type="button" id="20">
+				<label>Moviedb</label>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+		</control>
+
+		<!-- Content -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>2</onleft>
+			<include>Dialog_General_List</include>
+
+			<content>
+
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (AT)</param><param name="path">/newsapi/headlines_at.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (AU)</param><param name="path">/newsapi/headlines_au.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (CA)</param><param name="path">/newsapi/headlines_ca.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (DE)</param><param name="path">/newsapi/headlines_de.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (FR)</param><param name="path">/newsapi/headlines_fr.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (GB)</param><param name="path">/newsapi/headlines_gb.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (RU)</param><param name="path">/newsapi/headlines_ru.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Headlines (US)</param><param name="path">/newsapi/headlines_us.json</param><param name="visible">10</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">News</param><param name="name">Technology (US)</param><param name="path">/newsapi/technology_us.json</param><param name="visible">10</param></include>
+
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">Movies (Now playing)</param><param name="path">/moviedb/movies_nowplaying.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">Movies (Popular)</param><param name="path">/moviedb/movies_popular.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">Movies (Top rated)</param><param name="path">/moviedb/movies_toprated.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">Movies (Trending)</param><param name="path">/moviedb/movies_trending.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">Movies (Upcoming)</param><param name="path">/moviedb/movies_upcoming.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">TV (Airing today)</param><param name="path">/moviedb/tv_airingtoday.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">TV (On the air)</param><param name="path">/moviedb/tv_ontheair.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">TV (Popular)</param><param name="path">/moviedb/tv_popular.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">TV (Top rated)</param><param name="path">/moviedb/tv_toprated.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">TV (Trending)</param><param name="path">/moviedb/tv_trending.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">People (Popular)</param><param name="path">/moviedb/people_popular.json</param><param name="visible">20</param></include>
+				<include content="Dialog_Hub_Item"><param name="label">Moviedb</param><param name="name">People (Trending)</param><param name="path">/moviedb/people_trending.json</param><param name="visible">20</param></include>
+
+			</content>
+
+		</control>
+
+                <!-- Footer -->
+                <include content="Dialog_General_Footer_Button_CLOSE">
+                        <param name="id">50</param>
+                        <param name="onup">1</param>
+                        <param name="onleft">1</param>
+                        <param name="onright">1</param>
+                        <param name="position">Right</param>
+                        <param name="dialog">1160</param>
+                </include>
+
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="25">
+	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+
+	<include>Viewmode_Navigation</include>
+</window>

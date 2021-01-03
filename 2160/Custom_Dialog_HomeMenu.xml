@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1160">
+	<defaultcontrol always="true">2</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	<include>Animation_Window_Dialog</include>
+        <onunload>Skin.Reset(selectorhome1)</onunload>
+        <onunload>Skin.Reset(selectorhome2)</onunload>
+        <onunload>Skin.Reset(selectorhome3)</onunload>
+        <onunload>Skin.Reset(selectorhome4)</onunload>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+	        <!-- Dialog Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">49</param>
+			<param name="header_label">$INFO[Skin.String(selectorhome1)]</param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">2</param>
+			<param name="scroll_onright">52</param>
+		</include>
+
+		<!-- Category -->
+		<control type="grouplist" id="2">
+			<onright>1</onright>
+			<onleft>50</onleft>
+			<include>Dialog_General_Grouplist_Category</include>
+
+			<control type="button" id="10">
+				<label>$LOCALIZE[31501]</label><!-- Home menu -->
+				<include>Dialog_General_Button_Category</include>
+				<visible>!Skin.String(selectorhome3,4)</visible>
+			</control>
+			<control type="button" id="15">
+				<label>$LOCALIZE[31520]</label><!-- Content -->
+				<include>Dialog_General_Button_Category</include>
+				<visible>String.isEqual(Skin.String(selectorhome2),505) | String.isEqual(Skin.String(selectorhome2),506) | String.isEqual(Skin.String(selectorhome2),507) | String.isEqual(Skin.String(selectorhome2),508) | String.isEqual(Skin.String(selectorhome2),509) | String.isEqual(Skin.String(selectorhome2),510) | String.isEqual(Skin.String(selectorhome2),511) | String.isEqual(Skin.String(selectorhome2),512) | String.isEqual(Skin.String(selectorhome2),513) | String.isEqual(Skin.String(selectorhome2),514) |
+					 String.isEqual(Skin.String(selectorhome2),405) | String.isEqual(Skin.String(selectorhome2),406) | String.isEqual(Skin.String(selectorhome2),407) | String.isEqual(Skin.String(selectorhome2),408) | String.isEqual(Skin.String(selectorhome2),409) | String.isEqual(Skin.String(selectorhome2),410) | String.isEqual(Skin.String(selectorhome2),411) | String.isEqual(Skin.String(selectorhome2),412) | String.isEqual(Skin.String(selectorhome2),413) | String.isEqual(Skin.String(selectorhome2),414)
+				</visible>
+			</control>
+			<control type="button" id="20">
+				<label>$LOCALIZE[31504] #1</label><!-- Widget 1 -->
+				<include>Dialog_General_Button_Category</include>
+				<visible>!Skin.String(selectorhome3,4) + [ Skin.String(selectorhome3,1) | Skin.String(selectorhome3,2) | Skin.String(selectorhome3,5) ]</visible>
+			</control>
+			<control type="button" id="30">
+				<label>$LOCALIZE[31504] #2</label><!-- Widget 2 -->
+				<include>Dialog_General_Button_Category</include>
+				<visible>!Skin.String(selectorhome3,4) + [ Skin.String(selectorhome3,2) | Skin.String(selectorhome3,5) ]</visible>
+			</control>
+			<control type="button" id="40">
+				<label>$LOCALIZE[31330]</label><!-- Background -->
+				<include>Dialog_General_Button_Category</include>
+				<visible>!Skin.String(selectorhome3,3)</visible>
+			</control>
+			<control type="button" id="50">
+				<label>$LOCALIZE[31193]</label><!-- Reset -->
+				<include>Dialog_General_Button_Category</include>
+				<visible>false</visible>
+			</control>
+		</control>
+
+		<!-- Content -->
+		<control type="list" id="1">
+			<onright condition="!Control.isVisible(100)">52</onright>
+			<onleft>2</onleft>
+			<include>Dialog_General_List</include>
+
+			<content>
+				<include>Home_Settings_Dialog</include>
+			</content>
+		</control>
+
+                <!-- Footer -->
+                <include content="Dialog_General_Footer_Button_CLOSE">
+                        <param name="id">50</param>
+                        <param name="onup">1</param>
+                        <param name="onleft">1</param>
+                        <param name="onright">1</param>
+                        <param name="position">Right</param>
+                        <param name="dialog">1160</param>
+                </include>
+
+	</control>
+
+	</controls>
+</window>

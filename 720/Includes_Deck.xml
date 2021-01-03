@@ -1,0 +1,2065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<!-- Deck Background -->
+<variable name="Deck_Background_ControlGroup">
+	<value condition="!String.isEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
+	<value condition="!String.isEmpty(Container.ListItem.Property(fanart))">$INFO[Container.ListItem.Property(fanart)]</value>
+</variable>
+
+<include name="Deck_Animation">
+	<include>AspectRatio_Deck_Animation</include>
+</include>
+
+<!-- Home Deck -->
+<include name="Home_Deck">
+
+	<!-- Widgets -->
+	<include condition="!Skin.HasSetting(Deck_Disable)">Home_Deck_Items</include>
+
+	<!-- Dashboard -->
+	<include condition="!Skin.hasSetting(Home_Hide_Dashboard)">Home_Deck_Dashboard</include>
+
+</include>
+
+<!-- Home Deck (Widgets) -->
+<include name="Home_Deck_Items">
+	<control type="group" id="5000">
+		<include condition="!Skin.hasSetting(Home_Horizontal)">Deck_Position</include>
+		<include condition="!Skin.hasSetting(Home_Horizontal)">Deck_Animation</include>
+
+		<!-- Horizontal Home -->
+		<include condition="Skin.hasSetting(Home_Horizontal)">Home_Deck_Horizontal_Animation</include>
+
+		<!-- Widgets -->
+		<include>Home_Widget</include>
+	</control>
+</include>
+
+<!-- Home Deck (Horz/Anim) -->
+<include name="Home_Deck_Horizontal_Animation">
+	<animation effect="slide" end="0,-80" time="600" tween="cubic" easing="inout" condition="!ControlGroup(5000).hasFocus">Conditional</animation>
+</include>
+<include name="Home_Dashboard_Horizontal_Animation">
+	<animation effect="slide" end="0,-80" time="600" tween="cubic" easing="inout" condition="!ControlGroup(5001).hasFocus">Conditional</animation>
+</include>
+
+<!-- Home Deck (Dashboard) -->
+<include name="Home_Deck_Dashboard">
+	<control type="group">
+		<include>Animation_CommonFade_300</include>
+		<visible>Container(300).hasFocus(65)</visible>
+
+		<!-- Horizontal Home -->
+		<include condition="Skin.hasSetting(Home_Horizontal)">Home_Dashboard_Horizontal_Animation</include>
+
+		<!-- Dashboard -->
+		<include>Deck_Dashboard</include>
+	</control>
+</include>
+
+<!-- Home Deck (Grouplist) -->
+<include name="Home_Deck_Grouplist">
+	<top>-30</top>
+	<height>780</height>
+	<include>AspectRatio_Width</include>
+	<include>AspectRatio_Height</include>
+	<align>center</align>
+	<orientation>vertical</orientation>
+	<itemgap>0</itemgap>
+	<ondown>300</ondown>
+	<onup>300</onup>
+	<onback>300</onback>
+</include>
+
+<!-- Home Deck (Deckname) -->
+<include name="Home_Deck_Name">
+
+	<control type="group">
+		<left>$PARAM[left]</left>
+		<control type="image">
+			<width>$PARAM[width]</width>
+			<height>30</height>
+			<texture flipx="true">bg_section.png</texture>
+			<colordiffuse>20FFFFFF</colordiffuse>
+		</control>
+                                
+		<control type="label">
+			<left>-10</left>
+
+			<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget]_Name))" content="Home_Deck_Name_Param">
+				<param name="name">$PARAM[name]</param>
+			</include>
+			<include condition="!String.isEmpty(Skin.String(Widget_$PARAM[id_widget]_Name))" content="Home_Deck_Name_Info">
+				<param name="id_widget">$PARAM[id_widget]</param>
+			</include>
+
+			<width>$PARAM[width]</width>
+			<font>Font_Deck_Name</font>
+			<textcolor>$VAR[Var_Color_WidgetName_Hex]</textcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<height>30</height>
+		</control>
+
+	</control>
+
+</include>
+<include name="Home_Deck_Name_Param">
+	<label>[UPPERCASE]$PARAM[name][/UPPERCASE]</label>
+</include>
+<include name="Home_Deck_Name_Info">
+	<label>[UPPERCASE]$INFO[Skin.String(Widget_$PARAM[id_widget]_Name)][/UPPERCASE]</label>
+</include>
+
+<!-- DECK INFORMATION -->
+<include name="Deck_Information">
+	<control type="label">
+		<width>1000</width>
+		<height>70</height>
+		<label>$VAR[Deck_Label_Title_1]</label>
+		<font>Lato_Thin_60</font>
+		<scroll>false</scroll>
+		<textcolor>$VAR[Var_Color_Header_Hex]</textcolor>
+		<wrapmultiline>false</wrapmultiline>
+		<aligny>center</aligny>
+	</control>
+	<control type="label">
+		<top>70</top>
+		<width>1000</width>
+		<height>50</height>
+		<label>$VAR[Deck_Label_Title_2]</label>
+		<font>Lato_Thin_40</font>
+		<scroll>true</scroll>
+		<textcolor>$VAR[Var_Color_Subheader_Hex]</textcolor>
+		<wrapmultiline>false</wrapmultiline>
+		<width>1000</width>
+		<aligny>center</aligny>
+	</control>
+</include>
+
+<!-- DECK INFORMATION (MORE) -->
+<include name="Deck_Information_More">
+
+		<!-- Content Rating -->
+		<control type="image">
+			<top>11</top>
+			<width>70</width>
+			<height>70</height>
+			<colordiffuse>FFCCCCCC</colordiffuse>
+			<texture>icon_contentrating2.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>!String.isEmpty(Container.ListItem.Plot) | !String.isEmpty(Container.ListItem.Property(Plot)) | !String.isEmpty(Container.ListItem.AddonDescription)</visible>
+		</control>
+		<control type="label">
+			<top>11</top>
+			<width>70</width>
+			<height>70</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Lato_Black_30</font>
+			<textcolor>$VAR[Var_Color_ContentRating_Hex]</textcolor>
+			<label>$VAR[Deck_Label_ContentRating]</label>
+			<wrapmultiline>true</wrapmultiline>
+			<visible>!String.isEmpty(Container.ListItem.Plot) | !String.isEmpty(Container.ListItem.Property(Plot)) | !String.isEmpty(Container.ListItem.AddonDescription)</visible>
+		</control>
+
+		<!-- Rating (User/Star) -->
+		<control type="image">
+			<top>90</top>
+			<width>70</width>
+			<height>30</height>
+			<texture>$VAR[Var_Rating_Image]</texture>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>$VAR[Var_Color_StarRating_Hex]</colordiffuse>
+		</control>
+
+		<!-- Plot -->
+		<control type="textbox">
+                        <left>90</left>
+                        <top>0</top>
+                        <width>700</width>
+                        <height>90</height>
+                        <align>justify</align>
+                        <label>$VAR[Deck_Label_Plot]</label>
+                        <font>Deck_Plot</font>
+                        <textcolor>$VAR[Var_Color_Plot_Hex]</textcolor>
+                        <autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+                </control>
+
+		<!-- Studio Logo -->
+		<control type="image">
+			<top>10</top>
+			<left>800</left>
+			<width>200</width>
+			<height>100</height>
+			<colordiffuse>DDFFFFFF</colordiffuse>
+			<texture>$VAR[Var_Info_Studio_Image]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>System.HasAddon(resource.images.studios.white)</visible>
+		</control>
+
+		<!-- Mediaflags -->
+		<control type="grouplist">
+			<top>90</top>
+			<left>90</left>
+			<width>480</width><!-- 456 -->
+			<height>30</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include content="Viewmode_Mediaflags_80"><param name="align">left</param></include>
+			<include>Viewmode_Mediaflags_General</include>
+		</control>
+
+</include>
+
+<!-- Plot -->
+<variable name="Deck_Label_Plot">
+	<value condition="!String.isEmpty(Container.ListItem.Plot) + Skin.HasSetting(Spoiler_Plot) + [ Container.ListItem.Type(movie) | Container.ListItem.Type(episode) ] + !String.isEqual(Container.ListItem.Overlay,OverlayWatched.png)">[CR]$LOCALIZE[19022][CR]</value>
+	<value condition="!String.isEmpty(Container.ListItem.Plot)">$INFO[Container.ListItem.Plot]</value>
+	<value condition="!String.isEmpty(Container.ListItem.Property(Plot))">$INFO[Container.ListItem.Property(Plot)]</value>
+	<value condition="!String.isEmpty(Container.ListItem.AddonDescription)">$INFO[Container.ListItem.AddonDescription]</value>
+</variable>
+
+<!-- Content Rating -->
+<variable name="Deck_Label_ContentRating">
+	<value condition="String.Contains(Container.Listitem.Mpaa,MA) | String.Contains(Container.Listitem.Property(Mpaa),MA)">MA</value>
+	<value condition="String.Contains(Container.Listitem.Mpaa,PG) | String.Contains(Container.Listitem.Property(Mpaa),PG)">PG</value>
+	<value condition="String.Contains(Container.Listitem.Mpaa,Y7) | String.Contains(Container.Listitem.Property(Mpaa),Y7)">Y7</value>
+	<value condition="String.Contains(Container.Listitem.Mpaa,14) | String.Contains(Container.Listitem.Property(Mpaa),14)">14+</value>
+	<value condition="String.Contains(Container.Listitem.Mpaa,16) | String.Contains(Container.Listitem.Property(Mpaa),16)">16+</value>
+	<value condition="String.Contains(Container.Listitem.Mpaa,17) | String.Contains(Container.Listitem.Property(Mpaa),17)">17+</value>
+	<value condition="String.Contains(Container.Listitem.Mpaa,18) | String.Contains(Container.Listitem.Property(Mpaa),18)">18+</value>
+	<value condition="String.isEqual(Container.Listitem.Mpaa,R) | String.Contains(Container.Listitem.Property(Mpaa),R)">R</value>
+	<value condition="String.endsWith(Container.Listitem.Mpaa,G) | String.Contains(Container.Listitem.Property(Mpaa),G)">G</value>
+	<value>?</value>
+</variable>
+
+<!-- Studio -->
+<variable name="Deck_Label_Studio">
+	<value></value>
+</variable>
+
+<!-- Deck Content -->
+<include name="Deck_Content">
+	<!-- Vertical Navigation -->
+	<onleft condition="!Skin.HasSetting(Home_Horizontal)">300</onleft>
+
+	<!-- Horizontal Navigation -->
+	<ondown condition="Skin.HasSetting(Home_Horizontal)">300</ondown>
+
+	<include>AspectRatio_Width_1280</include>
+	<height>240</height>
+	<orientation>horizontal</orientation>
+	<preloaditems>2</preloaditems>
+</include>
+
+<include name="Deck_Height_Small">
+	<height>144</height>
+</include>
+<include name="Deck_Height_xLarge">
+	<height>432</height>
+</include>
+
+<!-- KODI Dashboard -->
+<include name="Deck_Dashboard_Itemlayout">
+
+	<definition>
+
+		<!-- Background -->
+		<control type="image">
+			<top>10</top>
+			<left>10</left>
+			<width>360</width>
+			<height>120</height>
+			<texture>items/dashboard/720/Thumb_Background.png</texture>
+			<colordiffuse>DD333333</colordiffuse>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<top>10</top>
+			<left>10</left>
+			<width>360</width>
+			<height>120</height>
+			<texture>items/dashboard/720/Thumb_Frame_Focus.png</texture>
+			<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.hasFocus($PARAM[id_button])</visible>
+		</control>
+
+		<!-- Header -->
+                <control type="label">
+			<top>10</top>
+			<left>10</left>
+                        <label>$PARAM[label]</label>
+                        <width>350</width>
+                        <font>Font_Deck_Name</font>
+                        <textcolor>FFCCCCCC</textcolor>
+                        <aligny>center</aligny>
+                        <align>right</align>
+                        <height>30</height>
+                </control>
+
+		<!-- List -->
+		<control type="list" id="$PARAM[id_list]">
+			<top>42</top>
+			<left>100</left>
+			<height>90</height>
+			<width>265</width>
+			<onback>$PARAM[id_button]</onback>
+			<onleft>$PARAM[id_button]</onleft>
+			<onright>$PARAM[id_button]</onright>
+		
+			<itemlayout width="265" height="28">
+				<control type="label">
+					<left>5</left>
+					<label>$VAR[Var_Deck_Dashboard]</label>
+					<font>Lato_Light_20</font>
+					<width>250</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="265" height="28">
+				<control type="image">
+					<width>270</width>
+					<height>28</height>
+					<include>navigation_options_image</include>
+					<visible>Control.hasFocus($PARAM[id_list])</visible>
+		                </control>
+				<control type="label">
+					<left>5</left>
+					<label>$VAR[Var_Deck_Dashboard]</label>
+					<font>Lato_Light_20</font>
+					<width>250</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</focusedlayout>
+
+			<include>Widget_$PARAM[id_widget]_Content</include>
+		</control>
+
+		<!-- Image (TV Show) -->
+		<control type="image">
+			<left>15</left>
+			<top>45</top>
+			<height>80</height>
+			<width>75</width>
+			<texture>$INFO[Container($PARAM[id_list]).ListItemAbsolute(0).Art(tvshow.poster)]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>String.isEqual(Container($PARAM[id_list]).ListItemAbsolute(0).DBType,episode)</visible>
+		</control>
+
+		<!-- Image (Other) -->
+		<control type="image">
+			<left>15</left>
+			<top>45</top>
+			<height>80</height>
+			<width>75</width>
+			<texture>$INFO[Container($PARAM[id_list]).ListItemAbsolute(0).Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>!String.isEqual(Container($PARAM[id_list]).ListItemAbsolute(0).DBType,episode)</visible>
+		</control>
+
+		<!-- No Data -->
+                <control type="label">
+			<left>100</left>
+			<top>40</top>
+                        <label>No Data</label>
+                        <width>270</width>
+                        <font>Lato_Light_20</font>
+                        <textcolor>FFCCCCCC</textcolor>
+                        <aligny>center</aligny>
+                        <height>30</height>
+			<visible>String.isEmpty(Container($PARAM[id_list]).ListItemAbsolute(0).Label)</visible>
+                </control>
+		<control type="image">
+			<left>10</left>
+			<top>45</top>
+			<height>80</height>
+			<width>80</width>
+			<texture>DefaultVideo.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>String.isEmpty(Container($PARAM[id_list]).ListItemAbsolute(0).Label)</visible>
+		</control>
+
+	</definition>
+</include>
+
+<include name="Deck_Dashboard_Itemlayout_Container">
+        <control type="panel" id="$PARAM[widgetid]">
+                <left>160</left>
+                <top>240</top>
+                <width>960</width>
+                <height>240</height>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+
+                <onback>SetFocus(5001)</onback>
+                <ondown>SetFocus(5001)</ondown>
+                <onup>SetFocus(5001)</onup>
+
+                <visible allowhiddenfocus="true">Control.hasFocus($PARAM[widgetid])</visible>
+                <include>Animation_CommonFade_300</include>
+
+		<!-- NOTE: WORK HERE -->
+                <include>Viewmode_Deck_Itemlayout_Poster</include>
+
+		<include>Deck_$PARAM[deckid]_$PARAM[homeid]_Data</include>
+
+	</control>
+
+</include>
+
+<include name="Deck_Dashboard">
+
+	<!-- 380 x 140 -->
+	<control type="group" id="5001">
+		<top>80</top>
+		<left>760r</left>
+		<include>AspectRatio_Deck_Dashboard_Animation</include>
+
+		<!-- Widget 1 -->
+		<control type="group">
+			<control type="button" id="5011">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18001).ListItemAbsolute(0).Label)">SetFocus(18001)</onclick>
+				<onleft>300</onleft>
+				<onright>5012</onright>
+				<ondown>5014</ondown>
+				<onup>5020</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget1),hide)">Deck_Dashboard_Widget1</include>
+		</control>
+
+		<!-- Widget 2 -->
+		<control type="group">
+			<left>380</left>
+
+			<control type="button" id="5012">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18002).ListItemAbsolute(0).Label)">SetFocus(18002)</onclick>
+				<onleft>5011</onleft>
+				<onright>5013</onright>
+				<ondown>5015</ondown>
+				<onup>5021</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget2),hide)">Deck_Dashboard_Widget2</include>
+		</control>
+
+		<!-- Widget 3 -->
+		<control type="group">
+			<left>760</left>
+
+			<control type="button" id="5013">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18003).ListItemAbsolute(0).Label)">SetFocus(18003)</onclick>
+				<onleft>5012</onleft>
+				<onright>5011</onright>
+				<ondown>5016</ondown>
+				<onup>5022</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget3),hide)">Deck_Dashboard_Widget3</include>
+		</control>
+
+		<!-- Widget 4 -->
+		<control type="group">
+			<top>140</top>
+
+			<control type="button" id="5014">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18004).ListItemAbsolute(0).Label)">SetFocus(18004)</onclick>
+				<onleft>300</onleft>
+				<onright>5015</onright>
+				<ondown>5017</ondown>
+				<onup>5011</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget4),hide)">Deck_Dashboard_Widget4</include>
+		</control>
+
+		<!-- Widget 5 -->
+		<control type="group">
+			<top>140</top>
+			<left>380</left>
+			<control type="button" id="5015">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18005).ListItemAbsolute(0).Label)">SetFocus(18005)</onclick>
+				<onleft>5014</onleft>
+				<onright>5016</onright>
+				<ondown>5018</ondown>
+				<onup>5012</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget5),hide)">Deck_Dashboard_Widget5</include>
+		</control>
+
+		<!-- Widget 6 -->
+		<control type="group">
+			<top>140</top>
+			<left>760</left>
+			<control type="button" id="5016">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18006).ListItemAbsolute(0).Label)">SetFocus(18006)</onclick>
+				<onleft>5015</onleft>
+				<onright>5014</onright>
+				<ondown>5019</ondown>
+				<onup>5013</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget6),hide)">Deck_Dashboard_Widget6</include>
+		</control>
+
+		<!-- Widget 7 -->
+		<control type="group">
+			<top>280</top>
+			<control type="button" id="5017">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18007).ListItemAbsolute(0).Label)">SetFocus(18007)</onclick>
+				<onleft>300</onleft>
+				<onright>5018</onright>
+				<ondown>5020</ondown>
+				<onup>5014</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget7),hide)">Deck_Dashboard_Widget7</include>
+		</control>
+
+		<!-- Widget 8 -->
+		<control type="group">
+			<top>280</top>
+			<left>380</left>
+			<control type="button" id="5018">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18008).ListItemAbsolute(0).Label)">SetFocus(18008)</onclick>
+				<onleft>5017</onleft>
+				<onright>5019</onright>
+				<ondown>5021</ondown>
+				<onup>5015</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget8),hide)">Deck_Dashboard_Widget8</include>
+		</control>
+
+		<!-- Widget 9 -->
+		<control type="group">
+			<top>280</top>
+			<left>760</left>
+			<control type="button" id="5019">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18009).ListItemAbsolute(0).Label)">SetFocus(18009)</onclick>
+				<onleft>5018</onleft>
+				<onright>5017</onright>
+				<ondown>5022</ondown>
+				<onup>5016</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget9),hide)">Deck_Dashboard_Widget9</include>
+		</control>
+
+		<!-- Widget 10 -->
+		<control type="group">
+			<top>420</top>
+			<control type="button" id="5020">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18010).ListItemAbsolute(0).Label)">SetFocus(18010)</onclick>
+				<onleft>300</onleft>
+				<onright>5021</onright>
+				<ondown>5011</ondown>
+				<onup>5017</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget10),hide)">Deck_Dashboard_Widget10</include>
+		</control>
+
+		<!-- Widget 11 -->
+		<control type="group">
+			<top>420</top>
+			<left>380</left>
+			<control type="button" id="5021">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18011).ListItemAbsolute(0).Label)">SetFocus(18011)</onclick>
+				<onleft>5020</onleft>
+				<onright>5022</onright>
+				<ondown>5012</ondown>
+				<onup>5018</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget11),hide)">Deck_Dashboard_Widget11</include>
+		</control>
+
+		<!-- Widget 12 -->
+		<control type="group">
+			<top>420</top>
+			<left>760</left>
+			<control type="button" id="5022">
+				<include>Deck_Dashboard_Button</include>
+				<onclick condition="!String.isEmpty(Container(18012).ListItemAbsolute(0).Label)">SetFocus(18012)</onclick>
+				<onleft>5021</onleft>
+				<onright>5020</onright>
+				<ondown>5013</ondown>
+				<onup>5019</onup>
+			</control>
+			<include condition="!String.isEqual(Skin.String(Dashboard_Widget12),hide)">Deck_Dashboard_Widget12</include>
+		</control>
+
+
+	</control>
+
+</include>
+
+<include name="Deck_Dashboard_Button">
+	<top>10</top>
+	<left>10</left>
+	<width>360</width>
+	<height>30</height>
+	<colordiffuse>FFFFFFFF</colordiffuse>
+	<onback>300</onback>
+</include>
+
+<include name="Deck_Dashboard_Button_Settings">
+        <width>380</width>
+        <height>140</height>
+
+	<font>Lato_Regular_20</font>
+	<align>center</align>
+	<aligny>center</aligny>
+        <texturefocus colordiffuse="$VAR[Var_Color_Icon_Hex]">Dashboard_Widget_Border.png</texturefocus>
+	<texturenofocus colordiffuse="66FFFFFF">Dashboard_Widget_Border.png</texturenofocus>
+	<wrapmultiline>true</wrapmultiline>
+	<textcolor>FFCCCCCC</textcolor>
+	<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+</include>
+
+<!-- Deck Dashboard Settings -->
+<include name="Dashboard_Widget_Settings">
+
+	<!-- 380 x 140 -->
+	<control type="group">
+
+		<!-- Widget 1 -->
+		<control type="group">
+
+			<control type="button" id="5011">
+				<label>$VAR[Var_Dashboard_Settings_Label_1]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 1)</onclick>
+				<onclick>Skin.SetString(selector1,Widget1)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5013</onleft>
+				<onright>5012</onright>
+				<ondown>5014</ondown>
+				<onup>9000</onup>
+			</control>
+		</control>
+
+		<!-- Widget 2 -->
+		<control type="group">
+			<left>380</left>
+
+			<control type="button" id="5012">
+				<label>$VAR[Var_Dashboard_Settings_Label_2]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 2)</onclick>
+				<onclick>Skin.SetString(selector1,Widget2)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5011</onleft>
+				<onright>5013</onright>
+				<ondown>5015</ondown>
+				<onup>9000</onup>
+			</control>
+		</control>
+
+		<!-- Widget 3 -->
+		<control type="group">
+			<left>760</left>
+
+			<control type="button" id="5013">
+				<label>$VAR[Var_Dashboard_Settings_Label_3]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 3)</onclick>
+				<onclick>Skin.SetString(selector1,Widget3)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5012</onleft>
+				<onright>5011</onright>
+				<ondown>5016</ondown>
+				<onup>9000</onup>
+			</control>
+		</control>
+
+		<!-- Widget 4 -->
+		<control type="group">
+			<top>140</top>
+
+			<control type="button" id="5014">
+				<label>$VAR[Var_Dashboard_Settings_Label_4]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 4)</onclick>
+				<onclick>Skin.SetString(selector1,Widget4)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5016</onleft>
+				<onright>5015</onright>
+				<ondown>5017</ondown>
+				<onup>5011</onup>
+			</control>
+		</control>
+
+		<!-- Widget 5 -->
+		<control type="group">
+			<top>140</top>
+			<left>380</left>
+
+			<control type="button" id="5015">
+				<label>$VAR[Var_Dashboard_Settings_Label_5]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 5)</onclick>
+				<onclick>Skin.SetString(selector1,Widget5)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5014</onleft>
+				<onright>5016</onright>
+				<ondown>5018</ondown>
+				<onup>5012</onup>
+			</control>
+		</control>
+
+		<!-- Widget 6 -->
+		<control type="group">
+			<top>140</top>
+			<left>760</left>
+
+			<control type="button" id="5016">
+				<label>$VAR[Var_Dashboard_Settings_Label_6]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 6)</onclick>
+				<onclick>Skin.SetString(selector1,Widget6)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5015</onleft>
+				<onright>5014</onright>
+				<ondown>5019</ondown>
+				<onup>5013</onup>
+			</control>
+		</control>
+
+		<!-- Widget 7 -->
+		<control type="group">
+			<top>280</top>
+
+			<control type="button" id="5017">
+				<label>$VAR[Var_Dashboard_Settings_Label_7]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 7)</onclick>
+				<onclick>Skin.SetString(selector1,Widget7)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5019</onleft>
+				<onright>5018</onright>
+				<ondown>5020</ondown>
+				<onup>5014</onup>
+			</control>
+		</control>
+
+		<!-- Widget 8 -->
+		<control type="group">
+			<top>280</top>
+			<left>380</left>
+
+			<control type="button" id="5018">
+				<label>$VAR[Var_Dashboard_Settings_Label_8]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 8)</onclick>
+				<onclick>Skin.SetString(selector1,Widget8)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5017</onleft>
+				<onright>5019</onright>
+				<ondown>5021</ondown>
+				<onup>5015</onup>
+			</control>
+		</control>
+
+		<!-- Widget 9 -->
+		<control type="group">
+			<top>280</top>
+			<left>760</left>
+
+			<control type="button" id="5019">
+				<label>$VAR[Var_Dashboard_Settings_Label_9]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 9)</onclick>
+				<onclick>Skin.SetString(selector1,Widget9)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5018</onleft>
+				<onright>5017</onright>
+				<ondown>5022</ondown>
+				<onup>5016</onup>
+			</control>
+		</control>
+
+		<!-- Widget 10 -->
+		<control type="group">
+			<top>420</top>
+
+			<control type="button" id="5020">
+				<label>$VAR[Var_Dashboard_Settings_Label_10]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 10)</onclick>
+				<onclick>Skin.SetString(selector1,Widget10)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5022</onleft>
+				<onright>5021</onright>
+				<ondown>5011</ondown>
+				<onup>5017</onup>
+			</control>
+		</control>
+
+		<!-- Widget 11 -->
+		<control type="group">
+			<top>420</top>
+			<left>380</left>
+
+			<control type="button" id="5021">
+				<label>$VAR[Var_Dashboard_Settings_Label_11]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 11)</onclick>
+				<onclick>Skin.SetString(selector1,Widget11)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5020</onleft>
+				<onright>5022</onright>
+				<ondown>5012</ondown>
+				<onup>5018</onup>
+			</control>
+		</control>
+
+		<!-- Widget 12 -->
+		<control type="group">
+			<top>420</top>
+			<left>760</left>
+
+			<control type="button" id="5022">
+				<label>$VAR[Var_Dashboard_Settings_Label_12]</label>
+				<include>Deck_Dashboard_Button_Settings</include>
+				<include>Deck_Dashboard_Button</include>
+
+				<onclick>Skin.SetString(selectorname,Dashboard Widget 12)</onclick>
+				<onclick>Skin.SetString(selector1,Widget12)</onclick>
+				<onclick>ActivateWindow(1136)</onclick>
+
+				<onleft>5021</onleft>
+				<onright>5020</onright>
+				<ondown>5013</ondown>
+				<onup>5019</onup>
+			</control>
+		</control>
+
+
+	</control>
+</include>
+
+<include name="Widget_0_Content">
+	<content></content>
+</include>
+
+<!-- Widget Item -->
+<include name="Widget_Item_1">
+	<param name="widget1_orientation">horizontal</param>
+	<param name="widget2_orientation">horizontal</param>
+	<param name="widget1_limit">20</param>
+	<param name="widget2_limit">20</param>
+	<param name="widget1_text">false</param>
+	<param name="widget2_text">false</param>
+
+	<definition>
+
+	<control type="grouplist">
+		<usecontrolcoords>true</usecontrolcoords>
+		<include>Home_Deck_Grouplist</include>
+		<include condition="!Skin.hasSetting(Global_Hide_Animation)">Animation_CommonFade</include>
+		<visible>Container(300).hasFocus($PARAM[id_home])</visible>
+
+		<!-- Info -->
+		<control type="group" id="5">
+			<left>20</left>
+			<height>120</height>
+			<include>Deck_Information</include>
+			<visible>ControlGroup(5000).hasFocus</visible>
+		</control>
+
+		<!-- Deckname -->
+		<control type="group" id="10">
+			<height>0</height>
+			<animation effect="slide" end="0,-30" condition="true">Conditional</animation>
+
+			<include>AspectRatio_Deckname_Animation</include>
+			<include content="Home_Deck_Name" condition="!String.isEqual(Skin.String(Widget_$PARAM[id_widget2]_Name),hide)">
+				<param name="name">$PARAM[widget1_name]</param>
+				<param name="width">310</param>
+				<param name="left">160</param>
+				<param name="id_widget">$PARAM[id_widget1]</param>
+			</include>
+
+			<visible>Integer.IsGreater(Container($PARAM[id_widget1]).NumItems,0)</visible>
+		</control>
+
+		<!-- Deck 1 -->
+		<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Hide)) + [ $PARAM[widget1_text] | String.startsWith(Skin.String(Widget_$PARAM[id_widget1]_Type),Text) ]" content="Viewmode_Deck_Itemlayout_Background">
+			<param name="id">17</param>
+			<param name="id_widget">$PARAM[id_widget1]</param>
+		</include>
+
+		<control type="group" id="20">
+			<height>0</height>
+			<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Hide)) + String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Type))" content="Widget_Container">
+				<param name="id_widget">$PARAM[id_widget1]</param>
+				<param name="id_home">$PARAM[id_home]</param>
+				<param name="widget_type">$PARAM[widget1_type]</param>
+				<param name="widget_height">$PARAM[widget1_height]</param>
+				<param name="widget_orientation">$PARAM[widget1_orientation]</param>
+				<param name="widget_limit">$PARAM[widget1_limit]</param>
+				<param name="onup">300</param>
+				<param name="ondown">300</param>
+			</include>
+			<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Hide)) + !String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Type))" content="Widget_Container_Custom">
+				<param name="id_deck">1</param>
+				<param name="id_widget">$PARAM[id_widget1]</param>
+				<param name="id_home">$PARAM[id_home]</param>
+				<param name="onup">300</param>
+				<param name="ondown">300</param>
+			</include>
+		</control>
+		<control type="group" id="25">
+			<include content="Widget_Height_Custom" condition="!String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Type))">
+				<param name="id_widget">$PARAM[id_widget1]</param>
+			</include>
+			<height>$PARAM[widget1_height]</height>
+			<visible>Integer.IsGreater(Container($PARAM[id_widget1]).NumItems,0)</visible>
+		</control>
+
+		<!-- Info -->
+		<control type="group" id="45">
+			<left>20</left>
+			<height>120</height>
+			<include>Deck_Information_More</include>
+			<visible>ControlGroup(5000).hasFocus</visible>
+		</control>
+
+	</control>
+
+	</definition>
+</include>
+
+<include name="Widget_Item_2">
+	<param name="widget1_orientation">horizontal</param>
+	<param name="widget2_orientation">horizontal</param>
+	<param name="widget1_limit">20</param>
+	<param name="widget2_limit">20</param>
+	<param name="widget1_text">false</param>
+	<param name="widget2_text">false</param>
+
+	<definition>
+
+	<control type="grouplist">
+		<usecontrolcoords>true</usecontrolcoords>
+		<include>Home_Deck_Grouplist</include>
+		<include condition="!Skin.hasSetting(Global_Hide_Animation)">Animation_CommonFade</include>
+		<visible>Container(300).hasFocus($PARAM[id_home])</visible>
+
+		<!-- Info -->
+		<control type="group" id="5">
+			<left>20</left>
+			<height>120</height>
+			<include>Deck_Information</include>
+			<visible>ControlGroup(5000).hasFocus</visible>
+		</control>
+
+		<!-- Deckname -->
+		<control type="group" id="10">
+			<height>0</height>
+			<animation effect="slide" end="0,-30" condition="true">Conditional</animation>
+
+			<include>AspectRatio_Deckname_Animation</include>
+			<include content="Home_Deck_Name" condition="!String.isEqual(Skin.String(Widget_$PARAM[id_widget1]_Name),hide)">
+				<param name="name">$PARAM[widget1_name]</param>
+				<param name="width">310</param>
+				<param name="left">160</param>
+				<param name="id_widget">$PARAM[id_widget1]</param>
+			</include>
+
+			<visible>Integer.IsGreater(Container($PARAM[id_widget1]).NumItems,0)</visible>
+		</control>
+
+		<control type="group" id="15">
+			<height>0</height>
+			<animation effect="slide" end="0,-30" condition="true">Conditional</animation>
+
+			<include>AspectRatio_Deckname_Animation</include>
+			<include content="Home_Deck_Name" condition="!String.isEqual(Skin.String(Widget_$PARAM[id_widget2]_Name),hide)">
+				<param name="name">$PARAM[widget2_name]</param>
+				<param name="width">310</param>
+				<param name="left">160</param>
+				<param name="id_widget">$PARAM[id_widget2]</param>
+			</include>
+			<visible>!Integer.IsGreater(Container($PARAM[id_widget1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id_widget2]).NumItems,0)</visible>
+		</control>
+
+		<!-- Deck 1 -->
+		<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Hide)) + [ $PARAM[widget1_text] | String.startsWith(Skin.String(Widget_$PARAM[id_widget1]_Type),Text) ]" content="Viewmode_Deck_Itemlayout_Background">
+			<param name="id">17</param>
+			<param name="id_widget">$PARAM[id_widget1]</param>
+		</include>
+
+		<control type="group" id="20">
+			<height>0</height>
+			<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Hide)) + String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Type))" content="Widget_Container">
+				<param name="id_widget">$PARAM[id_widget1]</param>
+				<param name="id_home">$PARAM[id_home]</param>
+				<param name="widget_type">$PARAM[widget1_type]</param>
+				<param name="widget_height">$PARAM[widget1_height]</param>
+				<param name="widget_orientation">$PARAM[widget1_orientation]</param>
+				<param name="widget_limit">$PARAM[widget1_limit]</param>
+				<param name="onup">300</param>
+				<param name="ondown">$PARAM[id_widget2]</param>
+			</include>
+			<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Hide)) + !String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Type))" content="Widget_Container_Custom">
+				<param name="id_widget">$PARAM[id_widget1]</param>
+				<param name="id_home">$PARAM[id_home]</param>
+				<param name="onup">300</param>
+				<param name="ondown">$PARAM[id_widget2]</param>
+			</include>
+		</control>
+		<control type="group" id="25">
+			<include content="Widget_Height_Custom" condition="!String.isEmpty(Skin.String(Widget_$PARAM[id_widget1]_Type))">
+				<param name="id_widget">$PARAM[id_widget1]</param>
+			</include>
+			<height>$PARAM[widget1_height]</height>
+			<visible>Integer.IsGreater(Container($PARAM[id_widget1]).NumItems,0)</visible>
+		</control>
+
+		<!-- Deck 2 -->
+		<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget2]_Hide)) + [ $PARAM[widget2_text] | String.startsWith(Skin.String(Widget_$PARAM[id_widget2]_Type),Text) ]" content="Viewmode_Deck_Itemlayout_Background">
+			<param name="id">28</param>
+			<param name="id_widget">$PARAM[id_widget2]</param>
+		</include>
+
+		<control type="group" id="30">
+			<height>0</height>
+			<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget2]_Hide)) + String.isEmpty(Skin.String(Widget_$PARAM[id_widget2]_Type))" content="Widget_Container">
+				<param name="id_widget">$PARAM[id_widget2]</param>
+				<param name="id_home">$PARAM[id_home]</param>
+				<param name="widget_type">$PARAM[widget2_type]</param>
+				<param name="widget_height">$PARAM[widget2_height]</param>
+				<param name="widget_orientation">$PARAM[widget2_orientation]</param>
+				<param name="widget_limit">$PARAM[widget2_limit]</param>
+				<param name="onup">$PARAM[id_widget1]</param>
+				<param name="ondown">300</param>
+			</include>
+			<include condition="String.isEmpty(Skin.String(Widget_$PARAM[id_widget2]_Hide)) + !String.isEmpty(Skin.String(Widget_$PARAM[id_widget2]_Type))" content="Widget_Container_Custom">
+				<param name="id_widget">$PARAM[id_widget2]</param>
+				<param name="id_home">$PARAM[id_home]</param>
+				<param name="onup">$PARAM[id_widget1]</param>
+				<param name="ondown">300</param>
+			</include>
+		</control>
+		<control type="group" id="35">
+			<include content="Widget_Height_Custom" condition="!String.isEmpty(Skin.String(Widget_$PARAM[id_widget2]_Type))">
+				<param name="id_widget">$PARAM[id_widget2]</param>
+			</include>
+			<height>$PARAM[widget2_height]</height>
+			<visible>Integer.IsGreater(Container($PARAM[id_widget2]).NumItems,0)</visible>
+		</control>
+
+		<!-- Deckname -->
+		<control type="group" id="40">
+			<height>0</height>
+			<include>AspectRatio_Deckname_Animation</include>
+			<include content="Home_Deck_Name" condition="!String.isEqual(Skin.String(Widget_$PARAM[id_widget2]_Name),hide)">
+				<param name="name">$PARAM[widget2_name]</param>
+				<param name="width">310</param>
+				<param name="left">160</param>
+				<param name="id_widget">$PARAM[id_widget2]</param>
+			</include>
+			<visible>Integer.IsGreater(Container($PARAM[id_widget1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id_widget2]).NumItems,0)</visible>
+		</control>
+
+		<!-- Info -->
+		<control type="group" id="45">
+			<left>20</left>
+			<height>120</height>
+			<include>Deck_Information_More</include>
+			<visible>ControlGroup(5000).hasFocus</visible>
+		</control>
+
+
+	</control>
+
+	</definition>
+</include>
+
+<!-- Widget Container -->
+<include name="Widget_Container">
+	<control type="list" id="$PARAM[id_widget]">
+		<include>Widget_Container_Width_$PARAM[widget_type]</include>
+		<height>$PARAM[widget_height]</height>
+		<orientation>$PARAM[widget_orientation]</orientation>
+		<preloaditems>2</preloaditems>
+
+		<!--<onleft condition="!Skin.HasSetting(Home_Horizontal)">300</onleft>-->
+		<onleft>300</onleft>
+
+		<onback condition="!Container($PARAM[id_widget]).Position(0)">SetFocus($PARAM[id_widget],0,absolute)</onback>
+		<onback condition="Container($PARAM[id_widget]).Position(0)">300</onback>
+		<ondown>$PARAM[ondown]</ondown>
+		<onup>$PARAM[onup]</onup>
+
+		<include content="Viewmode_Deck_Itemlayout_$PARAM[widget_type]">
+			<param name="Container">$PARAM[id_widget]</param>
+		</include>
+
+		<include content="Widget_$PARAM[id_widget]_Content">
+			<param name="widget_limit">$PARAM[widget_limit]</param>
+		</include>
+
+		<include content="Widget_Container_Placeholder" condition="!Skin.hasSetting(Widget_Placeholder_Hide)">
+			<param name="Container">$PARAM[id_widget]</param>
+		</include>
+	</control>
+</include>
+<include name="Orientation_Vertical">
+	<orientation>vertical</orientation>
+</include>
+
+<!-- Widget Container (Custom) -->
+<include name="Widget_Container_Custom">
+
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Poster)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Poster</param>
+		<param name="widget_height">240</param>
+		<param name="widget_orientation">horizontal</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Square)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Square</param>
+		<param name="widget_height">180</param>
+		<param name="widget_orientation">horizontal</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Thumb)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Thumb</param>
+		<param name="widget_height">170</param>
+		<param name="widget_orientation">horizontal</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Fanart)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Fanart</param>
+		<param name="widget_height">170</param>
+		<param name="widget_orientation">horizontal</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Clearlogo)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Clearlogo</param>
+		<param name="widget_height">170</param>
+		<param name="widget_orientation">horizontal</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Clearart)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Clearart</param>
+		<param name="widget_height">170</param>
+		<param name="widget_orientation">horizontal</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Text)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Text</param>
+		<param name="widget_height">230</param><!-- 240 -->
+		<param name="widget_orientation">vertical</param>
+		<param name="widget_limit">5</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),TextFull)" content="Widget_Container">
+		<param name="id_widget">$PARAM[id_widget]</param>
+		<param name="id_home">$PARAM[id_home]</param>
+		<param name="widget_type">Text</param>
+		<param name="widget_height">450</param><!-- 460 -->
+		<param name="widget_orientation">vertical</param>
+		<param name="widget_limit">11</param>
+		<param name="onup">$PARAM[onup]</param>
+		<param name="ondown">$PARAM[ondown]</param>
+	</include>
+
+</include>
+
+<!-- Widget Custom (Width) -->
+<include name="Widget_Container_Width_Poster">
+	<width>1280</width>
+</include>
+<include name="Widget_Container_Width_Square">
+	<width>1280</width>
+</include>
+<include name="Widget_Container_Width_Thumb">
+	<width>1200</width>
+</include>
+<include name="Widget_Container_Width_Fanart">
+	<width>1200</width>
+</include>
+<include name="Widget_Container_Width_Clearart">
+	<width>1200</width>
+</include>
+<include name="Widget_Container_Width_Clearlogo">
+	<width>1200</width>
+</include>
+<include name="Widget_Container_Width_Text">
+	<width>1280</width>
+</include>
+
+<!-- Widget Custom (Height) -->
+<include name="Widget_Height_Custom">
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Poster)">Widget_Height_240</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Square)">Widget_Height_180</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Thumb)">Widget_Height_170</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Fanart)">Widget_Height_170</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Clearlogo)">Widget_Height_170</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Clearart)">Widget_Height_170</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),Text)">Widget_Height_240</include>
+	<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),TextFull)">Widget_Height_460</include>
+</include>
+<include name="Widget_Height_460">
+	<height>460</height>
+</include>
+<include name="Widget_Height_240">
+	<height>240</height>
+</include>
+<include name="Widget_Height_180">
+	<height>180</height>
+</include>
+<include name="Widget_Height_170">
+	<height>170</height>
+</include>
+
+<!-- Widget Background -->
+<include name="Widget_Background">
+        <control type="group">
+		<visible>Container(300).hasFocus($PARAM[id_home]) + !ControlGroup(5000).hasFocus</visible>
+		<include condition="!Skin.String(Background_$PARAM[id_home]_Fadetime,0)">Animation_CommonFade</include>
+
+		<!-- Dynamic -->
+		<include content="Widget_Background_Dynamic" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+			<param name="id_widget1">$PARAM[id_widget1]</param>
+			<param name="id_widget2">$PARAM[id_widget2]</param>
+		</include>
+
+		<!-- Static -->
+		<include content="Widget_Background_Static" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+		<!-- Image -->
+                <control type="multiimage">
+                        <include>background_default</include>
+                       	<imagepath background="true">$INFO[Control.GetLabel($PARAM[id_fade])]</imagepath>
+
+			<!-- Opacity -->
+			<include content="Widget_Background_Opacity"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- Fadetime -->
+			<include content="Widget_Background_Fadetime"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- TimePerImage -->
+			<include content="Widget_Background_TimePerImage"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- Color -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Color))" content="Widget_Background_Color"><param name="id_home">$PARAM[id_home]</param></include>
+
+                        <!-- Animation -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Animation))" content="Widget_Background_Animation"><param name="id_home">$PARAM[id_home]</param></include>
+
+                </control>
+
+		<!-- Overlay -->
+		<include content="Widget_Background_Overlay" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Overlay))">
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+        </control>
+</include>
+
+<include name="Widget_Background_Dashboard">
+        <control type="group">
+		<visible>Container(300).hasFocus($PARAM[id_home]) + !ControlGroup(5000).hasFocus</visible>
+		<include condition="!Skin.String(Background_$PARAM[id_home]_Fadetime,0)">Animation_CommonFade</include>
+
+		<!-- Dynamic -->
+		<include content="Widget_Background_Dynamic_Dashboard" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+		</include>
+
+		<!-- Static -->
+		<include content="Widget_Background_Static" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+		<!-- Image -->
+                <control type="multiimage">
+                        <include>background_default</include>
+                       	<imagepath background="true">$INFO[Control.GetLabel($PARAM[id_fade])]</imagepath>
+
+			<!-- Opacity -->
+			<include content="Widget_Background_Opacity"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- Fadetime -->
+			<include content="Widget_Background_Fadetime"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- TimePerImage -->
+			<include content="Widget_Background_TimePerImage"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- Color -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Color))" content="Widget_Background_Color"><param name="id_home">$PARAM[id_home]</param></include>
+
+                        <!-- Animation -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Animation))" content="Widget_Background_Animation"><param name="id_home">$PARAM[id_home]</param></include>
+
+                </control>
+
+		<!-- Overlay -->
+		<include content="Widget_Background_Overlay" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Overlay))">
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+        </control>
+</include>
+
+<!-- NoWidget -->
+<include name="Widget_Background_NoWidget">
+        <control type="group">
+		<visible>Container(300).hasFocus($PARAM[id_home]) + !ControlGroup(5000).hasFocus</visible>
+		<include condition="!Skin.String(Background_$PARAM[id_home]_Fadetime,0)">Animation_CommonFade</include>
+
+		<!-- Fanart -->
+		<include content="Widget_Background_Static_NoWidget" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+		<!-- Static -->
+		<include content="Widget_Background_Static" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+		<!-- Image -->
+                <control type="multiimage">
+                        <include>background_default</include>
+                       	<imagepath background="true">$INFO[Control.GetLabel($PARAM[id_fade])]</imagepath>
+
+			<!-- Opacity -->
+			<include content="Widget_Background_Opacity"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- Fadetime -->
+			<include content="Widget_Background_Fadetime"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- TimePerImage -->
+			<include content="Widget_Background_TimePerImage"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- Color -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Color))" content="Widget_Background_Color"><param name="id_home">$PARAM[id_home]</param></include>
+
+                        <!-- Animation -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Animation))" content="Widget_Background_Animation"><param name="id_home">$PARAM[id_home]</param></include>
+
+                </control>
+
+		<!-- Overlay -->
+		<include content="Widget_Background_Overlay" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Overlay))">
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+        </control>
+</include>
+
+<include name="Background_Custom">
+	<param name="opacity">40</param>
+	<param name="visible">true</param>
+
+	<definition>
+
+        <control type="group">
+		<visible>$PARAM[visible]</visible>
+		<include condition="!Skin.String(Background_$PARAM[id_home]_Fadetime,0)">Animation_CommonFade</include>
+
+		<!-- Image -->
+		<include content="Widget_Background_Custom_Image" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+			<param name="image">$PARAM[image]</param>
+		</include>
+
+		<!-- Static -->
+		<include content="Widget_Background_Static" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Path))">
+			<param name="id_fade">$PARAM[id_fade]</param>
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+		<!-- Image -->
+                <control type="multiimage">
+                        <include>background_default</include>
+                       	<imagepath background="true">$INFO[Control.GetLabel($PARAM[id_fade])]</imagepath>
+
+			<!-- Opacity -->
+			<include content="Widget_Background_Opacity_Custom"><param name="id_home">$PARAM[id_home]</param><param name="opacity">$PARAM[opacity]</param></include>
+
+			<!-- Fadetime -->
+			<include content="Widget_Background_Fadetime"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- TimePerImage -->
+			<include content="Widget_Background_TimePerImage"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<!-- Color -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Color))" content="Widget_Background_Color"><param name="id_home">$PARAM[id_home]</param></include>
+
+                        <!-- Animation -->
+			<include condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Animation))" content="Widget_Background_Animation"><param name="id_home">$PARAM[id_home]</param></include>
+
+                </control>
+
+		<!-- Overlay -->
+		<include content="Widget_Background_Overlay" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Overlay))">
+			<param name="id_home">$PARAM[id_home]</param>
+		</include>
+
+        </control>
+
+	</definition>
+</include>
+
+<include name="Widget_Background_Static">
+	<control type="label" id="$PARAM[id_fade]">
+		<width>5000</width>
+		<scrollout>false</scrollout>
+		<font>Font_Date</font>
+		<textcolor>00000000</textcolor>
+		<include condition="String.StartsWith(Skin.String(Background_$PARAM[id_home]_Path),http)" content="Widget_Background_Static_Type_Url"><param name="id_home">$PARAM[id_home]</param></include>
+		<include condition="!String.StartsWith(Skin.String(Background_$PARAM[id_home]_Path),http)" content="Widget_Background_Static_Type_Path"><param name="id_home">$PARAM[id_home]</param></include>
+		<!--<label>$INFO[Skin.String(Background_$PARAM[id_home]_Path)]</label>-->
+	</control>
+</include>
+<include name="Widget_Background_Static_Type_Path">
+	<label>$INFO[Skin.String(Background_$PARAM[id_home]_Path)]</label>
+</include>
+<include name="Widget_Background_Static_Type_Url">
+	<label>$INFO[Skin.String(Background_$PARAM[id_home]_Path)]?refresh=$INFO[System.Date(yyyymmdd)]</label>
+</include>
+
+
+<include name="Widget_Background_Static_NoWidget">
+	<control type="label" id="$PARAM[id_fade]">
+		<width>5000</width>
+		<scrollout>false</scrollout>
+		<font>Font_Date</font>
+		<textcolor>00000000</textcolor>
+		<!-- Imagetime -->
+		<include content="Widget_Background_Pausetime"><param name="id_home">$PARAM[id_home]</param></include>
+		<label>$INFO[Container(300).ListItem.Property(fanart)]</label>
+	</control>
+</include>
+
+<include name="Widget_Background_Custom_Image">
+	<control type="label" id="$PARAM[id_fade]">
+		<width>5000</width>
+		<scrollout>false</scrollout>
+		<font>Font_Date</font>
+		<textcolor>00000000</textcolor>
+		<label>$PARAM[image]</label>
+	</control>
+</include>
+<include name="Widget_Background_Dynamic">
+                <control type="label" id="$PARAM[id_fade]">
+			<width>5000</width>
+			<scrollout>false</scrollout>
+                        <font>Font_Date</font>
+                        <textcolor>00000000</textcolor>
+			<!-- Imagetime -->
+			<include content="Widget_Background_Pausetime"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<label>$INFO[Container(300).ListItem.Property(fanart)]</label>
+			<visible>String.isEmpty(Container($PARAM[id_widget1]).ListItemAbsolute(0).Art(fanart)) + String.isEmpty(Container($PARAM[id_widget1]).ListItemAbsolute(0).Property(fanart)) + String.isEmpty(Container($PARAM[id_widget2]).ListItemAbsolute(0).Art(fanart)) + String.isEmpty(Container($PARAM[id_widget2]).ListItemAbsolute(0).Property(fanart))</visible>
+		</control>
+                <control type="fadelabel" id="$PARAM[id_fade]">
+			<width>5000</width>
+			<scrollout>false</scrollout>
+                        <font>Font_Date</font>
+                        <textcolor>00000000</textcolor>
+			<!-- Imagetime -->
+			<include content="Widget_Background_Pausetime"><param name="id_home">$PARAM[id_home]</param></include>
+
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(1).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(1).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(2).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(2).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(3).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(3).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(4).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(4).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(5).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget1]).ListItemAbsolute(5).Property(fanart)]</label>
+
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(1).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(1).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(2).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(2).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(3).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(3).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(4).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(4).Property(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(5).Art(fanart)]</label>
+			<label>$INFO[Container($PARAM[id_widget2]).ListItemAbsolute(5).Property(fanart)]</label>
+
+			<visible>!String.isEmpty(Container($PARAM[id_widget1]).ListItemAbsolute(0).Art(fanart)) | !String.isEmpty(Container($PARAM[id_widget1]).ListItemAbsolute(0).Property(fanart)) | !String.isEmpty(Container($PARAM[id_widget2]).ListItemAbsolute(0).Art(fanart)) | !String.isEmpty(Container($PARAM[id_widget2]).ListItemAbsolute(0).Property(fanart))</visible>
+                </control>
+</include>
+<include name="Widget_Background_Dynamic_Dashboard">
+                <control type="fadelabel" id="$PARAM[id_fade]">
+			<width>5000</width>
+			<scrollout>false</scrollout>
+                        <font>Font_Date</font>
+                        <textcolor>00000000</textcolor>
+			<!-- Imagetime -->
+			<include content="Widget_Background_Pausetime"><param name="id_home">$PARAM[id_home]</param></include>
+			<label>$INFO[Container(18001).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18001).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18002).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18002).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18003).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18003).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18004).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18004).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18005).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18005).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18006).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18006).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18007).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18007).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18008).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18008).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18009).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18009).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18010).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18010).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18011).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18011).ListItemAbsolute(0).Property(fanart)]</label>
+			<label>$INFO[Container(18012).ListItemAbsolute(0).Art(fanart)]</label>
+			<label>$INFO[Container(18012).ListItemAbsolute(0).Property(fanart)]</label>
+                </control>
+</include>
+
+<!-- Overlay -->
+<include name="Widget_Background_Overlay">
+	<control type="image">
+		<include>background_default</include>
+		<texture>$INFO[Skin.String(Background_$PARAM[id_home]_Overlay)]</texture>
+		<include condition="String.isEmpty(Skin.String(Home_Overlay_Opacity))">Home_Overlay_Opacity_Default</include>
+		<include condition="!String.isEmpty(Skin.String(Home_Overlay_Opacity))">Home_Overlay_Opacity</include>
+	</control>
+</include>
+
+<!-- Opacity -->
+<include name="Widget_Background_Opacity">
+	<include content="Widget_Background_Opacity_Data" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_Opacity))">
+		<param name="data">40</param>
+	</include>
+	<include content="Widget_Background_Opacity_User" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Opacity))">
+		<param name="id_home">$PARAM[id_home]</param>
+	</include>
+</include>
+<include name="Widget_Background_Opacity_Custom">
+	<include content="Widget_Background_Opacity_Data" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_Opacity))">
+		<param name="data">$PARAM[opacity]</param>
+	</include>
+	<include content="Widget_Background_Opacity_User" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Opacity))">
+		<param name="id_home">$PARAM[id_home]</param>
+	</include>
+</include>
+<include name="Widget_Background_Opacity_User">
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,0)"><param name="data">0</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,10)"><param name="data">10</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,20)"><param name="data">20</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,30)"><param name="data">30</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,40)"><param name="data">40</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,50)"><param name="data">50</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,60)"><param name="data">60</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,70)"><param name="data">70</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,80)"><param name="data">80</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,90)"><param name="data">90</param></include>
+	<include content="Widget_Background_Opacity_Data" condition="Skin.String(Background_$PARAM[id_home]_Opacity,100)"><param name="data">100</param></include>
+</include>
+<include name="Widget_Background_Opacity_Data">
+	<animation effect="fade" end="$PARAM[data]" condition="true">Conditional</animation>
+</include>
+
+<!-- Fadetime -->
+<include name="Widget_Background_Fadetime">
+	<include content="Widget_Background_Fadetime_Data" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_Fadetime))">
+		<param name="data">1000</param>
+	</include>
+	<include content="Widget_Background_Fadetime_User" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_Fadetime))">
+		<param name="id_home">$PARAM[id_home]</param>
+	</include>
+</include>
+<include name="Widget_Background_Fadetime_User">
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,500)"><param name="data">500</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,1000)"><param name="data">1000</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,1500)"><param name="data">1500</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,2000)"><param name="data">2000</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,2500)"><param name="data">2500</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,3000)"><param name="data">3000</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,3500)"><param name="data">3500</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,4000)"><param name="data">4000</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,4500)"><param name="data">4500</param></include>
+	<include content="Widget_Background_Fadetime_Data" condition="Skin.String(Background_$PARAM[id_home]_Fadetime,5000)"><param name="data">5000</param></include>
+</include>
+<include name="Widget_Background_Fadetime_Data">
+	<fadetime>$PARAM[data]</fadetime>
+</include>
+
+<!-- TimePerImage -->
+<include name="Widget_Background_TimePerImage">
+	<include content="Widget_Background_TimePerImage_Data" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_TimePerImage))">
+		<param name="data">10000</param>
+	</include>
+	<include content="Widget_Background_TimePerImage_User" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_TimePerImage))">
+		<param name="id_home">$PARAM[id_home]</param>
+	</include>
+</include>
+<include name="Widget_Background_TimePerImage_User">
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,1000)"><param name="data">1000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,2000)"><param name="data">2000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,3000)"><param name="data">3000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,4000)"><param name="data">4000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,5000)"><param name="data">5000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,6000)"><param name="data">6000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,7000)"><param name="data">7000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,8000)"><param name="data">8000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,9000)"><param name="data">9000</param></include>
+	<include content="Widget_Background_TimePerImage_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,10000)"><param name="data">10000</param></include>
+</include>
+<include name="Widget_Background_TimePerImage_Data">
+	<timeperimage>$PARAM[data]</timeperimage>
+</include>
+
+<!-- Pausetime -->
+<include name="Widget_Background_Pausetime">
+	<include content="Widget_Background_Pausetime_Data" condition="String.isEmpty(Skin.String(Background_$PARAM[id_home]_TimePerImage))">
+		<param name="data">10000</param>
+	</include>
+	<include content="Widget_Background_Pausetime_User" condition="!String.isEmpty(Skin.String(Background_$PARAM[id_home]_TimePerImage))">
+		<param name="id_home">$PARAM[id_home]</param>
+	</include>
+</include>
+<include name="Widget_Background_Pausetime_User">
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,1000)"><param name="data">1000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,2000)"><param name="data">2000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,3000)"><param name="data">3000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,4000)"><param name="data">4000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,5000)"><param name="data">5000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,6000)"><param name="data">6000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,7000)"><param name="data">7000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,8000)"><param name="data">8000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,9000)"><param name="data">9000</param></include>
+	<include content="Widget_Background_Pausetime_Data" condition="Skin.String(Background_$PARAM[id_home]_TimePerImage,10000)"><param name="data">10000</param></include>
+</include>
+<include name="Widget_Background_Pausetime_Data">
+	<pauseatend>$PARAM[data]</pauseatend>
+</include>
+
+<!-- Color -->
+<include name="Widget_Background_Color">
+	<colordiffuse>$INFO[Skin.String(Background_$PARAM[id_home]_Color)]</colordiffuse>
+</include>
+
+<!-- Animation -->
+<include name="Widget_Background_Animation">
+	<include condition="Skin.String(Background_$PARAM[id_home]_Animation,PanZoom)">Widget_Background_PanZoom</include>
+</include>
+<include name="Widget_Background_PanZoom">
+	<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+	<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+</include>
+
+<!-- Placeholder -->
+<include name="Widget_Container_Placeholder">
+	<content>
+		<item>
+			<icon>icon_invisible.png</icon>
+			<label></label>
+			<property name="placeholder">true</property>
+			<visible>!String.isEmpty(Container($PARAM[Container]).ListItemAbsolute(0).Label)</visible>
+			<onclick>SetFocus($PARAM[Container],0,absolute)</onclick>
+		</item>
+		<item>
+			<icon>icon_invisible.png</icon>
+			<label></label>
+			<property name="placeholder">true</property>
+			<visible>!String.isEmpty(Container($PARAM[Container]).ListItemAbsolute(0).Label)</visible>
+			<onclick>SetFocus($PARAM[Container],0,absolute)</onclick>
+		</item>
+		<item>
+			<icon>icon_invisible.png</icon>
+			<label></label>
+			<property name="placeholder">true</property>
+			<visible>!String.isEmpty(Container($PARAM[Container]).ListItemAbsolute(0).Label)</visible>
+			<onclick>SetFocus($PARAM[Container],0,absolute)</onclick>
+		</item>
+		<item>
+			<icon>icon_invisible.png</icon>
+			<label></label>
+			<property name="placeholder">true</property>
+			<visible>!String.isEmpty(Container($PARAM[Container]).ListItemAbsolute(0).Label)</visible>
+			<onclick>SetFocus($PARAM[Container],0,absolute)</onclick>
+		</item>
+		<item>
+			<icon>icon_invisible.png</icon>
+			<label></label>
+			<property name="placeholder">true</property>
+			<visible>!String.isEmpty(Container($PARAM[Container]).ListItemAbsolute(0).Label)</visible>
+			<onclick>SetFocus($PARAM[Container],0,absolute)</onclick>
+		</item>
+		<item>
+			<icon>icon_invisible.png</icon>
+			<label></label>
+			<property name="placeholder">true</property>
+			<visible>!String.isEmpty(Container($PARAM[Container]).ListItemAbsolute(0).Label)</visible>
+			<onclick>SetFocus($PARAM[Container],0,absolute)</onclick>
+		</item>
+		<item>
+			<icon>icon_invisible.png</icon>
+			<label></label>
+			<property name="placeholder">true</property>
+			<visible>!String.isEmpty(Container($PARAM[Container]).ListItemAbsolute(0).Label)</visible>
+			<onclick>SetFocus($PARAM[Container],0,absolute)</onclick>
+		</item>
+	</content>
+</include>
+
+<!-- Widget Placeholder -->
+<include name="Widget_Placeholder_Opacity">
+	<include condition="String.isEmpty(Skin.String(Widget_Placeholder_Opacity))">Widget_Placeholder_Opacity_60</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),10)">Widget_Placeholder_Opacity_10</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),20)">Widget_Placeholder_Opacity_20</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),30)">Widget_Placeholder_Opacity_30</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),40)">Widget_Placeholder_Opacity_40</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),50)">Widget_Placeholder_Opacity_50</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),60)">Widget_Placeholder_Opacity_60</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),70)">Widget_Placeholder_Opacity_70</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),80)">Widget_Placeholder_Opacity_80</include>
+	<include condition="String.isEqual(Skin.String(Widget_Placeholder_Opacity),90)">Widget_Placeholder_Opacity_90</include>
+</include>
+<include name="Widget_Placeholder_Opacity_10">
+	<animation effect="fade" end="10" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_20">
+	<animation effect="fade" end="20" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_30">
+	<animation effect="fade" end="30" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_40">
+	<animation effect="fade" end="40" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_50">
+	<animation effect="fade" end="50" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_60">
+	<animation effect="fade" end="60" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_70">
+	<animation effect="fade" end="70" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_80">
+	<animation effect="fade" end="80" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+<include name="Widget_Placeholder_Opacity_90">
+	<animation effect="fade" end="90" condition="!String.isEmpty(ListItem.Property(placeholder))">Conditional</animation>
+</include>
+
+<!-- Search Widget -->
+<include name="Deck_Search_Items">
+	<item>
+		<label>$LOCALIZE[31003]</label><!-- Library -->
+		<onclick>RunScript(script.globalsearch)</onclick>
+		<icon>icons/sidemenu/videos.png</icon>
+		<property name="fanart">background/library.jpg</property>
+		<visible>System.hasAddon(script.globalsearch)</visible>
+	</item>
+	<item>
+		<label>Plex</label>
+		<icon>special://xbmc/addons/plugin.video.plexkodiconnect/icon.png</icon>
+		<property name="fanart">special://xbmc/addons/plugin.video.plexkodiconnect/fanart.jpg</property>
+		<onclick>RunScript(script.globalsearch)</onclick>
+		<visible>$EXP[Addon_Plex_Enabled]</visible>
+	</item>
+	<item>
+		<label>Emby</label>
+		<icon>special://xbmc/addons/plugin.video.emby/icon.png</icon>
+		<property name="fanart">special://xbmc/addons/plugin.video.emby/fanart.jpg</property>
+		<visible>$EXP[Addon_Emby_Enabled]</visible>
+	</item>
+	<item>
+		<label>Youtube</label>
+		<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/list/,return)</onclick>
+		<icon>special://home/addons/plugin.video.youtube/icon.png</icon>
+		<property name="fanart">special://home/addons/plugin.video.youtube/fanart.jpg</property>
+		<visible>$EXP[Addon_Youtube_Enabled]</visible>
+	</item>
+	<item>
+		<label>Twitch</label>
+		<onclick>ActivateWindow(videos,plugin://plugin.video.twitch/?mode=search,return)</onclick>
+		<icon>special://home/addons/plugin.video.twitch/icon.png</icon>
+		<property name="fanart">special://home/addons/plugin.video.twich/fanart.png</property>
+		<visible>$EXP[Addon_Twitch_Enabled]</visible>
+	</item>
+	<item>
+		<label>$LOCALIZE[31029]</label><!-- Addons -->
+		<onclick>ActivateWindow(addonbrowser,addons://search,return)</onclick>
+		<icon>icon_search_addons.png</icon>
+		<property name="fanart">background/addons.jpg</property>
+	</item>
+
+
+</include>
+
+<!-- Itemlayout (Text) -->
+<include name="Viewmode_Deck_Itemlayout_Background">
+	<control type="group" id="$PARAM[id]">
+		<height>0</height>
+		<include condition="!String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),TextFull)">Viewmode_Deck_Itemlayout_Background_Small</include>
+		<include condition="String.isEqual(Skin.String(Widget_$PARAM[id_widget]_Type),TextFull)">Viewmode_Deck_Itemlayout_Background_Big</include>
+		<visible>Integer.IsGreater(Container($PARAM[id_widget]).NumItems,0)</visible>
+	</control>
+</include>
+<include name="Viewmode_Deck_Itemlayout_Background_Small">
+	<control type="image">
+		<left>10</left>
+		<top>10</top>
+		<width>460</width>
+		<height>220</height>
+		<texture>items/widget/720/Text_Background_Small_Half.png</texture>
+		<colordiffuse>AA555555</colordiffuse>
+		<aspectratio>keep</aspectratio>
+		<visible>!ControlGroup(5000).hasFocus + !Skin.hasSetting(Home_Horizontal)</visible>
+	</control>
+	<control type="image">
+		<left>10</left>
+		<top>10</top>
+		<width>1260</width>
+		<height>220</height>
+		<texture>items/widget/720/Text_Background_Small_Full.png</texture>
+		<colordiffuse>AA555555</colordiffuse>
+		<aspectratio>keep</aspectratio>
+		<visible>ControlGroup(5000).hasFocus | Skin.hasSetting(Home_Horizontal)</visible>
+	</control>
+</include>
+<include name="Viewmode_Deck_Itemlayout_Background_Big">
+	<control type="image">
+		<left>10</left>
+		<top>10</top>
+		<width>460</width>
+		<height>440</height>
+		<texture>items/widget/720/Text_Background_Big_Half.png</texture>
+		<colordiffuse>AA555555</colordiffuse>
+		<aspectratio>keep</aspectratio>
+		<visible>!ControlGroup(5000).hasFocus + !Skin.hasSetting(Home_Horizontal)</visible>
+	</control>
+	<control type="image">
+		<left>10</left>
+		<top>10</top>
+		<width>1260</width>
+		<height>440</height>
+		<texture>items/widget/720/Text_Background_Big_Full.png</texture>
+		<colordiffuse>AA555555</colordiffuse>
+		<aspectratio>keep</aspectratio>
+		<visible>ControlGroup(5000).hasFocus | Skin.hasSetting(Home_Horizontal)</visible>
+	</control>
+</include>
+
+<include name="Viewmode_Deck_Itemlayout_Text">
+
+	<itemlayout width="1280" height="44">
+
+		<control type="group">
+			<top>10</top>
+			<left>20</left>
+
+			<control type="group">
+				<visible>!ControlGroup(5000).hasFocus + !Skin.hasSetting(Home_Horizontal)</visible>
+
+				<include content="Viewmode_Deck_Itemlayout_Text_Content">
+					<param name="width">370</param>
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>ControlGroup(5000).hasFocus | Skin.hasSetting(Home_Horizontal)</visible>
+
+				<include content="Viewmode_Deck_Itemlayout_Text_Content">
+					<param name="width">1160</param>
+				</include>
+			</control>
+
+		</control>
+
+	</itemlayout>	
+	<focusedlayout width="1280" height="44">
+
+		<control type="group">
+			<top>10</top>
+			<left>20</left>
+
+			<control type="group">
+				<visible>!ControlGroup(5000).hasFocus + !Skin.hasSetting(Home_Horizontal)</visible>
+
+				<include content="Viewmode_Deck_Itemlayout_Text_Content">
+					<param name="width">370</param>
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>ControlGroup(5000).hasFocus | Skin.hasSetting(Home_Horizontal)</visible>
+
+				<include content="Viewmode_Deck_Itemlayout_Text_Content">
+					<param name="width">1160</param>
+				</include>
+			</control>
+
+		</control>
+
+	</focusedlayout>	
+
+</include>
+
+<include name="Viewmode_Deck_Itemlayout_Text_Content">
+	<control type="image">
+		<top>7</top>
+		<texture>$VAR[Deck_Text_Icon]</texture>
+		<height>30</height>
+		<width>60</width>
+		<aspectratio>keep</aspectratio>
+	</control>
+	<control type="label">
+		<top>5</top>
+		<left>70</left>
+		<label>$VAR[Deck_Text_Label1]</label>
+		<font>Lato_Light_20</font>
+		<width>$PARAM[width]</width>
+		<height>20</height>
+		<aligny>center</aligny>
+		<textcolor>FFCCCCCC</textcolor>
+	</control>
+	<control type="label">
+		<top>25</top>
+		<left>70</left>
+		<label>$VAR[Deck_Text_Label2]</label>
+		<font>Lato_Light_10</font>
+		<width>$PARAM[width]</width>
+		<height>15</height>
+		<aligny>center</aligny>
+		<textcolor>FFCCCCCC</textcolor>
+	</control>
+	<control type="image">
+		<top>44</top>
+		<left>70</left>
+		<width>$PARAM[width]</width>
+		<colordiffuse>22FFFFFF</colordiffuse>
+		<include>SeparatorH</include>
+	</control>
+</include>
+
+<!-- System (Widget) -->
+<include name="Deck_System_Items1">
+	<item>
+		<label>$INFO[System.CpuUsage] $INFO[System.CPUTemperature,(,)] $INFO[System.FanSpeed]</label>
+		<label2>CPU</label2>
+	</item>
+	<item>
+		<label>$INFO[System.GPUTemperature,(,)]</label>
+		<label2>GPU</label2>
+	</item>
+	<item>
+		<label>$INFO[System.FreeMemory]</label>
+		<label2>Memory</label2>
+	</item>
+</include>
+
+<include name="Deck_System_Items2">
+	<item>
+		<label>$INFO[System.FreeSpace] / $INFO[System.TotalSpace]</label>
+		<label2>Disk usage</label2>
+	</item>
+	<item>
+		<label>$INFO[System.ScreenWidth]x$INFO[System.ScreenHeight] $INFO[System.ScreenMode,(,)]]</label>
+		<label2>Display</label2>
+	</item>
+	<item>
+		<label>$INFO[System.Uptime] $INFO[System.TotalUptime]</label>
+		<label2>Uptime</label2>
+	</item>
+</include>
+
+<!-- Custom Home (Widget) -->
+<include name="Widget_Custom_Static">
+	<content><include>Home_Custom$PARAM[id]_Deck$PARAM[widget]</include></content>
+</include>
+<include name="Widget_Custom_Dynamic">
+	<content target="$INFO[Skin.String(CustomHome$PARAM[id].$PARAM[widget].1.Window)]" limit="$PARAM[widget_limit]">$INFO[Skin.String(CustomHome$PARAM[id].$PARAM[widget].1.Path)]</content>
+</include>
+
+</includes>
+

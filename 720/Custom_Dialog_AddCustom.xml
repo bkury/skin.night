@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="3100">
+	<include>Animation_Window_Dialog</include>
+	<defaultcontrol always="true">10</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+
+	<onload condition="String.isEmpty(Skin.String(CustomHome.Path)) + String.isEmpty(Skin.String(CustomHome.FolderPath)) + String.isEmpty(Skin.String(CustomHome.PropertyPath))">Notification(FAILED,This item is not supported,3000,icon_cancel.png)</onload>
+	<onload condition="String.isEmpty(Skin.String(CustomHome.Path)) + String.isEmpty(Skin.String(CustomHome.FolderPath)) + String.isEmpty(Skin.String(CustomHome.PropertyPath))">Dialog.Close(3100)</onload>
+
+	<controls>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+	        <!-- Dialog Header -->
+		<include content="Dialog_General_Header">
+			<param name="header_id">49</param>
+			<param name="header_label">$LOCALIZE[31308]</param>
+			<param name="separator">true</param>
+			<param name="scroll_onleft">1</param>
+			<param name="scroll_onright">50</param>
+		</include>
+
+		<!-- Category -->
+		<control type="grouplist" id="2">
+			<include>Dialog_General_Grouplist_Category</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">10</param>
+				<param name="id_custom">0</param>
+				<param name="id_item">1</param>
+				<param name="id_home">405</param>
+				<param name="onup"></param>
+				<param name="ondown">11</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">11</param>
+				<param name="id_custom">1</param>
+				<param name="id_item">2</param>
+				<param name="id_home">406</param>
+				<param name="onup">10</param>
+				<param name="ondown">12</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">12</param>
+				<param name="id_custom">2</param>
+				<param name="id_item">3</param>
+				<param name="id_home">407</param>
+				<param name="onup">11</param>
+				<param name="ondown">13</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">13</param>
+				<param name="id_custom">3</param>
+				<param name="id_item">4</param>
+				<param name="id_home">408</param>
+				<param name="onup">12</param>
+				<param name="ondown">14</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">14</param>
+				<param name="id_custom">4</param>
+				<param name="id_item">5</param>
+				<param name="id_home">409</param>
+				<param name="onup">13</param>
+				<param name="ondown">15</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">15</param>
+				<param name="id_custom">5</param>
+				<param name="id_item">6</param>
+				<param name="id_home">410</param>
+				<param name="onup">14</param>
+				<param name="ondown">16</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">16</param>
+				<param name="id_custom">6</param>
+				<param name="id_item">7</param>
+				<param name="id_home">411</param>
+				<param name="onup">15</param>
+				<param name="ondown">17</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">17</param>
+				<param name="id_custom">7</param>
+				<param name="id_item">8</param>
+				<param name="id_home">412</param>
+				<param name="onup">16</param>
+				<param name="ondown">18</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">18</param>
+				<param name="id_custom">8</param>
+				<param name="id_item">9</param>
+				<param name="id_home">413</param>
+				<param name="onup">17</param>
+				<param name="ondown">19</param>
+			</include>
+
+			<include content="CustomHome_Add_Category">
+				<param name="id">19</param>
+				<param name="id_custom">9</param>
+				<param name="id_item">10</param>
+				<param name="id_home">414</param>
+				<param name="onup">18</param>
+				<param name="ondown">20</param>
+			</include>
+
+		</control>
+
+		<!-- Content -->
+		<control type="list" id="1">
+			<onleft>2</onleft>
+			<onright condition="!Control.isVisible(100)">50</onright>
+			<include>Dialog_General_List</include>
+			<content>
+				<include>CustomHome_Add_Items</include>
+			</content>
+		</control>
+
+		<!-- Close -->
+                <include content="Dialog_General_Footer_Button_CLOSE">
+                        <param name="id">50</param>
+                        <param name="onup">1</param>
+                        <param name="onleft">1</param>
+                        <param name="onright">1</param>
+                        <param name="position">Right</param>
+                        <param name="dialog">3100</param>
+                </include>
+
+	</control>
+
+	</controls>
+</window>

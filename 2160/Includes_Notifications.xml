@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- Notification Button -->
+        <include name="Notification_Button">
+		<param name="visible">true</param>
+		<param name="onclick">noop</param>
+		<param name="onclick2">noop</param>
+		<param name="selected">false</param>
+		<param name="icon2"></param>
+		<param name="onup">noop</param>
+		<param name="onup_cond">true</param>
+		<param name="ondown">noop</param>
+		<param name="ondown_cond">true</param>
+
+		<definition>
+		<control type="radiobutton" id="$PARAM[id]">
+	                <label>$PARAM[label]</label>
+			<onclick>$PARAM[onclick]</onclick>
+			<onclick>$PARAM[onclick2]</onclick>
+			<onup condition="$PARAM[onup_cond]">$PARAM[onup]</onup>
+			<ondown condition="$PARAM[ondown_cond]">$PARAM[ondown]</ondown>
+	                <textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">$PARAM[icon2]</textureradioonfocus>
+	                <textureradioonnofocus colordiffuse="FFAAAAAA">$PARAM[icon2]</textureradioonnofocus>
+	                <textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">$PARAM[icon]</textureradioofffocus>
+	                <textureradiooffnofocus colordiffuse="FFAAAAAA">$PARAM[icon]</textureradiooffnofocus>
+			<textureradiooffdisabled colordiffuse="TextDisabled">$PARAM[icon]</textureradiooffdisabled>
+			<textureradioondisabled colordiffuse="TextDisabled">$PARAM[icon2]</textureradioondisabled>
+			<width>534</width>
+	                <radioposx>207</radioposx>
+			<selected>$PARAM[selected]</selected>
+			<visible>$PARAM[visible]</visible>
+			<include>DialogInfo_Button_Template</include>
+		</control>
+		</definition>
+        </include>
+
+	<!-- Notification Layout -->
+	<include name="Notification_Itemlayout">
+
+		<control type="image">
+			<top>30</top>
+			<width>3480</width>
+			<height>300</height>
+			<texture>notification_panel_itemlayout.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<visible>!Skin.hasSetting(Notification_Hide_History)</visible>
+		</control>
+
+		<control type="group">
+			<top>30</top>
+			<left>30</left>
+
+			<visible>!Skin.hasSetting(Notification_Hide_History)</visible>
+
+			<!-- Time/Date -->
+			<control type="label">
+				<top>15</top>
+				<height>150</height>
+				<label>$INFO[ListItem.Property(time)]</label>
+				<font>Roboto_Condensed_35</font>
+				<width>420</width>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<top>135</top>
+				<height>150</height>
+				<label>$INFO[ListItem.Property(date)]</label>
+				<font>Roboto_Condensed_20</font>
+				<width>420</width>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+                                
+			<!-- Separator -->
+			<control type="image">
+				<left>450</left>
+				<width>6</width>
+				<height>300</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+                                
+			<!-- Icon -->
+			<control type="image">
+				<left>480</left>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>scale</aspectratio>
+			</control>
+
+			<!-- Separator -->
+			<control type="image">
+				<left>810</left>
+				<width>6</width>
+				<height>300</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+
+			<!-- Label -->
+			<control type="label">
+				<top>15</top>
+				<left>840</left>
+				<width>2580</width>
+				<height>150</height>
+				<label>$INFO[ListItem.Label]</label>
+				<font>Lato_Light_35</font>
+				<height>120</height>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<top>135</top>
+				<left>840</left>
+				<width>2580</width>
+				<height>150</height>
+				<label>$INFO[ListItem.Label2]</label>
+				<font>Lato_Light_20</font>
+				<height>120</height>
+				<aligny>center</aligny>
+			</control>
+
+		</control>
+	</include>
+
+	<include name="Notification_Focusedlayout">
+
+		<control type="image">
+			<top>30</top>
+			<width>3480</width>
+			<height>660</height>
+			<texture>notification_panel_focusedlayout.png</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
+		</control>
+
+		<control type="group">
+			<top>30</top>
+			<left>30</left>
+
+			<!-- Time/Date -->
+			<control type="label">
+				<top>15</top>
+				<height>150</height>
+				<label>$INFO[ListItem.Property(time)]</label>
+				<font>Roboto_Condensed_35</font>
+				<width>420</width>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<top>135</top>
+				<height>150</height>
+				<label>$INFO[ListItem.Property(date)]</label>
+				<font>Roboto_Condensed_20</font>
+				<width>420</width>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+                                
+			<!-- Separator -->
+			<control type="image">
+				<left>450</left>
+				<width>6</width>
+				<height>450</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+                                
+			<!-- Icon -->
+			<control type="image">
+				<left>480</left>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>scale</aspectratio>
+			</control>
+
+			<!-- Current / Total -->
+			<control type="label">
+				<left>480</left>
+				<top>270</top>
+				<font>Lato_Light_20</font>
+				<width>300</width>
+				<height>120</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<label>$INFO[ListItem.CurrentItem] / $INFO[Container(100).Numitems]</label>
+			</control>
+
+
+			<!-- Separator -->
+			<control type="image">
+				<left>810</left>
+				<width>6</width>
+				<height>450</height>
+				<texture>confluence/separator-hz.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+
+			<!-- Label -->
+			<control type="label">
+				<top>15</top>
+				<left>840</left>
+				<width>2580</width>
+				<height>150</height>
+				<label>$INFO[ListItem.Label]</label>
+				<font>Lato_Light_35</font>
+				<height>120</height>
+				<aligny>center</aligny>
+			</control>
+			<control type="textbox">
+				<top>150</top>
+				<left>840</left>
+				<width>2580</width>
+				<height>225</height>
+				<label>$INFO[ListItem.Label2]</label>
+				<font>Lato_Light_20</font>
+				<textcolor>FFCCCCCC</textcolor>
+			</control>
+
+
+			<control type="image">
+				<top>420</top>
+				<width>3420</width>
+				<colordiffuse>55FFFFFF</colordiffuse>
+				<include>SeparatorH</include>
+			</control>
+
+		</control>
+	</include>
+
+	<include name="Notification_OnClick">
+		<onclick condition="Container(100).hasFocus($PARAM[id])">Skin.Reset(Notification$PARAM[id]_Label)</onclick>
+		<onclick condition="Container(100).hasFocus($PARAM[id])">Skin.Reset(Notification$PARAM[id]_Label2)</onclick>
+		<onclick condition="Container(100).hasFocus($PARAM[id])">Skin.Reset(Notification$PARAM[id]_Icon)</onclick>
+		<onclick condition="Container(100).hasFocus($PARAM[id])">Skin.Reset(Notification$PARAM[id]_Time)</onclick>
+		<onclick condition="Container(100).hasFocus($PARAM[id])">Skin.Reset(Notification$PARAM[id]_Date)</onclick>
+	</include>
+
+	<!-- Expression -->
+	<expression name="Notification">Skin.hasSetting(Notification_Center_Enabled) + [ [ !Skin.HasSetting(Notification_Center_Filter) ] | [ Skin.HasSetting(Notification_Center_Filter) + 
+		[ !String.isEmpty(Skin.String(Notification_Center_Trigger1)) + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger1)) ] |
+		[ !String.isEmpty(Skin.String(Notification_Center_Trigger2)) + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger2)) ] |
+		[ !String.isEmpty(Skin.String(Notification_Center_Trigger3)) + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger3)) ] |
+		[ !String.isEmpty(Skin.String(Notification_Center_Trigger4)) + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger4)) ] |
+		[ !String.isEmpty(Skin.String(Notification_Center_Trigger5)) + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger5)) ] |
+		[ !String.isEmpty(Skin.String(Notification_Center_Trigger6)) + String.Contains(Window(notification).Property(line1),Skin.String(Notification_Center_Trigger6)) ] ] ]
+	</expression>
+
+</includes>
+

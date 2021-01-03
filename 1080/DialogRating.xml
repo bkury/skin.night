@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="10200">
+        <coordinates>
+                <system>1</system>
+                <left>0</left>
+                <top>0</top>
+        </coordinates>
+<controls>
+	<control type="image" id="10">
+		<left>735</left>
+		<top>300</top>
+		<width>450</width>
+		<height>270</height>
+		<colordiffuse>$VAR[Var_Color_StarRating_Hex]</colordiffuse>
+		<aspectratio>keep</aspectratio>
+	</control>
+</controls>
+</window>

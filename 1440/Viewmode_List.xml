@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+	<include name="Viewmode_List">
+		<include>Viewmode_List_1</include>
+		<include>Viewmode_List_2</include>
+	</include>
+
+	<!-- List #1 (100/Info) -->
+	<include name="Viewmode_List_1">
+
+		<!-- Container -->
+		<control type="fixedlist" id="800">
+			<left>860</left><!-- 860 -->
+			<include>AspectRatio_PosY</include>
+			<height>1440</height>
+			<include>AspectRatio_Width_840</include>
+			<onleft>7001</onleft>
+			<onright>105</onright>
+			<pagecontrol>105</pagecontrol>
+			<viewtype label="List #1">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>5</focusposition>
+			<movement>5</movement>
+
+			<include>Viewmode_List1_General</include>
+			<include>Viewmode_List1_Itemlayout</include>
+		</control>		
+
+		<control type="group">
+			<visible>String.isEqual(Container.Viewmode,List #1)</visible>
+
+			<!-- Sortbar -->
+			<include>Viewmode_Sortbar</include>
+
+			<!-- Scrollbar -->
+			<control type="group" id="50">
+				<control type="scrollbar" id="105">
+					<top>10</top>
+					<height>1420</height>
+					<onleft>800</onleft>
+					<onright>7003</onright>
+					<include>vscrollbar</include>
+					<animation effect="slide" end="-840,0" time="800" tween="cubic" easing="inout" condition="Skin.HasSetting(List1_Sidebar_Right)">Conditional</animation>
+					<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(105)">Conditional</animation>
+				</control>
+			</control>
+
+		</control>
+
+	</include>
+
+	<!-- List #2 (110/Full) -->
+	<include name="Viewmode_List_2">
+
+		<control type="fixedlist" id="801">
+			<left>20</left>
+			<include>AspectRatio_PosY</include>
+			<height>1440</height>
+			<include>AspectRatio_Width_1260</include>
+			<onleft>7001</onleft>
+			<onright>115</onright>
+			<pagecontrol>115</pagecontrol>
+			<viewtype label="List #2">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>8</focusposition>
+			<movement>8</movement>
+
+			<include>Viewmode_List2_General_NoSidebar</include>
+			<include>Viewmode_List2_Itemlayout</include>
+		</control>		
+
+		<control type="group">
+			<visible>String.isEqual(Container.Viewmode,List #2)</visible>
+
+			<!-- Sortbar -->
+			<include>Viewmode_Sortbar</include>
+
+			<!-- Scrollbar -->
+			<control type="group" id="50">
+				<control type="scrollbar" id="115">
+					<top>10</top>
+					<height>1420</height>
+					<onleft>800</onleft>
+					<onright>7003</onright>
+					<include>vscrollbar</include>
+					<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(115)">Conditional</animation>
+				</control>
+			</control>
+
+		</control>
+
+	</include>
+
+</includes>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="614">
+	<defaultcontrol></defaultcontrol>
+	<include>Animation_Window_Fade</include>
+	<controls>
+
+        <control type="group">
+                <include>AspectRatio_PosX</include>
+                <left>1020</left>
+                <visible>!Skin.hasSetting(Notification_Extended)</visible>
+
+                <control type="image">
+                        <top>-330</top>
+                        <left>-60</left>
+                        <width>1920</width>
+                        <height>600</height>
+                        <texture>dialog_notification_shadow.png</texture>
+                        <colordiffuse>$VAR[Var_Color_DialogShadow_Hex]</colordiffuse>
+                </control>
+                <control type="image">
+                        <top>-330</top>
+                        <left>-60</left>
+                        <width>1920</width>
+                        <height>600</height>
+                        <texture>dialog_notification.png</texture>
+                        <colordiffuse>$VAR[Var_Color_Dialog_Hex]</colordiffuse>
+                </control>
+                <control type="progress" id="32">
+			<visible>false</visible>
+                </control>
+
+                <control type="label" id="30">
+                        <top>30</top>
+                        <left>60</left>
+                        <height>60</height>
+                        <width>1680</width>
+                        <label></label>
+                        <font>Lato_Regular_20</font>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                </control>
+                <control type="label" id="31">
+                        <top>105</top>
+                        <left>60</left>
+                        <height>60</height>
+                        <width>1680</width>
+                        <label></label>
+                        <font>Lato_Light_20</font>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                </control>
+        </control>
+
+	</controls>
+</window>

@@ -1,0 +1,1032 @@
+# Translators:
+# Wojciech Stasinski <root.xsynapse@gmail.com>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-02-15 08:04+0100\n"
+"PO-Revision-Date: 2019-02-15 19:06+0000\n"
+"Last-Translator: Wojciech Stasinski <root.xsynapse@gmail.com>, 2020\n"
+"Language-Team: Polish (Poland) (https://www.transifex.com/bkury/teams/96228/pl_PL/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: Homemenu
+msgctxt "#31000"
+msgid "Live TV"
+msgstr "Na żywo"
+
+msgctxt "#31001"
+msgid "Guide"
+msgstr "Przewodnik"
+
+msgctxt "#31002"
+msgid "Radio"
+msgstr "Radio"
+
+msgctxt "#31003"
+msgid "Library"
+msgstr "Biblioteka"
+
+msgctxt "#31004"
+msgid "Video"
+msgstr "Wideo"
+
+msgctxt "#31005"
+msgid "Videos"
+msgstr "Pliki Wideo"
+
+msgctxt "#31006"
+msgid "File"
+msgstr "Plik"
+
+msgctxt "#31007"
+msgid "Files"
+msgstr "Pliki"
+
+msgctxt "#31008"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#31009"
+msgid "Movies"
+msgstr "Filmy"
+
+msgctxt "#31010"
+msgid "TV Show"
+msgstr ""
+
+msgctxt "#31011"
+msgid "TV Shows"
+msgstr ""
+
+msgctxt "#31012"
+msgid "Music"
+msgstr "Muzyka"
+
+msgctxt "#31013"
+msgid "Music video"
+msgstr "Teledysk"
+
+msgctxt "#31014"
+msgid "Music videos"
+msgstr "Teledyski"
+
+msgctxt "#31015"
+msgid "Picture"
+msgstr "Obraz"
+
+msgctxt "#31016"
+msgid "Pictures"
+msgstr "Obrazy"
+
+msgctxt "#31017"
+msgid "Game"
+msgstr "Gra"
+
+msgctxt "#31018"
+msgid "Games"
+msgstr "Gry"
+
+msgctxt "#31019"
+msgid "Now playing"
+msgstr "Teraz Odtwarzane"
+
+msgctxt "#31020"
+msgid "Dashboard"
+msgstr "Panel"
+
+msgctxt "#31021"
+msgid "Notification"
+msgstr "Powiadomienie"
+
+msgctxt "#31022"
+msgid "Notifications"
+msgstr "Powiadomienia"
+
+msgctxt "#31023"
+msgid "Favourite"
+msgstr "Ulubiony"
+
+msgctxt "#31024"
+msgid "Favourites"
+msgstr "Ulubione"
+
+msgctxt "#31025"
+msgid "Play file"
+msgstr "Odtwórz plik"
+
+msgctxt "#31026"
+msgid "Search"
+msgstr "Szukaj"
+
+msgctxt "#31027"
+msgid "Weather"
+msgstr "Pogoda"
+
+msgctxt "#31028"
+msgid "Add-on"
+msgstr "Dodatek"
+
+msgctxt "#31029"
+msgid "Add-ons"
+msgstr "Dodatki"
+
+msgctxt "#31030"
+msgid "Program"
+msgstr "Program"
+
+msgctxt "#31031"
+msgid "Programs"
+msgstr "Programy"
+
+msgctxt "#31032"
+msgid "Play Disc"
+msgstr "Odtwórz Płytę"
+
+#: Submenu
+msgctxt "#31050"
+msgid "Preferences"
+msgstr "Preferencje"
+
+msgctxt "#31051"
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgctxt "#31052"
+msgid "Timer"
+msgstr "Licznik"
+
+msgctxt "#31053"
+msgid "Cancel timer"
+msgstr "Anuluj licznik"
+
+msgctxt "#31054"
+msgid "Eventlog"
+msgstr "Dziennik zdarzeń"
+
+msgctxt "#31055"
+msgid "File manager"
+msgstr "Menadżer plików"
+
+msgctxt "#31056"
+msgid "Quit"
+msgstr "Wyjdź"
+
+msgctxt "#31057"
+msgid "Suspend"
+msgstr "Wstrzymaj"
+
+msgctxt "#31058"
+msgid "Reboot"
+msgstr "Restart"
+
+msgctxt "#31059"
+msgid "Shutdown"
+msgstr "Wyłącz"
+
+msgctxt "#31060"
+msgid "Switch user"
+msgstr "Przełącz użytkownika"
+
+msgctxt "#31061"
+msgid "Manual sync"
+msgstr "Ręczna synchronizacja"
+
+msgctxt "#31062"
+msgid "Eject"
+msgstr "Wysuń"
+
+#: Sections
+msgctxt "#31070"
+msgid "General"
+msgstr "Ogólny"
+
+msgctxt "#31071"
+msgid "Filter"
+msgstr "Filtr"
+
+msgctxt "#31072"
+msgid "Options"
+msgstr "Opcje"
+
+#: Content
+msgctxt "#31100"
+msgid "Season"
+msgstr "Sezon"
+
+msgctxt "#31101"
+msgid "Seasons"
+msgstr "Sezony"
+
+msgctxt "#31102"
+msgid "Episode"
+msgstr "Odcinek"
+
+msgctxt "#31103"
+msgid "Episodes"
+msgstr "Odcinki"
+
+msgctxt "#31104"
+msgid "Album"
+msgstr "Album"
+
+msgctxt "#31105"
+msgid "Albums"
+msgstr "Albumy"
+
+msgctxt "#31106"
+msgid "Song"
+msgstr "Utwór"
+
+msgctxt "#31107"
+msgid "Songs"
+msgstr "Utwory"
+
+msgctxt "#31108"
+msgid "Artist"
+msgstr "Wykonawca"
+
+msgctxt "#31109"
+msgid "Artists"
+msgstr "Wykonawcy"
+
+msgctxt "#31110"
+msgid "Photo"
+msgstr "Zdjęcie"
+
+msgctxt "#31111"
+msgid "Photos"
+msgstr "Zdjęcia"
+
+msgctxt "#31112"
+msgid "Genre"
+msgstr "Gatunek"
+
+msgctxt "#31113"
+msgid "Genres"
+msgstr "Gatunki"
+
+msgctxt "#31114"
+msgid "Year"
+msgstr "Rok"
+
+msgctxt "#31115"
+msgid "Years"
+msgstr "Lata"
+
+msgctxt "#31116"
+msgid "Actor"
+msgstr "Aktor"
+
+msgctxt "#31117"
+msgid "Actors"
+msgstr "Aktorzy"
+
+msgctxt "#31118"
+msgid "Playlist"
+msgstr "Lista odtwarzania"
+
+msgctxt "#31119"
+msgid "Playlists"
+msgstr "Listy odtwarzania"
+
+msgctxt "#31120"
+msgid "Plugin"
+msgstr "Wtyczka"
+
+msgctxt "#31121"
+msgid "Plugins"
+msgstr "Wtyczki"
+
+msgctxt "#31122"
+msgid "Studio"
+msgstr ""
+
+msgctxt "#31123"
+msgid "Studios"
+msgstr ""
+
+msgctxt "#31124"
+msgid "Director"
+msgstr "Reżyser"
+
+msgctxt "#31125"
+msgid "Directors"
+msgstr "Reżyserzy"
+
+msgctxt "#31127"
+msgid "Sets"
+msgstr ""
+
+msgctxt "#31128"
+msgid "Tag"
+msgstr "Tag"
+
+msgctxt "#31129"
+msgid "Tags"
+msgstr "Tagi"
+
+#: Select
+msgctxt "#31130"
+msgid "Select colour"
+msgstr "Wybierz kolor"
+
+msgctxt "#31131"
+msgid "Select time"
+msgstr "Ustaw godzinę"
+
+msgctxt "#31132"
+msgid "Select opacity"
+msgstr "Dostosuj przeźroczystość"
+
+msgctxt "#31133"
+msgid "Select transparency"
+msgstr "Dostosuj przejrzystość"
+
+msgctxt "#31134"
+msgid "Select URL"
+msgstr "Adres URL"
+
+msgctxt "#31135"
+msgid "Select item"
+msgstr ""
+
+#: Sections (Widget)
+msgctxt "#31900"
+msgid "In progress"
+msgstr "W trakcie"
+
+msgctxt "#31901"
+msgid "Recently added"
+msgstr "Ostatnio dodane"
+
+msgctxt "#31902"
+msgid "Recently watched"
+msgstr "Ostatnio obejrzane"
+
+msgctxt "#31903"
+msgid "Recently recorded"
+msgstr "Ostatnio nagrane"
+
+msgctxt "#31904"
+msgid "Recently listened"
+msgstr "Ostatnio słuchane"
+
+msgctxt "#31905"
+msgid "Forecast"
+msgstr ""
+
+msgctxt "#31906"
+msgid "Hourly"
+msgstr ""
+
+#: Viewmode (Sidebar)
+msgctxt "#31150"
+msgid "Date"
+msgstr "Data"
+
+msgctxt "#31151"
+msgid "Total"
+msgstr "Całość"
+
+msgctxt "#31152"
+msgid "Type"
+msgstr "Typ"
+
+msgctxt "#31153"
+msgid "Mode"
+msgstr "Tryb"
+
+msgctxt "#31154"
+msgid "Airdate"
+msgstr "Data emisji"
+
+msgctxt "#31155"
+msgid "Creator"
+msgstr "Twórca"
+
+msgctxt "#31156"
+msgid "Writer"
+msgstr "Pisarz"
+
+msgctxt "#31157"
+msgid "Version"
+msgstr "Wersja"
+
+msgctxt "#31158"
+msgid "Camera"
+msgstr "Kamera"
+
+msgctxt "#31159"
+msgid "Cast"
+msgstr "Obsada"
+
+msgctxt "#31160"
+msgid "Next episode"
+msgstr "Następny odcinek"
+
+msgctxt "#31161"
+msgid "Country"
+msgstr "Kraj"
+
+msgctxt "#31162"
+msgid "Status"
+msgstr "Status"
+
+msgctxt "#31163"
+msgid "Content rating"
+msgstr "Ocena zawartości"
+
+msgctxt "#31164"
+msgid "Sidebar"
+msgstr "Pasek boczny"
+
+#: Not
+msgctxt "#31180"
+msgid "Not available"
+msgstr "Niedostępny"
+
+msgctxt "#31181"
+msgid "N/A"
+msgstr "Nie dotyczy"
+
+msgctxt "#31182"
+msgid "Not set"
+msgstr "Nieustawiony"
+
+msgctxt "#31183"
+msgid "Empty"
+msgstr "Pusty"
+
+msgctxt "#31184"
+msgid "None"
+msgstr "Żaden"
+
+#: Button / Switches
+msgctxt "#31190"
+msgid "Ok"
+msgstr "Ok"
+
+msgctxt "#31191"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "#31192"
+msgid "Add"
+msgstr "Dodaj"
+
+msgctxt "#31193"
+msgid "Reset"
+msgstr "Zresetuj"
+
+msgctxt "#31194"
+msgid "Default"
+msgstr "Domyślny"
+
+msgctxt "#31195"
+msgid "Defaults"
+msgstr "Domyślne"
+
+msgctxt "#31196"
+msgid "On"
+msgstr "Włącz"
+
+msgctxt "#31197"
+msgid "Off"
+msgstr "Wyłącz"
+
+msgctxt "#31198"
+msgid "Installed"
+msgstr "Zainstalowany"
+
+msgctxt "#31199"
+msgid "Not installed"
+msgstr "Niezainstalowany"
+
+msgctxt "#31200"
+msgid "Minutes"
+msgstr "Minuty"
+
+msgctxt "#31201"
+msgid "min"
+msgstr "min"
+
+msgctxt "#31202"
+msgid "Seconds"
+msgstr "Sekundy"
+
+msgctxt "#31203"
+msgid "sec"
+msgstr "sek"
+
+msgctxt "#31204"
+msgid "Hide"
+msgstr "Ukryj"
+
+msgctxt "#31205"
+msgid "Show"
+msgstr "Pokaż"
+
+msgctxt "#31206"
+msgid "Open"
+msgstr "Otwórz"
+
+msgctxt "#31207"
+msgid "Close"
+msgstr "Zamknij"
+
+#: VIEWMODE
+msgctxt "#31300"
+msgid "Viewtype"
+msgstr "Typ widoku"
+
+msgctxt "#31301"
+msgid "Tools"
+msgstr "Narzędzia"
+
+msgctxt "#31302"
+msgid "Edit"
+msgstr "Edytuj"
+
+msgctxt "#31303"
+msgid "Browse"
+msgstr "Przeglądaj"
+
+msgctxt "#31304"
+msgid "Appearance"
+msgstr ""
+
+msgctxt "#31305"
+msgid "Mark as"
+msgstr "Oznacz jako"
+
+msgctxt "#31306"
+msgid "Watched"
+msgstr "Obejrzane"
+
+msgctxt "#31307"
+msgid "Unwatched"
+msgstr "Nieobejrzane"
+
+msgctxt "#31308"
+msgid "Add to"
+msgstr "Dodaj do"
+
+msgctxt "#31309"
+msgid "Queue"
+msgstr "Kolejka"
+
+msgctxt "#31310"
+msgid "Apply changes"
+msgstr "Zatwierdź zmiany"
+
+msgctxt "#31311"
+msgid "Back"
+msgstr "Cofnij"
+
+msgctxt "#31312"
+msgid "Hide Watched"
+msgstr "Ukryj Obejrzane"
+
+msgctxt "#31313"
+msgid "Set filter"
+msgstr "Ustaw filtr"
+
+msgctxt "#31314"
+msgid "Sort"
+msgstr "Sortuj"
+
+msgctxt "#31315"
+msgid "Small"
+msgstr "Mały"
+
+msgctxt "#31316"
+msgid "Medium"
+msgstr "Średni"
+
+msgctxt "#31317"
+msgid "Large"
+msgstr "Duży"
+
+msgctxt "#31318"
+msgid "Huge"
+msgstr "Ogromny"
+
+msgctxt "#31319"
+msgid "Size"
+msgstr "Rozmiar"
+
+msgctxt "#31320"
+msgid "Overlay"
+msgstr ""
+
+msgctxt "#31321"
+msgid "Overlays"
+msgstr ""
+
+msgctxt "#31322"
+msgid "Custom image"
+msgstr "Obraz niestandardowy"
+
+msgctxt "#31323"
+msgid "Custom slideshow"
+msgstr "Niestandardowy pokaz slajdów"
+
+msgctxt "#31324"
+msgid "Custom colour"
+msgstr "Kolor niestandardowy"
+
+msgctxt "#31325"
+msgid "Fadetime"
+msgstr "Czas znikania"
+
+msgctxt "#31326"
+msgid "Time per image"
+msgstr "Czas na obraz"
+
+msgctxt "#31327"
+msgid "Opacity"
+msgstr "Przeźroczystość"
+
+msgctxt "#31328"
+msgid "Transparency"
+msgstr "Przejrzystość"
+
+msgctxt "#31329"
+msgid "Pan / Zoom"
+msgstr "Panorama"
+
+msgctxt "#31330"
+msgid "Background"
+msgstr "Tło"
+
+msgctxt "#31331"
+msgid "Position"
+msgstr "Pozycja"
+
+msgctxt "#31332"
+msgid "Find"
+msgstr "Znajdź"
+
+msgctxt "#31333"
+msgid "Custom URL"
+msgstr "Niestandardowy adres URL"
+
+msgctxt "#31334"
+msgid "Focus"
+msgstr ""
+
+msgctxt "#31335"
+msgid "Border"
+msgstr "Obramowanie"
+
+msgctxt "#31336"
+msgid "Zoom"
+msgstr "Powiększenie"
+
+msgctxt "#31338"
+msgid "Flip"
+msgstr ""
+
+msgctxt "#31339"
+msgid "Effects"
+msgstr "Efekty"
+
+msgctxt "#31340"
+msgid "Recordings"
+msgstr "Nagrania"
+
+msgctxt "#31341"
+msgid "Channels"
+msgstr "Kanały"
+
+msgctxt "#31342"
+msgid "Timer rules"
+msgstr ""
+
+msgctxt "#31343"
+msgid "Partymode"
+msgstr "Tryb Imprezy"
+
+msgctxt "#31344"
+msgid "Date added"
+msgstr "Data dodania"
+
+msgctxt "#31345"
+msgid "Title"
+msgstr "Tytuł"
+
+msgctxt "#31346"
+msgid "Last played"
+msgstr "Ostatnio odtwarzane"
+
+msgctxt "#31347"
+msgid "Rating"
+msgstr "Ocena"
+
+msgctxt "#31348"
+msgid "My rating"
+msgstr "Moja ocena"
+
+msgctxt "#31349"
+msgid "Duration"
+msgstr "Czas trwania"
+
+msgctxt "#31350"
+msgid "Play count"
+msgstr "Liczba odtworzeń"
+
+msgctxt "#31351"
+msgid "Name"
+msgstr "Nazwa"
+
+msgctxt "#31352"
+msgid "Label"
+msgstr "Etykieta"
+
+msgctxt "#31353"
+msgid "Image"
+msgstr "Obraz"
+
+msgctxt "#31354"
+msgid "Share"
+msgstr "Podziel się"
+
+msgctxt "#31355"
+msgid "Username"
+msgstr "Nazwa Użytkownika"
+
+msgctxt "#31356"
+msgid "Password"
+msgstr "Hasło"
+
+msgctxt "#31357"
+msgid "PIN"
+msgstr "numer PIN"
+
+msgctxt "#31358"
+msgid "Path"
+msgstr "Ścieżka"
+
+msgctxt "#31359"
+msgid "Item"
+msgstr "Pozycja"
+
+msgctxt "#31360"
+msgid "Items"
+msgstr "Pozycje"
+
+# VideoFullScreen
+msgctxt "#31400"
+msgid "Play"
+msgstr "Odtwórz"
+
+msgctxt "#31401"
+msgid "Stop"
+msgstr "Stop"
+
+msgctxt "#31402"
+msgid "Fast forward"
+msgstr "Do przodu"
+
+msgctxt "#31403"
+msgid "Rewind"
+msgstr "Przewiń"
+
+msgctxt "#31404"
+msgid "Skip forward"
+msgstr "Przeskocz do przodu"
+
+msgctxt "#31405"
+msgid "Skip back"
+msgstr "Przeskocz do tyłu"
+
+msgctxt "#31406"
+msgid "Seek"
+msgstr "Szukaj"
+
+msgctxt "#31407"
+msgid "Bookmark"
+msgstr "Zakładka"
+
+msgctxt "#31408"
+msgid "Bookmarks"
+msgstr "Zakładki"
+
+msgctxt "#31409"
+msgid "Pause"
+msgstr "Wstrzymaj"
+
+msgctxt "#31410"
+msgid "Controls"
+msgstr ""
+
+msgctxt "#31411"
+msgid "Paused"
+msgstr "Zatrzymaj"
+
+msgctxt "#31412"
+msgid "Current time"
+msgstr "Bieżący czas"
+
+msgctxt "#31413"
+msgid "Remaining time"
+msgstr "Pozostały czas"
+
+msgctxt "#31414"
+msgid "Finish time"
+msgstr "Czas końcowy"
+
+msgctxt "#31415"
+msgid "Audio"
+msgstr "Audio"
+
+msgctxt "#31416"
+msgid "Bottom"
+msgstr "Dolny"
+
+msgctxt "#31417"
+msgid "Top"
+msgstr "Górny"
+
+msgctxt "#31418"
+msgid "Minimal"
+msgstr "Zminimalizuj"
+
+msgctxt "#31419"
+msgid "Automatic"
+msgstr "Automatyczny"
+
+msgctxt "#31420"
+msgid "Plot"
+msgstr ""
+
+msgctxt "#31421"
+msgid "Clock"
+msgstr "Zegar"
+
+msgctxt "#31422"
+msgid "On-screen display"
+msgstr "Wyświetlanie na ekranie"
+
+msgctxt "#31423"
+msgid "Subtitle"
+msgstr "Napis"
+
+msgctxt "#31424"
+msgid "Page"
+msgstr "Strona"
+
+msgctxt "#31425"
+msgid "Playing"
+msgstr "Odtwarzanie"
+
+msgctxt "#31426"
+msgid "Seeking"
+msgstr "Szukanie"
+
+msgctxt "#31427"
+msgid "Set path"
+msgstr "Ustawienie ścieżki"
+
+msgctxt "#31428"
+msgid "Backup"
+msgstr "Kopia zapasowa"
+
+msgctxt "#31429"
+msgid "Restore"
+msgstr "Przywracanie"
+
+#: Settings
+msgctxt "#31500"
+msgid "Home Screen"
+msgstr "Strona startowa"
+
+msgctxt "#31501"
+msgid "Home Menu"
+msgstr "Menu startowe"
+
+msgctxt "#31502"
+msgid "Sub Menu"
+msgstr "Podmenu"
+
+msgctxt "#31503"
+msgid "Custom Home"
+msgstr ""
+
+msgctxt "#31504"
+msgid "Widget"
+msgstr "Widżet"
+
+msgctxt "#31505"
+msgid "Widgets"
+msgstr "Widżety"
+
+msgctxt "#31506"
+msgid "Colour"
+msgstr "Kolor"
+
+msgctxt "#31507"
+msgid "Colours"
+msgstr "Kolory"
+
+msgctxt "#31508"
+msgid "Support"
+msgstr "Wsparcie"
+
+msgctxt "#31509"
+msgid "Forum"
+msgstr "Forum"
+
+msgctxt "#31510"
+msgid "Translate"
+msgstr "Przetłumaczyć"
+
+msgctxt "#31511"
+msgid "Donate"
+msgstr "Dofinansować"
+
+msgctxt "#31512"
+msgid "Media"
+msgstr "Media"
+
+msgctxt "#31513"
+msgid "Media information"
+msgstr "Informacje o mediach"
+
+msgctxt "#31514"
+msgid "Picture of the day"
+msgstr "Zdjęcie dnia"
+
+msgctxt "#31515"
+msgid "Next"
+msgstr "Następny"
+
+msgctxt "#31516"
+msgid "No data"
+msgstr "Brak danych"
+
+msgctxt "#31517"
+msgid "Chapter"
+msgstr "Rozdział"
+
+msgctxt "#31518"
+msgid "Fullscreen"
+msgstr "Pełny ekran"
+
+msgctxt "#31519"
+msgid "Custom"
+msgstr "Niestandardowy"
+
+msgctxt "#31520"
+msgid "Content"
+msgstr "Zawartość"
+
+msgctxt "#31521"
+msgid "X-Axis"
+msgstr "Oś X"
+
+msgctxt "#31522"
+msgid "Y-Axis"
+msgstr "Oś Y"
+
+msgctxt "#31523"
+msgid "Width"
+msgstr "Szerokość"
+
+msgctxt "#31524"
+msgid "Height"
+msgstr "Wysokość"
+
+msgctxt "#31525"
+msgid "Font"
+msgstr "Czcionka"
+
+msgctxt "#31526"
+msgid "Align"
+msgstr "Wyrównaj"
+
+msgctxt "#31527"
+msgid "Aspect ratio"
+msgstr "Proporcje ekranu"
+
+msgctxt "#31528"
+msgid "Line wrap"
+msgstr "Zawijanie linii"
+
+msgctxt "#31529"
+msgid "Rotate"
+msgstr "Obróć"
+
+msgctxt "#31530"
+msgid "Submit"
+msgstr "Zatwierdź"
+
+#: Custom
+msgctxt "#31700"
+msgid "English"
+msgstr "Polish"

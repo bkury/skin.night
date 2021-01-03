@@ -1,0 +1,1032 @@
+# Translators:
+# Эдуард Приутеса <eduardpriutesa@gmail.com>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-02-15 08:04+0100\n"
+"PO-Revision-Date: 2019-02-15 19:06+0000\n"
+"Last-Translator: Эдуард Приутеса <eduardpriutesa@gmail.com>, 2020\n"
+"Language-Team: Russian (Russia) (https://www.transifex.com/bkury/teams/96228/ru_RU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: Homemenu
+msgctxt "#31000"
+msgid "Live TV"
+msgstr "ТВ"
+
+msgctxt "#31001"
+msgid "Guide"
+msgstr "Гид"
+
+msgctxt "#31002"
+msgid "Radio"
+msgstr "Радио"
+
+msgctxt "#31003"
+msgid "Library"
+msgstr "Библиотека"
+
+msgctxt "#31004"
+msgid "Video"
+msgstr "Видео"
+
+msgctxt "#31005"
+msgid "Videos"
+msgstr "Видео"
+
+msgctxt "#31006"
+msgid "File"
+msgstr "Файл"
+
+msgctxt "#31007"
+msgid "Files"
+msgstr "Файлы"
+
+msgctxt "#31008"
+msgid "Movie"
+msgstr "Фильм"
+
+msgctxt "#31009"
+msgid "Movies"
+msgstr "Фильмы"
+
+msgctxt "#31010"
+msgid "TV Show"
+msgstr "Сериал"
+
+msgctxt "#31011"
+msgid "TV Shows"
+msgstr "Сериалы"
+
+msgctxt "#31012"
+msgid "Music"
+msgstr "Музыка"
+
+msgctxt "#31013"
+msgid "Music video"
+msgstr "Музыкальное видео"
+
+msgctxt "#31014"
+msgid "Music videos"
+msgstr "Музыкальные видео"
+
+msgctxt "#31015"
+msgid "Picture"
+msgstr "Изображение"
+
+msgctxt "#31016"
+msgid "Pictures"
+msgstr "Изображения"
+
+msgctxt "#31017"
+msgid "Game"
+msgstr "Игра"
+
+msgctxt "#31018"
+msgid "Games"
+msgstr "Игры"
+
+msgctxt "#31019"
+msgid "Now playing"
+msgstr "Сейчас играет"
+
+msgctxt "#31020"
+msgid "Dashboard"
+msgstr "Панели мониторинга"
+
+msgctxt "#31021"
+msgid "Notification"
+msgstr "Уведомления"
+
+msgctxt "#31022"
+msgid "Notifications"
+msgstr "Уведомления"
+
+msgctxt "#31023"
+msgid "Favourite"
+msgstr "Избранное"
+
+msgctxt "#31024"
+msgid "Favourites"
+msgstr "Избранные"
+
+msgctxt "#31025"
+msgid "Play file"
+msgstr "Воспроизвести файл"
+
+msgctxt "#31026"
+msgid "Search"
+msgstr "Поиск"
+
+msgctxt "#31027"
+msgid "Weather"
+msgstr "Погода"
+
+msgctxt "#31028"
+msgid "Add-on"
+msgstr "Дополнение"
+
+msgctxt "#31029"
+msgid "Add-ons"
+msgstr "Дополнения"
+
+msgctxt "#31030"
+msgid "Program"
+msgstr "Программа"
+
+msgctxt "#31031"
+msgid "Programs"
+msgstr "Программы"
+
+msgctxt "#31032"
+msgid "Play Disc"
+msgstr "Воспроизведение диска"
+
+#: Submenu
+msgctxt "#31050"
+msgid "Preferences"
+msgstr "Предпочтения"
+
+msgctxt "#31051"
+msgid "Settings"
+msgstr "Параметры"
+
+msgctxt "#31052"
+msgid "Timer"
+msgstr "Таймер"
+
+msgctxt "#31053"
+msgid "Cancel timer"
+msgstr "Отмена таймера"
+
+msgctxt "#31054"
+msgid "Eventlog"
+msgstr "Журнал событий"
+
+msgctxt "#31055"
+msgid "File manager"
+msgstr "Менеджер файлов"
+
+msgctxt "#31056"
+msgid "Quit"
+msgstr "Выход"
+
+msgctxt "#31057"
+msgid "Suspend"
+msgstr "Приостановить"
+
+msgctxt "#31058"
+msgid "Reboot"
+msgstr "Перезагрузка"
+
+msgctxt "#31059"
+msgid "Shutdown"
+msgstr "Завершения работы"
+
+msgctxt "#31060"
+msgid "Switch user"
+msgstr "Поменять пользователя"
+
+msgctxt "#31061"
+msgid "Manual sync"
+msgstr "Ручная синхронизация"
+
+msgctxt "#31062"
+msgid "Eject"
+msgstr "Извлечь"
+
+#: Sections
+msgctxt "#31070"
+msgid "General"
+msgstr "Общие"
+
+msgctxt "#31071"
+msgid "Filter"
+msgstr "Фильтр"
+
+msgctxt "#31072"
+msgid "Options"
+msgstr "Параметры"
+
+#: Content
+msgctxt "#31100"
+msgid "Season"
+msgstr "Сезон"
+
+msgctxt "#31101"
+msgid "Seasons"
+msgstr "Сезоны"
+
+msgctxt "#31102"
+msgid "Episode"
+msgstr "Эпизод"
+
+msgctxt "#31103"
+msgid "Episodes"
+msgstr "Эпизоды"
+
+msgctxt "#31104"
+msgid "Album"
+msgstr "Альбом"
+
+msgctxt "#31105"
+msgid "Albums"
+msgstr "Альбомы"
+
+msgctxt "#31106"
+msgid "Song"
+msgstr "Песня"
+
+msgctxt "#31107"
+msgid "Songs"
+msgstr "Песни"
+
+msgctxt "#31108"
+msgid "Artist"
+msgstr "Артист"
+
+msgctxt "#31109"
+msgid "Artists"
+msgstr "Артисты"
+
+msgctxt "#31110"
+msgid "Photo"
+msgstr "Фотография"
+
+msgctxt "#31111"
+msgid "Photos"
+msgstr "Фотографии"
+
+msgctxt "#31112"
+msgid "Genre"
+msgstr "Жанр"
+
+msgctxt "#31113"
+msgid "Genres"
+msgstr "Жанры"
+
+msgctxt "#31114"
+msgid "Year"
+msgstr "Год"
+
+msgctxt "#31115"
+msgid "Years"
+msgstr "Года"
+
+msgctxt "#31116"
+msgid "Actor"
+msgstr "Актер"
+
+msgctxt "#31117"
+msgid "Actors"
+msgstr "Актеры"
+
+msgctxt "#31118"
+msgid "Playlist"
+msgstr "Плейлист"
+
+msgctxt "#31119"
+msgid "Playlists"
+msgstr "Плейлисты"
+
+msgctxt "#31120"
+msgid "Plugin"
+msgstr "Плагин"
+
+msgctxt "#31121"
+msgid "Plugins"
+msgstr "Плагины"
+
+msgctxt "#31122"
+msgid "Studio"
+msgstr "Студия"
+
+msgctxt "#31123"
+msgid "Studios"
+msgstr "Студии"
+
+msgctxt "#31124"
+msgid "Director"
+msgstr "Режиссер"
+
+msgctxt "#31125"
+msgid "Directors"
+msgstr "Режиссеры"
+
+msgctxt "#31127"
+msgid "Sets"
+msgstr "Наборы"
+
+msgctxt "#31128"
+msgid "Tag"
+msgstr "Тег"
+
+msgctxt "#31129"
+msgid "Tags"
+msgstr "Теги"
+
+#: Select
+msgctxt "#31130"
+msgid "Select colour"
+msgstr "Выберите цвет"
+
+msgctxt "#31131"
+msgid "Select time"
+msgstr "Выберите время"
+
+msgctxt "#31132"
+msgid "Select opacity"
+msgstr "Выберите непрозрачность"
+
+msgctxt "#31133"
+msgid "Select transparency"
+msgstr "Выберите прозрачность"
+
+msgctxt "#31134"
+msgid "Select URL"
+msgstr "Выберите URL"
+
+msgctxt "#31135"
+msgid "Select item"
+msgstr "Выберите элемент"
+
+#: Sections (Widget)
+msgctxt "#31900"
+msgid "In progress"
+msgstr "В процессе"
+
+msgctxt "#31901"
+msgid "Recently added"
+msgstr "Недавно добавлено"
+
+msgctxt "#31902"
+msgid "Recently watched"
+msgstr "Недавно смотрел"
+
+msgctxt "#31903"
+msgid "Recently recorded"
+msgstr "Недавно записано"
+
+msgctxt "#31904"
+msgid "Recently listened"
+msgstr "Недавно слушал"
+
+msgctxt "#31905"
+msgid "Forecast"
+msgstr "Прогноз"
+
+msgctxt "#31906"
+msgid "Hourly"
+msgstr "Почасовой"
+
+#: Viewmode (Sidebar)
+msgctxt "#31150"
+msgid "Date"
+msgstr "Дата"
+
+msgctxt "#31151"
+msgid "Total"
+msgstr "Общая"
+
+msgctxt "#31152"
+msgid "Type"
+msgstr "Тип"
+
+msgctxt "#31153"
+msgid "Mode"
+msgstr "Режим"
+
+msgctxt "#31154"
+msgid "Airdate"
+msgstr "Дата выхода в эфир"
+
+msgctxt "#31155"
+msgid "Creator"
+msgstr "Создатель"
+
+msgctxt "#31156"
+msgid "Writer"
+msgstr "Автор"
+
+msgctxt "#31157"
+msgid "Version"
+msgstr "Версия"
+
+msgctxt "#31158"
+msgid "Camera"
+msgstr "Камеры"
+
+msgctxt "#31159"
+msgid "Cast"
+msgstr "Состав исполнителей"
+
+msgctxt "#31160"
+msgid "Next episode"
+msgstr "Следующий эпизод"
+
+msgctxt "#31161"
+msgid "Country"
+msgstr "Страны"
+
+msgctxt "#31162"
+msgid "Status"
+msgstr "Статус"
+
+msgctxt "#31163"
+msgid "Content rating"
+msgstr "Рейтинг контента"
+
+msgctxt "#31164"
+msgid "Sidebar"
+msgstr "Боковая панель"
+
+#: Not
+msgctxt "#31180"
+msgid "Not available"
+msgstr "Недоступно"
+
+msgctxt "#31181"
+msgid "N/A"
+msgstr "N/A"
+
+msgctxt "#31182"
+msgid "Not set"
+msgstr "Не установлено"
+
+msgctxt "#31183"
+msgid "Empty"
+msgstr "Пустой"
+
+msgctxt "#31184"
+msgid "None"
+msgstr "Никто"
+
+#: Button / Switches
+msgctxt "#31190"
+msgid "Ok"
+msgstr "ОК"
+
+msgctxt "#31191"
+msgid "Cancel"
+msgstr "Отмена"
+
+msgctxt "#31192"
+msgid "Add"
+msgstr "Добавить"
+
+msgctxt "#31193"
+msgid "Reset"
+msgstr "Сброс"
+
+msgctxt "#31194"
+msgid "Default"
+msgstr "По умолчанию"
+
+msgctxt "#31195"
+msgid "Defaults"
+msgstr "По умолчанию"
+
+msgctxt "#31196"
+msgid "On"
+msgstr "Включено"
+
+msgctxt "#31197"
+msgid "Off"
+msgstr "Выключено"
+
+msgctxt "#31198"
+msgid "Installed"
+msgstr "Установлены"
+
+msgctxt "#31199"
+msgid "Not installed"
+msgstr "Не установлено"
+
+msgctxt "#31200"
+msgid "Minutes"
+msgstr "Минут"
+
+msgctxt "#31201"
+msgid "min"
+msgstr "мин"
+
+msgctxt "#31202"
+msgid "Seconds"
+msgstr "Секунд"
+
+msgctxt "#31203"
+msgid "sec"
+msgstr "сек"
+
+msgctxt "#31204"
+msgid "Hide"
+msgstr "Скрыть"
+
+msgctxt "#31205"
+msgid "Show"
+msgstr "Показать"
+
+msgctxt "#31206"
+msgid "Open"
+msgstr "Открыть"
+
+msgctxt "#31207"
+msgid "Close"
+msgstr "Закрыть"
+
+#: VIEWMODE
+msgctxt "#31300"
+msgid "Viewtype"
+msgstr "Тип вида"
+
+msgctxt "#31301"
+msgid "Tools"
+msgstr "Инструменты"
+
+msgctxt "#31302"
+msgid "Edit"
+msgstr "Редактировать"
+
+msgctxt "#31303"
+msgid "Browse"
+msgstr "Просмотреть"
+
+msgctxt "#31304"
+msgid "Appearance"
+msgstr "Внешний вид"
+
+msgctxt "#31305"
+msgid "Mark as"
+msgstr "Отметить как"
+
+msgctxt "#31306"
+msgid "Watched"
+msgstr "Смотрел"
+
+msgctxt "#31307"
+msgid "Unwatched"
+msgstr "Непросмотренные"
+
+msgctxt "#31308"
+msgid "Add to"
+msgstr "Добавить в"
+
+msgctxt "#31309"
+msgid "Queue"
+msgstr "Очереди"
+
+msgctxt "#31310"
+msgid "Apply changes"
+msgstr "Применить изменения"
+
+msgctxt "#31311"
+msgid "Back"
+msgstr "Назад"
+
+msgctxt "#31312"
+msgid "Hide Watched"
+msgstr "Скрыть смотрел"
+
+msgctxt "#31313"
+msgid "Set filter"
+msgstr "Набор фильтра"
+
+msgctxt "#31314"
+msgid "Sort"
+msgstr "Сортировки"
+
+msgctxt "#31315"
+msgid "Small"
+msgstr "Маленький"
+
+msgctxt "#31316"
+msgid "Medium"
+msgstr "Средний"
+
+msgctxt "#31317"
+msgid "Large"
+msgstr "Большой"
+
+msgctxt "#31318"
+msgid "Huge"
+msgstr "Огромный"
+
+msgctxt "#31319"
+msgid "Size"
+msgstr "Размер"
+
+msgctxt "#31320"
+msgid "Overlay"
+msgstr "Наложения"
+
+msgctxt "#31321"
+msgid "Overlays"
+msgstr "Наложения"
+
+msgctxt "#31322"
+msgid "Custom image"
+msgstr "Пользовательское изображение"
+
+msgctxt "#31323"
+msgid "Custom slideshow"
+msgstr "Пользовательские слайд-шоу"
+
+msgctxt "#31324"
+msgid "Custom colour"
+msgstr "Пользовательский цвет"
+
+msgctxt "#31325"
+msgid "Fadetime"
+msgstr "Исчезать время"
+
+msgctxt "#31326"
+msgid "Time per image"
+msgstr "Время на изображение"
+
+msgctxt "#31327"
+msgid "Opacity"
+msgstr "Непрозрачность"
+
+msgctxt "#31328"
+msgid "Transparency"
+msgstr "Прозрачность"
+
+msgctxt "#31329"
+msgid "Pan / Zoom"
+msgstr "Pan / Zoom"
+
+msgctxt "#31330"
+msgid "Background"
+msgstr "Фон"
+
+msgctxt "#31331"
+msgid "Position"
+msgstr "Позиции"
+
+msgctxt "#31332"
+msgid "Find"
+msgstr "Найти"
+
+msgctxt "#31333"
+msgid "Custom URL"
+msgstr "Пользовательский URL"
+
+msgctxt "#31334"
+msgid "Focus"
+msgstr "Фокус"
+
+msgctxt "#31335"
+msgid "Border"
+msgstr "Границы"
+
+msgctxt "#31336"
+msgid "Zoom"
+msgstr "Зум"
+
+msgctxt "#31338"
+msgid "Flip"
+msgstr "Флип"
+
+msgctxt "#31339"
+msgid "Effects"
+msgstr "Эффекты"
+
+msgctxt "#31340"
+msgid "Recordings"
+msgstr "Записи"
+
+msgctxt "#31341"
+msgid "Channels"
+msgstr "Каналами"
+
+msgctxt "#31342"
+msgid "Timer rules"
+msgstr "Правила таймера"
+
+msgctxt "#31343"
+msgid "Partymode"
+msgstr "Режим вечеринки"
+
+msgctxt "#31344"
+msgid "Date added"
+msgstr "Дата добавления"
+
+msgctxt "#31345"
+msgid "Title"
+msgstr "Название"
+
+msgctxt "#31346"
+msgid "Last played"
+msgstr "Последний играемый"
+
+msgctxt "#31347"
+msgid "Rating"
+msgstr "Рейтинг"
+
+msgctxt "#31348"
+msgid "My rating"
+msgstr "Мой рейтинг"
+
+msgctxt "#31349"
+msgid "Duration"
+msgstr "Длительность"
+
+msgctxt "#31350"
+msgid "Play count"
+msgstr "Счетчик воспроизведения"
+
+msgctxt "#31351"
+msgid "Name"
+msgstr "Имя"
+
+msgctxt "#31352"
+msgid "Label"
+msgstr "Метки"
+
+msgctxt "#31353"
+msgid "Image"
+msgstr "Изображения"
+
+msgctxt "#31354"
+msgid "Share"
+msgstr "Предоставить общий доступ"
+
+msgctxt "#31355"
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgctxt "#31356"
+msgid "Password"
+msgstr "Пароль"
+
+msgctxt "#31357"
+msgid "PIN"
+msgstr "PIN"
+
+msgctxt "#31358"
+msgid "Path"
+msgstr "Путь"
+
+msgctxt "#31359"
+msgid "Item"
+msgstr "Элемент"
+
+msgctxt "#31360"
+msgid "Items"
+msgstr "Элементы"
+
+# VideoFullScreen
+msgctxt "#31400"
+msgid "Play"
+msgstr "Играть"
+
+msgctxt "#31401"
+msgid "Stop"
+msgstr "Стоп"
+
+msgctxt "#31402"
+msgid "Fast forward"
+msgstr "Перемотка вперед"
+
+msgctxt "#31403"
+msgid "Rewind"
+msgstr "Перемотка"
+
+msgctxt "#31404"
+msgid "Skip forward"
+msgstr "Пропустить вперед"
+
+msgctxt "#31405"
+msgid "Skip back"
+msgstr "Пропустить назад"
+
+msgctxt "#31406"
+msgid "Seek"
+msgstr "Искать"
+
+msgctxt "#31407"
+msgid "Bookmark"
+msgstr "Закладка"
+
+msgctxt "#31408"
+msgid "Bookmarks"
+msgstr "Закладки"
+
+msgctxt "#31409"
+msgid "Pause"
+msgstr "Пауза"
+
+msgctxt "#31410"
+msgid "Controls"
+msgstr "Элементы управления"
+
+msgctxt "#31411"
+msgid "Paused"
+msgstr "Приостанавливать"
+
+msgctxt "#31412"
+msgid "Current time"
+msgstr "Текущее время"
+
+msgctxt "#31413"
+msgid "Remaining time"
+msgstr "Оставшееся время"
+
+msgctxt "#31414"
+msgid "Finish time"
+msgstr "Время окончания"
+
+msgctxt "#31415"
+msgid "Audio"
+msgstr "Аудио"
+
+msgctxt "#31416"
+msgid "Bottom"
+msgstr "Нижний"
+
+msgctxt "#31417"
+msgid "Top"
+msgstr "Топ"
+
+msgctxt "#31418"
+msgid "Minimal"
+msgstr "Минимальный"
+
+msgctxt "#31419"
+msgid "Automatic"
+msgstr "Автоматически"
+
+msgctxt "#31420"
+msgid "Plot"
+msgstr "Сюжет"
+
+msgctxt "#31421"
+msgid "Clock"
+msgstr "Часы"
+
+msgctxt "#31422"
+msgid "On-screen display"
+msgstr "Экранное меню"
+
+msgctxt "#31423"
+msgid "Subtitle"
+msgstr "Субтитры"
+
+msgctxt "#31424"
+msgid "Page"
+msgstr "Страницы"
+
+msgctxt "#31425"
+msgid "Playing"
+msgstr "Играть"
+
+msgctxt "#31426"
+msgid "Seeking"
+msgstr "Ищут"
+
+msgctxt "#31427"
+msgid "Set path"
+msgstr "Установить путь"
+
+msgctxt "#31428"
+msgid "Backup"
+msgstr "Резервного копирования"
+
+msgctxt "#31429"
+msgid "Restore"
+msgstr "Восстановить"
+
+#: Settings
+msgctxt "#31500"
+msgid "Home Screen"
+msgstr "Домашний экран"
+
+msgctxt "#31501"
+msgid "Home Menu"
+msgstr "Домашнее меню"
+
+msgctxt "#31502"
+msgid "Sub Menu"
+msgstr "Под меню"
+
+msgctxt "#31503"
+msgid "Custom Home"
+msgstr "Пользовательский"
+
+msgctxt "#31504"
+msgid "Widget"
+msgstr "Виджет"
+
+msgctxt "#31505"
+msgid "Widgets"
+msgstr "Виджеты"
+
+msgctxt "#31506"
+msgid "Colour"
+msgstr "Цвет"
+
+msgctxt "#31507"
+msgid "Colours"
+msgstr "Цвета"
+
+msgctxt "#31508"
+msgid "Support"
+msgstr "Поддержка"
+
+msgctxt "#31509"
+msgid "Forum"
+msgstr "Форум"
+
+msgctxt "#31510"
+msgid "Translate"
+msgstr "Перевести"
+
+msgctxt "#31511"
+msgid "Donate"
+msgstr "Пожертвовать"
+
+msgctxt "#31512"
+msgid "Media"
+msgstr "Медия"
+
+msgctxt "#31513"
+msgid "Media information"
+msgstr "Медиа информация"
+
+msgctxt "#31514"
+msgid "Picture of the day"
+msgstr "Картина дня"
+
+msgctxt "#31515"
+msgid "Next"
+msgstr "Следующий"
+
+msgctxt "#31516"
+msgid "No data"
+msgstr "Нет данных"
+
+msgctxt "#31517"
+msgid "Chapter"
+msgstr "Глава"
+
+msgctxt "#31518"
+msgid "Fullscreen"
+msgstr "Полноэкранный"
+
+msgctxt "#31519"
+msgid "Custom"
+msgstr "Пользовательские"
+
+msgctxt "#31520"
+msgid "Content"
+msgstr "Содержание"
+
+msgctxt "#31521"
+msgid "X-Axis"
+msgstr "X-Ось"
+
+msgctxt "#31522"
+msgid "Y-Axis"
+msgstr "Y-Ось"
+
+msgctxt "#31523"
+msgid "Width"
+msgstr "Ширина"
+
+msgctxt "#31524"
+msgid "Height"
+msgstr "Высота"
+
+msgctxt "#31525"
+msgid "Font"
+msgstr "Шрифт"
+
+msgctxt "#31526"
+msgid "Align"
+msgstr "Выровнять"
+
+msgctxt "#31527"
+msgid "Aspect ratio"
+msgstr "Пропорции"
+
+msgctxt "#31528"
+msgid "Line wrap"
+msgstr "Обертывание линии"
+
+msgctxt "#31529"
+msgid "Rotate"
+msgstr "Повернуть"
+
+msgctxt "#31530"
+msgid "Submit"
+msgstr "Подавать"
+
+#: Custom
+msgctxt "#31700"
+msgid "English"
+msgstr "Russian"

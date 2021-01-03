@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="12">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>Animation_Window_Fade</include>
+
+	<controls>
+
+		<!-- Background -->
+		<include content="Background_Custom">
+			<param name="id_home">20</param>
+			<param name="id_fade">13020</param>
+			<param name="opacity">30</param>
+			<param name="image">$VAR[Var_Background_Default_Image]</param>
+		</include>
+
+		<control type="group">
+			<include>AspectRatio_PosY</include>
+
+		<!-- Clock -->
+		<control type="group">
+			<animation effect="slide" end="-20,0" condition="true">Conditional</animation>
+			<include>Clock_Right_Pos</include>
+			<include>Clock_Right</include>
+		</control>
+
+		<!-- Logo -->
+		<control type="image">
+			<left>10</left>
+			<top>20</top>
+			<width>240</width><!-- 240 -->
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>night_logo.png</texture>
+			<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+		</control>
+		<control type="label">
+			<top>84</top>
+			<left>160</left>
+			<height>40</height>
+			<label>v2.5.2</label>
+			<font>Lato_Regular_10</font>
+			<aligny>center</aligny>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+		<!-- Separator -->
+		<control type="image">
+			<left>40</left>
+			<top>140</top>
+			<include>AspectRatio_Width_1240</include>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<left>40</left>
+			<top>100r</top>
+			<include>AspectRatio_Width_1240</include>
+			<include>SeparatorH</include>
+		</control>
+
+		<!-- Header -->
+		<control type="label">
+			<height>140</height>
+			<include>AspectRatio_Width</include>
+			<font>Font_Settings_Header</font>
+			<label>$INFO[Control.GetLabel(2)] &#xB7; $LOCALIZE[5]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+
+		<control type="group">
+			<include>AspectRatio_PosX</include>
+			<left>40</left>
+
+			<control type="image">
+				<top>140</top>
+				<width>520</width>
+				<height>1200</height>
+				<texture>bg_white.png</texture>
+				<colordiffuse>04FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>520</left>
+				<top>140</top>
+				<width>1960</width>
+				<height>1200</height>
+				<texture>bg_white.png</texture>
+				<colordiffuse>22000000</colordiffuse>
+			</control>
+			<control type="image">
+				<left>520</left>
+				<top>140</top>
+				<height>1200</height>
+				<colordiffuse>11FFFFFF</colordiffuse>
+				<include>SeparatorV</include>
+			</control>
+
+			<!-- Menu -->
+			<control type="grouplist">
+				<left>0</left>
+				<top>160</top>
+				<orientation>vertical</orientation>
+				<itemgap>-4</itemgap>
+				<!-- Content -->
+				<control type="grouplist" id="3">
+					<itemgap>-4</itemgap>
+					<onright>5</onright>
+					<width>520</width>
+					<height>1400</height>
+				</control>
+				<!-- Settings Level -->
+				<control type="button" id="20">
+					<height>120</height>
+					<width>520</width>
+					<aligny>center</aligny>
+					<font>Font_Settings_Menu</font>
+					<textoffsetx>20</textoffsetx>
+					<include>skin_settings_labels</include>
+					<onclick>SettingsLevelChange</onclick>
+				</control>
+			</control>
+
+			<!-- Options -->
+			<control type="grouplist" id="5">
+				<top>160</top>
+				<height>1152</height>
+				<onleft>3</onleft>
+				<onright>102</onright>
+				<pagecontrol>102</pagecontrol>
+				<include>Settings_Section</include>
+			</control>
+			<control type="scrollbar" id="102">
+				<left>2470</left>
+				<top>192</top>
+				<height>1020</height>
+				<onleft>5</onleft>
+				<include>vscrollbar</include>
+				<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(102)">Conditional</animation>
+			</control>
+
+			<!-- Description -->
+			<control type="label" id="6">
+				<top>100r</top>
+				<height>100</height>
+				<include>AspectRatio_Width_1240</include>
+				<font>Font_Settings_Desc</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<aligny>center</aligny>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+
+		</control>
+
+		<!-- Menu -->
+		<control type="button" id="10">
+			<include>skin_settings_menu</include>
+		</control>
+		<!-- Content -->
+		<control type="button" id="7">
+			<include>skin_settings_labels</include>
+		</control>
+
+		<control type="radiobutton" id="8">
+			<include>skin_settings_labels</include>
+		</control>
+		<control type="spincontrolex" id="9">
+			<include>skin_settings_labels</include>
+		</control>
+
+		<!-- Header Label -->
+		<control type="label" id="2"> 
+			<left>0</left>
+			<top>0</top>
+			<width>0</width>
+			<height>0</height>
+			<font></font>
+			<visible>false</visible>
+		</control>
+	</control>
+	</controls>
+
+</window>

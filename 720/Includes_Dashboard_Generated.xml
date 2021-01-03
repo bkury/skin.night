@@ -1,0 +1,2319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERATED XML FILE (DO NOT EDIT!) -->
+<!-- Thu  8 Oct 17:06:08 CEST 2020 -->
+<includes>
+<include name="Dashboard_Content">
+	<control type="group">
+		<include>Dashboard_Visible</include>
+		<include>AspectRatio_Both</include>
+		<!-- Row 0 / Column 1 -->
+		<control type="group">
+			<left>60</left>
+			<top>20</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget0_1),Clock_4x1)">Dashboard_Clock_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget0_1),RSS_4x1)">Dashboard_RSS_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget0_1),Text_4x1)">Dashboard_Text_4x1_0_1</include>
+		</control>
+		<!-- Row 1 / Column 1 -->
+		<control type="group">
+			<left>60</left>
+			<top>60</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Image_1x1)">Dashboard_Image_1x1_1_1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Image_2x1)">Dashboard_Image_2x1_1_1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_1),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 1 / Column 2 -->
+		<control type="group">
+			<left>350</left>
+			<top>60</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Image_1x1)">Dashboard_Image_1x1_1_2</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Image_2x1)">Dashboard_Image_2x1_1_2</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_2),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 1 / Column 3 -->
+		<control type="group">
+			<left>640</left>
+			<top>60</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Image_1x1)">Dashboard_Image_1x1_1_3</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Image_2x1)">Dashboard_Image_2x1_1_3</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_3),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 1 / Column 4 -->
+		<control type="group">
+			<left>930</left>
+			<top>60</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Image_1x1)">Dashboard_Image_1x1_1_4</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Image_2x1)">Dashboard_Image_2x1_1_4</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget1_4),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 2 / Column 1 -->
+		<control type="group">
+			<left>60</left>
+			<top>260</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Image_1x1)">Dashboard_Image_1x1_2_1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Image_2x1)">Dashboard_Image_2x1_2_1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_1),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 2 / Column 2 -->
+		<control type="group">
+			<left>350</left>
+			<top>260</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Image_1x1)">Dashboard_Image_1x1_2_2</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Image_2x1)">Dashboard_Image_2x1_2_2</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_2),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 2 / Column 3 -->
+		<control type="group">
+			<left>640</left>
+			<top>260</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Image_1x1)">Dashboard_Image_1x1_2_3</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Image_2x1)">Dashboard_Image_2x1_2_3</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_3),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 2 / Column 4 -->
+		<control type="group">
+			<left>930</left>
+			<top>260</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Image_1x1)">Dashboard_Image_1x1_2_4</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Image_2x1)">Dashboard_Image_2x1_2_4</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget2_4),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 3 / Column 1 -->
+		<control type="group">
+			<left>60</left>
+			<top>460</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Image_1x1)">Dashboard_Image_1x1_3_1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Image_2x1)">Dashboard_Image_2x1_3_1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_1),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 3 / Column 2 -->
+		<control type="group">
+			<left>350</left>
+			<top>460</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Image_1x1)">Dashboard_Image_1x1_3_2</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Image_2x1)">Dashboard_Image_2x1_3_2</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_2),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 3 / Column 3 -->
+		<control type="group">
+			<left>640</left>
+			<top>460</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Image_1x1)">Dashboard_Image_1x1_3_3</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Image_2x1)">Dashboard_Image_2x1_3_3</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_3),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 3 / Column 4 -->
+		<control type="group">
+			<left>930</left>
+			<top>460</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Clock_1x1)">Dashboard_Clock_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Clock_2x1)">Dashboard_Clock_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Weather_1x1)">Dashboard_Weather_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Weather_Hour_2x1)">Dashboard_Weather_Hour_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Weather_Day_2x1)">Dashboard_Weather_Day_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Weather_Hour_4x1)">Dashboard_Weather_Hour_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Weather_Day_4x1)">Dashboard_Weather_Day_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),User_1x1)">Dashboard_User_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Notifications_1x1)">Dashboard_Notifications_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Notifications_2x1)">Dashboard_Notifications_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Image_1x1)">Dashboard_Image_1x1_3_4</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Image_2x1)">Dashboard_Image_2x1_3_4</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Slideshow_1x1)">Dashboard_Slideshow_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Slideshow_2x1)">Dashboard_Slideshow_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_1x1)">Dashboard_Added_Movies_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Poster_1x1)">Dashboard_Added_Movies_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Fanart_1x1)">Dashboard_Added_Movies_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Clearart_1x1)">Dashboard_Added_Movies_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Clearlogo_1x1)">Dashboard_Added_Movies_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Poster_2x1)">Dashboard_Added_Movies_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Fanart_2x1)">Dashboard_Added_Movies_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Clearart_2x1)">Dashboard_Added_Movies_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Clearlogo_2x1)">Dashboard_Added_Movies_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Poster_4x1)">Dashboard_Added_Movies_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Fanart_4x1)">Dashboard_Added_Movies_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Clearart_4x1)">Dashboard_Added_Movies_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Movies_Clearlogo_4x1)">Dashboard_Added_Movies_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_1x1)">Dashboard_Added_Episodes_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Poster_1x1)">Dashboard_Added_Episodes_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Fanart_1x1)">Dashboard_Added_Episodes_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Clearart_1x1)">Dashboard_Added_Episodes_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Clearlogo_1x1)">Dashboard_Added_Episodes_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Poster_2x1)">Dashboard_Added_Episodes_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Fanart_2x1)">Dashboard_Added_Episodes_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Clearart_2x1)">Dashboard_Added_Episodes_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Clearlogo_2x1)">Dashboard_Added_Episodes_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Poster_4x1)">Dashboard_Added_Episodes_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Fanart_4x1)">Dashboard_Added_Episodes_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Clearart_4x1)">Dashboard_Added_Episodes_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Episodes_Clearlogo_4x1)">Dashboard_Added_Episodes_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_1x1)">Dashboard_Added_Albums_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Poster_1x1)">Dashboard_Added_Albums_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Fanart_1x1)">Dashboard_Added_Albums_Fanart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Clearart_1x1)">Dashboard_Added_Albums_Clearart_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Clearlogo_1x1)">Dashboard_Added_Albums_Clearlogo_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Poster_2x1)">Dashboard_Added_Albums_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Fanart_2x1)">Dashboard_Added_Albums_Fanart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Clearart_2x1)">Dashboard_Added_Albums_Clearart_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Clearlogo_2x1)">Dashboard_Added_Albums_Clearlogo_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Poster_4x1)">Dashboard_Added_Albums_Poster_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Fanart_4x1)">Dashboard_Added_Albums_Fanart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Clearart_4x1)">Dashboard_Added_Albums_Clearart_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Added_Albums_Clearlogo_4x1)">Dashboard_Added_Albums_Clearlogo_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Next_Aired_1x1)">Dashboard_Next_Aired_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Next_Aired_Poster_1x1)">Dashboard_Next_Aired_Poster_1x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Next_Aired_Poster_2x1)">Dashboard_Next_Aired_Poster_2x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget3_4),Next_Aired_Poster_4x1)">Dashboard_Next_Aired_Poster_4x1</include>
+		</control>
+		<!-- Row 0 / Column 2 -->
+		<control type="group">
+			<left>60</left>
+			<top>660</top>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget0_2),Clock_4x1)">Dashboard_Clock_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget0_2),RSS_4x1)">Dashboard_RSS_4x1</include>
+			<include condition="String.isEqual(Skin.String(Dashboard_Widget0_2),Text_4x1)">Dashboard_Text_4x1_0_2</include>
+		</control>
+	</control>
+</include>
+<include name="Dashboard_Settings">
+		<!-- Row 0 / Column 1 -->
+		<control type="group">
+			<left>60</left>
+			<top>20</top>
+			<control type="button" id="9501">
+				<onleft></onleft>
+				<onright></onright>
+				<ondown>9502</ondown>
+				<onup>9000</onup>
+				<onclick>Skin.SetString(selectorname,Dashboard 0/1)</onclick>
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick>
+				<onclick>Skin.SetString(selector2,Widget0_1)</onclick>
+				<onclick>ActivateWindow(1135)</onclick>
+			</control>
+			<control type="group">
+				<control type="group">
+					<animation effect="fade" end="60" condition="true">Conditional</animation>
+					<visible>!Control.hasFocus(9501)</visible>
+					<include>Dashboard_Border_4x1</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(9501)</visible>
+					<include>Dashboard_Border_4x1_Focus</include>
+				</control>
+			</control>
+			<control type="group">
+				<include>Animation_CommonFade</include>
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget0_1))</visible>
+
+				<control type="label">
+					<width>290</width>
+					<height>200</height>
+					<label>$INFO[Skin.String(Dashboard_Widget0_1_Name)]</label>
+					<font>Lato_Light_30</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.Contains(Skin.String(Dashboard_Widget0_1),1x1)</visible>
+				</control>
+				<control type="label">
+					<width>580</width>
+					<height>200</height>
+					<label>$INFO[Skin.String(Dashboard_Widget0_1_Name)]</label>
+					<font>Lato_Light_40</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.Contains(Skin.String(Dashboard_Widget0_1),2x1)</visible>
+				</control>
+				<control type="label">
+					<width>1160</width>
+					<height>200</height>
+					<label>$INFO[Skin.String(Dashboard_Widget0_1_Name)]</label>
+					<font>Lato_Light_50</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.Contains(Skin.String(Dashboard_Widget0_1),4x1)</visible>
+				</control>
+
+			</control>
+		</control>
+		<control type="group" id="9502">
+		<!-- Row 1 / Column 1 --> 
+		<control type="group"> 
+			<left>60</left> 
+			<top>60</top> 
+			<control type="button" id="9511"> 
+				<onleft>9514</onleft> 
+				<onright>9512</onright> 
+				<ondown>9521</ondown> 
+				<onup>9501</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 1/1)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget1_1)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget1_2)</onclick>
+				<onclick>Skin.SetString(selector4,Dashboard_Widget2_1)</onclick>
+				<onclick>Skin.SetString(selector5,Dashboard_Widget2_2)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9511)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9511)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget1_1))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_1_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_1),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_1_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_1),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_1_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_1),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 1 / Column 2 --> 
+		<control type="group"> 
+			<left>350</left> 
+			<top>60</top> 
+			<control type="button" id="9512"> 
+				<onleft>9511</onleft> 
+				<onright>9513</onright> 
+				<ondown>9522</ondown> 
+				<onup>9501</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 1/2)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget1_2)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget1_3)</onclick>
+				<onclick>Skin.SetString(selector4,Dashboard_Widget2_2)</onclick>
+				<onclick>Skin.SetString(selector5,Dashboard_Widget2_3)</onclick>
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget1_1),2x1)">Skin.SetString(selector2,Widget1_1)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9512)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9512)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget1_2))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_2_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_2),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_2_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_2),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_2_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_2),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 1 / Column 3 --> 
+		<control type="group"> 
+			<left>640</left> 
+			<top>60</top> 
+			<control type="button" id="9513"> 
+				<onleft>9512</onleft> 
+				<onright>9514</onright> 
+				<ondown>9523</ondown> 
+				<onup>9501</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 1/3)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget1_3)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget1_4)</onclick>
+				<onclick>Skin.SetString(selector4,Dashboard_Widget2_3)</onclick>
+				<onclick>Skin.SetString(selector5,Dashboard_Widget2_4)</onclick>
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget1_2),2x1)">Skin.SetString(selector2,Widget1_2)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9513)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9513)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget1_3))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_3_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_3),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_3_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_3),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_3_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_3),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 1 / Column 4 --> 
+		<control type="group"> 
+			<left>930</left> 
+			<top>60</top> 
+			<control type="button" id="9514"> 
+				<onleft>9513</onleft> 
+				<onright>9511</onright> 
+				<ondown>9524</ondown> 
+				<onup>9501</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 1/4)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget1_4)</onclick> 
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget1_3),2x1)">Skin.SetString(selector2,Widget1_3)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9514)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9514)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget1_4))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_4_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_4),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_4_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_4),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget1_4_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget1_4),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 2 / Column 1 --> 
+		<control type="group"> 
+			<left>60</left> 
+			<top>260</top> 
+			<control type="button" id="9521"> 
+				<onleft>9524</onleft> 
+				<onright>9522</onright> 
+				<ondown>9531</ondown> 
+				<onup>9511</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 2/1)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget2_1)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget2_2)</onclick>
+				<onclick>Skin.SetString(selector4,Dashboard_Widget3_1)</onclick>
+				<onclick>Skin.SetString(selector5,Dashboard_Widget3_2)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9521)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9521)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget2_1))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_1_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_1),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_1_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_1),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_1_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_1),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 2 / Column 2 --> 
+		<control type="group"> 
+			<left>350</left> 
+			<top>260</top> 
+			<control type="button" id="9522"> 
+				<onleft>9521</onleft> 
+				<onright>9523</onright> 
+				<ondown>9532</ondown> 
+				<onup>9512</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 2/2)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget2_2)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget2_3)</onclick>
+				<onclick>Skin.SetString(selector4,Dashboard_Widget3_2)</onclick>
+				<onclick>Skin.SetString(selector5,Dashboard_Widget3_3)</onclick>
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget2_1),2x1)">Skin.SetString(selector2,Widget2_1)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9522)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9522)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget2_2))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_2_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_2),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_2_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_2),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_2_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_2),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 2 / Column 3 --> 
+		<control type="group"> 
+			<left>640</left> 
+			<top>260</top> 
+			<control type="button" id="9523"> 
+				<onleft>9522</onleft> 
+				<onright>9524</onright> 
+				<ondown>9533</ondown> 
+				<onup>9513</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 2/3)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget2_3)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget2_4)</onclick>
+				<onclick>Skin.SetString(selector4,Dashboard_Widget3_3)</onclick>
+				<onclick>Skin.SetString(selector5,Dashboard_Widget3_4)</onclick>
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget2_2),2x1)">Skin.SetString(selector2,Widget2_2)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9523)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9523)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget2_3))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_3_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_3),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_3_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_3),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_3_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_3),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 2 / Column 4 --> 
+		<control type="group"> 
+			<left>930</left> 
+			<top>260</top> 
+			<control type="button" id="9524"> 
+				<onleft>9523</onleft> 
+				<onright>9521</onright> 
+				<ondown>9534</ondown> 
+				<onup>9514</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 2/4)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget2_4)</onclick> 
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget2_3),2x1)">Skin.SetString(selector2,Widget2_3)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9524)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9524)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget2_4))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_4_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_4),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_4_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_4),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget2_4_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget2_4),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 3 / Column 1 --> 
+		<control type="group"> 
+			<left>60</left> 
+			<top>460</top> 
+			<control type="button" id="9531"> 
+				<onleft>9534</onleft> 
+				<onright>9532</onright> 
+				<ondown>9503</ondown> 
+				<onup>9521</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 3/1)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget3_1)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget3_2)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9531)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9531)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget3_1))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_1_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_1),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_1_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_1),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_1_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_1),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 3 / Column 2 --> 
+		<control type="group"> 
+			<left>350</left> 
+			<top>460</top> 
+			<control type="button" id="9532"> 
+				<onleft>9531</onleft> 
+				<onright>9533</onright> 
+				<ondown>9503</ondown> 
+				<onup>9522</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 3/2)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget3_2)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget3_3)</onclick>
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget3_1),2x1)">Skin.SetString(selector2,Widget3_1)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9532)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9532)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget3_2))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_2_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_2),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_2_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_2),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_2_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_2),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 3 / Column 3 --> 
+		<control type="group"> 
+			<left>640</left> 
+			<top>460</top> 
+			<control type="button" id="9533"> 
+				<onleft>9532</onleft> 
+				<onright>9534</onright> 
+				<ondown>9503</ondown> 
+				<onup>9523</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 3/3)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget3_3)</onclick> 
+				<onclick>Skin.SetString(selector3,Dashboard_Widget3_4)</onclick>
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget3_2),2x1)">Skin.SetString(selector2,Widget3_2)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9533)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9533)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget3_3))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_3_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_3),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_3_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_3),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_3_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_3),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		<!-- Row 3 / Column 4 --> 
+		<control type="group"> 
+			<left>930</left> 
+			<top>460</top> 
+			<control type="button" id="9534"> 
+				<onleft>9533</onleft> 
+				<onright>9531</onright> 
+				<ondown>9503</ondown> 
+				<onup>9524</onup> 
+				<onclick>Skin.SetString(selectorname,Dashboard 3/4)</onclick> 
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick> 
+				<onclick>Skin.SetString(selector2,Widget3_4)</onclick> 
+				<onclick condition="String.Contains(Skin.String(Dashboard_Widget3_3),2x1)">Skin.SetString(selector2,Widget3_3)</onclick>
+				<onclick>ActivateWindow(1135)</onclick> 
+			</control> 
+			<control type="group"> 
+				<control type="group"> 
+					<animation effect="fade" end="60" condition="true">Conditional</animation> 
+					<visible>!Control.hasFocus(9534)</visible> 
+					<include>Dashboard_Border_1x1</include> 
+				</control> 
+				<control type="group"> 
+					<visible>Control.hasFocus(9534)</visible> 
+					<include>Dashboard_Border_1x1_Focus</include> 
+				</control> 
+			</control> 
+			<control type="group"> 
+				<include>Animation_CommonFade</include> 
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget3_4))</visible> 
+ 
+				<control type="label"> 
+					<width>290</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_4_Name)]</label> 
+					<font>Lato_Light_30</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_4),1x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>580</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_4_Name)]</label> 
+					<font>Lato_Light_40</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_4),2x1)</visible> 
+				</control> 
+				<control type="label"> 
+					<width>1160</width> 
+					<height>200</height> 
+					<label>$INFO[Skin.String(Dashboard_Widget3_4_Name)]</label> 
+					<font>Lato_Light_50</font> 
+					<aligny>center</aligny> 
+					<align>center</align> 
+					<wrapmultiline>true</wrapmultiline> 
+					<visible>String.Contains(Skin.String(Dashboard_Widget3_4),4x1)</visible> 
+				</control> 
+ 
+			</control> 
+		</control> 
+		</control>
+		<!-- Row 0 / Column 2 -->
+		<control type="group">
+			<left>60</left>
+			<top>660</top>
+			<control type="button" id="9503">
+				<onleft>9533</onleft>
+				<onright>9531</onright>
+				<ondown>noop</ondown>
+				<onup>9502</onup>
+				<onclick>Skin.SetString(selectorname,Dashboard 0/2)</onclick>
+				<onclick>Skin.SetString(selector1,Dashboard)</onclick>
+				<onclick>Skin.SetString(selector2,Widget0_2)</onclick>
+				<onclick>ActivateWindow(1135)</onclick>
+			</control>
+			<control type="group">
+				<control type="group">
+					<animation effect="fade" end="60" condition="true">Conditional</animation>
+					<visible>!Control.hasFocus(9503)</visible>
+					<include>Dashboard_Border_4x1</include>
+				</control>
+				<control type="group">
+					<visible>Control.hasFocus(9503)</visible>
+					<include>Dashboard_Border_4x1_Focus</include>
+				</control>
+			</control>
+			<control type="group">
+				<include>Animation_CommonFade</include>
+				<visible>!String.isEmpty(Skin.String(Dashboard_Widget0_2))</visible>
+
+				<control type="label">
+					<width>290</width>
+					<height>200</height>
+					<label>$INFO[Skin.String(Dashboard_Widget0_2_Name)]</label>
+					<font>Lato_Light_30</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.Contains(Skin.String(Dashboard_Widget0_2),1x1)</visible>
+				</control>
+				<control type="label">
+					<width>580</width>
+					<height>200</height>
+					<label>$INFO[Skin.String(Dashboard_Widget0_2_Name)]</label>
+					<font>Lato_Light_40</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.Contains(Skin.String(Dashboard_Widget0_2),2x1)</visible>
+				</control>
+				<control type="label">
+					<width>1160</width>
+					<height>200</height>
+					<label>$INFO[Skin.String(Dashboard_Widget0_2_Name)]</label>
+					<font>Lato_Light_50</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.Contains(Skin.String(Dashboard_Widget0_2),4x1)</visible>
+				</control>
+
+			</control>
+		</control>
+	</include>
+        <include name="Dashboard_Image_1x1_1_1">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_1_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_1_1">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_1_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_1_2">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_2_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_1_2">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_2_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_1_3">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_3_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_1_3">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_3_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_1_4">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_4_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_1_4">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget1_4_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_2_1">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_1_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_2_1">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_1_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_2_2">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_2_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_2_2">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_2_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_2_3">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_3_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_2_3">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_3_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_2_4">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_4_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_2_4">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget2_4_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_3_1">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_1_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_3_1">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_1_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_3_2">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_2_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_3_2">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_2_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_3_3">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_3_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_3_3">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_3_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_1x1_3_4">
+                <control type="multiimage">
+                        <include>Dashboard_Image_1x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_4_Content)]</imagepath>
+                </control>
+        </include>
+        <include name="Dashboard_Image_2x1_3_4">
+                <control type="multiimage">
+                        <include>Dashboard_Image_2x1_Template</include>
+                        <imagepath>$INFO[Skin.String(Dashboard_Widget3_4_Content)]</imagepath>
+                </control>
+        </include>
+<include name="Dashboard_Select">
+	<!-- Clock_1x1 -->
+	<item>
+		<label>$LOCALIZE[31421]</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Clock_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31421])</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Clock_2x1 -->
+	<item>
+		<label>$LOCALIZE[31421]</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Clock_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31421])</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Weather_1x1 -->
+	<item>
+		<label>$LOCALIZE[31027]</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Weather_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31027])</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Weather_Hour_2x1 -->
+	<item>
+		<label>$LOCALIZE[31027] ($LOCALIZE[31906])</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Weather_Hour_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31027] ($LOCALIZE[31906]))</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Weather_Day_2x1 -->
+	<item>
+		<label>$LOCALIZE[31027] ($LOCALIZE[31907])</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Weather_Day_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31027] ($LOCALIZE[31907]))</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Weather_Hour_4x1 -->
+	<item>
+		<label>$LOCALIZE[31027] ($LOCALIZE[31906])</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Weather_Hour_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31027] ($LOCALIZE[31906]))</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Weather_Day_4x1 -->
+	<item>
+		<label>$LOCALIZE[31027] ($LOCALIZE[31907])</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Weather_Day_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31027] ($LOCALIZE[31907]))</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- User_1x1 -->
+	<item>
+		<label>$LOCALIZE[31361]</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],User_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31361])</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Notifications_1x1 -->
+	<item>
+		<label>$LOCALIZE[31022]</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Notifications_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31022])</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Notifications_2x1 -->
+	<item>
+		<label>$LOCALIZE[31022]</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Notifications_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31022])</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Image_1x1 -->
+	<item>
+		<label>$LOCALIZE[31322]</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Image_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31322])</onclick>
+		<onclick>Skin.SetImage(Dashboard_$INFO[Skin.String(selector2)]_Content)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Image_2x1 -->
+	<item>
+		<label>$LOCALIZE[31322]</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Image_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31322])</onclick>
+		<onclick>Skin.SetImage(Dashboard_$INFO[Skin.String(selector2)]_Content)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Slideshow_1x1 -->
+	<item>
+		<label>$LOCALIZE[31323]</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Slideshow_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31323])</onclick>
+		<onclick>Skin.SetPath(Dashboard_$INFO[Skin.String(selector2)]_Content)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Slideshow_2x1 -->
+	<item>
+		<label>$LOCALIZE[31323]</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Slideshow_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31323])</onclick>
+		<onclick>Skin.SetPath(Dashboard_$INFO[Skin.String(selector2)]_Content)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Movies_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Text</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Text)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Movies_Poster_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Poster</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Poster_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Movies_Fanart_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Fanart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Fanart_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Movies_Clearart_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Clearart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Clearart_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Movies_Clearlogo_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Clearlogo</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Clearlogo_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Movies_Poster_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Poster</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Poster_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Movies_Fanart_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Fanart</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Fanart_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Movies_Clearart_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Clearart</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Clearart_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Movies_Clearlogo_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Clearlogo</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Clearlogo_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Movies_Poster_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Poster</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Poster_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Movies_Fanart_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Fanart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Fanart_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Movies_Clearart_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Clearart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Clearart_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Movies_Clearlogo_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31009] / Clearlogo</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Movies_Clearlogo_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31009] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Episodes_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Text</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Text)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Episodes_Poster_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Poster</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Poster_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Episodes_Fanart_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Fanart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Fanart_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Episodes_Clearart_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Clearart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Clearart_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Episodes_Clearlogo_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Clearlogo</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Clearlogo_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Episodes_Poster_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Poster</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Poster_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Episodes_Fanart_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Fanart</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Fanart_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Episodes_Clearart_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Clearart</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Clearart_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Episodes_Clearlogo_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Clearlogo</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Clearlogo_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Episodes_Poster_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Poster</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Poster_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Episodes_Fanart_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Fanart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Fanart_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Episodes_Clearart_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Clearart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Clearart_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Episodes_Clearlogo_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31103] / Clearlogo</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Episodes_Clearlogo_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31103] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Albums_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Text</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Text)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Albums_Poster_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Poster</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Poster_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Albums_Fanart_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Fanart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Fanart_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Albums_Clearart_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Clearart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Clearart_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Albums_Clearlogo_1x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Clearlogo</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Clearlogo_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Added_Albums_Poster_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Poster</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Poster_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Albums_Fanart_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Fanart</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Fanart_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Albums_Clearart_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Clearart</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Clearart_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Albums_Clearlogo_2x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Clearlogo</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Clearlogo_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Added_Albums_Poster_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Poster</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Poster_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Albums_Fanart_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Fanart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Fanart_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Fanart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Albums_Clearart_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Clearart</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Clearart_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Clearart)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Added_Albums_Clearlogo_4x1 -->
+	<item>
+		<label>$LOCALIZE[31901] / $LOCALIZE[31105] / Clearlogo</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Added_Albums_Clearlogo_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,$LOCALIZE[31901] / $LOCALIZE[31105] / Clearlogo)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Next_Aired_1x1 -->
+	<item>
+		<label>NextAired / Text</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Next_Aired_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,NextAired / Text)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Next_Aired_Poster_1x1 -->
+	<item>
+		<label>NextAired / Text</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Next_Aired_Poster_1x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,NextAired / Text)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(10)</visible>
+	</item>
+	<!-- Next_Aired_Poster_2x1 -->
+	<item>
+		<label>NextAired / Poster</label>
+		<onclick>Skin.Reset($INFO[Skin.String(selector3)])</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Next_Aired_Poster_2x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,NextAired / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(11)</visible>
+	</item>
+	<!-- Next_Aired_Poster_4x1 -->
+	<item>
+		<label>NextAired / Poster</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Next_Aired_Poster_4x1)</onclick>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)]_Name,NextAired / Poster)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + !String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Clock_4x1 -->
+	<item>
+		<label>Clock_4x1 4x1</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Clock_4x1)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- RSS_4x1 -->
+	<item>
+		<label>RSS_4x1 4x1</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],RSS_4x1)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+	<!-- Text_4x1 -->
+	<item>
+		<label>Text_4x1 4x1</label>
+		<onclick>Skin.SetString(Dashboard_$INFO[Skin.String(selector2)],Text_4x1)</onclick>
+		<onclick>Dialog.Close(1135)</onclick>
+		<visible>ControlGroup(2).hasFocus(12) + String.Contains(Skin.String(selector2),Widget0)</visible>
+	</item>
+</include>
+</includes>

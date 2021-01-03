@@ -1,5 +1,14 @@
 <colors>
-	<color name="white">FFFFFFFF</color>
+	<color name="Selected">FF67ffff</color>
+	<color name="Label">FFCCCCCC</color>
+	<color name="Frame">FF555555</color>
+	<color name="None">44FFFFFF</color>
+	<color name="White">FFFFFFFF</color>
+
+	<color name="Disabled">FFff5858</color>
+	<color name="Modified">FFe5e500</color>
+
+
 	<color name="grey">FFb4b4b4</color>
 	<color name="grey2">88FFFFFF</color>
 	<color name="grey3">33FFFFFF</color>
@@ -23,18 +32,7 @@
 	<color name="MainMenuLabel">bb383737</color>
 
 	<!-- Home 2 & 3 Colour -->
-	
 	<color name="MainMenu">193c3c3c</color>
-
-	<!-- Background Test Colours
-	
-	<color name="BackgroundColor">ee000025</color>
-	<color name="BackgroundFilterColor">44009ACD</color>
-	<color name="BackgroundColor">dd000025</color>
-	<color name="BackgroundFilterColor">cc151579</color>
-	<color name="BackgroundColor">bb4aff46</color>
-	<color name="BackgroundFilterColor">dd024d00</color>
-	-->
 
 	<!-- Global Colours -->
 	<color name="Time">FF686868</color>
@@ -52,6 +50,7 @@
 	<color name="Text">FFa1a1a1</color>
 	<color name="Text-Filemode">67a1a1a1</color>
 	<color name="TextDisabled">FFff5858</color>
+	<color name="TextWarning">FFB33A3A</color>
 	<color name="TextSelected">FFb8b8b8</color>
 	<color name="MainBlue">FF67ffff</color>
 	<color name="MainBlack">FF000000</color>

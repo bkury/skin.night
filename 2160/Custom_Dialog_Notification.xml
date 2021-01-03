@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1152">
+        <allowoverlay>yes</allowoverlay>
+	<include>Animation_CommonFade_600</include>
+	<defaultcontrol always="true">10</defaultcontrol>
+
+	<!-- Pause / Play Media -->
+	<onload condition="Skin.hasSetting(Notification_Center_Pause) + Player.hasVideo + !Player.Paused">PlayerControl(play)</onload>
+	<onunload condition="Skin.hasSetting(Notification_Center_Pause) + Player.hasVideo + Player.Paused">PlayerControl(play)</onunload>
+
+	<!-- Auto-close -->
+	<onload condition="Skin.hasSetting(Notification_Center_Close)">AlarmClock(autoclose,Dialog.Close(1152),00:10,silent)</onload>
+
+	<!-- SetFocus -->
+	<onload>Control.SetFocus(100,0,absolute)</onload>
+	<onload>Control.SetFocus(10)</onload>
+
+	<controls>
+
+	<!-- Background -->
+	<control type="image">
+		<include>background_default</include>
+		<texture>bg_black.png</texture>
+		<colordiffuse>CC000000</colordiffuse>
+		<aspectratio>scale</aspectratio>
+	</control>
+
+	<control type="group">
+		<include>AspectRatio_Both</include>
+
+		<!-- List -->
+		<control type="fixedlist" id="100">
+			<top>180</top>
+			<left>180</left>
+			<width>3480</width>
+			<height>1800</height>
+
+			<focusposition>1</focusposition>
+			<movement>0</movement>
+			<scrolltime>100</scrolltime>
+
+			<itemlayout width="3480" height="360">
+				<include>Notification_Itemlayout</include>
+			</itemlayout>
+
+			<focusedlayout width="3480" height="720">
+				<include>Notification_Focusedlayout</include>
+			</focusedlayout>
+
+			<content>
+				<include>Notification_Dialog_Items</include>
+			</content>
+
+		</control>
+
+		<!-- Control -->
+		<control type="grouplist" id="200">
+			<top>1020</top>
+			<left>420</left>
+       			<width>3000</width>
+			<height>210</height>
+			<orientation>horizontal</orientation>
+			<height>120</height>
+			<align>center</align>
+			<!--<animation effect="fade" time="300" start="0" end="100" condition="Container(100).OnNext">Conditional</animation>-->
+				
+			<control type="radiobutton" id="10">
+				<label>Acknowledge</label>
+				<onup>Control.Message(100,movedown)</onup>
+				<ondown>Control.Message(100,moveup)</ondown>
+
+				<include content="Notification_OnClick"><param name="id">1</param></include>
+				<include content="Notification_OnClick"><param name="id">2</param></include>
+				<include content="Notification_OnClick"><param name="id">3</param></include>
+				<include content="Notification_OnClick"><param name="id">4</param></include>
+				<include content="Notification_OnClick"><param name="id">5</param></include>
+				<include content="Notification_OnClick"><param name="id">6</param></include>
+				<include content="Notification_OnClick"><param name="id">7</param></include>
+				<include content="Notification_OnClick"><param name="id">8</param></include>
+				<include content="Notification_OnClick"><param name="id">9</param></include>
+				<include content="Notification_OnClick"><param name="id">10</param></include>
+                        
+				<onclick condition="Integer.IsLessOrEqual(Container(100).Numitems,1)">Dialog.Close(1152)</onclick>
+
+				<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_notification_ack.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="FFAAAAAA">icon_notification_ack.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">icon_notification_ack.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="FFAAAAAA">icon_notification_ack.png</textureradiooffnofocus>
+				<textureradiooffdisabled colordiffuse="TextDisabled">icon_notification_ack.png</textureradiooffdisabled>
+				<textureradioondisabled colordiffuse="TextDisabled">icon_notification_ack.png</textureradioondisabled>
+				<width>534</width>
+				<radioposx>207</radioposx>
+				<include>DialogInfo_Button_Template</include>
+			</control>
+
+			<include content="Notification_Button">
+				<param name="id">11</param>
+				<param name="label">Snooze (5min)</param>
+				<param name="icon">icon_notification_snooze.png</param>
+				<param name="onclick">AlarmClock(snooze,ActivateWindow(1152),5,silent)</param>
+				<param name="onclick2">Dialog.Close(1152)</param>
+
+				<param name="onup">Control.Message(100,movedown)</param>
+				<param name="onup_cond">true</param>
+				<param name="ondown">Control.Message(100,moveup)</param>
+				<param name="ondown_cond">true</param>
+			</include>
+
+			<include content="Notification_Button">
+				<param name="id">12</param>
+				<param name="label">Pin to Home</param>
+				<param name="icon">icon_notification_home.png</param>
+
+				<param name="onup">Control.Message(100,movedown)</param>
+				<param name="onup_cond">true</param>
+				<param name="ondown">Control.Message(100,moveup)</param>
+				<param name="ondown_cond">true</param>
+			</include>
+
+			<include content="Notification_Button">
+				<param name="id">13</param>
+				<param name="label">Hide History</param>
+				<param name="icon">icon_notification_history.png</param>
+				<param name="onclick">Skin.SetBool(Notification_Hide_History)</param>
+				<param name="visible">!Skin.hasSetting(Notification_Hide_History)</param>
+
+				<param name="onup">Control.Message(100,movedown)</param>
+				<param name="onup_cond">true</param>
+				<param name="ondown">Control.Message(100,moveup)</param>
+				<param name="ondown_cond">true</param>
+			</include>
+			<include content="Notification_Button">
+				<param name="id">14</param>
+				<param name="label">Show History</param>
+				<param name="icon">icon_notification_history.png</param>
+				<param name="onclick">Skin.Reset(Notification_Hide_History)</param>
+				<param name="visible">Skin.hasSetting(Notification_Hide_History)</param>
+
+				<param name="onup">Control.Message(100,movedown)</param>
+				<param name="onup_cond">true</param>
+				<param name="ondown">Control.Message(100,moveup)</param>
+				<param name="ondown_cond">true</param>
+			</include>
+
+			<include content="Notification_Button">
+				<param name="id">15</param>
+				<param name="label">Clear History</param>
+				<param name="icon">icon_notification_delete.png</param>
+				<param name="onclick">ActivateWindow(1151)</param>
+				<param name="onclick2">Dialog.Close(1152)</param>
+
+				<param name="onup">Control.Message(100,movedown)</param>
+				<param name="onup_cond">true</param>
+				<param name="ondown">Control.Message(100,moveup)</param>
+				<param name="ondown_cond">true</param>
+			</include>
+
+		</control>
+
+	</control>
+
+	<!-- Clock -->
+	<control type="group">
+		<include>Clock_Right_Pos_BG</include>
+		<include>Clock_Right</include>
+	</control>
+
+	</controls>
+</window>
+

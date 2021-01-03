@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="104">
+	<controls>
+
+	<control type="group">
+		<left>765r</left>
+		<top>15</top>
+		<visible>![ player.passthrough | player.muted ]</visible>
+
+		<!-- Background -->
+		<control type="image">
+			<width>750</width>
+			<height>270</height>
+			<texture>bg_volume.png</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<colordiffuse>FF000000</colordiffuse>
+		</control>
+		<control type="image">
+			<width>750</width>
+			<height>270</height>
+			<texture>bg_volume.png</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<colordiffuse>$VAR[Var_Color_Dialog_Hex]</colordiffuse>
+		</control>
+
+		<!-- Volume Overlay -->
+		<control type="progress" id="111">
+			<left>60</left>
+			<top>120</top>
+			<width>630</width>
+			<height>90</height>
+			<info>Player.Volume</info>
+			<texturebg>bg_volume_2.png</texturebg>
+			<midtexture>bg_volume_1.png</midtexture>
+			<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+			<reveal>true</reveal>
+			<visible>!Player.Muted</visible>
+		</control>
+		<control type="image">
+			<left>30</left>
+			<top>120</top>
+			<width>630</width>
+			<height>90</height>
+			<texture>volume/volume-overlay.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		<!-- Volume On Image -->
+		<control type="image">
+			<left>60</left>
+			<top>45</top>
+			<width>90</width>
+			<height>90</height>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<texture>volumefull.png</texture>
+			<visible>!Window.IsVisible(113)</visible>
+			<colordiffuse>FFCCCCCC</colordiffuse>
+		</control>
+
+		<!-- Volume Off Image -->
+		<control type="image">
+			<left>60</left>
+			<top>45</top>
+			<width>90</width>
+			<height>90</height>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<texture>volumeoff.png</texture>
+			<visible>Window.IsVisible(113)</visible>
+			<colordiffuse>FFCCCCCC</colordiffuse>
+		</control>
+
+		<!-- Volume Label -->
+		<control type="label">
+			<left>165</left>
+			<top>45</top>
+			<width>600</width>
+			<height>90</height>
+			<font>Lato_Black_25</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<aligny>center</aligny>
+			<label>$INFO[Control.GetLabel(111)]</label>
+		</control>
+	</control>
+
+	<!-- Passthrough -->
+	<control type="group">
+		<left>765r</left>
+		<top>15</top>
+		<visible>player.passthrough</visible>
+
+		<!-- Background -->
+		<control type="image">
+			<width>750</width>
+			<height>270</height>
+			<texture>bg_volume.png</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<colordiffuse>FF000000</colordiffuse>
+		</control>
+		<control type="image">
+			<width>750</width>
+			<height>270</height>
+			<texture>bg_volume.png</texture>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+			<colordiffuse>$VAR[Var_Color_Dialog_Hex]</colordiffuse>
+		</control>
+
+		<control type="label">
+			<left>30</left>
+			<top>60</top>
+			<width>705</width>
+			<label>[UPPERCASE]$LOCALIZE[31180][/UPPERCASE]</label>
+			<align>center</align>
+			<font>Lato_Black_20</font>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+		<control type="label">
+			<top>165</top>
+			<left>30</left>
+			<width>705</width>
+			<label>[UPPERCASE]Passthrough[/UPPERCASE]</label>
+			<align>center</align>
+			<font>Lato_Regular_10</font>
+			<textcolor>FFCCCCCC</textcolor>
+		</control>
+
+	</control>
+
+	<!-- Muted -->                       
+	<control type="group">
+		<left>330r</left>
+		<top>24</top>
+		<visible>player.muted</visible>
+
+		<control type="image">
+			<texture>block.png</texture>
+			<width>300</width>
+			<height>150</height>
+			<colordiffuse>FF000000</colordiffuse>
+		</control>
+		<control type="image">
+			<top>15</top>
+			<left>90</left>
+                        <width>120</width>                
+			<height>120</height>
+			<texture>volumeoff.png</texture>
+			<colordiffuse>mainblue</colordiffuse>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+		</control>
+	</control>
+
+</controls>
+</window>

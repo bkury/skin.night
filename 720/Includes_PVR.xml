@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Grid (Credits/Source: Estuary Skin) -->
+	<include name="EpgGrid">
+		<definition>
+			<control type="epggrid" id="$PARAM[control_id]">
+				<left>0</left>
+				<top>$PARAM[control_top]</top>
+				<right>20</right>
+				<height>450</height>
+				<orientation>$PARAM[control_orientation]</orientation>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<timeblocks>34</timeblocks>
+				<rulerunit>6</rulerunit>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>$PARAM[control_onupdown_id]</onup>
+				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
+				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="button_focus">$PARAM[progress_texture]</progresstexture>
+				<rulerdatelayout width="1700" height="50" condition="$PARAM[has_rulerdate_layout]">
+					<control type="label">
+						<width>1700</width>
+						<height>50</height>
+						<font>Lato_Regular_20</font>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</rulerdatelayout>
+				<rulerlayout height="50" width="$PARAM[ruler_width]">
+					<control type="label">
+						<width>$PARAM[ruler_label_width]</width>
+						<height>50</height>
+						<font>Lato_Regular_20</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textoffsetx>10</textoffsetx>
+						<aligny>center</aligny>
+					</control>
+				</rulerlayout>
+				<channellayout height="50" width="$PARAM[channel_width]">
+					<control type="label">
+						<width>70</width>
+						<height>50</height>
+						<font>Roboto_Condensed_30</font>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label" id="1">
+						<left>70</left>
+						<width>260</width>
+						<height>50</height>
+						<font>Lato_Light_25</font>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<aligny>center</aligny>
+					</control>
+				</channellayout>
+				<focusedchannellayout height="50" width="$PARAM[channel_width]">
+					<control type="image">
+						<top>5</top>
+						<left>10</left>
+						<width>320</width>
+						<height>40</height>
+						<include>navigation_options_image</include>
+					</control>
+					<control type="label">
+						<width>70</width>
+						<height>50</height>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+						<font>Roboto_Condensed_30</font>
+						<textcolor>$VAR[Var_Color_Text_Hex]</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label" id="1">
+						<left>70</left>
+						<width>260</width>
+						<height>50</height>
+						<font>Lato_Light_25</font>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<textcolor>$VAR[Var_Color_Text_Hex]</textcolor>
+						<aligny>center</aligny>
+					</control>
+				</focusedchannellayout>
+				<itemlayout height="50" width="60">
+					<control type="image" id="2">
+						<top>5</top>
+						<width>60</width>
+						<height>40</height>
+						<texture border="3" fallback="guide/epg-genres/0.png">$INFO[ListItem.Property(GenreType),guide/epg-genres/,.png]</texture>
+					</control>
+					<control type="label" id="1">
+						<left>25</left>
+						<height>50</height>
+						<aligny>center</aligny>
+						<font>Lato_Light_20</font>
+						<label>$INFO[ListItem.Label]</label>
+						<width>30</width>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>15</top>
+						<width>20</width>
+						<height>20</height>
+						<texture>$VAR[PVRTimerIcon]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50" width="60">
+					<control type="image" id="2">
+						<top>5</top>
+						<width>60</width>
+						<height>40</height>
+						<texture colordiffuse="$VAR[Var_Color_Icon_Hex]">bg_white_label.png</texture>
+						<visible>Control.HasFocus($PARAM[control_id])</visible>
+						<animation effect="fade" end="50" condition="true">conditional</animation>
+					</control>
+					<control type="image" id="2">
+						<top>5</top>
+						<width>60</width>
+						<height>40</height>
+						<texture border="3" fallback="guide/epg-genres/0.png">$INFO[ListItem.Property(GenreType),guide/epg-genres/,.png]</texture>
+						<visible>!Control.HasFocus($PARAM[control_id])</visible>
+					</control>
+					<control type="label" id="1">
+						<left>25</left>
+						<top>0</top>
+						<height>50</height>
+						<aligny>center</aligny>
+						<font>Lato_Light_20</font>
+						<label>$INFO[ListItem.Label]</label>
+						<width>30</width>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>15</top>
+						<width>20</width>
+						<height>20</height>
+						<texture>$VAR[PVRTimerIcon]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<right>0</right>
+				<top>$PARAM[scrollbar_top]</top>
+				<width>12</width>
+				<bottom>340</bottom>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<orientation>vertical</orientation>
+				<texturesliderbackground colordiffuse="22FFFFFF">colors/white.png</texturesliderbackground>
+				<animation effect="fade" start="100" end="40" time="0" condition="!system.getbool(input.enablemouse)">Conditional</animation>
+				<visible>Control.IsVisible($PARAM[control_id])</visible>
+			</control>
+		</definition>
+	</include>
+
+</includes>
+

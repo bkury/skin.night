@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Dialog (Header) -->
+	<include name="Dialog_General_Header">
+		<param name="bg_image">category</param>
+		<param name="bg_height">840</param>
+		<param name="separator">true</param>
+		<param name="separator2">false</param>
+		<definition>
+
+		<control type="image">
+			<include>Dialog_Background_Content</include>
+			<include>AspectRatio_Both_Reverse</include>
+		</control>
+
+		<control type="group">
+			<left>195</left>	
+			<top>120</top>		
+			<!-- width 1020 -->
+			<!-- height 560 -->
+			<control type="image">
+				<width>1530</width>
+				<height>$PARAM[bg_height]</height><!-- 560 -->
+				<texture background="true">bg_dialog_$PARAM[bg_image]_shadow.png</texture>
+				<colordiffuse>$VAR[Var_Color_DialogShadow_Hex]</colordiffuse>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<width>1530</width>
+				<height>$PARAM[bg_height]</height>
+				<texture background="true">bg_dialog_$PARAM[bg_image].png</texture>
+				<colordiffuse>$VAR[Var_Color_Dialog_Hex]</colordiffuse>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</control>
+
+		<!-- Separator (Content) -->
+		<control type="image">
+			<top>270</top>
+			<left>285</left>
+			<width>1350</width>
+			<include>SeparatorH</include>
+		</control>
+		<control type="image">
+			<top>810</top>
+			<left>285</left>
+			<width>1350</width>
+			<include>SeparatorH</include>
+			<visible>$PARAM[separator]</visible>
+		</control>
+		<control type="image">
+			<top>300</top>
+			<left>630</left>
+			<height>480</height>
+			<colordiffuse>11FFFFFF</colordiffuse>
+			<include>SeparatorV</include>
+			<visible>$PARAM[separator]</visible>
+		</control>
+
+		<!-- Separator (Confirm) -->
+		<control type="image">
+			<top>570</top>
+			<left>285</left>
+			<width>1350</width>
+			<include>SeparatorH</include>
+			<visible>$PARAM[separator2]</visible>
+		</control>
+		<control type="image">
+			<top>285</top>
+			<left>570</left>
+			<height>270</height>
+			<colordiffuse>11FFFFFF</colordiffuse>
+			<include>SeparatorV</include>
+			<visible>$PARAM[separator2]</visible>
+		</control>
+
+		<!-- Header -->
+		<control type="label" id="$PARAM[header_id]">
+			<top>150</top>
+			<left>285</left>
+			<width>1350</width>
+			<height>120</height>
+			<font>Lato_Light_50</font>
+			<label>$PARAM[header_label]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<scroll>yes</scroll>
+		</control>
+
+		<!-- Scrollbar -->
+		<control type="scrollbar" id="100">
+			<left>1582</left>
+			<top>300</top>
+			<height>480</height>
+			<onleft>$PARAM[scroll_onleft]</onleft>
+			<onright>$PARAM[scroll_onright]</onright>
+			<include>vscrollbar</include>
+			<animation effect="fade" start="100" end="10" time="800" pulse="true" condition="Control.hasFocus(100)">Conditional</animation>
+			<visible>$PARAM[separator]</visible>
+		</control>
+
+		</definition>
+	</include>
+
+
+	<!-- Grouplist (Content) -->
+	<include name="Dialog_General_Grouplist">
+		<top>300</top>
+		<left>645</left>
+                <width>930</width>
+                <height>486</height>
+                <itemgap>0</itemgap>
+                <pagecontrol>100</pagecontrol>
+                <onright condition="Control.isVisible(100)">100</onright>
+	</include>
+	<include name="Dialog_General_List">
+		<include>Dialog_General_Grouplist</include>
+		<include>Dialog_General_List_Content</include>
+	</include>
+
+	<!-- Grouplist (Category) -->
+	<include name="Dialog_General_Grouplist_Category">
+		<top>300</top>
+		<left>315</left>
+		<width>300</width>
+		<height>480</height>
+                <itemgap>0</itemgap>
+		<orientation>vertical</orientation>
+		<usecontrolcoords>true</usecontrolcoords>
+	</include>
+
+	<include name="Dialog_General_Grouplist_Category_Content">
+		<param name="color">FFFFFFFF</param>
+		<definition>
+		<visible>Control.isVisible($PARAM[id])</visible>
+
+		<!-- Image -->
+		<control type="image">
+			<left>15</left>
+			<width>270</width>
+			<height>270</height>
+			<texture fallback="dialog/icon_settings.png">$INFO[Container($PARAM[id]).ListItem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>$PARAM[color]</colordiffuse>
+		</control>
+                        
+		<!-- Label 1 -->
+		<control type="label">
+			<height>15</height>
+			<visible>!String.isEmpty(Container($PARAM[id]).$PARAM[label1_info])</visible>
+		</control>
+		<control type="label">
+			<left>15</left>
+			<label>$PARAM[label1_head]</label>
+			<width>270</width>
+			<height>30</height>
+			<font>Lato_Black_15</font>
+			<visible>!String.isEmpty(Container($PARAM[id]).$PARAM[label1_info])</visible>
+		</control>
+		<control type="label">
+			<left>15</left>
+			<label>$INFO[Container($PARAM[id]).$PARAM[label1_info]]</label>
+			<width>270</width>
+			<height>30</height>
+			<font>Lato_Light_15</font>
+			<visible>!String.isEmpty(Container($PARAM[id]).$PARAM[label1_info])</visible>
+		</control>
+                      
+		<!-- Label 2 -->
+		<control type="label">
+			<height>15</height>
+			<visible>!String.isEmpty(Container($PARAM[id]).$PARAM[label2_info])</visible>
+		</control>
+		<control type="label">
+			<left>15</left>
+			<label>$PARAM[label2_head]</label>
+			<width>270</width>
+			<height>30</height>
+			<font>Lato_Black_15</font>
+			<visible>!String.isEmpty(Container($PARAM[id]).$PARAM[label2_info])</visible>
+		</control>
+                        
+		<control type="textbox">
+			<left>15</left>
+			<label>$INFO[Container($PARAM[id]).$PARAM[label2_info]]</label>
+			<width>270</width>
+			<height>90</height>
+			<font>Lato_Light_15</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<visible>!String.isEmpty(Container($PARAM[id]).$PARAM[label2_info])</visible>
+		</control>
+
+		</definition>
+	</include>
+	<include name="Dialog_General_Grouplist_Category_Image">
+		<definition>
+		<!-- Image -->
+		<control type="image">
+			<left>15</left>
+			<width>270</width>
+			<height>270</height>
+			<texture fallback="$PARAM[fallback]">$PARAM[icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>$PARAM[visible]</visible>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+		</control>
+		</definition>
+	</include>
+
+	<!-- Buttons (Default) -->
+	<include name="Dialog_General_Button_Default">
+		<textoffsetx>15</textoffsetx>
+		<pulseonselect>false</pulseonselect>
+		<width>930</width>
+		<height>60</height>
+		<font>Lato_Light_20</font>
+		<aligny>center</aligny>
+
+		<textcolor>FFCCCCCC</textcolor>
+
+		<selectedcolor>$VAR[Var_Color_Text_Hex]</selectedcolor>
+		<disabledcolor>TextDisabled</disabledcolor>
+		<!-- <focusedcolor> navigation_options -->
+		<!-- <texturefocus> navigation_options -->
+
+		<texturenofocus></texturenofocus>
+
+		<textureradiofocus>nav_radiobutton_checked.png</textureradiofocus>
+		<textureradionofocus>nav_radiobutton_unchecked.png</textureradionofocus>
+		<radioheight>30</radioheight>
+		<radiowidth>30</radiowidth>
+
+		<include>navigation_options</include>
+	</include>
+
+	<include name="Dialog_General_Button_Category">
+		<font>Lato_Black_20</font>
+		<width>300</width>
+		<include>Dialog_General_Button_Default</include>                
+	</include>
+
+	<include name="Dialog_General_Button_Header">
+		<font>Lato_Black_20</font>
+		<include>Dialog_General_Button_Default</include>                
+	</include>
+
+	<include name="Dialog_General_Button_Separator">
+		<width>1440</width>
+		<colordiffuse>66FFFFFF</colordiffuse>
+		<include>SeparatorH</include>
+	</include>
+
+	<!-- Footer -->
+	<include name="Dialog_General_Footer_Button">
+		<definition>
+		<control type="radiobutton" id="$PARAM[id]">
+			<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
+			<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">$PARAM[icon]</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="FFAAAAAA">$PARAM[icon]</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">$PARAM[icon]</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="FFAAAAAA">$PARAM[icon]</textureradiooffnofocus>
+                        <textureradiooffdisabled colordiffuse="TextDisabled">$PARAM[icon]</textureradiooffdisabled>
+                        <textureradioondisabled colordiffuse="TextDisabled">$PARAM[icon]</textureradioondisabled>
+			<onup>$PARAM[onup]</onup>
+			<onleft>$PARAM[onleft]</onleft>
+			<onright>$PARAM[onright]</onright>
+			<include>Dialog_General_Footer_$PARAM[position]</include>
+			<include>Dialog_General_Footer_Default</include>
+		</control>
+		</definition>
+	</include>
+
+	<!-- CLOSE -->
+	<include name="Dialog_General_Footer_Button_CLOSE">
+		<definition>
+		<control type="radiobutton" id="$PARAM[id]">
+			<label>[UPPERCASE]$LOCALIZE[31207][/UPPERCASE]</label>
+			<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">nav_circle_cancel.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="FFAAAAAA">nav_circle_cancel.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">nav_circle_cancel.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="FFAAAAAA">nav_circle_cancel.png</textureradiooffnofocus>
+                        <textureradiooffdisabled colordiffuse="TextDisabled">nav_circle_cancel.png</textureradiooffdisabled>
+                        <textureradioondisabled colordiffuse="TextDisabled">nav_circle_cancel.png</textureradioondisabled>
+			<onclick>Dialog.Close($PARAM[dialog])</onclick>
+			<onup>$PARAM[onup]</onup>
+			<onleft>$PARAM[onleft]</onleft>
+			<onright>$PARAM[onright]</onright>
+			<include>Dialog_General_Footer_$PARAM[position]</include>
+			<include>Dialog_General_Footer_Default</include>
+		</control>
+		</definition>
+	</include>
+
+	<!-- OK / CANCEL -->
+	<include name="Dialog_General_Footer_Button_OKCANCEL">
+		<definition>
+		<control type="radiobutton" id="50">
+			<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+			<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">nav_circle_check.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="FFAAAAAA">nav_circle_check.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">nav_circle_check.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="FFAAAAAA">nav_circle_check.png</textureradiooffnofocus>
+                        <textureradiooffdisabled colordiffuse="TextDisabled">nav_circle_check.png</textureradiooffdisabled>
+                        <textureradioondisabled colordiffuse="TextDisabled">nav_circle_check.png</textureradioondisabled>
+			<onclick>SetFocus($PARAM[id_right])</onclick>
+			<onclick>Select</onclick>
+			<onup>$PARAM[id_left]</onup>
+			<onleft>52</onleft>
+			<onright condition="Control.isVisible(51)">51</onright>
+			<onright condition="!Control.isVisible(51)">52</onright>
+			<include>Dialog_General_Footer_Left</include>
+			<include>Dialog_General_Footer_Default</include>
+		</control>
+		<control type="radiobutton" id="52">
+			<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+			<textureradioonfocus colordiffuse="$VAR[Var_Color_Icon_Hex]">nav_circle_cancel.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="FFAAAAAA">nav_circle_cancel.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$VAR[Var_Color_Icon_Hex]">nav_circle_cancel.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="FFAAAAAA">nav_circle_cancel.png</textureradiooffnofocus>
+                        <textureradiooffdisabled colordiffuse="TextDisabled">nav_circle_cancel.png</textureradiooffdisabled>
+                        <textureradioondisabled colordiffuse="TextDisabled">nav_circle_cancel.png</textureradioondisabled>
+			<onclick>Dialog.Close($PARAM[dialog])</onclick>
+			<onup>$PARAM[id_right]</onup>
+			<onleft condition="Control.isVisible(51)">51</onleft>
+			<onleft condition="!Control.isVisible(51)">50</onleft>
+			<onright>50</onright>
+			<include>Dialog_General_Footer_Right</include>
+			<include>Dialog_General_Footer_Default</include>
+		</control>
+		</definition>
+	</include>
+
+	<!-- Left -->
+        <include name="Dialog_General_Footer_Left">
+                <left>435</left>
+                <textoffsetx>75</textoffsetx>
+                <radioposx>1</radioposx>
+                <radioposy>0</radioposy>
+        </include>
+	<!-- Center -->
+        <include name="Dialog_General_Footer_Center">
+                <left>810</left>
+		<width>300</width>
+		<align>center</align>
+                <radioposx>0</radioposx>
+                <radioposy>7</radioposy>
+                <radiowidth>300</radiowidth>
+                <radioheight>45</radioheight>
+                <font>Lato_Black_20</font>
+        </include>
+	<!-- Right -->
+        <include name="Dialog_General_Footer_Right">
+                <left>1035</left>
+		<textoffsetx>75</textoffsetx>
+                <radioposx>390</radioposx>
+                <radioposy>0</radioposy>
+		<align>right</align>
+        </include>
+
+	<!-- Default -->
+	<include name="Dialog_General_Footer_Default">
+		<top>840</top>
+		<height>60</height>
+                <width>450</width>
+                <radiowidth>60</radiowidth>
+                <radioheight>60</radioheight>
+                <font>Lato_Black_30</font>
+                <aligny>center</aligny>
+                <textcolor>FFAAAAAA</textcolor>
+                <colordiffuse>FFAAAAAA</colordiffuse>
+                <focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+                <disabledcolor>TextDisabled</disabledcolor>
+	</include>
+
+	<!-- Dialog List (Content) -->
+	<include name="Dialog_General_List_Content">
+		<itemlayout height="60" width="930">
+		<control type="group">
+			<visible>!String.isEmpty(ListItem.Icon)</visible>
+
+			<!-- Label -->
+			<control type="label">
+				<left>15</left>
+				<width>615</width>
+				<height>60</height>
+				<font>Lato_Light_20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>FFCCCCCC</textcolor>
+				<selectedcolor>$VAR[Var_Color_Icon_Hex]</selectedcolor>
+			</control>
+			<!-- Label2 -->
+			<control type="label">
+				<left>645</left>
+				<width>180</width>
+				<height>60</height>
+				<font>Lato_Black_15</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$VAR[Var_Dialog_List_Label]</label>
+				<textcolor>FFCCCCCC</textcolor>
+				<selectedcolor>$VAR[Var_Color_Icon_Hex]</selectedcolor>
+			</control>
+			<!-- Icon -->
+			<control type="image">
+				<left>847</left>
+				<top>4</top>
+				<width>75</width>
+				<height>51</height>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!ListItem.isSelected + String.isEmpty(ListItem.Property(color))</visible>
+			</control>
+		</control>
+
+		<control type="group">
+			<visible>String.isEmpty(ListItem.Icon)</visible>
+
+			<!-- Label -->
+			<control type="label">
+				<left>15</left>
+				<width>840</width>
+				<height>60</height>
+				<font>Lato_Light_20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>FFCCCCCC</textcolor>
+				<selectedcolor>$VAR[Var_Color_Icon_Hex]</selectedcolor>
+			</control>
+		</control>
+
+		<!-- Selected -->
+		<control type="image">
+			<left>847</left>
+			<top>15</top>
+			<width>75</width>
+			<height>30</height>
+			<texture>nav_radiobutton_checked.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>ListItem.isSelected</visible>
+		</control>
+
+		<!-- Separator -->
+		<control type="image">
+			<left>15</left>
+			<width>900</width>
+			<colordiffuse>33FFFFFF</colordiffuse>
+			<include>SeparatorH</include>
+			<visible>!String.isEmpty(ListItem.Property(separator))</visible>
+		</control>
+
+		<!-- Color -->
+		<control type="label">
+			<left>847</left>
+			<width>75</width>
+			<height>60</height>
+			<font>Font_Color</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(color)]</label>
+			<visible>!String.isEmpty(ListItem.Property(color))</visible>
+		</control>
+
+		</itemlayout>
+		<focusedlayout height="60" width="930">
+			<!-- Navbar -->
+			<control type="image">
+				<top>7</top>
+				<width>930</width>
+				<height>45</height>
+				<aspectratio>scale</aspectratio>
+				<animation type="Focus" reversible="false">
+					<effect type="fade" start="30" end="90" time="300" />
+				</animation>
+				<include>navigation_options_image</include>
+				<visible>!ControlGroup(2).hasFocus</visible>
+			</control>
+		<control type="group">
+			<visible>!String.isEmpty(ListItem.Icon)</visible>
+
+			<!-- Label -->
+			<control type="label">
+				<left>15</left>
+				<width>615</width>
+				<height>60</height>
+				<font>Lato_Light_20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>$VAR[Var_Color_Text_Hex]</textcolor>
+				<selectedcolor>$VAR[Var_Color_Icon_Hex]</selectedcolor>
+			</control>
+			<!-- Label2 -->
+			<control type="label">
+				<left>645</left>
+				<width>180</width>
+				<height>60</height>
+				<font>Lato_Black_15</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$VAR[Var_Dialog_List_Label]</label>
+				<textcolor>FFCCCCCC</textcolor>
+				<selectedcolor>$VAR[Var_Color_Icon_Hex]</selectedcolor>
+			</control>
+			<!-- Icon -->
+			<control type="image">
+				<left>847</left>
+				<top>4</top>
+				<width>75</width>
+				<height>51</height>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!ListItem.isSelected + String.isEmpty(ListItem.Property(color))</visible>
+			</control>
+		</control>
+
+		<control type="group">
+			<visible>String.isEmpty(ListItem.Icon)</visible>
+
+			<!-- Label -->
+			<control type="label">
+				<left>15</left>
+				<width>840</width>
+				<height>60</height>
+				<font>Lato_Light_20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>$VAR[Var_Color_Text_Hex]</textcolor>
+				<selectedcolor>$VAR[Var_Color_Icon_Hex]</selectedcolor>
+			</control>
+		</control>
+
+		<!-- Selected -->
+		<control type="image">
+			<left>847</left>
+			<top>15</top>
+			<width>75</width>
+			<height>30</height>
+			<texture>nav_radiobutton_checked.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>ListItem.isSelected</visible>
+		</control>
+
+		<!-- Separator -->
+		<control type="image">
+			<left>15</left>
+			<width>900</width>
+			<colordiffuse>33FFFFFF</colordiffuse>
+			<include>SeparatorH</include>
+			<visible>!String.isEmpty(ListItem.Property(separator))</visible>
+		</control>
+
+		<!-- Color -->
+		<control type="label">
+			<left>847</left>
+			<width>75</width>
+			<height>60</height>
+			<font>Font_Color</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(color)]</label>
+			<visible>!String.isEmpty(ListItem.Property(color))</visible>
+		</control>
+
+		</focusedlayout>
+	</include>
+
+	<!-- Custom Home -->
+	<include name="CustomHome_Add_Category">
+                        
+		<control type="group">
+			<height>60</height>
+
+			<control type="image">
+				<width>300</width>
+				<height>60</height>
+				<texture>block.png</texture>
+				<colordiffuse>44FFFFFF</colordiffuse>
+				<visible>Control.hasFocus($PARAM[id])</visible>
+			</control>
+
+			<control type="button" id="$PARAM[id]">
+				<label>$LOCALIZE[31519] #$PARAM[id_item]</label>
+				<aligny>top</aligny>
+				<texturefocus></texturefocus>
+				<onclick>SetFocus(1)</onclick>
+				<onright>1</onright>
+				<ondown>$PARAM[ondown]</ondown>
+				<onup>$PARAM[onup]</onup>
+				<include>Dialog_General_Button_Category</include>
+			</control>
+                        
+			<control type="label">
+				<top>37</top>
+				<left>15</left>
+				<width>300</width>
+				<label>$INFO[Skin.String(Home_$PARAM[id_home]_Name)]</label>
+				<font>Lato_Light_10</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<visible>!String.isEmpty(Skin.String(Home_$PARAM[id_home]_Name))</visible>
+			</control>
+			<control type="label">
+				<top>37</top>
+				<left>15</left>
+				<width>300</width>
+				<label>$LOCALIZE[31182]</label>
+				<font>Lato_Light_10</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<visible>String.isEmpty(Skin.String(Home_$PARAM[id_home]_Name))</visible>
+			</control>
+
+		</control>
+
+	</include>
+
+	<include name="CustomHome_OnClick">
+
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome$PARAM[customid].Path)) + String.isEqual(Skin.String(CustomHome$PARAM[customid].Action),playmedia)">PlayMedia($ESCINFO[Skin.String(CustomHome$PARAM[customid].Path)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome$PARAM[customid].Path)) + String.isEqual(Skin.String(CustomHome$PARAM[customid].Action),showpicture)">ShowPicture($ESCINFO[Skin.String(CustomHome$PARAM[customid].Path)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome$PARAM[customid].Path)) + String.isEqual(Skin.String(CustomHome$PARAM[customid].Action),execute)">System.ExecWait($ESCINFO[Skin.String(CustomHome$PARAM[customid].Path)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome$PARAM[customid].Path)) + String.isEqual(Skin.String(CustomHome$PARAM[customid].Action),direct)">$INFO[Skin.String(CustomHome$PARAM[customid].Path)]</onclick>
+
+		<onclick condition="String.isEmpty(Skin.String(CustomHome$PARAM[customid].Path))">
+			ActivateWindow($INFO[Skin.String(CustomHome$PARAM[customid].Window)],$INFO[Skin.String(CustomHome$PARAM[customid].FolderPath)],return)
+		</onclick>
+
+	</include>
+
+	<include name="CustomHome_Add_Context">
+
+		<!-- Clear -->
+		<onclick>Skin.Reset(CustomHome.Label)</onclick>
+		<onclick>Skin.Reset(CustomHome.Icon)</onclick>
+		<onclick>Skin.Reset(CustomHome.IconTV)</onclick>
+		<onclick>Skin.Reset(CustomHome.Thumb)</onclick>
+		<onclick>Skin.Reset(CustomHome.Year)</onclick>
+		<onclick>Skin.Reset(CustomHome.Duration)</onclick>
+		<onclick>Skin.Reset(CustomHome.Path)</onclick>
+		<onclick>Skin.Reset(CustomHome.FolderPath)</onclick>
+		<onclick>Skin.Reset(CustomHome.PropertyPath)</onclick>
+
+		<onclick>Skin.Reset(CustomHome.DBType)</onclick>
+
+		<onclick>Skin.Reset(CustomHome.Fanart)</onclick>
+		<onclick>Skin.Reset(CustomHome.FanartProperty)</onclick>
+
+		<onclick>Skin.Reset(CustomHome.Plot)</onclick>
+		<onclick>Skin.Reset(CustomHome.PlotProperty)</onclick>
+		<onclick>Skin.Reset(CustomHome.PlotAddon)</onclick>
+
+		<onclick>Skin.Reset(CustomHome.Window)</onclick>
+
+		<onclick>Skin.Reset(CustomHome.Mpaa)</onclick>
+		<onclick>Skin.Reset(CustomHome.Rating)</onclick>
+		<onclick>Skin.Reset(CustomHome.VideoResolution)</onclick>
+		<onclick>Skin.Reset(CustomHome.VideoCodec)</onclick>
+		<onclick>Skin.Reset(CustomHome.AudioCodec)</onclick>
+		<onclick>Skin.Reset(CustomHome.AudioChannels)</onclick>
+		<onclick>Skin.Reset(CustomHome.AspectRatio)</onclick>
+
+		<!-- Label -->
+		<onclick>Skin.SetString(CustomHome.Label,$INFO[ListItem.Label])</onclick>
+
+		<!-- Year -->
+		<onclick>Skin.SetString(CustomHome.Year,$INFO[ListItem.Year])</onclick>
+
+		<!-- Duration -->
+		<onclick>Skin.SetString(CustomHome.Duration,$INFO[ListItem.Duration])</onclick>
+                
+		<!-- Icon -->
+		<onclick>Skin.SetString(CustomHome.Icon,$INFO[ListItem.Icon])</onclick>
+		<onclick>Skin.SetString(CustomHome.IconTV,$INFO[ListItem.Art(tvshow.poster)])</onclick>
+		
+		<!-- Thumb -->
+		<onclick>Skin.SetString(CustomHome.Thumb,$INFO[ListItem.Thumb])</onclick>
+
+		<!-- Path -->
+		<onclick>Skin.SetString(CustomHome.FileNameAndPath,$INFO[ListItem.FileNameAndPath])</onclick>
+		<onclick>Skin.SetString(CustomHome.FolderPath,$INFO[ListItem.FolderPath])</onclick>
+		<onclick>Skin.SetString(CustomHome.PropertyPath,$INFO[ListItem.Property(path)])</onclick>
+                
+		<!-- DBType -->
+		<onclick>Skin.SetString(CustomHome.DBType,$INFO[ListItem.DBType])</onclick>
+
+		<!-- Fanart -->
+		<onclick>Skin.SetString(CustomHome.Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+		<onclick>Skin.SetString(CustomHome.FanartProperty,$INFO[ListItem.Property(fanart)])</onclick>
+
+		<!-- Window -->
+		<onclick>Skin.SetString(CustomHome.Window,$INFO[Window.Property(xmlfile)])</onclick>
+
+		<!-- Plot -->
+		<onclick>Skin.SetString(CustomHome.Plot,$INFO[ListItem.Plot])</onclick>
+		<onclick>Skin.SetString(CustomHome.PlotProperty,$INFO[ListItem.Property(Plot)])</onclick>
+		<onclick>Skin.SetString(CustomHome.PlotAddon,$INFO[ListItem.AddonDescription])</onclick>
+
+		<!-- Properties -->
+		<onclick>Skin.SetString(CustomHome.Mpaa,$INFO[ListItem.Mpaa])</onclick>
+		<onclick>Skin.SetString(CustomHome.Rating,$INFO[ListItem.Rating])</onclick>
+		<onclick>Skin.SetString(CustomHome.VideoResolution,$INFO[ListItem.VideoResolution])</onclick>
+		<onclick>Skin.SetString(CustomHome.VideoCodec,$INFO[ListItem.VideoCodec])</onclick>
+		<onclick>Skin.SetString(CustomHome.AudioCodec,$INFO[ListItem.AudioCodec])</onclick>
+		<onclick>Skin.SetString(CustomHome.AudioChannels,$INFO[ListItem.AudioChannels])</onclick>
+		<onclick>Skin.SetString(CustomHome.AspectRatio,$INFO[ListItem.VideoAspect])</onclick>
+
+		<!-- Dialog -->
+		<onclick>ActivateWindow(3100)</onclick>
+
+	</include>
+
+	<include name="CustomHome_Add_OnClick_Home">
+		<onclick>Skin.Reset(Home_$PARAM[id_home]_Name)</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Label))">Skin.SetString(Home_$PARAM[id_home]_Name,$INFO[Skin.String(CustomHome.Label)])</onclick>
+	</include>
+
+	<include name="CustomHome_Add_OnClick">
+
+		<!-- Clear -->
+		<onclick>Skin.Reset($PARAM[id].Label)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Label2)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Icon)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Thumb)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Fanart)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Path)</onclick>
+		<onclick>Skin.Reset($PARAM[id].FolderPath)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Action)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Window)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Mpaa)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Plot)</onclick>
+		<onclick>Skin.Reset($PARAM[id].Rating)</onclick>
+		<onclick>Skin.Reset($PARAM[id].VideoResolution)</onclick>
+		<onclick>Skin.Reset($PARAM[id].VideoCodec)</onclick>
+		<onclick>Skin.Reset($PARAM[id].AudioCodec)</onclick>
+		<onclick>Skin.Reset($PARAM[id].AudioChannels)</onclick>
+		<onclick>Skin.Reset($PARAM[id].AspectRatio)</onclick>
+
+		<!-- Label -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Label))">Skin.SetString($PARAM[id].Label,$INFO[Skin.String(CustomHome.Label)])</onclick>
+
+                <!-- Label2 -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Year)) + !String.isEmpty(Skin.String(CustomHome.Duration))">Skin.SetString($PARAM[id].Label2,$INFO[Skin.String(CustomHome.Year)] / $INFO[Skin.String(CustomHome.Duration)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Year)) + String.isEmpty(Skin.String(CustomHome.Duration))">Skin.SetString($PARAM[id].Label2,$INFO[Skin.String(CustomHome.Year)])</onclick>
+		<onclick condition="String.isEmpty(Skin.String(CustomHome.Year)) + !String.isEmpty(Skin.String(CustomHome.Duration))">Skin.SetString($PARAM[id].Label2,$INFO[Skin.String(CustomHome.Duration)])</onclick>
+
+		<!-- Icon -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Icon))">Skin.SetString($PARAM[id].Icon,$INFO[Skin.String(CustomHome.Icon)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.IconTV))">Skin.SetString($PARAM[id].Icon,$INFO[Skin.String(CustomHome.IconTV)])</onclick>
+
+		<!-- Thumb -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Thumb))">Skin.SetString($PARAM[id].Thumb,$INFO[Skin.String(CustomHome.Thumb)])</onclick>
+
+                <!-- Path -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.FileNameAndPath))">Skin.SetString($PARAM[id].Path,$ESCINFO[Skin.String(CustomHome.FileNameAndPath)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.PropertyPath))">Skin.SetString($PARAM[id].Path,$ESCINFO[Skin.String(CustomHome.PropertyPath)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.FolderPath))">Skin.SetString($PARAM[id].FolderPath,$ESCINFO[Skin.String(CustomHome.FolderPath)])</onclick>
+
+                <!-- Action -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.FileNameAndPath))">Skin.SetString($PARAM[id].Action,playmedia)</onclick>
+		<onclick condition="String.isEqual(Skin.String(CustomHome.DBType),image)">Skin.SetString($PARAM[id].Action,showpicture)</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.PropertyPath))">Skin.SetString($PARAM[id].Action,direct)</onclick>
+
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),addonbrowser)">Skin.Reset($PARAM[id].Action)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),mygames)">Skin.Reset($PARAM[id].Action)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),dialogfavourites)">Skin.SetString($PARAM[id].Action,direct)</onclick>
+
+		<!-- Fanart -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.FanartProperty))">Skin.SetString($PARAM[id].Fanart,$INFO[Skin.String(CustomHome.FanartProperty)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Fanart))">Skin.SetString($PARAM[id].Fanart,$INFO[Skin.String(CustomHome.Fanart)])</onclick>
+
+		<!-- Plot -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.PlotProperty))">Skin.SetString($PARAM[id].Plot,$INFO[Skin.String(CustomHome.PlotProperty)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Plot))">Skin.SetString($PARAM[id].Plot,$INFO[Skin.String(CustomHome.Plot)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.PlotAddon))">Skin.SetString($PARAM[id].Plot,$INFO[Skin.String(CustomHome.PlotAddon)])</onclick>
+
+		<!-- Window -->
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),myvideo)">Skin.SetString($PARAM[id].Window,videos)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),mymusic)">Skin.SetString($PARAM[id].Window,music)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),mypics)">Skin.SetString($PARAM[id].Window,pictures)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),mygames)">Skin.SetString($PARAM[id].Window,games)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),myprogram)">Skin.SetString($PARAM[id].Window,programs)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),addonbrowser)">Skin.SetString($PARAM[id].Window,addonbrowser)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),myplaylist)">Skin.SetString($PARAM[id].Window,videoplaylist)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),dialogfavourites)">Skin.SetString($PARAM[id].Window,favourites)</onclick>
+
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),MyPVRChannels)">Skin.SetString($PARAM[id].Window,tvchannels)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),MyPVRRecordings)">Skin.SetString($PARAM[id].Window,tvrecordings)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),MyPVRGuide)">Skin.SetString($PARAM[id].Window,tvguide)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),MyPVRTimers)">Skin.SetString($PARAM[id].Window,tvtimers)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),MyPVRSearch)">Skin.SetString($PARAM[id].Window,tvsearch)</onclick>
+
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),Home) + String.StartsWith(Skin.String(CustomHome.FolderPath),videodb://)">Skin.SetString($PARAM[id].Window,videos)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),Home) + String.StartsWith(Skin.String(CustomHome.FolderPath),plugin://plugin.video)">Skin.SetString($PARAM[id].Window,videos)</onclick>
+		<onclick condition="String.startsWith(Skin.String(CustomHome.Window),Home) + String.StartsWith(Skin.String(CustomHome.FolderPath),musicdb://)">Skin.SetString($PARAM[id].Window,music)</onclick>
+                
+		<!-- Properties -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Mpaa))">Skin.SetString($PARAM[id].Mpaa,$INFO[Skin.String(CustomHome.Mpaa)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Rating))">Skin.SetString($PARAM[id].Rating,$INFO[Skin.String(CustomHome.Rating)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.VideoResolution))">Skin.SetString($PARAM[id].VideoResolution,$INFO[Skin.String(CustomHome.VideoResolution)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.VideoCodec))">Skin.SetString($PARAM[id].VideoCodec,$INFO[Skin.String(CustomHome.VideoCodec)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.AudioCodec))">Skin.SetString($PARAM[id].AudioCodec,$INFO[Skin.String(CustomHome.AudioCodec)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.AudioChannels))">Skin.SetString($PARAM[id].AudioChannels,$INFO[Skin.String(CustomHome.AudioChannels)])</onclick>
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.VideoAspect))">Skin.SetString($PARAM[id].AspectRatio,$INFO[Skin.String(CustomHome.VideoAspect)])</onclick>
+
+		<!-- Notification -->
+		<onclick condition="!String.isEmpty(Skin.String(CustomHome.Label))">Notification(SUCCESS,Added $INFO[Skin.String(CustomHome.Label)],3000,icon_ok.png)</onclick>
+		<onclick condition="String.isEmpty(Skin.String(CustomHome.Label))">Notification(FAILED,Can't add item $INFO[Skin.String(CustomHome.Label)],3000,icon_cancel.png)</onclick>
+
+	</include>
+
+	<!-- Startup (FirstRun) -->
+	<include name="Startup_List_Itemlayout">
+		<include content="Startup_List_Layout"><param name="align">$PARAM[align]</param></include>
+	</include>
+
+	<include name="Startup_List_Focusedlayout">
+		                        
+		<!-- Navbar -->
+		<control type="image">
+			<top>3</top>
+			<left>15</left>
+			<width>1440</width>
+			<height>39</height>
+			<aspectratio>scale</aspectratio>
+			<include>navigation_options_image</include>
+			<visible>Control.hasFocus($PARAM[id])</visible>
+		</control>
+
+		<include content="Startup_List_Layout"><param name="align">$PARAM[align]</param></include>
+	</include>
+
+
+	<include name="Startup_List_Layout">
+		<control type="label">
+			<top>0</top>
+			<left>30</left>
+			<width>375</width>
+			<height>45</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Lato_Light_20</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<align>$PARAM[align]</align>
+			<aligny>center</aligny>
+			<visible>String.isEmpty(ListItem.Property(center))</visible>
+		</control>
+		<control type="label">
+			<top>0</top>
+			<left>30</left>
+			<width>1410</width>
+			<height>45</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Lato_Light_20</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>!String.isEmpty(ListItem.Property(center))</visible>
+		</control>
+		<control type="label">
+			<top>0</top>
+			<left>420</left>
+			<width>300</width>
+			<height>45</height>
+			<label>$INFO[ListItem.Property(desc)]</label>
+			<font>Lato_Light_15</font>
+			<textcolor>FFCCCCCC</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+		</control>
+		<control type="label">
+			<top>0</top>
+			<left>1050</left>
+			<width>345</width>
+			<align>right</align>
+			<aligny>center</aligny>
+			<height>45</height>
+			<textcolor>FFCCCCCC</textcolor>
+			<font>Lato_Regular_20</font>
+			<label>$INFO[ListItem.Label2]</label>
+		</control>
+		<control type="image">
+			<top>6</top>
+			<left>1410</left>
+			<width>33</width>
+			<height>33</height>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<colordiffuse>FFCCCCCC</colordiffuse>
+			<aspectratio>keep</aspectratio>
+		</control>
+
+		<control type="image">
+			<top>45</top>
+			<left>15</left>
+			<width>1440</width>
+			<colordiffuse>22FFFFFF</colordiffuse>
+			<include>SeparatorH</include>
+		</control>
+	</include>
+
+	<include name="Startup_Header">
+		<control type="group" id="$PARAM[id]">
+			<height>45</height>
+			<control type="image">
+				<width>1470</width>
+				<height>45</height>
+				<texture>block.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<width>1470</width>
+				<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
+				<font>Lato_Black_15</font>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+		</control>
+	</include>
+
+	<include name="Startup_Header_Desc">
+		<control type="group" id="$PARAM[id]">
+			<height>67</height>
+			<control type="image">
+				<width>1470</width>
+				<height>60</height>
+				<texture>block.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<width>1470</width>
+				<label>$PARAM[label]</label>
+				<font>Lato_Black_20</font>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<top>30</top>
+				<width>1470</width>
+				<label>$PARAM[label2]</label>
+				<font>Lato_Regular_10</font>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+		</control>
+	</include>
+
+
+	<!-- Context Menu -->
+	<include name="ContextMenu_Separator">
+		<control type="label" id="$PARAM[id]">
+			<height>15</height>
+		</control>
+	</include>
+
+	<include name="ContextMenu_Header">
+		<control type="group" id="$PARAM[id]">
+			<height>45</height>
+
+			<control type="image">
+				<texture>block.png</texture>
+				<width>900</width>
+				<height>45</height>
+				<colordiffuse>22FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
+				<width>900</width>
+				<font>Lato_Black_20</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<height>45</height>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+		</control>
+	</include>
+
+	<include name="ContextMenu_Button_Content">
+		<width>900</width>
+		<height>60</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>$VAR[Var_Color_Text_NoFocus]</textcolor>
+		<focusedcolor>$VAR[Var_Color_Text_Hex]</focusedcolor>
+		<include>navigation_options</include>
+		<font>Lato_Light_30</font>
+	</include>
+
+	<!-- ContextMenu (Onfocus) -->
+	<include name="ContextMenu_Button_Onfocus">
+		<control type="button" id="$PARAM[id]">
+			<include>ContextMenu_Button_Content</include>
+			<label>$PARAM[label]</label>
+			<onfocus>Dialog.Close(shutdownmenu)</onfocus>
+			<onfocus>$PARAM[action]</onfocus>
+		</control>
+	</include>
+
+	<!-- ContextMenu (Custom) -->
+	<include name="ContextMenu_Button_Custom">
+		<control type="button" id="$PARAM[id]">
+			<include>ContextMenu_Button_Content</include>
+			<label>$LOCALIZE[31308] $LOCALIZE[31503]</label>
+			<onclick>Dialog.Close($PARAM[dialog])</onclick>
+			<include>CustomHome_Add_Context</include>
+		</control>
+	</include>
+
+	<!-- ContextMenu (Jump) -->
+	<include name="ContextMenu_Button_Jump">
+		<include condition="String.isEmpty(Skin.String(Home_$PARAM[id_home]_Name))" content="ContextMenu_Button_Jump_Content">
+			<param name="id">$PARAM[id]</param>
+			<param name="label">$PARAM[label]</param>
+		</include>
+		<include condition="!String.isEmpty(Skin.String(Home_$PARAM[id_home]_Name))" content="ContextMenu_Button_Jump_Content">
+			<param name="id">$PARAM[id]</param>
+			<param name="label">$INFO[Skin.String(Home_$PARAM[id_home]_Name)]</param>
+		</include>
+	</include>
+
+	<include name="ContextMenu_Button_Jump_Content">
+		<control type="button" id="$PARAM[id]">
+			<include>ContextMenu_Button_Content</include>
+			<label>$PARAM[label]</label>
+			<onclick>Dialog.Close(shutdownmenu)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,0) + String.isEqual(Container(300).ListItemAbsolute(0).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,0,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,1) + String.isEqual(Container(300).ListItemAbsolute(1).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,1,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,2) + String.isEqual(Container(300).ListItemAbsolute(2).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,2,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,3) + String.isEqual(Container(300).ListItemAbsolute(3).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,3,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,4) + String.isEqual(Container(300).ListItemAbsolute(4).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,4,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,5) + String.isEqual(Container(300).ListItemAbsolute(5).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,5,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,6) + String.isEqual(Container(300).ListItemAbsolute(6).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,6,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,7) + String.isEqual(Container(300).ListItemAbsolute(7).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,7,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,8) + String.isEqual(Container(300).ListItemAbsolute(8).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,8,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,9) + String.isEqual(Container(300).ListItemAbsolute(9).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,9,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,10) + String.isEqual(Container(300).ListItemAbsolute(10).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,10,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,11) + String.isEqual(Container(300).ListItemAbsolute(11).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,11,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,12) + String.isEqual(Container(300).ListItemAbsolute(12).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,12,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,13) + String.isEqual(Container(300).ListItemAbsolute(13).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,13,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,14) + String.isEqual(Container(300).ListItemAbsolute(14).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,14,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,15) + String.isEqual(Container(300).ListItemAbsolute(15).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,15,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,16) + String.isEqual(Container(300).ListItemAbsolute(16).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,16,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,17) + String.isEqual(Container(300).ListItemAbsolute(17).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,17,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,18) + String.isEqual(Container(300).ListItemAbsolute(18).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,18,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,19) + String.isEqual(Container(300).ListItemAbsolute(19).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,19,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,20) + String.isEqual(Container(300).ListItemAbsolute(20).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,20,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,21) + String.isEqual(Container(300).ListItemAbsolute(21).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,21,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,22) + String.isEqual(Container(300).ListItemAbsolute(22).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,22,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,23) + String.isEqual(Container(300).ListItemAbsolute(23).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,23,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,24) + String.isEqual(Container(300).ListItemAbsolute(24).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,24,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,25) + String.isEqual(Container(300).ListItemAbsolute(25).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,25,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,26) + String.isEqual(Container(300).ListItemAbsolute(26).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,26,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,27) + String.isEqual(Container(300).ListItemAbsolute(27).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,27,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,28) + String.isEqual(Container(300).ListItemAbsolute(28).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,28,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,29) + String.isEqual(Container(300).ListItemAbsolute(29).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,29,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,30) + String.isEqual(Container(300).ListItemAbsolute(30).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,30,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,31) + String.isEqual(Container(300).ListItemAbsolute(31).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,31,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,32) + String.isEqual(Container(300).ListItemAbsolute(32).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,32,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,33) + String.isEqual(Container(300).ListItemAbsolute(33).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,33,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,34) + String.isEqual(Container(300).ListItemAbsolute(34).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,34,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,35) + String.isEqual(Container(300).ListItemAbsolute(35).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,35,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,36) + String.isEqual(Container(300).ListItemAbsolute(36).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,36,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,37) + String.isEqual(Container(300).ListItemAbsolute(37).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,37,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,38) + String.isEqual(Container(300).ListItemAbsolute(38).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,38,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,39) + String.isEqual(Container(300).ListItemAbsolute(39).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,39,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,40) + String.isEqual(Container(300).ListItemAbsolute(40).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,40,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,41) + String.isEqual(Container(300).ListItemAbsolute(41).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,41,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,42) + String.isEqual(Container(300).ListItemAbsolute(42).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,42,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,43) + String.isEqual(Container(300).ListItemAbsolute(43).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,43,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,44) + String.isEqual(Container(300).ListItemAbsolute(44).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,44,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,45) + String.isEqual(Container(300).ListItemAbsolute(45).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,45,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,46) + String.isEqual(Container(300).ListItemAbsolute(46).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,46,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,47) + String.isEqual(Container(300).ListItemAbsolute(47).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,47,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,48) + String.isEqual(Container(300).ListItemAbsolute(48).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,48,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,49) + String.isEqual(Container(300).ListItemAbsolute(49).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,49,absolute)</onclick>
+			<onclick condition="!Integer.IsLessOrEqual(Container(300).NumItems,50) + String.isEqual(Container(300).ListItemAbsolute(50).Property(HomeMenuSection),$PARAM[label])">SetFocus(300,50,absolute)</onclick>
+			<onclick>Control.Move(300,1)</onclick>
+		</control>
+	</include>
+
+</includes>

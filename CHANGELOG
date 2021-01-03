@@ -1,0 +1,9 @@
+v2.5.2
+======
+* OpenHT Support
+* Plex/Emby home menu slots increased from 10 to 15
+* Fixed colors not working
+* Fixed poster image gaps with resolutions 1080+
+* Fixed background fade in/out if fadetime is set to 0
+* Fixed custom home still showing up even if it's disabled in settings
+* other small fixes

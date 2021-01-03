@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<!-- OSD BOTTOM -->
+<include name="OSD_Bottom">
+
+	<control type="group">
+		<include>AspectRatio_PosY_Full</include>
+
+		<!-- Seekbar Background -->
+		<control type="group">
+			<!--<include>Animation_CommonFade_600</include>-->
+
+			<!-- Mode Default -->
+			<control type="image">
+				<top>550</top>
+				<height>190</height>
+				<include>AspectRatio_Width</include>
+				<texture background="true">bg_black.png</texture>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+				<visible>![ Skin.String(osd_mode,Off) | Skin.String(osd_mode,Top) | Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + VideoPlayer.SubtitlesEnabled ]</visible>
+			</control>
+			<control type="image">
+                                <top>550</top>
+				<include>SeparatorH</include>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+				<visible>![ Skin.String(osd_mode,Off) | Skin.String(osd_mode,Top) | Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + VideoPlayer.SubtitlesEnabled ]</visible>
+                        </control>
+
+			<!-- Mode Top -->
+			<control type="image">
+				<top>0</top>
+				<height>40</height>
+				<include>AspectRatio_Width</include>
+				<texture background="true">bg_black.png</texture>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+				<visible>Skin.String(osd_mode,Top)</visible>
+			</control>
+
+			<!-- Mode Minimal -->
+			<control type="image">
+				<top>670</top>
+				<height>50</height>
+				<include>AspectRatio_Width</include>
+				<texture background="true">bg_black.png</texture>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+				<visible>Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + VideoPlayer.SubtitlesEnabled</visible>
+			</control>
+
+			<!-- Mode Bottom -->
+			<control type="image">
+                                <top>78</top>
+				<include>SeparatorH</include>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+				<visible>!Skin.HasSetting(OSD_Plot) + Skin.String(osd_mode,Bottom)</visible>
+                        </control>
+
+		</control>
+
+		<!-- Seekbar -->
+		<control type="group">
+			<top>684</top>
+			<include>Animation_CommonFade_600</include>
+			<animation effect="slide" start="0,0" end="0,-670" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Top)">Conditional</animation>
+			<visible>!Skin.String(osd_mode,Off)</visible>
+
+			<!-- Progress Background -->
+			<control type="image">
+				<left>100</left>
+				<top>2</top>
+				<include>AspectRatio_Width_1080</include>
+				<height>20</height>
+				<texture>osd_progress_back_normal.png</texture>
+			</control>
+
+			<!-- Progress Bar -->
+			<control type="progress" id="23">
+				<left>106</left>
+				<top>0</top>
+				<width>1068</width>
+				<height>24</height>
+				<texturebg>osd_progress_back_transparent.png</texturebg>
+				<midtexture border="4">osd_progress_mid_normal.png</midtexture>
+				<info>Player.Progress</info>
+				<colordiffuse>$VAR[Var_Color_Progressbar_Hex]</colordiffuse>
+			</control>
+
+			<!-- Progress Cache -->
+			<control type="progress" id="24">
+				<left>100</left>
+				<top>2</top>
+				<include>AspectRatio_Width_1080</include>
+				<height>19</height>
+				<texturebg>osd_progress_back_transparent.png</texturebg>
+				<righttexture>osd_progress_line.png</righttexture>
+				<info>Player.ProgressCache</info>
+                                <colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+			</control>
+
+			<!-- Seekbar Ranges (v19 - Matrix) -->
+			<include condition="$EXP[KODIv19]">Seekbar_Ranges</include>
+
+			<!-- Progress Time -->
+			<control type="label">
+				<left>20</left>
+				<top>1</top>
+				<width>100</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_OSD_Time</font>
+				<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+				<label>$INFO[VideoPlayer.Time(h:mm:ss)]</label>
+				<animation effect="slide" start="0,0" end="-10,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![String.isEmpty(Control.GetLabel(7657)) + String.isEmpty(Control.GetLabel(7658))]">Conditional</animation>
+			</control>
+			<control type="label">
+				<left>120r</left>
+				<top>1</top>
+				<width>100</width>
+				<height>20</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Font_OSD_Time</font>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[VideoPlayer.Duration(h:mm:ss)]</label>
+				<animation effect="slide" start="0,0" end="-304,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![String.isEmpty(Control.GetLabel(7657)) + String.isEmpty(Control.GetLabel(7658))]">Conditional</animation>
+			</control>
+		</control>
+
+		<!-- Plot -->
+		<control type="group">
+			<top>470</top>       
+			<include>Animation_CommonFade_600</include>
+			<visible>!Skin.HasSetting(OSD_Plot) + ![ String.isEmpty(VideoPlayer.Plot) | Skin.String(osd_mode,Off) | Skin.String(osd_mode,Minimal) | Window.isVisible(125) | Skin.String(osd_mode,Auto) + VideoPlayer.SubtitlesEnabled ]</visible>
+
+                        <animation effect="slide" start="0,0" end="0,170" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Top)">Conditional</animation>
+                        <animation effect="slide" start="0,0" end="0,-470" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Bottom)">Conditional</animation>
+
+			<control type="image">
+				<include>AspectRatio_Width</include>
+				<height>80</height>
+				<include>Background</include>
+				<colordiffuse>FF000000</colordiffuse>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+			</control>
+			<control type="image">
+                                <top>0</top>
+				<include>SeparatorH</include>
+
+				<!-- Opacity -->
+				<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+                        </control>
+
+			<control type="label">
+				<top>20</top>
+                                <left>20</left>
+                                <width>1010</width>
+                                <height>40</height>
+				<aligny>center</aligny>
+                                <label>$VAR[Var_VideoOSD_Plot]</label>
+                                <font>Lato_Light_20</font><!-- Lato_Light_20 -->
+                                <textcolor>FFCCCCCC</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+                                <autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>Videoplayer.Content(movies) | Videoplayer.Content(episodes)</visible>
+                        </control>
+			<control type="label">
+				<top>20</top>
+                                <left>20</left>
+                                <width>900</width>
+                                <height>40</height>
+				<aligny>center</aligny>
+                                <label>$VAR[Var_VideoOSD_Plot]</label>
+                                <font>Lato_Light_20</font><!-- Lato_Light_20 -->
+                                <textcolor>FFCCCCCC</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+                                <autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>![ Videoplayer.Content(movies) | Videoplayer.Content(episodes) ]</visible>
+                        </control>
+<!--
+			<control type="textbox">
+				<top>10</top>
+                                <left>20</left>
+                                <width>900</width>
+                                <height>65</height>
+                                <align>justify</align>
+                                <label>$VAR[Var_VideoOSD_Plot]</label>
+                                <font>Font_Bartowski_Movies_Plot</font>
+                                <textcolor>FFCCCCCC</textcolor>
+                                <autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>![ Videoplayer.Content(movies) | Videoplayer.Content(episodes) ]</visible>
+                        </control>
+-->
+		</control>
+
+		<!-- Seekbar Infos -->
+		<control type="group">
+			<include>Animation_CommonFade_600</include>
+			<left>20</left>
+			<top>560</top>
+			<visible>![ Skin.String(osd_mode,Off) | Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Top) | Skin.String(osd_mode,Bottom) | Skin.String(osd_mode,Auto) + VideoPlayer.SubtitlesEnabled ]</visible>
+
+			<!-- Full Width 940 -->
+			<!-- Cast Width 720 -->
+
+			<control type="group">
+				<visible>String.isEmpty(Videoplayer.CastAndRole)</visible>
+				<!-- Label 1 -->
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>940</width> 
+					<label>$VAR[Var_VideoOSD_Label_1]</label>
+					<!--<font>Font_OSD_Header</font>-->
+					<font>Lato_Regular_35</font>
+					<textcolor>$VAR[Var_Color_Header_Hex]</textcolor>
+				</control>
+				<!-- Label 2 -->
+				<control type="label">
+					<left>0</left>
+					<top>45</top>
+					<width>940</width> 
+					<label>$VAR[Var_VideoOSD_Label_2]</label>
+					<!--<font>Font_OSD_Sub</font>-->
+					<font>Lato_Light_25</font>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+				<!-- Label 3 -->
+				<control type="label">
+					<left>0</left>
+					<top>75</top>
+					<width>940</width>
+					<label>$VAR[Var_VideoOSD_Label_3]</label>
+					<!--<font>Font_OSD_Sub</font>-->
+					<font>Lato_Light_25</font>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>!String.isEmpty(Videoplayer.CastAndRole)</visible>
+				<!-- Label 1 -->
+				<control type="label">
+					<top>10</top>
+					<width>720</width> 
+					<label>$VAR[Var_VideoOSD_Label_1]</label>
+					<font>Lato_Regular_35</font>
+					<!--<font>Font_OSD_Header</font>-->
+					<height>35</height>
+					<aligny>center</aligny>
+					<textcolor>$VAR[Var_Color_Header_Hex]</textcolor>
+				</control>
+				<!-- Label 2 -->
+				<control type="label">
+					<top>50</top>
+					<width>720</width> 
+					<label>$VAR[Var_VideoOSD_Label_2]</label>
+					<font>Lato_Light_25</font>
+					<!--<font>Font_OSD_Sub</font>-->
+					<height>25</height>
+					<aligny>center</aligny>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+				<!-- Label 3 -->
+				<control type="label">
+					<top>80</top>
+					<width>720</width>
+					<label>$VAR[Var_VideoOSD_Label_3]</label>
+					<font>Lato_Light_25</font>
+					<!--<font>Font_OSD_Sub</font>-->
+					<height>25</height>
+					<aligny>center</aligny>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</control>
+
+			<!-- Label 4 (Cast) -->
+			<control type="textbox">
+				<left>520r</left>
+				<top>10</top>
+ 				<width>280</width>
+				<height>100</height>
+				<label>$VAR[Var_VideoOSD_Label_4]</label>
+				<align>right</align>
+				<font>Font_PrePlay_Cast</font>
+				<textcolor>FFCCCCCC</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			</control>
+
+		</control>
+
+
+		<!-- Poster / Cover / Thumb -->
+		<control type="group">
+			<include>Animation_CommonFade_600</include>
+			<visible>!Skin.HasSetting(OSD_Cover) + ![ Skin.String(osd_mode,Off) | Skin.String(osd_mode,Minimal) | Skin.String(osd_mode,Auto) + VideoPlayer.SubtitlesEnabled ]</visible>
+                        <animation effect="slide" start="0,0" end="0,-90" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Bottom)">Conditional</animation>
+                        <animation effect="slide" start="0,0" end="0,20" time="800" tween="back" easing="inout" condition="Skin.String(osd_mode,Top)">Conditional</animation>
+
+			<!-- Poster -->
+			<control type="image"> 
+				<left>220r</left>
+				<top>380</top>  
+				<width>200</width>
+				<height>290</height><!-- 290 -->
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<texture background="true">$VAR[Var_VideoOSD_Poster]</texture>
+				<bordertexture border="2">confluence/button-nofocus.png</bordertexture>
+				<bordersize>2</bordersize>
+				<visible>![ Skin.hasSetting(OSD_Clearart) + !String.IsEmpty(Player.Art(tvshow.clearlogo)) ]</visible>
+			</control>
+
+			<!-- Clearart -->
+			<control type="image"> 
+				<left>220r</left>
+				<top>560</top>  
+				<width>200</width>
+				<height>120</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Player.Art(tvshow.clearlogo)]</texture>
+				<visible>Skin.hasSetting(OSD_Clearart) + !String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
+			</control>
+
+		</control>
+
+	</control>
+</include>
+
+<!-- VIDEO OSD LABELS -->
+<include name="OSD_Labels">
+	<control type="group">
+		<top>50</top>
+		<visible>![ Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(125) | Window.IsActive(10205) | Window.IsActive(10204) | Window.IsActive(1120) ]</visible>
+		<animation effect="slide" end="0,30" condition="Skin.String(osd_mode,Top)">Conditional</animation>
+
+		<!-- Current/Remaining/Finish Time -->
+		<control type="group">
+			<include>Animation_CommonFade_300</include>
+			<visible>!Skin.HasSetting(OSD_Hide_Time) + [ Player.Seeking | Player.DisplayAfterSeek | [ player.paused + !player.caching ] ]</visible>
+
+			<!-- Remaining Time -->
+			<control type="group">
+				<top>40</top>
+				<left>20</left>
+
+				<control type="label">
+					<height>80</height>
+					<width>300</width>
+					<aligny>center</aligny>
+					<label>$INFO[Player.TimeRemaining(hh:mm)]</label><!-- Remaining Time -->
+					<font>Lato_Light_80</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<include>Animation_CommonFade_600</include>
+				</control>
+				<control type="label">
+					<height>80</height>
+					<width>300</width>
+					<aligny>center</aligny>
+					<label>$INFO[Player.TimeRemaining(hh:mm)]</label><!-- Remaining Time -->
+					<font>Lato_Light_80</font>
+					<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+				</control>
+
+				<!-- Labels -->
+				<control type="label">
+					<top>80</top>
+					<height>25</height>
+					<width>300</width>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31413]</label><!-- Remaining Time -->
+					<font>Lato_Black_25</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<include>Animation_CommonFade_600</include>
+				</control>
+				<control type="label">
+					<top>80</top>
+					<height>25</height>
+					<width>300</width>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31413]</label><!-- Remaining Time -->
+					<font>Lato_Black_25</font>
+					<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+				</control>
+			</control>
+
+			<!-- Current Time -->
+			<control type="group">
+				<top>40</top>
+
+				<control type="label">
+					<height>80</height>
+					<include>AspectRatio_Width</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[System.Time(hh:mm xx)]</label><!-- Current Time -->
+					<font>Font_Bartowski_OSD_Small</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<include>Animation_CommonFade_600</include>
+				</control>
+				<control type="label">
+					<height>80</height>
+					<include>AspectRatio_Width</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[System.Time(hh:mm xx)]</label><!-- Current Time -->
+					<font>Font_Bartowski_OSD_Small</font>
+					<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+				</control>
+
+				<!-- Labels -->
+				<control type="label">
+					<height>25</height>
+					<top>80</top>
+					<include>AspectRatio_Width</include>
+					<aligny>center</aligny>
+					<align>center</align>
+					<label>$LOCALIZE[31412]</label><!-- Current Time -->
+					<font>Font_Time_Global</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<include>Animation_CommonFade_600</include>
+				</control>
+				<control type="label">
+					<height>25</height>
+					<top>80</top>
+					<include>AspectRatio_Width</include>
+					<aligny>center</aligny>
+					<align>center</align>
+					<label>$LOCALIZE[31412]</label><!-- Current Time -->
+					<font>Font_Time_Global</font>
+					<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+				</control>
+			</control>
+
+			<!-- Finish Time -->
+			<control type="group">
+				<left>320r</left>
+				<top>40</top>
+
+				<control type="label">
+					<height>80</height>
+					<width>300</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.FinishTime(hh:mm)]</label><!-- Finish Time -->
+					<font>Font_Bartowski_OSD_Small</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<include>Animation_CommonFade_600</include>
+				</control>
+				<control type="label">
+					<height>80</height>
+					<width>300</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.FinishTime(hh:mm)]</label><!-- Finish Time -->
+					<font>Font_Bartowski_OSD_Small</font>
+					<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+				</control>
+
+				<!-- Labels -->
+				<control type="label">
+					<height>25</height>
+					<top>80</top>
+					<width>300</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31414]</label><!-- Finish Time -->
+					<font>Font_Time_Global</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<include>Animation_CommonFade_600</include>
+				</control>
+				<control type="label">
+					<height>25</height>
+					<top>80</top>
+					<width>300</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[31414]</label><!-- Finish Time -->
+					<font>Font_Time_Global</font>
+					<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+					<include>Animation_CommonFade_600</include>
+					<include>Animation_OSD</include>
+				</control>
+			</control>
+		</control>
+	
+		<!-- Videoplayer Status -->
+		<control type="group">
+			<include>Animation_CommonFade_300</include>
+			<visible>!Skin.HasSetting(OSD_Hide_Status) + [ Player.Paused | Player.DisplayAfterSeek | Player.Seeking | Player.Caching ]</visible>
+			<control type="group">
+				<left>500</left>
+				<top>220</top>
+				<include>AspectRatio_PosX</include>
+
+				<!-- Player Status -->
+				<control type="group">
+					<visible>![ Player.Caching + !Player.Seeking ]</visible>
+					<include>Animation_CommonFade_300</include>
+
+					<!-- Icon -->
+					<control type="image">
+						<left>70</left>
+						<top>0</top>
+						<width>140</width>
+						<height>140</height>
+						<aspectratio>scale</aspectratio>
+						<texture>$VAR[Var_Videoplayer_Icon]</texture>
+					</control>
+					<control type="image">
+						<left>70</left>
+						<top>0</top>
+						<width>140</width>
+						<height>140</height>
+						<aspectratio>scale</aspectratio>
+						<texture>$VAR[Var_Videoplayer_Icon]</texture>
+						<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+						<include>Animation_OSD</include>
+					</control>
+
+					<!-- Labels -->
+					<control type="label">
+						<left>-100</left>
+						<top>115</top>
+						<width>480</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[Var_Videoplayer_Text]</label>
+						<font>Lato_Black_40</font>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+					<control type="label">
+						<left>-100</left>
+						<top>115</top>
+						<width>480</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[Var_Videoplayer_Text]</label>
+						<font>Lato_Black_40</font>
+						<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+						<include>Animation_OSD</include>
+					</control>
+
+				</control>
+	
+				<!-- Busy -->
+				<control type="group">
+					<visible>Player.Caching + !Player.Seeking</visible>
+					<include>Animation_CommonFade_600_Delay</include>
+
+					<control type="image">
+						<left>95</left>
+						<top>25</top>
+						<width>90</width>
+						<height>90</height>
+						<aspectratio>scale</aspectratio>
+						<texture>busy.png</texture>
+						<include>Animation_CommonFade_600</include>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+					</control>
+					<control type="image">
+						<left>95</left>
+						<top>25</top>
+						<width>90</width>
+						<height>90</height>
+						<aspectratio>scale</aspectratio>
+						<texture>busy.png</texture>
+						<colordiffuse>$VAR[Var_Color_Clock_Hex]</colordiffuse>
+						<include>Animation_OSD</include>
+						<animation effect="rotate" start="0" end="-360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+					</control>
+
+					<control type="label">
+						<left>-100</left>
+						<top>110</top>
+						<width>480</width>
+						<align>center</align>
+						<label>$INFO[Player.CacheLevel]%</label>
+						<font>Lato_Black_40</font>
+						<textcolor>FFCCCCCC</textcolor>
+					</control>
+					<control type="label">
+						<left>-100</left>
+						<top>110</top>
+						<width>480</width>
+						<align>center</align>
+						<label>$INFO[Player.CacheLevel]%</label>
+						<font>Lato_Black_40</font>
+						<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+						<include>Animation_OSD</include>
+					</control>
+
+				</control>
+
+			</control>
+
+		</control>
+	</control>
+</include>
+
+<!-- OSD Quick Access -->
+<include name="OSD_Quick">
+	<control type="group" id="800">
+		<top>290</top>
+
+		<!-- Background -->
+		<control type="group">
+
+			<!-- Opacity -->
+			<include content="Widget_Background_Opacity_Custom"><param name="id_home">19</param><param name="opacity">60</param></include>
+
+			<control type="image">
+				<left>140</left>
+				<height>200</height>
+				<width>1000</width>
+				<!--<texture background="true">bg_black.png</texture>-->
+				<texture background="true">bg_quickmenu.png</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+			</control>
+
+			<control type="image">
+				<left>140</left>
+				<width>1000</width>
+				<include>SeparatorH</include>
+			</control>
+			<control type="image">
+				<top>30</top>
+				<left>140</left>
+				<width>1000</width>
+				<include>SeparatorH</include>
+			</control>
+			<control type="image">
+				<top>170</top>
+				<left>140</left>
+				<width>1000</width>
+				<include>SeparatorH</include>
+			</control>
+			<control type="image">
+				<top>200</top>
+				<left>140</left>
+				<width>1000</width>
+				<include>SeparatorH</include>
+			</control>
+		</control>
+
+		<!-- QUICK MENU (BUTTONS) -->
+		<control type="grouplist" id="801">
+			<left>0</left>
+			<top>30</top>
+			<include>AspectRatio_Width</include>
+			<height>100</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>90</itemgap>
+			<onup>100</onup>
+			<ondown>19000</ondown>
+
+			<!-- Aspect Ratio -->
+				<control type="button" id="810">
+					<width>96</width>
+					<height>96</height>
+					<texturefocus>icon_monitor.png</texturefocus>
+					<texturenofocus>icon_monitor.png</texturenofocus>
+					<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+
+					<onclick>Dialog.Close(VideoOSD,true)</onclick>
+					<onclick>AspectRatio</onclick>
+					<onclick>Skin.SetBool(OSD_Quick)</onclick>
+					<onclick>ActivateWindow(VideoOSD)</onclick>
+
+					<ondown>Dialog.Close(VideoOSD,true)</ondown>
+					<!--<ondown>AspectRatio</ondown>-->
+					<ondown>ZoomOut</ondown>
+					<ondown>Skin.SetBool(OSD_Quick)</ondown>
+					<ondown>ActivateWindow(VideoOSD)</ondown>
+
+					<onup>Dialog.Close(VideoOSD,true)</onup>
+					<!--<onup>AspectRatio</onup>-->
+					<onup>ZoomIn</onup>
+					<onup>Skin.SetBool(OSD_Quick)</onup>
+					<onup>ActivateWindow(VideoOSD)</onup>
+				</control>
+
+
+			<!-- Audio Offset -->
+			<control type="button" id="811">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>icon_audio.png</texturefocus>
+				<texturenofocus>icon_audio.png</texturenofocus>
+				<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>ActivateWindow(10205)</onclick>
+				<onclick>Skin.SetBool(OSD_Quick)</onclick>
+				<onclick>ActivateWindow(VideoOSD)</onclick>
+
+				<ondown>Dialog.Close(VideoOSD,true)</ondown>
+				<ondown>AudioDelayMinus</ondown>
+				<ondown>Skin.SetBool(OSD_Quick)</ondown>
+				<ondown>ActivateWindow(VideoOSD)</ondown>
+
+				<onup>Dialog.Close(VideoOSD,true)</onup>
+				<onup>AudioDelayPlus</onup>
+				<onup>Skin.SetBool(OSD_Quick)</onup>
+				<onup>ActivateWindow(VideoOSD)</onup>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="button" id="812">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>icon_subtitle.png</texturefocus>
+				<texturenofocus>icon_subtitle.png</texturenofocus>
+				<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>ActivateWindow(10204)</onclick>
+				<onclick>Skin.SetBool(OSD_Quick)</onclick>
+				<onclick>ActivateWindow(VideoOSD)</onclick>
+				<!--NextSubtitle-->
+
+				<ondown>Dialog.Close(VideoOSD,true)</ondown>
+				<ondown>SubtitleDelayMinus</ondown>
+				<ondown>Skin.SetBool(OSD_Quick)</ondown>
+				<ondown>ActivateWindow(VideoOSD)</ondown>
+
+				<onup>Dialog.Close(VideoOSD,true)</onup>
+				<onup>SubtitleDelayPlus</onup>
+				<onup>Skin.SetBool(OSD_Quick)</onup>
+				<onup>ActivateWindow(VideoOSD)</onup>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="button" id="813">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>nav_screenshot.png</texturefocus>
+				<texturenofocus>nav_screenshot.png</texturenofocus>
+				<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>TakeScreenshot</onclick>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="button" id="814">
+				<width>96</width>
+				<height>96</height>
+				<texturefocus>nav_info.png</texturefocus>
+				<texturenofocus>nav_info.png</texturenofocus>
+				<colordiffuse>$VAR[Var_Color_Icon_Hex]</colordiffuse>
+
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>CodecInfo</onclick>
+				<onclick>Skin.SetBool(OSD_Quick)</onclick>
+				<onclick>ActivateWindow(VideoOSD)</onclick>
+
+				<ondown>Dialog.Close(VideoOSD,true)</ondown>
+				<ondown>DecreasePAR</ondown>
+				<ondown>Skin.SetBool(OSD_Quick)</ondown>
+				<ondown>ActivateWindow(VideoOSD)</ondown>
+
+				<onup>Dialog.Close(VideoOSD,true)</onup>
+				<onup>IncreasePAR</onup>
+				<onup>Skin.SetBool(OSD_Quick)</onup>
+				<onup>ActivateWindow(VideoOSD)</onup>
+			</control>
+
+		</control>
+
+		<!-- QUICK MENU (IMAGES) -->
+		<control type="grouplist" id="802">
+			<left>0</left>
+			<top>30</top>
+			<include>AspectRatio_Width</include>
+			<height>100</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>90</itemgap>
+
+			<!-- Aspect Ratio -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>icon_monitor.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(810)">Conditional</animation>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>icon_audio.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(811)">Conditional</animation>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>icon_subtitle.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(812)">Conditional</animation>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>nav_screenshot.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(813)">Conditional</animation>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<texture>nav_info.png</texture>
+				<colordiffuse>FFCCCCCC</colordiffuse>
+				<animation effect="fade" start="100" end="0" condition="Control.HasFocus(814)">Conditional</animation>
+			</control>
+
+		</control>
+
+		<!-- QUICK MENU (LABELS) -->
+		<control type="grouplist">
+			<left>140</left>
+			<width>1000</width>
+			<height>30</height>
+			<align>center</align>
+			<itemgap>20</itemgap>
+			<orientation>horizontal</orientation>
+
+			<!-- Aspect Ratio -->
+			<control type="label">
+				<label>Zoom+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="label">
+				<label>Audio Offset+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<label>Subtitle Offset+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="label">
+				<label>Screenshot</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="label">
+				<label>Pixel Ratio+</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+		</control>
+		<control type="grouplist">
+			<top>170</top>
+			<left>140</left>
+			<width>1000</width>
+			<height>30</height>
+			<align>center</align>
+			<itemgap>20</itemgap>
+			<orientation>horizontal</orientation>
+
+			<!-- Aspect Ratio -->
+			<control type="label">
+				<label>Zoom-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="label">
+				<label>Audio Offset-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<label>Subtitle Offset-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="label">
+				<label>Screenshot</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="label">
+				<label>Pixel Ratio-</label>
+				<include>OSDQuick_Label_Small</include>
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<left>140</left>
+			<top>120</top>
+			<width>1000</width>
+			<height>60</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>20</itemgap>
+
+			<!-- Aspect Ratio -->
+			<control type="label">
+				<label>Aspect Ratio</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Audio Offset -->
+			<control type="label">
+				<label>$INFO[VideoPlayer.AudioStream]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Subtitle Offset -->
+			<control type="label">
+				<label>$INFO[VideoPlayer.SubtitleStream]</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Screenshot -->
+			<control type="label">
+				<label>Screenshot</label>
+				<include>OSDQuick_Label</include>
+			</control>
+
+			<!-- Codec Info -->
+			<control type="label">
+				<label>Codec Info</label>
+				<include>OSDQuick_Label</include>
+			</control>
+		</control>
+
+
+
+
+
+
+
+
+
+
+	</control>
+</include>
+
+<include name="VideoOSD_Label">
+	<top>35</top>
+	<!--<top>30</top>-->
+	<left>2</left>
+	<include>AspectRatio_OSD_Width_131</include>
+	<!--<height>24</height>-->
+	<height>15</height>
+	<font>Lato_Light_15</font>
+	<!--<font>Font_Bartowski_Preplay</font>-->
+	<textcolor>FFCCCCCC</textcolor>
+	<align>center</align>
+	<aligny>center</aligny>
+</include>
+
+<include name="VideoOSD_Label_Focus">
+	<textcolor>$VAR[Var_Color_Text_Hex]</textcolor>
+	<include>VideoOSD_Label</include>
+</include>
+
+</includes>

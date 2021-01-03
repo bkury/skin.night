@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="400">
+	<defaultcontrol always="true">743</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
+
+	<controls>
+                
+		<!-- Player Controls -->
+		<control type="group">
+			<left>1650</left>
+			<top>30</top>
+			<include>MusicOSD_Controls</include>
+		</control>
+
+        </controls>
+
+</window>

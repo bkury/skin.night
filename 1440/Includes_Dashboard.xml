@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Dashboard 
+
+1 Tile  : 290x200
+2 Tiles : 580x200
+Long    : 1160x30
+
+-->
+
+<includes>
+
+	<!-- Defaults -->
+	<include name="Dashboard_Widget_Template_Small">
+		<width>580</width>
+		<height>400</height>
+		<orientation>vertical</orientation>
+		<aligny>center</aligny>
+		<align>center</align>
+		<itemgap>0</itemgap>
+	</include>
+	<include name="Dashboard_Widget_Template_Large">
+		<width>1160</width>
+		<height>400</height>
+		<orientation>vertical</orientation>
+		<aligny>center</aligny>
+		<align>center</align>
+		<itemgap>0</itemgap>
+	</include>
+	<include name="Dashboard_Widget_Template_Long">
+		<width>2320</width>
+		<height>60</height>
+		<orientation>vertical</orientation>
+		<aligny>center</aligny>
+		<itemgap>0</itemgap>
+	</include>
+
+	<!-- Templates -->
+	<include name="Dashboard_Widget_Small_Back">
+		<left>150</left>
+		<top>20</top>
+		<width>280</width>
+		<height>280</height>
+		<texture background="true">Dashboard_Circle.png</texture>
+		<colordiffuse>55000000</colordiffuse>
+		<aspectratio>scale</aspectratio>
+	</include>
+	<include name="Dashboard_Widget_Small_Image">
+		<left>160</left>
+		<top>30</top>
+		<width>260</width>
+		<height>260</height>
+		<aspectratio>scale</aspectratio>
+	</include>
+	<include name="Dashboard_Widget_Small_Label">
+		<left>20</left>
+		<top>320</top>
+		<width>540</width>
+		<height>52</height>
+		<font>Font_NowPlaying_Global</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>FFCCCCCC</textcolor>
+	</include>
+	<include name="Dashboard_Deck_Template">
+		<param name="left">0</param>
+		<definition>
+			<control type="panel">
+				<left>$PARAM[left]</left>
+				<width>$PARAM[width]</width>
+				<height>400</height>
+				<animation effect="fade" end="80" condition="true">Conditional</animation>
+				<include content="Viewmode_Deck_Itemlayout_$PARAM[image]_18x9">
+					<param name="Container">12345</param>
+				</include>
+				<content limit="10">$PARAM[content]</content>
+			</control>
+		</definition>
+	</include>
+	<include name="Dashboard_Deck_Template_Include">
+		<control type="panel">
+			<top>0</top>
+			<width>$PARAM[width]</width>
+			<height>400</height>
+			<animation effect="fade" end="80" condition="true">Conditional</animation>
+			<include content="Viewmode_Deck_Itemlayout_$PARAM[image]_18x9">
+				<param name="Container">12345</param>
+			</include>
+			<content><include>$PARAM[content]</include></content>
+		</control>
+	</include>
+	<include name="Dashboard_Deck_Template_Text">
+		<control type="group">
+			<left>10</left>
+			<top>10</top>
+
+		<control type="image">
+			<width>560</width>
+			<height>60</height>
+			<texture>block.png</texture>
+			<colordiffuse>20FFFFFF</colordiffuse>
+		</control>
+
+		<control type="label">
+			<width>560</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Lato_Black_20</font>
+			<label>$PARAM[header]</label>
+		</control>
+
+		<control type="list">
+			<left>0</left>
+			<top>60</top>
+			<width>560</width>
+			<height>300</height>
+			<orientation>vertical</orientation>	
+                        
+			<itemlayout width="580" height="60">
+				<control type="label">
+					<label>$VAR[Var_Deck_Dashboard]</label>
+					<font>Lato_Light_20</font>
+					<width>560</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="580" height="60">
+				<control type="label">
+					<label>$VAR[Var_Deck_Dashboard]</label>
+					<font>Lato_Light_20</font>
+					<width>560</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</focusedlayout>
+			<content limit="10">$PARAM[content]</content>
+		</control>
+
+		</control>
+	</include>
+	<include name="Dashboard_Deck_Template_Text_Include">
+		<control type="group">
+			<left>10</left>
+			<top>10</top>
+
+		<control type="image">
+			<width>560</width>
+			<height>60</height>
+			<texture>block.png</texture>
+			<colordiffuse>20FFFFFF</colordiffuse>
+		</control>
+
+		<control type="label">
+			<width>560</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Lato_Black_20</font>
+			<label>$PARAM[header]</label>
+		</control>
+
+		<control type="list">
+			<left>0</left>
+			<top>60</top>
+			<width>560</width>
+			<height>300</height>
+			<orientation>vertical</orientation>	
+                        
+			<itemlayout width="580" height="60">
+				<control type="label">
+					<label>$VAR[Var_Deck_Dashboard]</label>
+					<font>Lato_Light_20</font>
+					<width>560</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="580" height="60">
+				<control type="label">
+					<label>$VAR[Var_Deck_Dashboard]</label>
+					<font>Lato_Light_20</font>
+					<width>560</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>FFCCCCCC</textcolor>
+				</control>
+			</focusedlayout>
+			<content limit="10"><include>$PARAM[content]</include></content>
+		</control>
+
+		</control>
+	</include>
+
+	<!-- Notifications (2x1) -->
+	<include name="Dashboard_Widget_Notifications">
+
+                <control type="image">
+			<left>10</left>
+			<top>10</top>
+                        <width>1140</width>
+                        <height>60</height>
+                        <texture>block.png</texture>
+                        <colordiffuse>20FFFFFF</colordiffuse>
+                </control>
+
+                <control type="label">
+			<left>10</left>
+			<top>10</top>
+                        <width>1140</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Lato_Black_20</font>
+                        <label>[UPPERCASE]$LOCALIZE[31022][/UPPERCASE]</label>
+                </control>
+
+		<control type="list" id="50000">
+			<left>10</left>
+			<top>70</top>
+			<width>1140</width>
+			<height>300</height>
+			<orientation>vertical</orientation>
+
+			<itemlayout width="1140" height="100">
+				<include>Dashboard_Widget_Notifications_Itemlayout</include>
+			</itemlayout>
+			<focusedlayout width="1140" height="100">
+				<include>Dashboard_Widget_Notifications_Itemlayout</include>
+			</focusedlayout>
+			                        
+			<content>
+				<include>Notification_Dialog_Items</include>
+			</content>
+		</control>
+
+		<control type="label">
+			<left>10</left>
+			<top>100</top>
+			<width>1140</width>
+			<height>100</height>
+			<font>Lato_Thin_30</font>
+			<label>[UPPERCASE]No notifications[/UPPERCASE]</label>
+			<aligny>center</aligny>
+			<align>center</align>
+			<visible>Integer.isEqual(Container(50000).NumItems,0)</visible>
+		</control>
+
+	</include>
+
+	<include name="Dashboard_Widget_Notifications_Itemlayout">
+
+                        <!-- Time/Date -->
+                        <control type="label">
+                                <top>10</top>
+                                <height>50</height>
+                                <label>$INFO[ListItem.Property(time)]</label>
+                                <font>Roboto_Condensed_25</font>
+                                <width>240</width>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                        </control>
+                        <control type="label">
+                                <top>60</top>
+                                <height>30</height>
+                                <label>$INFO[ListItem.Property(date)]</label>
+                                <font>Roboto_Condensed_15</font>
+                                <width>240</width>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                        </control>
+
+                        <!-- Separator -->
+                        <control type="image">
+                                <left>260</left>
+                                <width>4</width>
+                                <height>100</height>
+                                <texture>confluence/separator-hz.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                        </control>
+                        <!-- Icon -->
+                        <control type="image">
+				<top>10</top>
+                                <left>280</left>
+                                <texture>$INFO[ListItem.Icon]</texture>
+                                <width>80</width>
+                                <height>80</height>
+                                <aspectratio>scale</aspectratio>
+                        </control>
+
+                        <!-- Separator -->
+                        <control type="image">
+                                <left>380</left>
+                                <width>4</width>
+                                <height>100</height>
+                                <texture>confluence/separator-hz.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                        </control>
+
+                        <!-- Label -->
+                        <control type="label">
+                                <top>10</top>
+                                <left>400</left>
+                                <width>740</width>
+                                <height>50</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Lato_Light_25</font>
+                                <height>80</height>
+                                <aligny>center</aligny>
+                        </control>
+                        <control type="label">
+                                <top>60</top>
+                                <left>400</left>
+                                <width>740</width>
+                                <height>30</height>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <font>Lato_Light_15</font>
+                                <height>80</height>
+                                <aligny>center</aligny>
+                        </control>
+	</include>
+
+	<!-- Label (4x1) -->
+	<include name="Dashboard_Widget_Label_4x1">
+		<left>20</left>
+		<width>2280</width>
+		<height>80</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>FFCCCCCC</textcolor>
+		<font>Lato_Light_25</font>
+	</include>
+
+	<!-- Border (1x1) -->
+	<include name="Dashboard_Border_1x1">
+		<control type="image">
+			<width>580</width>
+			<height>400</height>
+			<texture>Dashboard_Border_1x1.png</texture>
+		</control>
+	</include>
+	<include name="Dashboard_Border_1x1_Focus">
+		<control type="image">
+			<width>580</width>
+			<height>400</height>
+			<texture>Dashboard_Border_1x1_Focus.png</texture>
+			<colordiffuse>$VAR[Var_Color_Border_Hex]</colordiffuse>
+		</control>
+	</include>
+
+	<!-- Border (2x1) -->
+	<include name="Dashboard_Border_2x1">
+		<control type="image">
+			<width>1160</width>
+			<height>400</height>
+			<texture>Dashboard_Border_2x1.png</texture>
+		</control>
+	</include>
+	<include name="Dashboard_Border_2x1_Focus">
+		<control type="image">
+			<width>1160</width>
+			<height>400</height>
+			<texture>Dashboard_Border_2x1_Focus.png</texture>
+			<colordiffuse>$VAR[Var_Color_Border_Hex]</colordiffuse>
+		</control>
+	</include>
+
+	<!-- Border (2x2) -->
+	<include name="Dashboard_Border_2x2">
+		<control type="image">
+			<width>1160</width>
+			<height>400</height>
+			<texture>Dashboard_Border_2x2.png</texture>
+		</control>
+	</include>
+	<include name="Dashboard_Border_2x2_Focus">
+		<control type="image">
+			<width>1160</width>
+			<height>400</height>
+			<texture>Dashboard_Border_2x2_Focus.png</texture>
+			<colordiffuse>$VAR[Var_Color_Border_Hex]</colordiffuse>
+		</control>
+	</include>
+
+	<!-- Border (4x1) -->
+	<include name="Dashboard_Border_4x1">
+		<control type="image">
+			<width>2320</width>
+			<height>80</height>
+			<texture>Dashboard_Border_4x1.png</texture>
+		</control>
+	</include>
+	<include name="Dashboard_Border_4x1_Focus">
+		<control type="image">
+			<width>2320</width>
+			<height>80</height>
+			<texture>Dashboard_Border_4x1_Focus.png</texture>
+			<colordiffuse>$VAR[Var_Color_Border_Hex]</colordiffuse>
+		</control>
+	</include>
+
+	<!-- Clock (1x1) -->
+	<include name="Dashboard_Clock_1x1">
+		<control type="group">
+			<top>100</top>
+
+			<control type="label">
+				<width>580</width>
+				<height>120</height>
+				<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+				<label>$INFO[System.Time(hh:mm xx)]</label>
+				<font>Lato_Light_60</font>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<top>120</top>
+				<width>580</width>
+				<height>60</height>
+				<info>System.Date</info>
+				<textcolor>FFCCCCCC</textcolor>
+				<font>Lato_Light_20</font>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+		</control>
+	</include>
+
+	<!-- Clock (2x1) -->
+	<include name="Dashboard_Clock_2x1">
+		<control type="group">
+			<top>20</top>
+
+			<control type="label">
+				<width>1160</width>
+				<height>240</height>
+				<textcolor>$VAR[Var_Color_Clock_Hex]</textcolor>
+				<label>$INFO[System.Time(hh:mm xx)]</label>
+				<font>Dashboard_Clock</font>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<top>240</top>
+				<width>1160</width>
+				<height>80</height>
+				<info>System.Date</info>
+				<textcolor>FFCCCCCC</textcolor>
+				<font>Dashboard_Date</font>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+		</control>
+	</include>
+
+	<!-- Weather (1x1) -->
+	<include name="Dashboard_Weather_1x1">
+		<control type="group">
+			<control type="image">
+				<include>Dashboard_Widget_Small_Back</include>
+			</control>
+			<control type="image">
+				<include>Dashboard_Widget_Small_Image</include>
+				<texture diffuse="round.png" background="true">resource://resource.images.weathericons.default/$INFO[Window(Weather).Property(Current.fanartcode)].png</texture>
+			</control>
+			<control type="label">
+				<include>Dashboard_Widget_Small_Label</include>
+				<label>$INFO[Window(Weather).Property(Current.Condition)], $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+				<visible>!String.isEmpty(Window(Weather).Property(Current.Condition))</visible>
+			</control>
+		</control>
+	</include>
+
+	<!-- Weather (2x1) -->
+	<include name="Dashboard_Weather_Hour_2x1">
+		<include content="Dashboard_Deck_Template_Include">
+			<param name="image">Square</param>
+			<param name="width">1160</param>
+			<param name="content">Deck_Weather_Items1</param>
+		</include>
+	</include>
+	<include name="Dashboard_Weather_Day_2x1">
+		<include content="Dashboard_Deck_Template_Include">
+			<param name="image">Square</param>
+			<param name="width">1160</param>
+			<param name="content">Deck_Weather_Items2</param>
+		</include>
+	</include>
+
+	<!-- Weather (4x1) -->
+	<include name="Dashboard_Weather_Hour_4x1">
+		<include content="Dashboard_Deck_Template_Include">
+			<param name="image">Square</param>
+			<param name="width">2320</param>
+			<param name="content">Deck_Weather_Items1</param>
+		</include>
+	</include>
+	<include name="Dashboard_Weather_Day_4x1">
+		<include content="Dashboard_Deck_Template_Include">
+			<param name="image">Square</param>
+			<param name="width">2320</param>
+			<param name="content">Deck_Weather_Items2</param>
+		</include>
+	</include>
+
+
+	<!-- Notifications -->
+	<include name="Dashboard_Notifications_1x1">
+		<include content="Dashboard_Deck_Template_Text_Include">
+			<param name="header">[UPPERCASE]$LOCALIZE[31022][/UPPERCASE]</param>
+			<param name="content">Notification_Dialog_Items</param>
+		</include>
+	</include>
+
+	<include name="Dashboard_Notifications_2x1">
+		<include>Dashboard_Widget_Notifications</include>
+	</include>
+
+	<!-- User -->
+	<include name="Dashboard_User_1x1">
+		<control type="group">
+			<!-- Avatar -->
+			<control type="image">
+				<include>Dashboard_Widget_Small_Back</include>
+			</control>
+			<control type="image">
+				<include>Dashboard_Widget_Small_Image</include>
+				<texture diffuse="round.png" background="true" fallback="default-square-small.png">$INFO[System.CurrentUserThumb]</texture>
+			</control>
+			<!-- Username -->
+			<control type="label">
+				<include>Dashboard_Widget_Small_Label</include>
+				<label>$INFO[System.CurrentUser]</label>
+			</control>
+		</control>
+	</include>
+
+
+	<!-- Recently Added (Movies) -->
+	<!-- 1x1 -->
+	<include name="Dashboard_Added_Movies_1x1">
+		<include content="Dashboard_Deck_Template_Text">
+			<param name="header">[UPPERCASE]$LOCALIZE[31009][/UPPERCASE]</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Poster_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="left">58</param>
+			<param name="image">Poster</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Fanart_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Clearart_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Clearlogo_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<!-- 2x1 -->
+	<include name="Dashboard_Added_Movies_Poster_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Poster</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Fanart_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Clearart_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Clearlogo_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<!-- 4x1 -->
+	<include name="Dashboard_Added_Movies_Poster_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Poster</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Fanart_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Clearart_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Movies_Clearlogo_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_movies.xsp</param>
+		</include>
+	</include>
+
+	<!-- Recently Added (Episodes) -->
+	<!-- 1x1 -->
+	<include name="Dashboard_Added_Episodes_1x1">
+		<include content="Dashboard_Deck_Template_Text">
+			<param name="header">[UPPERCASE]$LOCALIZE[31011][/UPPERCASE]</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Poster_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="left">58</param>
+			<param name="image">Poster</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Fanart_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Clearart_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Clearlogo_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">580</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<!-- 2x1 -->
+	<include name="Dashboard_Added_Episodes_Poster_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Poster</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Fanart_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Clearart_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Clearlogo_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">1160</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<!-- 4x1 -->
+	<include name="Dashboard_Added_Episodes_Poster_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Poster</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Fanart_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Clearart_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Episodes_Clearlogo_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">2320</param>
+			<param name="content">special://skin/playlists/recent_unwatched_episodes.xsp</param>
+		</include>
+	</include>
+
+	<!-- Recently Added (Albums) -->
+	<!-- 1x1 -->
+	<include name="Dashboard_Added_Albums_1x1">
+		<include content="Dashboard_Deck_Template_Text">
+			<param name="header">[UPPERCASE]$LOCALIZE[31105][/UPPERCASE]</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Poster_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="left">58</param>
+			<param name="image">Square</param>
+			<param name="width">580</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Fanart_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">580</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Clearart_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">580</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Clearlogo_1x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">580</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<!-- 2x1 -->
+	<include name="Dashboard_Added_Albums_Poster_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Square</param>
+			<param name="width">1160</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Fanart_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">1160</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Clearart_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">1160</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Clearlogo_2x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">1160</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<!-- 4x1 -->
+	<include name="Dashboard_Added_Albums_Poster_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Square</param>
+			<param name="width">2320</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Fanart_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Fanart</param>
+			<param name="width">2320</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Clearart_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearart</param>
+			<param name="width">2320</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+	<include name="Dashboard_Added_Albums_Clearlogo_4x1">
+		<include content="Dashboard_Deck_Template">
+			<param name="image">Clearlogo</param>
+			<param name="width">2320</param>
+			<param name="content">musicdb://recentlyaddedalbums/</param>
+		</include>
+	</include>
+
+	<!-- Recently Added (Next Aired) -->
+	<!-- 1x1 -->
+	<include name="Dashboard_Next_Aired_1x1">
+		<include content="Dashboard_Deck_Template_Text_Include">
+			<param name="header">[UPPERCASE]$LOCALIZE[31009][/UPPERCASE]</param>
+			<param name="content">Deck_NextAired_Items</param>
+		</include>
+	</include>
+	<include name="Dashboard_Next_Aired_Poster_1x1">
+		<include content="Dashboard_Deck_Template_Include">
+			<param name="left">58</param>
+			<param name="image">Poster</param>
+			<param name="width">580</param>
+			<param name="content">Deck_NextAired_Items</param>
+		</include>
+	</include>
+	<!-- 2x1 -->
+	<include name="Dashboard_Next_Aired_Poster_2x1">
+		<include content="Dashboard_Deck_Template_Include">
+			<param name="image">Poster</param>
+			<param name="width">1160</param>
+			<param name="content">Deck_NextAired_Items</param>
+		</include>
+	</include>
+	<!-- 4x1 -->
+	<include name="Dashboard_Next_Aired_Poster_4x1">
+		<include content="Dashboard_Deck_Template_Include">
+			<param name="image">Poster</param>
+			<param name="width">2320</param>
+			<param name="content">Deck_NextAired_Items</param>
+		</include>
+	</include>
+
+	<!-- Image -->
+	<include name="Dashboard_Image_1x1_Template">
+		<left>20</left>
+		<top>20</top>
+		<width>540</width>
+		<height>360</height>
+		<timeperimage>6000</timeperimage>
+		<fadetime>1000</fadetime>
+		<randomize>true</randomize>
+		<aspectratio>keep</aspectratio>
+	</include>
+	<include name="Dashboard_Image_2x1_Template">
+		<left>20</left>
+		<top>20</top>
+		<width>1120</width>
+		<height>360</height>
+		<timeperimage>6000</timeperimage>
+		<fadetime>1000</fadetime>
+		<randomize>true</randomize>
+		<aspectratio>keep</aspectratio>
+	</include>
+
+	<!-- Text (4x1) -->
+	<include name="Dashboard_Text_4x1_0_1">
+		<control type="label">
+			<label>$INFO[Skin.String(Dashboard_Widget0_1_Content)]</label>
+			<include>Dashboard_Widget_Label_4x1</include>
+		</control>		
+	</include>
+	<include name="Dashboard_Text_4x1_0_2">
+		<control type="label">
+			<label>$INFO[Skin.String(Dashboard_Widget0_2_Content)]</label>
+			<include>Dashboard_Widget_Label_4x1</include>
+		</control>		
+	</include>
+	<include name="Dashboard_Clock_4x1">
+		<control type="label">
+			<label>$INFO[System.Time]</label>
+			<include>Dashboard_Widget_Label_4x1</include>
+		</control>		
+	</include>
+
+	<!-- RSS (4x1) -->
+	<include name="Dashboard_RSS_4x1">
+		<control type="rss">
+			<include>Dashboard_Widget_Label_4x1</include>
+			<urlset>1</urlset>
+			<titlecolor>FFFFFFFF</titlecolor>
+			<headlinecolor>FFFFFFFF</headlinecolor>
+		</control>
+	</include>
+	<include name="Dashboard_RSS_4x1_Settings">
+		<control type="label">
+			<label>RSS Feed</label>
+			<include>Dashboard_Widget_Label_4x1</include>
+		</control>		
+	</include>
+
+	<!-- Dashboard (Show) -->
+	<include name="Dashboard">
+		<include condition="Skin.HasSetting(Dashboard_Enabled)">Dashboard_Enabled</include>
+	</include>
+	<include name="Dashboard_Enabled">
+
+		<!-- Background -->
+		<control type="group">
+			<include>Dashboard_Visible</include>
+
+			<control type="image">
+				<texture background="true">bg_black.png</texture>
+				<include>background_default</include>
+			</control>
+
+			<include content="Background_Custom">
+				<param name="id_home">65</param>
+				<param name="id_fade">13065</param>
+				<param name="opacity">40</param>
+				<param name="image">$VAR[Var_Background_Default_Image]</param>
+			</include>
+
+		</control>
+
+		<!-- Content -->
+		<include>Dashboard_Content</include>
+	</include>
+
+	<include name="Dashboard_Visible">
+		<include condition="Skin.HasSetting(Dashboard_Kenburns)">background_kenburns</include>
+		<include>Animation_CommonFade_600</include>
+		<visible>System.ScreenSaverActive</visible>
+	</include>
+
+	<!-- Dashboard (Hide) -->
+	<include name="Dashboard_Hidden">
+		<include>Animation_CommonFade_600</include>
+		<visible>![ System.ScreenSaverActive | Window.isActive(1152) ]</visible>
+	</include>
+
+</includes>
+
